@@ -1,0 +1,29 @@
+{
+  "pdf_path": "/path/to/document.pdf",
+  "stem": "document",
+  "ocr_scale": 2.0,
+  "pages": [
+    {"page_index": 0, "width": 1224.0, "height": 1584.0}
+  ],
+  "detected_assets": [
+    {"type": "figure", "page": 0, "bbox": [120, 500, 900, 1000]}
+  ],
+  "non_assets": [
+    {
+      "label": "paragraph_title",
+      "text": "1 Introduction",
+      "page": 0,
+      "bbox": [110, 140, 620, 205],
+      "level": 1,
+      "scanned": false
+    },
+    {
+      "label": "text",
+      "text": "Example paragraph.",
+      "page": 0,
+      "bbox": [110, 230, 1050, 470],
+      "level": null,
+      "scanned": false
+    }
+  ]
+}

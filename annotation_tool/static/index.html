@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asepsis Annotation & Correction Tool</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast hidden"></div>
+
+  <section id="homeView" class="home-view">
+    <div class="brand-block">
+      <div class="eyebrow">ASEPSIS RESEARCH TOOL</div>
+      <h1>Document Layout Annotation & Correction</h1>
+      <p class="lead">A local review tool that preserves the machine-produced state, the complete committed interaction history, and the human-approved state as separate research artifacts.</p>
+    </div>
+
+    <div class="home-grid">
+      <form id="createForm" class="card create-card">
+        <h2>Start a review session</h2>
+        <label>Annotator ID
+          <input id="annotatorInput" name="annotator_id" value="reviewer-01" required />
+        </label>
+        <label>Source PDF
+          <input id="pdfInput" name="pdf_file" type="file" accept="application/pdf,.pdf" required />
+        </label>
+        <label>Machine annotation JSON
+          <input id="jsonInput" name="annotation_file" type="file" accept="application/json,.json" required />
+        </label>
+        <p class="hint">Accepted input: the canonical tool schema or the existing BetterIngest <code>prepare_layout_review()</code> JSON.</p>
+        <button class="primary" type="submit">Create session</button>
+        <div id="createStatus" class="status-text"></div>
+      </form>
+
+      <div class="card sessions-card">
+        <div class="card-heading-row">
+          <h2>Existing sessions</h2>
+          <button id="refreshSessionsBtn" class="secondary small" type="button">Refresh</button>
+        </div>
+        <div id="sessionList" class="session-list"><div class="muted">Loading…</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workspaceView" class="workspace hidden">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button id="backHomeBtn" class="ghost" title="Back to session list">← Sessions</button>
+        <div>
+          <div id="docTitle" class="doc-title">Document</div>
+          <div id="sessionSubline" class="subline"></div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button id="undoBtn" class="secondary">Undo</button>
+        <button id="redoBtn" class="secondary">Redo</button>
+        <a id="exportBtn" class="secondary link-button" href="#">Export</a>
+        <button id="approveBtn" class="primary">Approve & finalise</button>
+      </div>
+    </header>
+
+    <div class="workspace-grid">
+      <aside class="left-panel panel">
+        <div class="panel-section">
+          <div class="section-title">Page</div>
+          <div class="page-nav">
+            <button id="prevPageBtn" class="secondary small">←</button>
+            <span id="pageIndicator">1 / 1</span>
+            <button id="nextPageBtn" class="secondary small">→</button>
+          </div>
+        </div>
+        <div class="panel-section">
+          <div class="section-title-row">
+            <span class="section-title">Regions on page</span>
+            <span id="pageRegionCount" class="pill">0</span>
+          </div>
+          <div id="regionList" class="region-list"></div>
+        </div>
+        <div class="panel-section grow">
+          <div class="section-title">Recent history</div>
+          <div id="eventList" class="event-list"></div>
+        </div>
+      </aside>
+
+      <main class="document-panel">
+        <div class="document-toolbar">
+          <button id="addRegionBtn" class="secondary">＋ Add region</button>
+          <span id="modeText" class="mode-text">Select a region to inspect or correct it.</span>
+          <span class="spacer"></span>
+          <span id="saveStateText" class="save-state">Saved</span>
+        </div>
+        <div id="documentScroller" class="document-scroller">
+          <div id="pageStage" class="page-stage">
+            <img id="pageImage" alt="PDF page" draggable="false" />
+            <div id="overlay" class="overlay"></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="right-panel panel">
+        <div class="panel-section">
+          <div class="section-title-row">
+            <span class="section-title">Selected region</span>
+            <span id="selectedOrigin" class="pill muted-pill">—</span>
+          </div>
+          <div id="emptyInspector" class="empty-inspector">Select a bounding box on the page.</div>
+          <form id="inspectorForm" class="inspector hidden">
+            <div class="read-only-row">
+              <span>ID</span><code id="regionIdText"></code>
+            </div>
+            <label>Type
+              <select id="regionType">
+                <option value="text">text</option>
+                <option value="paragraph_title">paragraph_title</option>
+                <option value="doc_title">doc_title</option>
+                <option value="table">table</option>
+                <option value="figure">figure</option>
+                <option value="chart">chart</option>
+                <option value="caption">caption</option>
+                <option value="list">list</option>
+                <option value="formula">formula</option>
+                <option value="other">other</option>
+              </select>
+            </label>
+            <label>Text
+              <textarea id="regionText" rows="5" placeholder="OCR text or label text"></textarea>
+            </label>
+            <div class="two-col">
+              <label>Heading level
+                <input id="headingLevel" type="number" min="1" max="6" placeholder="—" />
+              </label>
+              <label>Reading order
+                <input id="readingOrder" type="number" min="0" placeholder="—" />
+              </label>
+            </div>
+            <div class="checkbox-stack">
+              <label class="check"><input id="ignoredCheck" type="checkbox" /> Ignore region</label>
+              <label class="check"><input id="uncertainCheck" type="checkbox" /> Mark uncertain</label>
+            </div>
+            <label>Reviewer note
+              <textarea id="regionNote" rows="3" placeholder="Optional reason or uncertainty note"></textarea>
+            </label>
+            <div class="bbox-readout" id="bboxReadout"></div>
+            <div class="inspector-actions">
+              <button class="primary" type="submit">Save properties</button>
+              <button id="deleteRegionBtn" class="danger" type="button">Delete region</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel-section metrics-section">
+          <div class="section-title-row">
+            <span class="section-title">Session summary</span>
+            <button id="refreshMetricsBtn" class="ghost small">Refresh</button>
+          </div>
+          <div id="metricsBox" class="metrics-box"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+
+
+  <div id="approvalModal" class="review-modal hidden" role="dialog" aria-modal="true" aria-labelledby="approvalTitle">
+    <div class="review-modal-card">
+      <h2 id="approvalTitle">Final review checklist</h2>
+      <p>Confirm these checks before approval. This defines the common "satisfactory" state for the MVP and is saved with the session.</p>
+      <div class="review-checklist">
+        <label><input id="checkAllPages" type="checkbox" /> I reviewed every page in the document.</label>
+        <label><input id="checkCoverage" type="checkbox" /> I checked for missing and spurious regions.</label>
+        <label><input id="checkBoundaries" type="checkbox" /> Region boundaries are acceptable or have been corrected.</label>
+        <label><input id="checkTypes" type="checkbox" /> Region types/classes are acceptable or have been corrected.</label>
+        <label><input id="checkStructure" type="checkbox" /> Heading levels and reading order were checked where applicable.</label>
+        <label><input id="checkUncertainty" type="checkbox" /> Any remaining uncertainty is explicitly marked or noted.</label>
+      </div>
+      <label>Optional approval note
+        <textarea id="approvalNote" rows="3" placeholder="Optional note about the review or remaining limitations"></textarea>
+      </label>
+      <div class="review-modal-actions">
+        <button id="cancelApprovalBtn" class="secondary" type="button">Cancel</button>
+        <button id="confirmApprovalBtn" class="primary" type="button">Approve & freeze final state</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

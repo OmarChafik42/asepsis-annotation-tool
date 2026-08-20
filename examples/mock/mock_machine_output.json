@@ -1,0 +1,148 @@
+{
+  "stem": "mock_document",
+  "ocr_scale": 1.0,
+  "pipeline_version": "mock-1.0",
+  "ocr_engine": "MockOCR",
+  "pages": [
+    {
+      "page_index": 0,
+      "width": 612.0,
+      "height": 792.0
+    },
+    {
+      "page_index": 1,
+      "width": 612.0,
+      "height": 792.0
+    }
+  ],
+  "detected_assets": [
+    {
+      "type": "figure",
+      "page": 0,
+      "bbox": [
+        80,
+        310,
+        530,
+        480
+      ],
+      "name": "figure-1"
+    },
+    {
+      "type": "figure",
+      "page": 1,
+      "bbox": [
+        75,
+        285,
+        535,
+        460
+      ],
+      "name": "intentional-wrong-class"
+    }
+  ],
+  "non_assets": [
+    {
+      "label": "doc_title",
+      "text": "Mock Clinical Guideline",
+      "page": 0,
+      "bbox": [
+        55,
+        45,
+        330,
+        80
+      ],
+      "level": null,
+      "scanned": false
+    },
+    {
+      "label": "paragraph_title",
+      "text": "1 Introduction",
+      "page": 0,
+      "bbox": [
+        55,
+        110,
+        250,
+        145
+      ],
+      "level": 1,
+      "scanned": false
+    },
+    {
+      "label": "text",
+      "text": "This synthetic document exists only to test the annotation tool. It contains headings, paragraphs, a figure, and deliberate annotation errors. No real patient or clinical information is included.",
+      "page": 0,
+      "bbox": [
+        55,
+        150,
+        550,
+        225
+      ],
+      "level": null,
+      "scanned": false
+    },
+    {
+      "label": "text",
+      "text": "SPURIOUS OCR REGION",
+      "page": 0,
+      "bbox": [
+        400,
+        620,
+        555,
+        670
+      ],
+      "level": null,
+      "scanned": false
+    },
+    {
+      "label": "paragraph_title",
+      "text": "2 Safety",
+      "page": 1,
+      "bbox": [
+        55,
+        45,
+        220,
+        85
+      ],
+      "level": 1,
+      "scanned": false
+    },
+    {
+      "label": "paragraph_title",
+      "text": "2.1 Renal impairment",
+      "page": 1,
+      "bbox": [
+        55,
+        100,
+        300,
+        135
+      ],
+      "level": 1,
+      "scanned": false
+    },
+    {
+      "label": "text",
+      "text": "For this mock example, the wording is intentionally generic. The annotation JSON gives this subheading the wrong hierarchy level. Correct the level during review.",
+      "page": 1,
+      "bbox": [
+        55,
+        140,
+        550,
+        215
+      ],
+      "level": null,
+      "scanned": false
+    },
+    {
+      "label": "caption",
+      "text": "Table 1. Synthetic decision table.",
+      "page": 1,
+      "bbox": [
+        70,
+        470,
+        330,
+        500
+      ],
+      "level": null,
+      "scanned": false
+    }
+  ]
+}

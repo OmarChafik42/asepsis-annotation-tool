@@ -1,0 +1,15 @@
+services:
+  annotation-tool:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      ANNOTATION_DATA_DIR: /data
+      ANNOTATION_MAX_PDF_MB: "50"
+      ANNOTATION_MAX_JSON_MB: "10"
+    volumes:
+      - annotation_data:/data
+    restart: unless-stopped
+
+volumes:
+  annotation_data:
