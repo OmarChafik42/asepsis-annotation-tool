@@ -1,40 +1,41 @@
 # Asepsis Annotation & Correction Tool
 
-Standalone research MVP for reviewing OCR/layout output before downstream ingestion.
+Standalone research MVP for reviewing OCR/layout output against the source PDF before downstream ingestion.
 
-The tool is designed around one core provenance requirement: keep the machine output, the committed human correction history, and the approved output independently recoverable.
+The tool preserves three review records separately:
 
 ```text
-machine_output.original.json   exact uploaded machine output
-initial_state.json             canonical state shown to the reviewer
-events.jsonl                   append-only committed human actions
-final_state.json               frozen approved state
+initial_state.json   canonical machine state shown to the reviewer
+events.jsonl         append-only committed human corrections
+final_state.json     frozen approved state
 ```
 
-`working_state.json` exists only to support resume/recovery while a review is active.
+The exact uploaded machine JSON is also preserved as `machine_output.original.json`.
 
 ## Features
 
-- PDF rendering with region overlays
-- add, delete, move, resize, ignore and restore regions
-- reclassify regions
-- edit OCR text
-- edit heading level and reading order
-- mark uncertainty and add reviewer notes
-- undo/redo without deleting prior history
-- active review-time estimate
-- correction metrics
-- required final review checklist
-- replay validation before approval
-- session ZIP export
-- BetterIngest `prepare_layout_review()` adapter
-- local native execution or Docker deployment
+- render PDFs with region overlays
+- add, delete, move, resize and reclassify regions
+- edit OCR text, heading level and reading order
+- ignore/restore regions
+- mark uncertainty and add notes
+- undo/redo without deleting event history
+- resume active sessions after refresh/restart
+- required approval checklist
+- correction metrics and active-time estimate
+- session export
+- BetterIngest review-output adapter
+- native or Docker execution
 
 ## Quick start with Docker
 
-Docker is the recommended way to run the project across Windows, macOS and Linux because every reviewer gets the same Python runtime and dependencies.
+Docker is the recommended cross-platform path for Windows, macOS and Linux.
 
-Prerequisite: Docker Desktop on Windows/macOS, or Docker Engine + Compose on Linux.
+Requirements:
+
+- Docker Desktop on Windows/macOS, or Docker Engine + Compose on Linux
+
+Run:
 
 ```bash
 git clone <repository-url>
@@ -48,29 +49,27 @@ Open:
 http://localhost:8765
 ```
 
-Stop the service with:
+Stop:
 
 ```bash
 docker compose down
 ```
 
-Session data is stored in the named Docker volume `annotation_data` and survives normal container rebuilds/restarts.
+Session data is stored in the Compose-managed persistent volume `annotation_data` and survives normal container rebuilds/restarts.
 
-> Do not run `docker compose down -v` unless you intentionally want to delete the Docker volume and all annotation sessions stored in it.
+Do not run:
 
-### Where Docker stores data
+```bash
+docker compose down -v
+```
 
-Inside the container the application writes to the configured data directory, typically `/data`. Docker maps that directory to the persistent `annotation_data` volume.
-
-The volume is managed by Docker, so you should not expect to see an `annotation-data/` folder beside the source code when using the Docker deployment.
+unless you intentionally want to delete the stored Docker volume.
 
 ## Native development
 
 Use Python **3.11+**.
 
 ### Windows / PyCharm
-
-Create or select a Python 3.11+ interpreter. Python 3.12 is recommended.
 
 PowerShell:
 
@@ -87,13 +86,7 @@ Open:
 http://127.0.0.1:8765
 ```
 
-In PyCharm, open the repository root as the project. Do not create another project inside the repository. Point the project interpreter to `.venv` and run `run.py`.
-
-If PowerShell blocks virtual-environment activation, either use PyCharm's interpreter directly or use Command Prompt:
-
-```cmd
-.venv\Scripts\activate.bat
-```
+In PyCharm, open the repository root, select the `.venv` interpreter and run `run.py`.
 
 ### macOS / Linux
 
@@ -112,9 +105,7 @@ http://127.0.0.1:8765
 
 ## Try the mock data
 
-The repository includes synthetic test data with deliberate annotation errors.
-
-Upload these two files together:
+Upload:
 
 ```text
 examples/mock/mock_document.pdf
@@ -127,50 +118,46 @@ Use an annotator ID such as:
 reviewer-01
 ```
 
-The mock data can be used to test moving/resizing regions, reclassification, heading-level correction, deleting spurious regions, adding missing regions, undo/redo and final approval.
-
-See `examples/mock/README.md` for the intended corrections.
+The mock data contains deliberate errors so the full correction and approval workflow can be tested.
 
 ## Input
 
-A new review session requires:
+A session requires:
 
 1. source PDF
 2. machine annotation JSON
 3. annotator ID
 
-Supported machine JSON inputs:
+Supported machine JSON formats:
 
 - BetterIngest `prepare_layout_review()` output
-- the canonical state format documented in [`docs/SCHEMA.md`](docs/SCHEMA.md)
-
-The source PDF and machine JSON are copied into the session when it is created. The original machine JSON is preserved separately from the canonical state produced by the input adapter.
+- canonical annotation state described in [`docs/SCHEMA.md`](docs/SCHEMA.md)
 
 ## Session lifecycle
 
-### 1. Create
+### Create
 
-The backend creates a UUID session directory and stores the PDF, raw machine JSON, canonical initial state, empty event log and resumable working state.
+The server creates an independent UUID session and stores the source PDF, raw machine JSON, canonical initial state and an empty event log.
 
-### 2. Review
+### Review
 
-The frontend loads one session at a time. Each completed semantic correction is sent to the backend and persisted immediately.
+Each completed semantic edit is persisted by the backend.
 
-For example, dragging a box may involve many pointer-move events in the browser, but releasing the box produces one committed `MOVE_REGION` or `RESIZE_REGION` event.
+For example, a drag may contain many pointer movements in the browser, but it produces one committed `MOVE_REGION` or `RESIZE_REGION` event when the action finishes.
 
-Refreshing the browser does not delete committed work. Re-open the session from the home page to resume it.
+Refreshing the browser does not remove committed work. Reopen the session from the home page to continue.
 
-### 3. Approve
+### Approve
 
-The reviewer completes the final checklist. Approval succeeds only if the current state can be reproduced by replaying the event history from the initial state.
-
-The approved state is then written to `final_state.json` and the session becomes read-only.
+The reviewer completes the final checklist. Approval succeeds only if the current state can be reproduced from the initial state and event history.
 
 Core integrity rule:
 
 ```text
 replay(initial_state, events) == final_state
 ```
+
+Approved sessions become read-only.
 
 ## Session files
 
@@ -180,7 +167,7 @@ Native/local sessions are stored under:
 annotation-data/sessions/<session-id>/
 ```
 
-Typical session contents:
+Typical contents:
 
 ```text
 source.pdf
@@ -189,53 +176,32 @@ initial_state.json
 events.jsonl
 working_state.json
 session.json
-final_state.json        # after approval
-metrics.json            # after/around approval
+final_state.json
+metrics.json
 render_cache/
 ```
 
-Research-relevant records:
-
-- `machine_output.original.json` — exactly what the producer supplied
-- `initial_state.json` — normalized interpretation shown to the reviewer
-- `events.jsonl` — ordered committed human interaction history
-- `final_state.json` — approved snapshot
-- `session.json` — session metadata/timing/status
-- `metrics.json` — derived evaluation data
-- `source.pdf` — reviewed source document
-
-`working_state.json` and `render_cache/` are operational files, not authoritative research records.
+`working_state.json` and `render_cache/` are operational files. The research-relevant records are the source, raw machine output, initial state, event history, approved final state, session metadata and derived metrics.
 
 ## Multiple documents and reviewers
 
-Each uploaded document/review is stored as an independent UUID session.
+Each reviewed document is stored as a separate session.
 
-Multiple reviewers may work on different sessions at the same time.
+Multiple reviewers can work on different sessions at the same time.
 
-The MVP does **not** support collaborative editing of the same active session. Assign one reviewer to one active session at a time. Opening the same active session in multiple tabs or by multiple reviewers can create stale frontend state and conflicting commands.
+The MVP does not support collaborative editing of the same active session. Use one reviewer per active session.
 
-Approved sessions are read-only.
-
-The current session list is intentionally simple and suited to a research-scale number of documents. If the repository is later used for a much larger corpus, add server-side pagination/search/filtering rather than loading an unbounded session list.
+The current home page loads all sessions. This is fine for a research-scale dataset; pagination/search/filtering should be added if the number of sessions becomes large.
 
 ## BetterIngest bridge
 
-To export review input from the existing ingestion project:
+Example:
 
 ```bash
-python scripts/export_betteringest_review.py \
-  --asepsis-root ../asepsis-prototype-main \
-  --pdf /path/to/document.pdf \
-  --out review.json
+python scripts/export_betteringest_review.py   --asepsis-root ../asepsis-prototype-main   --pdf /path/to/document.pdf   --out review.json
 ```
 
-On Windows PowerShell the same command can be written on one line:
-
-```powershell
-python scripts/export_betteringest_review.py --asepsis-root "..\asepsis-prototype-main" --pdf "C:\path\to\document.pdf" --out "review.json"
-```
-
-The annotation application does not import the ingestion pipeline's internal Python classes directly. The adapter converts producer output into the stable canonical schema.
+Windows PowerShell can use the same command on one line.
 
 ## Tests
 
@@ -251,42 +217,17 @@ Run:
 pytest -q
 ```
 
-Useful validation scripts are also available under `scripts/`.
+## Deployment scope
 
-## Runtime configuration
+The Docker deployment is intended for a **single application instance with persistent storage**.
 
-The application supports environment-based runtime configuration, including:
+For remote use with medical documents, place the service behind institution-approved HTTPS, authentication, access control and storage policies.
 
-```text
-ANNOTATION_HOST
-ANNOTATION_PORT
-ANNOTATION_DATA_DIR
-ANNOTATION_MAX_PDF_MB
-ANNOTATION_MAX_JSON_MB
-```
+Docker provides portability; it does not by itself provide those security controls.
 
-Use `.env.example` as documentation for local values. Do not commit a real `.env` containing credentials or environment-specific secrets.
+## Repository hygiene
 
-## Docker and private deployment
-
-The Docker image packages the same FastAPI/browser application used for local development.
-
-For the MVP, deploy it as a **single application instance with persistent storage**.
-
-A remote deployment should be placed behind:
-
-- HTTPS
-- institution-managed authentication/reverse proxy
-- persistent storage
-- institution-approved backup/retention controls
-
-Do not expose this MVP directly to the public internet for medical-document use.
-
-Docker makes the application portable and deployable; Docker itself does not provide authentication, authorization, encryption policy or clinical compliance.
-
-## GitHub / repository hygiene
-
-The repository should contain source code, documentation and synthetic mock data only.
+Keep only source code, documentation and synthetic mock data in Git.
 
 Do not commit:
 
@@ -294,78 +235,13 @@ Do not commit:
 - real medical PDFs
 - real exported session ZIPs
 - `.env`
-- API keys, passwords or tokens
+- credentials, keys or tokens
 - `.venv/`
 - `.idea/`
-- local database files or logs
 
-Recommended `.gitignore` entries:
+Your `.gitignore` should exclude these local/runtime artifacts.
 
-```gitignore
-# Python
-.venv/
-__pycache__/
-*.pyc
-.pytest_cache/
+## Documentation
 
-# PyCharm
-.idea/
-
-# Runtime / research data
-annotation-data/
-*.zip
-*.log
-*.db
-*.sqlite
-*.sqlite3
-
-# Secrets / local configuration
-.env
-.env.*
-!.env.example
-
-# OS
-.DS_Store
-Thumbs.db
-```
-
-Before every commit:
-
-```bash
-git status
-```
-
-To confirm local runtime folders are actually ignored:
-
-```bash
-git status --ignored
-```
-
-If real clinical data is ever used, follow the institution's approved storage and source-control policy even when the GitHub repository is private.
-
-## Project documentation
-
-- [`DESIGN.md`](DESIGN.md) — architecture, invariants, concurrency and deployment decisions
-- [`docs/SCHEMA.md`](docs/SCHEMA.md) — canonical annotation and event formats
-
-## MVP scope
-
-Included:
-
-- standalone single-reviewer review sessions
-- OCR/layout correction UI
-- provenance preservation
-- resumable sessions
-- approval checklist
-- metrics
-- research export
-- Docker packaging
-
-Not included:
-
-- simultaneous collaborative editing of one session
-- user-account management
-- role-based clinical workflow
-- multi-stage approval
-- distributed/multi-instance coordination
-- production hospital security controls
+- [`DESIGN.md`](DESIGN.md) — architecture and key engineering decisions
+- [`docs/SCHEMA.md`](docs/SCHEMA.md) — canonical state and event formats

@@ -2,13 +2,11 @@
 
 **Schema version:** `1.0`
 
-This document defines the stable interchange and persistence format used by the Asepsis Annotation & Correction Tool.
-
-The schema is deliberately producer-independent. BetterIngest/PaddleOCR output is converted through an adapter before the reviewer edits it.
+The canonical schema is the stable format used by the annotation tool after producer-specific machine output has been converted by an adapter.
 
 ## 1. Coordinate system
 
-Canonical bounding boxes use normalized source-PDF page coordinates with a top-left origin:
+Bounding boxes use normalized source-PDF coordinates with a top-left origin:
 
 ```json
 {
@@ -19,42 +17,33 @@ Canonical bounding boxes use normalized source-PDF page coordinates with a top-l
 }
 ```
 
-Required invariant:
+Invariant:
 
 ```text
 0 <= x0 < x1 <= 1
 0 <= y0 < y1 <= 1
 ```
 
-Normalization makes annotations independent of:
+The coordinates refer to the source PDF page, not a rendered browser image.
 
-- OCR render scale
-- browser zoom
-- screen resolution
-- rendered image DPI
-
-The canonical annotation must always refer to the source PDF page, not to a browser-rendered bitmap.
-
-## 2. Authoritative files
-
-A session may contain the following records:
+## 2. Session files
 
 | File | Meaning |
 |---|---|
 | `source.pdf` | immutable source document |
 | `machine_output.original.json` | exact uploaded machine JSON |
 | `initial_state.json` | canonical machine state shown to reviewer |
-| `events.jsonl` | append-only committed human interaction history |
+| `events.jsonl` | append-only committed human actions |
 | `working_state.json` | resumable current-state cache |
 | `session.json` | session metadata/status/timing |
-| `final_state.json` | frozen approved canonical state |
+| `final_state.json` | approved canonical state |
 | `metrics.json` | derived evaluation metrics |
 
-`working_state.json` is not an authoritative research record. It may be regenerated from `initial_state.json + events.jsonl`.
+`working_state.json` is operational. Canonical state can be reconstructed from `initial_state.json + events.jsonl`.
 
-## 3. Canonical annotation state
+## 3. Canonical state
 
-`initial_state.json`, `working_state.json` and `final_state.json` use the same canonical state shape.
+`initial_state.json`, `working_state.json` and `final_state.json` use the same state shape.
 
 Example:
 
@@ -62,10 +51,10 @@ Example:
 {
   "schema_version": "1.0",
   "document": {
-    "document_id": "doc-2ee34f16",
+    "document_id": "doc-001",
     "filename": "guideline.pdf",
     "pdf_sha256": "sha256-hex",
-    "page_count": 12,
+    "page_count": 1,
     "pages": [
       {
         "page_index": 0,
@@ -78,6 +67,9 @@ Example:
     "name": "BetterIngest",
     "version": null,
     "ocr_engine": "PaddleOCR/PP-DocLayoutV3",
+    "ocr_version": null,
+    "config_hash": null,
+    "processed_at": null,
     "adapter": "betteringest-layout-review-v1",
     "metadata": {
       "ocr_scale": 2.0
@@ -96,91 +88,76 @@ Example:
       },
       "type": "paragraph_title",
       "text": "2 Methods",
+      "ocr_confidence": null,
       "reading_order": 4,
       "heading_level": 1,
       "heading_level_source": null,
       "heading_level_uncertain": false,
+      "uncertainty_reason": null,
       "origin": "machine",
       "ignored": false,
       "uncertain": false,
       "note": null,
       "metadata": {}
     }
-  ]
+  ],
+  "state_revision": 0,
+  "metadata": {}
 }
 ```
 
-## 4. Document object
-
-Recommended fields:
+## 4. Document
 
 | Field | Type | Notes |
 |---|---|---|
-| `document_id` | string | stable application/document identifier |
-| `filename` | string | display filename only; not a trusted filesystem path |
-| `pdf_sha256` | string | hash of the reviewed source PDF |
-| `page_count` | integer | number of source PDF pages |
+| `document_id` | string | stable document identifier |
+| `filename` | string | display filename |
+| `pdf_sha256` | string | source PDF hash |
+| `page_count` | integer | number of pages |
 | `pages` | array | page geometry metadata |
 
-Each page entry contains:
+`page_index` is zero-based.
 
-```json
-{
-  "page_index": 0,
-  "width": 595.3,
-  "height": 841.9
-}
-```
+## 5. Pipeline
 
-`page_index` is zero-based unless a later schema version explicitly changes this rule.
+| Field | Type |
+|---|---|
+| `name` | string |
+| `version` | string/null |
+| `ocr_engine` | string/null |
+| `ocr_version` | string/null |
+| `config_hash` | string/null |
+| `processed_at` | string/null |
+| `adapter` | string/null |
+| `metadata` | object |
 
-## 5. Pipeline object
-
-The `pipeline` object records provenance of the machine annotation that was canonicalized.
-
-Example:
-
-```json
-{
-  "name": "BetterIngest",
-  "version": null,
-  "ocr_engine": "PaddleOCR/PP-DocLayoutV3",
-  "adapter": "betteringest-layout-review-v1",
-  "metadata": {
-    "ocr_scale": 2.0
-  }
-}
-```
-
-Producer-specific information belongs under `metadata` rather than becoming mandatory canonical fields unless it is needed by the reviewer/domain model.
+Producer-specific data should remain in `metadata` unless needed by the canonical model.
 
 The exact producer payload remains separately preserved in `machine_output.original.json`.
 
-## 6. Region object
-
-Core fields:
+## 6. Region
 
 | Field | Type | Meaning |
 |---|---|---|
-| `region_id` | UUID/string | stable canonical region identity |
-| `source_region_id` | string/null | producer lineage identifier |
-| `page` | integer | zero-based source page |
-| `bbox` | object | normalized canonical box |
+| `region_id` | string/UUID | stable canonical region ID |
+| `source_region_id` | string/null | producer lineage ID |
+| `page` | integer | zero-based page |
+| `bbox` | object | normalized PDF box |
 | `type` | string | current region class |
-| `text` | string/null | OCR/reviewer text |
-| `reading_order` | integer/null | order on/through document representation |
-| `heading_level` | integer/null | inferred/approved structural level |
-| `heading_level_source` | string/null | provenance of heading-level decision |
-| `heading_level_uncertain` | boolean | machine structural uncertainty |
+| `text` | string | OCR/reviewer text |
+| `ocr_confidence` | number/null | optional confidence in `[0,1]` |
+| `reading_order` | integer/null | reading position |
+| `heading_level` | integer/null | level 1–6 when present |
+| `heading_level_source` | string/null | source of machine heading decision |
+| `heading_level_uncertain` | boolean | machine heading uncertainty |
+| `uncertainty_reason` | string/null | optional uncertainty reason |
 | `origin` | string | `machine` or `human` |
-| `ignored` | boolean | excluded from approved downstream representation |
-| `uncertain` | boolean | reviewer uncertainty flag |
+| `ignored` | boolean | excluded from approved representation |
+| `uncertain` | boolean | reviewer uncertainty |
 | `note` | string/null | reviewer note |
-| `metadata` | object | non-canonical extension metadata |
+| `metadata` | object | extension metadata |
 
-### 6.1 Identity rules
-
-Machine regions:
+Machine region:
 
 ```json
 {
@@ -189,7 +166,7 @@ Machine regions:
 }
 ```
 
-Human-created regions:
+Human-created region:
 
 ```json
 {
@@ -198,43 +175,11 @@ Human-created regions:
 }
 ```
 
-A `region_id` must remain stable for the lifetime of a region and must not be reused for a different region.
+A `region_id` must remain stable for the life of the region.
 
-### 6.2 Type vocabulary
-
-The canonical schema permits producer/application-defined string region types, for example:
-
-```text
-text
-paragraph_title
-figure
-table
-caption
-```
-
-The application may constrain the selectable vocabulary in the UI.
-
-Unknown producer labels should be mapped deliberately by the adapter rather than silently discarded.
-
-## 7. Raw machine output
-
-`machine_output.original.json` preserves the uploaded machine JSON bytes and is never overwritten by reviewer actions.
-
-It answers:
-
-> What exactly did the producer supply?
-
-`initial_state.json` answers:
-
-> What canonical annotation state did the review application interpret and present?
-
-These records must remain separate because canonicalization may normalize coordinates, identifiers, field names or metadata.
-
-## 8. Event log
+## 7. Event log
 
 `events.jsonl` contains one JSON object per line.
-
-Each event represents one committed semantic interaction.
 
 Example:
 
@@ -252,30 +197,10 @@ Example:
   ],
   "page": 2,
   "before": {
-    "regions": [
-      {
-        "region_id": "75e5a322-f3de-4f3c-946c-c76f57d69cc2",
-        "bbox": {
-          "x0": 0.10,
-          "y0": 0.20,
-          "x1": 0.70,
-          "y1": 0.35
-        }
-      }
-    ]
+    "regions": []
   },
   "after": {
-    "regions": [
-      {
-        "region_id": "75e5a322-f3de-4f3c-946c-c76f57d69cc2",
-        "bbox": {
-          "x0": 0.10,
-          "y0": 0.20,
-          "x1": 0.75,
-          "y1": 0.36
-        }
-      }
-    ]
+    "regions": []
   },
   "target_event_id": null,
   "reason_code": null,
@@ -283,32 +208,32 @@ Example:
 }
 ```
 
-## 9. Event fields
+`before` and `after` contain complete snapshots of the affected regions in real events.
 
-| Field | Type | Requirement |
+## 8. Event fields
+
+| Field | Type | Meaning |
 |---|---|---|
-| `event_id` | UUID/string | unique event identity |
-| `session_id` | UUID/string | owning session |
-| `sequence` | integer | monotonically increasing session-local order |
+| `event_id` | string/UUID | unique event |
+| `session_id` | string/UUID | owning session |
+| `sequence` | integer | session-local order |
 | `timestamp_utc` | datetime string | UTC timestamp |
-| `annotator_id` | string | reviewer identity/pseudonym |
-| `action` | string | semantic action name |
-| `mutates_state` | boolean | whether canonical state changes |
-| `target_region_ids` | array | affected region IDs |
-| `page` | integer/null | relevant page when applicable |
-| `before` | object/null | complete prior affected snapshot |
-| `after` | object/null | complete resulting affected snapshot |
-| `target_event_id` | UUID/string/null | used for undo/redo linkage where applicable |
-| `reason_code` | string/null | optional structured reason |
+| `annotator_id` | string | reviewer ID/pseudonym |
+| `action` | string | semantic action |
+| `mutates_state` | boolean | whether state changes |
+| `target_region_ids` | array | affected regions |
+| `page` | integer/null | relevant page |
+| `before` | object/null | previous affected state |
+| `after` | object/null | resulting affected state |
+| `target_event_id` | string/null | undo/redo linkage |
+| `reason_code` | string/null | optional reason |
 | `metadata` | object | extension data |
 
-Complete affected snapshots are intentionally preferred over minimal field-only deltas. The extra storage cost is acceptable for the MVP and simplifies replay, audit and future metrics.
+Events are append-only.
 
-## 10. Semantic actions
+## 9. Current review actions
 
-The implementation's event vocabulary should remain explicit and versioned.
-
-Representative state-changing actions include:
+State-changing actions exposed by the current review workflow include:
 
 ```text
 CREATE_REGION
@@ -316,221 +241,151 @@ DELETE_REGION
 MOVE_REGION
 RESIZE_REGION
 RECLASSIFY_REGION
-EDIT_TEXT
+UPDATE_TEXT
 CHANGE_HEADING_LEVEL
 CHANGE_READING_ORDER
 IGNORE_REGION
 RESTORE_REGION
 MARK_UNCERTAIN
 ADD_NOTE
-```
-
-History/control actions include:
-
-```text
 UNDO
 REDO
 ```
 
-The serialized implementation is authoritative if action naming differs slightly. Adding new action types must not change the meaning of previously written events.
+A completed user operation creates one semantic event. Raw pointer movement is not logged as repeated events.
 
-## 11. Event commit boundary
-
-Raw browser activity is not persisted as domain events.
-
-Example resize:
+Example:
 
 ```text
-pointer down
-pointer move
-pointer move
-pointer move
-pointer up
+pointer down -> pointer moves -> pointer up
+                              -> one RESIZE_REGION
 ```
 
-produces:
+Undo/redo append new events and do not delete earlier history.
 
-```text
-one committed RESIZE_REGION event
-```
+The domain code may contain additional experimental actions; they are not part of the supported MVP UI contract unless exposed and tested through the review workflow.
 
-This ensures event counts reflect meaningful reviewer operations rather than browser frame/input frequency.
+## 10. Session metadata
 
-## 12. Undo and redo
-
-Undo/redo append new events and never remove historical lines.
-
-A reversal event links to the relevant prior event through `target_event_id` where implemented.
-
-This preserves both:
-
-- final state correctness;
-- actual human interaction history.
-
-## 13. Session metadata
-
-`session.json` contains operational/research metadata for a review.
-
-Typical concepts include:
+Typical `session.json`:
 
 ```json
 {
-  "session_id": "18dde386-2dd4-4bda-8e72-66ff8b411e6c",
-  "annotator_id": "reviewer-01",
-  "status": "active",
-  "created_at": "2026-08-20T17:00:00.000Z",
-  "approved_at": null,
   "schema_version": "1.0",
-  "application_version": "1.0.0"
+  "app_version": "1.0.0",
+  "session_id": "18dde386-2dd4-4bda-8e72-66ff8b411e6c",
+  "document_id": "doc-001",
+  "filename": "guideline.pdf",
+  "annotator_id": "reviewer-01",
+  "created_at": "2026-08-20T17:00:00.000Z",
+  "updated_at": "2026-08-20T17:20:00.000Z",
+  "finalised_at": null,
+  "status": "active",
+  "active_seconds": 0,
+  "initial_state_sha256": "sha256-hex",
+  "events_sha256": null,
+  "final_state_sha256": null,
+  "replay_valid": null,
+  "metadata": {}
 }
 ```
 
-The exact implementation may include additional timing, hash or checklist metadata.
-
-Session status is conceptually:
+Status flow:
 
 ```text
 active -> approved
 ```
 
-Approved sessions are immutable through normal annotation APIs.
+Approved sessions reject normal annotation mutations.
 
-## 14. Approval checklist
+`active_seconds` is an activity estimate, not exact cognitive-effort time.
 
-Approval metadata records the reviewer's confirmation that the common stopping condition was applied.
+## 11. Approval
 
-The MVP checklist covers:
+The final checklist covers:
 
-1. every page reviewed;
-2. missing/spurious regions checked;
-3. region boundaries checked/corrected;
-4. region classes checked/corrected;
-5. heading levels and reading order checked where applicable;
-6. remaining uncertainty marked/noted.
+1. all pages reviewed
+2. missing/spurious regions checked
+3. region boundaries checked
+4. region types checked
+5. heading levels and reading order checked where applicable
+6. remaining uncertainty documented
 
-An optional approval note may record remaining limitations.
+Approval writes a complete `final_state.json`.
 
-Checklist completion does not alter the historical machine state and should not silently modify region data.
-
-## 15. Final state
-
-`final_state.json` is a complete canonical annotation state, not a patch.
-
-It is written only after approval validation succeeds.
-
-Integrity requirement:
+Integrity rule:
 
 ```text
 replay(initial_state.json, events.jsonl) == final_state.json
 ```
 
-The comparison is semantic/canonical, not byte-for-byte JSON serialization equality.
+The comparison is semantic/canonical, not byte-for-byte JSON equality.
 
-## 16. Metrics file
+## 12. Metrics
 
-`metrics.json` contains derived values and is not the sole source of research evidence.
+`metrics.json` is derived data.
 
-Metrics may include:
+It may include:
 
-- initial/final region counts;
-- regions added/deleted/changed;
-- geometry changes;
-- classification/text/structure/order changes;
-- corrected-region rate;
-- committed edit-event count;
-- undo/redo count;
-- active review time;
-- active review time per page;
-- replay integrity status.
+- initial/final region counts
+- added/deleted/changed regions
+- geometry/type/text/structure/order changes
+- corrected-region rate
+- committed edit count
+- undo/redo count
+- active review time
+- replay validity
 
-Metric definitions may evolve while raw states/events remain stable.
+Metrics can evolve without rewriting the raw initial/event/final records.
 
-## 17. Validation rules
+## 13. Validation
 
 At minimum:
 
 ### State
 
-- `schema_version` must be recognized;
-- document page count must match page metadata;
-- every region must reference a valid page;
-- every region ID must be unique;
-- bounding boxes must satisfy canonical coordinate invariants;
-- machine/human origin must be valid;
-- approved states must be internally valid.
+- recognized schema version
+- unique region IDs
+- valid page references
+- valid normalized bounding boxes
+- valid heading level when present
+- valid origin values
 
 ### Events
 
-- `event_id` must be unique;
-- `session_id` must match the owning session;
-- sequences must be ordered/continuous according to implementation rules;
-- target region IDs must be valid for the event context;
-- before/after snapshots must be sufficient to replay the action;
-- timestamps must be parseable UTC values;
-- no state mutation is accepted after approval.
+- unique event IDs
+- correct session ID
+- ordered sequence values
+- valid target region references for the action
+- replayable before/after data
+- no annotation mutation after approval
 
 ### Finalisation
 
-- checklist requirements must be satisfied;
-- replay must reproduce the final/current state;
-- final state is written once and becomes read-only.
+- checklist completed
+- replay matches current/final state
+- final state becomes read-only
 
-## 18. Schema evolution
+## 14. Schema evolution
 
-Backward compatibility rules:
+Rules:
 
-1. never reinterpret the meaning of an existing field in place;
-2. add optional fields with safe defaults when possible;
-3. add new action names rather than overloading old event semantics;
-4. bump `schema_version` for incompatible canonical changes;
-5. retain adapter/version metadata so historical producer inputs remain interpretable;
-6. never rewrite historical `events.jsonl` merely to match a newer schema.
+1. do not change the meaning of existing fields
+2. prefer new optional fields for compatible additions
+3. add new action names rather than overloading old ones
+4. bump `schema_version` for incompatible changes
+5. retain adapter/version metadata
+6. do not rewrite historical event logs to fit a newer schema
 
-Migration tooling, if needed later, should produce a new derived representation while retaining the original session export.
+## 15. Producer adapter contract
 
-## 19. Producer adapter contract
+An adapter must:
 
-A producer adapter must:
-
-1. validate the incoming producer payload;
-2. preserve the original payload separately;
-3. identify source PDF page geometry;
-4. map producer region labels;
-5. convert producer bounding boxes into canonical normalized coordinates;
-6. produce stable `region_id`s;
-7. retain `source_region_id` lineage where possible;
-8. retain relevant producer metadata without polluting core canonical fields;
-9. fail explicitly when coordinates/pages cannot be interpreted safely.
-
-The annotation UI should depend only on the canonical state after this boundary.
-
-## 20. Example lifecycle
-
-```text
-PDF + BetterIngest review JSON
-            |
-            v
-machine_output.original.json
-            |
-         adapter
-            |
-            v
-initial_state.json
-            |
-      reviewer events
-            |
-            +------> events.jsonl
-            |
-            v
-working_state.json
-            |
-      final checklist
-            |
-       replay check
-            |
-            v
-final_state.json
-            |
-            v
-metrics.json / export
-```
+1. validate the producer payload
+2. preserve the original payload separately
+3. map page geometry and region labels
+4. normalize bounding boxes
+5. produce stable canonical region IDs
+6. retain source-region lineage where possible
+7. preserve useful producer metadata
+8. fail explicitly when the producer output cannot be interpreted safely
