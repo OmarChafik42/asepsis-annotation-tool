@@ -1,8 +1,10 @@
 # Asepsis Annotation & Correction Tool
 
-Standalone research MVP for reviewing OCR/layout output against the source PDF before downstream ingestion.
+Standalone research MVP for human review and correction of OCR/layout output against the source PDF before documents are ingested into a structure-aware medical RAG pipeline.
 
-The tool preserves three review records separately:
+The tool acts as a quality-control layer between document ingestion and downstream retrieval, particularly where document hierarchy and layout matter, including tree-based retrieval systems such as PageIndex.
+
+To support reproducibility and evaluation, each review session preserves three records separately:
 
 ```text
 initial_state.json   canonical machine state shown to the reviewer
