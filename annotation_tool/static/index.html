@@ -70,10 +70,6 @@
       <main class="document-panel">
         <div class="document-toolbar">
           <button id="addRegionBtn" class="secondary">＋ Add region</button>
-          <label class="ocr-toggle" title="Show or hide MinerU sentence/line OCR boxes while reviewing layout structure.">
-            <input id="showOcrBoxes" type="checkbox" />
-            Show OCR text boxes
-          </label>
           <div class="edit-layer-control" role="group" aria-label="Editable annotation layer">
             <span class="edit-layer-label">Edit:</span>
             <button id="editLayoutBtn" class="layer-button active" type="button">Layout</button>
@@ -104,13 +100,29 @@
             </div>
             <label>Type
               <select id="regionType">
-                <option value="text">text</option>
-                <option value="paragraph_title">paragraph_title</option>
-                <option value="doc_title">doc_title</option>
+                <option value="text">text (layout block)</option>
+                <option value="paragraph_title">section heading (paragraph_title)</option>
+                <option value="doc_title">document title (doc_title)</option>
+                <option value="header">header</option>
+                <option value="footer">footer</option>
+                <option value="image">image</option>
+                <option value="header_image">header image</option>
+                <option value="footer_image">footer image</option>
                 <option value="table">table</option>
                 <option value="figure">figure</option>
+                <option value="figure_title">figure title / caption</option>
                 <option value="chart">chart</option>
                 <option value="caption">caption</option>
+                <option value="reference_content">reference content</option>
+                <option value="footnote">footnote</option>
+                <option value="vision_footnote">vision footnote</option>
+                <option value="aside_text">aside text</option>
+                <option value="number">number</option>
+                <option value="abstract">abstract</option>
+                <option value="content">content</option>
+                <option value="vertical_text">vertical text</option>
+                <option value="inline_formula">inline formula</option>
+                <option value="display_formula">display formula</option>
                 <option value="list">list</option>
                 <option value="formula">formula</option>
                 <option value="other">other</option>

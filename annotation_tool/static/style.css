@@ -142,9 +142,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid rgba(9,105,218,.1
 .review-checklist input { width: auto; margin-top: 2px; }
 .review-modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
 
-/* OCR detail overlay: useful as visual evidence, never an editing target in structure mode. */
-.ocr-toggle { display: inline-flex; align-items: center; gap: 6px; margin: 0; font-size: 12px; font-weight: 700; color: #4f5d6a; white-space: nowrap; }
-.ocr-toggle input { width: auto; margin: 0; }
+/* OCR detail boxes are hidden in Layout mode and become the editable layer in OCR mode. */
 .region-box.structure-region { z-index: 2; }
 .region-box.ocr-detail {
   cursor: default;

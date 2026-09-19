@@ -10,13 +10,10 @@ const appState = {
   drag: null,
   draw: null,
   lastActivity: Date.now(),
-  showOcrBoxes: false,
   editLayer: "layout",
   autosaveTimer: null,
   saveQueue: Promise.resolve(),
 };
-
-const regionTypes = ["text", "paragraph_title", "doc_title", "table", "figure", "chart", "caption", "list", "formula", "other"];
 
 function toast(message, error = false) {
   const el = $("toast");
@@ -137,12 +134,10 @@ async function openSession(sessionId) {
     appState.currentPage = 0;
     appState.selectedRegionId = null;
     appState.addMode = false;
-    appState.showOcrBoxes = false;
     appState.editLayer = "layout";
     clearTimeout(appState.autosaveTimer);
     appState.autosaveTimer = null;
     appState.saveQueue = Promise.resolve();
-    $("showOcrBoxes").checked = false;
     updateLayerControls();
     $("homeView").classList.add("hidden");
     $("workspaceView").classList.remove("hidden");
@@ -203,20 +198,21 @@ function isRegionEditable(region) {
 }
 
 function isRegionVisible(region) {
-  if (!isOcrRegion(region)) return true;
-  return appState.editLayer === "ocr" || appState.showOcrBoxes;
+  // Layout mode keeps the structural/layout layer clean by hiding sentence-level
+  // OCR boxes. OCR mode shows both layers: OCR is editable and layout remains
+  // visible as non-interactive context.
+  if (appState.editLayer === "layout") return !isOcrRegion(region);
+  return true;
 }
 
 function updateLayerControls() {
   const ocrMode = appState.editLayer === "ocr";
   $("editLayoutBtn").classList.toggle("active", !ocrMode);
   $("editOcrBtn").classList.toggle("active", ocrMode);
-  $("showOcrBoxes").checked = appState.showOcrBoxes || ocrMode;
-  $("showOcrBoxes").disabled = ocrMode;
   $("regionListTitle").textContent = ocrMode ? "OCR text boxes" : "Layout regions";
   $("modeText").textContent = ocrMode
-    ? "OCR editing: sentence/line boxes are editable; layout boxes are reference-only."
-    : "Layout editing: structural boxes are editable; OCR boxes are optional reference overlays.";
+    ? "OCR editing: sentence/line boxes are editable; layout boxes are shown for reference."
+    : "Layout editing: layout regions are editable; sentence-level OCR boxes are hidden.";
 }
 
 async function setEditLayer(layer) {
@@ -228,7 +224,6 @@ async function setEditLayer(layer) {
     return;
   }
   appState.editLayer = layer;
-  if (layer === "ocr") appState.showOcrBoxes = true;
   appState.selectedRegionId = null;
   appState.addMode = false;
   $("addRegionBtn").classList.remove("primary");
@@ -423,16 +418,6 @@ $("addRegionBtn").addEventListener("click", async () => {
     ? (appState.editLayer === "ocr" ? "Draw a rectangle to create an OCR text region." : "Draw a rectangle to create a layout region.")
     : (appState.editLayer === "ocr" ? "OCR editing: select a sentence/line box." : "Layout editing: select a structural region.");
   renderOverlays(); renderRegionList(); renderInspector();
-});
-
-$("showOcrBoxes").addEventListener("change", (e) => {
-  // In OCR edit mode the OCR layer must remain visible.
-  if (appState.editLayer === "ocr") {
-    e.target.checked = true;
-    return;
-  }
-  appState.showOcrBoxes = e.target.checked;
-  renderOverlays();
 });
 
 $("editLayoutBtn").addEventListener("click", () => setEditLayer("layout"));
