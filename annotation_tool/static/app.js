@@ -25,7 +25,17 @@ function toast(message, error = false) {
 }
 
 async function api(url, options = {}) {
-  const response = await fetch(url, options);
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  let response;
+  try {
+    response = await fetch(url, {...options, signal: controller.signal});
+  } catch (err) {
+    if (err?.name === "AbortError") throw new Error("Request timed out. Is the local server still running?");
+    throw err;
+  } finally {
+    clearTimeout(timeoutId);
+  }
   if (!response.ok) {
     let message = `${response.status} ${response.statusText}`;
     try {
@@ -47,34 +57,6 @@ function setBusy(value, text = "Saving…") {
 
 function markActivity() { appState.lastActivity = Date.now(); }
 ["pointerdown", "keydown", "wheel"].forEach(evt => window.addEventListener(evt, markActivity, {passive:true}));
-
-async function loadSessions() {
-  const box = $("sessionList");
-  box.innerHTML = `<div class="muted">Loading…</div>`;
-  try {
-    const sessions = await api("/api/sessions");
-    if (!sessions.length) {
-      box.innerHTML = `<div class="muted">No sessions yet.</div>`;
-      return;
-    }
-    box.innerHTML = "";
-    for (const s of sessions) {
-      const row = document.createElement("div");
-      row.className = "session-item";
-      row.innerHTML = `
-        <div>
-          <div class="session-name" title="${escapeHtml(s.filename)}">${escapeHtml(s.filename)} <span class="status-badge ${s.status}">${s.status}</span></div>
-          <div class="session-meta">${escapeHtml(s.annotator_id)} · ${new Date(s.updated_at).toLocaleString()}</div>
-        </div>
-        <button class="secondary small">Open</button>`;
-      row.querySelector("button").addEventListener("click", () => openSession(s.session_id));
-      box.appendChild(row);
-    }
-  } catch (err) {
-    box.innerHTML = `<div class="muted">Could not load sessions.</div>`;
-    toast(err.message, true);
-  }
-}
 
 async function loadDatasetStatus() {
   const box = $("datasetList");
@@ -109,9 +91,17 @@ async function loadDatasetStatus() {
             await openSession(result.session.session_id);
             return;
           }
+          const latestSessionId = Array.isArray(doc.sessions) && doc.sessions.length ? doc.sessions[0] : null;
+          if (latestSessionId) {
+            await openSession(latestSessionId);
+            return;
+          }
+
+          // Fallback for older backend responses that do not include session IDs.
           const sessions = await api("/api/sessions");
           const match = sessions.find(s => s.filename === doc.document || s.metadata?.document === doc.document);
-          if (match) openSession(match.session_id);
+          if (match) await openSession(match.session_id);
+          else throw new Error("No existing annotation session found for this document.");
         } catch (err) {
           toast(err.message, true);
         }
@@ -169,8 +159,9 @@ $("backHomeBtn").addEventListener("click", async () => {
   $("homeView").classList.remove("hidden");
   appState.session = null;
   appState.state = null;
-  loadSessions();
-  loadDatasetStatus();
+  appState.selectedRegionId = null;
+  appState.currentPage = 0;
+  await loadDatasetStatus();
 });
 
 function currentRegions() {
@@ -217,17 +208,21 @@ function updateLayerControls() {
 
 async function setEditLayer(layer) {
   if (!["layout", "ocr"].includes(layer) || layer === appState.editLayer) return;
+
   try {
     await flushInspectorChanges();
   } catch (err) {
     toast(err.message, true);
     return;
   }
+
   appState.editLayer = layer;
   appState.selectedRegionId = null;
   appState.addMode = false;
+
   $("addRegionBtn").classList.remove("primary");
   $("addRegionBtn").classList.add("secondary");
+
   updateLayerControls();
   renderOverlays();
   renderRegionList();
