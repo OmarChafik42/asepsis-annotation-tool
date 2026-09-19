@@ -3,5 +3,24 @@ __pycache__/
 *.pyc
 .pytest_cache/
 annotation-data/
+# persistent per-document session runtime files
+data/*/auto/sessions/*/working_state.json
+data/*/auto/sessions/*/source.pdf
+data/*/auto/sessions/*/render_cache/
+data/**/*.zip
 *.zip
 .DS_Store
+.idea/
+.env
+.env.*
+!.env.example
+*.log
+*.db
+*.sqlite
+*.sqlite3
+Thumbs.db
+
+# local document corpus; keep only the directory instructions in Git
+data/**
+!data/README.md
+data-public/

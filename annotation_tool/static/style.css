@@ -51,7 +51,10 @@ input:focus, select:focus, textarea:focus { outline: 2px solid rgba(9,105,218,.1
 .session-name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .session-meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
 .status-badge { display: inline-block; padding: 2px 7px; border-radius: 99px; font-size: 11px; background: #edf7f4; color: #25685e; margin-left: 6px; }
-.status-badge.approved { background: #eef1f4; color: #586574; }
+.status-badge.grey { background: #eef1f4; color: #586574; }
+.status-badge.red { background: #fbe8e8; color: #b91c1c; }
+.status-badge.active { background: #fff7dc; color: #8a6200; }
+.status-badge.approved { background: #e7f7ee; color: #1f7a4f; }
 
 .workspace { height: 100vh; display: grid; grid-template-rows: 62px 1fr; overflow: hidden; }
 .topbar { background: white; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; gap: 16px; }
@@ -138,3 +141,28 @@ input:focus, select:focus, textarea:focus { outline: 2px solid rgba(9,105,218,.1
 .review-checklist label { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; line-height: 1.35; }
 .review-checklist input { width: auto; margin-top: 2px; }
 .review-modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* OCR detail overlay: useful as visual evidence, never an editing target in structure mode. */
+.ocr-toggle { display: inline-flex; align-items: center; gap: 6px; margin: 0; font-size: 12px; font-weight: 700; color: #4f5d6a; white-space: nowrap; }
+.ocr-toggle input { width: auto; margin: 0; }
+.region-box.structure-region { z-index: 2; }
+.region-box.ocr-detail {
+  cursor: default;
+  background: transparent;
+  border: 1px dashed #7f8c99;
+  opacity: .48;
+  z-index: 1;
+}
+
+/* Layered editing: layout and sentence-level OCR stay available without competing for clicks. */
+.edit-layer-control { display: inline-flex; align-items: center; gap: 3px; padding: 2px; border: 1px solid var(--line); border-radius: 7px; background: white; white-space: nowrap; }
+.edit-layer-label { padding: 0 4px; font-size: 11px; font-weight: 700; color: var(--muted); }
+.layer-button { border: 0; background: transparent; padding: 4px 8px; border-radius: 5px; font-size: 11px; font-weight: 800; color: #52606d; cursor: pointer; }
+.layer-button:hover { background: #f0f3f6; }
+.layer-button.active { background: #e7f0fb; color: #0969da; }
+
+.region-box.inactive-layer { pointer-events: none; cursor: default; opacity: .34; z-index: 1; }
+.region-box.structure-region:not(.inactive-layer) { z-index: 3; }
+.region-box.ocr-detail:not(.inactive-layer) { pointer-events: auto; cursor: move; opacity: .72; z-index: 3; }
+.region-box.ocr-detail.selected { opacity: 1; }
+.autosave-hint { margin-top: 6px; font-size: 10px; line-height: 1.35; color: var(--muted); }

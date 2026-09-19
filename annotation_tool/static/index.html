@@ -17,28 +17,12 @@
     </div>
 
     <div class="home-grid">
-      <form id="createForm" class="card create-card">
-        <h2>Start a review session</h2>
-        <label>Annotator ID
-          <input id="annotatorInput" name="annotator_id" value="reviewer-01" required />
-        </label>
-        <label>Source PDF
-          <input id="pdfInput" name="pdf_file" type="file" accept="application/pdf,.pdf" required />
-        </label>
-        <label>Machine annotation JSON
-          <input id="jsonInput" name="annotation_file" type="file" accept="application/json,.json" required />
-        </label>
-        <p class="hint">Accepted input: the canonical tool schema or the existing BetterIngest <code>prepare_layout_review()</code> JSON.</p>
-        <button class="primary" type="submit">Create session</button>
-        <div id="createStatus" class="status-text"></div>
-      </form>
-
-      <div class="card sessions-card">
+      <div class="card dataset-card" style="grid-column: 1 / -1;">
         <div class="card-heading-row">
-          <h2>Existing sessions</h2>
-          <button id="refreshSessionsBtn" class="secondary small" type="button">Refresh</button>
+          <h2>Scanned source documents</h2>
+          <button id="refreshDatasetBtn" class="secondary small" type="button">Refresh</button>
         </div>
-        <div id="sessionList" class="session-list"><div class="muted">Loading…</div></div>
+        <div id="datasetList" class="session-list"><div class="muted">Loading…</div></div>
       </div>
     </div>
   </section>
@@ -72,7 +56,7 @@
         </div>
         <div class="panel-section">
           <div class="section-title-row">
-            <span class="section-title">Regions on page</span>
+            <span id="regionListTitle" class="section-title">Layout regions</span>
             <span id="pageRegionCount" class="pill">0</span>
           </div>
           <div id="regionList" class="region-list"></div>
@@ -86,7 +70,16 @@
       <main class="document-panel">
         <div class="document-toolbar">
           <button id="addRegionBtn" class="secondary">＋ Add region</button>
-          <span id="modeText" class="mode-text">Select a region to inspect or correct it.</span>
+          <label class="ocr-toggle" title="Show or hide MinerU sentence/line OCR boxes while reviewing layout structure.">
+            <input id="showOcrBoxes" type="checkbox" />
+            Show OCR text boxes
+          </label>
+          <div class="edit-layer-control" role="group" aria-label="Editable annotation layer">
+            <span class="edit-layer-label">Edit:</span>
+            <button id="editLayoutBtn" class="layer-button active" type="button">Layout</button>
+            <button id="editOcrBtn" class="layer-button" type="button">OCR</button>
+          </div>
+          <span id="modeText" class="mode-text">Layout editing: select a structural region to inspect or correct it.</span>
           <span class="spacer"></span>
           <span id="saveStateText" class="save-state">Saved</span>
         </div>
@@ -142,8 +135,9 @@
               <textarea id="regionNote" rows="3" placeholder="Optional reason or uncertainty note"></textarea>
             </label>
             <div class="bbox-readout" id="bboxReadout"></div>
+            <div class="autosave-hint">Changes save automatically. “Save now” is only a manual fallback.</div>
             <div class="inspector-actions">
-              <button class="primary" type="submit">Save properties</button>
+              <button class="primary" type="submit">Save now</button>
               <button id="deleteRegionBtn" class="danger" type="button">Delete region</button>
             </div>
           </form>

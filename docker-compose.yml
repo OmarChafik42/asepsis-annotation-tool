@@ -8,8 +8,6 @@ services:
       ANNOTATION_MAX_PDF_MB: "50"
       ANNOTATION_MAX_JSON_MB: "10"
     volumes:
-      - annotation_data:/data
+      - ./data:/data
+    user: "${UID:-1000}:${GID:-1000}"
     restart: unless-stopped
-
-volumes:
-  annotation_data:

@@ -10,6 +10,10 @@ const appState = {
   drag: null,
   draw: null,
   lastActivity: Date.now(),
+  showOcrBoxes: false,
+  editLayer: "layout",
+  autosaveTimer: null,
+  saveQueue: Promise.resolve(),
 };
 
 const regionTypes = ["text", "paragraph_title", "doc_title", "table", "figure", "chart", "caption", "list", "formula", "other"];
@@ -75,27 +79,55 @@ async function loadSessions() {
   }
 }
 
-$("refreshSessionsBtn").addEventListener("click", loadSessions);
-
-$("createForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const pdf = $("pdfInput").files[0];
-  const json = $("jsonInput").files[0];
-  if (!pdf || !json) return;
-  const form = new FormData();
-  form.append("pdf_file", pdf);
-  form.append("annotation_file", json);
-  form.append("annotator_id", $("annotatorInput").value.trim() || "anonymous");
-  $("createStatus").textContent = "Creating session and validating machine output…";
+async function loadDatasetStatus() {
+  const box = $("datasetList");
+  box.innerHTML = `<div class="muted">Loading…</div>`;
   try {
-    const result = await api("/api/sessions", { method: "POST", body: form });
-    $("createStatus").textContent = "Session created.";
-    await openSession(result.session.session_id);
+    const docs = await api("/api/dataset");
+    if (!docs.length) {
+      box.innerHTML = `<div class="muted">No documents discovered yet.</div>`;
+      return;
+    }
+    box.innerHTML = "";
+    for (const doc of docs) {
+      const row = document.createElement("div");
+      row.className = "session-item";
+      const isAnnotated = doc.status === "annotated";
+      const status = isAnnotated ? "annotated" : "pending";
+      const badgeClass = isAnnotated ? "red" : "grey";
+      const latest = isAnnotated ? (doc.latest_finalised_at ? new Date(doc.latest_finalised_at).toLocaleString() : "Previous annotation session") : "Not annotated yet";
+      const buttonText = isAnnotated ? "Open" : "Start annotation";
+      row.innerHTML = `
+        <div>
+          <div class="session-name" title="${escapeHtml(doc.document)}">${escapeHtml(doc.document)} <span class="status-badge ${badgeClass}">${status}</span></div>
+          <div class="session-meta">${escapeHtml(doc.annotator || "—")} · ${escapeHtml(latest)}</div>
+        </div>
+        <button class="secondary small">${buttonText}</button>`;
+      row.querySelector("button").addEventListener("click", async () => {
+        try {
+          if (!isAnnotated) {
+            const form = new FormData();
+            form.append("annotator_id", "anonymous");
+            const result = await api(`/api/dataset/${encodeURIComponent(doc.document)}/sessions`, {method: "POST", body: form});
+            await openSession(result.session.session_id);
+            return;
+          }
+          const sessions = await api("/api/sessions");
+          const match = sessions.find(s => s.filename === doc.document || s.metadata?.document === doc.document);
+          if (match) openSession(match.session_id);
+        } catch (err) {
+          toast(err.message, true);
+        }
+      });
+      box.appendChild(row);
+    }
   } catch (err) {
-    $("createStatus").textContent = err.message;
+    box.innerHTML = `<div class="muted">Could not load dataset status.</div>`;
     toast(err.message, true);
   }
-});
+}
+
+$("refreshDatasetBtn").addEventListener("click", loadDatasetStatus);
 
 async function openSession(sessionId) {
   try {
@@ -105,6 +137,13 @@ async function openSession(sessionId) {
     appState.currentPage = 0;
     appState.selectedRegionId = null;
     appState.addMode = false;
+    appState.showOcrBoxes = false;
+    appState.editLayer = "layout";
+    clearTimeout(appState.autosaveTimer);
+    appState.autosaveTimer = null;
+    appState.saveQueue = Promise.resolve();
+    $("showOcrBoxes").checked = false;
+    updateLayerControls();
     $("homeView").classList.add("hidden");
     $("workspaceView").classList.remove("hidden");
     $("docTitle").textContent = appState.session.filename;
@@ -124,16 +163,80 @@ async function openSession(sessionId) {
   }
 }
 
-$("backHomeBtn").addEventListener("click", () => {
+$("backHomeBtn").addEventListener("click", async () => {
+  try {
+    await flushInspectorChanges();
+  } catch (err) {
+    toast(err.message, true);
+    return;
+  }
   $("workspaceView").classList.add("hidden");
   $("homeView").classList.remove("hidden");
   appState.session = null;
   appState.state = null;
   loadSessions();
+  loadDatasetStatus();
 });
 
 function currentRegions() {
   return (appState.state?.regions || []).filter(r => r.page === appState.currentPage);
+}
+
+function isOcrRegion(region) {
+  return region?.type === "ocr_text";
+}
+
+function structuralRegions() {
+  return currentRegions().filter(r => !isOcrRegion(r));
+}
+
+function ocrRegions() {
+  return currentRegions().filter(isOcrRegion);
+}
+
+function activeLayerRegions() {
+  return appState.editLayer === "ocr" ? ocrRegions() : structuralRegions();
+}
+
+function isRegionEditable(region) {
+  return appState.editLayer === "ocr" ? isOcrRegion(region) : !isOcrRegion(region);
+}
+
+function isRegionVisible(region) {
+  if (!isOcrRegion(region)) return true;
+  return appState.editLayer === "ocr" || appState.showOcrBoxes;
+}
+
+function updateLayerControls() {
+  const ocrMode = appState.editLayer === "ocr";
+  $("editLayoutBtn").classList.toggle("active", !ocrMode);
+  $("editOcrBtn").classList.toggle("active", ocrMode);
+  $("showOcrBoxes").checked = appState.showOcrBoxes || ocrMode;
+  $("showOcrBoxes").disabled = ocrMode;
+  $("regionListTitle").textContent = ocrMode ? "OCR text boxes" : "Layout regions";
+  $("modeText").textContent = ocrMode
+    ? "OCR editing: sentence/line boxes are editable; layout boxes are reference-only."
+    : "Layout editing: structural boxes are editable; OCR boxes are optional reference overlays.";
+}
+
+async function setEditLayer(layer) {
+  if (!["layout", "ocr"].includes(layer) || layer === appState.editLayer) return;
+  try {
+    await flushInspectorChanges();
+  } catch (err) {
+    toast(err.message, true);
+    return;
+  }
+  appState.editLayer = layer;
+  if (layer === "ocr") appState.showOcrBoxes = true;
+  appState.selectedRegionId = null;
+  appState.addMode = false;
+  $("addRegionBtn").classList.remove("primary");
+  $("addRegionBtn").classList.add("secondary");
+  updateLayerControls();
+  renderOverlays();
+  renderRegionList();
+  renderInspector();
 }
 
 function regionById(id) {
@@ -163,35 +266,56 @@ function renderOverlays() {
   const overlay = $("overlay");
   overlay.innerHTML = "";
   overlay.classList.toggle("add-mode", appState.addMode);
+
   for (const r of currentRegions()) {
+    if (!isRegionVisible(r)) continue;
+
+    const ocrDetail = isOcrRegion(r);
+    const editable = isRegionEditable(r);
     const box = document.createElement("div");
     box.className = "region-box";
-    if (r.region_id === appState.selectedRegionId) box.classList.add("selected");
-    if (r.ignored) box.classList.add("ignored");
-    if (r.uncertain || r.heading_level_uncertain) box.classList.add("uncertain");
     box.dataset.regionId = r.region_id;
     setBoxStyle(box, r.bbox);
-    const label = document.createElement("div");
-    label.className = "region-label";
-    label.textContent = r.type + (r.heading_level ? ` · H${r.heading_level}` : "");
-    box.appendChild(label);
-    box.addEventListener("pointerdown", (e) => startMove(e, r));
-    box.addEventListener("click", (e) => {
-      e.stopPropagation();
-      selectRegion(r.region_id);
-    });
-    if (r.region_id === appState.selectedRegionId && appState.session.status !== "approved") {
-      for (const dir of ["nw", "ne", "sw", "se"]) {
-        const h = document.createElement("div");
-        h.className = `handle ${dir}`;
-        h.dataset.dir = dir;
-        h.addEventListener("pointerdown", (e) => startResize(e, r, dir));
-        box.appendChild(h);
+
+    box.classList.add(ocrDetail ? "ocr-detail" : "structure-region");
+    if (!editable) box.classList.add("inactive-layer");
+    if (editable && r.region_id === appState.selectedRegionId) box.classList.add("selected");
+    if (r.ignored) box.classList.add("ignored");
+    if (r.uncertain || r.heading_level_uncertain) box.classList.add("uncertain");
+
+    // Structural labels are useful in both modes. OCR boxes intentionally avoid
+    // hundreds of repeated labels; their text is available in the inspector/list.
+    if (!ocrDetail) {
+      const label = document.createElement("div");
+      label.className = "region-label";
+      label.textContent = r.type + (r.heading_level ? ` · H${r.heading_level}` : "");
+      box.appendChild(label);
+    } else {
+      box.title = r.text || "OCR text";
+    }
+
+    if (editable) {
+      box.addEventListener("pointerdown", (e) => startMove(e, r));
+      box.addEventListener("click", (e) => {
+        e.stopPropagation();
+        selectRegion(r.region_id);
+      });
+
+      if (r.region_id === appState.selectedRegionId && appState.session.status !== "approved") {
+        for (const dir of ["nw", "ne", "sw", "se"]) {
+          const h = document.createElement("div");
+          h.className = `handle ${dir}`;
+          h.dataset.dir = dir;
+          h.addEventListener("pointerdown", (e) => startResize(e, r, dir));
+          box.appendChild(h);
+        }
       }
     }
+
     overlay.appendChild(box);
   }
-  $("pageRegionCount").textContent = currentRegions().length;
+
+  $("pageRegionCount").textContent = activeLayerRegions().length;
 }
 
 function setBoxStyle(el, bbox) {
@@ -203,7 +327,7 @@ function setBoxStyle(el, bbox) {
 
 function renderRegionList() {
   const list = $("regionList");
-  const regions = [...currentRegions()].sort((a,b) => (a.reading_order ?? 1e9) - (b.reading_order ?? 1e9) || a.bbox.y0-b.bbox.y0);
+  const regions = [...activeLayerRegions()].sort((a,b) => (a.reading_order ?? 1e9) - (b.reading_order ?? 1e9) || a.bbox.y0-b.bbox.y0);
   list.innerHTML = "";
   for (const r of regions) {
     const row = document.createElement("div");
@@ -215,11 +339,19 @@ function renderRegionList() {
 }
 
 function selectRegion(id) {
+  // Capture pending edits for the previous region before changing selection.
+  // They are queued, so selection remains instant while persistence stays ordered.
+  if (appState.selectedRegionId && appState.selectedRegionId !== id) {
+    enqueueInspectorSave(inspectorSnapshot());
+  }
+
   appState.selectedRegionId = id;
   appState.addMode = false;
   $("addRegionBtn").classList.remove("primary");
   $("addRegionBtn").classList.add("secondary");
-  $("modeText").textContent = "Drag the box to move it or drag a corner handle to resize it.";
+  $("modeText").textContent = appState.editLayer === "ocr"
+    ? "OCR box selected. Edit text/properties, drag to move, or use a corner to resize."
+    : "Layout region selected. Edit structure/properties, drag to move, or use a corner to resize.";
   renderOverlays();
   renderRegionList();
   renderInspector();
@@ -262,21 +394,49 @@ $("prevPageBtn").addEventListener("click", () => gotoPage(appState.currentPage -
 $("nextPageBtn").addEventListener("click", () => gotoPage(appState.currentPage + 1));
 async function gotoPage(page) {
   if (!appState.state) return;
+  try {
+    // Navigation never waits for the 700 ms debounce: pending text is flushed now.
+    await flushInspectorChanges();
+  } catch (err) {
+    toast(err.message, true);
+    return;
+  }
   appState.currentPage = Math.max(0, Math.min(appState.state.document.page_count - 1, page));
   appState.selectedRegionId = null;
   await renderPage();
   logInteraction("VIEW_PAGE", { page: appState.currentPage }).catch(() => {});
 }
 
-$("addRegionBtn").addEventListener("click", () => {
+$("addRegionBtn").addEventListener("click", async () => {
   if (appState.session?.status === "approved") return;
+  try {
+    await flushInspectorChanges();
+  } catch (err) {
+    toast(err.message, true);
+    return;
+  }
   appState.addMode = !appState.addMode;
   appState.selectedRegionId = null;
   $("addRegionBtn").classList.toggle("primary", appState.addMode);
   $("addRegionBtn").classList.toggle("secondary", !appState.addMode);
-  $("modeText").textContent = appState.addMode ? "Draw a rectangle on the page to create a region." : "Select a region to inspect or correct it.";
+  $("modeText").textContent = appState.addMode
+    ? (appState.editLayer === "ocr" ? "Draw a rectangle to create an OCR text region." : "Draw a rectangle to create a layout region.")
+    : (appState.editLayer === "ocr" ? "OCR editing: select a sentence/line box." : "Layout editing: select a structural region.");
   renderOverlays(); renderRegionList(); renderInspector();
 });
+
+$("showOcrBoxes").addEventListener("change", (e) => {
+  // In OCR edit mode the OCR layer must remain visible.
+  if (appState.editLayer === "ocr") {
+    e.target.checked = true;
+    return;
+  }
+  appState.showOcrBoxes = e.target.checked;
+  renderOverlays();
+});
+
+$("editLayoutBtn").addEventListener("click", () => setEditLayer("layout"));
+$("editOcrBtn").addEventListener("click", () => setEditLayer("ocr"));
 
 function normalizedPointer(e) {
   const rect = $("overlay").getBoundingClientRect();
@@ -313,11 +473,17 @@ $("overlay").addEventListener("pointerup", async (e) => {
     appState.draw.temp.remove(); appState.draw = null;
     if (bbox.x1-bbox.x0 > .006 && bbox.y1-bbox.y0 > .006) {
       try {
-        const result = await sendCommand("CREATE_REGION", null, { page: appState.currentPage, bbox, type: "text" });
+        const result = await sendCommand("CREATE_REGION", null, {
+          page: appState.currentPage,
+          bbox,
+          type: appState.editLayer === "ocr" ? "ocr_text" : "text"
+        });
         appState.selectedRegionId = result.event.target_region_ids[0];
         appState.addMode = false;
         $("addRegionBtn").classList.remove("primary"); $("addRegionBtn").classList.add("secondary");
-        $("modeText").textContent = "New region created. Adjust its properties on the right.";
+        $("modeText").textContent = appState.editLayer === "ocr"
+          ? "New OCR region created. Correct its text/properties on the right."
+          : "New layout region created. Adjust its structural properties on the right.";
       } catch (err) { toast(err.message, true); }
     }
     renderOverlays(); renderRegionList(); renderInspector();
@@ -370,40 +536,137 @@ async function finishDrag(e) {
   const changed = JSON.stringify(d.original) !== JSON.stringify(d.current);
   if (!changed) return renderOverlays();
   try {
+    await appState.saveQueue;
     await sendCommand(d.kind === "move" ? "MOVE_REGION" : "RESIZE_REGION", d.regionId, { bbox: d.current });
   } catch (err) { toast(err.message, true); }
   renderOverlays(); renderRegionList(); renderInspector();
 }
 
+function inspectorSnapshot() {
+  const regionId = appState.selectedRegionId;
+  if (!regionId || !regionById(regionId)) return null;
+  return {
+    regionId,
+    type: $("regionType").value,
+    text: $("regionText").value,
+    headingLevel: $("headingLevel").value === "" ? null : Number($("headingLevel").value),
+    readingOrder: $("readingOrder").value === "" ? null : Number($("readingOrder").value),
+    ignored: $("ignoredCheck").checked,
+    uncertain: $("uncertainCheck").checked,
+    note: $("regionNote").value,
+  };
+}
+
+async function saveInspectorSnapshot(snapshot) {
+  if (!snapshot || appState.session?.status === "approved") return;
+  const id = snapshot.regionId;
+  let now = regionById(id);
+  if (!now) return;
+
+  if (snapshot.type !== now.type) {
+    await sendCommand("RECLASSIFY_REGION", id, {type: snapshot.type});
+  }
+  now = regionById(id);
+
+  if (snapshot.text !== (now.text || "")) {
+    await sendCommand("UPDATE_TEXT", id, {text: snapshot.text});
+  }
+  now = regionById(id);
+
+  if (snapshot.headingLevel !== (now.heading_level ?? null)) {
+    await sendCommand("CHANGE_HEADING_LEVEL", id, {heading_level: snapshot.headingLevel});
+  }
+  now = regionById(id);
+
+  if (snapshot.readingOrder !== (now.reading_order ?? null)) {
+    await sendCommand("CHANGE_READING_ORDER", id, {reading_order: snapshot.readingOrder});
+  }
+  now = regionById(id);
+
+  if (snapshot.ignored !== !!now.ignored) {
+    await sendCommand(snapshot.ignored ? "IGNORE_REGION" : "RESTORE_REGION", id, {});
+  }
+  now = regionById(id);
+
+  if (snapshot.uncertain !== !!now.uncertain) {
+    await sendCommand("MARK_UNCERTAIN", id, {uncertain: snapshot.uncertain});
+  }
+  now = regionById(id);
+
+  if (snapshot.note !== (now.note || "")) {
+    await sendCommand("ADD_NOTE", id, {note: snapshot.note});
+  }
+
+  // Do not call renderInspector() here: autosave must never reset the text
+  // caret while the reviewer is typing.
+  renderOverlays();
+  renderRegionList();
+}
+
+function enqueueInspectorSave(snapshot) {
+  if (!snapshot) return appState.saveQueue;
+
+  // Recover before starting the next queued save so one transient failure does
+  // not permanently poison the queue. The current caller still receives the
+  // rejection and can surface it to the reviewer.
+  appState.saveQueue = appState.saveQueue
+    .catch(() => {})
+    .then(() => saveInspectorSnapshot(snapshot));
+
+  return appState.saveQueue;
+}
+
+function scheduleTextAutosave() {
+  clearTimeout(appState.autosaveTimer);
+  appState.autosaveTimer = setTimeout(() => {
+    appState.autosaveTimer = null;
+    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+  }, 700);
+}
+
+async function flushInspectorChanges() {
+  clearTimeout(appState.autosaveTimer);
+  appState.autosaveTimer = null;
+
+  const snapshot = inspectorSnapshot();
+  if (snapshot) enqueueInspectorSave(snapshot);
+  await appState.saveQueue;
+}
+
+// Discrete values have a clear semantic commit point, so persist immediately.
+["regionType", "headingLevel", "readingOrder", "ignoredCheck", "uncertainCheck"].forEach((id) => {
+  $(id).addEventListener("change", () => {
+    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+  });
+});
+
+// Text and notes are debounced so typing a sentence creates one useful event
+// instead of an event for every keystroke. Blur always forces an immediate save.
+["regionText", "regionNote"].forEach((id) => {
+  $(id).addEventListener("input", scheduleTextAutosave);
+  $(id).addEventListener("blur", () => {
+    clearTimeout(appState.autosaveTimer);
+    appState.autosaveTimer = null;
+    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+  });
+});
+
+// Keep the button as an explicit fallback while reviewers get used to autosave.
 $("inspectorForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const r = regionById(appState.selectedRegionId);
-  if (!r || appState.session?.status === "approved") return;
   try {
-    if ($("regionType").value !== r.type) await sendCommand("RECLASSIFY_REGION", r.region_id, {type:$("regionType").value});
-    let now = regionById(r.region_id);
-    if ($("regionText").value !== (now.text || "")) await sendCommand("UPDATE_TEXT", r.region_id, {text:$("regionText").value});
-    now = regionById(r.region_id);
-    const h = $("headingLevel").value === "" ? null : Number($("headingLevel").value);
-    if (h !== (now.heading_level ?? null)) await sendCommand("CHANGE_HEADING_LEVEL", r.region_id, {heading_level:h});
-    now = regionById(r.region_id);
-    const ro = $("readingOrder").value === "" ? null : Number($("readingOrder").value);
-    if (ro !== (now.reading_order ?? null)) await sendCommand("CHANGE_READING_ORDER", r.region_id, {reading_order:ro});
-    now = regionById(r.region_id);
-    if ($("ignoredCheck").checked !== !!now.ignored) await sendCommand($("ignoredCheck").checked ? "IGNORE_REGION" : "RESTORE_REGION", r.region_id, {});
-    now = regionById(r.region_id);
-    if ($("uncertainCheck").checked !== !!now.uncertain) await sendCommand("MARK_UNCERTAIN", r.region_id, {uncertain:$("uncertainCheck").checked});
-    now = regionById(r.region_id);
-    if ($("regionNote").value !== (now.note || "")) await sendCommand("ADD_NOTE", r.region_id, {note:$("regionNote").value});
+    await flushInspectorChanges();
     toast("Region properties saved.");
-    renderOverlays(); renderRegionList(); renderInspector();
-  } catch (err) { toast(err.message,true); }
+  } catch (err) {
+    toast(err.message, true);
+  }
 });
 
 $("deleteRegionBtn").addEventListener("click", async () => {
   const id=appState.selectedRegionId; if(!id) return;
   if (!confirm("Delete this region? The deletion will remain recoverable through the event history/undo.")) return;
   try {
+    await flushInspectorChanges();
     await sendCommand("DELETE_REGION",id,{});
     appState.selectedRegionId=null;
     renderOverlays(); renderRegionList(); renderInspector();
@@ -428,6 +691,12 @@ $("undoBtn").addEventListener("click", async()=>historyAction("undo"));
 $("redoBtn").addEventListener("click", async()=>historyAction("redo"));
 async function historyAction(kind){
   if(appState.session?.status==="approved")return;
+  try {
+    await flushInspectorChanges();
+  } catch (err) {
+    toast(err.message, true);
+    return;
+  }
   setBusy(true, kind === "undo" ? "Undoing…" : "Redoing…");
   try{
     const result=await api(`/api/sessions/${appState.session.session_id}/${kind}`,{method:"POST"});
@@ -504,6 +773,12 @@ $("confirmApprovalBtn").addEventListener("click", async()=>{
   if(!Object.entries(checklist).filter(([k])=>k!=="checklist_version").every(([,v])=>v)){
     toast("Complete all review checks before approval.",true);return;
   }
+  try{
+    await flushInspectorChanges();
+  }catch(err){
+    toast(err.message,true);
+    return;
+  }
   setBusy(true,"Finalising…");
   try{
     const result=await api(`/api/sessions/${appState.session.session_id}/finalise`,{
@@ -531,7 +806,7 @@ setInterval(()=>{
 },10000);
 
 function escapeHtml(value){
-  return String(value ?? "").replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]));
+  return String(value ?? "").replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[ch]));
 }
 
-loadSessions();
+loadDatasetStatus();

@@ -174,10 +174,107 @@ def _betteringest(raw: dict[str, Any], pdf_path: Path) -> AnnotationState:
     )
 
 
+def _mineru(raw: list[dict[str, Any]], pdf_path: Path) -> AnnotationState:
+    """Adapt MinerU model output: [{page_info: {...}, layout_dets: [...]}]."""
+    if not raw or not isinstance(raw[0], dict):
+        raise ValueError("MinerU model output must be a non-empty list of page objects")
+
+    actual_hash = sha256_file(pdf_path)
+    document_id = _doc_id(actual_hash)
+    real_pages = pdf_pages(pdf_path)
+
+    source_dims: dict[int, tuple[float, float]] = {}
+    for page in raw:
+        info = page.get("page_info") or {}
+        try:
+            idx = int(info["page_no"])
+        except (KeyError, TypeError, ValueError):
+            idx = len(source_dims)
+        width = float(info.get("width", 0)) or 1.0
+        height = float(info.get("height", 0)) or 1.0
+        source_dims[idx] = (width, height)
+
+    regions: list[Region] = []
+    for page_idx, page in enumerate(raw):
+        info = page.get("page_info") or {}
+        try:
+            page_no = int(info.get("page_no", page_idx))
+        except (TypeError, ValueError):
+            page_no = page_idx
+        width, height = source_dims.get(page_no, (1.0, 1.0))
+        for det_idx, det in enumerate(page.get("layout_dets") or []):
+            if not isinstance(det, dict):
+                raise ValueError(f"MinerU layout_dets[{det_idx}] must be an object")
+            label = str(det.get("label", "text"))
+            cls_id = det.get("cls_id")
+            index = det.get("index")
+            html = det.get("html")
+            score = det.get("score")
+            if "bbox" not in det:
+                raise ValueError(f"MinerU detection p{page_no}:i{det_idx} missing bbox")
+            source_id = f"mineru:p{page_no}:i{det_idx}"
+            regions.append(
+                Region(
+                    region_id=_stable_region_id(document_id, source_id),
+                    source_region_id=source_id,
+                    page=page_no,
+                    bbox=_normalize_bbox(det["bbox"], width, height),
+                    type=label,
+                    text=str(det.get("text", "")),
+                    ocr_confidence=float(score) if score is not None else None,
+                    reading_order=int(index) if isinstance(index, (int, float)) else None,
+                    origin="machine",
+                    metadata={
+                        "source": "mineru_model",
+                        "cls_id": cls_id,
+                        **({"html": html} if html else {}),
+                    },
+                )
+            )
+
+    if not regions:
+        raise ValueError("No regions were found. Expected MinerU 'layout_dets' entries")
+
+    regions.sort(key=lambda r: (r.page, r.reading_order if r.reading_order is not None else 10**9))
+
+    return AnnotationState(
+        document=DocumentInfo(
+            document_id=document_id,
+            filename=pdf_path.name,
+            pdf_sha256=actual_hash,
+            page_count=len(real_pages),
+            pages=real_pages,
+        ),
+        pipeline=PipelineInfo(
+            name="MinerU",
+            adapter="mineru-model-v1",
+            metadata={"import_format": "mineru_model"},
+        ),
+        regions=regions,
+        metadata={"import_format": "mineru_model"},
+    )
+
+
+def _is_mineru_model(raw: Any) -> bool:
+    return (
+        isinstance(raw, list)
+        and raw
+        and all(
+            isinstance(page, dict)
+            and isinstance(page.get("page_info"), dict)
+            and isinstance(page.get("layout_dets"), list)
+            for page in raw
+        )
+    )
+
+
 def adapt_machine_output(raw: Any, pdf_path: Path) -> AnnotationState:
     """Convert supported machine-output formats to the tool's stable canonical schema."""
     if isinstance(raw, dict) and "document" in raw and "regions" in raw:
         return _canonical(raw, pdf_path)
+
+    if _is_mineru_model(raw):
+        return _mineru(raw, pdf_path)
     if isinstance(raw, (dict, list)):
         return _betteringest(raw, pdf_path)
     raise ValueError("Unsupported annotation JSON format")

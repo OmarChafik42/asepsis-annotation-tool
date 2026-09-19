@@ -26,7 +26,9 @@ The exact uploaded machine JSON is also preserved as `machine_output.original.js
 - required approval checklist
 - correction metrics and active-time estimate
 - session export
-- BetterIngest review-output adapter
+- BetterIngest and MinerU model-output adapters
+- separate Layout/OCR edit layers to prevent overlapping sentence boxes from blocking structural annotation
+- autosave for inspector edits, with pending changes flushed before navigation/final approval
 - native or Docker execution
 
 ## Quick start with Docker
@@ -57,15 +59,11 @@ Stop:
 docker compose down
 ```
 
-Session data is stored in the Compose-managed persistent volume `annotation_data` and survives normal container rebuilds/restarts.
+Session data is stored in the repo-local bind mount `./data:/data`, so annotated output lands under `data/<document>/auto/sessions/...` and survives normal container rebuilds/restarts.
 
-Do not run:
+To keep host-file ownership aligned with your user account, set `UID` and `GID` in `.env` (or export them in your shell before starting Docker).
 
-```bash
-docker compose down -v
-```
-
-unless you intentionally want to delete the stored Docker volume.
+`docker compose down -v` removes Compose-managed volumes, but it does not delete the host `./data` directory used by this bind mount. Treat `./data` as persistent local research data and back it up separately.
 
 ## Native development
 
@@ -79,7 +77,7 @@ PowerShell:
 py -3.12 -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python run.py
+python run.py --data-dir data
 ```
 
 Open:
@@ -88,7 +86,7 @@ Open:
 http://127.0.0.1:8765
 ```
 
-In PyCharm, open the repository root, select the `.venv` interpreter and run `run.py`.
+In PyCharm, open the repository root, select the `.venv` interpreter, then create a Python run configuration for `run.py` with parameters `--data-dir data`.
 
 ### macOS / Linux
 
@@ -96,7 +94,7 @@ In PyCharm, open the repository root, select the `.venv` interpreter and run `ru
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python run.py
+python run.py --data-dir data
 ```
 
 Open:
@@ -105,33 +103,27 @@ Open:
 http://127.0.0.1:8765
 ```
 
-## Try the mock data
+## MinerU dataset input
 
-Upload:
-
-```text
-examples/mock/mock_document.pdf
-examples/mock/mock_machine_output.json
-```
-
-Use an annotator ID such as:
+The dataset-first UI discovers documents under:
 
 ```text
-reviewer-01
+data/<document>/auto/
+    <document>_origin.pdf
+    <document>_model.json
 ```
 
-The mock data contains deliberate errors so the full correction and approval workflow can be tested.
+The MinerU adapter imports both semantic layout detections and sentence/line-level `ocr_text` detections into the canonical annotation state. The UI keeps both available without forcing them into the same interactive layer:
 
-## Input
+- **Layout** edit mode: structural regions are editable; OCR boxes can be shown as reference overlays.
+- **OCR** edit mode: `ocr_text` boxes become editable; layout boxes remain visible but do not capture clicks.
+- discrete inspector changes autosave immediately; text and notes save after a 700 ms typing pause and are flushed before page changes, undo/redo, leaving the session, deletion and final approval.
 
-A session requires:
+The backend still accepts BetterIngest/canonical uploads through its session API; the current homepage is dataset-first.
 
-1. source PDF
-2. machine annotation JSON
-3. annotator ID
+## Supported machine JSON formats
 
-Supported machine JSON formats:
-
+- MinerU `*_model.json` output
 - BetterIngest `prepare_layout_review()` output
 - canonical annotation state described in [`docs/SCHEMA.md`](docs/SCHEMA.md)
 
