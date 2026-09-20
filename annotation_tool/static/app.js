@@ -13,6 +13,7 @@ const appState = {
   editLayer: "layout",
   autosaveTimer: null,
   saveQueue: Promise.resolve(),
+  saveError: null,
 };
 
 function toast(message, error = false) {
@@ -24,9 +25,9 @@ function toast(message, error = false) {
   toast._timer = setTimeout(() => el.classList.add("hidden"), 3000);
 }
 
-async function api(url, options = {}) {
+async function api(url, options = {}, timeoutMs = 15000) {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
   let response;
   try {
     response = await fetch(url, {...options, signal: controller.signal});
@@ -50,9 +51,27 @@ async function api(url, options = {}) {
 
 function setBusy(value, text = "Saving…") {
   appState.busy = value;
-  $("saveStateText").textContent = value ? text : "Saved";
+
+  if (value) {
+    // A new save attempt supersedes the previous failure state.
+    appState.saveError = null;
+    $("saveStateText").textContent = text;
+  } else {
+    $("saveStateText").textContent = appState.saveError ? "Save failed" : "Saved";
+  }
+
   $("undoBtn").disabled = value || appState.session?.status === "approved";
   $("redoBtn").disabled = value || appState.session?.status === "approved";
+}
+
+function recordSaveFailure(err, showToast = false) {
+  const message = err?.message || "Unknown save error";
+  appState.saveError = message;
+  $("saveStateText").textContent = "Save failed";
+
+  if (showToast) {
+    toast(`Save failed: ${message}`, true);
+  }
 }
 
 function markActivity() { appState.lastActivity = Date.now(); }
@@ -128,6 +147,7 @@ async function openSession(sessionId) {
     clearTimeout(appState.autosaveTimer);
     appState.autosaveTimer = null;
     appState.saveQueue = Promise.resolve();
+    appState.saveError = null;
     updateLayerControls();
     $("homeView").classList.add("hidden");
     $("workspaceView").classList.remove("hidden");
@@ -140,8 +160,12 @@ async function openSession(sessionId) {
     $("undoBtn").disabled = readOnly;
     $("redoBtn").disabled = readOnly;
     await renderPage();
-    await refreshEvents();
-    await refreshMetrics();
+
+    // These panels are useful, but they are not part of the annotation save path.
+    // Load them in the background so a slow metrics/event request never blocks work.
+    refreshEvents().catch(() => {});
+    refreshMetrics().catch(() => {});
+
     if (!readOnly) logInteraction("OPEN_SESSION", { page: appState.currentPage }).catch(() => {});
   } catch (err) {
     toast(err.message, true);
@@ -241,7 +265,7 @@ async function renderPage() {
   $("prevPageBtn").disabled = appState.currentPage <= 0;
   $("nextPageBtn").disabled = appState.currentPage >= count - 1;
   const img = $("pageImage");
-  img.src = `/api/sessions/${appState.session.session_id}/pages/${appState.currentPage}.png?scale=1.7&t=${Date.now()}`;
+  img.src = `/api/sessions/${appState.session.session_id}/pages/${appState.currentPage}.png?scale=1.7`;
   await new Promise((resolve, reject) => {
     if (img.complete && img.naturalWidth) return resolve();
     img.onload = () => resolve();
@@ -250,6 +274,15 @@ async function renderPage() {
   renderOverlays();
   renderRegionList();
   renderInspector();
+
+  // Preload the next page while the reviewer is working on the current page.
+  // The URL is stable, so the browser can reuse the backend's cached render
+  // when Next is clicked.
+  const nextPage = appState.currentPage + 1;
+  if (nextPage < count) {
+    const preload = new Image();
+    preload.src = `/api/sessions/${appState.session.session_id}/pages/${nextPage}.png?scale=1.7`;
+  }
 }
 
 function renderOverlays() {
@@ -332,7 +365,7 @@ function selectRegion(id) {
   // Capture pending edits for the previous region before changing selection.
   // They are queued, so selection remains instant while persistence stays ordered.
   if (appState.selectedRegionId && appState.selectedRegionId !== id) {
-    enqueueInspectorSave(inspectorSnapshot());
+    enqueueInspectorSave(inspectorSnapshot()).catch((err) => recordSaveFailure(err, true));
   }
 
   appState.selectedRegionId = id;
@@ -600,7 +633,7 @@ function scheduleTextAutosave() {
   clearTimeout(appState.autosaveTimer);
   appState.autosaveTimer = setTimeout(() => {
     appState.autosaveTimer = null;
-    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+    enqueueInspectorSave(inspectorSnapshot()).catch((err) => recordSaveFailure(err, true));
   }, 700);
 }
 
@@ -616,7 +649,7 @@ async function flushInspectorChanges() {
 // Discrete values have a clear semantic commit point, so persist immediately.
 ["regionType", "headingLevel", "readingOrder", "ignoredCheck", "uncertainCheck"].forEach((id) => {
   $(id).addEventListener("change", () => {
-    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+    enqueueInspectorSave(inspectorSnapshot()).catch((err) => recordSaveFailure(err, true));
   });
 });
 
@@ -627,7 +660,7 @@ async function flushInspectorChanges() {
   $(id).addEventListener("blur", () => {
     clearTimeout(appState.autosaveTimer);
     appState.autosaveTimer = null;
-    enqueueInspectorSave(inspectorSnapshot()).catch(() => {});
+    enqueueInspectorSave(inspectorSnapshot()).catch((err) => recordSaveFailure(err, true));
   });
 });
 
@@ -653,18 +686,45 @@ $("deleteRegionBtn").addEventListener("click", async () => {
   } catch(err){toast(err.message,true);}
 });
 
+function prependEventToList(event) {
+  if (!event) return;
+  const box = $("eventList");
+  if (!box) return;
+
+  const row = document.createElement("div");
+  row.className = "event-row";
+  row.innerHTML = `<span class="event-action">${escapeHtml(event.action)}</span><span class="event-time">#${event.sequence}</span><div class="muted">${new Date(event.timestamp_utc).toLocaleTimeString()}</div>`;
+  box.prepend(row);
+
+  while (box.children.length > 30) {
+    box.lastElementChild.remove();
+  }
+}
+
 async function sendCommand(action, regionId, payload, regionIds=[]) {
   setBusy(true);
   try {
     const result = await api(`/api/sessions/${appState.session.session_id}/commands`, {
       method:"POST", headers:{"Content-Type":"application/json"},
       body:JSON.stringify({action, region_id:regionId, region_ids:regionIds, payload})
-    });
+    }, 60000);
+
     appState.state=result.state;
-    await refreshEvents();
-    refreshMetrics().catch(()=>{});
+
+    // The command response already contains the committed event and canonical
+    // state. Update the visible event list locally instead of downloading the
+    // full event log after every correction.
+    prependEventToList(result.event);
+
     return result;
-  } finally { setBusy(false); }
+  } catch (err) {
+    // Keep the visible status at "Save failed". Do not let finally() change it
+    // back to "Saved" when the browser never received a successful response.
+    recordSaveFailure(err, false);
+    throw err;
+  } finally {
+    setBusy(false);
+  }
 }
 
 $("undoBtn").addEventListener("click", async()=>historyAction("undo"));
@@ -715,7 +775,7 @@ async function refreshEvents(){
 async function refreshMetrics(){
   if(!appState.session)return;
   try{
-    const m=await api(`/api/sessions/${appState.session.session_id}/metrics`);
+    const m=await api(`/api/sessions/${appState.session.session_id}/metrics`, {}, 8000);
     const b=m.final_correction_burden, i=m.interaction_effort, t=m.timing;
     $("metricsBox").innerHTML=`
       <div class="metric"><div class="value">${m.initial_regions}</div><div class="label">initial regions</div></div>
@@ -725,7 +785,9 @@ async function refreshMetrics(){
       <div class="metric"><div class="value">${i.committed_edit_events}</div><div class="label">committed edit events</div></div>
       <div class="metric"><div class="value">${Math.round(t.active_seconds/60)}</div><div class="label">active minutes</div></div>
       <div class="metric full"><div class="value">${m.integrity.replay_matches_final_state ? "✓" : "!"}</div><div class="label">event replay reproduces current/final state</div></div>`;
-  }catch(err){ $("metricsBox").innerHTML=`<div class="muted">${escapeHtml(err.message)}</div>`; }
+  }catch(err){
+    $("metricsBox").innerHTML=`<div class="muted">Metrics temporarily unavailable. Annotation saves are unaffected.</div>`;
+  }
 }
 $("refreshMetricsBtn").addEventListener("click",refreshMetrics);
 

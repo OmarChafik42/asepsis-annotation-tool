@@ -33,9 +33,23 @@ NON_MUTATING_ACTIONS = {
     "EXPORT_SESSION",
 }
 
+# These commands cannot change the canonical region ordering. Keeping the existing
+# list order avoids an O(n log n) sort after common edits such as changing H2 -> H3.
+_ORDER_STABLE_ACTIONS = {
+    "RECLASSIFY_REGION",
+    "UPDATE_TEXT",
+    "CHANGE_HEADING_LEVEL",
+    "IGNORE_REGION",
+    "RESTORE_REGION",
+    "MARK_UNCERTAIN",
+    "ADD_NOTE",
+}
+
 
 def _state_map(state: AnnotationState) -> dict[str, Region]:
-    return {r.region_id: r.model_copy(deep=True) for r in state.regions}
+    # Regions are treated immutably by this module. Do not deep-copy every region
+    # merely to look one up; copy only the region(s) captured into an event.
+    return {r.region_id: r for r in state.regions}
 
 
 def _sorted_regions(regions: Iterable[Region]) -> list[Region]:
@@ -51,30 +65,88 @@ def _sorted_regions(regions: Iterable[Region]) -> list[Region]:
     )
 
 
-def apply_patch(state: AnnotationState, patch_before: StatePatch | None, patch_after: StatePatch | None) -> AnnotationState:
-    """Apply a state patch by replacing the complete snapshots of its affected regions."""
-    result = state.model_copy(deep=True)
-    m = _state_map(result)
+def apply_patch(
+    state: AnnotationState,
+    patch_before: StatePatch | None,
+    patch_after: StatePatch | None,
+    *,
+    resort: bool = True,
+) -> AnnotationState:
+    """Apply a complete-region snapshot patch without copying the whole document state.
+
+    Event patches contain validated Region models. We therefore copy only changed
+    regions and reuse unchanged Region objects. This preserves the event-sourced
+    semantics while making single-region edits much cheaper on large documents.
+    """
     before = patch_before.regions if patch_before else []
     after = patch_after.regions if patch_after else []
     affected = {r.region_id for r in before} | {r.region_id for r in after}
-    for rid in affected:
-        m.pop(rid, None)
+
+    after_ids = [r.region_id for r in after]
+    if len(after_ids) != len(set(after_ids)):
+        raise ValueError("Patch contains duplicate region_id values")
+
+    existing_unaffected = {r.region_id for r in state.regions if r.region_id not in affected}
+    collisions = existing_unaffected & set(after_ids)
+    if collisions:
+        raise ValueError(f"Patch would create duplicate region(s): {', '.join(sorted(collisions))}")
+
     for region in after:
-        m[region.region_id] = region.model_copy(deep=True)
-    result.regions = _sorted_regions(m.values())
-    result.state_revision += 1
-    return AnnotationState.model_validate(result.model_dump())
+        if region.page >= state.document.page_count:
+            raise ValueError(f"region {region.region_id} references invalid page {region.page}")
+
+    replacement = {r.region_id: r.model_copy(deep=True) for r in after}
+    new_regions: list[Region] = []
+    inserted: set[str] = set()
+
+    # Preserve list position for order-stable edits. For deletes/replacements we
+    # substitute the after snapshot at the first affected position.
+    for region in state.regions:
+        rid = region.region_id
+        if rid not in affected:
+            new_regions.append(region)
+            continue
+        if rid in replacement and rid not in inserted:
+            new_regions.append(replacement[rid])
+            inserted.add(rid)
+
+    # CREATE/SPLIT/MERGE may introduce IDs not present in the prior state.
+    for region in after:
+        if region.region_id not in inserted:
+            new_regions.append(replacement[region.region_id])
+            inserted.add(region.region_id)
+
+    if resort:
+        new_regions = _sorted_regions(new_regions)
+
+    # model_copy(update=...) avoids serialising and revalidating thousands of
+    # unchanged regions. All newly introduced regions were already validated.
+    return state.model_copy(
+        update={
+            "regions": new_regions,
+            "state_revision": state.state_revision + 1,
+        },
+        deep=False,
+    )
 
 
 def apply_event(state: AnnotationState, event: AnnotationEvent) -> AnnotationState:
     if not event.mutates_state:
-        return state.model_copy(deep=True)
-    return apply_patch(state, event.before, event.after)
+        # Non-mutating interactions (VIEW_PAGE, SELECT_REGION, etc.) do not need
+        # a deep copy of the entire annotation state during replay.
+        return state
+    return apply_patch(
+        state,
+        event.before,
+        event.after,
+        resort=event.action not in _ORDER_STABLE_ACTIONS,
+    )
 
 
 def replay(initial: AnnotationState, events: list[AnnotationEvent]) -> AnnotationState:
     state = initial.model_copy(deep=True)
+    # Files are normally already in sequence order, but sorting keeps replay robust
+    # to callers that provide an unsorted list.
     for event in sorted(events, key=lambda e: e.sequence):
         state = apply_event(state, event)
     return state
@@ -82,6 +154,7 @@ def replay(initial: AnnotationState, events: list[AnnotationEvent]) -> Annotatio
 
 def _snapshot(state: AnnotationState, ids: Iterable[str]) -> list[Region]:
     m = _state_map(state)
+    ids = list(ids)
     missing = [rid for rid in ids if rid not in m]
     if missing:
         raise ValueError(f"Unknown region(s): {', '.join(missing)}")
@@ -92,6 +165,17 @@ def _replace_fields(region: Region, **changes) -> Region:
     data = region.model_dump()
     data.update(changes)
     return Region.model_validate(data)
+
+
+def _assert_new_ids_available(state: AnnotationState, new_ids: Iterable[str], replaced_ids: Iterable[str] = ()) -> None:
+    replaced = set(replaced_ids)
+    existing = {r.region_id for r in state.regions if r.region_id not in replaced}
+    new_ids = list(new_ids)
+    if len(new_ids) != len(set(new_ids)):
+        raise ValueError("Replacement regions must have unique region_id values")
+    collisions = existing & set(new_ids)
+    if collisions:
+        raise ValueError(f"region_id already exists: {', '.join(sorted(collisions))}")
 
 
 def build_command_event(
@@ -116,10 +200,9 @@ def build_command_event(
         rid = str(p.get("region_id") or uuid.uuid4())
         bbox = BBox.model_validate(p["bbox"])
         page = int(p["page"])
-        if page >= state.document.page_count:
+        if page < 0 or page >= state.document.page_count:
             raise ValueError("Invalid page")
-        if any(r.region_id == rid for r in state.regions):
-            raise ValueError("region_id already exists")
+        _assert_new_ids_available(state, [rid])
         region = Region(
             region_id=rid,
             source_region_id=None,
@@ -200,8 +283,10 @@ def build_command_event(
         specs = command.payload.get("regions")
         if not isinstance(specs, list) or len(specs) < 2:
             raise ValueError("SPLIT_REGION requires at least two replacement regions")
+        new_ids: list[str] = []
         for spec in specs:
             rid = str(spec.get("region_id") or uuid.uuid4())
+            new_ids.append(rid)
             after_regions.append(
                 Region(
                     region_id=rid,
@@ -216,7 +301,8 @@ def build_command_event(
                     metadata={**source.metadata, "split_from": source.region_id},
                 )
             )
-        target_ids = [source.region_id] + [r.region_id for r in after_regions]
+        _assert_new_ids_available(state, new_ids, replaced_ids=[source.region_id])
+        target_ids = [source.region_id] + new_ids
 
     elif action == "MERGE_REGIONS":
         ids = command.region_ids
@@ -229,6 +315,7 @@ def build_command_event(
         page = next(iter(pages))
         p = command.payload
         rid = str(p.get("region_id") or uuid.uuid4())
+        _assert_new_ids_available(state, [rid], replaced_ids=ids)
         if "bbox" in p:
             bbox = BBox.model_validate(p["bbox"])
         else:
@@ -245,7 +332,10 @@ def build_command_event(
             bbox=bbox,
             type=str(p.get("type", before_regions[0].type)),
             text=str(p.get("text", "\n".join(r.text for r in before_regions if r.text))),
-            reading_order=p.get("reading_order", min((r.reading_order for r in before_regions if r.reading_order is not None), default=None)),
+            reading_order=p.get(
+                "reading_order",
+                min((r.reading_order for r in before_regions if r.reading_order is not None), default=None),
+            ),
             heading_level=p.get("heading_level"),
             origin="human",
             metadata={"merged_from": ids},
@@ -271,8 +361,14 @@ def build_command_event(
 
 
 def build_interaction_event(
-    *, session_id: str, annotator_id: str, sequence: int, action: str,
-    page: int | None = None, region_id: str | None = None, metadata: dict | None = None,
+    *,
+    session_id: str,
+    annotator_id: str,
+    sequence: int,
+    action: str,
+    page: int | None = None,
+    region_id: str | None = None,
+    metadata: dict | None = None,
 ) -> AnnotationEvent:
     action = action.upper().strip()
     if action not in NON_MUTATING_ACTIONS:
@@ -292,7 +388,6 @@ def build_interaction_event(
 
 
 def build_history_stacks(events: list[AnnotationEvent]) -> tuple[list[str], list[str]]:
-    by_id = {e.event_id: e for e in events}
     undo_stack: list[str] = []
     redo_stack: list[str] = []
     for e in sorted(events, key=lambda x: x.sequence):
@@ -311,8 +406,13 @@ def build_history_stacks(events: list[AnnotationEvent]) -> tuple[list[str], list
 
 
 def build_undo_redo_event(
-    *, session_id: str, annotator_id: str, sequence: int, state: AnnotationState,
-    events: list[AnnotationEvent], redo: bool = False,
+    *,
+    session_id: str,
+    annotator_id: str,
+    sequence: int,
+    state: AnnotationState,
+    events: list[AnnotationEvent],
+    redo: bool = False,
 ) -> AnnotationEvent:
     undo_stack, redo_stack = build_history_stacks(events)
     stack = redo_stack if redo else undo_stack
@@ -323,7 +423,7 @@ def build_undo_redo_event(
     desired = target.after if redo else target.before
     affected = set(target.target_region_ids)
     current_map = _state_map(state)
-    current = [current_map[rid] for rid in affected if rid in current_map]
+    current = [current_map[rid].model_copy(deep=True) for rid in affected if rid in current_map]
     return AnnotationEvent(
         event_id=str(uuid.uuid4()),
         session_id=session_id,

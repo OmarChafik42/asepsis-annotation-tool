@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import threading
 from pathlib import Path
 from typing import Any
 
-from .models import SessionMeta
 from .storage import SessionStore
 
 
@@ -12,6 +12,7 @@ class DatasetStore:
         self.root = root.resolve()
         self.root.mkdir(parents=True, exist_ok=True)
         self._stores: dict[str, SessionStore] = {}
+        self._stores_lock = threading.RLock()
 
     def document_dir(self, document: str) -> Path:
         safe = str(document).strip()
@@ -24,11 +25,15 @@ class DatasetStore:
 
     def store(self, document: str) -> SessionStore:
         key = str(document).strip()
-        if key not in self._stores:
+        with self._stores_lock:
+            cached = self._stores.get(key)
+            if cached is not None:
+                return cached
             root = self.sessions_root(key)
             root.mkdir(parents=True, exist_ok=True)
-            self._stores[key] = SessionStore(root)
-        return self._stores[key]
+            created = SessionStore(root)
+            self._stores[key] = created
+            return created
 
     def source_files(self, document: str) -> tuple[Path, Path]:
         auto = self.document_dir(document)
@@ -50,47 +55,43 @@ class DatasetStore:
         if not self.root.exists():
             return []
         docs: list[str] = []
-        for child in sorted(self.root.iterdir(), key=lambda p: p.name.lower()):
+        for child in self.root.iterdir():
             if child.is_dir() and (child / "auto").exists():
                 docs.append(child.name)
-        return docs
+        return sorted(docs, key=str.lower)
 
     def status(self) -> list[dict[str, Any]]:
+        """Return the same frontend-compatible pending/annotated status as before.
+
+        The latest session metadata is loaded through SessionStore, allowing its
+        in-memory metadata cache to be reused instead of reparsing session.json here.
+        """
         rows: list[dict[str, Any]] = []
         for document in self.documents():
-            sessions_root = self.sessions_root(document)
-            session_dirs = (
-                [
-                    child
-                    for child in sessions_root.iterdir()
-                    if child.is_dir() and (child / "session.json").is_file()
-                ]
-                if sessions_root.is_dir()
-                else []
-            )
-            session_dirs.sort(key=lambda p: p.stat().st_mtime, reverse=True)
-            session_paths = [p / "session.json" for p in session_dirs]
-            if session_paths:
-                latest = session_paths[0]
-                try:
-                    meta = SessionMeta.model_validate_json(latest.read_text(encoding="utf-8"))
-                except Exception:
-                    meta = None
+            sessions = self.store(document).list_sessions()
+            if sessions:
+                latest = sessions[0]
                 rows.append(
                     {
                         "document": document,
                         "status": "annotated",
-                        "sessions": [p.parent.name for p in session_paths],
-                        "latest_finalised_at": getattr(meta, "finalised_at", None) if meta else None,
-                        "annotator": getattr(meta, "annotator_id", None) if meta else None,
+                        "sessions": [m.session_id for m in sessions],
+                        "latest_finalised_at": latest.finalised_at,
+                        "annotator": latest.annotator_id,
+                        # Extra field is backwards-compatible and useful for later UI
+                        # improvements without changing the existing annotated/pending logic.
+                        "latest_session_status": latest.status,
                     }
                 )
             else:
-                rows.append({
-                    "document": document,
-                    "status": "pending",
-                    "sessions": [],
-                    "latest_finalised_at": None,
-                    "annotator": None,
-                })
+                rows.append(
+                    {
+                        "document": document,
+                        "status": "pending",
+                        "sessions": [],
+                        "latest_finalised_at": None,
+                        "annotator": None,
+                        "latest_session_status": None,
+                    }
+                )
         return rows

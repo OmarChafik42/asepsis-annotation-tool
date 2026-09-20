@@ -7,51 +7,70 @@ from .domain import replay
 from .models import AnnotationEvent, AnnotationState, SessionMeta
 
 
-def _region_map(state: AnnotationState):
+def _region_map(state: AnnotationState) -> dict:
     return {r.region_id: r for r in state.regions}
 
 
-def compute_metrics(initial: AnnotationState, final: AnnotationState, events: list[AnnotationEvent], meta: SessionMeta) -> dict[str, Any]:
+def compute_metrics(
+    initial: AnnotationState,
+    final: AnnotationState,
+    events: list[AnnotationEvent],
+    meta: SessionMeta,
+) -> dict[str, Any]:
+    """Compute the same public metrics as before with less intermediate allocation."""
     im = _region_map(initial)
     fm = _region_map(final)
-    common = set(im) & set(fm)
-    added = sorted(set(fm) - set(im))
-    deleted = sorted(set(im) - set(fm))
+    initial_ids = set(im)
+    final_ids = set(fm)
+    common = initial_ids & final_ids
+    added_count = len(final_ids - initial_ids)
+    deleted_ids = initial_ids - final_ids
 
-    geometry_changed = []
-    reclassified = []
-    text_changed = []
-    heading_changed = []
-    order_changed = []
-    ignored_changed = []
-    uncertain_changed = []
-    materially_changed = set()
+    geometry_changed = 0
+    reclassified = 0
+    text_changed = 0
+    heading_changed = 0
+    order_changed = 0
+    ignored_changed = 0
+    uncertain_changed = 0
+    materially_changed: set[str] = set()
 
     for rid in common:
         a, b = im[rid], fm[rid]
         if a.bbox != b.bbox:
-            geometry_changed.append(rid); materially_changed.add(rid)
+            geometry_changed += 1
+            materially_changed.add(rid)
         if a.type != b.type:
-            reclassified.append(rid); materially_changed.add(rid)
+            reclassified += 1
+            materially_changed.add(rid)
         if a.text != b.text:
-            text_changed.append(rid); materially_changed.add(rid)
+            text_changed += 1
+            materially_changed.add(rid)
         if a.heading_level != b.heading_level:
-            heading_changed.append(rid); materially_changed.add(rid)
+            heading_changed += 1
+            materially_changed.add(rid)
         if a.reading_order != b.reading_order:
-            order_changed.append(rid); materially_changed.add(rid)
+            order_changed += 1
+            materially_changed.add(rid)
         if a.ignored != b.ignored:
-            ignored_changed.append(rid); materially_changed.add(rid)
+            ignored_changed += 1
+            materially_changed.add(rid)
         if a.uncertain != b.uncertain or a.note != b.note:
-            uncertain_changed.append(rid); materially_changed.add(rid)
+            uncertain_changed += 1
+            materially_changed.add(rid)
 
-    mutating = [e for e in events if e.mutates_state]
-    human_edits = [e for e in mutating if e.action not in {"UNDO", "REDO"}]
     counts = Counter(e.action for e in events)
+    human_edit_count = sum(1 for e in events if e.mutates_state and e.action not in {"UNDO", "REDO"})
     page_count = initial.document.page_count
     initial_n = len(initial.regions)
+    corrected_initial = len(deleted_ids | materially_changed)
 
+    # The domain replay path is optimized so non-mutating VIEW/SELECT events no
+    # longer copy the entire document state.
     replayed = replay(initial, events)
-    replay_valid = replayed.model_dump(exclude={"state_revision"}) == final.model_dump(exclude={"state_revision"})
+    replay_valid = replayed.model_dump(exclude={"state_revision"}) == final.model_dump(
+        exclude={"state_revision"}
+    )
 
     return {
         "session_id": meta.session_id,
@@ -60,22 +79,22 @@ def compute_metrics(initial: AnnotationState, final: AnnotationState, events: li
         "initial_regions": initial_n,
         "final_regions": len(final.regions),
         "final_correction_burden": {
-            "added_regions": len(added),
-            "deleted_regions": len(deleted),
+            "added_regions": added_count,
+            "deleted_regions": len(deleted_ids),
             "existing_regions_materially_changed": len(materially_changed),
-            "corrected_initial_regions": len(set(deleted) | materially_changed),
-            "corrected_region_rate": ((len(set(deleted) | materially_changed) / initial_n) if initial_n else 0.0),
-            "geometry_changed": len(geometry_changed),
-            "reclassified": len(reclassified),
-            "text_changed": len(text_changed),
-            "heading_level_changed": len(heading_changed),
-            "reading_order_changed": len(order_changed),
-            "ignored_status_changed": len(ignored_changed),
-            "uncertainty_or_note_changed": len(uncertain_changed),
+            "corrected_initial_regions": corrected_initial,
+            "corrected_region_rate": (corrected_initial / initial_n) if initial_n else 0.0,
+            "geometry_changed": geometry_changed,
+            "reclassified": reclassified,
+            "text_changed": text_changed,
+            "heading_level_changed": heading_changed,
+            "reading_order_changed": order_changed,
+            "ignored_status_changed": ignored_changed,
+            "uncertainty_or_note_changed": uncertain_changed,
         },
         "interaction_effort": {
             "all_logged_interactions": len(events),
-            "committed_edit_events": len(human_edits),
+            "committed_edit_events": human_edit_count,
             "undo_count": counts["UNDO"],
             "redo_count": counts["REDO"],
             "actions_by_type": dict(sorted(counts.items())),
