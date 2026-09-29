@@ -15,7 +15,6 @@ Detailed instructions for each component are available in their respective READM
 
 - [Annotation Tool](annotation_tool/README.md)
 - [BetterIngester](better_ingester/README.md)
-- [Corrected Documents](corrected-docs/README.md)
 
 ## BetterIngester
 
@@ -63,8 +62,6 @@ These are provided in:
 ```text
 corrected-docs/
 ```
-
-Further information about the released documents is available in [corrected-docs/README.md](corrected-docs/README.md).
 
 ## Workflow
 
