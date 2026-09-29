@@ -77,7 +77,7 @@ python run.py --data-dir data
 
 ### Windows / PyCharm
 
-PowerShell:
+Run these commands from the **repository root**:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -92,7 +92,11 @@ Open:
 http://127.0.0.1:8765
 ```
 
-In PyCharm, open the repository root, select the `.venv` interpreter, then create a Python run configuration for `run.py` with parameters `--data-dir data`.
+In PyCharm, open the **repository root** as the project, select the `.venv` interpreter, and create a Python run configuration with:
+
+- **Script path:** `<repository-root>\run.py`
+- **Parameters:** `--data-dir data`
+- **Working directory:** `<repository-root>`
 
 ### macOS / Linux
 

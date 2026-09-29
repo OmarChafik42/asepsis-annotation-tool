@@ -48,7 +48,7 @@ The MVP does not provide:
 - large-scale document-management infrastructure
 - production public-internet security controls
 - a fixed evaluation metric built into the annotation logic; metrics are derived from the preserved session data
-- direct coupling to BetterIngest/PaddleOCR internals; their output is converted through an adapter into the tool’s canonical schema
+- direct coupling to producer internals; supported outputs are converted through adapters into the tool’s canonical schema
 
 
 ## 4. Architecture
@@ -412,7 +412,9 @@ The checklist gives reviewers a common stopping condition:
 ### Native
 
 ```text
-Browser -> FastAPI -> ./annotation-data
+Browser -> FastAPI -> configured data directory
+
+Typical repository usage: `./data` (via `python run.py --data-dir data`)
 ```
 
 Best for development/debugging.
@@ -420,7 +422,7 @@ Best for development/debugging.
 ### Docker
 
 ```text
-Browser -> containerized FastAPI -> persistent Docker volume
+Browser -> containerized FastAPI -> persistent `./data` bind mount
 ```
 
 Docker provides:
@@ -439,7 +441,7 @@ The file-backed architecture is appropriate for a small research study.
 
 Likely first scale issues:
 
-- large unfiltered session list
+- large unfiltered document/session lists
 - many PDF/render-cache files
 - same-session concurrency
 - multiple application replicas
@@ -469,7 +471,7 @@ The MVP should cover:
 
 ### Adapter
 
-- BetterIngest conversion
+- supported producer-format conversion
 - coordinate normalization
 - malformed input handling
 
