@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "app_version": "1.0.0",
+  "session_id": "cd66435f-f825-44b6-b33e-88d6a2b3832d",
+  "document_id": "doc-06538d51fe6e12d5",
+  "filename": "2d6fb222_WHO_Guidelines_on_Core_Components_of_Infection_Prevention_and_Control_Programmes_2026-09-11_origin.pdf",
+  "annotator_id": "anonymous",
+  "created_at": "2026-09-19T22:35:50.717Z",
+  "updated_at": "2026-09-19T23:05:20.541Z",
+  "finalised_at": "2026-09-19T23:05:20.528Z",
+  "status": "approved",
+  "active_seconds": 1600,
+  "initial_state_sha256": "ddc43ea90cd00f7d8476890e078814398a776100727c1124e34652680b9e7374",
+  "events_sha256": "303b52c179c7b6e88dff8e6bc1cdff8e281d9aac084d07636a7bfb6933ae850f",
+  "final_state_sha256": "3e5ef1bd07eec8325caf4eaee8b0ee1189d6b49feb72705b25a0af6f280fa142",
+  "replay_valid": true,
+  "metadata": {
+    "document": "2d6fb222_WHO_Guidelines_on_Core_Components_of_Infection_Prevention_and_Control_Programmes_2026-09-11",
+    "approval": {
+      "checklist": {
+        "checklist_version": "1.0",
+        "reviewed_all_pages": true,
+        "missing_spurious_regions_checked": true,
+        "boundaries_checked": true,
+        "types_checked": true,
+        "structure_checked": true,
+        "uncertainty_documented": true
+      },
+      "approval_note": null
+    }
+  }
+}

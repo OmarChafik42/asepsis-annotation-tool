@@ -1,0 +1,1710 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{dblfloatfix}
+
+\newcommand{\NTest}{2,508,749}
+\newcommand{\MSRtwo}{0.511}
+\newcommand{\HNNRtwo}{0.509}
+\newcommand{\NNRtwo}{0.475}
+\newcommand{\ShuffleRtwo}{0.496}
+\newcommand{\DenseRtwo}{0.429}
+\newcommand{\HNNNNP}{0.796}
+\newcommand{\HNNNNPearsonP}{0.002}
+\newcommand{\HNNNNPearsonHolmP}{0.034}
+\newcommand{\HNNNNEWP}{0.121}
+\newcommand{\HNNNNAWP}{0.048}
+\newcommand{\HNNShufflePearsonP}{0.0002}
+\newcommand{\HNNShufflePearsonHolmP}{0.003}
+\newcommand{\HNNShuffleEWP}{0.007}
+\newcommand{\HNNDensePearsonP}{0.0001}
+\newcommand{\HNNDensePearsonHolmP}{0.001}
+\newcommand{\HNNDenseEWP}{0.022}
+\newcommand{\ParamRatio}{80}
+\newcommand{\HNNParams}{21.0}
+\newcommand{\DenseParams}{1.68}
+\newcommand{\HNNWinYears}{19}
+\newcommand{\HNNPearsonWinYears}{19}
+\newcommand{\HNNEWTurnover}{1.25}
+\newcommand{\HNNNetEW}{3.34}
+\newcommand{\HNNNetEWSR}{2.28}
+\newcommand{\HNNNetEWT}{8.97}
+\newcommand{\HNNBreakEvenEW}{159}
+\newcommand{\HNNNetAW}{1.31}
+\newcommand{\HNNNetAWSR}{0.73}
+\newcommand{\NNNetEW}{3.13}
+\newcommand{\NNNetAW}{1.78}
+\newcommand{\HNNNNNetP}{0.112}
+\newcommand{\HNNNNNetAWP}{0.036}
+\newcommand{\HNNShuffleNetP}{0.007}
+\newcommand{\HNNDenseNetP}{0.028}
+
+
+\newcommand{\HNNMarg}{\textsc{HNN (marginal)}}
+\newcommand{\HNNMS}{\textsc{HNN (m-s)}}
+\newcommand{\HNNShuffle}{\textsc{HNN (input-shuffled)}}
+\newcommand{\MLPHNN}{\textsc{MLP-HNN}}
+\newcommand{\NNThree}{\textsc{NN3}}
+
+\begin{document}
+
+\title{Dependence-Informed Sparse Neural Architecture for Stock Return Prediction}
+
+\author{Hongyu Lin}
+\affiliation{%
+  \institution{University College London}
+  \city{London}
+  \country{United Kingdom}
+}
+
+\author{Yulin Chen}
+\affiliation{%
+  \institution{University College London}
+  \city{London}
+  \country{United Kingdom}
+}
+
+\author{Yuanrong Wang}
+\affiliation{%
+  \institution{University College London}
+  \city{London}
+  \country{United Kingdom}
+}
+
+\author{Antonio Briola}
+\affiliation{%
+  \institution{University College London}
+  \city{London}
+  \country{United Kingdom}
+}
+
+\author{Tomaso Aste}
+\affiliation{%
+  \institution{University College London}
+  \city{London}
+  \country{United Kingdom}
+}
+
+\begin{abstract}
+% Using neural networks for stock return prediction usually requires choices about depth and hidden-layer width
+% that are difficult to connect to financial interpretation. We study an alternative:
+% estimate dependency among firm characteristics with Information Filtering Network (IFN), then map its clique structure to a Homological Neural Network
+% (HNN). The dependency network fixes which weights exist in the neural unit before training, replacing
+% an arbitrary depth and width sequence with a sparse architecture induced from the
+% graphical model. We evaluate two HNN variants: one based on characteristic dependence estimated from the full training sample, and another that combines structures estimated separately from observations above and below the median training return. In annual out-of-sample forecasts of U.S. stock excess returns, both variants achieve numerically higher out-of-sample \(R^2\) than a compact three-hidden-layer neural benchmark. The full-sample variant also delivers stronger cross-sectional correlations and equal-weighted portfolio performance. Compared with a fully connected neural network matched on hidden-layer widths, the HNN uses substantially fewer parameters and achieves better ranking performance. Randomly permuting the input characteristics while preserving network capacity reduces both cross-sectional correlation and equal-weighted portfolio performance, indicating that matching characteristics to their graph-derived groups contributes beyond sparsity alone. Together with the transaction-cost sensitivity analysis, these results show that dependence-guided sparsity provides a competitive and interpretable alternative to arbitrarily designed neural architectures in a low-signal financial prediction setting.
+
+% Using neural networks for stock return prediction usually requires choices about
+% depth and hidden-layer width that are difficult to connect to financial
+% interpretation. We study an alternative: estimate dependence among firm
+% characteristics with an Information Filtering Network (IFN), then map its clique
+% structure to a Homological Neural Network (HNN). The filtered network fixes which
+% connections exist before training, replacing an arbitrary depth and width sequence
+% with a sparse architecture induced from the estimated dependence and leaving
+% maximum clique size as the only structural choice. We evaluate two HNN variants:
+% one based on characteristic dependence estimated from the full training sample,
+% and another combining structures estimated above and below the median training
+% return. In annual out-of-sample forecasts of U.S. stock excess returns, both
+% variants achieve numerically higher out-of-sample \(R^2\) than a compact
+% three-hidden-layer neural benchmark. The full-sample variant delivers the strongest linear
+% cross-sectional correlation and equal-weighted portfolio performance of any model
+% considered, and its correlation advantage over the benchmark survives family-wise
+% multiplicity adjustment. Compared with a fully connected neural network matched
+% on hidden-layer widths, the HNN uses roughly \ParamRatio{} times fewer parameters
+% and ranks the cross-section more accurately. Randomly permuting the input
+% characteristics while preserving network structure reduces both cross-sectional
+% correlation and equal-weighted portfolio performance, indicating that matching
+% characteristics to their graph-derived groups contributes beyond sparsity alone. These results suggest that dependence-guided sparsity offers a competitive and
+% structurally transparent alternative to hand-designed neural architectures for
+% cross-sectional stock-return prediction.
+
+Using neural networks for stock return prediction typically requires choices about depth and hidden-layer width that are difficult to connect to financial interpretation. We study an alternative: estimate dependence among firm characteristics with a Maximally Filtered Clique Forest (MFCF), then map its clique structure to a Homological Neural Network (HNN). The MFCF maximum clique size
+\(K\) is the only parameter controlling architectural complexity, and it has a clear graphical meaning: it bounds the number of characteristics in each maximal clique and hence the highest interaction order the network can represent. The filtered graph then fixes the neural network's depth, layer widths, and sparse connections before
+training, in place of a separately chosen depth and width sequence. We apply two HNN variants to annual out-of-sample forecasts of U.S. stock excess returns from 1987 to 2016 using 94 firm characteristics. The HNN models match a three-hidden-layer benchmark on pooled predictive accuracy, rank the cross-section more accurately, and use roughly \ParamRatio{} times fewer parameters than a fully connected network with the same induced layer widths. Two structural ablations indicate that both the sparse connectivity and the
+estimated grouping of characteristics contribute to the ranking advantage, and both effects remain significant after correcting for multiple testing. These findings show that HNNs offer a practical and interpretable way to incorporate estimated dependence among firm characteristics into neural architecture design.
+
+\end{abstract}
+
+
+
+% \keywords{asset pricing, stock return prediction, sparse neural networks,
+% information filtering networks, higher-order interactions}
+
+\maketitle
+
+\section{Introduction}
+
+Machine learning allows empirical asset-pricing models to capture a broad range of nonlinear relationships. Gu, Kelly, and Xiu (GKX)~\cite{gu2020} show that neural networks and tree-based models outperform linear alternatives in forecasting cross-sectional returns, suggesting that higher-order interactions among firm characteristics contain useful predictive information. Related studies develop characteristic-based latent factor models~\cite{kelly2019}, nonlinear autoencoder and deep-learning asset-pricing models~\cite{gu2021autoencoder,chen2024}, regularized approaches to the cross-section~\cite{kozak2020}, nonparametric characteristic selection~\cite{freyberger2020}, and tests for identifying incremental pricing
+factors~\cite{feng2020}.
+Yet using a multilayer perceptron (MLP) still requires researchers to specify
+its depth and hidden-layer widths. These choices are generally selected through
+validation and have limited direct financial interpretation~\cite{elsken2019}.
+
+We investigate whether a neural architecture can instead be constructed from estimated dependence among firm characteristics. Characteristics related to valuation, past returns, liquidity, investment, and profitability exhibit substantial empirical dependence~\cite{kozak2020,feng2020}. To obtain a sparse representation of these relationships, we apply Information Filtering Networks (IFNs) to the training data. IFNs filter a dense dependence matrix under topological constraints~\cite{mantegna1999,tumminello2005,massara2017}. Specifically, the Maximally Filtered Clique Forest (MFCF) organizes the retained relationships into cliques of bounded size while preserving graph decomposability~\cite{massara2019}. A Homological Neural Network (HNN) maps these cliques to a neural architecture: characteristics form the input layer, retained pairs form the second-order layer, larger subsets form subsequent layers, and connections follow set inclusion~\cite{wang2023hnn,lin2026}. The number of layers is therefore the highest interaction order the filtered graph attains, rather than a capacity setting chosen in advance. A conventional MLP uses fully connected layers and may apply \(l_1\) regularization to reduce the influence of unhelpful connections~\cite{tibshirani1996,gu2020}. In contrast, the HNN is sparse by construction: MFCF determines which connections are included before the network is trained. This architecture follows the compositional view that high-dimensional functions can be assembled from lower-dimensional constituents~\cite{poggio2017}.
+
+We evaluate this approach using the GKX sample design~\cite{gu2020} and 94
+ranked firm characteristics to predict subsequent monthly excess returns. We
+consider two HNN variants: \HNNMarg{}, which constructs the network using
+dependence among characteristics alone, and \HNNMS{}, which also uses training
+returns to distinguish between above- and below-median observations. Both are compared with \NNThree{}~\cite{gu2020}, a compact three-hidden-layer
+network that performs best among the models GKX evaluate, adapted
+to the same information set.
+ For ablation studies, an input-shuffling HNN tests
+whether the alignment of characteristics with the MFCF-derived graph matters,
+while a fully connected network with the same induced layer widths provides a
+dense architectural comparison. Evaluation covers both level prediction and cross-sectional ranking. We measure
+ranking with information coefficients (ICs) and returns from prediction-sorted
+portfolios. The Pearson and Spearman ICs are monthly cross-sectional
+correlations between predicted and realized returns. Spearman IC measures the ordering of stocks, whereas Pearson IC also reflects
+the linear association between the magnitudes of predicted and realized
+returns. Prediction-sorted portfolios test whether this cross-sectional
+ordering produces economically meaningful return separation.
+
+The study makes three empirical contributions. First, both HNN variants achieve
+numerically higher pooled out-of-sample \(R^2\) than \NNThree{}, and \HNNMarg{}
+attains the highest Pearson IC and equal-weighted portfolio spread of any model
+we consider, together with the highest Spearman IC among the neural models.
+Second, against a fully connected network matched on hidden-layer widths, the
+HNN reduces the parameter count by a factor of \ParamRatio{} while improving
+both information coefficients and the equal-weighted spread. Third, randomly
+permuting the input characteristics with the architecture and capacity held
+fixed weakens cross-sectional ranking, so the alignment between characteristics
+and their inferred clique structure contributes beyond sparsity alone. After Holm
+adjustment for multiple comparisons~\cite{holm1979}, the Pearson IC differences
+remain significant, while on \(R^2\), Spearman IC, and portfolio spread \HNNMarg{} and \NNThree{} are statistically indistinguishable.
+
+
+% Together, these findings show that dependence among firm characteristics can
+% be used to construct a sparse and transparent neural network that achieves
+% competitive prediction accuracy and ranks stocks more effectively, while
+% replacing a manually specified architecture with one derived from the data.
+
+The remainder of the paper is organized as follows. Section~\ref{rela} reviews
+machine learning in asset pricing and prior work on filtered networks and
+structured neural models. Section~\ref{method} develops the HNN construction,
+and Section~\ref{exp} describes the data, walk-forward protocol, benchmarks, and
+evaluation procedure. Section~\ref{re} reports predictive accuracy,
+cross-sectional ranking, parameter efficiency, transaction-cost sensitivity, and
+stability over time. Sections~\ref{dis} and~\ref{con} discuss limitations and
+conclude.
+
+
+\section{Related Work}\label{rela}
+
+\paragraph{Machine learning in asset pricing.}
+GKX~\cite{gu2020} compare a wide range of methods on a large U.S. equity panel
+and find that flexible nonlinear models improve out-of-sample return prediction,
+partly by capturing interactions among predictors. Freyberger et
+al.~\cite{freyberger2020} use regularization for nonparametric characteristic
+selection, and Kozak et al.~\cite{kozak2020} combine shrinkage with
+principal-component structure. Related latent-factor models use characteristics
+to parameterize time-varying factor exposures~\cite{kelly2019}; conditional
+autoencoders make those exposures nonlinear in the
+characteristics~\cite{gu2021autoencoder}; and Chen et al.~\cite{chen2024} fit
+nonlinear models subject to no-arbitrage restrictions. Where these papers use a
+neural network, its depth and widths are chosen by hand.
+
+The flexibility of these methods increases the importance of regularization,
+model selection, and careful out-of-sample evaluation, particularly when  signals are weak and differences across models are modest.
+Work on factor selection and multiple testing further motivates disciplined
+comparisons~\cite{feng2020,harvey2016}. Accordingly, we use a common information
+set and walk-forward protocol across models, together with multiplicity-adjusted
+inference~\cite{holm1979} for the main architecture comparisons.
+
+\paragraph{Filtered networks and Homological Neural Networks.}
+Information Filtering Networks extract a sparse network of the strongest
+relationships from a dense dependence
+matrix~\cite{tumminello2005,massara2017}. Sparsity comes from a global criterion
+applied under a constraint on the graph topology, rather than from penalizing
+edges individually. The choice of constraint decides how much higher-order
+structure survives: a spanning tree contains no clique larger than a
+pair~\cite{mantegna1999}, while planar and chordal filters retain triangles and
+larger cliques. The Maximally Filtered Clique Forest~\cite{massara2019} is of the latter kind and returns a forest of overlapping cliques of bounded size.
+
+
+Filtered networks have been used before to study and forecast financial
+dependence. Wang and Aste~\cite{wang2022icaif}, for example, build a filtered
+graph and use it as the adjacency structure of a spatial-temporal graph neural
+network, so the graph is an input to a model chosen separately. In the
+Homological Neural Network (HNN) the filtered structure becomes the model
+itself, with the cliques and their subsets as neural units~\cite{wang2023hnn}; later
+work frames this as compositional sparsity and shows that, with the maximum
+clique size held fixed, it matches or outperforms fully connected networks on
+tabular regression with far fewer connections~\cite{lin2026}. This evidence comes
+from problems with far more signal than the return cross-section, and whether a
+structure estimated from the characteristics alone carries predictive
+information here is untested. We apply the construction to a financial panel,
+select the clique size by validation in each window so that depth follows from
+the data, and assess the forecasts by portfolio returns as well as squared error.
+
+
+
+% \section{Method}
+% \label{method}
+
+% \subsection{Prediction Target}
+
+
+% Let \(x_{i,t}\in\mathbb{R}^{p}\) denote the firm characteristics of stock \(i\)
+% at month \(t\), ranked cross-sectionally and mapped to \([-1,1]\). The
+% prediction target is the subsequent monthly excess return,
+% \begin{equation}
+% y^{e}_{i,t+1}=R_{i,t+1}-R^{f}_{t+1},
+% \end{equation}
+% where \(R^{f}_{t+1}\) is the one-month risk-free rate. The corresponding
+% prediction is
+% \begin{equation}
+% \widehat{y}^{e}_{i,t+1}
+% =
+% f_{\theta,\mathcal{A}}(x_{i,t}),
+% \label{eq:prediction}
+% \end{equation}
+% where \(\theta\) denotes the trainable parameters and \(\mathcal{A}\) denotes
+% the network architecture. An MLP specifies \(\mathcal{A}\) through chosen layers, whereas an HNN derives it from an MFCF estimated using the training
+% window.
+
+
+
+
+% \subsection{MFCF Construction}
+
+% For \HNNMarg{}, the graph input is the absolute Pearson dependence matrix
+% \begin{equation}
+%  D_{ab}=\left|\operatorname{corr}(X_a,X_b)\right|,
+%  \qquad a,b\in\{1,\ldots,p\}.
+%  \label{eq:dependence}
+% \end{equation}
+% For an unassigned characteristic $v$ and an admissible separator $S$, MFCF
+% uses the sum-of-squares gain
+% \begin{equation}
+%  G(v,S)=\sum_{u\in S}D_{vu}^{2}.
+%  \label{eq:gain}
+% \end{equation}
+% The largest admissible gain attaches $v$ to an existing clique through $S$.
+% Repeating the operation produces maximal cliques $\mathcal C$ and their
+% separators while retaining decomposability.
+
+% The central structural parameter is $K$, the maximum number of characteristics
+% in any maximal clique. It is not the number of neighbors and not a hidden-layer
+% width. A choice $K=6$, for example, permits characteristic groups of up to six
+% members and therefore HNN interaction layers through order six. Larger $K$
+% allows richer compositions but can increase the number of clique subsets and
+% trainable connections sharply. We select $K\in\{2,3,4,5,6,7\}$ by validation
+% loss every five test years.
+
+% All remaining MFCF settings are fixed throughout the experiments. Thus, (K)
+% is the only graph-complexity parameter selected for the HNN models.
+
+% \begin{figure*}[t]
+%   \centering
+%   \includegraphics[width=\textwidth]{figures/hnn_pipeline.png}
+%   \caption{Dependence-informed HNN construction. A training-only dependence
+%   matrix is filtered into overlapping MFCF cliques. Each retained subset
+%   becomes a unit at its corresponding order, and set inclusion determines the
+%   sparse connections. Linear summaries from every produced layer form the
+%   excess-return prediction. Adapted from Lin et al.~\cite{lin2026}.}
+%   \Description{The pipeline maps a characteristic dependence matrix into a
+%   clique forest, then into sparse ordered neural layers and an excess-return
+%   forecast.}
+%   \label{fig:pipeline}
+% \end{figure*}
+
+% \subsection{From Clique Forests to Network Layers}
+
+% Following Lin et al.~\cite{lin2026}, the maximal cliques define a hierarchy of
+% interaction units. For every $C\in\mathcal C$, we retain all subsets up to
+% order $K$. The unique units at order $k$ are
+% \begin{equation}
+%  \begin{aligned}
+%  \mathcal H^{(k)}
+%  &=\{\alpha:|\alpha|=k,\ \alpha\subseteq C
+%        \text{ for some }C\in\mathcal C\},\\
+%  \mathcal H&=\bigcup_{k=1}^{K}\mathcal H^{(k)} .
+%  \end{aligned}
+%  \label{eq:complex}
+% \end{equation}
+% If a subset occurs in several maximal cliques, it appears only once in
+% $\mathcal H^{(k)}$. Order one contains the input characteristics, order two
+% contains the retained pairs, and successive orders contain progressively larger
+% characteristic groups. The number of units $|\mathcal H^{(k)}|$ therefore
+% determines the width of layer $k$.
+
+% Connections between consecutive layers follow set inclusion. A unit indexed by
+% $\alpha\in\mathcal H^{(k)}$ receives input only from a unit
+% $\tau\in\mathcal H^{(k-1)}$ when $\tau\subset\alpha$. Thus an order-$k$ unit
+% combines representations of its order-$(k-1)$ constituents, and no connection
+% is introduced between characteristic groups unsupported by the clique
+% hierarchy. The MFCF therefore fixes both layer widths and sparse connectivity
+% before supervised training.
+
+% Let $h^{(k)}\in\mathbb R^{|\mathcal H^{(k)}|}$ collect the activations at order
+% $k$, with $h^{(1)}=x$. The layer computation is
+% \begin{equation}
+%  h^{(k)}
+%  =\operatorname{ReLU}\!\left(
+%  \operatorname{LN}\!\left[W^{(k)}h^{(k-1)}+b^{(k)}\right]\right),
+%  \qquad k=2,\ldots,K ,
+%  \label{eq:hnnlayer}
+% \end{equation}
+% where $W^{(k)}_{\alpha\tau}$ is trainable only if $\tau\subset\alpha$ and is
+% otherwise zero. LN denotes layer normalization~\cite{ba2016}; ReLU denotes the
+% rectified linear unit activation.
+
+% Following Lin et al.~\cite{lin2026}, the prediction aggregates every
+% interaction order rather than using only the deepest layer. Each layer first
+% produces a scalar summary, which a final linear map combines:
+% \begin{align}
+%  r^{(k)}&=(a^{(k)})^\top h^{(k)}+c^{(k)},\notag\\
+%  \widehat y^e&=\sum_{k=2}^{K}\beta_k r^{(k)}+d.
+%  \label{eq:readout}
+% \end{align}
+% This all-layer readout retains direct paths from lower-order representations to
+% the forecast. The sparse weights, biases, normalization coefficients, and
+% readout parameters are learned jointly by Adam~\cite{kingma2015}; the
+% interaction sets and connectivity remain fixed. Consequently, HNN parameter
+% count grows with the retained units and inclusion relations, whereas a dense
+% network connects every unit in one layer to every unit in the next.
+
+% \subsection{Model Variants and Controls}
+
+% We evaluate several HNN variants and structural controls designed to isolate the
+% source of any performance differences. The variants are named according to the
+% dependency matrix supplied to MFCF, while the controls selectively remove or
+% relax components of the HNN construction. Together, they test whether predictive
+% performance depends on label information in graph estimation, the alignment
+% between characteristics and filtered cliques, or sparse hierarchical
+% connectivity itself.
+
+% \begin{itemize}
+% \item \HNNMarg{} is the main label-agnostic HNN specification. It estimates a
+% single pooled characteristic-dependence matrix using only the predictors in
+% the training fold. Excess returns do not enter graph construction. This
+% variant tests whether unsupervised dependence among characteristics provides
+% a useful inductive bias for return prediction.
+
+% \item \HNNMS{} is the label-aware graph-construction variant. Training
+% observations are divided at the median excess return, after which separate
+% absolute-Pearson dependence matrices and MFCF structures are estimated for
+% the high- and low-return groups. The maximal cliques from the two graphs are
+% then unioned to form a single interaction hierarchy. Validation and test
+% returns are excluded from this procedure. Comparing \HNNMS{} with
+% \HNNMarg{} tests whether conditioning graph construction on the prediction
+% target reveals return-dependent interactions that are not captured by the
+% pooled dependence structure.
+
+% \item \HNNShuffle{} is the feature-alignment ablation. It starts from the
+% selected \HNNMarg{} architecture but applies a full derangement to the input
+% identities, ensuring that no characteristic remains assigned to its original
+% first-layer position. The layer widths, parameter count, higher-layer sparse
+% connections, training data, and hyperparameter search are otherwise
+% unchanged. This control preserves the overall sparse architecture while
+% destroying the correspondence between characteristics and their
+% MFCF-derived cliques. A performance decline relative to \HNNMarg{} would
+% therefore indicate that the learned graph structure is useful because of its
+% specific feature-to-clique alignment, rather than merely because it induces
+% sparsity.
+
+% \item \MLPHNN{} is the dense structural control. It retains the depth and
+% layer widths induced for \HNNMarg{} in each annual training window, but
+% replaces the inclusion-constrained mappings with fully connected layers and
+% uses a conventional dense prediction head. It is width-matched rather than
+% parameter-matched and therefore typically contains more trainable
+% parameters. Comparing \MLPHNN{} with \HNNMarg{} tests whether the sparse
+% hierarchical connectivity imposed by the filtered cliques is beneficial
+% relative to a dense network with a comparable layer geometry.
+% \end{itemize}
+
+% These comparisons separate three possible explanations for HNN performance:
+% target-aware graph construction, correct assignment of characteristics to
+% filtered groups, and sparse compositional connectivity. They therefore provide
+% a structured ablation of the main architectural choices rather than a set of
+% independent model variants.
+
+
+% \section{Method}
+% \label{method}
+
+% \subsection{Prediction Target}
+
+% Let \(x_{i,t}\in\mathbb{R}^{p}\) denote the vector of firm characteristics
+% for stock \(i\) at month \(t\), ranked cross-sectionally and mapped to
+% \([-1,1]\). The prediction target is the subsequent monthly excess return,
+% \begin{equation}
+% y^{e}_{i,t+1}
+% =
+% R_{i,t+1}-R^{f}_{t+1},
+% \label{eq:target}
+% \end{equation}
+% where \(R^{f}_{t+1}\) is the one-month risk-free rate. The corresponding
+% prediction is
+% \begin{equation}
+% \widehat{y}^{e}_{i,t+1}
+% =
+% f_{\theta,\mathcal{A}}\!\left(x_{i,t}\right),
+% \label{eq:prediction}
+% \end{equation}
+% where \(\theta\) denotes the trainable parameters and \(\mathcal{A}\) denotes
+% the network architecture. An MLP specifies \(\mathcal{A}\) through a chosen
+% depth and set of layer widths, whereas an HNN derives \(\mathcal{A}\) from an
+% MFCF estimated using the training window.
+
+% \subsection{MFCF Construction}
+
+% The HNN architecture is derived from the dependence structure among the firm
+% characteristics. Let
+% \(\mathbf{X}\in\mathbb{R}^{n\times p}\) contain the \(n\) stock-month
+% observations used to estimate the graph in a given training window, and let
+% \(X_a\) denote the \(a\)-th column of \(\mathbf{X}\). The input to MFCF is the
+% absolute sample correlation matrix \(D\in\mathbb{R}^{p\times p}\), with
+% entries
+% \begin{equation}
+% D_{ab}
+% =
+% \left|
+% \operatorname{corr}\!\left(X_a,X_b\right)
+% \right|,
+% \qquad
+% a,b\in\mathcal{V},
+% \qquad
+% \mathcal{V}=\{1,\ldots,p\},
+% \label{eq:dependence}
+% \end{equation}
+% where \(\mathcal{V}\) is the set of characteristics. Thus, \(D_{ab}\) is the
+% absolute correlation coefficient between characteristics \(a\) and
+% \(b\), computed using Pearson correlation with training observations only.
+
+% MFCF filters \(D\) into a decomposable clique forest. At a generic step, let
+% \(v\in\mathcal{V}\) be a characteristic not yet included in the graph and let
+% \(S\subset\mathcal{V}\) be an admissible separator. Here, \(S\) is a clique in
+% the current graph through which \(v\) can be attached, creating the new clique
+% \(S\cup\{v\}\). An attachment is admissible when it preserves decomposability
+% and satisfies the maximum clique-size constraint. The attachment is scored by
+% the sum-of-squares gain~\cite{massara2019}
+% \begin{equation}
+% G(v,S)
+% =
+% \sum_{u\in S} D_{vu}^{2}.
+% \label{eq:gain}
+% \end{equation}
+% At each step, MFCF selects the admissible pair \((v,S)\) with the largest
+% gain. The procedure continues until all characteristics have been included,
+% producing a collection of maximal cliques
+% \(\mathcal{C}=\{C_1,\ldots,C_m\}\) and their associated separators. The
+% initialization and full admissibility conditions follow Massara and
+% Aste~\cite{massara2019}.
+
+% The central structural parameter is \(K\), the maximum permitted size of a
+% maximal clique:
+% \begin{equation}
+% |C|\leq K
+% \qquad
+% \text{for every } C\in\mathcal{C}.
+% \label{eq:max-clique}
+% \end{equation}
+% Thus, \(K\) is neither a node-degree constraint nor a directly specified
+% hidden-layer width. For example, \(K=6\) permits groups of up to six
+% characteristics and therefore HNN interaction layers through order six.
+% Larger values of \(K\) allow higher-order compositions but can increase the
+% number of retained subsets and trainable connections. The selection of \(K\)
+% and the remaining MFCF settings are described in
+% Section~\ref{exp}.
+
+% \begin{figure*}[t]
+% \centering
+% \includegraphics[width=\textwidth]{figures/hnn_pipeline.png}
+% \caption{Dependence-informed HNN construction. A correlation matrix estimated
+% from the training data is filtered into overlapping MFCF cliques. Each
+% retained subset becomes a unit at its corresponding order, and set inclusion
+% determines the sparse connections. Linear summaries from all interaction
+% layers are combined to form the excess-return prediction. Adapted from
+% Lin et al.~\cite{lin2026}.}
+% \Description{The pipeline maps a characteristic correlation matrix into a
+% clique forest, then into sparse ordered neural layers and an excess-return
+% forecast.}
+% \label{fig:pipeline}
+% \end{figure*}
+
+
+
+% \subsection{From Clique Forests to Network Layers}
+
+% Following Lin et al.~\cite{lin2026}, the maximal MFCF cliques are translated
+% into a hierarchy of sparse interaction layers. For each order
+% \(k\in\{1,\ldots,K\}\), define
+% \begin{equation}
+% \mathcal{H}^{(k)}
+% =
+% \left\{
+% \alpha\subseteq\mathcal{V}:
+% |\alpha|=k
+% \text{ and }
+% \alpha\subseteq C
+% \text{ for some } C\in\mathcal{C}
+% \right\},
+% \label{eq:complex}
+% \end{equation}
+% where each subset \(\alpha\) corresponds to one unit in layer \(k\). Subsets
+% appearing in multiple maximal cliques are included only once.
+
+% The first-order units correspond to individual firm characteristics, while
+% higher-order units represent pairs and larger groups of characteristics
+% retained by the MFCF. Connections between consecutive layers follow set
+% inclusion: a unit representing
+% \(\alpha\in\mathcal{H}^{(k)}\) receives input only from units representing
+% its order-\((k-1)\) subsets. The clique forest therefore determines both the
+% width and the sparse connectivity of the network.
+
+% Let \(h^{(1)}_{i,t}=x_{i,t}\), and let \(h^{(k)}_{i,t}\) denote the
+% activations in layer \(k\). For \(k=2,\ldots,K\), the network applies
+% \begin{equation}
+% h^{(k)}_{i,t}
+% =
+% \sigma\!\left(
+% W^{(k)}h^{(k-1)}_{i,t}+b^{(k)}
+% \right),
+% \label{eq:hnnlayer}
+% \end{equation}
+% where \(W^{(k)}\) and \(b^{(k)}\) are trainable parameters and
+% \(\sigma(\cdot)\) is the activation function. Entries of \(W^{(k)}\) that do
+% not correspond to valid subset relations are fixed at zero.
+
+% The final prediction combines information from the retained interaction
+% layers and takes the form
+% \begin{equation}
+% \widehat{y}^{e}_{i,t+1}
+% =
+% g_{\theta}\!\left(
+% h^{(2)}_{i,t},\ldots,h^{(K)}_{i,t}
+% \right),
+% \label{eq:hnn-readout}
+% \end{equation}
+% where \(g_{\theta}\) denotes the trainable output mapping. The
+% MFCF-induced architecture remains fixed during training, while the nonzero
+% network weights and output parameters are estimated using the training data.
+% This construction restricts the model to interactions supported by the
+% dependence structure among the firm characteristics.
+
+
+
+
+
+
+% \subsection{HNN Variants and Structural Controls}
+
+% The construction above defines the general HNN architecture. The two HNN
+% variants use the same clique-to-network mapping and differ only in how the
+% correlation structure supplied to MFCF is estimated.
+
+% \noindent\textbf{HNN variants.}
+% \begin{itemize}
+%     \item \HNNMarg{} estimates a single absolute correlation matrix using all
+%     predictor observations in the training window. Excess returns are not
+%     used in graph construction.
+
+%     \item \HNNMS{}, where M-S denotes median split, divides the training
+%     observations according to their aligned subsequent excess returns. Each
+%     predictor observation \(x_{i,t}\) is assigned to the high- or low-return
+%     group according to whether \(y^{e}_{i,t+1}\) is above or below the median
+%     excess return in the training window. Separate absolute correlation
+%     matrices \(D^{+}\) and \(D^{-}\), and separate MFCFs, are estimated for
+%     the two groups, producing maximal-clique collections
+%     \(\mathcal{C}^{+}\) and \(\mathcal{C}^{-}\). The collections are combined
+%     as
+%     \begin{equation}
+%     \mathcal{C}
+%     =
+%     \mathcal{C}^{+}\cup\mathcal{C}^{-}
+%     \label{eq:ms-union}
+%     \end{equation}
+%     before the interaction units in Equation~\eqref{eq:complex} are
+%     constructed. Validation and test returns are not used to estimate either
+%     graph.
+% \end{itemize}
+
+% We additionally consider two controls designed to examine feature alignment
+% and dense connectivity.
+
+% \noindent\textbf{Ablation and structural controls.}
+% \begin{itemize}
+%     \item \HNNShuffle{} retains the selected \HNNMarg{} architecture but
+%     randomly permutes the input characteristics. Let
+%     \(\pi:\mathcal{V}\rightarrow\mathcal{V}\) be a permutation satisfying
+%     \(\pi(a)\neq a\) for every \(a\in\mathcal{V}\). The shuffled input is
+%     defined by
+%     \begin{equation}
+%     x^{\mathrm{sh}}_{i,t,a}
+%     =
+%     x_{i,t,\pi(a)},
+%     \qquad
+%     a\in\mathcal{V}.
+%     \label{eq:input-shuffle}
+%     \end{equation}
+%     Within each annual refit, the same permutation is applied to all training,
+%     validation, and test observations. The layer widths, sparse connections,
+%     parameter count, and fitting procedure are otherwise unchanged. This
+%     ablation tests whether matching particular characteristics to their
+%     MFCF-derived groups affects performance.
+
+%     \item \MLPHNN{} is a width-matched dense structural control. It retains
+%     the depth and annually induced layer widths of \HNNMarg{} but replaces
+%     the inclusion-constrained mappings with fully connected layers. It is
+%     width-matched rather than parameter-matched and therefore generally
+%     contains more trainable parameters. This comparison evaluates a dense
+%     network with the same induced layer dimensions as the HNN.
+% \end{itemize}
+% =====================================================================
+%  Replacement for main.tex Section 3 (lines 291--521).
+%  Also delete the commented-out block at lines 109--288.
+%  Requires \usepackage{amsmath,amssymb} (already present) and the
+%  existing macros \HNNMarg, \HNNMS, \HNNShuffle, \MLPHNN, \NNThree.
+%  New citations needed: kingma2015, ba2016, friedman2008 (all already
+%  in references.bib, currently uncited).
+% =====================================================================
+
+% \section{Method}
+% \label{method}
+
+% \subsection{Prediction Target and Characteristic Dependence}
+
+% Let \(x_{i,t}\in\mathbb{R}^{p}\) denote the characteristics of stock \(i\)
+% at month \(t\). The prediction target is its subsequent monthly excess return,
+% \begin{equation}
+%  y^{e}_{i,t+1}
+%  =
+%  R_{i,t+1}-R^{f}_{t+1},
+%  \qquad
+%  \widehat y^{e}_{i,t+1}
+%  =
+%  f_{\theta,\mathcal A}(x_{i,t}),
+%  \label{eq:prediction}
+% \end{equation}
+% where \(R^{f}_{t+1}\) is the one-month risk-free rate, \(\theta\) contains
+% the trainable parameters, and \(\mathcal A\) denotes the network architecture.
+
+% The architecture is estimated from dependence among characteristics. Let
+% \(\mathbf X\in\mathbb{R}^{n\times p}\) contain training stock-month
+% observations and let \(X_a\) denote its \(a\)-th characteristic column.
+% Stocks are observations rather than graph nodes: the graph nodes are the
+% \(p\) characteristics, and one resulting network is shared across stocks.
+% The graph input is the absolute Pearson dependence matrix
+% \begin{equation}
+%  D_{ab}
+%  =
+%  \left|
+%  \operatorname{corr}(X_a,X_b)
+%  \right|,
+%  \qquad a,b\in\mathcal V=\{1,\ldots,p\}.
+%  \label{eq:dependence}
+% \end{equation}
+
+% The Maximally Filtered Clique Forest (MFCF) filters \(D\) into overlapping
+% characteristic groups while preserving a decomposable graph
+% structure~\cite{massara2019}. At a generic construction step, an unassigned
+% characteristic \(v\) is attached through an admissible separator \(S\), forming
+% the clique \(S\cup\{v\}\). The attachment is scored by
+% \begin{equation}
+%  G(v,S)
+%  =
+%  \sum_{u\in S}D_{vu}^{2}.
+%  \label{eq:gain}
+% \end{equation}
+% Selecting the largest admissible gains produces a collection of maximal
+% cliques \(\mathcal C=\{C_1,\ldots,C_m\}\). The structural parameter \(K\)
+% imposes \(|C|\leq K\) for every \(C\in\mathcal C\). Thus, \(K\) bounds the
+% largest characteristic group rather than directly specifying a hidden-layer
+% width. Its candidate values and the remaining MFCF settings are reported in
+% Section~\ref{exp}.
+
+% \begin{figure*}[t]
+%   \centering
+%   \includegraphics[width=\textwidth]
+%   {figures/hnn_pipeline.png}
+%   \caption{Dependence-informed HNN construction. MFCF filters training-only
+%   characteristic dependence into overlapping cliques. Retained subsets form
+%   ordered neural units, set inclusion determines sparse connections, and
+%   summaries from all non-input layers form the excess-return forecast. Adapted
+%   from Lin et al.~\cite{lin2026}.}
+%   \Description{A stock-month panel is converted into a characteristic
+%   dependence matrix and a clique forest, then into sparse neural layers
+%   representing edges, triangles, and a tetrahedron. All non-input layers
+%   contribute to the final prediction.}
+%   \label{fig:pipeline}
+% \end{figure*}
+
+% \subsection{Clique-Induced Neural Architecture}
+
+% Figure~\ref{fig:pipeline} illustrates how the MFCF is translated into a
+% Homological Neural Network (HNN)~\cite{wang2023hnn,lin2026}. Define the
+% realized maximum order as
+% \[
+%  K^\star=\max_{C\in\mathcal C}|C|\leq K.
+% \]
+% For each \(k\in\{1,\ldots,K^\star\}\), the units at order \(k\) are
+% \begin{equation}
+%  \mathcal H^{(k)}
+%  =
+%  \left\{
+%  \alpha\subseteq\mathcal V:
+%  |\alpha|=k,\ 
+%  \alpha\subseteq C
+%  \text{ for some }C\in\mathcal C
+%  \right\}.
+%  \label{eq:complex}
+% \end{equation}
+% A subset appearing in several maximal cliques is included only once.
+% First-order units correspond to individual characteristics, second-order units
+% to retained pairs, and subsequent orders to larger characteristic groups. The
+% width of layer \(k\) is therefore
+% \(n_k=|\mathcal H^{(k)}|\), which is induced by the filtered dependence
+% structure rather than supplied by the researcher.
+
+% Connections between consecutive orders follow set inclusion. A unit indexed by
+% \(\alpha\in\mathcal H^{(k)}\) receives input from
+% \(\tau\in\mathcal H^{(k-1)}\) if and only if
+% \(\tau\subset\alpha\). With \(h^{(1)}_{i,t}=x_{i,t}\), the implemented layer
+% computation is
+% \begin{equation}
+%  h^{(k)}_{i,t}
+%  =
+%  \operatorname{ReLU}\!\left(
+%  \operatorname{LN}_{k}\!\left[
+%  W^{(k)}h^{(k-1)}_{i,t}+b^{(k)}
+%  \right]\right),
+%  \quad k=2,\ldots,K^\star,
+%  \label{eq:hnnlayer}
+% \end{equation}
+% where \(\operatorname{LN}_{k}\) denotes layer normalization
+% \cite{ba2016}. An entry \(W^{(k)}_{\alpha\tau}\) is trainable only when
+% \(\tau\subset\alpha\); unsupported connections are absent rather than
+% estimated and subsequently shrunk toward zero.
+
+% The HNN uses an all-layer readout. Each non-input layer produces a scalar
+% summary, and a final linear map combines these summaries:
+% \begin{align}
+%  r^{(k)}_{i,t}
+%  &=
+%  (a^{(k)})^\top h^{(k)}_{i,t}+c^{(k)},\notag\\
+%  \widehat y^{e}_{i,t+1}
+%  &=
+%  \sum_{k=2}^{K^\star}\beta_k r^{(k)}_{i,t}+d.
+%  \label{eq:hnn-readout}
+% \end{align}
+% There is no separate first-order readout; individual characteristics affect
+% the forecast through the second-order and subsequent representations. All
+% nonzero weights, normalization parameters, and readout coefficients are
+% trained jointly, while the graph-induced architecture remains fixed.
+
+% Every order-\(k\) unit has exactly \(k\) immediate subset connections.
+% Consequently, the numbers of sparse and fully connected interlayer weights for
+% the same induced widths are
+% \begin{equation}
+%  P_{\mathrm{sparse}}
+%  =
+%  \sum_{k=2}^{K^\star}k\,n_k,
+%  \qquad
+%  P_{\mathrm{dense}}
+%  =
+%  \sum_{k=2}^{K^\star}n_{k-1}n_k.
+%  \label{eq:parameter-growth}
+% \end{equation}
+% This difference provides the architectural source of HNN's parameter economy;
+% the realized total parameter counts are reported with the empirical results.
+
+% \subsection{HNN Variants and Structural Controls}
+
+% \paragraph{\HNNMarg.}
+% The marginal specification estimates one pooled characteristic-dependence
+% matrix from the training predictors. Returns do not enter graph construction,
+% making this the main label-agnostic HNN.
+
+% \paragraph{\HNNMS.}
+% The median-split specification divides training observations according to
+% whether their aligned subsequent excess returns are above or below the
+% training median. Separate dependence matrices and MFCFs produce clique
+% collections \(\mathcal C^{+}\) and \(\mathcal C^{-}\), which are combined as
+% \begin{equation}
+%  \widetilde{\mathcal C}
+%  =
+%  \mathcal C^{+}\cup\mathcal C^{-}.
+%  \label{eq:ms-union}
+% \end{equation}
+% Equation~\eqref{eq:complex} is then applied to the combined collection, so
+% duplicate and subsumed subsets do not create duplicate units. Each constituent
+% MFCF is decomposable, but their union need not be; decomposability is not
+% required after the union because the collection is used only to induce the
+% neural complex. Validation and test returns do not enter either graph.
+
+% \paragraph{\HNNShuffle.}
+% This feature-alignment ablation retains \HNNMarg{}'s selected architecture,
+% layer widths, later connections, readout, and parameter count, but applies a
+% full input derangement:
+% \begin{equation}
+%  x^{\mathrm{sh}}_{i,t,a}
+%  =
+%  x_{i,t,\pi(a)},
+%  \qquad
+%  \pi(a)\neq a.
+%  \label{eq:input-shuffle}
+% \end{equation}
+% The same permutation is used for all observations within a refit. The control
+% therefore breaks the correspondence between characteristics and their
+% MFCF-derived groups without changing model capacity.
+
+% \paragraph{\MLPHNN.}
+% The width-matched dense comparator retains the depth and layer widths induced
+% for \HNNMarg{} but replaces inclusion-constrained mappings with fully connected
+% ReLU layers and uses a conventional final-layer prediction head. It is
+% width-matched rather than parameter-matched. Because its normalization and
+% output head also follow a conventional MLP design, it is an architectural
+% comparison rather than a strict one-factor connectivity ablation.
+
+% Together, the variants examine whether performance depends on
+% target-conditioned graph estimation, correct feature-to-group alignment, and
+% the complete sparse HNN architecture relative to a dense model with the same
+% induced dimensions.
+\section{Method}
+\label{method}
+
+\subsection{Prediction Target and Characteristic Dependence}
+
+Let \(x_{i,t}\in\mathbb{R}^{p}\) collect the \(p\) firm characteristics of
+stock \(i\) at month \(t\). The prediction target is the stock's excess return
+over the following month,
+\begin{equation}
+ y^{e}_{i,t+1}
+ =
+ R_{i,t+1}-R^{f}_{t+1},
+ \qquad
+ \widehat y^{e}_{i,t+1}
+ =
+ f_{\theta,\mathcal A}(x_{i,t}),
+ \label{eq:prediction}
+\end{equation}
+where \(R_{i,t+1}\) is the realized return on stock \(i\) in month \(t+1\),
+\(R^{f}_{t+1}\) is the one-month risk-free rate, \(\theta\) contains the
+trainable parameters, and \(\mathcal A\) denotes the network architecture.
+
+The architecture is estimated from dependence among firm characteristics. Let
+\(\mathbf X\in\mathbb{R}^{N\times p}\) contain the \(N\) observations of the current training window, and let \(X_a\) denote its \(a\)-th column,
+one per characteristic. The characteristics are the nodes of the graph,
+\(\mathcal V=\{1,\ldots,p\}\), and the resulting network is fixed across all firms and dates. The filter takes as input the absolute Pearson correlation matrix 
+\begin{equation}
+ D_{ab}
+ =
+ \left|
+ \operatorname{corr}(X_a,X_b)
+ \right|,
+ \qquad a,b\in\mathcal V .
+ \label{eq:dependence}
+\end{equation}
+
+Linear correlation is used rather than a more general dependence measure.
+Because the characteristics enter as cross-sectional ranks,
+Equation~\eqref{eq:dependence} is a correlation between rank variables and is
+therefore insensitive to outliers and to monotone transformation of the
+underlying characteristic~\cite{kendall1970}. It also avoids the extra tuning that measures such
+as mutual information~\cite{cover2006elements} require, and richer measures can be substituted without
+changing the rest of the construction~\cite{lin2026}.
+
+The MFCF filters \(D\) into overlapping characteristic cliques while preserving
+a decomposable graph structure~\cite{massara2019}. At each step, a
+characteristic \(v\in\mathcal V\) not yet in the graph is attached through an
+admissible separator \(S\), meaning a clique of the current graph whose
+extension preserves decomposability, forming the new clique \(S\cup\{v\}\). The
+attachment is scored by
+\begin{equation}
+ G(v,S)
+ =
+ \sum_{u\in S}D_{vu}^{2}.
+ \label{eq:gain}
+\end{equation}
+Repeatedly selecting the largest admissible gain produces a collection of
+maximal cliques \(\mathcal C\). Unlike sparse precision matrix estimators such as the graphical lasso~\cite{friedman2008}, which identify pairwise conditional dependence edges, the MFCF yields a filtered graph whose maximal cliques define overlapping groups of characteristics. In our implementation, the only structural parameter is the maximum clique size K, which imposes
+\[
+|C|\leq K
+\qquad
+\text{for every } C\in\mathcal C.
+\]
+The candidate values considered for K are reported in Section~\ref{exp}.
+
+
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]
+  {figures/hnn_pipeline.png}
+  \caption{Dependence-informed HNN construction. MFCF filters training-only
+  characteristic dependence into overlapping cliques. Retained subsets form
+  ordered neural units, set inclusion determines sparse connections, and
+  summaries from all non-input layers form the excess-return forecast. Adapted
+  from Lin et al.~\cite{lin2026}.}
+  \Description{A stock-month panel is converted into a characteristic
+  dependence matrix and a clique forest, then into sparse neural layers
+  representing edges, triangles, and a tetrahedron. All non-input layers
+  contribute to the final prediction.}
+  \label{fig:pipeline}
+\end{figure*}
+
+\subsection{Clique-Induced Neural Architecture}
+
+Figure~\ref{fig:pipeline} illustrates how the MFCF is translated into an
+HNN~\cite{wang2023hnn,lin2026}. The cliques and their subsets become the neural units of the network, and set inclusion becomes its connectivity.
+
+Since \(K\) is an upper bound, the highest order the filtered graph actually
+reaches is
+\begin{equation}
+ K^{\star}=\max_{C\in\mathcal C}|C|\leq K .
+ \label{eq:kstar}
+\end{equation}
+Let \(\mathcal H^{(k)}\) collect the distinct order \(k\) interactions the filter
+retains:
+\begin{equation}
+ \mathcal H^{(k)}
+ =
+ \left\{
+ \alpha\subseteq\mathcal V:
+ |\alpha|=k,\
+ \alpha\subseteq C
+ \text{ for some }C\in\mathcal C
+ \right\}.
+ \label{eq:complex}
+\end{equation}
+A subset that appears in several maximal cliques contributes a single unit.
+Layer \(k\) has one unit for each \(\alpha\in\mathcal H^{(k)}\), so layer 1
+holds the individual characteristics, layer 2 the retained pairs, and later
+layers contain progressively larger cliques. Its width \(n_k=|\mathcal H^{(k)}|\) is
+determined by the filtered graph rather than chosen, and \(K\) bounds the
+number of layers, not their widths.
+
+Connections follow inclusion: the unit for \(\alpha\in\mathcal H^{(k)}\)
+receives input only from the units for its subsets of size \(k-1\).
+Characteristics therefore interact only when the filter places them in a common
+clique. With \(h^{(1)}_{i,t}=x_{i,t}\), the activations at order \(k\) are
+\begin{equation}
+ h^{(k)}_{i,t}
+ =
+ \operatorname{ReLU}\!\left(
+ \operatorname{LN}_{k}\!\left[
+ W^{(k)}h^{(k-1)}_{i,t}+b^{(k)}
+ \right]\right),
+ \quad k=2,\ldots,K^{\star},
+ \label{eq:hnnlayer}
+\end{equation}
+where \(h^{(k)}_{i,t}\in\mathbb{R}^{n_k}\) holds the order-\(k\) activations,
+\(b^{(k)}\in\mathbb{R}^{n_k}\) is a bias, \(\operatorname{LN}_{k}\) is layer
+normalization~\cite{ba2016}, and ReLU is the rectified linear unit~\cite{nair2010}. The weight
+matrix \(W^{(k)}\in\mathbb{R}^{n_k\times n_{k-1}}\) is sparse by construction:
+the entry \(W^{(k)}_{\alpha\tau}\) is trainable when \(\tau\subset\alpha\) and
+fixed at zero otherwise.
+
+Conventional feed-forward networks predict from the last hidden layer. The HNN
+instead reads out from every layer above the input. Each layer is first
+summarized by a scalar,
+\begin{equation}
+ r^{(k)}_{i,t}
+ =
+ (a^{(k)})^\top h^{(k)}_{i,t}+c^{(k)},
+ \qquad k=2,\ldots,K^{\star},
+ \label{eq:layer-readout}
+\end{equation}
+and the summaries are combined to form the forecast,
+\begin{equation}
+ \widehat y^{e}_{i,t+1}
+ =
+ \sum_{k=2}^{K^{\star}}\beta_k r^{(k)}_{i,t}+d,
+ \label{eq:hnn-readout}
+\end{equation}
+where \(a^{(k)}\in\mathbb{R}^{n_k}\) and the scalars \(c^{(k)}\), \(\beta_k\)
+and \(d\) are trainable.
+ Every order therefore has a direct path to the
+forecast, which matters because a unit belonging to no larger clique would
+otherwise never reach the output. The linear form also keeps the contribution
+of each order separable. The MFCF fixes the units and the connections before
+training, so training estimates only the nonzero weights.
+
+Each unit at order \(k\) has exactly \(k\) incoming connections, one for each of
+its subsets of size \(k-1\). The HNN therefore carries far fewer weights than a
+fully connected network with the same layer widths:
+\begin{equation}
+ P_{\mathrm{sparse}}
+ =
+ \sum_{k=2}^{K^{\star}}k\,n_k,
+ \qquad
+ P_{\mathrm{dense}}
+ =
+ \sum_{k=2}^{K^{\star}}n_{k-1}n_k .
+ \label{eq:parameter-growth}
+\end{equation}
+The sparse count grows linearly in the layer widths, whereas the dense count
+grows with their products. 
+
+
+\subsection{HNN Variants and Structural Controls}
+The two variants use the construction above and differ only in the dependence
+matrix supplied to MFCF.
+\paragraph{\HNNMarg.}
+The marginal specification estimates a single dependence matrix from all
+observations in the training window. Returns are not used, so the architecture
+depends only on the characteristics.
+
+\paragraph{\HNNMS.}
+The median-split specification splits the training observations at the median excess return. A dependence matrix and an MFCF are estimated within each subsample,
+giving clique collections \(\mathcal C^{+}\) and \(\mathcal C^{-}\), and the
+network is built from their union,
+\begin{equation}
+ \mathcal C
+ =
+ \mathcal C^{+}\cup\mathcal C^{-}.
+ \label{eq:ms-union}
+\end{equation}
+Equation~\eqref{eq:complex} then applies unchanged, so a subset occurring in
+both collections still contributes a single unit. Validation and
+test returns are never used.
+
+The two controls start from \HNNMarg{}: the first breaks the alignment
+between characteristics and the MFCF-derived architecture, the second replaces the sparse HNN with a width-matched dense architecture.
+
+\paragraph{\HNNShuffle.}
+This ablation permutes the characteristics across the inputs of the \HNNMarg{} network, with no characteristic left at its original place. The same
+permutation is used for every observation in a training window. Since each
+input corresponds to a node of the filtered graph, this shuffles the
+characteristics across the nodes while leaving the graph itself untouched: the
+topology, the neural units, the connections, and the parameter count stay exactly as in
+\HNNMarg{}, but the characteristics are no longer aligned with their original nodes in the MFCF. Capacity is unchanged, so a difference in performance is attributable to
+that mismatch alone.
+
+
+\paragraph{\MLPHNN}
+This control keeps \HNNMarg{}'s depth and layer widths but connects every layer
+fully and predicts from the last layer instead of from all of them. Because its connectivity and prediction head follow a conventional
+MLP design, it provides an architectural comparison rather than a strict
+connectivity ablation. The widths are matched but the parameter counts are not,
+so it is substantially larger than \HNNMarg{}.
+
+Together, these four models answer three questions: whether using returns to
+estimate the graph helps (\HNNMS{} against \HNNMarg{}), whether characteristics must remain aligned with the MFCF (\HNNShuffle{}), and how the HNN architecture compares with a conventional dense network having the same
+induced depth and layer widths (\MLPHNN{}).
+
+
+
+\section{Experimental Design}
+\label{exp}
+
+\subsection{Data and Walk-Forward Protocol}
+
+We use the GKX U.S. equity panel of 94 firm characteristics and monthly stock
+returns from 1957 to 2016~\cite{gu2020}. Returns are taken in excess of the
+contemporaneous risk-free rate. Within each month the observed characteristics
+are ranked across stocks and mapped to \([-1,1]\), and missing values are set to
+zero, the neutral rank. A near-zero-variance screen applied to each window's
+training data leaves between 90 and 94 characteristics, so the MFCF decides
+how characteristics are connected rather than which are available. The correlation matrix is computed from 150{,}000 training observations drawn at
+random in each window.
+The test sample contains \NTest{} observations.
+
+
+Following GKX~\cite{gu2020}, the training window starts in 1957 and expands
+by one year at each step, the following twelve years serve as validation, and
+the next year is the test year. The first test year is 1987 and the last 2016,
+giving 30 non-overlapping test years. Preprocessing, graph construction,
+hyperparameter selection and fitting are redone in each window on that window's
+training and validation data alone.
+
+We do not reproduce GKX's full specification: all models start from the same 94
+characteristics, without industry dummies or macroeconomic interactions. Fixing
+the information set means differences in performance can be read as differences
+in model construction.
+
+\subsection{Models and Selection}
+
+Seven models are compared. The four HNN specifications are defined in
+Section~\ref{method}; the other three are benchmarks from GKX~\cite{gu2020}.
+Huber-3 is their OLS-3: a regression on size, book-to-market and 12-month
+momentum, fitted under Huber loss~\cite{huber1964} to limit the influence of
+extreme returns. It shows what a minimal, long-standing specification achieves
+on this panel. Principal component regression (PCR) is an unpenalized regression
+on principal components of all 94 characteristics, computed from the training
+data alone; because it combines them linearly, the gap between PCR and the
+neural models measures what nonlinearity adds.
+
+\NNThree{} is GKX's three-hidden-layer network, with 32, 16 and 8 hidden units~\cite{gu2020}, batch
+normalization and an \(l_1\) penalty, applied here to 94 inputs. It attains the
+highest pooled out-of-sample \(R^2\) among the specifications they evaluate, and
+deeper networks do not improve on it, so it is a demanding baseline. It is also
+the closest comparison for the architecture claim: it sees the same
+characteristics with the same flexibility, but its depth and widths are set by
+hand. We do not include tree ensembles, since the question here is how a neural
+architecture is specified rather than which family of models predicts best.
+
+All neural models are trained with Adam~\cite{kingma2015} on mean squared error,
+with batches of 10{,}000, at most 100 epochs and gradient clipping at one.
+Training stops after ten epochs without validation improvement for the HNNs and
+five for the dense networks, the HNNs being given longer because the sparse mask
+slows convergence. To mitigate the variation induced by random initialization, each forecast averages ten runs with different seeds, following GKX~\cite{gu2020}. This matters here because the differences between architectures are small relative to that variation.
+
+Hyperparameters are chosen by validation mean squared error every five test
+years and held for the block, while graphs and weights are re-estimated
+annually. Table~\ref{tab:grids} lists the grids. HNNs use no \(l_1\)
+penalty, since their sparsity comes from the graph rather than from shrinkage.
+Model selection is not eliminated but changes in kind: a search over depth and
+width sequences becomes a search over one structural parameter and the learning
+rate.
+
+\begin{table}[h]
+\centering
+\caption{Hyperparameter grids. \(\eta\) is the learning rate,
+\(\lambda_1\) the \(l_1\) penalty on dense weights, \(K\) the maximum clique
+size, and \(\epsilon\) the Huber robustness parameter. The learning-rate grid is
+\(\eta\in\{10^{-4},10^{-3},3\times10^{-3},10^{-2},3\times10^{-2}\}\).}
+\label{tab:grids}
+\small
+\begin{tabular}{ll}
+\toprule
+Model & Grid\\
+\midrule
+\HNNMarg{}, \HNNMS{} & \(\eta\); \(K\in\{2,\ldots,7\}\)\\
+\HNNShuffle{}        & \(\eta\)\\
+\NNThree{}           & \(\eta\); \(\lambda_1\in\{10^{-6},10^{-5},10^{-3}\}\)\\
+\MLPHNN{}            & \(\eta\); \(\lambda_1\in\{10^{-6},10^{-5},10^{-3}\}\)\\
+Huber-3              & \(\epsilon\in\{1.1,1.35,1.5,2.0\}\)\\
+PCR                  & components \(\in\{5,10,20,30,40,60,80,94\}\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Evaluation and Inference}
+\begin{table*}[!b]
+\centering
+\caption{Out-of-sample excess-return results, 1987--2016. \(R^2\) and monthly
+gross spreads are percentages. ICs are means of monthly cross-sectional
+correlations. Parameters are median trainable counts per ensemble member across
+annual refits. Boldface marks the strongest estimate in each performance
+column.}
+\label{tab:main}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & $R^2_{\rm oos}$ & MAE & Pearson IC & Spearman IC
+& EW spread & AW spread & Params.\\
+\midrule
+Huber-3 & -0.137 & \textbf{0.1050} & 0.0227 & \textbf{0.0676} & 0.51 & 1.21 & 4\\
+PCR & 0.336 & 0.1056 & 0.0437 & 0.0464 & 2.87 & 1.15 & 81\\
+NN3 & 0.475 & 0.1057 & 0.0586 & 0.0474 & 3.75 & 2.44 & 3.8k\\
+\HNNMS{} & \textbf{0.511} & 0.1058 & 0.0610 & 0.0491 & 3.85 & 2.00 & 5.2k\\
+\HNNMarg{} & 0.509 & 0.1059 & \textbf{0.0642} & 0.0517 & \textbf{3.95} & 1.99 & 21.0k\\
+\HNNShuffle & 0.496 & 0.1058 & 0.0597 & 0.0490 & 3.73 & 1.91 & 21.0k\\
+MLP-HNN & 0.429 & 0.1057 & 0.0524 & 0.0436 & 3.47 & \textbf{2.48} & 1680.7k\\
+\bottomrule
+
+\end{tabular}
+\end{table*}
+Predictive accuracy is measured against a
+forecast of zero,
+\begin{equation}
+ R^2_{\mathrm{oos}}=1-
+ \frac{\sum_{i,t}(y^e_{i,t+1}-\widehat y^e_{i,t+1})^2}
+      {\sum_{i,t}(y^e_{i,t+1})^2},
+ \label{eq:r2}
+\end{equation}
+where the sums run over all observations in the test years. The benchmark is
+zero rather than the historical mean because the mean return of an individual
+stock is so noisy that it lowers the bar for good forecasting
+performance~\cite{gu2020}.
+
+We also report pooled mean absolute error, and the Pearson and Spearman
+information coefficients: for each test month we compute the cross-sectional
+correlation between predicted and realized returns, then average across months.
+These matter because a long-short portfolio earns its return from ranking stocks
+correctly within a month rather than from predicting the level of returns, and a
+forecast that ranks better supports a higher risk-adjusted
+return~\cite{grinold2000}.
+
+Each month we sort stocks into deciles on the prediction and record the return
+on the top decile minus the bottom. We report this under equal weights (EW) and
+under lagged market equity (AW), since the two can differ substantially when
+small stocks drive the result~\cite{famafrench2008}. Both legs earn the same
+risk-free rate, so the raw and excess long-short spreads are identical.
+
+
+
+Turnover is measured with a uniform transaction cost, since the measured
+advantage of machine-learning strategies can shrink once trading frictions are
+included~\cite{avramov2023}. Let \(r^{\mathrm{gross}}_t\) be the month's
+long-short spread, \(w_{i,t}\) the signed target weight of stock \(i\), and
+\(\widetilde w_{i,t-1}\) its weight after the previous month's returns but
+before rebalancing. With each leg normalized to unit notional,
+\begin{equation}
+ \mathrm{TO}_t=\frac{1}{2}\sum_i
+ |w_{i,t}-\widetilde w_{i,t-1}|,\qquad
+ r^{\mathrm{net}}_t(c)=r^{\mathrm{gross}}_t-2c\,\mathrm{TO}_t ,
+ \label{eq:cost}
+\end{equation}
+where \(c\) is the cost per dollar traded. The sum is the notional bought and
+sold, so \(\mathrm{TO}_t\) is one-way turnover and the cost is \(c\) times twice
+that. Dropping the first test month leaves 359 rebalances, and we report
+\(c\in\{0,10,25,50\}\) basis points. The calculation ignores security-specific
+spreads, short-borrow fees, market impact and capacity.
+
+Models are compared month by month. For each test month we average the
+difference in squared forecast errors across stocks, giving a monthly series
+whose mean is tested with a Diebold--Mariano statistic~\cite{diebold1995} and
+Newey--West heteroskedasticity- and autocorrelation-consistent (HAC) standard errors with six lags~\cite{neweywest1987}. The same paired
+test is applied to absolute error, the information coefficients and the
+portfolio returns; a negative loss difference favors the HNN, as does a positive
+difference in coefficient or spread. Six measures, squared error, absolute
+error, the two information coefficients and the two decile spreads, are compared
+against three benchmarks (\NNThree{}, \HNNShuffle{}, \MLPHNN{}), and the
+resulting 18 \(p\)-values are adjusted by Holm's procedure~\cite{holm1979}. We
+call a difference significant at 5\% after adjustment.
+
+
+
+% \section{Results}\label{re}
+
+% \begin{table*}[t]
+% \centering
+% \caption{Out-of-sample excess-return results, 1987--2016. $R^2$ and monthly
+% gross spreads are percentages. ICs are means of monthly cross-sectional
+% correlations. Parameters are median trainable counts per ensemble member across
+% annual refits.
+% Boldface marks the strongest point estimate in each column.}
+% \label{tab:main}
+% \small
+% \setlength{\tabcolsep}{3.5pt}
+% \begin{tabular}{lrrrrrrr}
+% \toprule
+% Model & $R^2_{\rm oos}$ & MAE & Pearson IC & Spearman IC
+% & EW spread & AW spread & Params.\\
+% \midrule
+% Huber-3 & -0.137 & \textbf{0.1050} & 0.0227 & \textbf{0.0676} & 0.51 & 1.21 & 4\\
+PCR & 0.336 & 0.1056 & 0.0437 & 0.0464 & 2.87 & 1.15 & 81\\
+NN3 & 0.475 & 0.1057 & 0.0586 & 0.0474 & 3.75 & 2.44 & 3.8k\\
+\HNNMS{} & \textbf{0.511} & 0.1058 & 0.0610 & 0.0491 & 3.85 & 2.00 & 5.2k\\
+\HNNMarg{} & 0.509 & 0.1059 & \textbf{0.0642} & 0.0517 & \textbf{3.95} & 1.99 & 21.0k\\
+\HNNShuffle & 0.496 & 0.1058 & 0.0597 & 0.0490 & 3.73 & 1.91 & 21.0k\\
+MLP-HNN & 0.429 & 0.1057 & 0.0524 & 0.0436 & 3.47 & \textbf{2.48} & 1680.7k\\
+\bottomrule
+
+% \end{tabular}
+% \end{table*}
+
+% \subsection{Predictive Performance}
+
+% Table~\ref{tab:main} shows a consistent HNN result across complementary
+% metrics. \HNNMS{} has the highest pooled $R^2_{\mathrm{oos}}$ at \MSRtwo\%,
+% followed closely by \HNNMarg{} at \HNNRtwo\%; both edge \NNThree{} at \NNRtwo\%.
+% \HNNMarg{} leads the comparison in Pearson IC (0.0642) and equal-weighted
+% spread (3.95\% per month), and leads the neural models in Spearman IC (0.0517).
+% \HNNMS{} reaches 0.0610, 0.0491, and 3.85\% on the same measures. The two graph
+% constructions therefore deliver similar loss accuracy while the marginal graph
+% produces the strongest neural cross-sectional ordering.
+
+% Paired inference sharpens this result. \HNNMarg{}'s Pearson IC exceeds
+% \NNThree{} by 0.0056 with $p=\HNNNNPearsonP$; this linear-association result
+% survives the 18-test Holm adjustment (adjusted
+% $p=\HNNNNPearsonHolmP$). Its 0.034 percentage-point pooled $R^2$ edge
+% corresponds to a small negative monthly MSE difference, for which $p=\HNNNNP$.
+% The Spearman IC difference is positive but not significant ($p=0.178$), and
+% \NNThree{}'s slightly lower MAE is borderline at $p=0.050$. Thus HNN's clearest
+% advantage over the compact \NNThree{} is stronger linear cross-sectional
+% association; the robust rank comparison is statistically tied, and
+% squared-error accuracy is closely matched.
+
+% The conventional benchmarks establish task difficulty. PCR achieves positive
+% $R^2$ and useful ranking. Huber-3 has the highest Spearman IC (0.0676), consistent
+% with stable ranking from size, value, and momentum, but its negative pooled
+% $R^2$ and 0.51\% equal-weighted spread indicate weak level calibration and tail
+% separation. Both HNN variants improve materially on these baselines in pooled
+% $R^2$, Pearson IC, and equal-weighted sorting.
+
+% \begin{figure*}[t]
+%   \centering
+%   \includegraphics[width=\textwidth]{figures/performance_summary.pdf}
+%   \caption{Pooled and decade-level predictive performance. Panel (a) reports
+%   the full-period zero-benchmark $R^2_{\mathrm{oos}}$ for the retained model
+%   set. Panel (b) reports the two HNN variants and \NNThree{} in three
+%   nonoverlapping decades to show temporal stability.}
+%   \Description{A horizontal bar chart compares full-period out-of-sample R
+%   squared across seven models. A grouped bar chart compares three selected
+%   models over three decades. Bar colors and hatch patterns distinguish model
+%   families.}
+%   \label{fig:performance}
+% \end{figure*}
+
+% \subsection{Feature Alignment and Parameter Economy}
+
+% The input derangement separates feature alignment from capacity. It leaves
+% \HNNMarg{}'s annual widths, parameter count, and all connections after the
+% first layer unchanged. Nevertheless, pooled $R^2$ falls from \HNNRtwo\% to
+% \ShuffleRtwo\%, Pearson IC falls from 0.0642 to 0.0597, and the equal-weighted
+% spread falls from 3.95\% to 3.73\%. The Pearson and spread reductions are
+% nominally significant ($p=\HNNShufflePearsonP$ and
+% $p=\HNNShuffleEWP$). After Holm adjustment, the Pearson reduction remains
+% significant (adjusted $p=\HNNShufflePearsonHolmP$), whereas the spread does not;
+% the Spearman reduction is directionally consistent ($p=0.077$). Pooled MSE
+% remains close ($p=0.808$). Feature-to-group alignment therefore adds a distinct
+% cross-sectional-association benefit while preserving level-prediction accuracy.
+
+% The dense width control gives a complementary result. Its pooled $R^2$ is
+% \DenseRtwo\%, Pearson IC is 0.0524, Spearman IC is 0.0436, and equal-weighted
+% spread is 3.47\%. \HNNMarg{} improves both ICs and the equal-weighted spread
+% with nominal paired $p$-values below 0.05; after Holm adjustment, the Pearson
+% advantage remains significant (adjusted $p=\HNNDensePearsonHolmP$), whereas the
+% Spearman and spread differences do not. Its median parameter count is
+% \HNNParams\ thousand, compared with \DenseParams\ million for \MLPHNN{}, an
+% \ParamRatio-fold reduction.
+% The dense model has a slightly lower MAE and a higher asset-weighted spread;
+% this metric reversal locates HNN's advantage in broad cross-sectional ranking.
+% MFCF incidence concentrates parameters in a network that ranks that cross
+% section more effectively than dense connections over the same induced
+% dimensions. This comparison isolates sparse from dense connectivity at
+% identical induced widths; \HNNMarg{} is larger than the separately designed,
+% compact \NNThree{} (21.0 versus 3.8 thousand parameters).
+
+% Parameter count changes with the validation-selected $K$ and with the number
+% of retained subsets and inclusion-based connections. This explains why
+% \HNNMS{} can have a lower parameter count than \HNNMarg{} even when it permits
+% a high maximum order: $K$ bounds clique size but does not determine how many
+% cliques, subsets, or connections the data-derived graph contains. No layer
+% width is manually supplied.
+
+% \begin{figure*}[t]
+%   \centering
+%   \includegraphics[width=\textwidth]{figures/parameter_efficiency.pdf}
+%   \caption{Predictive performance against median trainable parameter count for
+%   the neural models. The horizontal axis is logarithmic. Panel (a) reports
+%   pooled $R^2_{\mathrm{oos}}$; panel (b) reports mean monthly Pearson IC.
+%   HNN-shuffle denotes \HNNShuffle{}.}
+%   \Description{Two scatter plots place five neural models by median parameter
+%   count on a logarithmic horizontal axis. The vertical axes show pooled
+%   out-of-sample R squared and Pearson information coefficient. Each labeled
+%   model uses a different point shape.}
+%   \label{fig:parameter-efficiency}
+% \end{figure*}
+
+% Figure~\ref{fig:parameter-efficiency} makes the capacity comparison explicit.
+% \MLPHNN{} uses nearly two orders of magnitude more parameters than
+% \HNNMarg{} yet is lower on both predictive measures. \HNNMS{} also occupies a
+% compact part of the parameter--performance plane. The comparison indicates
+% that the HNN results are not explained by expanding the number of trainable
+% weights.
+
+% \subsection{Economic Ranking}
+
+% \begin{table*}[t]
+% \centering
+% \caption{Turnover and transaction-cost sensitivity over 359 monthly
+% rebalances. TO is mean total one-way turnover across two unit-notional legs.
+% Net and SR are the monthly net spread (percent) and annualized Sharpe ratio at
+% 25 basis points per traded dollar. BE is the break-even cost in basis points
+% that sets the arithmetic mean spread to zero. EW and AW denote equal and
+% lagged-market-equity weights.}
+% \label{tab:portfolio}
+% \normalsize
+% \setlength{\tabcolsep}{6pt}
+% \begin{tabular}{lrrrrrrrr}
+% \toprule
+% & \multicolumn{4}{c}{Equal weighted (EW)}
+% & \multicolumn{4}{c}{Asset weighted (AW)}\\
+% \cmidrule(lr){2-5}\cmidrule(lr){6-9}
+% Model & TO & Net & SR & BE & TO & Net & SR & BE\\
+% \midrule
+% NN3 & 1.23 & 3.13 & 2.17 & 153 & 1.35 & 1.78 & 0.95 & 91\\
+\HNNMS{} & 1.24 & 3.24 & 2.24 & 156 & 1.38 & 1.32 & 0.76 & 73\\
+\HNNMarg{} & 1.25 & 3.34 & 2.28 & 159 & 1.36 & 1.31 & 0.73 & 73\\
+\HNNShuffle & 1.26 & 3.12 & 2.11 & 149 & 1.41 & 1.22 & 0.65 & 68\\
+MLP-HNN & 1.15 & 2.91 & 1.93 & 151 & 1.28 & 1.85 & 0.99 & 98\\
+\bottomrule
+
+% \end{tabular}
+% \end{table*}
+% Table~\ref{tab:portfolio} reports turnover and transaction-cost sensitivity for
+% the prediction-sorted portfolios.
+% Figure~\ref{fig:economic} shows a broadly monotone equal-weighted return
+% gradient for \HNNMarg{}. Mean monthly returns rise from $-0.97\%$ in the bottom
+% prediction decile to $2.98\%$ in the top decile, producing the 3.95\% gross spread in
+% Table~\ref{tab:main}. Its mean turnover is \HNNEWTurnover; at 25 basis points
+% per traded dollar, the net spread remains \HNNNetEW\% per month, with an
+% annualized Sharpe ratio of \HNNNetEWSR{} and HAC $t=\HNNNetEWT$. The
+% corresponding break-even cost is \HNNBreakEvenEW{} basis points. These are
+% sensitivity calculations rather than implementation estimates.
+
+% The equal-weighted ordering is stable across the cost grid. At 25 basis points,
+% \HNNMarg{} earns \HNNNetEW\% versus \NNNetEW\% for \NNThree{}. Their paired
+% difference is positive but not statistically significant ($p=\HNNNNNetP$).
+% More diagnostically, \HNNMarg{} remains ahead of \HNNShuffle{} and \MLPHNN{}
+% at nominal significance levels ($p=\HNNShuffleNetP$ and
+% $p=\HNNDenseNetP$). Thus the feature-alignment and sparse-incidence
+% differences remain positive after a common turnover penalty; the evidence does
+% not establish a net advantage over \NNThree{}.
+
+% Asset weighting changes the ordering. At 25 basis points, \HNNMarg{} earns
+% \HNNNetAW\% per month with a \HNNNetAWSR{} Sharpe ratio, versus \NNNetAW\% for
+% \NNThree{}; their paired difference favors \NNThree{}
+% ($p=\HNNNNNetAWP$). HNN's advantage is therefore concentrated in the broad
+% equal-weighted cross-section rather than the largest firms.
+
+% \begin{figure*}[t]
+%   \centering
+%   \includegraphics[width=\textwidth]{figures/economic_analysis.pdf}
+%   \caption{Economic ranking and cost sensitivity. Panel (a) reports
+%   \HNNMarg{} equal-weighted decile returns with 95\% HAC intervals (six lags).
+%   Panel (b) reports equal-weighted long-short spreads under uniform costs,
+%   using Equation~\eqref{eq:cost}. Lines connect unsmoothed cost scenarios.}
+%   \Description{The first panel shows HNN marginal realized returns increasing
+%   from low to high prediction deciles, with confidence intervals. The second
+%   shows three models' net long-short spreads declining as transaction costs
+%   increase; marker shapes and line styles distinguish the models.}
+%   \label{fig:economic}
+% \end{figure*}
+
+% \subsection{Performance Across Time}
+
+% Figure~\ref{fig:performance} shows that model rankings vary across regimes.
+% \HNNMarg{} records pooled $R^2$ of 0.714\%, 0.668\%, and $-0.135$\% in
+% 1987--1996, 1997--2006, and 2007--2016. \NNThree{} records 0.518\%, 0.749\%, and
+% $-0.138$\%. \HNNMarg{} leads in the first and final decades, while \NNThree{} leads
+% in the middle decade. \HNNMS{} is strongest late among the neural models, with
+% $-0.040$\%.
+
+% Across individual years, \HNNMarg{} leads \NNThree{} in annual
+% $R^2_{\mathrm{oos}}$ in \HNNWinYears\ of 30 cases and in annual mean Pearson
+% IC in \HNNPearsonWinYears\ cases. The mixed year-level ordering confirms that
+% neither architecture dominates in every market environment.
+
+% The common deterioration after 2006 is a finance result in its own right:
+% level calibration becomes difficult for every neural architecture even though
+% monthly ICs and long-short spreads remain strongly positive. HNN therefore
+% preserves cross-sectional ordering more consistently than zero-benchmark level
+% accuracy. This separation also explains why small differences in pooled
+% $R^2$ should not be the sole criterion for selecting a return predictor.
+
+
+
+\section{Results}\label{re}
+
+
+
+
+\subsection{Predictive Performance}
+
+
+Table~\ref{tab:main} reports the full comparison. \HNNMarg{} and \HNNMS{} match
+\NNThree{} on pooled \(R^2_{\mathrm{oos}}\), at \HNNRtwo\% and \MSRtwo\% against
+\NNRtwo\%. The \HNNMarg{} difference is not significant
+(\(p=\HNNNNP\)), but the models separate more clearly on ranking. \HNNMarg{} has the highest
+Pearson IC and the widest equal-weighted spread of any model, exceeding
+\NNThree{}'s Pearson IC by 0.0056 (\(p=\HNNNNPearsonP\)), and this survives Holm adjustment (adjusted \(p=\HNNNNPearsonHolmP\)). The Spearman
+difference points the same way without reaching significance (\(p=0.178\));
+\NNThree{}'s MAE is marginally lower (\(p=0.050\)). Squared error compares each prediction with the realized return, and by that
+standard the two models perform similarly. A decile sort depends only on the cross-sectional ordering of predicted returns, not on their absolute levels: it takes a long position in the top predicted decile and a short position in the bottom. The HNN's ranking advantage produces the stronger equal-weighted spread in
+Table~\ref{tab:main}.
+
+
+
+
+
+The three benchmarks differ in how many characteristics they use and whether
+they combine them linearly. Going from Huber-3's three characteristics to PCR's
+94 lifts pooled \(R^2\) from \(-0.137\)\% to 0.336\% and the equal-weighted
+spread from 0.51\% to 2.87\%. Letting those 94 interact nonlinearly in
+\NNThree{} raises them again to \NNRtwo\% and 3.75\%. Most of the predictive
+power therefore comes from the number of characteristics and the freedom to
+combine them, and what the HNN adds on top of \NNThree{} is ranking rather than
+level accuracy. Huber-3 shows why both coefficients are reported. It has the highest Spearman IC
+of any model but the lowest Pearson IC and the lowest equal-weighted spread.
+Spearman IC evaluates rank agreement across the full cross-section, whereas the
+decile spread depends specifically on the realized-return separation between
+stocks assigned to the two extreme predicted deciles. Strong overall rank
+correlation therefore need not imply a large long-short spread.
+
+\begin{table*}[t]
+\centering
+\caption{Turnover and transaction-cost sensitivity over 359 monthly rebalances.
+TO is mean total one-way turnover across two unit-notional legs. Net and SR are
+the monthly net spread (percent) and annualized Sharpe ratio at 25 basis points
+per traded dollar. BE is the break-even cost in basis points that sets the mean
+spread to zero. EW and AW denote equal and lagged-market-equity weights.}
+\label{tab:portfolio}
+\normalsize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{Equal weighted (EW)}
+& \multicolumn{4}{c}{Asset weighted (AW)}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Model & TO & Net & SR & BE & TO & Net & SR & BE\\
+\midrule
+NN3 & 1.23 & 3.13 & 2.17 & 153 & 1.35 & 1.78 & 0.95 & 91\\
+\HNNMS{} & 1.24 & 3.24 & 2.24 & 156 & 1.38 & 1.32 & 0.76 & 73\\
+\HNNMarg{} & 1.25 & 3.34 & 2.28 & 159 & 1.36 & 1.31 & 0.73 & 73\\
+\HNNShuffle & 1.26 & 3.12 & 2.11 & 149 & 1.41 & 1.22 & 0.65 & 68\\
+MLP-HNN & 1.15 & 2.91 & 1.93 & 151 & 1.28 & 1.85 & 0.99 & 98\\
+\bottomrule
+
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[!b]
+  \centering
+  \includegraphics[width=\textwidth]{figures/economic_analysis.pdf}
+  \caption{Economic ranking and cost sensitivity. Panel (a) reports \HNNMarg{}
+  equal-weighted decile returns with 95\% HAC intervals (six lags). Panel (b)
+  reports equal-weighted long-short spreads under uniform costs, using
+  Equation~\eqref{eq:cost}.}
+  \Description{The first panel shows HNN marginal realized returns increasing
+  from low to high prediction deciles, with confidence intervals. The second
+  shows three models' net long-short spreads declining as transaction costs
+  increase; marker shapes and line styles distinguish the models.}
+  \label{fig:economic}
+\end{figure*}
+
+\subsection{Feature Alignment and Parameter Economy}
+
+
+
+The shuffled control changes which characteristic enters at which node and
+nothing else: the widths, the connections and the parameter count are those of
+\HNNMarg{}. Any difference is therefore due to the mismatch between the characteristics and their original positions in the MFCF. Pooled \(R^2\) falls from
+\HNNRtwo\% to \ShuffleRtwo\%, the Pearson IC from 0.0642 to 0.0597, and the
+equal-weighted spread from 3.95\% to 3.73\%. The Pearson reduction survives Holm
+adjustment (adjusted \(p=\HNNShufflePearsonHolmP\)); the spread reduction is
+significant before adjustment (\(p=\HNNShuffleEWP\)) but not after. What the filtered
+graph contributes is therefore not only sparsity but also the particular clique structure it estimates.
+
+The dense control instead replaces the HNN with a conventional width-matched dense architecture. \MLPHNN{} has the same widths as
+\HNNMarg{} but connects every layer fully, which gives it \DenseParams{} million
+parameters against \HNNMarg{}'s \HNNParams{} thousand. Taken as a complete
+architecture, \HNNMarg{} nonetheless ranks the cross-section better on both
+information coefficients and on the equal-weighted spread, and the Pearson
+advantage again survives adjustment (adjusted \(p=\HNNDensePearsonHolmP\)).
+\MLPHNN{} does have a slightly lower MAE and a higher asset-weighted spread, so
+the HNN's gain is in the equal-weighted rather than the asset-weighted
+portfolio.
+
+
+Parameter count depends on the selected \(K\) and on how many subsets the
+filtered graph contains. \HNNMS{} runs with \(K\le4\) in 20 of the 30 annual
+refits, against \(K\ge5\) in 25 refits for \HNNMarg{}, which is why its median
+count is lower even though it reaches \(K=7\) at the end of the sample. No layer
+width is chosen by hand.
+
+
+
+
+\subsection{Economic Ranking}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/performance_summary.pdf}
+  \caption{Pooled and decade-level predictive performance. Panel (a) reports
+  full-period \(R^2_{\mathrm{oos}}\) for all seven models. Panel (b) reports the
+  two HNN variants and \NNThree{} over three non-overlapping decades.}
+  \Description{A horizontal bar chart compares full-period out-of-sample R
+  squared across seven models. A grouped bar chart compares three selected
+  models over three decades. Bar colors and hatch patterns distinguish model
+  families.}
+  \label{fig:performance}
+\end{figure*}
+
+Table~\ref{tab:portfolio} reports turnover and net performance. \HNNMarg{}'s
+equal-weighted decile returns rise almost monotonically from \(-0.97\%\) in the
+bottom decile to \(2.98\%\) in the top (Figure~\ref{fig:economic}), giving the
+3.95\% gross spread. At a cost of 25 basis points per dollar traded the spread
+is still \HNNNetEW\% per month, with an annualized Sharpe ratio of
+\HNNNetEWSR{}, and the cost at which it would vanish is \HNNBreakEvenEW{} basis
+points, about six times the level applied. 
+
+The ranking of the models is unchanged across the cost levels. At 25 basis
+points \HNNMarg{} earns \HNNNetEW\% against \NNNetEW\% for \NNThree{}, a
+difference that is positive but not significant (\(p=\HNNNNNetP\)). It stays
+ahead of \HNNShuffle{} and \MLPHNN{}, with unadjusted \(p=\HNNShuffleNetP\) and
+\(p=\HNNDenseNetP\). The advantage over both controls therefore survives a
+common turnover penalty.
+
+
+
+Asset weighting reverses the comparison with \NNThree{}: \HNNMarg{} earns
+\HNNNetAW\% against \NNNetAW\% (\(p=\HNNNNNetAWP\) in \NNThree{}'s favor).
+Equal- and asset-weighted results diverge in this way when an effect is stronger
+among smaller stocks~\cite{famafrench2008}.
+
+
+
+
+
+\subsection{Performance Across Time}
+
+No architecture leads in every decade (Figure~\ref{fig:performance}).
+\HNNMarg{} records pooled \(R^2\) of 0.714\%, 0.668\% and \(-0.135\)\% over
+1987--1996, 1997--2006 and 2007--2016, against \NNThree{}'s 0.518\%, 0.749\% and
+\(-0.138\)\%, and leads \NNThree{} in \HNNWinYears{} of the 30 individual years
+on \(R^2\) and in \HNNPearsonWinYears{} on Pearson IC. \HNNMS{} is the strongest
+neural model in the last decade at \(-0.040\)\%, and PCR the only model with
+positive \(R^2\) there, at 0.087\%.
+
+Over 2007--2016 the equal-weighted spread is 2.55\% per month for \HNNMarg{} and
+2.48\% for \NNThree{}. Level accuracy and cross-sectional ordering therefore come
+apart in the later sample. The neural models lose to a forecast of zero while
+their decile sorts still separate the cross-section.
+
+
+\section{Discussion}\label{dis}
+
+The two ablations narrow down what the filtered graph contributes. Permuting the characteristics across the nodes leaves the network
+identical in size and shape, yet lowers the Pearson IC by an amount that survives multiplicity adjustment, so
+the graph does more than impose sparsity, the particular cliques it forms carry
+information. The width-matched dense comparator also produces a lower Pearson
+IC despite having \ParamRatio{} times more parameters. Because this comparator
+uses both fully connected layers and a conventional final-layer prediction head,
+the comparison concerns the complete HNN architecture rather than sparse
+connectivity in isolation. It nevertheless shows that replacing the HNN with a
+substantially larger conventional dense architecture of the same induced depth
+and widths does not improve cross-sectional ranking.
+
+This has two practical consequences. First, tuning is limited to the clique
+bound and the learning rate, instead of a search over depth and width. Second, each neural unit stands for a specific set of
+characteristics, so the interactions a fitted model expresses can be read directly off the graph. A dense network of the same size offers no equivalent reading.
+
+Some limits should be noted. The 94 characteristics exclude GKX's industry
+indicators and macroeconomic interactions, so this is a controlled comparison of
+architectures rather than a replication of their 920-input specification. The
+net returns charge a single linear cost against measured turnover and ignore
+security-specific spreads, short-borrow fees, market impact and capacity, each
+of which can impact portfolio performance~\cite{avramov2023}.
+
+
+
+\section{Conclusion}\label{con}
+
+This paper uses estimated dependence among firm characteristics to specify a
+forecasting architecture. The cliques returned by the MFCF become units in a
+sparse neural network, and their inclusion relations determine the connections
+between layers. Depth, width, and connectivity therefore follow from the
+estimated dependence graph rather than being chosen separately. Across 30
+annual out-of-sample tests on the GKX panel, the resulting HNNs forecast as accurately as a three-hidden-layer benchmark,
+deliver stronger cross-sectional ranking performance, and use far fewer
+parameters than a dense network with the same induced layer widths.
+
+Two natural extensions remain. First, the dependence matrix could be estimated
+using measures that capture nonlinear relationships or are more robust than
+Pearson correlation. Second, \HNNMS{} could be generalized so that its
+architecture varies with broader market regimes rather than remaining fixed
+within each training window. More generally, the results show that empirical
+dependence among firm characteristics can be used not only to summarize their
+relationship structure, but also to specify a forecasting architecture.
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

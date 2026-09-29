@@ -1,0 +1,2840 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      41.0,
+      438.0,
+      84.0,
+      1142.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Spicing up Genetic Netlist Generation with LLMs",
+    "page": 0,
+    "bbox": [
+      223.0,
+      162.0,
+      999.0,
+      200.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      369.0,
+      220.0,
+      854.0,
+      248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      238.0,
+      249.0,
+      988.0,
+      274.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      167.0,
+      276.0,
+      1058.0,
+      301.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      103.0,
+      316.0,
+      196.0,
+      338.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      345.0,
+      594.0,
+      850.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "CCS Concepts",
+    "page": 0,
+    "bbox": [
+      103.0,
+      869.0,
+      250.0,
+      892.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      103.0,
+      899.0,
+      470.0,
+      921.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Keywords",
+    "page": 0,
+    "bbox": [
+      103.0,
+      940.0,
+      209.0,
+      963.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      970.0,
+      592.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ACM Reference Format:",
+    "page": 0,
+    "bbox": [
+      104.0,
+      1024.0,
+      284.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      1044.0,
+      592.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      105.0,
+      1187.0,
+      269.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      1216.0,
+      593.0,
+      1283.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      106.0,
+      1299.0,
+      194.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      1335.0,
+      594.0,
+      1420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      318.0,
+      1122.0,
+      580.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      630.0,
+      581.0,
+      1121.0,
+      821.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      823.0,
+      1122.0,
+      1084.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      630.0,
+      1086.0,
+      1124.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      1282.0,
+      1067.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      633.0,
+      1305.0,
+      1120.0,
+      1393.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      104.0,
+      123.0,
+      490.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      741.0,
+      123.0,
+      1118.0,
+      139.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      110.0,
+      173.0,
+      1115.0,
+      326.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) LLM-guided optimization for analog circuit synthesis",
+    "page": 1,
+    "bbox": [
+      111.0,
+      337.0,
+      454.0,
+      355.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Workflow for \"IGEL\", our inspiration-guided circuit evolution with LLMs",
+    "page": 1,
+    "bbox": [
+      570.0,
+      337.0,
+      1027.0,
+      355.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Overview of LLM-SPICEMixer: (a) LLM-augmented genetic circuit optimization loop. (b) IGEL prompts the LLM with inspiration circuits, then evaluates the proposed netlist with SPICE; it is added to the elite set if good enough.",
+    "page": 1,
+    "bbox": [
+      103.0,
+      369.0,
+      1118.0,
+      412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      103.0,
+      431.0,
+      592.0,
+      495.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      104.0,
+      496.0,
+      592.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      584.0,
+      593.0,
+      694.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Related Work",
+    "page": 1,
+    "bbox": [
+      103.0,
+      735.0,
+      280.0,
+      756.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      100.0,
+      764.0,
+      594.0,
+      1092.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      100.0,
+      1093.0,
+      594.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 LLM-SPICEMixer",
+    "page": 1,
+    "bbox": [
+      631.0,
+      428.0,
+      846.0,
+      450.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      630.0,
+      456.0,
+      1122.0,
+      525.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Recap of SPICEMixer",
+    "page": 1,
+    "bbox": [
+      631.0,
+      548.0,
+      901.0,
+      571.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      578.0,
+      1122.0,
+      731.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      731.0,
+      1120.0,
+      906.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      907.0,
+      1123.0,
+      1061.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 Inspiration-Guided Evolution with LLMs",
+    "page": 1,
+    "bbox": [
+      630.0,
+      1085.0,
+      1092.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      628.0,
+      1115.0,
+      1123.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      103.0,
+      121.0,
+      395.0,
+      141.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      733.0,
+      122.0,
+      1119.0,
+      140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      171.0,
+      591.0,
+      215.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      216.0,
+      593.0,
+      480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      508.0,
+      594.0,
+      709.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      737.0,
+      594.0,
+      979.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      980.0,
+      592.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      1236.0,
+      594.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      1354.0,
+      592.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      632.0,
+      170.0,
+      1120.0,
+      237.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      631.0,
+      237.0,
+      1123.0,
+      346.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      630.0,
+      347.0,
+      1124.0,
+      412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      413.0,
+      1122.0,
+      721.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Analog Discriminant-Function Synthesis",
+    "page": 2,
+    "bbox": [
+      631.0,
+      746.0,
+      1076.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      774.0,
+      1121.0,
+      930.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Task Setup",
+    "page": 2,
+    "bbox": [
+      631.0,
+      954.0,
+      796.0,
+      977.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      983.0,
+      1120.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      628.0,
+      1201.0,
+      1122.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      103.0,
+      122.0,
+      491.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      740.0,
+      122.0,
+      1120.0,
+      140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      171.0,
+      593.0,
+      324.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      326.0,
+      592.0,
+      457.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Reward and Multi-Corner Evaluation",
+    "page": 3,
+    "bbox": [
+      101.0,
+      476.0,
+      530.0,
+      499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      506.0,
+      593.0,
+      724.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      725.0,
+      593.0,
+      877.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      191.0,
+      888.0,
+      501.0,
+      944.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      569.0,
+      906.0,
+      590.0,
+      927.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      953.0,
+      357.0,
+      975.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      242.0,
+      984.0,
+      450.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      568.0,
+      1002.0,
+      590.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1047.0,
+      593.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1268.0,
+      591.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      103.0,
+      1333.0,
+      592.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      645.0,
+      171.0,
+      1119.0,
+      258.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      260.0,
+      1120.0,
+      323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      631.0,
+      325.0,
+      1120.0,
+      368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      629.0,
+      370.0,
+      1122.0,
+      567.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Results",
+    "page": 3,
+    "bbox": [
+      632.0,
+      590.0,
+      745.0,
+      614.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      629.0,
+      621.0,
+      1123.0,
+      1015.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      630.0,
+      1015.0,
+      1121.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      628.0,
+      1147.0,
+      1122.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1 Comparison with Evolutionary Baselines",
+    "page": 3,
+    "bbox": [
+      630.0,
+      1347.0,
+      1096.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      628.0,
+      1377.0,
+      1123.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      104.0,
+      122.0,
+      395.0,
+      141.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      733.0,
+      122.0,
+      1119.0,
+      140.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      109.0,
+      171.0,
+      346.0,
+      399.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      352.0,
+      173.0,
+      582.0,
+      382.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Training and validation rewards of the best-so-far circuit in each run. Circuits are selected by training reward and then evaluated on validation. Each run uses 131,072 pro- posal steps; thicker lines indicate medians over nine runs.",
+    "page": 4,
+    "bbox": [
+      101.0,
+      416.0,
+      594.0,
+      505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      522.0,
+      594.0,
+      609.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      100.0,
+      611.0,
+      593.0,
+      829.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      830.0,
+      593.0,
+      981.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      983.0,
+      594.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      1202.0,
+      592.0,
+      1289.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      1290.0,
+      593.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Final best training reward for different methods. Values are computed over nine independent runs.",
+    "page": 4,
+    "bbox": [
+      629.0,
+      166.0,
+      1121.0,
+      211.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      637.0,
+      220.0,
+      1117.0,
+      333.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Test rewards obtained by selecting the checkpoints with the highest validation reward. Values are computed over nine independent runs.",
+    "page": 4,
+    "bbox": [
+      629.0,
+      360.0,
+      1120.0,
+      427.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      638.0,
+      434.0,
+      1116.0,
+      548.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      636.0,
+      575.0,
+      1111.0,
+      766.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: Schematic of the best validation circuit found by LLM-SPICEMixer. The circuit uses only input_2 and input_3, corresponding to petal length and petal width, respectively. The output nets output_0, output_1, and output_2 corre- spond to setosa, versicolor, and virginica.",
+    "page": 4,
+    "bbox": [
+      630.0,
+      774.0,
+      1122.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      628.0,
+      895.0,
+      1122.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      629.0,
+      1245.0,
+      1121.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      122.0,
+      489.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      740.0,
+      122.0,
+      1120.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2 Accuracy and Robustness",
+    "page": 5,
+    "bbox": [
+      103.0,
+      169.0,
+      412.0,
+      192.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      200.0,
+      591.0,
+      264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      103.0,
+      265.0,
+      590.0,
+      308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      103.0,
+      309.0,
+      591.0,
+      351.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      352.0,
+      593.0,
+      395.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      397.0,
+      593.0,
+      571.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      572.0,
+      592.0,
+      751.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.3 Ablation: Prompting Strategy",
+    "page": 5,
+    "bbox": [
+      103.0,
+      770.0,
+      452.0,
+      795.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      799.0,
+      593.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      888.0,
+      593.0,
+      1152.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.4 Ablation: Decoding Settings",
+    "page": 5,
+    "bbox": [
+      103.0,
+      1173.0,
+      435.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1201.0,
+      593.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1333.0,
+      592.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      171.0,
+      1120.0,
+      238.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.5 Ablation: Model Choice and Size",
+    "page": 5,
+    "bbox": [
+      631.0,
+      259.0,
+      1008.0,
+      282.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      630.0,
+      288.0,
+      1119.0,
+      332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      630.0,
+      333.0,
+      1121.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      630.0,
+      529.0,
+      1125.0,
+      685.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6 Ablation: Operator Mixture",
+    "page": 5,
+    "bbox": [
+      631.0,
+      704.0,
+      960.0,
+      727.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      735.0,
+      1133.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      628.0,
+      889.0,
+      1122.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Conclusions and Outlook",
+    "page": 5,
+    "bbox": [
+      632.0,
+      1150.0,
+      923.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      1180.0,
+      1121.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      1333.0,
+      1123.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      103.0,
+      122.0,
+      395.0,
+      141.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      734.0,
+      123.0,
+      1119.0,
+      139.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      171.0,
+      592.0,
+      237.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      238.0,
+      592.0,
+      434.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      435.0,
+      591.0,
+      522.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 6,
+    "bbox": [
+      104.0,
+      546.0,
+      219.0,
+      568.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      109.0,
+      574.0,
+      591.0,
+      605.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      607.0,
+      590.0,
+      668.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      669.0,
+      590.0,
+      731.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      733.0,
+      591.0,
+      781.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      782.0,
+      591.0,
+      844.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      846.0,
+      591.0,
+      908.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      113.0,
+      910.0,
+      590.0,
+      971.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      973.0,
+      590.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      111.0,
+      1021.0,
+      590.0,
+      1052.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1053.0,
+      590.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      105.0,
+      1117.0,
+      590.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1165.0,
+      590.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1212.0,
+      589.0,
+      1259.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      105.0,
+      1260.0,
+      591.0,
+      1321.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1323.0,
+      591.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1371.0,
+      591.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      174.0,
+      1118.0,
+      223.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      224.0,
+      1119.0,
+      271.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      273.0,
+      1118.0,
+      333.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      335.0,
+      1118.0,
+      383.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      383.0,
+      1118.0,
+      431.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      432.0,
+      1118.0,
+      478.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      479.0,
+      1119.0,
+      526.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      528.0,
+      1120.0,
+      588.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      590.0,
+      1119.0,
+      637.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      639.0,
+      1119.0,
+      685.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      687.0,
+      1120.0,
+      733.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      734.0,
+      1119.0,
+      781.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      783.0,
+      1119.0,
+      844.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      632.0,
+      846.0,
+      1119.0,
+      875.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      878.0,
+      1118.0,
+      924.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      635.0,
+      926.0,
+      1118.0,
+      956.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      635.0,
+      958.0,
+      1118.0,
+      989.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      990.0,
+      1120.0,
+      1052.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      635.0,
+      1054.0,
+      1119.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1086.0,
+      1119.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1132.0,
+      1119.0,
+      1179.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      635.0,
+      1181.0,
+      1119.0,
+      1212.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1213.0,
+      1120.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1260.0,
+      1119.0,
+      1292.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1293.0,
+      1119.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1325.0,
+      1120.0,
+      1370.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1372.0,
+      1119.0,
+      1404.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      123.0,
+      490.0,
+      139.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      741.0,
+      124.0,
+      1119.0,
+      139.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      133.0,
+      176.0,
+      590.0,
+      207.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      106.0,
+      208.0,
+      591.0,
+      254.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      106.0,
+      256.0,
+      590.0,
+      302.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      107.0,
+      304.0,
+      590.0,
+      351.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      107.0,
+      352.0,
+      591.0,
+      414.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      175.0,
+      1118.0,
+      207.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      208.0,
+      1120.0,
+      240.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      241.0,
+      1119.0,
+      301.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      304.0,
+      1121.0,
+      367.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      103.0,
+      122.0,
+      395.0,
+      141.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      733.0,
+      122.0,
+      1119.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Examples of LLM Prompts and Outputs",
+    "page": 8,
+    "bbox": [
+      102.0,
+      169.0,
+      538.0,
+      193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      199.0,
+      1120.0,
+      245.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B Netlists of the Best Validation Circuits",
+    "page": 8,
+    "bbox": [
+      102.0,
+      261.0,
+      526.0,
+      284.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      291.0,
+      1121.0,
+      380.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      108.0,
+      417.0,
+      1119.0,
+      907.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6: Netlist of the circuit with the best validation reward found by LLM-SPICEMixer.",
+    "page": 8,
+    "bbox": [
+      243.0,
+      941.0,
+      978.0,
+      964.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      122.0,
+      489.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      741.0,
+      122.0,
+      1119.0,
+      139.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: LLM prompt and answer for the \"raw\"-style template version.",
+    "page": 9,
+    "bbox": [
+      318.0,
+      1356.0,
+      902.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      96.0,
+      161.0,
+      1132.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5: LLM prompt and answer for the \"diff\"-style template",
+    "page": 10,
+    "bbox": [
+      353.0,
+      1453.0,
+      868.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      104.0,
+      122.0,
+      489.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      741.0,
+      122.0,
+      1120.0,
+      140.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      105.0,
+      174.0,
+      1118.0,
+      771.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7: Netlists of additional circuits with strong validation performance.",
+    "page": 11,
+    "bbox": [
+      301.0,
+      804.0,
+      919.0,
+      827.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      122.0,
+      395.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      733.0,
+      122.0,
+      1119.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C Output Waveforms Across Shuffles and Corners",
+    "page": 12,
+    "bbox": [
+      102.0,
+      169.0,
+      622.0,
+      193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      199.0,
+      1120.0,
+      266.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      131.0,
+      310.0,
+      596.0,
+      539.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      131.0,
+      562.0,
+      597.0,
+      786.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      646.0,
+      309.0,
+      1110.0,
+      539.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Output waveforms (second-best validation circuit)",
+    "page": 12,
+    "bbox": [
+      169.0,
+      1038.0,
+      559.0,
+      1058.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8: Voltage transients evaluated on the test split. The plots overlay the waveforms obtained from the three shuf- fled versions of the test split.",
+    "page": 12,
+    "bbox": [
+      122.0,
+      1081.0,
+      607.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      132.0,
+      813.0,
+      597.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      646.0,
+      564.0,
+      1111.0,
+      779.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Output waveforms (best validation circuit)",
+    "page": 12,
+    "bbox": [
+      711.0,
+      786.0,
+      1046.0,
+      807.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      646.0,
+      814.0,
+      1111.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Output waveforms (second-best validation circuit)",
+    "page": 12,
+    "bbox": [
+      684.0,
+      1039.0,
+      1073.0,
+      1058.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 9: Voltage transients evaluated on the test split. The plots overlay the waveforms obtained for all corners and all three shuffled versions of the test split.",
+    "page": 12,
+    "bbox": [
+      636.0,
+      1081.0,
+      1120.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      104.0,
+      122.0,
+      491.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      740.0,
+      122.0,
+      1120.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D Robustness to Input-Voltage Perturbations",
+    "page": 13,
+    "bbox": [
+      101.0,
+      169.0,
+      569.0,
+      193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      102.0,
+      199.0,
+      1121.0,
+      266.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      102.0,
+      264.0,
+      1121.0,
+      354.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      116.0,
+      399.0,
+      443.0,
+      566.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      450.0,
+      398.0,
+      775.0,
+      565.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      782.0,
+      398.0,
+      1107.0,
+      566.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Evaluation over the tt corner",
+    "page": 13,
+    "bbox": [
+      490.0,
+      573.0,
+      735.0,
+      593.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      116.0,
+      619.0,
+      444.0,
+      785.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      447.0,
+      617.0,
+      778.0,
+      806.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      782.0,
+      619.0,
+      1107.0,
+      785.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Evaluation over all corners",
+    "page": 13,
+    "bbox": [
+      498.0,
+      862.0,
+      724.0,
+      882.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10: Robustness of LLM-SPICEMixer compared with ML baselines under input-voltage perturbations. The synthesized circuits are competitive with the baselines in the noiseless setting and degrade similarly as Gaussian noise σnoise is added to the inputs, indicating that the analog solutions retain useful classification margins under imperfect sensor readings. Dashed lines represent chance accuracy.",
+    "page": 13,
+    "bbox": [
+      100.0,
+      901.0,
+      1120.0,
+      990.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: Test-set accuracy across noise levels. For LLM-SPICEMixer, both tt-only and all-corner results are shown. Each cell reports mean ± standard deviation / median, in percent (%).",
+    "page": 13,
+    "bbox": [
+      102.0,
+      1039.0,
+      1117.0,
+      1084.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      105.0,
+      1093.0,
+      1117.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      122.0,
+      395.0,
+      141.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      733.0,
+      122.0,
+      1119.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E Results of Ablation Studies",
+    "page": 14,
+    "bbox": [
+      102.0,
+      169.0,
+      415.0,
+      192.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      199.0,
+      1121.0,
+      287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      102.0,
+      287.0,
+      1122.0,
+      355.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4: Ablation: final best reward for different prompting strategies on the training split. Values are computed over nine independent runs.",
+    "page": 14,
+    "bbox": [
+      103.0,
+      384.0,
+      1119.0,
+      430.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      160.0,
+      437.0,
+      1061.0,
+      602.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 5: Ablation: final best reward for different decoding settings on the training split. Values are computed over nine independent runs.",
+    "page": 14,
+    "bbox": [
+      103.0,
+      665.0,
+      1120.0,
+      711.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      222.0,
+      719.0,
+      996.0,
+      877.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 6: Ablation: final best reward for different models on the training split. Values are computed over nine independent runs.",
+    "page": 14,
+    "bbox": [
+      103.0,
+      941.0,
+      1119.0,
+      963.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      120.0,
+      971.0,
+      1099.0,
+      1105.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 7: Ablation: final best reward for Gemma3 12B when using the full operator mixture (= LLM-SPICEMixer) versus using only IGEL. The first two columns compare both settings at the same number of proposal steps. The last column reports the full all-operator run for reference; the IGEL-only setting uses approximately the same number of LLM calls as this full run.",
+    "page": 14,
+    "bbox": [
+      100.0,
+      1170.0,
+      1119.0,
+      1237.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      251.0,
+      1243.0,
+      968.0,
+      1416.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      122.0,
+      491.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      740.0,
+      122.0,
+      1120.0,
+      140.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F LLM Response Length Statistics",
+    "page": 15,
+    "bbox": [
+      101.0,
+      169.0,
+      458.0,
+      193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      100.0,
+      199.0,
+      1121.0,
+      246.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 8: Response-length statistics across the four models. For the Qwen3.5 models, values are reported as <think> + final output, because these models produce explicit thinking tokens.",
+    "page": 15,
+    "bbox": [
+      102.0,
+      322.0,
+      1121.0,
+      369.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      149.0,
+      375.0,
+      1071.0,
+      689.0
+    ]
+  }
+]

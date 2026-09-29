@@ -1,0 +1,1083 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{fix-cm}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[fontsize=10.5pt]{fontsize}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+\DeclareCaptionFont{captionsize}{\fontsize{9}{11}\selectfont}
+\captionsetup{font=captionsize,labelfont=bf}
+\renewcommand{\figurename}{Fig.}
+\captionsetup{labelsep=period}
+\usepackage[numbers,sort&compress,round]{natbib}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\renewcommand{\Affilfont}{\small}
+\renewcommand{\Authfont}{\normalsize}
+
+\renewenvironment{abstract}{%
+  \begin{center}%
+    {\bfseries \abstractname\vspace{-.5em}}%
+  \end{center}%
+  \quotation
+}{\endquotation}
+
+\title{Reputation and institutional certification as complementary trust mechanisms in a single online market}
+
+\author[1,2]{Yuta Kido\thanks{To whom correspondence should be addressed. E-mail: yu-kido@l.u-tokyo.ac.jp}}
+\author[1]{Yohsuke Ohtsubo}
+
+\affil[1]{Graduate School of Humanities and Sociology, The University of Tokyo, Tokyo 113-0033, Japan}
+\affil[2]{Japan Society for the Promotion of Science, Tokyo 102-0083, Japan}
+
+\date{\today}
+
+% --- definitions carried over from the Supplementary Materials ---
+\usepackage{placeins}
+\usepackage{amsthm}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{enumitem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{corollary}{Corollary}[section]
+\setlength{\emergencystretch}{3em}
+\newcommand{\SItext}{%
+  \section*{Supplementary Text}\label{sec:si-methods}%
+}
+\newcommand{\SIresults}{%
+  \section*{Supplementary Results}\label{sec:si-results-top}%
+}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-20pt}
+
+\begin{abstract}
+Reputation and institutional certification are the two main trust mechanisms under information asymmetry, yet their interaction remains poorly understood. We analyze nearly one million fixed-price eBay listings of Pokémon cards, where sellers choose among three signals: third-party grading (institutional certification), self-grading (a self-claimed condition description), or no signal. We show that self-grading and third-party grading dominate distinct regions of the reputation--value space, with the self-grading region widening as reputation rises. Reputation also amplifies the price premium of self-grading but not that of third-party grading. We develop a signaling game in which a false self-claim carries an ex-post cost proportional to reputation, whereas certification carries an ex-ante cost independent of reputation. These costs split the reputation--value space into equilibrium regimes that explain both patterns. The two mechanisms are therefore substitutes within a transaction yet complements across the market, replacing the reputation-versus-institution dichotomy with a regime structure set by reputation and value.
+\end{abstract}
+
+\begin{quotation}
+\noindent\centering\textbf{Keywords:} information asymmetry \textbar{} trust \textbar{} reputation \textbar{} institution \textbar{} signaling game
+\end{quotation}
+
+\medskip
+
+\section*{Introduction}
+
+\noindent Trust is a precondition for exchange in markets with information asymmetry. When buyers delegate the assessment of product quality to sellers, they are exposed to the risk that the sellers will exploit this information advantage \citep{Coleman1990}. Akerlof \cite{Akerlof1970} showed that this asymmetry triggers adverse selection. Being unable to verify product quality, buyers offer prices below the true value of high-quality products. Therefore, high-quality sellers exit the market, leaving only sellers of low-quality products (i.e., ``lemons''). The problem is amplified in online markets in which buyers can neither directly inspect the quality of goods nor monitor sellers through repeated face-to-face contact. Nevertheless, platforms such as eBay sustain tens of billions of dollars in transactions annually \citep{eBay2025_10K}, implying that alternative trust mechanisms address this information problem.
+
+One such mechanism is reputation. In repeated interactions, reputation sustains cooperation when the prospect of future gains outweighs the benefit of short-term defection, a principle Axelrod \cite{Axelrod1984} formalized as the ``shadow of the future.'' The same logic applies to trust problems in markets with information asymmetry. Online feedback systems embody this principle by making each seller's transaction history available to future buyers \citep{Lehdonvirta2022}. Indeed, reputation scores correlate with price premiums \citep{Resnick2006}, and negative feedback is associated with increased seller exit rates \citep{CabralHortacsu2010}. Similar to brand image \citep{Wernerfelt1988}, an established reputation is too valuable to be lost for a one-shot dishonest transaction. Thus, reputation systems address information asymmetry by deriving trustworthiness from a seller's accumulated transaction history \citep{ResnickZeckhauser2002, Cook2009}.
+
+A second mechanism operates through third-party institutions. Institutional economists have long argued that external enforcement reduces the transaction costs arising from information asymmetry and constrains opportunistic behavior \citep{North1990, Williamson1985}. In market exchange, this mechanism can operate through costly signaling. When the cost of obtaining a quality certificate is prohibitively high for low-quality sellers, certification credibly separates high-quality goods from low-quality goods \citep{Spence1973, MilgromRoberts1986}. Online markets implement this logic through third-party verification services that independently certify product quality (e.g., authenticity verification for branded goods) at a cost borne by the seller \citep{DranovJin2010}. Thus, third-party certification addresses information asymmetry by relocating the source of trust from the seller to an external institution \citep[see][for the same logic in the context of auditing]{Wilson1983}.
+
+\begin{figure}[t!]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{figures/Figure_1.pdf}}
+\caption{Descriptive overview of the Pokémon card transaction dataset. \textbf{(A)} Three stages of a card transaction. In Stage 1, a seller chooses a quality signal (None, Self-graded, or TP-graded). In Stage 2, the seller sets a listing price relative to the market price. In Stage 3, a buyer decides whether to purchase. \textbf{(B)} Price metrics. Top: distribution of listing prices (log USD) by signal type (None, $n = 603{,}587$; Self, $n = 319{,}688$; TP, $n = 36{,}754$). Middle: market price distributions for ungraded (None, Self) and graded (TP) items shown as horizontal violin-boxplots. Bottom: distribution of the log price ratio $\tilde{p} = \log(P/V)$ for all listings ($N = 960{,}029$) and sold items ($n = 131{,}538$), excluding outliers beyond 1.5 $\times$ the interquartile range (IQR); dashed line marks $\tilde{p} = 0$. \textbf{(C)} Seller reputation metrics. Top left: distributions of positive feedback percentage. Top right: distribution of feedback score (log-transformed). Arrows indicate dimensionality reduction using principal component analysis (PCA). Bottom: composite reputation score from the PCA ($N = 60{,}386$ sellers).}
+\label{fig:1}
+\end{figure}
+
+The social sciences have long proposed reputation and third-party institutions as two principal solutions to the trust problem in economic and social exchanges \citep{CookHardinLevi2005, Yamagishi2011, GreifMokyrTabellini2025}. Conceptually, the two operate through distinct mechanisms. Reputation builds endogenously from accumulated transaction history, whereas certification rests exogenously on institutional verification \citep{Zucker1986, Greif1993, Greif1994}. However, these mechanisms have largely been studied in isolation, leaving their interaction poorly understood when both mechanisms are simultaneously available. Contemporary online platforms typically host both mechanisms \citep{PavlouGefen2004}, providing an empirical setting to address this gap.
+
+In this study, we examine this question in the context of Pokémon trading cards in the eBay market, in which information asymmetry is substantial. Card value depends on condition, and counterfeiting poses a persistent risk in collectibles markets \citep{JinKato2006}. The platform offers two trust mechanisms: a cumulative buyer-feedback system (Fig.~\ref{fig:1}C), which corresponds to reputation, and third-party (TP) grading by professional authentication services, which corresponds to institutional certification. In addition, sellers may post a self-claimed condition description (self-grading). A seller therefore has three signaling options, denoted TP, Self, and None (Fig.~\ref{fig:1}A). Unlike TP grading, self-grading is costless and lacks immediate verification, constituting a form of cheap talk \citep{CrawfordSobel1982}. Nonetheless, such voluntary signals are widely used \citep{MayzlinDoverChevalier2014} and have been shown to mitigate information asymmetry in other online markets \citep{Lewis2011}, so their credibility, if any, must rest on a source other than the cost of producing the signal.
+
+Using nearly one million listings, we first show that reputation interacts with signal type in two ways. The reputation--value space separates into Self- and TP-dominant regions along a positively sloping boundary, and reputation amplifies the price premium of self-grading but not that of TP grading. We then propose a signaling game that formalizes two distinct trust mechanisms: reputation as collateral for the seller's self-claimed signal and TP grading as an externally verified signal whose credibility is independent of reputation. We examine whether the model's predictions align with their empirical counterparts. Finally, we let reputation evolve and show that a seller can move from institution-based to reputation-based exchange.
+
+\begin{figure}[t!]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{figures/Figure_2.pdf}}
+\caption{Hierarchical Bayesian model posterior estimates. \textbf{(A)} Ridgeline density plots of posterior coefficient distributions from the three-equation HBM. Top: signal-selection stage (multinomial logit, reference category was None). Middle: price-setting stage (the dependent variable was the log price ratio $\tilde{p} = \log(P/V)$). Bottom: sold stage (the dependent variable was $\Pr(\text{Sold} = 1)$). Vertical dashed line indicates zero. Points within posterior distributions represent medians; horizontal bars show 99\% highest density intervals (HDI). \textbf{(B)} Signal regions: posterior prediction and observed data. Left: region map showing posterior predicted probability of TP grading $P(\text{TP} \mid \text{graded})$ across reputation ($x$) and ungraded market price ($y$, log scale). Red indicates high probability (TP-dominant) and blue low probability (Self-dominant). Boundary contour at 50\%. Right: hexbin density of observed TP-graded (top, red) and Self-graded (bottom, blue) listings. \textbf{(C)} Predicted reputation effect on log price ratio by signal type for sold cards. Lines show predicted marginal effects, with the shaded band giving the 95\% credible interval.}
+\label{fig:2}
+\end{figure}
+
+\section*{Results}
+
+\subsection*{Empirical analysis}
+
+We fitted a hierarchical Bayesian model (HBM) to $N = 960{,}029$ fixed-price listings, jointly modeling the three sequential stages of an eBay transaction (Fig.~\ref{fig:1}A). In Stage 1, the seller chooses among three signals (TP, Self, or None). Empirically, sellers chose TP in 4\% of listings, Self in 33\%, and None in 63\%. In Stage 2, the seller sets a listing price $P$ relative to the item's grade-appropriate market price $V$, yielding the log price ratio $\tilde{p} = \log(P/V)$ (Fig.~\ref{fig:1}B; see Methods for market price). The denominator $V$ is the graded market price for TP listings and the ungraded market price for Self and None, whereas the item-value predictor in Stage 1 is the ungraded market price for all listings, providing a uniform scale. In Stage 3, a buyer either accepts the listed price or does not. Listing prices skew toward premiums, while sold prices concentrate on the market price (Fig.~\ref{fig:1}B, bottom). The other primary predictor entering all three stages is each seller's reputation score, constructed as the first principal component of two public eBay feedback indicators (feedback score and positive feedback percentage; Fig.~\ref{fig:1}C; see Methods). The HBM converged well for all three stages ($\hat{R} \leq 1.013$ across all 38 parameters). Fig.~\ref{fig:2}A displays the posterior densities for the key parameters (see table~S1, fig.~S5, and table~S2 for convergence diagnostics, model fit, and complete coefficient tables).
+
+First, in the signal-selection stage (Fig.~\ref{fig:2}A, top), we modeled sellers' choices with a multinomial logit. None served as the reference category, and reputation and item value were the primary predictors (see Methods for the full specifications). For reputation, higher-reputation sellers were more likely to choose Self but less likely to choose TP (reputation on Self: $+0.054$ [99\% highest density interval (HDI): $0.023$, $0.083$]; reputation on TP: $-0.052$ [$-0.092$, $-0.011$], see also Fig.~\ref{fig:2}B). For item value, sellers were more likely to choose TP for higher-value items but more likely to choose Self for lower-value items ($\log V$ on TP: $+0.505$ [$0.492$, $0.518$]; $\log V$ on Self: $-0.252$ [$-0.261$, $-0.242$]). As shown in the left panel of Fig.~\ref{fig:2}B, the reputation--value space split into two signal-dominant regions. Third-party grading prevailed in the high-value region, and self-grading dominated in the low-value region. More importantly, the boundary's market price increased with seller reputation. We confirmed this partition with a logistic boundary regression, finding a positive slope (median $\beta = 0.236$ at mean reputation, 99\% HDI: $[0.197, 0.274]$; a descriptive boundary agrees, fig.~S4).
+
+Second, in the price-setting stage (Fig.~\ref{fig:2}A, middle), reputation had a negligible main effect on listing prices ($+0.001$ [99\% HDI: $-0.008$, $0.009$]). Instead, reputation interacted strongly with signal type. The reputation $\times$ self-graded interaction was positive ($+0.063$ [$0.056$, $0.071$]), suggesting that reputation conferred credibility on self-graded listings and generated a corresponding price premium. By contrast, the reputation $\times$ TP grading interaction was negative ($-0.095$ [$-0.115$, $-0.077$]). TP credibility is derived from an external institution rather than the seller. Thus, although the absence of a positive effect is consistent with this prediction, the observed negative effect is not readily interpretable. We will discuss the possible interpretations in the Discussion section (see also figs.~S2 and S3).
+
+Third, in the purchase stage, the coefficient on the listing-price premium was negative ($-0.951$ [99\% HDI: $-0.969$, $-0.937$]), indicating that higher premiums (i.e., prices above the market) reduced the probability of sale, but reputation counteracted this effect ($+0.457$ [$0.419$, $0.497$]; Fig.~\ref{fig:2}A, bottom). Because only 13.7\% of listings resulted in a sale, listing-price coefficients alone do not capture the premiums actually realized on sold items. To recover these realized premiums while avoiding selection bias from analyzing only sold items, we combined the pricing and purchase models through posterior predictive simulation, yielding sold-conditional expected prices (Fig.~\ref{fig:2}C; see Methods for details). These simulated prices confirmed the reputation $\times$ signal type interaction estimated above. The average marginal effect of reputation on the log price ratio was positive for self-graded listings (AME $= +0.074$) and negative for TP-graded listings (AME $= -0.071$). A descriptive analysis of sold items also corroborated this pattern (fig.~S1; see table~S1 and fig.~S5 for the convergence diagnostics and model fit, and Methods for the simulation procedures).
+
+We have shown that reputation interacts with signal type in two distinct ways. First, the reputation--value space separates along a positively sloping boundary (Fig.~\ref{fig:2}B). Self-grading prevails at high reputation and low value, whereas TP grading prevails at low reputation and high value. Second, reputation amplifies the price premium of costless self-grading while lowering that of costly TP grading. In the following subsection, we discuss a signaling game that addresses these patterns.
+
+\subsection*{Signaling model analysis}
+
+\subsubsection*{Model setup}
+
+We formulate a signaling game in which the seller privately observes product quality and chooses among the three signals (Fig.~\ref{fig:3}). Nature draws a quality type $\theta \in \{H, L\}$ with prior probability $P(\theta = H) = \pi_0$. To the buyer, a high-quality item ($\theta = H$) has a value of $V > 0$, while a low-quality item ($\theta = L$) has a value of zero. For the sake of simplicity, we assume that the prior $\pi_0$ is independent of $V$. After observing $\theta$, the seller chooses a signal $s \in \{\text{TP}, \text{Self}, \text{None}\}$. Buyers observe both $s$ and the seller's public reputation $\rho \in [0, 1]$, a cumulative record of past feedback, and form a posterior belief $\hat{p}_s = P(\theta = H \mid s, \rho)$ that the item is high-quality. Under the fixed-price format, in which the seller posts a price, we assume that buyers accept the listed price if it does not exceed the item's expected value $\hat{p}_s V$. Therefore, the equilibrium price for signal $s$ is $\hat{p}_s V$. When the seller sends no signal ($s = \text{None}$), the posterior reduces to the prior $\pi_0$, and the equilibrium price is the baseline $\pi_0 V$. We characterize the perfect Bayesian equilibria (PBE) of the model and apply the D1 criterion \citep{ChoKreps1987, BanksSobel1987, ChoSobel1990} where multiple equilibria arise (see Methods for details).
+
+\begin{table}[t!]
+\centering
+\caption{Parameters of the theoretical model.}
+\label{tab:1}
+\fontsize{6}{7.2}\selectfont
+\begin{tabular}[t]{lp{4.2cm}l}
+\toprule
+\fontsize{7}{8.4}\selectfont Symbol & \fontsize{7}{8.4}\selectfont Description & \fontsize{7}{8.4}\selectfont Value / Range\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\fontsize{7}{8.4}\selectfont \textbf{Model parameters}}\\
+\hspace{1em}$\theta$ & Product quality type & $\{H, L\}$\\
+\hspace{1em}$s$ & Seller's signal choice & $\{\text{TP}, \text{Self}, \text{None}\}$\\
+\hspace{1em}$\hat{p}_s$ & Buyer's posterior; $P(\theta{=}H \mid s, \rho)$ & $[0,\, 1]$\\
+\hspace{1em}$\pi_0$ & Prior $P(\theta{=}H)$ & 0.3\\
+\hspace{1em}$\phi$ & Penalty coefficient for detected fraud & 0.5\\
+\hspace{1em}$c_{\text{TP}}$ & Cost of third-party authentication & 0.2\\
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\fontsize{7}{8.4}\selectfont \textbf{State variables}}\\
+\hspace{1em}$\rho$ & Seller reputation & $[0,\, 1]$\\
+\hspace{1em}$V$ & Item value ($V_L{=}0$ normalized) & $\mathbb{R}_+$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t!]
+\centering
+\includegraphics{figures/Figure_3.pdf}
+\caption{Extensive-form game tree of the seller signaling model. Nature assigns seller type $H$ (high quality) with probability $\pi_0$ or $L$ (low quality) with probability $1 - \pi_0$. $H$-type sellers choose among three signals: TP-graded (third-party certification at cost $c_{\text{TP}}$; buyers' posterior $\hat{p}_{\text{TP}} = 1$; the seller's payoff is $V - c_{\text{TP}}$), Self-graded (no cost; reputation unaffected; buyers' posterior $\hat{p}_{\text{Self}}$; payoff $\hat{p}_{\text{Self}} V$), or None (no cost; buyers' posterior $\hat{p}_{\text{None}} = \pi_0$; payoff $\pi_0 V$). $L$-type sellers choose between Self-graded (no cost; reputational damage $\phi\rho$ upon detection; payoff $\hat{p}_{\text{Self}} V - \phi\rho$) and None (no cost; payoff $\pi_0 V$). Dashed curves denote buyer information sets: $I_{\text{Self}}$ includes the two Self-graded nodes, and $I_{\text{None}}$ includes the two None nodes (i.e., based on the signal alone, the buyer cannot distinguish $H$ from $L$). TP-graded is available only to $H$-type sellers, so its node stands alone. The tree shows Stage 1 of Fig.~\ref{fig:1}; the equilibrium price $\hat{p}_s V$ carries Stages 2 and 3.}
+\label{fig:3}
+\end{figure}
+
+\subsubsection*{Trust through self-claim and reputation}
+
+Consider first the use of self-grading. This signal is available to both high- and low-quality sellers and requires no immediate financial costs. However, these two types face asymmetric consequences. When an $H$-type seller self-grades, the claim is accurate and the seller's reputation is unaffected. When an $L$-type seller self-grades, the claim is dishonest and triggers buyers' negative feedback after the transaction. This damages the seller's reputation, leading to a future payoff loss of $\phi\rho$, where $\phi > 0$ scales the loss with the seller's current reputation $\rho$.
+
+Due to this asymmetry in the consequences of self-grading, we can derive a condition under which $H$-type sellers choose Self and $L$-type sellers choose None, with incentive-compatible strategies and Bayes-consistent buyer beliefs (i.e., a separating PBE). The $L$-type seller's expected payoff is $\pi_0 V$ when choosing None and $V - \phi\rho$ when choosing Self. Therefore, the $L$-type seller chooses None as long as $\pi_0 V > V - \phi\rho$, which can be rearranged to
+
+\begin{equation}
+V < \frac{\phi}{1-\pi_0}\,\rho \equiv \bar{V}(\rho).
+\label{eq:vbar}
+\end{equation}
+As the slope $\phi/(1-\pi_0)$ is strictly positive, $\bar{V}(\rho)$ is an increasing linear function of $\rho$, which appears as the positively sloping line in Fig.~\ref{fig:4}. The blue region below this line corresponds to the Self-separating equilibrium. Intuitively, the reputation-collateral bound $\bar{V}(\rho)$ measures the maximum value sustainable by reputation alone. A seller with a higher reputation has more to lose from misrepresentation, and self-grading becomes credible for higher-value items. Reputation effectively sustains the credibility of the signal where institutional certification would otherwise be needed.
+
+\subsubsection*{Trust through institutional certification}
+
+When the item value $V$ exceeds $\bar{V}(\rho)$, the deception gain outweighs the reputation collateral, and self-grading supports at most a semi-separating outcome. $L$-type sellers then choose Self dishonestly with positive probability, and a self-claim is only partially credible (see Methods). Buyers can still trust third-party certification. Because $L$-type items cannot pass third-party authentication, observing TP perfectly identifies the item as high-quality, and this credibility owes nothing to the seller's reputation. The certifying institution charges a fixed cost $c_{\text{TP}}$, which is borne by $H$-type sellers (see text~S7 for value-dependent fees). For the $H$-type, the TP payoff must be at least the None payoff, $V - c_{\text{TP}} \geq \pi_0 V$, which requires
+
+\begin{equation}
+V \geq \frac{c_{\text{TP}}}{1-\pi_0} \equiv \underline{V}.
+\label{eq:vunderline}
+\end{equation}
+As $c_{\text{TP}}$ does not depend on $\rho$, this bound is the same at every reputation level. Reaching it makes certification viable, in the sense that a TP-separating equilibrium exists, but it does not yet make TP grading the $H$-type's preferred signal. Above $\bar{V}(\rho)$, a partially credible self-claim pays the $H$-type $\pi_0 V + \phi\rho$ rather than $\pi_0 V$, and certification overtakes this payoff only when $V - c_{\text{TP}} > \pi_0 V + \phi\rho$, equivalent to $V > \bar{V}(\rho) + \underline{V}$ (see Methods for the equilibrium selection). This certification boundary is the reputation-collateral bound shifted upward by $\underline{V}$, so the two boundaries in Fig.~\ref{fig:4} are parallel and enclose a band of vertical width $\underline{V}$. Above the certification boundary, $H$-type sellers choose TP, and $L$-type sellers, unable to pass authentication, choose None. Full separation is restored, now resting on an institutional ex-ante cost rather than a reputational ex-post penalty.
+
+\subsubsection*{Regime structure and empirical correspondence}
+
+\begin{figure}[t!]
+\centering
+\includegraphics{figures/Figure_4.pdf}
+\caption{Three-regime sorting in the reputation--value space. The map (left) partitions the $(\rho, V)$ space, where $\rho$ is seller reputation and $V$ is item value, into three regimes, colored categorically. Below the lower boundary $\bar{V}(\rho)$ (Eq.~\ref{eq:vbar}) lies the Self regime (blue), in which self-grading fully separates the types. Above the upper boundary $\bar{V}(\rho) + \underline{V}$ lies the TP regime (red), in which the $H$-type prefers TP grading. Between the two parallel boundaries lies the Semi-separating regime (gray), a band of vertical width $\underline{V}$ (Eq.~\ref{eq:vunderline}). The right panel shows the same space with item value cut at $\bar{V}(1) + \underline{V}$, colored by the buyer's belief in a self-claim, $P(H \mid \text{Self})$. The belief is $1$ throughout the Self regime and rises with reputation as $\pi_0 + \phi\rho/V$ across the Semi-separating band. Above the band, Self is off the equilibrium path and is left blank. Baseline parameters: $\pi_0 = 0.3$, $\phi = 0.5$, $c_{\text{TP}} = 0.2$.}
+\label{fig:4}
+\end{figure}
+
+\begin{figure}[b!]
+\centering
+\includegraphics{figures/Figure_5.pdf}
+\caption{Empirical TP-graded certification rates across reputation and market price. Discrete $5 \times 5$ heatmap of the third-party certification ratio $P(\text{TP} \mid \text{graded})$, the share of TP-graded listings among all graded listings, across seller reputation quintiles (columns, $\rho$) and ungraded market price quintiles (rows, $V$). Each cell reports the TP-graded proportion and the sample sizes ($n_{\text{TP}}/n_{\text{total}}$, in thousands, rounded to the nearest hundred). The diverging color scale is centered on the marginal TP rate, with red for above (TP-dominant) and blue for below (Self-dominant).}
+\label{fig:5}
+\end{figure}
+
+The two boundaries partition the $(\rho, V)$ space into three regimes (Fig.~\ref{fig:4}), each corresponding to a different way of producing trust. In the Self regime, reputation alone sustains honest self-claims, and the institution is not used. In the Semi-separating regime, reputation still constrains self-claims but only in part; self-claims are discounted, and no signal fully separates the types. In the TP regime, the institution replaces reputation as the source of credibility.
+
+The theoretical regime structure generates a testable prediction. The certification boundary $\bar{V}(\rho) + \underline{V}$ is positively sloping in $(\rho, V)$ space, as $\bar{V}(\rho)$ increases with reputation. This prediction matches the regime map estimated from the HBM (Fig.~\ref{fig:2}B), in which the empirical boundary between Self-dominant and TP-dominant signal choices exhibits a similar positive slope. This pattern is further corroborated by the discrete heatmap in Fig.~\ref{fig:5}, which partitions the data into reputation--value quintile cells and shows the TP share among graded listings (see fig.~S6 for the marginal decompositions along each axis). Third-party grading peaks in the low-reputation, high-value corner, while self-grading escalates sharply as reputation increases and value decreases.
+
+While the three regimes describe which signal sellers use, the pricing interaction in Fig.~\ref{fig:2}C arises within the Semi-separating regime. In the Self regime, self-grading separates the types fully, so the buyer's posterior belief that a self-graded item is high-quality is $\hat{p}_{\text{Self}} = 1$, independent of reputation (Fig.~\ref{fig:4}, right). In the Semi-separating regime, low-quality sellers mix between a dishonest self-claim (payoff $\hat{p}_{\text{Self}}V - \phi\rho$) and None (payoff $\pi_0 V$), and their indifference between the two pins this belief at $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$ (see Methods; text~S7). The belief increases in reputation, $\partial\hat{p}_{\text{Self}}/\partial\rho = \phi/V > 0$, because higher reputation partially deters misrepresentation. The right panel shows this increase across the band. Because the equilibrium price equals $\hat{p}_{\text{Self}}\,V$, the gradient accounts for the positive reputation $\times$ self-graded interaction. TP grading, by contrast, derives its credibility from an external institution rather than the seller, so $\hat{p}_{\text{TP}} = 1$ for all $\rho$ and $\partial\hat{p}_{\text{TP}}/\partial\rho = 0$, predicting no reputation $\times$ TP grading interaction (see Discussion for interpretations of the observed negative interaction).
+
+Taken together, the signaling model recovers the equilibrium structure underlying our empirical analysis, reproducing the regime map (Fig.~\ref{fig:2}B) and the positive reputation $\times$ self-graded interaction (Fig.~\ref{fig:2}C) from a single asymmetry in signal costs.
+
+\subsection*{Reputation dynamics}
+
+The regimes above take reputation as given. Because reputation is built by past trade, we next let it evolve, and buyers form the posterior $\hat{p}$ anew each period from it. Within each period, buyers and sellers play the static equilibrium of the preceding section at the current reputation; across periods, reputation changes. Quality is drawn per listing, so a share $\pi_0$ of a seller's listings is high quality. We assume that $H$-type trade raises reputation and that $L$-type misrepresentation lowers it by the same amount, so a single rate $\alpha$ governs both directional changes. Honest trades of high-quality cards raise the reputation score at the rate $\pi_0\alpha$.
+
+Consider a seller for whom certification is unavailable, facing items of value $V$, so that self-grading is the only quality signal. Because the $L$-type mixing probability is pinned by the indifference condition, the two forces reduce to a single equation for how $\rho$ changes (see Methods). The resulting equation has a single interior rest point that is unstable (Fig.~\ref{fig:6}A). Below it, misrepresentation is frequent enough that reputation falls to zero and stays there, a low-trust trap. Above it, misrepresentation is rare enough that reputation grows until self-grading separates the types. The long-run outcome is therefore set by the initial reputation rather than by the parameters alone. The rest point exists when high-quality listings are the minority, $\pi_0 < 1/2$ (see Methods for the exact condition).
+
+Certification enables an escape from this trap (Fig.~\ref{fig:6}B). When the item value exceeds $\bar{V}(\rho) + \underline{V}$, TP grading is available to $H$-type sellers but is not a viable option for $L$-type sellers, who choose None, so no misrepresentation occurs. This matters most when the $H$-type's reputation is low. TP grading allows low-reputation $H$-type sellers to distinguish themselves from low-reputation $L$-type sellers (compare the left side of Fig.~\ref{fig:6}B with that of Fig.~\ref{fig:6}A). Reputation therefore accumulates at the full rate $\pi_0\alpha$ even when it is low, covering the range in which reputation alone cannot sustain credible self-grading. Above the switching reputation at which self-grading becomes the $H$-type's preferred signal, misrepresentation resumes and the accumulation rate drops. Whether that drop stalls reputation depends on the certification cost, and when that cost is small enough, reputation accumulates at every level and no trap forms (Methods). Certification is thus not only a static substitute for reputation in a single transaction. It can also build the reputation that later makes self-claims credible.
+
+\begin{figure}[t!]
+\centering
+\includegraphics{figures/Figure_6.pdf}
+\caption{Reputation dynamics under the two trust mechanisms. \textbf{(A)} Reputation only. \textbf{(B)} Reputation and institution. The top strip locates the slice in the $(\rho, V)$ plane (blue, Self; gray, Semi-separating; red, TP). Certification is unavailable in (A), so no TP regime arises; (B) reproduces the partition of Fig.~\ref{fig:4}. Below it is the phase line $f(\rho) = \dot{\rho}$ for the seller's reputation (see Methods). On the zero line, an open circle marks the unstable rest point, and arrows give the direction of motion. The filled circle at $\rho = 0$ marks the absorbing boundary. Shading marks the interval on which reputation erodes. In \textbf{(B)} the accumulation rate falls discontinuously at the reputation $\rho_s$ at which $H$-type sellers switch from certification to self-grading. Where the slice leaves the gray band in the top strip, the full rate is restored. Baseline parameters: $\pi_0 = 0.3$, $\phi = 0.5$, $c_{\text{TP}} = 0.2$. Both panels are drawn at $V = 0.50$.}
+\label{fig:6}
+\end{figure}
+
+\section*{Discussion}
+
+Our analyses show that reputation and third-party certification operate as complementary sources of trust, each grounded in a distinct form of costly signaling. Reputation amplifies the pricing benefit of self-grading, a self-claimed cheap-talk signal, but not that of TP grading (Fig.~\ref{fig:2}C). The signaling game posits two mechanisms that account for this pattern. Reputation collateral renders self-grading credible through the reputational cost of misrepresentation. Institutional verification renders TP grading credible owing to an immediate monetary cost of certification, which is independent of seller reputation. Thus, the two mechanisms share a common, costly-signaling structure operating at different temporal stages. Reputation imposes an ex-post penalty for misrepresentation, while certification imposes an ex-ante monetary cost \citep[see][for this distinction in political science]{Quek2021}. The two mechanisms partition the reputation--value space into three equilibrium regimes, matching the empirical regions (Fig.~\ref{fig:2}B). The seller's reputation and the item's value endogenously and jointly determine which source of trust resolves the information asymmetry.
+
+\subsection*{Substitution and complementarity of trust mechanisms}
+
+While the regime-level account captures a broad pattern of signal use, the empirical pricing interaction admits a closer behavioral interpretation. In the model, TP credibility is independent of seller reputation, and a high reputation renders TP grading informationally redundant. Both implications predict no reputation $\times$ TP grading interaction. Thus, the observed reputation $\times$ TP grading interaction (Fig.~\ref{fig:2}C) cannot be fully captured by the signaling game model and warrants closer scrutiny. We interpret this as a strategic pricing adjustment by high-reputation sellers (see figs.~S2 and S3 for the full analysis). Their TP listings show declining conditional pricing margins (fig.~S3B), which are offset by increasing sale probabilities (fig.~S2B), leaving expected margin comparable across reputation (fig.~S3D). In other words, low-reputation TP sellers sell a few items at high margins, while high-reputation TP sellers sell many at low margins. Prior research has documented a similar substitution between reputation and institutional verification \citep{HuiSaeediShenSundaresan2016}. Either reputation or TP grading alone is sufficient to support credibility and a price premium but at different price ranges, making the two functionally substitutable in pricing terms.
+
+Consistent with this substitution view, prior trust theory has classified mechanisms as informal versus formal and treated them as substitutes \citep{Zucker1986, Kollock1999, Cook2009, CookHardinLevi2005}. Our analysis replaces this dichotomy with three regimes of trust production. For low-value items, reputation produces trust on its own; for high-value items, the institution produces it; in between, reputation produces it only in part. The two boundaries differ in kind. At the certification boundary, $\bar{V}(\rho) + \underline{V}$ (Eqs.~\ref{eq:vbar} and \ref{eq:vunderline}), $H$-type sellers switch from a self-claim to certification, so one mechanism replaces the other. At the reputation-collateral bound, $\bar{V}(\rho)$, the self-claim is merely discounted, and the $H$-type keeps using it. Substitution is therefore confined to a single boundary. Market-wide, the three regimes are complements. Together they extend credible exchange across a wider range of sellers and items than any one could alone \citep{JinLeslie2009, Bai2025}. Thus, complementarity is coverage across regimes, not joint use within a single transaction.
+
+This partition follows from the qualitative form of the two cost mechanisms, not from the specific parameter values assigned to them. The three regimes arise for any positive reputational penalty and certification cost, with the parameters shifting only their boundaries (see texts~S6 and S7 for comparative statics). Therefore, the logic can extend beyond trading cards to any exchange that pairs a reputational ex-post penalty with an institutional ex-ante cost. The penalty need not take the form of a feedback score. In the Maghribi traders' coalition, it operated through collective ostracism \citep{Greif1993, Greif1994}. The ex-ante cost, in turn, need not take the form of a per-item certification fee. In the nineteenth-century United States, where migration had eroded reputation-based trust, it took the form of professional credentials purchased from certifying institutions \citep{Zucker1986}. Wherever quality is uncertain and these two forms of enforcement coexist, the same reputation--value partition should govern which mechanism sustains trust.
+
+\subsection*{The scalability of trust}
+
+The underlying mechanisms of self-grading and TP grading can be found in biological signaling research. TP grading is associated with ex-ante cost asymmetry, which is the core idea of Zahavi's \cite{Zahavi1975} handicap principle. Ex-post cost signaling has been documented in research on social insects and primates, showing that signals carrying little or no production cost remain honest when receivers impose costs on deceptive signalers \citep{TibbettsDale2004, Silk2000, TibbettsIzzo2010}, a mechanism in which honesty rests on the ex-post cost of cheating rather than on signal production cost \citep{Hurd1995, Lachmann2001, Szamado2011}. Self-grading in our model parallels this logic, with the zero-cost signal becoming credible through the reputational penalty for misrepresentation. However, biological enforcement relies on direct dyadic interaction, confining the mechanism to small groups. Online reputation systems overcome this scale limitation by aggregating past evaluations into public scores and converting dyadic enforcement into informational infrastructure that operates across millions of anonymous participants. Thus, online reputation emerges as a social technology that renders cheap talk credible at scale, with direct implications for platform design \citep{Tchernichovski2019}.
+
+We draw several direct implications for platform governance. The reputation-collateral bound $\bar{V}(\rho)$ increases with the penalty coefficient $\phi$, a parameter that platforms control through monitoring intensity, feedback protection, and negative feedback visibility \citep{Tadelis2016, BoltonGreinerOckenfels2013}. A stronger $\phi$ expands the Self regime (Fig.~\ref{fig:4}), enabling more sellers to establish credibility through reputation alone. eBay's persistent public scores and feedback protection guarantees exemplify such an investment, supporting the wide Self regime observed in our data. Even when platform investment in $\phi$ is high, reputation collateral has structural limits. The dynamic analysis in Results suggests that, without certification, sellers with a thin feedback record cannot cross the threshold above which reputation can grow toward credibility, so a reputation system leaves a barrier to entry. However, TP grading can open an escape path, along which sellers move from certification to reputation-based credibility. This aligns with prior evidence that quality certification is most valuable for sellers who lack an established reputation \citep{ElfenbeinFismanMcManus2015, DewallyEderington2006}. The model therefore implies a developmental view of trust, and understanding both mechanisms is central to effective platform governance.
+
+\subsection*{Limitations and future directions}
+
+Our findings should be interpreted in light of several limitations. First, the design is cross-sectional. It limits causal identification, particularly for the channels underlying the negative reputation $\times$ TP grading interaction discussed above; disentangling them would require exogenous variation in signal availability. It also leaves the reputation dynamics untested. The low-trust trap and the escape path provided by certification remain implications of the model, and tracing them would require longitudinal records of individual sellers. Second, the empirical setting is a single collectibles market with a mature TP grading infrastructure. Whether the same complementarity pattern holds in markets with different cost structures, such as the eBay Motors used-car market in which voluntary seller disclosure functions in the absence of a comparable TP grading service \citep{Lewis2011}, remains an open question. Finally, the sample covers only the US market. Cross-cultural comparison offers a promising direction for future work, particularly between the US and Japanese online markets. In these markets, the structural contrast between institutional enforcement and reputation-based assurance \citep{Yamagishi2011} echoes the private--public order distinction \citep{Greif1993, Greif1994, GreifTabellini2017, GreifMokyrTabellini2025} and may yield distinct equilibrium configurations.
+
+\section*{Materials and Methods}
+\begingroup\sffamily\small\noindent
+
+\subsection*{Data and variables}
+
+We analyzed fixed-price (Buy It Now) listings of Pokémon trading cards on the eBay US marketplace, collected via the eBay API between June 1 and December 15, 2025. Although listings were restricted to the US marketplace on the buyer side, sellers participated internationally: 59.1\% of listings from the United States, 20.3\% from Japan, and the remaining 20.6\% from 67 countries. Each listed price was matched to an external market reference price from the PriceCharting REST API (\url{https://www.pricecharting.com/}), a publicly available price-tracking service for the trading card market, and the log price ratio was computed as the log of the listed-to-market price ratio. After removing outliers from the distribution of log price ratios using the interquartile range method (text~S2), the final sample comprised $N = 960{,}029$ listings from 60{,}386 unique sellers. This study was approved by the ethics committee of the Graduate School of Humanities and Sociology, University of Tokyo (UTSP-25004, May 21, 2025). As the study used only publicly available marketplace data with no direct interaction with human participants, informed consent was not required.
+
+The analyses involved three sets of variables: an outcome measure, signal categories, and seller reputation. (i) The outcome variable is the log price ratio $\log(P_i / V_i)$, where $P_i$ is the observed listing price and $V_i$ is the market reference price from PriceCharting. For TP-graded items, the grade-specific market price was used as $V_i$, so that the ratio captures pricing relative to the market price of an item with specific grading. As the market price fluctuates from day to day, we used the market price on the date of sale for sold items. For unsold listings, we used the most recent available market price at data collection as an approximation of the market price during the listing window to ensure that the ratio reflected the current market condition. For Japanese-language cards, we used a separate set of market prices in PriceCharting to account for language-specific market conditions. (ii) We distinguished between three signaling strategies: TP grading, self-grading, and none of these. Items in the TP-graded category (3.8\% of the listings) were authenticated and graded by the Professional Sports Authenticator (PSA), which assigns grades on a 10-point scale from PSA 1 (Poor) to PSA 10 (Gem Mint), at a per-card fee paid by the seller. As cards graded below PSA 7 rarely circulate in the secondary market, we restricted the TP-graded category to listings displaying PSA 7 (Near Mint) or higher as a proxy for high-grade certified items. For the cards in the self-graded category (33.3\% of the listings), sellers attached condition descriptors (e.g., ``gem mint,'' ``near mint'') to the items at no cost without obtaining PSA certification. These listings were identified through hierarchical regular-expression matching (see text~S2 for the classification algorithm). The remaining listings were associated with no quality signal (None; 62.9\% of the listings). (iii) We constructed a seller reputation score from two eBay feedback metrics: the positive feedback percentage (the share of ratings that are positive) and the feedback score (net count of positive minus negative ratings). The percentage was logit-transformed and the score was log-transformed ($\log(\text{score} + 1)$); both were standardized before the PCA. The first principal component (78.5\% of the variance) served as the reputation score. Additional control variables included a Japanese-card indicator, a return-acceptance policy, and listing duration. Throughout the analyses, log denotes the natural logarithm.
+
+\subsection*{Hierarchical Bayesian model}
+
+We specified a hierarchical Bayesian model with three simultaneous equations: a multinomial logit for signal selection (TP-graded, self-graded, or None, with None as the reference category), a normal linear equation for the log price ratio, and a Bernoulli logit for purchase outcomes. Correlated seller-level random effects linked the three equations. In the signal-selection equation, item value was operationalized as the log of the ungraded reference price for all listings, including TP-graded items, on the assumption that the ungraded price serves as an exogenous factor in the signal choice. The equation also includes a reputation $\times$ item value interaction. We included additional covariates selectively, namely the Japanese-card indicator in all three equations, return-acceptance policy in the pricing and purchase equations, and log listing duration in the purchase equation only. We fitted the model in Stan using the No-U-Turn Sampler with eight chains, each run for 1,000 post-warmup iterations and thinned by a factor of two, for a total of 4,000 posterior draws (see texts~S3 and S4 for the complete specification and table~S1 for convergence diagnostics).
+
+As only 13.7\% of the listings resulted in a sale, the observed transaction prices were subject to selection bias. To address this, we used the posterior draws from the Stan estimation to compute sold-conditional expected prices through posterior predictive simulation. For each signal type $k$ and reputation score, we integrated the predicted prices over the empirical covariate distribution, yielding $E[\text{price} \mid \text{rep}, \text{cert} = k, \text{sold} = 1]$. We drew 100,000 covariate vectors from the empirical distribution and combined them with 4,000 posterior draws, for a total of $4 \times 10^{8}$ simulations per signal type. We computed the AMEs of reputation as the numerical derivatives of these predictions with respect to the reputation score, averaged over the empirical distribution of reputation.
+
+\subsection*{Signaling game}
+
+We formulate a signaling game that formalizes how the two trust mechanisms interact. A seller privately observes product quality $\theta \in \{H, L\}$, where $P(\theta = H) = \pi_0$, and chooses a signal $s \in \{\text{TP}, \text{Self}, \text{None}\}$. Buyers observe $s$ and the seller's publicly available reputation $\rho \in [0, 1]$ (corresponding to the reputation composite defined above), and form a posterior belief $\hat{p}_s = P(H \mid s, \rho)$. We assumed that buyers were risk neutral and willing to pay up to their expected value of the item. Under the fixed-price format, the seller posts a take-it-or-leave-it price, and a buyer purchases the item whenever the posted price does not exceed the buyer's expected value. Empirically, listing prices skew toward high price premiums, while sold prices concentrate near the market price (Fig.~\ref{fig:1}B), consistent with this posted-price structure. The seller therefore posts the highest price a buyer will accept, so the equilibrium price for signal $s$ is $\hat{p}_s V$, where $V > 0$ is the full-information value of a high-quality item (a low-quality item has value zero). The signal None is treated as choosing the third option, namely listing an item without claiming any quality. It trades at the exogenous outside-option price $\pi_0 V$, independent of the seller's signal choice (see text~S5 for the formal statement). Formally, the signaling cost $c(s, \theta, \rho)$ takes the following values across seller types and signals:
+
+\begin{equation*}
+c(s, \theta, \rho) = \begin{cases} c_{\text{TP}} & \text{if } s = \text{TP},\; \theta = H \\ +\infty & \text{if } s = \text{TP},\; \theta = L \\ 0 & \text{if } s = \text{Self},\; \theta = H \\ \phi\rho & \text{if } s = \text{Self},\; \theta = L \\ 0 & \text{if } s = \text{None} \end{cases}
+\end{equation*}
+where $c_{\text{TP}} > 0$ is the certification cost (ex-ante cost) and $\phi > 0$ is the penalty coefficient, which determines the penalty for dishonest self-grading, $\phi\rho$, the reputational cost. This is an ex-post cost because dishonest self-grading, once detected, triggers negative feedback, reducing the seller's reputation and diminishing future payoffs. Therefore, sellers with greater reputational capital face a stronger deterrent. The key asymmetry is that $L$-type sellers cannot obtain third-party certification ($c = +\infty$), while their self-grading cost scales with reputation rather than with $V$. The solution concept is the PBE. Each seller maximizes the expected payoff given beliefs, and beliefs on the equilibrium path satisfy Bayes' rule. When multiple PBE arise, we select among them with the D1 criterion \citep{ChoKreps1987, BanksSobel1987, ChoSobel1990}.
+
+We consider two candidate separating equilibria. In the \textit{Self-separating equilibrium}, $H$-type sellers choose Self and $L$-type sellers choose None. Bayes' rule gives the on-path beliefs $\hat{p}_{\text{Self}} = 1$ and $\hat{p}_{\text{None}} = \pi_0$, and the profile is a PBE if and only if $V \leq \bar{V}(\rho)$, the reputation-collateral bound (Eq.~\ref{eq:vbar}). In the \textit{TP-separating equilibrium}, $H$-type sellers choose TP and $L$-type sellers choose None. Because $L$-type sellers cannot obtain certification, Bayes' rule gives $\hat{p}_{\text{TP}} = 1$, and the profile is a PBE if and only if the TP payoff $V - c_{\text{TP}}$ is at least the None payoff $\pi_0 V$, equivalent to $V \geq \underline{V}$ (Eq.~\ref{eq:vunderline}). For $V > \bar{V}(\rho)$, the Self-separating equilibrium does not exist, and the remaining candidates are the TP-separating equilibrium and a semi-separating profile in which $H$-type sellers choose Self while $L$-type sellers mix between Self and None. No other profile, including pooling on None, is an equilibrium under D1 (text~S7).
+
+In the TP-separating equilibrium, Self is off the equilibrium path, Bayes' rule does not determine the belief $\hat{p}_{\text{Self}}^{\text{off}}$, and multiple PBE arise. For each type, the set of beliefs under which a deviation to Self improves on the equilibrium payoff is an interval with upper endpoint one whenever it is nonempty, because signaling costs do not depend on the buyer's posterior and both deviation payoffs increase in the belief with the common slope $V$. The intervals begin at $\bar{p}_H = 1 - c_{\text{TP}}/V$ for the $H$-type and $\bar{p}_L = \pi_0 + \phi\rho/V$ for the $L$-type, so the D1 comparison reduces to the ordering of the two thresholds (text~S7). When $\bar{p}_L > \bar{p}_H$, the criterion sets $\hat{p}_{\text{Self}}^{\text{off}} = 1$. When $\bar{p}_H > \bar{p}_L$, it sets $\hat{p}_{\text{Self}}^{\text{off}} = 0$. The thresholds are equal at $V = (c_{\text{TP}} + \phi\rho)/(1 - \pi_0) = \bar{V}(\rho) + \underline{V}$, the certification boundary. Because $\bar{p}_H$ increases in $V$ while $\bar{p}_L$ decreases, $\bar{p}_L > \bar{p}_H$ holds exactly for $V$ below this boundary.
+
+Under the assigned beliefs, the TP-separating equilibrium survives only above the certification boundary. Below it, the belief $\hat{p}_{\text{Self}}^{\text{off}} = 1$ makes the deviation to Self profitable for the $H$-type. In the semi-separating profile, the $L$-type's indifference between Self and None, $\hat{p}_{\text{Self}} V - \phi\rho = \pi_0 V$, pins the on-path belief at $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$, which lies strictly below one for $V > \bar{V}(\rho)$, so a self-claim is only partially credible. This profile exists exactly for $\bar{V}(\rho) \leq V \leq \bar{V}(\rho) + \underline{V}$. The equilibrium is therefore Self-separating for $V < \bar{V}(\rho)$, semi-separating between the two boundaries, and TP-separating above the certification boundary, and it is unique off the boundaries (text~S7). The two parallel boundaries partition the $(\rho, V)$ space into the Self, Semi-separating, and TP regimes described in Results (Fig.~\ref{fig:4}). The baseline parameter values are $\pi_0 = 0.3$, $\phi = 0.5$, and $c_{\text{TP}} = 0.2$ (Table~\ref{tab:1} and text~S9; see text~S6 for comparative statics).
+
+\subsection*{Reputation dynamics}
+
+Consider a seller for whom certification is unavailable, so that Self and None are the only signals. The certification boundary comes from the $H$-type deviation to TP, so for this seller the semi-separating equilibrium holds at every $V > \bar{V}(\rho)$. In that equilibrium, $H$-type sellers choose Self, and $L$-type sellers choose Self with the probability $\sigma_L(\rho)$ that keeps them indifferent between Self and None. Substituting the on-path belief $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$ into Bayes' rule gives
+\begin{equation*}
+\sigma_L(\rho) = \frac{\pi_0\,(1 - \pi_0 - \phi\rho/V)}{(1 - \pi_0)(\pi_0 + \phi\rho/V)} .
+\end{equation*}
+
+Fixing the item value $V$ leaves a single equation for $\rho$. Trade on the $H$-type share $\pi_0$ of the seller's listings raises reputation. On the remaining share, misrepresentation occurs with probability $\sigma_L(\rho)$ and lowers it by the same amount, while listings that carry no claim leave it unchanged, so a single rate $\alpha > 0$ governs both directions. The law of motion is therefore
+\begin{equation*}
+\dot{\rho} = \alpha\,[\,\pi_0 - (1 - \pi_0)\,\sigma_L(\rho)\,] .
+\end{equation*}
+
+The law of motion has at most one interior rest point, $\rho^{*} = V(1/2 - \pi_0)/\phi$, and that rest point is unstable (see text~S8 for the derivation and the stability analysis). It is interior when high-quality listings are the minority, $\pi_0 < 1/2$, and when $V(1/2 - \pi_0) < \phi$. At the baseline values the second condition is slack, so the minority condition alone decides whether the rest point exists. Absent certification, reputation starting below $\rho^{*}$ is absorbed at $\rho = 0$.
+
+With certification available, the $H$-type chooses TP below the switching reputation $\rho_s = [(1 - \pi_0)V - c_{\text{TP}}]/\phi$, which is interior exactly for $\underline{V} < V < (\phi + c_{\text{TP}})/(1 - \pi_0)$, and below it reputation grows at the full rate $\pi_0\alpha$. At $\rho_s$ misrepresentation resumes and the accumulation rate falls. Whether that drop stalls reputation turns only on the sign of $V - 2c_{\text{TP}}$ (text~S8). When $V > 2c_{\text{TP}}$ reputation accumulates at every level and no trap forms. When $V < 2c_{\text{TP}}$ the rest point lies above the switch. Reputation below $\rho^{*}$ then converges on $\rho_s$ from either side, so the trap is the switch itself rather than a rest point of the law of motion. Reputation above $\rho^{*}$ recovers the full rate.
+
+\endgroup
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\section*{Acknowledgments}
+We thank Hirokazu Hatta for valuable discussions and advice throughout this project. We thank Kiyoshi Izumi and the members of his laboratory for their helpful comments. We also thank the participants in our laboratory seminar for their feedback. We thank Scribendi (\url{https://www.scribendi.com/}) for English-language editing.
+
+\noindent\textbf{Funding:} This work was supported by a Grant-in-Aid for JSPS Fellows (JSPS KAKENHI Grant Number JP25KJ0080 to Y.K.) and a Grant-in-Aid for Transformative Research Areas (A) (MEXT KAKENHI Grant Number 24H02200 to Y.O.).
+
+\noindent\textbf{Author contributions:} Y.K. and Y.O. designed research; Y.K. performed research and analyzed data; and Y.K. and Y.O. wrote the paper.
+
+\noindent\textbf{Competing interests:} The authors declare that they have no competing interests.
+
+\noindent\textbf{Data and materials availability:} The processed data and all analysis code needed to reproduce the figures are available at the Open Science Framework (\url{https://doi.org/10.17605/OSF.IO/6HJFK}). Raw listing data were obtained from the eBay API and raw market-price data from the PriceCharting API; under the respective platform terms of service, the authors are not permitted to redistribute these raw data. A full description of the data-collection procedure is provided in text~S1, to enable independent re-collection.
+
+\clearpage
+\appendix
+\setcounter{figure}{0}\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{table}{0}\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{equation}{0}\renewcommand{\theequation}{S\arabic{equation}}
+\setcounter{section}{0}
+\section*{Supplementary Materials}
+\bigskip
+\noindent\textbf{Organization of these Supplementary Materials:}
+\begin{enumerate}[nosep,leftmargin=2em]
+\item \textbf{Supplementary Text} (pp.~\pageref{sec:si-methods}--\pageref{sec:si-methods-end}) --- Empirical Methods (S1 to S4) covers the data pipeline, variable construction, the full HBM specification, and MCMC sampling. Theoretical Model (S5 to S9) covers the model assumptions, the Self-separating, semi-separating, and TP-separating equilibrium derivations with D1 refinement, and a numerical illustration.
+\item \textbf{Supplementary Results} (pp.~\pageref{sec:si-results-top}--\pageref{sec:si-results-end}) --- Descriptive price analysis (fig.~S1), seller volume (fig.~S2), revenue and margin analysis (fig.~S3), the continuous regime boundary in reputation--value space (fig.~S4), MCMC convergence diagnostics (table~S1), model fit (fig.~S5), full coefficient estimates (table~S2), and signal composition (fig.~S6).
+\end{enumerate}
+
+\clearpage
+
+\SItext
+
+\section{Empirical Methods}\label{sec:si-empirical}
+
+\subsection{Data Pipeline}\label{subsec:emp-A}
+
+Transaction data were collected daily from the eBay US marketplace using the Browse API (v1). Market reference prices were obtained daily from the PriceCharting REST API, which supplies historical card prices by grade. These two sources were combined to compute the price premium variable defined in \ref{subsec:emp-B}.
+
+Collection spanned 198 days (June 1 -- December 15, 2025) and was restricted to the Pokémon trading card category. All transactions were filtered to the US marketplace on the buyer side, ensuring consistency in shipping costs and transaction conditions. Sellers participated internationally, spanning 69 countries: the United States accounted for 59.1\% of transactions, Japan for 20.3\%, Canada for 6.7\%, the United Kingdom for 6.2\%, Australia for 4.4\%, France for 1.6\%, and 63 additional countries for a combined 1.7\%.
+
+Raw transactions were processed through a pipeline that extracts card metadata from listing titles and matches each listing to PriceCharting market prices via a hierarchical algorithm keyed on card name, number, set, and grade.
+
+\subsection{Variable Construction}\label{subsec:emp-B}
+
+\subsubsection{Price premium}
+
+The price premium is operationalized as the log ratio of the observed transaction price to the market reference price:
+
+\begin{equation}
+\widetilde{p}_i = \log(P_i / V_i) \label{eq:s1}
+\end{equation}
+
+where $P_i$ is the observed price in USD and $V_i$ is the PriceCharting market reference price for the corresponding card-grade combination. For sold items, $V_i$ is the market price at the date of sale; for listed (unsold) items, $V_i$ is the most recent market price. The log form yields a symmetric distribution centered near zero, with positive values indicating a premium over the market reference and negative values indicating a discount.
+
+Outliers were identified using the interquartile range (IQR) method applied to the log price ratio distribution, excluding observations below $Q_1 - 1.5 \times \mathrm{IQR}$ or above $Q_3 + 1.5 \times \mathrm{IQR}$. This standard Tukey method excluded 23,421 observations (2.3\%), reducing the sample from 1,018,321 to 994,900. Restriction to complete cases produced the analysis sample of $N = 960{,}029$.
+
+\subsubsection{Seller reputation score}
+
+eBay provides two seller reputation metrics: the Feedback Score (positive ratings minus negative ratings, cumulative over the seller's transaction history) and the Positive Feedback Percentage (positive ratings divided by total ratings over the preceding 12 months, range 0--100\%). We constructed a composite reputation score using principal component analysis (PCA): (i) item-level data were aggregated to seller-level means for the feedback percentage and the feedback score; (ii) logit and log transformations were applied to address ceiling effects and skewness, respectively; (iii) z-score standardization was applied, and the first principal component was extracted as the composite reputation score.
+
+The resulting PCA composite explained 78.5\% of the variance, yielding a final distribution with $M = 0.013$ and $SD = 1.188$ in the analysis sample ($N_{\text{sellers}} = 60{,}386$). The two input metrics differed in distribution: the Positive Feedback Percentage averaged 86.3\% ($SD = 33.6\%$); the Feedback Score ranged from $-3$ to 672,427, with the 23 sellers (0.04\%) holding negative scores set to zero before the log transform, and exhibited a bimodal distribution on the log scale.
+
+\subsubsection{Certification category}
+
+Sellers choose among three certification strategies: None (no quality signal; 62.9\% of listings), Self-graded (self-claimed condition description; 33.3\%), and TP-graded (third-party certification; 3.8\%).
+
+This study focuses on cards certified by Professional Sports Authenticator (PSA), the largest third-party (TP) grading service for Pokémon trading cards by transaction volume. Self-graded items are ungraded listings whose titles contain condition descriptors equivalent to PSA grade levels. PSA grades in the analysis sample comprise 10 (Gem Mint: virtually flawless card with perfect centering), 9 (Mint: minor imperfection upon close inspection), 8 (Near Mint--Mint: slight wear visible on surface or edges), and 7 (Near Mint: visible surface or edge wear). The criteria for centering, surface condition, and corner sharpness become stricter at higher grades. Detection uses a hierarchical regular-expression matching algorithm that processes tokens from most specific to most general. For example, ``Gem Mint'' is matched before ``Mint'' using negative lookahead to prevent the broader term from capturing the more specific descriptor.
+
+\subsubsection{Control variables}
+
+The model specification includes three control variables: (i) a binary indicator for Japanese-language cards (36.5\%); (ii) a binary indicator for whether returns are accepted (48.8\%); and (iii) the number of days since listing creation ($M = 258.6$, $SD = 355.2$). These variables control for card-level heterogeneity, seller listing behavior, and duration effects on unsold listings.
+
+\subsection{Full HBM Specification}\label{subsec:emp-C}
+
+The hierarchical Bayesian model, fitted to the analysis sample constructed in \ref{subsec:emp-B}, comprises three simultaneously estimated equations with correlated seller-level random effects. The signal selection equation (Eqs.~S2--S3) models certification choice (None, Self-graded, TP-graded) as a multinomial logit. The price equation (Eqs.~S4--S5) models the log price ratio as normal. The sold equation (Eqs.~S6--S7) models the binary sale outcome as Bernoulli with a logit link. Simultaneous estimation with correlated random effects (Eq.~S8) accounts for the seller's endogenous choice of signal and for selection bias in observed prices.
+
+The signal selection equation models certification choice as a multinomial logit (Eq.~S2):
+
+\begin{equation}
+P(\text{cert}_i = k) = \frac{\exp(\eta_i^{(k)})}{\sum_{k'} \exp(\eta_i^{(k')})} \label{eq:s2}
+\end{equation}
+
+with $\eta_i^{(\text{None})} = 0$ as the reference category. For $k \in \{\text{Self-graded}, \text{TP-graded}\}$, the linear predictor is specified as (Eq.~S3):
+
+\begin{equation}
+\eta_i^{(k)} = \alpha^{(k)} + \gamma_\rho^{(k)} \cdot \text{rep}_j + \delta^{(k)} \cdot \log(V_i^{\text{ung}}) + \psi^{(k)} \cdot \text{rep}_j \cdot \log(V_i^{\text{ung}}) + \zeta^{(k)} \cdot \text{JP}_i + \lambda^{(k)} \cdot u_j^{signal} \label{eq:s3}
+\end{equation}
+
+Here, $\text{rep}_j$ is the seller reputation score, $\log V_i^{\text{ung}}$ is the log ungraded market price, distinct from the grade-specific $V_i$ of \ref{subsec:emp-B}, $\text{rep}_j \cdot \log V_i^{\text{ung}}$ is their interaction, $\text{JP}_i$ is a Japanese-card indicator, and $u_j^{signal}$ is a seller random effect with factor loadings $\lambda^{\text{Self}} = 1$ (fixed) and $\lambda^{\text{TP}}$ (estimated).
+
+The log price ratio follows a normal distribution (Eq.~S4):
+
+\begin{equation}
+\log(P_i / V_i) \sim \mathcal{N}(\mu_i^{price}, \sigma_{price}^2) \label{eq:s4}
+\end{equation}
+
+with the conditional mean specified in Eq.~S5:
+
+\begin{equation}
+\mu_i^{price} = \alpha^{price} + \mathbf{X}_i^{price} \boldsymbol{\beta}^{price} + \beta_{signal}^{\text{Self}} \cdot \mathbf{1}_{\text{Self}} + \beta_{signal}^{\text{TP}} \cdot \mathbf{1}_{\text{TP}} + u_j^{price} \label{eq:s5}
+\end{equation}
+
+The design matrix $\mathbf{X}^{price}$ contains five covariates: (1) seller reputation score, (2) Japanese-card indicator, (3) reputation $\times$ self-graded, (4) reputation $\times$ TP grading, and (5) returns-accepted indicator. The interaction coefficients $\beta_3$ and $\beta_4$ are the parameters of primary interest; their posterior estimates are reported in Table~\ref{tab:coef}.
+
+The binary sale outcome follows a Bernoulli distribution with a logit link (Eq.~S6):
+
+\begin{equation}
+\text{sold}_i \sim \text{Bernoulli}(\text{logit}^{-1}(\eta_i^{sold})) \label{eq:s6}
+\end{equation}
+
+with the linear predictor specified in Eq.~S7:
+
+\begin{equation}
+\eta_i^{sold} = \alpha^{sold} + \mathbf{X}_i^{sold} \boldsymbol{\beta}^{sold} + u_j^{sold} \label{eq:s7}
+\end{equation}
+
+The design matrix $\mathbf{X}^{sold}$ contains nine covariates: (1) seller reputation score, (2) self-graded indicator, (3) TP-graded indicator, (4) Japanese-card indicator, (5) returns-accepted indicator, (6) log price ratio, (7) log listing duration, (8) reputation $\times$ self-graded, and (9) reputation $\times$ TP grading.
+
+A non-centered parameterization of the three-dimensional correlated random effects improves MCMC sampling efficiency for the large seller population in the analysis sample ($N_{\text{sellers}} = 60{,}386$). The seller-level random vector is specified as (Eq.~S8):
+
+\begin{equation}
+\mathbf{u}_j = \begin{pmatrix} u_j^{price} \\ u_j^{sold} \\ u_j^{signal} \end{pmatrix} = L \cdot \mathbf{z}_j, \quad \mathbf{z}_j \sim \mathcal{N}(\mathbf{0}, I_3) \label{eq:s8}
+\end{equation}
+
+where $L = \text{diag}(\boldsymbol{\sigma}_u) \cdot L_\Omega$ is the Cholesky factor of the covariance matrix, $\boldsymbol{\sigma}_u$ contains the standard deviations, and $L_\Omega$ is the Cholesky factor of the correlation matrix.
+
+All parameters receive weakly informative priors. For the signal selection equation: intercepts $\alpha^{(k)} \sim \mathcal{N}(0, 2)$; slope coefficients $\gamma_\rho^{(k)}, \delta^{(k)}, \zeta^{(k)} \sim \mathcal{N}(0, 1)$; interaction coefficients $\psi^{(k)} \sim \mathcal{N}(0, 0.5)$; and the TP factor loading $\lambda^{\text{TP}} \sim \mathcal{N}(1, 1)$. For the price equation: intercept $\alpha^{price} \sim \mathcal{N}(0, 2)$; slope coefficients $\boldsymbol{\beta}^{price} \sim \mathcal{N}(0, 2)$ ($K = 5$ vector); signal intercepts $\beta_{signal}^{\text{Self}}, \beta_{signal}^{\text{TP}} \sim \mathcal{N}(0, 1)$; and residual standard deviation $\sigma_{price} \sim \text{Exponential}(1)$. For the sold equation: intercept $\alpha^{sold} \sim \mathcal{N}(0, 2)$ and slope coefficients $\boldsymbol{\beta}^{sold} \sim \mathcal{N}(0, 2)$ ($K = 9$ vector). For the random effects: latent vector $\mathbf{z}_j \sim \mathcal{N}(\mathbf{0}, I_3)$; standard deviations $\sigma_u \sim \text{Exponential}(1)$ (three elements); and the Cholesky factor of the correlation matrix $L_\Omega \sim \text{LKJ}(2)$.
+
+\subsection{MCMC Sampling}\label{subsec:emp-D}
+
+The model was estimated via Hamiltonian Monte Carlo (HMC) using the No-U-Turn Sampler (NUTS), implemented in Stan. Eight parallel chains were run with 4,000 total posterior draws. Across all 38 parameters $\hat{R}$ was at most $1.013$ and bulk ESS at least $221$, both extremes occurring for the random-effects correlation $\Omega_{23}$. Full convergence diagnostics and model fit evaluation are reported in table~\ref{tab:convergence} and fig.~\ref{fig:S5}.
+
+\FloatBarrier
+\clearpage
+\section{Theoretical Model}\label{sec:si-theory}
+
+\subsection{Model Assumptions}\label{subsec:th-A}
+
+The model is a signaling game between a seller (Sender) and a pool of buyers (Receivers), in which the seller privately observes product quality and chooses a signal $s \in \{\text{TP}, \text{Self}, \text{None}\}$ before buyers form beliefs and set prices. Six assumptions define the environment; subsequent sections derive equilibria from these primitives.
+
+\begin{assumption}[Quality and item value]
+Product quality is binary, $\theta \in \{H, L\}$, with corresponding item values $v(H) = V > 0$ and $v(L) = 0$. The prior probability of high quality is $P(\theta = H) = \pi_0 \in (0, 1)$.
+\end{assumption}
+
+\begin{assumption}[Information structure]
+The seller's type $\theta$ is private information. The seller's reputation $\rho$ is publicly observable. Buyers observe the signal--reputation pair $(s, \rho)$ and form posterior beliefs $\hat{p}_s$.
+\end{assumption}
+
+\begin{assumption}[Cost structure]
+Signaling costs depend on seller type and reputation (Eq.~\ref{eq:s10}):
+\begin{equation}
+c(s, \theta, \rho) = \begin{cases} c_{\text{TP}} & s = \text{TP},\ \theta = H \\ +\infty & s = \text{TP},\ \theta = L \\ 0 & s = \text{Self},\ \theta = H \\ \phi\rho & s = \text{Self},\ \theta = L \\ 0 & s = \text{None} \end{cases} \label{eq:s10}
+\end{equation}
+where $c_{\text{TP}} > 0$ is the TP grading cost, $\phi > 0$ is the penalty coefficient for detected misrepresentation, and $\rho \in [0,1]$ is the seller's reputation, based on cumulative transaction history.
+
+The cost matrix (Eq.~\ref{eq:s10}) embodies four implicit assumptions: $L$-types cannot pass TP grading (row 2), truthful $H$-Self is costless (row 3), fraudulent $L$-Self triggers a reputation-proportional penalty $\phi\rho$ (row 4), and detection is certain ($q = 1$). Under imperfect detection ($q < 1$), the reputation-collateral bound $\bar{V}(\rho)$ derived in \ref{subsec:th-B} scales by $q$; the regime partition and comparative statics are otherwise unchanged.
+\end{assumption}
+
+\begin{assumption}[Outside option for None]
+The signal $\text{None}$ denotes non-participation in the signaling game. It trades at the exogenous outside-option price $\pi_0 V$ and is not subject to Bayesian updating.
+\end{assumption}
+
+\begin{assumption}[Bertrand-competitive buyers]
+Buyers are risk-neutral and bid up to their expected value. Given signal $s$ and reputation $\rho$, buyers form a posterior belief $\hat{p}_s = P(H \mid s, \rho)$, and Bertrand competition yields the equilibrium price $p(s, \rho) = \hat{p}_s V$ for $s \in \{\text{TP}, \text{Self}\}$. The price at None is exogenous (Assumption 4).
+\end{assumption}
+
+\begin{assumption}[Seller payoff]
+The seller's payoff is the received price minus the signaling cost (Eq.~\ref{eq:s9}):
+\begin{equation}
+\Pi_{\text{seller}}(\theta, s, \rho) = p(s, \rho) - c(s, \theta, \rho) \label{eq:s9}
+\end{equation}
+The seller is risk-neutral and the payoff is linear in price and cost.
+\end{assumption}
+
+\subsubsection*{General payoff structure}
+
+Assumptions 1--6 yield the following seller payoffs: (i) $H \to \text{TP}$: $\hat{p}_{\text{TP}} V - c_{\text{TP}}$ (grading cost); (ii) $L \to \text{TP}$: infeasible; (iii) $H \to \text{Self}$: $\hat{p}_{\text{Self}} V$ (zero cost); (iv) $L \to \text{Self}$: $\hat{p}_{\text{Self}} V - \phi\rho$ (reputation penalty); (v) $H \to \text{None}$: $\pi_0 V$ (exogenous outside-option price); (vi) $L \to \text{None}$: $\pi_0 V$ (exogenous outside-option price). The belief $\hat{p}_{\text{TP}} = 1$ follows directly from Assumption 3 (TP is infeasible for $L$-types), while $\hat{p}_{\text{Self}}$ is determined within the model in equilibrium (\ref{subsec:th-B}).
+
+\subsubsection*{Solution concept}
+
+\begin{definition}[Strategy]
+A seller's strategy is a mapping from type and reputation to a probability distribution over signals:
+\[\sigma: \Theta \times [0, 1] \to \Delta(S)\]
+where $\Theta = \{H, L\}$ is the type space, $S = \{\text{TP}, \text{Self}, \text{None}\}$ the signal set, and $\Delta(S)$ the set of probability distributions over $S$.
+\end{definition}
+
+\begin{definition}[Belief System]
+The buyer's belief system maps observed signal--reputation pairs to a posterior probability of high quality:
+\[\hat{p}: S \times [0, 1] \to [0, 1], \quad \hat{p}(s, \rho) = P(H \mid s, \rho)\]
+\end{definition}
+
+\begin{definition}[Equilibrium]
+A strategy--belief pair $(\sigma^*, \hat{p}^*)$ constitutes an equilibrium if two conditions hold simultaneously:
+
+(i) \textit{Sequential rationality}: for each $(\theta, \rho)$,
+\[\sigma^*(\theta, \rho) \in \arg\max_{s \in S} \left[ p(s, \rho) - c(s, \theta, \rho) \right]\]
+where the price $p(s, \rho)$ is the one Assumptions 4 and 5 assign to the belief $\hat{p}^*(s, \rho)$.
+
+(ii) \textit{Bayes consistency}: beliefs at Self and TP satisfy Bayes' rule whenever those signals are on the equilibrium path. Because None is an exogenous outside option, it is not subject to Bayesian updating.
+\end{definition}
+
+\begin{definition}[Information Sets]
+Buyer information sets have the following structure:
+
+$I_{\text{TP}}$ is a singleton with $\hat{p}_{\text{TP}} = 1$ (certainly $H$); $I_{\text{Self}}$ may contain both types, so $\hat{p}_{\text{Self}} \in [0, 1]$; and $I_{\text{None}}$ carries the prior, $\hat{p}_{\text{None}} = \pi_0$.
+
+The singleton structure of $I_{\text{TP}}$ follows from Assumption 3 ($L$-type sellers cannot pass TP grading). The posterior at $I_{\text{None}}$ equals the prior because None is an exogenous outside option (Assumption 4). The posterior at $I_{\text{Self}}$ is determined endogenously in equilibrium.
+\end{definition}
+
+The remaining belief parameter $\hat{p}_{\text{Self}}$ is determined endogenously via Bayes' rule; \ref{subsec:th-B} derives it for the first candidate equilibrium.
+
+\subsubsection*{Scope of the primitives}
+
+Two simplifications in the primitives above limit the scope of the model's predictions. The binary type space $\{H, L\}$ restricts posterior beliefs in separating equilibria to the endpoints $0$ and $1$, whereas the empirical data show a continuous relationship between reputation and the credibility of Self, which would require a continuous type space to represent fully. The reputation penalty $\phi\rho$ is assumed independent of item value $V$, whereas fraud involving high-value items may in practice inflict greater reputational damage. Neither relaxation changes the direction of the comparative statics derived below.
+
+\subsection{Self-Separating Equilibrium}\label{subsec:th-B}
+
+The general payoff structure in \ref{subsec:th-A} leaves $\hat{p}_{\text{Self}}$ as an endogenous unknown. Here, we show that the candidate profile in which $H$-type sellers choose Self and $L$-type sellers choose None constitutes a Perfect Bayesian Equilibrium (PBE) whenever $V < \bar{V}(\rho)$, and we derive $\bar{V}(\rho)$ from the binding $L$-type incentive constraint.
+
+\subsubsection*{Equilibrium candidate}
+
+We conjecture a fully separating strategy profile in which $H$-type sellers choose Self and $L$-type sellers choose None:
+\[\sigma^*(H, \rho) = \text{Self}, \quad \sigma^*(L, \rho) = \text{None}\]
+
+This conjecture is motivated by the cost asymmetry in Assumption 3: $H$-type sellers face no cost for Self, while $L$-type sellers bear a reputation penalty of $\phi\rho$. The incentive-compatibility (IC) conditions below confirm when this profile constitutes an equilibrium.
+
+\subsubsection*{Equilibrium beliefs}
+
+Because only $H$-type sellers choose Self on the equilibrium path, Bayes' rule yields:
+\[\hat{p}_{\text{Self}} = P(H \mid \text{Self}) = \frac{\pi_0 \cdot 1}{\pi_0 \cdot 1 + (1 - \pi_0) \cdot 0} = 1\]
+
+For TP, Assumption 3 implies $\hat{p}_{\text{TP}} = 1$ (structural). None remains at $\pi_0$.
+
+\subsubsection*{Equilibrium payoffs}
+
+With beliefs now determined, substituting $\hat{p}_{\text{Self}} = 1$ and $\hat{p}_{\text{TP}} = 1$ into the general payoff structure (see \ref{subsec:th-A}) yields the following payoffs. On the equilibrium path, $H \to \text{Self}$ yields $V$ and $L \to \text{None}$ yields $\pi_0 V$. Off-path deviations give: $L \to \text{Self}$: $V - \phi\rho$; $H \to \text{None}$: $\pi_0 V$; $H \to \text{TP}$: $V - c_{\text{TP}}$.
+
+\subsubsection*{Incentive compatibility conditions}
+
+\textbf{$H$-type IC.}
+
+(a) Self $\succ$ None:
+\[\Pi_H(\text{Self}) > \Pi_H(\text{None}) \iff V > \pi_0 V \iff \pi_0 < 1\]
+
+This holds for all $\pi_0 \in (0, 1)$.
+
+(b) Self $\succ$ TP:
+\[\Pi_H(\text{Self}) > \Pi_H(\text{TP}) \iff V > V - c_{\text{TP}} \iff c_{\text{TP}} > 0\]
+
+This holds under Assumption 3.
+
+\textbf{$L$-type IC.} None $\succ$ Self:
+\[\Pi_L(\text{None}) > \Pi_L(\text{Self}) \iff \pi_0 V > V - \phi\rho \iff V(1 - \pi_0) < \phi\rho\]
+
+Solving for $V$ defines the reputation-collateral bound:
+\begin{equation}
+V < \frac{\phi}{1 - \pi_0}\,\rho \equiv \bar{V}(\rho) \label{eq:bar-V}
+\end{equation}
+
+The $H$-type IC conditions (a) and (b) hold unconditionally under Assumptions 1 and 3. The binding constraint is the $L$-type IC, which holds strictly for $V < \bar{V}(\rho)$, leaves the $L$-type indifferent at $V = \bar{V}(\rho)$, where None remains a best response, and fails for $V > \bar{V}(\rho)$, where the $L$-type deviates to Self. The equilibrium therefore exists exactly for $V \leq \bar{V}(\rho)$.
+
+\begin{definition}[Reputation-collateral bound]
+$\bar{V}(\rho) = \frac{\phi}{1-\pi_0}\,\rho$ is the maximum item value at which a seller with reputation $\rho$ can sustain credible self-grading through reputation collateral alone. The slope $\phi/(1-\pi_0)$ is the additional item value sustainable per unit of reputation. This bound corresponds to Eq.~1 in the main text.
+\end{definition}
+
+\begin{proposition}[Existence of the Self-separating equilibrium]\label{prop:self-existence}
+The separating equilibrium $(H \to \text{Self},\ L \to \text{None})$ exists if and only if $V \leq \bar{V}(\rho)$. At $V = \bar{V}(\rho)$ the $L$-type is indifferent between None and Self, and the profile coincides with the semi-separating equilibrium of \ref{subsec:th-C} at $\sigma_L = 0$.
+\end{proposition}
+
+Intuitively, $\bar{V}(\rho)$ measures the maximum item value sustainable by reputation collateral alone (see Fig.~4 for the linear boundary).
+
+\subsubsection*{Comparative statics}
+
+The reputation-collateral bound $\bar{V}(\rho)$ responds to model primitives as follows:
+\begin{align}
+\frac{\partial \bar{V}(\rho)}{\partial \rho}   &= \frac{\phi}{1 - \pi_0} > 0, \label{eq:dvbar-rho}\\
+\frac{\partial \bar{V}(\rho)}{\partial \phi}   &= \frac{\rho}{1 - \pi_0} > 0, \label{eq:dvbar-phi}\\
+\frac{\partial \bar{V}(\rho)}{\partial \pi_0}  &= \frac{\phi\rho}{(1 - \pi_0)^2} > 0. \label{eq:dvbar-pi0}
+\end{align}
+All three derivatives are positive: higher $\rho$ (Eq.~\ref{eq:dvbar-rho}), harsher penalty $\phi$ (Eq.~\ref{eq:dvbar-phi}), and higher prior $\pi_0$ (Eq.~\ref{eq:dvbar-pi0}) each expand the Self regime, because more reputation collateral, stronger sanctions, or a smaller deception rent $(1-\pi_0)V$ all raise the bound.
+
+The Self-separating equilibrium is therefore self-enforcing for $V < \bar{V}(\rho)$. For $V > \bar{V}(\rho)$ a self-claim is no longer fully credible, and \ref{subsec:th-C} derives the two equilibria that arise there, a semi-separating one in which a self-claim retains partial credibility and a TP-separating one at higher item values.
+
+\subsection{TP-Separating Equilibrium and Equilibrium Refinement}\label{subsec:th-C}
+
+In the Self-separating equilibrium (\ref{subsec:th-B}), Bayes' rule pins down the belief at Self whenever $V < \bar{V}(\rho)$, and Assumption 4 fixes the belief at None. When $V > \bar{V}(\rho)$, that equilibrium does not exist, and an alternative candidate uses TP grading as the quality signal. In this profile, Self becomes an off-path signal, introducing belief indeterminacy that must be resolved. This section derives the TP-separating and semi-separating equilibria and selects among candidate equilibria with the D1 criterion (28--30), which restricts off-path beliefs in cases where the Intuitive Criterion leaves them unrestricted.
+
+\subsubsection*{Equilibrium candidate}
+
+\[\sigma^*(H, \rho) = \text{TP}, \quad \sigma^*(L, \rho) = \text{None}\]
+
+Beliefs on the equilibrium path are structurally determined. Assumption 3 precludes $L$-type sellers from obtaining TP grading, so $\hat{p}_{\text{TP}} = 1$, and None remains at the prior $\pi_0$ (Assumption 4). Self is an off-path signal, since no seller chooses Self in this profile, and Bayes' rule cannot pin down what buyers should believe if Self were nevertheless observed. Under PBE, $\hat{p}_{\text{Self}}^{\text{off}} \in [0, 1]$ is unrestricted, and we resolve this indeterminacy below.
+
+\subsubsection*{Deviation thresholds}
+
+Whether a type gains from a deviation to Self depends on the off-path belief $\hat{p}_{\text{Self}}^{\text{off}}$. We express each type's deviation condition as a threshold on this belief.
+
+\textit{$H$-type deviation.} The equilibrium payoff under TP is $V - c_{\text{TP}}$. A deviation to Self yields $\hat{p}_{\text{Self}}^{\text{off}} V$. The $H$-type profits from the deviation when:
+\[\hat{p}_{\text{Self}}^{\text{off}} V > V - c_{\text{TP}} \iff \hat{p}_{\text{Self}}^{\text{off}} > 1 - \frac{c_{\text{TP}}}{V}\]
+
+Because $c_{\text{TP}} > 0$, the threshold $1 - c_{\text{TP}}/V$ lies below $1$, so sufficiently optimistic beliefs make the deviation profitable.
+
+\textit{$L$-type deviation.} The equilibrium payoff under None is $\pi_0 V$. A deviation to Self yields $\hat{p}_{\text{Self}}^{\text{off}} V - \phi\rho$. The $L$-type profits from the deviation when:
+\[\hat{p}_{\text{Self}}^{\text{off}} V > \pi_0 V + \phi\rho \iff \hat{p}_{\text{Self}}^{\text{off}} > \pi_0 + \frac{\phi\rho}{V}\]
+
+Write $\bar{p}_H = 1 - c_{\text{TP}}/V$ and $\bar{p}_L = \pi_0 + \phi\rho/V$ for the two thresholds.
+
+\begin{lemma}[Reduction to threshold comparison]\label{lem:threshold}
+Let Self be off the equilibrium path. The price offered by buyers is strictly increasing in the belief, off the equilibrium path as well as on it (Assumption 5), and signaling costs do not depend on the belief (Assumption 3). Type $\theta$'s payoff from a deviation to Self is therefore $\hat{p}_{\text{Self}}^{\text{off}} V - c(\text{Self}, \theta, \rho)$, affine in $\hat{p}_{\text{Self}}^{\text{off}}$ with slope $V > 0$. The set of beliefs under which type $\theta$ strictly gains from the deviation is the interval $D_\theta = (\bar{p}_\theta, 1] \cap [0, 1]$, and the set under which it is indifferent is $D^0_\theta = \{\bar{p}_\theta\} \cap [0, 1]$. Their union is the interval $[\bar{p}_\theta, 1]$ whenever nonempty, and $\bar{p}_H < 1$ because $c_{\text{TP}} > 0$, so $D_H$ is nonempty. Consequently $D_\theta \cup D^0_\theta \subsetneq D_{\theta'}$ holds if and only if $\bar{p}_\theta > \bar{p}_{\theta'}$.
+\end{lemma}
+
+If the cost of a signal varied with the transaction price, the two deviation payoffs would have different slopes in $\hat{p}_{\text{Self}}^{\text{off}}$, the sets $D_H$ and $D_L$ could intersect without either containing the other, and the comparison below would not reduce to the ordering of two thresholds.
+
+\subsubsection*{PBE existence}
+
+The $H$-type prefers TP to None when $V - c_{\text{TP}} > \pi_0 V$, that is, when
+\begin{equation}
+V > \frac{c_{\text{TP}}}{1 - \pi_0} \equiv \underline{V} \label{eq:underline-V}
+\end{equation}
+
+This bound involves no off-path belief. $\underline{V}$ is the minimum item value at which the quality premium $(1 - \pi_0)V$ covers the certification cost $c_{\text{TP}}$. It corresponds to Eq.~2 in the main text and does not depend on $\rho$. The credibility of TP grading rests on the grading institution rather than on the seller's reputation.
+
+No type gains from a deviation to Self when $\hat{p}_{\text{Self}}^{\text{off}} \leq \min(\bar{p}_H, \bar{p}_L)$. The TP-separating profile is therefore a PBE for every $V \geq \underline{V}$, supported by any off-path belief in this range.
+
+\subsubsection*{Refinement of the off-path belief}
+
+Self is the only signal to which the refinement applies. The belief at None is fixed at the prior $\pi_0$ (Assumption 4), and the belief at TP equals $1$ by feasibility (Assumption 3). The D1 criterion places zero probability on a type whose set of deviation-supporting beliefs is strictly contained in that of the other type. By Lemma~\ref{lem:threshold}, this comparison reduces to the ordering of $\bar{p}_H$ and $\bar{p}_L$.
+
+\begin{definition}[Refined off-path belief]\label{def:d1-belief}
+When $\bar{p}_L > \bar{p}_H$, every belief under which the $L$-type gains from a deviation to Self also lets the $H$-type gain strictly (Lemma~\ref{lem:threshold}), and the off-path belief is set to $\hat{p}_{\text{Self}}^{\text{off}} = 1$. When $\bar{p}_H > \bar{p}_L$, the reverse containment holds and the belief is set to $\hat{p}_{\text{Self}}^{\text{off}} = 0$. When $\bar{p}_H = \bar{p}_L$, the two sets coincide, no strict containment holds in either direction, and the belief is not restricted.
+\end{definition}
+
+The two thresholds are equal when $1 - c_{\text{TP}}/V = \pi_0 + \phi\rho/V$, that is, when $V = (c_{\text{TP}} + \phi\rho)/(1 - \pi_0) = \bar{V}(\rho) + \underline{V}$, the certification boundary. Because $\bar{p}_H$ increases in $V$ while $\bar{p}_L$ decreases in $V$, three cases cover the parameter space away from this value.
+
+\textit{(a) $V \leq \bar{V}(\rho)$.} Here $\bar{p}_L \geq 1$, so $D_L \cup D^0_L$ is empty or equals $\{1\}$, while $D_H$ is nonempty ($\bar{p}_H < 1$). The belief is set to $\hat{p}_{\text{Self}}^{\text{off}} = 1$. The $H$-type then receives $V$ from Self against $V - c_{\text{TP}}$ from TP, and the TP-separating profile is not an equilibrium.
+
+\textit{(b) $\bar{V}(\rho) < V < \bar{V}(\rho) + \underline{V}$.} Here $\bar{p}_H < \bar{p}_L < 1$, so $D_L \cup D^0_L = [\bar{p}_L, 1] \subsetneq (\bar{p}_H, 1] = D_H$. The belief is set to $\hat{p}_{\text{Self}}^{\text{off}} = 1$, the $H$-type receives $V > V - c_{\text{TP}}$, and the TP-separating profile is not an equilibrium.
+
+\textit{(c) $V > \bar{V}(\rho) + \underline{V}$.} Here $\bar{p}_L < \bar{p}_H$, so $D_H \cup D^0_H = [\bar{p}_H, 1] \subsetneq (\bar{p}_L, 1] = D_L$. The belief is set to $\hat{p}_{\text{Self}}^{\text{off}} = 0$. The $H$-type receives $0$ from Self against $V - c_{\text{TP}} > 0$ from TP, the $L$-type receives $-\phi\rho$ from Self against $\pi_0 V$ from None, and the TP-separating profile is an equilibrium.
+
+The reversal between (b) and (c) follows from the two cost structures. The $H$-type's gain from an unexpected self-claim is the certification cost $c_{\text{TP}}$, which does not vary with $V$. The $L$-type's gain from misrepresentation is proportional to $V$, while the collateral $\phi\rho$ does not vary with $V$. Below $\bar{V}(\rho) + \underline{V}$ the deviation threshold is lower for the $H$-type; above it, lower for the $L$-type.
+
+\begin{proposition}[Existence of the TP-separating equilibrium]\label{prop:tp-existence}
+The profile $(H \to \text{TP},\ L \to \text{None})$:
+(i) is a PBE if and only if $V \geq \underline{V}$, supported by any off-path belief $\hat{p}_{\text{Self}}^{\text{off}} \leq \min(\bar{p}_H, \bar{p}_L)$, with the $H$-type indifferent between TP and None at $V = \underline{V}$;
+(ii) satisfies the Intuitive Criterion if and only if, in addition, $V > \bar{V}(\rho)$;
+(iii) satisfies the D1 criterion if and only if $V > \bar{V}(\rho) + \underline{V}$.
+Since $\bar{V}(\rho) + \underline{V} > \max(\bar{V}(\rho), \underline{V})$ for every $\rho > 0$, (iii) implies (i) and (ii).
+\end{proposition}
+
+Part (i) restates the existence result above. Part (ii) holds because the $L$-type's maximal deviation payoff $V - \phi\rho$ falls below its equilibrium payoff $\pi_0 V$ exactly when $V < \bar{V}(\rho)$, in which case the deviation is attributed to the $H$-type and the profile fails; for $V > \bar{V}(\rho)$ neither type is excluded on these grounds. Part (iii) restates cases (a)--(c).
+
+\subsubsection*{The semi-separating equilibrium}
+
+\begin{proposition}[Semi-separating equilibrium]\label{prop:semisep}
+For $\bar{V}(\rho) \leq V \leq \bar{V}(\rho) + \underline{V}$, the profile in which $H$-type sellers choose Self and $L$-type sellers choose Self with probability $\sigma_L$ and None otherwise, with
+\[
+\sigma_L = \frac{\pi_0\,(1 - \pi_0 - y)}{(1 - \pi_0)(\pi_0 + y)}, \qquad y = \frac{\phi\rho}{V},
+\]
+and on-path belief $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$, is a PBE. The stated $\sigma_L$ lies in $[0, 1]$ throughout this range. For $\rho > 0$, the semi-separating profile is the unique equilibrium surviving the D1 criterion on the interior of the range.
+\end{proposition}
+
+\begin{proof}
+\textit{Existence.} The $L$-type indifference condition $\hat{p}_{\text{Self}} V - \phi\rho = \pi_0 V$ gives $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$, and Bayes' rule yields this belief at the stated $\sigma_L$ (the same expression as the mixing probability derived in Methods). $\sigma_L \geq 0$ holds if and only if $y \leq 1 - \pi_0$, that is, $V \geq \bar{V}(\rho)$; $\sigma_L \leq 1$ reduces to $\phi\rho/V \geq 0$ and always holds. The $H$-type receives $\pi_0 V + \phi\rho$ from Self and $\pi_0 V$ from None. The belief at TP equals $1$ (Assumption 3), so a deviation to TP pays $V - c_{\text{TP}}$, and
+\[
+\pi_0 V + \phi\rho \geq V - c_{\text{TP}} \iff V \leq \bar{V}(\rho) + \underline{V}.
+\]
+At $V = \bar{V}(\rho)$, $\sigma_L = 0$ and the profile coincides with the Self-separating equilibrium; at $V = \bar{V}(\rho) + \underline{V}$, $\sigma_L > 0$ and the $H$-type payoffs from Self and TP are equal.
+
+\textit{Uniqueness.} The remaining profiles fail on the interior of the range. (i) The Self-separating profile requires $\pi_0 V \geq V - \phi\rho$ (Proposition~\ref{prop:self-existence}), which fails for $V > \bar{V}(\rho)$. (ii) The TP-separating profile fails the D1 criterion in this range, by case (b). (iii) Pooling on Self gives $\hat{p}_{\text{Self}} = \pi_0$ by Bayes' rule, under which the $L$-type receives $\pi_0 V - \phi\rho < \pi_0 V$ and prefers None for $\rho > 0$. (iv) Pooling on None, with both types receiving $\pi_0 V$, is a PBE for $V < \underline{V}$ under off-path beliefs $\hat{p}_{\text{Self}}^{\text{off}} \leq \pi_0$; the deviation thresholds at Self are $\pi_0$ for the $H$-type and $\pi_0 + \phi\rho/V$ for the $L$-type, so the containment argument of Lemma~\ref{lem:threshold} sets the belief to $1$ and the $H$-type deviates. This profile is not removed by weaker refinements, so uniqueness in the range $\bar{V}(\rho) < V < \underline{V}$ relies on the criterion adopted here. (v) Profiles in which the $H$-type mixes across signals, and profiles in which only the $L$-type sends Self, are excluded by Bayes' rule together with the $L$-type's participation condition.
+\end{proof}
+
+\begin{remark}[Payoff dominance]\label{rem:dominance}
+On the interior of the range $\bar{V}(\rho) < V < \bar{V}(\rho) + \underline{V}$, the $H$-type receives $\pi_0 V + \phi\rho > V - c_{\text{TP}}$ in the semi-separating equilibrium, the $L$-type receives $\pi_0 V$ in both profiles, and buyers earn zero expected surplus in either profile under Bertrand competition. The semi-separating equilibrium therefore weakly Pareto-dominates the TP-separating profile, strictly for the $H$-type. Belief-based refinement and payoff dominance select the same equilibrium.
+\end{remark}
+
+\begin{remark}[Robustness to Assumption 4]\label{rem:assumption3}
+Assumption 4 enters the refinement only through the $L$-type's equilibrium payoff $\pi_0 V$. In a variant in which None is subject to Bayesian updating, that payoff in the TP-separating profile is $0$, the threshold $\bar{p}_L$ becomes $\phi\rho/V$ while $\bar{p}_H$ is unchanged, and the range covered by case (b) becomes $\phi\rho < V < \phi\rho + c_{\text{TP}}$, of width $c_{\text{TP}}$. The case structure persists.
+\end{remark}
+
+\begin{remark}[Price at the certification boundary]\label{rem:pricejump}
+The price at which the $H$-type's item trades is discontinuous at the boundary $V = \bar{V}(\rho) + \underline{V}$, while the $H$-type's payoff is continuous there. Below the boundary the $H$-type sells under the belief $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$ at the price $\hat{p}_{\text{Self}} V = \pi_0 V + \phi\rho$, which equals $V - c_{\text{TP}}$ on the boundary. Above it the $H$-type certifies, the belief at TP equals one, and the item trades at the price $V$. The price therefore jumps upward by exactly $c_{\text{TP}}$. The $H$-type's payoff approaches $V - c_{\text{TP}}$ from both sides, and that continuity is what defines the boundary. The certification cost is thus passed through to buyers in the price, leaving the seller's net payoff unchanged across the boundary.
+\end{remark}
+
+\subsubsection*{Regime partition}
+
+\begin{corollary}[Regime partition]\label{cor:regimes}
+Propositions~\ref{prop:self-existence}, \ref{prop:tp-existence}, and~\ref{prop:semisep} together imply that the boundaries $\bar{V}(\rho)$ and $\bar{V}(\rho) + \underline{V}$ partition the $(\rho, V)$ space into three regimes:
+\begin{itemize}
+\item \textit{Self regime} ($V < \bar{V}(\rho)$): the Self-separating equilibrium $(H \to \text{Self},\ L \to \text{None})$;
+\item \textit{Semi-separating regime} ($\bar{V}(\rho) < V < \bar{V}(\rho) + \underline{V}$): a band of vertical width $\underline{V}$ in which $H$-type sellers choose Self, $L$-type sellers mix between Self and None, and the belief is $\hat{p}_{\text{Self}} = \pi_0 + \phi\rho/V$;
+\item \textit{TP regime} ($V > \bar{V}(\rho) + \underline{V}$): the TP-separating equilibrium $(H \to \text{TP},\ L \to \text{None})$.
+\end{itemize}
+The exclusion arguments (iii)--(v) in the proof of Proposition~\ref{prop:semisep} do not use the restriction of $V$ to the band, and Propositions~\ref{prop:self-existence} and~\ref{prop:semisep} together with cases (a)--(c) determine which of the three named profiles is an equilibrium in each regime. The equilibrium is therefore unique throughout each regime for $\rho > 0$. The existence statements of this section are to be read away from the boundary value $\bar{V}(\rho) + \underline{V}$, at which the $H$-type is indifferent between Self and TP and the adjacent profiles give that type equal payoffs (Remark~\ref{rem:pricejump}). The other two boundaries are covered by the propositions themselves.
+\end{corollary}
+
+\subsubsection*{Absence of certification}
+
+The regime partition presumes that certification is available. The reputation dynamics in Methods also consider a seller for whom it is not, and for that seller the Semi-separating regime is not closed from above. The certification boundary derives solely from the $H$-type's deviation to TP, the point at which certification overtakes the partially credible self-claim, through the $H$-type comparison in the existence proof of Proposition~\ref{prop:semisep}. A seller who cannot obtain certification does not face that comparison. The remaining exclusion arguments either do not involve TP or become vacuous without it, so for $\rho > 0$ the semi-separating profile is the unique equilibrium surviving the D1 criterion at every $V > \bar{V}(\rho)$. Methods analyzes the reputation dynamics generated by these regimes.
+
+\subsubsection*{Value-dependent certification cost}
+
+The certification cost $c_{\text{TP}}$ is assumed independent of item value, whereas grading services in practice charge a fee that rises with the appraised value of the card.
+
+\begin{remark}[Value-dependent grading fee]\label{rem:valuefee}
+The TP grading fee can include a value-proportional component, $c_{\text{TP}}(V) = c_0 + \tau V$ with $c_0 > 0$ and $0 < \tau < 1 - \pi_0$, so that the proportional part does not absorb the entire quality premium. Substituting into the $H$-type indifference condition replaces $\underline{V}$ by $c_0/(1 - \tau - \pi_0)$ and gives the upper boundary a slope of $\phi/(1 - \tau - \pi_0)$, steeper than the slope $\phi/(1 - \pi_0)$ of the lower boundary $\bar{V}(\rho)$, which does not involve the grading fee and is unchanged. The band therefore widens with reputation instead of keeping a constant width. The three regimes and the order of the two boundaries are unchanged. The main text adopts the fixed-fee approximation for parsimony.
+\end{remark}
+
+\subsection{Reputation Dynamics}\label{subsec:th-D}
+
+Methods states a law of motion for the seller's reputation and the
+properties of that law used in the main text. This section derives them,
+together with the finer structure of the certification switch, which is stated
+only here. Consider the seller introduced in the preceding subsection, for whom
+certification is unavailable, facing items of value $V$. Quality is drawn per
+listing, so a share $\pi_0$ of the seller's listings is high quality. On that
+share the $H$-type trades and reputation rises. On the remaining share
+the $L$-type self-claims with probability $\sigma_L(\rho)$, and each self-claim that misrepresents lowers it by the same amount, while listings that carry no claim leave it unchanged. A single rate
+$\alpha > 0$ therefore converts the net frequency of the two movements into a
+speed,
+\begin{equation}
+\dot{\rho} = \alpha\,[\,\pi_0 - (1 - \pi_0)\,\sigma_L(\rho)\,] ,
+\label{eq:si-motion}
+\end{equation}
+with $\sigma_L$ as in Proposition~\ref{prop:semisep}. We call
+$\alpha(1 - \pi_0)\sigma_L(\rho)$ the erosion term and $\pi_0\alpha$ the full
+rate. The rate $\alpha$ multiplies the whole right-hand side, so it fixes the
+unit of time and cancels from every rest point, every existence condition, and
+every comparison below. The penalty coefficient $\phi$ does not enter
+Eq.~\ref{eq:si-motion} as a separate term. It acts on the $L$-type through the
+indifference condition that pins $\sigma_L$, and so reaches reputation only through the argument $y = \phi\rho/V$.
+
+\begin{proposition}[Interior rest point]\label{prop:dyn-rest}
+Equation~\ref{eq:si-motion} has at most one rest point in $(0, 1)$. One exists
+if and only if $\pi_0 < 1/2$ and $V(1/2 - \pi_0) < \phi$, in which case it lies
+at $\rho^{*} = V(1/2 - \pi_0)/\phi$ and is unstable.
+\end{proposition}
+
+\begin{proof}
+\textit{Localization.} Outside the semi-separating range the $L$-type plays
+None, so $\sigma_L = 0$ and $\dot{\rho} = \pi_0\alpha > 0$. Every rest point
+therefore lies inside that range.
+
+\textit{Monotonicity.} Differentiating $\sigma_L$ gives
+$d\sigma_L/dy = -\pi_0/[(1 - \pi_0)(\pi_0 + y)^2] < 0$, and $y = \phi\rho/V$
+increases in $\rho$, so the right-hand side of Eq.~\ref{eq:si-motion} is
+strictly increasing in $\rho$ on the semi-separating range. It has at most one
+zero there and crosses that zero from below, so a rest point of
+Eq.~\ref{eq:si-motion} is unstable.
+
+\textit{Location.} A rest point requires $\sigma_L = \pi_0/(1 - \pi_0)$, that is
+$(1 - \pi_0 - y)/(\pi_0 + y) = 1$, so $y^{*} = 1/2 - \pi_0$ and
+$\rho^{*} = V y^{*}/\phi = V(1/2 - \pi_0)/\phi$.
+
+\textit{Interiority.} $\rho^{*} > 0$ if and only if $\pi_0 < 1/2$, and
+$\rho^{*} < 1$ if and only if $V(1/2 - \pi_0) < \phi$. The semi-separating range
+ends at $y = 1 - \pi_0$, and $y^{*} = 1/2 - \pi_0 < 1 - \pi_0$ holds for every
+$\pi_0 \in (0, 1)$, so the localization step never excludes $\rho^{*}$.
+\end{proof}
+
+At the baseline values of Table~1 the second condition reads
+$V < \phi/(1/2 - \pi_0) = 2.5$, which every item value shown in Figs.~4 and~6
+satisfies with room to spare. Over that range the minority condition alone
+decides whether the rest point exists.
+
+\begin{proposition}[Absorption at the floor]\label{prop:dyn-floor}
+Under the conditions of Proposition~\ref{prop:dyn-rest}, $\dot{\rho} < 0$
+throughout $[0, \rho^{*})$, so reputation starting below $\rho^{*}$ reaches
+$\rho = 0$ in finite time and remains there. The floor is not a rest point of
+Eq.~\ref{eq:si-motion}. At $\rho = 0$ a self-claim carries only the prior, so
+$\sigma_L = 1$ and $\dot{\rho} = \alpha(2\pi_0 - 1) < 0$. Reputation stops there
+because it is bounded below, not because the law of motion vanishes.
+\end{proposition}
+
+The right-hand side of Eq.~\ref{eq:si-motion} is strictly increasing on the
+semi-separating range and vanishes at $\rho^{*}$, so it is negative on
+$[0, \rho^{*})$ and bounded away from zero on any $[0, \rho_0]$ with
+$\rho_0 < \rho^{*}$. Setting $y = 0$ in $\sigma_L$ gives
+$\pi_0(1 - \pi_0)/[(1 - \pi_0)\pi_0] = 1$, whence the stated value at the floor.
+
+\begin{proposition}[The switch and the drop]\label{prop:dyn-switch}
+Suppose certification is available. The $H$-type chooses TP below the switching
+reputation
+\begin{equation}
+\rho_s = [(1 - \pi_0)V - c_{\text{TP}}]/\phi ,
+\label{eq:si-rho-s}
+\end{equation}
+and $\rho_s \in (0, 1)$ if and only if
+$\underline{V} < V < (\phi + c_{\text{TP}})/(1 - \pi_0)$. Below $\rho_s$ the $L$-type plays None and reputation grows at the full rate. At $\rho_s$ the
+growth rate falls by
+\begin{equation}
+\Delta = \frac{\pi_0\,\alpha\,c_{\text{TP}}}{V - c_{\text{TP}}} .
+\label{eq:si-drop}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\textit{Switch.} The certification boundary is
+$V = \bar{V}(\rho_s) + \underline{V} = [\phi\rho_s + c_{\text{TP}}]/(1 - \pi_0)$,
+which gives Eq.~\ref{eq:si-rho-s}. Then $\rho_s > 0$ if and only if
+$V > c_{\text{TP}}/(1 - \pi_0) = \underline{V}$, and $\rho_s < 1$ if and only if
+$(1 - \pi_0)V < \phi + c_{\text{TP}}$. Below the switch the static equilibrium
+is TP-separating, so $\sigma_L = 0$ and the erosion term vanishes.
+
+\textit{Drop.} At the switch,
+$y_s = \phi\rho_s/V = (1 - \pi_0) - c_{\text{TP}}/V < 1 - \pi_0$, so just above
+$\rho_s$ the $L$-type mixes at the semi-separating rate. Then
+$1 - \pi_0 - y_s = c_{\text{TP}}/V$ and $\pi_0 + y_s = (V - c_{\text{TP}})/V$.
+Substituting into $\sigma_L$ gives
+$\sigma_L(\rho_s) = \pi_0 c_{\text{TP}}/[(1 - \pi_0)(V - c_{\text{TP}})]$, and
+the erosion term $\alpha(1 - \pi_0)\sigma_L(\rho_s)$ equals
+Eq.~\ref{eq:si-drop}.
+\end{proof}
+
+\begin{lemma}[The Semi-separating band]\label{lem:dyn-band}
+The $L$-type mixes on the band $(\rho_s,\ \rho_s + c_{\text{TP}}/\phi)$ and
+plays None on either side of it. The erosion term is therefore positive
+throughout the band and zero outside it, and reputation grows at the full rate above the band as well as below the switch. A positive erosion term does not mean that reputation falls. Reputation falls only where the erosion term exceeds the full rate, which is a strict subinterval of the band whenever it is
+nonempty. Measured from the interior rest point, the two edges of the band lie
+at
+\begin{equation*}
+\rho_s - \rho^{*} = \frac{V - 2c_{\text{TP}}}{2\phi} ,
+\qquad
+\Big(\rho_s + \frac{c_{\text{TP}}}{\phi}\Big) - \rho^{*} = \frac{V}{2\phi} .
+\end{equation*}
+The upper distance is positive at every item value, so $\rho^{*}$ always lies
+below the top of the band. It lies above $\rho_s$ if and only if
+$V < 2c_{\text{TP}}$.
+\end{lemma}
+
+The band ends where $V = \bar{V}(\rho)$, at $\rho = (1 - \pi_0)V/\phi$.
+Subtracting $\rho^{*} = V(1/2 - \pi_0)/\phi$ from Eq.~\ref{eq:si-rho-s} gives
+$(V/2 - c_{\text{TP}})/\phi$, and subtracting it from that upper edge gives
+$V/(2\phi)$. The two distances differ by $c_{\text{TP}}/\phi$, which is
+therefore the width of the band. The upper distance is positive for $V > 0$, and
+the lower is positive exactly when $V > 2c_{\text{TP}}$.
+
+\begin{proposition}[Trap at the switch]\label{prop:dyn-trap}
+Suppose $\pi_0 < 1/2$ and a switch exists. If $V > 2c_{\text{TP}}$, reputation grows at every level and converges to $\rho = 1$. If $V < 2c_{\text{TP}}$
+and $V(1/2 - \pi_0) < \phi$, reputation below $\rho^{*}$ converges to $\rho_s$ and reputation above $\rho^{*}$ converges to $\rho = 1$. If $V < 2c_{\text{TP}}$ and
+$V(1/2 - \pi_0) \geq \phi$, reputation converges to $\rho_s$ from every starting point. In the last two
+cases the stall is at the discontinuity $\rho_s$, not at a zero of
+Eq.~\ref{eq:si-motion}, because the growth rate is the full rate just below the
+switch and is negative just above it.
+\end{proposition}
+
+\begin{proof}
+\textit{Signs.} Below the switch and above the band the rate is the full rate,
+by Proposition~\ref{prop:dyn-switch} and Lemma~\ref{lem:dyn-band}. Inside the
+band the right-hand side of Eq.~\ref{eq:si-motion} is strictly increasing with
+its unique zero at $\rho^{*}$, since the monotonicity step of
+Proposition~\ref{prop:dyn-rest} applies unchanged.
+
+\textit{Cases.} If $V > 2c_{\text{TP}}$, Lemma~\ref{lem:dyn-band} places that
+zero below the band, so reputation grows at every level. If
+$V < 2c_{\text{TP}}$, the same lemma places it above the switch. The right-hand
+side is then negative exactly on $(\rho_s, \rho^{*})$. Reputation there falls back to $\rho_s$, and reputation below $\rho_s$ rises to it at the full rate.
+
+\textit{Reachability.} When $\rho^{*} < 1$, reputation above it leaves the band and converges to $\rho = 1$. When $\rho^{*} \geq 1$, the lemma places the top of the
+band above $\rho^{*}$ and hence above one, so $(\rho_s, 1]$ lies inside the band
+and the right-hand side is negative throughout. Reputation then converges to $\rho_s$ from every starting point and no escape route exists in $[0, 1]$.
+\end{proof}
+
+Equivalently, the growth rate just above the switch is
+$\pi_0\alpha - \Delta = \pi_0\alpha\,(V - 2c_{\text{TP}})/(V - c_{\text{TP}})$,
+so the drop stalls reputation exactly when it exceeds the full rate.
+
+\subsubsection*{The continuous approximation}
+
+The dynamics above treat the reputation record as a continuous variable evolving deterministically. The record is in fact a count that advances one transaction at a time, so the differential equation is an approximation that improves with the number of recorded transactions. In our data a seller posts about 16 listings on average, a modest upper bound on that count, and Fig.~6 is therefore a qualitative illustration of the equilibrium structure rather than a calibrated trajectory.
+
+\subsection{Numerical Illustration}\label{subsec:th-E}
+
+The theoretical analysis in \ref{subsec:th-A}--\ref{subsec:th-C} yields closed-form expressions for $\bar{V}(\rho)$ (Eq.~\ref{eq:bar-V}) and $\underline{V}$ (Eq.~\ref{eq:underline-V}). For the qualitative illustration in Fig.~4, we adopt the reference parameter values $\pi_0 = 0.3$, $\phi = 0.5$, and $c_{\text{TP}} = 0.2$, which yield $\bar{V}(1) = 0.714$, $\underline{V} = 0.286$, and the certification boundary $\bar{V}(1) + \underline{V} = 1.000$ at full reputation. The reputation dynamics of \ref{subsec:th-D} introduce one further parameter, the rate $\alpha > 0$ at which reputation moves in either direction. It fixes the unit of time and enters none of the conditions above, so it carries no row in Table~1. Figure~6 is drawn at $\alpha = 0.1$, which sets the vertical scale of the phase line.
+
+\label{sec:si-methods-end}
+\FloatBarrier
+\clearpage
+
+\SIresults
+
+\section{Descriptive Price Analysis}\label{sec:res-A}
+
+Here, we show that two empirical regularities are already visible before we fit the hierarchical Bayesian model. Reputation amplifies the price premium from self-grading but reduces the premium from TP grading. We document these patterns using linear mixed-effects models with seller random effects, regressing the log price ratio on reputation, signal type, and their interaction, while controlling for market price bracket and condition category. Figure~\ref{fig:S1} displays the resulting interaction patterns for self-grading and TP grading, separately for all listings and for sold items only. In panels A and B, the predicted log price ratio rises with reputation under self-grading (interaction slope $\beta_{\text{interaction}} = 0.073$ across all listings). In panels C and D, the same slope is negative for TP grading ($\beta = -0.118$), indicating that high-reputation sellers extract a smaller incremental premium from TP grading. Both patterns persist in the sold-only subsample (panels B, D), indicating that selection from unsold listings does not drive them.
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S1.pdf}}
+\caption{Descriptive interaction plots of seller reputation and quality signal type. Each panel displays estimates from a linear mixed-effects model (lmer) with seller random effects and prediction intervals, controlling for market price bracket and condition category. \textbf{(A)} Reputation $\times$ self-graded (all ungraded listings): the reputation $\times$ self-graded interaction is positive and significant ($\beta_{\text{interaction}} = 0.073$). \textbf{(B)} Reputation $\times$ self-graded (sold items only, $N = 125{,}754$): restricting to sold items mitigates selection bias. The interaction remains significant ($\beta_{\text{interaction}} = 0.034$, SE $= 0.006$, $p < 0.001$). \textbf{(C)} Reputation $\times$ TP-graded (all listings): negative interaction ($\beta_{\text{interaction}} = -0.118$). \textbf{(D)} Reputation $\times$ TP-graded (sold items only): substitution pattern persists ($\beta_{\text{interaction}} = -0.179$).}
+\label{fig:S1}
+\end{figure}
+
+\clearpage
+\section{Seller Volume}\label{sec:res-B}
+
+Certification strategies affect not only per-unit pricing but also transaction volume. Using data aggregated at the seller-by-signal-type level (restricted to sellers with three or more listings per signal type), we analyze three volume metrics across reputation levels (fig.~\ref{fig:S2}). Panel~A shows that high-reputation sellers list more items across all signal types, reflecting a high-volume strategy, though the increase is modest for TP-graded items. Panel~B reveals that TP-graded listings achieve particularly high sale rates at higher reputation levels. Panel~C confirms that both effects combine. High-reputation sellers realize greater transaction volumes across signal types.
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S2.pdf}}
+\caption{Seller-level volume metrics by signal type (None, Self-graded, TP-graded). \textbf{(A)} Listing count: negative binomial regression (\texttt{MASS::glm.nb}), which accounts for overdispersion. \textbf{(B)} Sale rate: beta regression (\texttt{betareg}) for $(0, 1)$-bounded proportions. \textbf{(C)} Sale count: negative binomial regression.}
+\label{fig:S2}
+\end{figure}
+
+\clearpage
+\section{Revenue and Margin Analysis}\label{sec:res-C}
+
+Figure~\ref{fig:S3} presents conditional and expected revenue and margin by signal type across the reputation range. The top row (A, B) shows outcomes conditional on sale, estimated via linear mixed-effects models with seller random effects. The bottom row (C, D) integrates sale probability through a two-part model: Part~1 estimates $P(\text{sold})$ via a logistic mixed-effects model (glmer); Part~2 estimates $E[\text{price} \mid \text{sold}]$ and $E[\text{margin} \mid \text{sold}]$ via lmer. Expected revenue and margin are then $P(\text{sold}) \times E[\cdot \mid \text{sold}]$.
+
+TP-graded items command higher conditional sale prices and margins, but the pricing advantage erodes at high reputation levels (A, B). Panel~B shows that high-reputation TP-graded sellers accept smaller conditional margins, consistent with a volume-oriented strategy. However, as fig.~\ref{fig:S2} demonstrates, elevated sale probabilities compensate. Panel~C shows that expected revenue for TP-graded items increases steeply with reputation, and panel~D reveals an inverted-U pattern in expected margin across reputation levels.
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S3.pdf}}
+\caption{Revenue and margin by signal type and seller reputation: conditional versus expected. \textbf{(A)} Unit sale price (USD) conditional on sale, by signal type (None, Self-graded, TP-graded): linear mixed-effects model (lmer) with seller random effects. \textbf{(B)} Margin (sale price $-$ market reference price) conditional on sale: lmer with seller random effects. \textbf{(C)} Expected revenue $= P(\text{sold}) \times E[\text{price} \mid \text{sold}]$: two-part model combining glmer (sale probability) and lmer (conditional price). \textbf{(D)} Expected margin $= P(\text{sold}) \times E[\text{margin} \mid \text{sold}]$: two-part model combining glmer (sale probability) and lmer (conditional margin).}
+\label{fig:S3}
+\end{figure}
+
+\clearpage
+\section{Continuous Regime Boundary in Reputation--Value Space}\label{sec:res-E}
+
+Here, we show that the regime partition reported in the main text has a continuous empirical foundation. The structural regime map estimated from the HBM (Fig.~2B), the certification boundary $\bar{V}(\rho) + \underline{V}$ (Fig.~4), and the discrete $5 \times 5$ heatmap of empirical TP shares (Fig.~5) all summarize the same partition at different levels of aggregation. We now visualize the continuous boundary underlying these representations (fig.~\ref{fig:S4}). Panel~A is a scatter plot of self-graded (blue) and TP-graded (red) listings in the space of the seller reputation score and the log ungraded market price. TP-graded listings concentrate between reputation scores of $-1$ and $0.5$ across the full price range, while self-graded listings dominate above a reputation score of $0.5$ at low to medium prices. Panel~B overlays the predicted $P(\text{TP} \mid \text{graded})$ surface with the logistic boundary (50\% contour) in the same coordinates. At this 50\% contour, a one-unit increase in the seller reputation score raises the price threshold at which TP certification becomes the preferred signal by a factor of $\exp(0.24) \approx 1.27$. This descriptive slope agrees with the HBM signal-selection coefficients, which imply $0.236$ at mean reputation (Table~\ref{tab:coef}) and a range of $0.210$ to $0.264$ across the observed reputation range.
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S4.pdf}}
+\caption{Continuous regime boundary in reputation--value space. \textbf{(A)} Scatter plot of self-graded (blue; $n = 10{,}000$, randomly sampled from the analysis sample) and TP-graded (red; $n = 10{,}000$, randomly sampled) listings in the space of the seller reputation score and the ungraded market price (log scale). \textbf{(B)} $P(\text{TP} \mid \text{graded})$ regime surface: predicted probabilities displayed as a continuous color gradient from blue ($P \approx 0\%$) to red ($P \approx 100\%$). The black line shows the logistic boundary $\log(\text{market price}) = 4.18 + 0.24 \times (\text{reputation score})$ separating the Self-dominant from the TP-dominant region.}
+\label{fig:S4}
+\end{figure}
+
+\clearpage
+\section{MCMC Convergence Diagnostics}\label{sec:res-F}
+
+Here, we report convergence diagnostics for the hierarchical Bayesian model. We examine the potential scale reduction factor $\hat{R}$ together with bulk and tail effective sample sizes (ESS). Table~\ref{tab:convergence} lists all three for each of the 38 parameters. $\hat{R}$ ranges from $1.000$ to $1.013$ and bulk ESS from $221$ to $3{,}883$. Both extremes occur for the random-effects sold--signal correlation $\Omega_{23}$, which is not among the quantities reported in the main text. Together these indicate that the eight chains mixed and explored the posterior adequately.
+
+\begin{table}[H]
+\centering
+\caption{Convergence diagnostics for all 38 parameters of the hierarchical Bayesian model.}\label{tab:convergence}
+\fontsize{7}{8.4}\selectfont
+\begin{tabular}[t]{lccc}
+\toprule
+\fontsize{8}{9.6}\selectfont Parameter & $\hat{R}$ & ESS (bulk) & ESS (tail)\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\fontsize{8}{9.6}\selectfont \textbf{Intercepts}}\\
+\hspace{1em}Price Intercept ($\alpha_{\text{price}}$) & 1.002 & 1126 & 2131\\
+\hspace{1em}Sold Intercept ($\alpha_{\text{sold}}$) & 1.001 & 3132 & 3672\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\fontsize{8}{9.6}\selectfont \textbf{Signal Selection}}\\
+\hspace{1em}Intercept ($\alpha$), Self-graded & 1.008 & 1238 & 1973\\
+\hspace{1em}Intercept ($\alpha$), TP-graded & 1.002 & 1928 & 2155\\
+\hspace{1em}Reputation ($\gamma$), Self-graded & 1.006 & 1525 & 2644\\
+\hspace{1em}Reputation ($\gamma$), TP-graded & 1.003 & 2022 & 2764\\
+\hspace{1em}Market Price ($\delta$), Self-graded & 1.000 & 3382 & 3536\\
+\hspace{1em}Market Price ($\delta$), TP-graded & 1.000 & 3267 & 3472\\
+\hspace{1em}Reputation $\times$ Market Price ($\psi$), Self-graded & 1.002 & 3479 & 3771\\
+\hspace{1em}Reputation $\times$ Market Price ($\psi$), TP-graded & 1.000 & 3433 & 3653\\
+\hspace{1em}Japanese Card ($\zeta$), Self-graded & 1.002 & 3649 & 3677\\
+\hspace{1em}Japanese Card ($\zeta$), TP-graded & 1.000 & 3381 & 3608\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\fontsize{8}{9.6}\selectfont \textbf{Price Equation}}\\
+\hspace{1em}Reputation ($\beta_1$) & 1.002 & 934 & 1747\\
+\hspace{1em}Japanese Card ($\beta_2$) & 1.000 & 3397 & 3326\\
+\hspace{1em}Reputation $\times$ Self-graded ($\beta_3$) & 1.002 & 3645 & 3752\\
+\hspace{1em}Reputation $\times$ TP-graded ($\beta_4$) & 1.002 & 3883 & 3861\\
+\hspace{1em}Returns Accepted ($\beta_5$) & 1.001 & 2797 & 3359\\
+\hspace{1em}Self-graded ($\beta_{\text{signal}}$) & 1.000 & 3372 & 3446\\
+\hspace{1em}TP-graded ($\beta_{\text{signal}}$) & 1.001 & 3092 & 3670\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\fontsize{8}{9.6}\selectfont \textbf{Sold Equation}}\\
+\hspace{1em}Reputation ($\beta_1$) & 1.001 & 1715 & 2827\\
+\hspace{1em}Self-graded ($\beta_2$) & 1.004 & 1330 & 2855\\
+\hspace{1em}TP-graded ($\beta_3$) & 1.002 & 2570 & 3285\\
+\hspace{1em}Japanese Card ($\beta_4$) & 1.001 & 3542 & 3576\\
+\hspace{1em}Returns Accepted ($\beta_5$) & 1.001 & 2736 & 3543\\
+\hspace{1em}Price Ratio (log) ($\beta_6$) & 1.000 & 3208 & 3347\\
+\hspace{1em}Listing Duration (log) ($\beta_7$) & 1.001 & 3460 & 3469\\
+\hspace{1em}Reputation $\times$ Self-graded ($\beta_8$) & 1.001 & 2525 & 3481\\
+\hspace{1em}Reputation $\times$ TP-graded ($\beta_9$) & 1.001 & 3446 & 3233\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\fontsize{8}{9.6}\selectfont \textbf{Variance/Structural}}\\
+\hspace{1em}Price Residual SD ($\sigma_{\text{price}}$) & 1.002 & 3872 & 3388\\
+\hspace{1em}Price RE SD ($\sigma_{u_1}$) & 1.012 & 798 & 1617\\
+\hspace{1em}Sold RE SD ($\sigma_{u_2}$) & 1.005 & 1172 & 2093\\
+\hspace{1em}Signal RE SD ($\sigma_{u_3}$) & 1.002 & 1287 & 2182\\
+\hspace{1em}Price ICC & 1.012 & 831 & 1579\\
+\hspace{1em}Sold ICC & 1.005 & 1172 & 2093\\
+\hspace{1em}TP Factor Loading ($\lambda^{\text{TP}}$) & 1.000 & 3020 & 3513\\
+\hspace{1em}RE Corr: Price--Sold ($\Omega_{12}$) & 1.002 & 1383 & 2248\\
+\hspace{1em}RE Corr: Price--Signal ($\Omega_{13}$) & 1.005 & 822 & 1459\\
+\hspace{1em}RE Corr: Sold--Signal ($\Omega_{23}$) & 1.013 & 221 & 532\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\clearpage
+\section{HBM Model Fit}\label{sec:res-G}
+
+Here, we assess the predictive fit of the three-equation hierarchical Bayesian model, complementing the convergence diagnostics in table~\ref{tab:convergence}. We find that the model achieves adequate performance in each equation, namely signal selection (Cohen's $\kappa = 0.584$), log price ratio prediction ($R^2 = 0.421$), and sale classification (AUC $= 0.954$). Figure~\ref{fig:S5} shows that posterior predictive accuracy exceeds the empirical base rate for all three signal categories (panel A); the confusion matrix is dominated by the diagonal, and most off-diagonal mass falls between None and Self (panel B); the observed-versus-predicted scatter for the log price ratio shows slightly wider residuals at high-price TP-graded listings (panel C); the calibration plot for sale probability has a slope close to unity (panel D); and the ROC curve confirms strong discrimination for the sale outcome (panel E).
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S6.pdf}}
+\caption{HBM model fit and predictive diagnostics across three equations. Row 1: \textbf{(A)} Posterior predictive check for signal selection: density of $P(\text{correct category})$ by certification type. Dashed lines indicate empirical base rates; all three categories exceed their respective base rates, indicating discriminative ability. \textbf{(B)} Confusion matrix heatmap for signal selection predictions. Overall accuracy $= 0.803$, balanced accuracy $= 0.577$, Cohen's $\kappa = 0.584$. Row 2: \textbf{(C)} Observed versus predicted log price ratio. $R^2 = 0.421$, RMSE $= 0.820$, normalized RMSE $= 0.762$. Residual distributions are similar across signal types. \textbf{(D)} Calibration plot for sale predictions: binned mean predicted $P(\text{sold})$ versus observed sale rate. Calibration slope $= 1.111$. \textbf{(E)} ROC curve for sale predictions. AUC $= 0.954$ $[95\%$ CI: $0.948, 0.960]$.}
+\label{fig:S5}
+\end{figure}
+
+\clearpage
+\section{Full Coefficient Estimates}\label{sec:res-H}
+
+Table~\ref{tab:coef} reports the complete posterior estimates for all 38 model parameters, with the price-equation interaction coefficients constituting the structural core of the main-text argument. The model was implemented in Stan with eight chains (1,000 warm-up $+$ 1,000 sampling iterations, thinning $= 2$, step-size adaptation target $= 0.95$, maximum tree depth $= 12$). All estimates are reported as posterior medians with 95\% credible intervals (2.5th and 97.5th percentiles).
+
+\begin{table}[H]
+\centering
+\caption{Full posterior estimates of the hierarchical Bayesian model.}\label{tab:coef}
+\fontsize{7}{8.4}\selectfont
+\begin{tabular}[t]{lc}
+\toprule
+\fontsize{8}{9.6}\selectfont Parameter & Estimate [95\% CI]\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{2}{l}{\fontsize{8}{9.6}\selectfont \textbf{Intercepts}}\\
+\hspace{1em}Price Intercept ($\alpha_{\text{price}}$) & 0.853 [0.846, 0.861]\\
+\hspace{1em}Sold Intercept ($\alpha_{\text{sold}}$) & 5.091 [5.032, 5.148]\\
+\addlinespace[0.3em]
+\multicolumn{2}{l}{\fontsize{8}{9.6}\selectfont \textbf{Signal Selection}}\\
+\hspace{1em}Intercept ($\alpha$), Self-graded & -0.497 [-0.524, -0.469]\\
+\hspace{1em}Intercept ($\alpha$), TP-graded & -4.140 [-4.180, -4.102]\\
+\hspace{1em}Reputation ($\gamma$), Self-graded & 0.054 [0.031, 0.077]\\
+\hspace{1em}Reputation ($\gamma$), TP-graded & -0.052 [-0.083, -0.020]\\
+\hspace{1em}Market Price ($\delta$), Self-graded & -0.252 [-0.259, -0.244]\\
+\hspace{1em}Market Price ($\delta$), TP-graded & 0.505 [0.495, 0.515]\\
+\hspace{1em}Reputation $\times$ Market Price ($\psi$), Self-graded & 0.044 [0.037, 0.049]\\
+\hspace{1em}Reputation $\times$ Market Price ($\psi$), TP-graded & 0.028 [0.020, 0.037]\\
+\hspace{1em}Japanese Card ($\zeta$), Self-graded & 0.087 [0.065, 0.107]\\
+\hspace{1em}Japanese Card ($\zeta$), TP-graded & 1.008 [0.979, 1.038]\\
+\addlinespace[0.3em]
+\multicolumn{2}{l}{\fontsize{8}{9.6}\selectfont \textbf{Price Equation}}\\
+\hspace{1em}Reputation ($\beta_1$) & 0.001 [-0.006, 0.007]\\
+\hspace{1em}Japanese Card ($\beta_2$) & -0.503 [-0.510, -0.497]\\
+\hspace{1em}Reputation $\times$ Self-graded ($\beta_3$) & 0.063 [0.058, 0.069]\\
+\hspace{1em}Reputation $\times$ TP-graded ($\beta_4$) & -0.095 [-0.110, -0.080]\\
+\hspace{1em}Returns Accepted ($\beta_5$) & 0.026 [0.020, 0.032]\\
+\hspace{1em}Self-graded ($\beta_{\text{signal}}$) & 0.093 [0.086, 0.100]\\
+\hspace{1em}TP-graded ($\beta_{\text{signal}}$) & -0.197 [-0.213, -0.180]\\
+\addlinespace[0.3em]
+\multicolumn{2}{l}{\fontsize{8}{9.6}\selectfont \textbf{Sold Equation}}\\
+\hspace{1em}Reputation ($\beta_1$) & 0.457 [0.427, 0.488]\\
+\hspace{1em}Self-graded ($\beta_2$) & 0.102 [0.065, 0.138]\\
+\hspace{1em}TP-graded ($\beta_3$) & 0.026 [-0.062, 0.115]\\
+\hspace{1em}Japanese Card ($\beta_4$) & -0.380 [-0.414, -0.348]\\
+\hspace{1em}Returns Accepted ($\beta_5$) & -0.256 [-0.289, -0.220]\\
+\hspace{1em}Price Ratio (log) ($\beta_6$) & -0.951 [-0.964, -0.939]\\
+\hspace{1em}Listing Duration (log) ($\beta_7$) & -1.654 [-1.666, -1.643]\\
+\hspace{1em}Reputation $\times$ Self-graded ($\beta_8$) & -0.077 [-0.109, -0.045]\\
+\hspace{1em}Reputation $\times$ TP-graded ($\beta_9$) & 0.094 [0.018, 0.170]\\
+\addlinespace[0.3em]
+\multicolumn{2}{l}{\fontsize{8}{9.6}\selectfont \textbf{Variance/Structural}}\\
+\hspace{1em}Price Residual SD ($\sigma_{\text{price}}$) & 0.838 [0.837, 0.840]\\
+\hspace{1em}Price RE SD ($\sigma_{u_1}$) & 0.638 [0.632, 0.645]\\
+\hspace{1em}Sold RE SD ($\sigma_{u_2}$) & 1.847 [1.816, 1.877]\\
+\hspace{1em}Signal RE SD ($\sigma_{u_3}$) & 2.110 [2.081, 2.139]\\
+\hspace{1em}Price ICC & 0.367 [0.362, 0.372]\\
+\hspace{1em}Sold ICC & 0.509 [0.501, 0.517]\\
+\hspace{1em}TP Factor Loading ($\lambda^{\text{TP}}$) & 0.919 [0.911, 0.926]\\
+\hspace{1em}RE Corr: Price--Sold ($\Omega_{12}$) & -0.015 [-0.036, 0.004]\\
+\hspace{1em}RE Corr: Price--Signal ($\Omega_{13}$) & -0.139 [-0.153, -0.125]\\
+\hspace{1em}RE Corr: Sold--Signal ($\Omega_{23}$) & 0.019 [0.001, 0.038]\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\clearpage
+\section{Signal Composition Across Price and Reputation Dimensions}\label{sec:res-I}
+
+Here, we examine how signal composition varies along the price and reputation dimensions separately. We disaggregate the $5 \times 5$ heatmap of Fig.~5 into marginal distributions by price quintile and reputation quintile (fig.~\ref{fig:S6}). Panel~A shows the price distribution as a unimodal histogram peaking at \$1--\$3 with a long right tail; panel~C shows the reputation distribution as a bimodal histogram with a low-reputation cluster at reputation scores of $-1$ to $0$ and a high-reputation cluster at $0.5$ to $1.5$. The signal-composition bars reveal an asymmetric pattern. Along the price axis (B), TP grading rises monotonically from $0.3\%$ in the lowest quintile to $12.2\%$ in the highest, a roughly 40-fold increase, while self-grading remains flat ($25\%$--$35\%$) and None contracts. Along the reputation axis (D), self-grading rises modestly from $28.7\%$ to $35.4\%$, TP grading declines from $5.6\%$ to $2.2\%$, and None again contracts. Variation in the TP share is therefore driven mainly by price (range $\approx 11.9$ percentage points), and variation in the Self share mainly by reputation ($\approx 6.7$ percentage points). Together these two patterns support the two-dimensional regime structure.
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=18cm]{Fig_S7.pdf}}
+\caption{Empirical distributions and signal composition across price and reputation dimensions. \textbf{(A)} Distribution of ungraded market prices ($N = 960{,}029$): log-scale histogram (y-axis: listing count) with quintile boundaries. \textbf{(B)} Signal composition by market price bracket: 100\% stacked bar chart. \textbf{(C)} Distribution of seller reputation scores: histogram (y-axis: listing count) with quintile boundaries. \textbf{(D)} Signal composition by reputation bracket.}
+\label{fig:S6}
+\end{figure}
+
+\label{sec:si-results-end}
+\clearpage
+\FloatBarrier
+
+\end{document}

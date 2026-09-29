@@ -1,0 +1,1586 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      39.0,
+      373.0,
+      84.0,
+      1205.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Collective self-sorting on a chip",
+    "page": 0,
+    "bbox": [
+      427.0,
+      103.0,
+      804.0,
+      131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      153.0,
+      154.0,
+      1077.0,
+      177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      359.0,
+      183.0,
+      872.0,
+      206.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      404.0,
+      206.0,
+      830.0,
+      226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      510.0,
+      226.0,
+      722.0,
+      248.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      211.0,
+      261.0,
+      1019.0,
+      511.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 0,
+    "bbox": [
+      245.0,
+      551.0,
+      459.0,
+      572.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      602.0,
+      602.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      1154.0,
+      602.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      626.0,
+      549.0,
+      1129.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      107.0,
+      1405.0,
+      349.0,
+      1425.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      108.0,
+      1427.0,
+      339.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1111.0,
+      57.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      106.0,
+      740.0,
+      674.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      760.0,
+      112.0,
+      1120.0,
+      357.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      759.0,
+      364.0,
+      1110.0,
+      697.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 1. Differential self-propulsion speed controls radial demixing. a Experimental observations (top) of binary Quincke-roller flocks confined in a circular well. Reversing the applied electric field switches the relative propulsion speeds of the two species and consequently inverts the demixing pattern: the faster species accumulates near the outer boundary, whereas the slower species is enriched toward the centre. Particle-based simulations (bottom) reproduce the experimentally observed radial organization, with faster particles preferentially occupying the outer region and slower particles accumulating in the inner region. b Self-propulsion speed as a function of the applied electric field for different AOT molarities for PS and PMMA particles. c Demixing parameter as a function of the self-propulsion speed difference for reciprocal and nonreciprocal interactions. Demixing increases with motility contrast in both cases, demonstrating that nonreciprocity is not required for speed-driven demixing.",
+    "page": 1,
+    "bbox": [
+      101.0,
+      731.0,
+      1128.0,
+      923.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. DIFFERENTIAL SPEED DRIVES DEMIXING",
+    "page": 1,
+    "bbox": [
+      161.0,
+      965.0,
+      542.0,
+      1008.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1061.0,
+      602.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      626.0,
+      964.0,
+      1126.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      626.0,
+      1013.0,
+      1127.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      626.0,
+      1242.0,
+      1129.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      107.0,
+      602.0,
+      269.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. PARTICLE BASED SIMULATIONS",
+    "page": 2,
+    "bbox": [
+      149.0,
+      310.0,
+      555.0,
+      332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      361.0,
+      602.0,
+      795.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      796.0,
+      601.0,
+      934.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      940.0,
+      332.0,
+      994.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      573.0,
+      946.0,
+      597.0,
+      970.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      998.0,
+      539.0,
+      1057.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      572.0,
+      1011.0,
+      596.0,
+      1034.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      1070.0,
+      600.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      113.0,
+      1197.0,
+      566.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      573.0,
+      1198.0,
+      597.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      1234.0,
+      601.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      627.0,
+      106.0,
+      1128.0,
+      291.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      721.0,
+      302.0,
+      992.0,
+      357.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      317.0,
+      1124.0,
+      342.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      721.0,
+      360.0,
+      1033.0,
+      418.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      376.0,
+      1123.0,
+      400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      628.0,
+      424.0,
+      1129.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      628.0,
+      1099.0,
+      1128.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      823.0,
+      1345.0,
+      931.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      1354.0,
+      1124.0,
+      1377.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      625.0,
+      1403.0,
+      1127.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1111.0,
+      57.0,
+      1127.0,
+      74.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      105.0,
+      603.0,
+      682.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IV. DESIGNING A SELF-SORTING DEVICE",
+    "page": 3,
+    "bbox": [
+      121.0,
+      726.0,
+      583.0,
+      748.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      776.0,
+      600.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      916.0,
+      603.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      106.0,
+      1129.0,
+      750.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      753.0,
+      1127.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      918.0,
+      1126.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      1243.0,
+      1127.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      74.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      108.0,
+      116.0,
+      771.0,
+      630.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      785.0,
+      112.0,
+      1127.0,
+      282.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 2. Smaller confinements accelerate demixing without compromising separation purity. a Configurations of binary active particles confined in circular arenas of different radii, showing the steady-state radial organization of the two species. b Time evolution of the demixing parameter, γ, for different arena sizes. The characteristic demixing time, τ, is defined as the first time at which γ < 0.4, corresponding to the emergence of a macroscopically demixed state with a well- defined radial organization. c Characteristic demixing time as a function of the arena radius. Demixing occurs more rapidly in smaller arenas because particles must reorganize over shorter distances to establish the steady-state radial distribution. d Steady-state demixing parameter as a function of the arena radius. Its weak dependence on system size demonstrates that reducing the arena size accelerates demixing without substantially decreasing the final separation purity. These results indicate that an array of small arenas can provide a higher processing throughput than a single large arena.",
+    "page": 4,
+    "bbox": [
+      100.0,
+      693.0,
+      1126.0,
+      886.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      927.0,
+      601.0,
+      975.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      982.0,
+      601.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      1219.0,
+      602.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      626.0,
+      927.0,
+      1128.0,
+      1043.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      626.0,
+      1043.0,
+      1127.0,
+      1113.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      799.0,
+      1130.0,
+      956.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1098.0,
+      1142.0,
+      1124.0,
+      1167.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      626.0,
+      1195.0,
+      1128.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      627.0,
+      1357.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      139.0,
+      750.0,
+      630.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      783.0,
+      200.0,
+      1123.0,
+      560.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 3. From arena to circular channels. a. Experimental snapshots of a binary mixture confined in an annular channel for different values of Rin/Rout, showing the progressive loss of radial demixing as the inner radius increases. b. Corresponding simulation snapshots obtained under the same conditions, reproducing the transition from a demixed to a mixed state. c. Steady-state demixing parameter from numerical simulations, (γ)t, as a function of Rin/Rout for experiments and simulations. Demixing decreases monotonically with increasing Rin/Rout, demonstrating that the relative curvature of the inner and outer boundaries controls the efficiency of radial segregation.",
+    "page": 5,
+    "bbox": [
+      103.0,
+      656.0,
+      1127.0,
+      786.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      828.0,
+      602.0,
+      1061.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      100.0,
+      1104.0,
+      601.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      828.0,
+      736.0,
+      852.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      813.0,
+      867.0,
+      942.0,
+      923.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1098.0,
+      883.0,
+      1124.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      626.0,
+      941.0,
+      1128.0,
+      1105.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      627.0,
+      1106.0,
+      1127.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      626.0,
+      1334.0,
+      1128.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "seal",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      150.0,
+      118.0,
+      459.0,
+      440.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      541.0,
+      116.0,
+      1126.0,
+      420.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      116.0,
+      442.0,
+      428.0,
+      796.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      432.0,
+      471.0,
+      712.0,
+      797.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      773.0,
+      435.0,
+      1096.0,
+      795.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 4. From circular channels to continuous particle collection. a. Circular annular channel used to generate radial demixing between fast and slow particles. b. Three-way sorting geometry obtained by combining two shifted semicircular channels and introducing a separating wall that directs the demixed populations towards distinct inner and outer outlets. The wall position is parametrized by w = (Rwall − Rin)/(Rout − Rin). c. Steady-state particle fractions χ1n and χ2n at the inner outlet as a function of w. The purity of fast particles is maximal around w ≈ 0.2. d. Corresponding particle fractions χ1ut and χout at the outer outlet, with maximal purity of slow particles around w ≈ 0.5. e. Normalized throughput of fast particles recovered at the inner outlet, Q1, and slow particles recovered at the outer outlet, Q2, as a function of w. Increasing w enhances the recovery of fast particles while reducing that of slow particles, revealing the trade-off between outlet purity and particle recovery.",
+    "page": 6,
+    "bbox": [
+      102.0,
+      825.0,
+      1132.0,
+      996.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      103.0,
+      1038.0,
+      602.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      1141.0,
+      601.0,
+      1417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      122.0,
+      1426.0,
+      600.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      1037.0,
+      1127.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      1287.0,
+      1129.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      113.0,
+      116.0,
+      1122.0,
+      558.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      113.0,
+      116.0,
+      1122.0,
+      558.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 5. From periodic sorting to a finite-size device. a. Steady-state particle fractions measured at the inner and outer outlets as a function of the number of three-way sorting units, (Nunits). Dashed lines indicate the corresponding values obtained in the infinite-channel limit. The inner-outlet composition converges after approximately (Nunits ≈ 20), whereas the outer outlet reaches its asymptotic value after about (Nunits ≈ 12). b. Schematic of the finite sorting device composed of successive three- way channel units, showing the progressive segregation of the two particle species along the channel. c. Reinjection boundary condition used to mimic continuous operation of a finite device. Particles leaving through either outlet are reinjected at a random position across the inlet while retaining their velocity. Starting from a mixed population at the inlet, repeated passage through the sorting units produces a pronounced downstream demixing, with faster particles preferentially localized near the inner wall and directed towards the corresponding outlet.",
+    "page": 7,
+    "bbox": [
+      102.0,
+      591.0,
+      1128.0,
+      783.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      100.0,
+      825.0,
+      603.0,
+      1008.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      1010.0,
+      602.0,
+      1286.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "V. EXPERIMENTAL SELF-SORTING DEVICE",
+    "page": 7,
+    "bbox": [
+      111.0,
+      1329.0,
+      591.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      1379.0,
+      601.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      625.0,
+      825.0,
+      1128.0,
+      1056.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      626.0,
+      1057.0,
+      1129.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      626.0,
+      1311.0,
+      1128.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1110.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      113.0,
+      110.0,
+      1125.0,
+      661.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 6. Demixing in snake-like channels. a. Top: Geometry of the self-sorting device (w = 0.7). Insets: Experimental snapshots of the operating device. b. Density fraction of the slow, 7 µm-diameter PS particles, in the outer region as a function of the length of the channel expressed in number of elementary units. Demixing reaches high purity in about 10 units.",
+    "page": 8,
+    "bbox": [
+      103.0,
+      689.0,
+      1127.0,
+      755.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      798.0,
+      601.0,
+      889.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      890.0,
+      601.0,
+      1236.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "CONCLUSIONS",
+    "page": 8,
+    "bbox": [
+      270.0,
+      1282.0,
+      434.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      1332.0,
+      602.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      626.0,
+      797.0,
+      1128.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      626.0,
+      939.0,
+      1129.0,
+      1217.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      626.0,
+      1219.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1102.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      100.0,
+      107.0,
+      600.0,
+      153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      154.0,
+      602.0,
+      340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      106.0,
+      1127.0,
+      177.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ACKNOWLEDGMENTS",
+    "page": 9,
+    "bbox": [
+      757.0,
+      219.0,
+      1001.0,
+      240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      626.0,
+      269.0,
+      1127.0,
+      339.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      113.0,
+      429.0,
+      598.0,
+      470.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      115.0,
+      471.0,
+      598.0,
+      511.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      115.0,
+      513.0,
+      599.0,
+      554.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      116.0,
+      556.0,
+      599.0,
+      595.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      116.0,
+      597.0,
+      599.0,
+      637.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      116.0,
+      639.0,
+      598.0,
+      678.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      116.0,
+      680.0,
+      599.0,
+      721.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      116.0,
+      722.0,
+      482.0,
+      743.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      112.0,
+      744.0,
+      599.0,
+      783.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      106.0,
+      785.0,
+      599.0,
+      826.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      107.0,
+      828.0,
+      598.0,
+      867.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      107.0,
+      869.0,
+      599.0,
+      928.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      106.0,
+      931.0,
+      600.0,
+      972.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      106.0,
+      974.0,
+      603.0,
+      1016.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      631.0,
+      429.0,
+      1126.0,
+      470.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      472.0,
+      1126.0,
+      532.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      534.0,
+      1126.0,
+      595.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      631.0,
+      597.0,
+      1126.0,
+      658.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      660.0,
+      1126.0,
+      741.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      744.0,
+      1125.0,
+      784.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      786.0,
+      1126.0,
+      846.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      631.0,
+      848.0,
+      1125.0,
+      888.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      633.0,
+      889.0,
+      1125.0,
+      930.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      632.0,
+      932.0,
+      1125.0,
+      971.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      631.0,
+      974.0,
+      1125.0,
+      1015.0
+    ]
+  }
+]

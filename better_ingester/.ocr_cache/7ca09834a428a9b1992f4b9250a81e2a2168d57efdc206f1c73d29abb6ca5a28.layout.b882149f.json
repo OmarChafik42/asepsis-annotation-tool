@@ -1,0 +1,3423 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      423.0,
+      83.0,
+      1154.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      1117.0,
+      50.0,
+      1128.0,
+      65.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Flow Matching-Based PET Image Reconstruction",
+    "page": 0,
+    "bbox": [
+      343.0,
+      115.0,
+      878.0,
+      218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      293.0,
+      237.0,
+      915.0,
+      264.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      352.0,
+      604.0,
+      793.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      823.0,
+      603.0,
+      865.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 0,
+    "bbox": [
+      268.0,
+      908.0,
+      430.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      92.0,
+      944.0,
+      604.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      618.0,
+      350.0,
+      1129.0,
+      398.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      399.0,
+      1130.0,
+      756.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      616.0,
+      757.0,
+      1130.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      1020.0,
+      1131.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      1403.0,
+      1131.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      1350.0,
+      603.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      92.0,
+      1388.0,
+      604.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      1442.0,
+      604.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1116.0,
+      50.0,
+      1129.0,
+      65.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      112.0,
+      604.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      399.0,
+      606.0,
+      855.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. BACKGROUND",
+    "page": 1,
+    "bbox": [
+      268.0,
+      885.0,
+      429.0,
+      907.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. PET image reconstruction",
+    "page": 1,
+    "bbox": [
+      92.0,
+      918.0,
+      342.0,
+      940.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      949.0,
+      603.0,
+      997.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      289.0,
+      1000.0,
+      406.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      575.0,
+      1001.0,
+      600.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      1037.0,
+      603.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      112.0,
+      1238.0,
+      553.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      576.0,
+      1260.0,
+      601.0,
+      1281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      92.0,
+      1314.0,
+      603.0,
+      1363.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      108.0,
+      1373.0,
+      559.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      577.0,
+      1396.0,
+      601.0,
+      1418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      93.0,
+      1450.0,
+      603.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Flow matching",
+    "page": 1,
+    "bbox": [
+      619.0,
+      111.0,
+      778.0,
+      134.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      141.0,
+      1130.0,
+      311.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      777.0,
+      324.0,
+      969.0,
+      348.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      325.0,
+      1127.0,
+      346.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      361.0,
+      1126.0,
+      386.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      726.0,
+      397.0,
+      1021.0,
+      441.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      408.0,
+      1127.0,
+      429.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      450.0,
+      1129.0,
+      521.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      652.0,
+      532.0,
+      1072.0,
+      570.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      540.0,
+      1127.0,
+      562.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      580.0,
+      1130.0,
+      677.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      723.0,
+      685.0,
+      1025.0,
+      731.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      698.0,
+      1127.0,
+      720.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      738.0,
+      1049.0,
+      761.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      763.0,
+      1130.0,
+      834.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      729.0,
+      848.0,
+      1017.0,
+      874.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      850.0,
+      1127.0,
+      871.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      887.0,
+      1129.0,
+      958.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. METHODOLOGY",
+    "page": 1,
+    "bbox": [
+      783.0,
+      986.0,
+      967.0,
+      1007.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      1016.0,
+      1130.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. FlowDPS for PET reconstruction",
+    "page": 1,
+    "bbox": [
+      618.0,
+      1239.0,
+      927.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      1270.0,
+      1130.0,
+      1366.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      719.0,
+      1375.0,
+      1028.0,
+      1421.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      1388.0,
+      1126.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      638.0,
+      1429.0,
+      1048.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      690.0,
+      1461.0,
+      1056.0,
+      1510.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1091.0,
+      1473.0,
+      1127.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1116.0,
+      49.0,
+      1129.0,
+      66.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      103.0,
+      112.0,
+      1117.0,
+      548.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(1) Destination estimation",
+    "page": 2,
+    "bbox": [
+      197.0,
+      563.0,
+      431.0,
+      588.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(3) Propagation",
+    "page": 2,
+    "bbox": [
+      869.0,
+      564.0,
+      1009.0,
+      589.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1. Overview of (a) PET-FlowDPS and (b) the proposed model-based PET reconstruction with a flow-based prior. In step (1), both methods estimate a destination image using the pretrained flow model. In step (2), (a) PET-FlowDPS applies a data-consistency update using the gradient of the log-likelihood, and (b) the proposed method performs a MAP reconstruction that balances data fidelity and the conditional flow-based prior. In step (3), the refined destination estimate is propagated to the next flow time point using the respective stochastic propagation rules. The purple contours in step (2) represent the PET log- likelihood, and the blue contours in (b-2) represent the conditional flow-based prior approximated by a Gaussian distribution.",
+    "page": 2,
+    "bbox": [
+      92.0,
+      622.0,
+      1131.0,
+      716.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      113.0,
+      756.0,
+      477.0,
+      780.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      120.0,
+      791.0,
+      540.0,
+      885.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      565.0,
+      827.0,
+      601.0,
+      849.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      898.0,
+      602.0,
+      948.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      93.0,
+      959.0,
+      499.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      515.0,
+      962.0,
+      567.0,
+      984.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      514.0,
+      1000.0,
+      608.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      564.0,
+      1029.0,
+      601.0,
+      1051.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      90.0,
+      1053.0,
+      604.0,
+      1219.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      1220.0,
+      603.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      565.0,
+      1336.0,
+      600.0,
+      1358.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      203.0,
+      1336.0,
+      443.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      203.0,
+      1366.0,
+      491.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      566.0,
+      1367.0,
+      600.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      565.0,
+      1475.0,
+      601.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      176.0,
+      1473.0,
+      518.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      92.0,
+      1408.0,
+      603.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      755.0,
+      1129.0,
+      828.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      705.0,
+      841.0,
+      1040.0,
+      870.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1092.0,
+      844.0,
+      1127.0,
+      867.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      714.0,
+      874.0,
+      1043.0,
+      900.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1091.0,
+      874.0,
+      1127.0,
+      897.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      912.0,
+      798.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      938.0,
+      1128.0,
+      987.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      693.0,
+      995.0,
+      1052.0,
+      1049.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1092.0,
+      1011.0,
+      1127.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      1058.0,
+      1129.0,
+      1109.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      728.0,
+      1121.0,
+      1019.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1091.0,
+      1124.0,
+      1127.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      1162.0,
+      1130.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      1235.0,
+      1131.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1116.0,
+      50.0,
+      1129.0,
+      65.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      93.0,
+      110.0,
+      599.0,
+      498.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      93.0,
+      527.0,
+      599.0,
+      1058.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Model-based PET reconstruction using flow matching",
+    "page": 3,
+    "bbox": [
+      93.0,
+      1270.0,
+      568.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      92.0,
+      1109.0,
+      603.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      767.0,
+      177.0,
+      978.0,
+      203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      92.0,
+      1305.0,
+      603.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      767.0,
+      208.0,
+      974.0,
+      233.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      91.0,
+      1451.0,
+      604.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      110.0,
+      1129.0,
+      159.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1092.0,
+      208.0,
+      1126.0,
+      230.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      767.0,
+      237.0,
+      943.0,
+      263.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1091.0,
+      238.0,
+      1127.0,
+      260.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      279.0,
+      1129.0,
+      352.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      352.0,
+      1130.0,
+      448.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      775.0,
+      467.0,
+      895.0,
+      492.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1091.0,
+      467.0,
+      1127.0,
+      489.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      774.0,
+      498.0,
+      949.0,
+      522.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1092.0,
+      497.0,
+      1127.0,
+      519.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      801.0,
+      535.0,
+      819.0,
+      562.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      769.0,
+      570.0,
+      978.0,
+      595.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1091.0,
+      571.0,
+      1127.0,
+      593.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      618.0,
+      612.0,
+      1130.0,
+      684.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      768.0,
+      703.0,
+      980.0,
+      729.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1091.0,
+      703.0,
+      1127.0,
+      726.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      743.0,
+      1129.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      819.0,
+      1130.0,
+      892.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      662.0,
+      908.0,
+      1051.0,
+      996.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1092.0,
+      909.0,
+      1127.0,
+      931.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1092.0,
+      969.0,
+      1126.0,
+      991.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      1013.0,
+      1131.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      1230.0,
+      1131.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      645.0,
+      1367.0,
+      1066.0,
+      1494.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1092.0,
+      1407.0,
+      1126.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1091.0,
+      1458.0,
+      1127.0,
+      1481.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1116.0,
+      50.0,
+      1129.0,
+      66.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      112.0,
+      603.0,
+      161.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      97.0,
+      171.0,
+      599.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      240.0,
+      603.0,
+      385.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      199.0,
+      396.0,
+      365.0,
+      421.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      565.0,
+      397.0,
+      601.0,
+      418.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      198.0,
+      426.0,
+      495.0,
+      453.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      565.0,
+      428.0,
+      600.0,
+      449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      464.0,
+      604.0,
+      655.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      213.0,
+      666.0,
+      481.0,
+      701.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      566.0,
+      668.0,
+      601.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      92.0,
+      710.0,
+      603.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      92.0,
+      854.0,
+      603.0,
+      974.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      977.0,
+      603.0,
+      1049.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      183.0,
+      1061.0,
+      533.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      566.0,
+      1063.0,
+      601.0,
+      1084.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      111.0,
+      1099.0,
+      603.0,
+      1194.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      148.0,
+      1203.0,
+      593.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      139.0,
+      1294.0,
+      602.0,
+      1367.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      163.0,
+      1374.0,
+      546.0,
+      1492.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      566.0,
+      1454.0,
+      600.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      652.0,
+      121.0,
+      1100.0,
+      465.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      643.0,
+      507.0,
+      1099.0,
+      854.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2. Impact of the number of sampling steps K on PSNR (top) and on the putamen uptake-white matter CoV tradeoff curves (bottom). Filled markers correspond to the images as shown in Fig. 4.",
+    "page": 4,
+    "bbox": [
+      618.0,
+      884.0,
+      1130.0,
+      942.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      667.0,
+      974.0,
+      1097.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      637.0,
+      1003.0,
+      1130.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      760.0,
+      1087.0,
+      1036.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1092.0,
+      1088.0,
+      1127.0,
+      1109.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      666.0,
+      1123.0,
+      1088.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      618.0,
+      1150.0,
+      1131.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IV. EXPERIMENTAL SETUP",
+    "page": 4,
+    "bbox": [
+      754.0,
+      1291.0,
+      995.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      617.0,
+      1321.0,
+      1130.0,
+      1395.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Brain PET data",
+    "page": 4,
+    "bbox": [
+      619.0,
+      1421.0,
+      786.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      619.0,
+      1451.0,
+      1130.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1116.0,
+      50.0,
+      1129.0,
+      65.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      128.0,
+      120.0,
+      565.0,
+      470.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3. Impact of the number of inner EM iterations N on the putamen uptake-white matter CoV trade-off curves across the 10 subjects at the 10% count level. Markers were plotted for N = 1, 2, ..., 14. Filled markers indicate N = 10, which was used for the representative images shown in Fig. 4.",
+    "page": 5,
+    "bbox": [
+      91.0,
+      502.0,
+      604.0,
+      596.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      90.0,
+      636.0,
+      604.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      950.0,
+      605.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Evaluation",
+    "page": 5,
+    "bbox": [
+      93.0,
+      1417.0,
+      216.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      1451.0,
+      603.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      111.0,
+      1130.0,
+      230.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      230.0,
+      1129.0,
+      280.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      694.0,
+      287.0,
+      1054.0,
+      347.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1092.0,
+      302.0,
+      1127.0,
+      325.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      356.0,
+      1130.0,
+      428.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      429.0,
+      1129.0,
+      476.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      622.0,
+      479.0,
+      1123.0,
+      582.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1091.0,
+      581.0,
+      1127.0,
+      602.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      616.0,
+      615.0,
+      1131.0,
+      740.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      741.0,
+      1130.0,
+      859.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      616.0,
+      861.0,
+      1130.0,
+      933.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      796.0,
+      945.0,
+      951.0,
+      996.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1091.0,
+      960.0,
+      1127.0,
+      982.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      616.0,
+      1002.0,
+      1130.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      704.0,
+      1135.0,
+      1043.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1091.0,
+      1157.0,
+      1126.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      1212.0,
+      1129.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      1283.0,
+      1132.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1115.0,
+      49.0,
+      1130.0,
+      65.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      94.0,
+      115.0,
+      1124.0,
+      566.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      126.0,
+      174.0,
+      213.0,
+      276.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      274.0,
+      174.0,
+      361.0,
+      276.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      421.0,
+      174.0,
+      509.0,
+      276.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      570.0,
+      174.0,
+      657.0,
+      277.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      716.0,
+      174.0,
+      804.0,
+      277.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      863.0,
+      173.0,
+      951.0,
+      277.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1012.0,
+      174.0,
+      1098.0,
+      277.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      108.0,
+      326.0,
+      212.0,
+      439.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      276.0,
+      328.0,
+      361.0,
+      440.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      422.0,
+      328.0,
+      509.0,
+      439.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      569.0,
+      328.0,
+      657.0,
+      443.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      718.0,
+      330.0,
+      800.0,
+      401.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      865.0,
+      327.0,
+      949.0,
+      436.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1015.0,
+      327.0,
+      1096.0,
+      426.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      457.0,
+      219.0,
+      561.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      259.0,
+      458.0,
+      366.0,
+      560.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      406.0,
+      459.0,
+      513.0,
+      560.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      555.0,
+      459.0,
+      661.0,
+      561.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      699.0,
+      458.0,
+      808.0,
+      559.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      843.0,
+      458.0,
+      954.0,
+      561.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      990.0,
+      457.0,
+      1119.0,
+      561.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 4. Reconstruction results of three orthogonal slices of the clinical [18F]FDG data at 10% dose.",
+    "page": 6,
+    "bbox": [
+      91.0,
+      585.0,
+      761.0,
+      606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      109.0,
+      658.0,
+      585.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 5. Mean putamen uptake-white matter CoV trade-off curves across the 10 subjects at the 10% count level. Markers were plotted at 10-iteration intervals from 10 to 100 for MLEM, at 20-iteration intervals from 20 to 200 for MAPEM (βMAPEM = 30, γ = 2), at λDDs of 0, 10, 100, 500, and 1000 for DDS, at λ of 0.8, 0.9, 1.0, 1.2, and 1.4 for PET-FlowDPS, and at β of 0.05, 0.06, 0.08, 0.1, and 0.25 for Proposed and Proposed(5). Filled markers correspond to the representative images shown in Fig. 4.",
+    "page": 6,
+    "bbox": [
+      91.0,
+      1117.0,
+      604.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "V. RESULTS",
+    "page": 6,
+    "bbox": [
+      293.0,
+      1292.0,
+      405.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      91.0,
+      1330.0,
+      604.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      647.0,
+      1130.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      723.0,
+      1131.0,
+      988.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      616.0,
+      992.0,
+      1131.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      616.0,
+      1236.0,
+      1132.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1116.0,
+      50.0,
+      1129.0,
+      65.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      104.0,
+      1118.0,
+      628.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      104.0,
+      1118.0,
+      628.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 6. Voxel-wise mean, bias, and standard-deviation maps calculated from 10 independent 10% low dose realizations for the different reconstruction methods.",
+    "page": 7,
+    "bbox": [
+      92.0,
+      660.0,
+      1126.0,
+      680.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      721.0,
+      603.0,
+      768.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      92.0,
+      769.0,
+      603.0,
+      840.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VI. DISCUSSION",
+    "page": 7,
+    "bbox": [
+      273.0,
+      869.0,
+      425.0,
+      890.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      901.0,
+      604.0,
+      1330.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      1330.0,
+      605.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      617.0,
+      721.0,
+      1131.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      617.0,
+      943.0,
+      1131.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      617.0,
+      1427.0,
+      1131.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1115.0,
+      50.0,
+      1129.0,
+      64.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      98.0,
+      105.0,
+      1123.0,
+      523.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      128.0,
+      163.0,
+      211.0,
+      257.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      274.0,
+      162.0,
+      358.0,
+      257.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      421.0,
+      162.0,
+      505.0,
+      257.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      569.0,
+      163.0,
+      652.0,
+      258.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      717.0,
+      163.0,
+      798.0,
+      257.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      863.0,
+      163.0,
+      946.0,
+      258.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1010.0,
+      163.0,
+      1091.0,
+      258.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      128.0,
+      305.0,
+      208.0,
+      374.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      276.0,
+      306.0,
+      354.0,
+      373.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      423.0,
+      306.0,
+      501.0,
+      373.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      572.0,
+      307.0,
+      649.0,
+      374.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      719.0,
+      305.0,
+      796.0,
+      374.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      865.0,
+      306.0,
+      943.0,
+      374.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1012.0,
+      306.0,
+      1089.0,
+      374.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      117.0,
+      425.0,
+      219.0,
+      519.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      266.0,
+      424.0,
+      366.0,
+      513.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      412.0,
+      425.0,
+      513.0,
+      515.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      559.0,
+      425.0,
+      660.0,
+      518.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      707.0,
+      426.0,
+      808.0,
+      503.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      851.0,
+      425.0,
+      954.0,
+      518.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      998.0,
+      424.0,
+      1100.0,
+      519.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 7. Reconstruction results of three orthogonal slices of the clinical [18F]FDG data at 5% dose.",
+    "page": 8,
+    "bbox": [
+      91.0,
+      545.0,
+      753.0,
+      566.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      103.0,
+      616.0,
+      585.0,
+      1034.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig, 8. Mean putamen uptake-white matter CoV trade-off curves across the 10 subjects at the 5% count level. Markers were plotted at 10-iteration intervals from 10 to 100 for MLEM, at 10-iteration intervals from 10 to 200 for MAPEM, at λDDs of 0, 10, 100, 500, and 1000 for DDS, at λ of 0.8, 0.9, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, and 2.5 for PET-FlowDPS, and at β of 0.005, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.08, 0.1, and 0.25 for Proposed and Proposed(5). Filled markers correspond to the images as shown in Fig. 7.",
+    "page": 8,
+    "bbox": [
+      91.0,
+      1069.0,
+      603.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      91.0,
+      1260.0,
+      604.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      606.0,
+      1130.0,
+      750.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      616.0,
+      753.0,
+      1131.0,
+      1110.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VII. CONCLUSION",
+    "page": 8,
+    "bbox": [
+      791.0,
+      1144.0,
+      959.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      1178.0,
+      1131.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "REFERENCES",
+    "page": 8,
+    "bbox": [
+      816.0,
+      1404.0,
+      934.0,
+      1426.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      628.0,
+      1442.0,
+      1128.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1111.0,
+      50.0,
+      1129.0,
+      65.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      115.0,
+      602.0,
+      169.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      170.0,
+      603.0,
+      222.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      225.0,
+      601.0,
+      278.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      279.0,
+      603.0,
+      350.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      352.0,
+      603.0,
+      404.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      406.0,
+      603.0,
+      459.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      461.0,
+      602.0,
+      514.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      515.0,
+      603.0,
+      569.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      570.0,
+      602.0,
+      623.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      625.0,
+      602.0,
+      677.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      680.0,
+      602.0,
+      750.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      752.0,
+      603.0,
+      805.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      807.0,
+      602.0,
+      859.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      861.0,
+      602.0,
+      896.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      897.0,
+      603.0,
+      952.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      95.0,
+      952.0,
+      602.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      1007.0,
+      602.0,
+      1060.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1061.0,
+      603.0,
+      1114.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1116.0,
+      603.0,
+      1169.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      95.0,
+      1170.0,
+      602.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1225.0,
+      603.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1298.0,
+      603.0,
+      1369.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      95.0,
+      1370.0,
+      603.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      95.0,
+      1443.0,
+      603.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      115.0,
+      1127.0,
+      168.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      169.0,
+      1128.0,
+      222.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      223.0,
+      1128.0,
+      293.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      295.0,
+      1129.0,
+      364.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      367.0,
+      1128.0,
+      437.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      439.0,
+      1128.0,
+      490.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      491.0,
+      1128.0,
+      544.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      546.0,
+      1129.0,
+      598.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      600.0,
+      1128.0,
+      652.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      654.0,
+      1128.0,
+      705.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      708.0,
+      1127.0,
+      760.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      761.0,
+      1127.0,
+      814.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      815.0,
+      1127.0,
+      866.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      621.0,
+      869.0,
+      1127.0,
+      922.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      923.0,
+      1128.0,
+      975.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      977.0,
+      1128.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      1030.0,
+      1128.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      1084.0,
+      1127.0,
+      1136.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      1138.0,
+      1128.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      1210.0,
+      1129.0,
+      1261.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      1263.0,
+      1127.0,
+      1282.0
+    ]
+  }
+]

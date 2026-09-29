@@ -1,0 +1,1869 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage[numbers]{natbib}
+
+\usepackage{amsmath, amssymb, bm, amsthm, mathtools, dsfont}
+% \usepackage{geometry}
+% \usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{subcaption}
+% \geometry{margin=1in}
+
+\usepackage{caption}
+\captionsetup{font=it}
+% \captionsetup{font={it,small}}       
+
+
+% <<< MACROS >>>-----------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\PPo}{\mathbb{P}_{\bm{\omega}}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\EEo}{\mathbb{E}_{\bm{\omega}}}
+\newcommand{\Ehat}{\widehat{E}}
+\newcommand{\Shat}{\widehat{S}}
+\newcommand{\Uhat}{\widehat{U}} 
+\newcommand{\bhat}{\widehat{\beta}}
+\newcommand{\sighat}{\widehat{\sigma}}
+\newcommand{\Ybar}{\overline{Y}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\ybar}{\overline{y}}
+\newcommand{\neff}{n_{\mathrm{eff}}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\Ical}{\mathcal{I}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Proj}{P}
+\newcommand{\indep}{\perp\!\!\!\perp}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\ip}[2]{\langle #1, #2\rangle}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\tY}{\widetilde{\boldsymbol Y}}
+\newcommand{\tV}{\widetilde{\boldsymbol V}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+%\pdfminorversion=4
+% NOTE: To produce blinded version, replace "0" with "1" below.
+\newcommand{\blind}{0}
+
+% DON'T change margins - should be 1 inch all around.
+% \addtolength{\oddsidemargin}{-.5in}%
+% \addtolength{\evensidemargin}{-.5in}%
+% \addtolength{\textwidth}{1in}%
+% \addtolength{\textheight}{-.3in}%
+% \addtolength{\topmargin}{-.8in}%
+
+
+% Page layout
+\usepackage{geometry}
+\geometry{margin=1in}
+
+
+\begin{document}
+
+%\bibliographystyle{natbib}
+
+\def\spacingset#1{\renewcommand{\baselinestretch}%
+{#1}\small\normalsize} \spacingset{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\if0\blind
+{
+  \title{\bf Interpretable AI with Local Distillation}
+  \author{Erin Craig\thanks{Corresponding author. Email: ercr@umich.edu.}\hspace{.2cm}\\
+    Department of Biostatistics, University of Michigan\\
+    and \\
+    Yiling Huang\\
+    Department of Statistics, University of Michigan\\
+    and \\
+    Snigdha Panigrahi\\
+    Department of Statistics, University of Michigan\\
+    }
+  \maketitle
+} \fi
+
+\if1\blind
+{
+  \bigskip
+  \bigskip
+  \bigskip
+  \begin{center}
+    {\LARGE\bf Interpretable AI with Local Distillation}
+\end{center}
+  \medskip
+} \fi
+
+\bigskip
+
+\begin{abstract}
+Modern AI models such as tabular foundation models and gradient-boosted ensembles can outpredict classical methods, but provide little basis for reasoning about their predictions. 
+High-stakes decisions call for models that are both accurate and interpretable as built. 
+Local linear modeling offers a path forward: a smooth regression function is locally well approximated by a linear one, allowing a linear fit near each query point to achieve high accuracy without sacrificing transparency.
+The challenges lie in learning what is ``local'' and developing statistical tools for interpretation.
+
+Here, we propose \textit{local distillation}, in which a black-box ``teacher'' guides a regularized linear ``student'' model at each query point.
+The teacher (1) defines locality by upweighting training observations with similar predicted outcomes, and (2) anchors the fit with its prediction at the query point, included as a pseudo-observation whose weight is estimated from the data.
+For interpretation, we add a small amount of Gaussian randomization to the local objective and use refits to assess stability: selection frequencies identify reliable features at a query point, and clustering the randomized fits identifies stable subgroups across the data. 
+Under the lasso penalty, we prove that this randomization yields feature-selection probabilities that are stable under small perturbations of the training responses. 
+Across 17 benchmark datasets, local distillation nearly matches its AI teacher’s accuracy while producing a sparse linear model at each test point.
+In a high-dimensional cancer gene expression example, the framework identifies patient subgroups whose local models use different genes; this heterogeneity is invisible to a global linear model, and difficult to surface in a black-box model.
+\end{abstract}
+
+\noindent%
+{\it Keywords:} Local regression; Interpretable AI; Distillation; Randomization; Stability; Tabular foundation models
+\vfill
+
+% \title{}
+% \author{Erin Craig, Yiling Huang, Snigdha Panigrahi}
+% \date{}
+
+%\tableofcontents
+\clearpage
+
+\spacingset{1.3} % DON'T change the spacing!
+\section{Introduction}
+\label{sec:intro}
+
+Advances in artificial intelligence (AI) are rapidly changing what is \textit{predictable}~\cite{jumper2021highly, lam2023learning}. 
+Modern black-box models, such as foundation models and gradient-boosted ensembles, sometimes outpredict simpler classical models even in their traditional strongholds, such as small-sample tabular data~\cite{hollmann2025accurate, kolberg2025tabpfn, ma2026tabdpt, kong2026tabfm, qu2025tabicl}. 
+Yet, acting on predictions requires more than accuracy alone: decision-makers must reason about the model's predictions.
+Black-box models offer little basis for such reasoning, which limits the value of their predictions for decision-making. 
+%Decision-makers therefore increasingly face a choice between transparent but less accurate models and accurate but opaque ones.
+
+The standard response, when opting for a black box, is to explain its predictions post hoc.
+Popular tools such as LIME~\cite{ribeiro2016lime} and SHAP~\cite{lundberg2017unified} fit per-observation attributions that quantify how much each feature contributes to a given prediction. 
+However, because such explanations are constructed separately from the model, their fidelity to it is not guaranteed. 
+Moreover, the attributions can be unstable, changing with choices external to the model and data, such as LIME's perturbation scheme or SHAP's reference distribution~\cite{garreau2020explaining, slack2020fooling, kumar2020problems, aas2021explaining}.
+%For example, LIME can be sensitive to the random perturbations used around an observation, with no well-defined way to define the local neighborhood or preserve dependence among features. 
+%SHAP attributions, in turn, depend on the choice of reference distribution and on how missing features are filled in when computing a feature's contribution.
+%When features are correlated, varying these choices can yield different results, making the reported attributions depend not only on the model and data but also on subjective choices made by the analyst~\cite{garreau2020explaining, slack2020fooling, kumar2020problems, aas2021explaining}.
+
+
+By contrast, our work is guided by the view that transparency and reasoning should come from the predictive model itself, i.e., predictions should be interpretable as produced, rather than explained through post hoc tools~\cite{rudin2019stop}.
+To achieve this goal, we propose \textit{local distillation}, a method in which a high-performing black-box ``teacher'' guides a local linear ``student'' fit at each observation or query point.
+Because a smooth regression function is \textit{locally} well approximated by a linear function, a locally fit simple model can approach the accuracy of a flexible black box while remaining transparent at the query point.
+Figure~\ref{fig:intro_example} illustrates local distillation on the Auto MPG dataset~\citep{autompg1993}, where we predict fuel economy (miles per gallon, MPG). In the test set, each car receives its own sparse linear model; together, they improve on the global lasso's prediction squared error (PSE) by 48\% while nearly matching their foundation model teacher (PSE 5.59 vs.\ TabPFN 5.25; global lasso 10.81). The local coefficients show that the number of cylinders predicts fuel economy among the least efficient cars but is not predictive among the most efficient, where engine displacement is more useful. A global linear model averages over this difference and assigns both a coefficient of zero. 
+We include a high-dimensional gene expression example in Section~\ref{sec:bctcga} and benchmarks across 17 datasets in Section~\ref{sec:real_data} and Appendix~\ref{app:real_data}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{paper_plots/autompg_intro_local_coefs.pdf}
+  \caption{\textbf{Car-specific miles-per-gallon models from local distillation.}
+    Local coefficients for the Auto MPG data using local distillation with a tabular foundation model teacher, TabPFN, and a lasso student. Cars are ordered left to right by TabPFN's predicted MPG; coefficients are per standard deviation of each feature. The column on the left shows the global lasso coefficients. On a held-out test set, local distillation improves over the global lasso's PSE by 48\% (global lasso regression PSE 10.81; TabPFN 5.25; local distillation 5.59).}
+  \label{fig:intro_example}
+\end{figure}
+
+
+The central question, then, is how to define ``local'': which observations should inform the fit at a given query point? 
+Classical local regression defines locality through unsupervised similarity in input space (LOESS~\cite{cleveland1988locally}), which ignores the response variable and is known to be vulnerable to the curse of dimensionality.
+Recent work instead defines locality through supervised weights derived from random forests~\cite{qiu2024random, bloniarz2016supervised, friedberg2020local, athey2019generalized}. 
+Local distillation, as proposed in our work, takes this idea further, defining locality in a supervised and tuning-free way: the teacher plays two roles, (1) identifying which training observations are informative via similarity of its predictions, and (2) pulling the student's prediction toward its own, with the strength of the teacher's influence determined from the data by the cross-validated student-to-teacher loss ratio. If the teacher does not outperform the student, the method simply reverts to a global linear fit.
+
+Using the teacher's predicted response to define similarity collapses the $p$--dimensional feature space into a single interpretable axis along which the model is localized. 
+We define locality this way for two reasons: (1) it is an axis along which the feature--outcome relationship often varies, and (2) it is an axis of scientific and clinical interest. 
+This construction gives each local model a natural interpretation: in medicine, for example, a patient's model describes the feature–outcome relationship among patients within a similar risk group. 
+Moreover, when the teacher is a pretrained foundation model such as TabPFN~\cite{hollmann2025accurate}, the student inherits its prior knowledge.
+
+For decision-makers, the ultimate goal is not only accurate and interpretable prediction, but also trustworthy conclusions drawn from those predictions.
+Trust is closely tied to the \textit{stability} of such conclusions under small perturbations of the training data, as emphasized by the PCS framework~\cite{yu2013stability, yu2020veridical, rewolinski2025pcs}.
+Motivated by this perspective, we propose a simple modification to local distillation based on external randomization, treating a conclusion as interpretable to the extent that it can be shown to be stable.
+The resulting randomized distillation fits produce stable local conclusions---such as identifying which features are important for its prediction at a query point---without breaking the inherent dependence among features or requiring teacher predictions to be recomputed.
+Our choice of the randomization scheme is supported by stability guarantees for feature selection, and it preserves fidelity to the notion of locality learned from the training data.
+Beyond localized conclusions, the randomized fits also reveal how the local feature–outcome relationship varies across observations: we cluster observations using their randomized local coefficients to learn subgroups that are stable rather than artifacts of any single fit.
+
+This work contributes (1) local distillation, a predictive method that uses a black-box teacher to construct accurate, sparse local linear fits (Sections~\ref{sec:methods} and~\ref{sec:real_data}),  and (2) a randomized stability framework for interpreting these fits, both at individual query points and in aggregate, with theoretical guarantees (Sections~\ref{sec:interpretation} and~\ref{sec:theory}). In two case studies, the framework reveals heterogeneity in the feature--outcome relationship that a global linear model cannot express (Sections~\ref{sec:interpretation_aggregate} and~\ref{sec:bctcga}), a central but elusive goal of prediction methods, particularly in personalized medicine.
+
+%This work makes two contributions. 
+%First, we propose local distillation, a predictive method that uses a black-box teacher to construct accurate, sparse local linear fits (Section~\ref{sec:methods}; benchmarks in Section~\ref{sec:real_data}). 
+%Second, we develop a randomized stability framework for interpreting these fits, both at individual query points and in aggregate, with theoretical guarantees (Sections~\ref{sec:interpretation} and~\ref{sec:theory}). 
+%In two case studies, the framework reveals heterogeneity in the feature--outcome relationship that a global linear model cannot express (Sections~\ref{sec:bctcga} and~\ref{sec:interpretation_aggregate}). Characterizing such heterogeneity is a central but elusive goal, particularly in personalized medicine.
+
+
+\section{Local distillation}
+\label{sec:methods}
+
+Suppose we have training data $\bm{X}\in \mathbb{R}^{n\times p}$ (standardized), a continuous response $\bm{y} \in \mathbb{R}^n$, and a test point $\bm{x}^*$.
+We also have a teacher $\hat\phi:\mathbb{R}^p \to \mathbb{R}$, a fitted model that predicts $y$ from $\bm{x}$.
+Our goal is to predict $y$ at $\bm{x}^*$ with a sparse linear model fit locally to the training data.
+
+We describe local distillation using squared-error loss in Section~\ref{sec: localdistillation} and illustrate it with an example in Section~\ref{sec: example1}.
+The method is general, and Section~\ref{sec:generalization} covers its extension to other loss functions and forms of regularization.
+
+\subsection{Model fitting and prediction}
+\label{sec: localdistillation}
+
+Our work is inspired in part by \textit{knowledge distillation}~\cite{hinton2015distilling}, in which a simpler ``student'' model is trained under the guidance of a more complex ``teacher'' model.
+The student is usually a smaller neural network, and the goal is compression: a fast, lightweight model that approximates a costly one. 
+Applying the same principle to regression with a linear student would yield 
+\begin{equation}
+\hat{\bm\beta} = \argmin_{\bm\beta} \; \frac{1}{2 n} \left[\sum_{j=1}^{n} \bigl(y_j - \bm{x}_j^\top \bm\beta\bigr)^2 + \mu \sum_{j=1}^{n} \bigl(\hat\phi(\bm{x}_j) - \bm{x}_j^\top \bm\beta\bigr)^2\right],
+\label{eq:general}
+\end{equation}
+where hyperparameter $\mu$ determines the influence of the teacher. 
+
+When $\EE[y \mid \bm{x}]$ is highly nonlinear, however, a single linear student cannot match a flexible teacher's predictive performance.
+We therefore introduce local distillation, summarized in Algorithm~\ref{alg:local_distill}, in which a separate student model is fit for each test observation. 
+The teacher guides the definition of the local neighborhood around the query point and anchors the fit through its prediction at that point.
+
+More precisely, our proposed method in Algorithm~\ref{alg:local_distill} modifies the standard knowledge distillation objective in \eqref{eq:general} in three ways:
+\begin{enumerate}[leftmargin=*]
+\item First, we fit a separate \emph{local} model for each test observation $\bm{x}^*$, replacing the global distillation sum with a term that pulls the student's prediction ${\bm x^*}^\top \bm \beta$ toward the teacher's prediction; see \eqref{eq:loss}. This anchors the local fit to the teacher's prediction at the query point.  
+\item Second, we replace uniform training weights with similarity weights ${\{\hat{S}_j(\bm{x}^*): j \in \{1,\ldots, n\}\}}$ that upweight training points whose teacher prediction is close to $\hat\phi(\bm{x}^*)$; see \eqref{eq:weights}. These weights define \emph{locality} around the query point by determining which training observations belong to its local neighborhood.
+\item Third, we estimate $\hat\mu$ from the data as the cross-validated student-to-teacher loss ratio, rather than tuning it; see \eqref{eqn:muhat}.
+We scale it further by $1/\sqrt{\hat n_{\text{eff}}}$, where $\hat n_{\text{eff}}$ is the effective sample size defined in \eqref{eq:weights}. 
+The teacher's influence therefore grows both when the teacher outperforms the student globally (larger $\hat\mu$) and when the local neighborhood is sparse (smaller $\hat n_{\text{eff}}$), where the local fit most needs anchoring. 
+
+When $\hat\mu \le 1$, the teacher offers no improvement and we instead return the global linear fit for all test observations.\footnote{This choice is deliberately conservative: a teacher that offers no global improvement may still help locally, but estimating \textit{where} requires localized loss ratios, which we found too variable to be reliable (see ``Further localization'', Section~\ref{sec:generalization}).}
+\end{enumerate}
+
+In an ablation study across our benchmark datasets (Appendix~\ref{app:ablation}), we find that using both the similarity weights \textit{and} the teacher prediction anchor yields better predictions than using either alone.
+
+
+
+In Algorithm~\ref{alg:local_distill} and throughout, we write $\hat\phi^{(-j)}(\bm{x}_j)$ for the teacher's prediction at training point $j$ computed without access to $(\bm{x}_j, y_j)$: if the teacher is fit to the training data, or uses it as context at prediction time (as with the in-context learning of tabular foundation models), $\hat\phi^{(-j)}$ is the out-of-fold (OOF) prediction; if the teacher makes no use of the training data, $\hat\phi^{(-j)} = \hat\phi$. We additionally include an unpenalized intercept, which we suppress in the notation for clarity.
+
+
+\begin{algorithm}[H]
+  \caption{Local distillation for regularized linear models}
+  \textbf{Input:} Training data $(\bm{X}, \bm{y})$ with $n$ observations; test observation $\bm{x}^*$; teacher $\hat\phi$; elastic-net parameter $\alpha \in [0,1]$.\\
+  \textbf{Output:} Prediction $\hat{y}^*$ and local coefficients $\hat{\bm \beta}^*$ at $\bm{x}^*$.
+  \hrule
+  \begin{enumerate}
+    \item \textbf{Estimate distillation strength} as the cross-validated student-to-teacher loss ratio:
+    \begin{equation}
+    \hat\mu = \frac{\hat{L}(f_{\hat{\bm\beta}})}{\hat{L}(\hat\phi)},
+    \qquad
+    \hat{L}(g) = \frac{1}{n}\sum_{j=1}^{n}\left(y_j - g^{(-j)}(\bm{x}_j)\right)^2,
+    \label{eqn:muhat}
+    \end{equation}
+    where $f_{\hat{\bm\beta}}$ is the global elastic-net fit with shrinkage parameter $\hat\lambda$ chosen by cross-validation, and $g^{(-j)}$ denotes prediction at $\bm{x}_j$ without access to $(\bm{x}_j, y_j)$. \\
+    If $\hat\mu \le 1$, return $\hat{y}^* = f_{\hat{\bm\beta}}(\bm{x}^*)$ and $\hat{\bm\beta}^* = \hat{\bm\beta}$, and stop.
+    \item \textbf{Compute similarity weights and effective sample size:}
+    \begin{equation}
+      \hat{S}_j =\hat{S}_j(\bm{x}^*)= \frac{\exp(-d_j)}{\sum_{k=1}^n \exp(-d_k)},
+      \qquad
+      d_j = \frac{\bigl(\hat\phi^{(-j)}(\bm{x}_j) - \hat\phi(\bm{x}^*)\bigr)^2}{\hat\sigma^2_\phi},
+      \qquad
+      \hat n_{\text{eff}} = \biggl(\sum_{j=1}^n \hat{S}_j^2\biggr)^{-1},
+      \label{eq:weights}
+    \end{equation}
+    where $\hat\sigma^2_\phi$ is the empirical variance of $\{\hat\phi^{(-j)}(\bm{x}_j)\}_{j=1}^n$.  
+    \item \textbf{Fit the local model and predict:}
+    $\hat{y}^* = \bm{x}^{*\top}\hat{\bm\beta}^*$, where
+    \begin{equation}
+      \hat{\bm\beta}^* = \argmin_{\bm\beta} \;
+        \frac{1}{2}  \sum_{j=1}^{n} \hat{S}_j\bigl(y_j - \bm{x}_j^\top\bm\beta\bigr)^2
+        + \frac{\hat\mu}{2 \sqrt{\hat n_{\text{eff}}}}
+              \bigl(\hat\phi(\bm{x}^*) - \bm{x}^{*\top}\bm\beta\bigr)^2
+        + \hat\lambda\bigl[\alpha\|\bm\beta\|_1 + \frac{(1-\alpha)}{2}\|\bm\beta\|_2^2\bigr].
+        \label{eq:loss}
+    \end{equation}
+  \end{enumerate}
+  \vspace{0.25em}
+  {\footnotesize \textit{Note:} For a set of test observations, run step~1 once and steps~2--3 independently (in parallel) for each $\bm{x}^*$.}
+  \label{alg:local_distill}
+\end{algorithm}
+
+\subsubsection{The teacher as a Bayesian prior}
+
+Our approach has a natural Bayesian interpretation: the teacher's prediction at the test observation acts as a Gaussian predictive prior on $\bm{x}^{*\top}\bm{\beta}$, centered at $\hat\phi(\bm{x}^*)$ with precision $\dfrac{\hat\mu}{\sqrt{\hat n_{\text{eff}}}}$. This connects to data augmentation priors~\cite{kadane1980interactive, bedrick1996new}, in which prior beliefs are encoded via pseudo-observations rather than parameter distributions. These priors express beliefs about observable quantities $y \mid \bm{x}$, which are typically more interpretable than beliefs about regression coefficients, and yield posterior inference via weighted least squares on a modified dataset.
+
+Our method differs in where the prior comes from and how it is deployed: rather than using a fixed set of elicited prior locations shared by one global fit, each test observation gets its own local model with a single pseudo-observation at the query point, centered at the teacher's prediction. Additionally, we estimate the prior precision $\dfrac{\hat\mu}{\sqrt{\hat n_{\text{eff}}}}$ from the data, in the spirit of empirical Bayes.
+This parallels the power prior of Ibrahim and Chen~\cite{ibrahim2000power}, where historical data enters the likelihood with a tunable weight; $\hat\mu$ plays the analogous role and is estimated directly from the student-to-teacher loss ratio.
+
+
+\subsection{A worked example of local distillation}
+\label{sec: example1}
+
+We illustrate the three steps of Algorithm~\ref{alg:local_distill} using the Auto MPG data~\cite{autompg1993}, a set of $n = 392$ vehicles from the 1983 American Statistical Association Exposition with $p = 8$ predictors after encoding, including engine characteristics, vehicle weight, model year, and region of manufacture. Our goal is to predict fuel economy in miles per gallon.
+
+We use the lasso as our student model, and TabPFN as the teacher. Using a 60/40 train/test split, we proceed as follows:
+\begin{enumerate}
+    \item \textbf{Estimate distillation strength.} The global lasso has CV PSE $12.81$; the TabPFN teacher $6.31$; therefore, $\hat\mu = \dfrac{12.81}{6.31} = 2.03$. Since $\hat\mu > 1$, the teacher improves on the global lasso and we proceed; had $\hat\mu \le 1$, we would have returned the global fit.
+    \item \textbf{Compute similarity weights.} For each test vehicle, we weight the training set by similarity of TabPFN's predicted MPG as in \eqref{eq:weights}. The effective sample sizes $\hat n_{\text{eff}}$ range from 39 to 172 (median 141) out of $n_{\text{train}} = 235$.
+    \item \textbf{Fit and predict.} We fit a locally distilled model for every test vehicle by solving \eqref{eq:loss}. This produces one model and prediction per car. On this test set, the global lasso has PSE $10.81$, TabPFN $5.25$, and local distillation $5.59$: the student performance is close to that of its teacher.  In Section~\ref{sec:interpretation}, we visualize and interpret the models.
+\end{enumerate}
+
+\subsection{Computability, generalizations and further localization}
+\label{sec:generalization}
+
+\paragraph{Computability.} For a single test observation $\bm{x}^*$, Equation~\eqref{eq:loss} is a weighted elastic-net problem with fixed $\hat\lambda$ and $\alpha$: append $\bm{x}^*$ to $\bm{X}$ and $\hat\phi(\bm{x}^*)$ to $\bm{y}$, and use weights $\{\hat S_1, \dots, \hat{S}_n, \hat\mu/\sqrt{\hat n_{\text{eff}}}\}$. Any solver that supports observation weights (e.g.\ \texttt{glmnet}~\cite{friedman2021package} or \texttt{adelie}~\cite{yang2024adelie}) can fit it directly. Fitting many models scales naturally: $\hat\lambda$ is estimated once on the training set, and the local fits are then independent single-$\lambda$ problems, parallelizable across query points.
+
+\paragraph{Other forms of regularization, and nonlinearities in the student.} 
+We have focused on the elastic-net penalty, which spans lasso through ridge, but the pseudo-observation construction above is agnostic to the penalty: any regularizer supported by the solver, such as the group or fused lasso, can be used in its place.
+
+We have also chosen the student to be locally linear, but the feature map is a modeling choice: replacing $\bm{x}$ with a basis expansion $\Phi(\bm{x})$ (e.g.\ pairwise interactions) yields a student that is linear in $\Phi(\bm{x})$ and fit identically, at the cost of interpreting coefficients in the expanded basis. 
+Natural choices here are \texttt{glinternet}~\cite{lim2015learning}, which selects pairwise interactions under a strong-hierarchy constraint, or reluctant interaction modeling~\cite{yu2019reluctant}, which adds interactions only where main effects leave residual signal; either keeps the local model sparse and interpretable while capturing interaction structure.
+
+\paragraph{Generalization to other losses.} We have illustrated our method with squared-error loss, but it extends to any loss $\ell(y,\eta)$ convex in $\eta = \bm{x}^\top\bm\beta$: the local objective of Algorithm~\ref{alg:local_distill} becomes
+\begin{equation}
+  \hat{\bm\beta}^* = \argmin_{\bm\beta}
+    \sum_{j=1}^{n} \hat{S}_j\,\ell(y_j, \bm{x}_j^\top\bm\beta)
+    + \frac{\hat\mu}{\sqrt{\hat n_{\text{eff}}}}\,\ell(\hat\phi(\bm{x}^*), \bm{x}^{*\top}\bm\beta)
+    + \hat\lambda[\alpha\|\bm\beta\|_1 + \tfrac{(1-\alpha)}{2}\|\bm\beta\|_2^2],
+  \label{eq:general_loss}
+\end{equation}
+where $\hat\mu$ is the cross-validated student-to-teacher loss ratio with $\ell$ in place of squared error. Taking $\ell(y, \eta) = \tfrac{1}{2}(y-\eta)^2$ recovers Equation~\eqref{eq:loss}.
+
+For logistic regression, the distillation term is the cross-entropy between the teacher's and student's predicted probabilities, matching the soft-target distillation of \citet{hinton2015distilling}; similarity distances $d_j$ are computed on the logit scale. 
+
+A survival response requires one change: the loss is the weighted Cox partial likelihood, and since the teacher has no natural place in its risk-set structure, it enters instead as a squared penalty $(\hat\phi(\bm{x}^*) - \bm{x}^{*\top}\bm\beta)^2$ on the log-relative-hazard scale. 
+
+\paragraph{Further localization.} For each test observation, one could select $\lambda$ by local cross-validation and estimate $\mu$ from locally weighted losses. We instead reuse the global $\hat\lambda$: the local loss in \eqref{eq:loss} is a weighted mean on the same scale as the cross-validation loss used to select $\hat\lambda$, so the same value is a sensible default, and refitting locally is expensive and in our experiments rarely improved prediction. Local estimates of $\mu$ were highly variable and did not reliably improve performance either.
+
+\paragraph{Teacher selection.} Given several candidate teachers, we propose selecting the one minimizing the cross-validated loss $\hat{L}(\hat\phi)$ in \eqref{eqn:muhat}; this adds little cost beyond Step~1 of Algorithm~\ref{alg:local_distill}, and in our benchmarks, it worked well (Appendix~\ref{app:real_data}).
+
+\paragraph{Cross-modal and cross-domain distillation.} The teacher enters Algorithm~\ref{alg:local_distill} only through its \textit{predictions}: out-of-fold predictions on the training data, and the prediction at $\bm{x}^*$. There is therefore no requirement that it use the same features as the student. A teacher built on a richer modality (e.g.\ images, text, or additional clinical measurements) can be distilled into a local linear model on the features we wish to \textit{interpret}; conversely, the teacher may perform best with fewer features than the student, as in our gene expression example (Section~\ref{sec:bctcga}), where the teacher screens to $500$ genes while the student is fit over all $17{,}322$.
+Nor is the teacher required to be trained on the data at hand. Most of our examples use TabPFN, a foundation model pretrained on synthetic data; a model fit to an external cohort is analogous. In either case, $\hat\mu$ guards against domain shift: if the teacher does not transfer well, $\hat\mu \le 1$ and the method reverts to the global fit.
+
+\section{Related work}
+\label{sec:rel_work}
+
+\paragraph{Local linear modeling.}
+Local modeling methods fit a separate model for each test observation rather than a single global model. The classical example is LOESS~\cite{cleveland1988locally}, which at each test observation fits a linear or quadratic regression weighted by kernel proximity in input space. LOESS produces smooth, adaptive predictions without committing to a global functional form, and its local coefficients are interpretable. Its weighting is defined by a user-specified kernel with a bandwidth tuning parameter, and it does not use a teacher.
+
+Closer to ours are methods that fit a local linear model with supervised weights derived from a forest. Generalized random forests~\cite{athey2019generalized} and local linear forests~\cite{friedberg2020local} use a forest's leaf co-membership, and the attention lasso~\cite{craig2025supervised} similarly uses random forest proximity, then blends each local fit with a global baseline via a mixing parameter tuned by cross-validation. 
+Local distillation instead defines locality through similarity of predicted response, which allows the use of any accurate regressor as teacher. 
+The teacher's influence is estimated from the cross-validated loss ratio rather than tuned, and the method reverts to the global fit when the teacher offers no improvement. 
+Moreover, the teacher enters as a pseudo-observation within a single fit, rather than blending with a second model: each local model is then an elastic-net fit on a weighted, augmented dataset with a single active set. 
+When the local models use lasso regularization (elastic-net $\alpha = 1$), the stability guarantees of Section~\ref{sec:theory} apply to their feature-selection probabilities.
+
+Many recent local linear methods are designed to produce \textit{local explanations} of black-box predictors; they differ in what they fit and in how the black box enters. 
+The most widely used, LIME~\cite{ribeiro2016lime}, fits to the black box: a sparse linear model at each test observation is fit to proximity-weighted perturbations of the input, with the teacher's predictions as the response, so LIME approximates the teacher rather than the data; like SHAP~\cite{lundberg2017unified}, its explanations are sensitive to choices external to the model and data~\cite{garreau2020explaining, slack2020fooling, kumar2020problems, aas2021explaining}.
+MAPLE~\cite{plumb2018model} is more flexible in its response: a random forest fit to $y$ supplies global feature selection and a proximity kernel, which together weight a local regression at each test observation. 
+This local model can regress on either the observed labels $y$ or a black-box teacher's predictions.
+As a predictor, MAPLE is closely related to local linear forests, which we include in our benchmarks as a representative of this family (Section~\ref{sec:real_data}).
+
+Local distillation shares this per-test-point linear structure and fits the observed response $y$; the teacher defines locality and anchors the fit rather than serving as the target.
+It is a predictive method in its own right, and in contrast to the local methods above, it comes with stability guarantees for feature selection (Section~\ref{sec:theory}).
+
+%Such explanations are sensitive to choices external to the model. LIME depends on the random perturbations drawn around an observation, with no canonical way to define the neighborhood or preserve dependence among features, and SHAP attributions~\cite{lundberg2017unified}, which allocate a prediction across features via Shapley values, depend on the reference distribution and on how absent features are imputed. 
+%Local distillation shares this per-test-point linear structure and fits the true labels $y$. However, it uses a black-box teacher in two novel ways. First, the teacher's \emph{predictions} define similarity weights, so any accurate regressor can serve as teacher. Second, the teacher enters the objective directly as a single pseudo-observation of data-driven strength $\hat\mu$. It is therefore a predictive method in its own right and, unlike the perturbation-based explainers above~\cite{alvarez2018robustness}, it comes with stability guarantees for feature selection (Section~\ref{sec:theory}).
+
+\paragraph{Prediction-powered inference.}
+Prediction-powered inference (PPI, PPI++)~\cite{angelopoulos2023ppi, angelopoulos2023ppipp} augments classical statistical analyses with predictions from a powerful machine learning (ML) model when labeled data are scarce. Given a small labeled dataset and a large unlabeled dataset, it imputes the missing labels and builds confidence intervals for population-level estimands that account for the model's imputation error and recover the classical estimator when the ML model adds nothing.
+PPI and local distillation share a philosophy: both use a powerful ML model to strengthen a simpler statistical procedure, and revert to the simpler procedure---in our case, the well-understood global linear model---when the ML model is unreliable. They differ in target and mechanism. PPI targets population-level inference and corrects for prediction error in its confidence intervals; local distillation targets pointwise prediction and guards against an unhelpful teacher through the data-driven $\hat\mu$ and reversion to the global fit. The power-tuning parameter $\lambda_{\text{PPI}}\in [0,1]$ of PPI++ (chosen from data to minimize variance) mirrors the role of $\hat\mu$, though $\hat\mu$ enters as the precision of a pseudo-observation rather than a mixing weight.
+
+\section{Interpretability through stability}
+\label{sec:interpretation}
+
+Local distillation, as described in Algorithm \ref{alg:local_distill}, predicts each query point through a sparse local linear fit anchored at that point.
+Building on the concerns raised in Section \ref{sec:intro}, conclusions drawn from predictions may inspire little trust unless they can be shown to be stable, motivating the development of a stability-based framework for interpretation.
+To this end, we propose randomized local distillation, a simple modification of Step 3 in Algorithm \ref{alg:local_distill}.
+The resulting framework assesses stability by examining how the local coefficients vary under random perturbations of the local distillation optimization, while holding the query point $\bm{x}^*$ and features $\bm{X}$ fixed. 
+The stability analysis yields interpretations of predictions at two levels, as demonstrated in this section: (i) individually, through the selected features in each sparse local model, and (ii) in aggregate, by characterizing heterogeneity across query points to identify similar and dissimilar regions of the dataset.
+
+
+\subsection{Randomized local distillation}   
+\label{sec:randomized_estimator}
+
+Let $\bm w = (w_1, \dots, w_{n+1})$ denote a vector of $(n+1)$ independent and identically distributed randomization variables, with $w_j \sim \mathcal{N}(0, \tau^2)$ for $j = 1, \dots, n+1$.
+Rather than relying on a single local fit, we generate repeated randomized local fits by solving
+\begin{equation}
+\begin{aligned}
+  \hat{\bm\beta}^{\bm w} = \argmin_{\bm\beta} \;
+   \frac{1}{2}\sum_{j=1}^{n} & \hat{S}_j\bigl(y_j - \bm{x}_j^\top\bm\beta\bigr)^2
+    +  \frac{\hat\mu}{2 (\hat n_{\text{eff}})^{1/2}}
+          \bigl(\hat\phi(\bm{x}^*) - \bm{x}^{*\top}\bm\beta\bigr)^2
+    + \hat\lambda\bigl[\alpha\|\bm\beta\|_1 + \frac{(1-\alpha)}{2}\|\bm\beta\|_2^2\bigr]\\
+    &\;\;\;\; - \left(\sum_{j=1}^{n} \hat{S}_j^{1/2} w_j  \bm{x}_j   +  \frac{\hat\mu^{1/2}}{n_{\text{eff}}^{1/4}} w_{n+1} \bm{x}^* \right)^\top \bm\beta,
+\end{aligned}    
+  \label{eq:randomized_objective}
+\end{equation}
+where $\hat{\bm\beta}^{\bm w}$ denotes the coefficient vector obtained at $\bm{x}^*$ for a given randomization draw $\bm{w}$.
+
+Randomized local distillation modifies \eqref{eq:loss} of Algorithm \ref{alg:local_distill} by introducing a linear perturbation through normally distributed noise variables, while leaving the loss and penalty terms unchanged.
+Thus, as with local distillation, the randomized fit naturally extends to other loss functions and regularizers.
+Analogous to the weighting of the summands in the loss, each randomization variable $w_j$ in the linear perturbation term is scaled by the square root of its corresponding weight, $\hat{S}_j$.
+Consequently, if $\hat{S}_j$ is zero or close to zero, $w_j$ has no or little effect on the optimization.
+
+The amount of randomization in each randomized local fit is controlled by $\tau^2$, the variance of the normal randomization variables in $\bm w$.
+In practice, we set $\tau^2= t \; *\dfrac{\hat{\sigma}^2}{\hat{n}_{\text{eff}}}$, where $\hat{n}_{\text{eff}} = \frac{1}{\hat{S}_1^2 + \ldots + \hat{S}_n^2}$ is the effective sample size  (Equation~\eqref{eq:weights}), $\hat{\sigma}^2$ is the variance of the teacher’s out-of-fold residuals, and $t$ is a constant chosen by the analyst. 
+Choosing the randomization variance as a fixed fraction of $\dfrac{\hat{\sigma}^2}{\hat{n}_{\text{eff}}}$ ensures that the scale of the randomization is comparable to the scale of variability contributed by the data to the optimization objective.
+We recommend using data to guide the choice of $t$.
+The sensitivity bound established in Theorem~\ref{thm:stability}, from which the stability bound in Corollary \ref{cor:stability} follows, improves as the randomization sd $\tau$ increases, and thus as $t$ increases.
+But too much randomization can reduce the predictive accuracy of the randomized fits.
+Therefore, we take the largest $t$ whose out-of-fold median prediction error is within a small tolerance of that from the unperturbed fits ($t=0$); the tolerance reflects how much prediction accuracy the analyst is willing to trade for stability, and we use 5\% throughout.
+Figure~\ref{fig:single_model} (left) shows the selection process for the Auto MPG data.
+
+{\small{
+\begin{remark}
+The randomization in \eqref{eq:randomized_objective} is similar in form to that used in the post-selection inference literature, where linear perturbation terms are added to penalized M-estimation problems to preserve information that can later be leveraged for valid inference in selected models.
+See, for example, the randomized inference methods developed in \cite{tian2018randomized, panigrahi2021selection, bakshi2024selective, huang2025selective, perry2026post}.
+Here, however, the added randomization serves a different role: in Section \ref{sec:theory}, we prove that it provides stability guarantees for feature--selection probabilities under small perturbations of the training data.
+\end{remark}
+}}
+%That is, we perturb in each randomized local distillation fit the observed outcomes and the pseudo-outcome based on the teacher’s prediction, while holding fixed across randomization draws the design matrix, query point $\bm{x}^*$, weights $\hat{S}_j$, and regularization parameters $\hat{\mu}$ and $\hat{\lambda}$.
+
+\subsection{Interpreting a single local model}
+\label{sec:interpretation_singular}
+
+At a given query point $\bm{x}^*$, the local model characterizes the feature--response relationship among observations with similar predicted outcomes.
+More specifically, a single local distillation fit yields a sparse set of features, $\{j:\hat{\beta}_j\neq 0\}$ (for $\alpha > 0$), providing an interpretation of its prediction at $\bm{x}^*$.
+But, as with the standard lasso, this selected set may be unstable: predictors near the selection boundary may enter or leave the model under even slight perturbations in the outcomes, ultimately yielding different local interpretations at $\bm{x}^*$. 
+
+To address this instability, we compute for each feature its empirical selection frequency across the randomized local fits
+$$
+\hat{\pi}_j = \frac{1}{B}\sum_{b=1}^{B}
+\mathbb{I}\left\{\hat{\beta}^{\bm{w}_b}_j \neq 0\right\},
+$$
+where $B$ is the number of refits of \eqref{eq:randomized_objective} and $\bm{w}_b$ denotes the randomization used in the $b$-th fit.
+That is, $\hat{\pi}_j$ is the proportion of randomized local refits in which that feature is selected.
+In particular, a low selection frequency signals uncertainty about a feature's contribution to the prediction at $\bm{x}^*$.
+
+The table in Figure~\ref{fig:single_model} shows one such model for a single test car.
+Alongside each coefficient we report its selection frequency, the fraction of randomized local refits retaining that feature.
+In this example, five of the seven selected features are retained in over 90\% of refits; the least stable are cylinders and horsepower, retained in 75\% and 70\% respectively.
+Randomization flags these as uncertain.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.55\linewidth}
+  \vspace{0pt}
+  \includegraphics[width=\linewidth]{paper_plots/autompg_ctau_mse.pdf}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+  \centering
+  \vspace{0.5em}
+  {\small
+  \sffamily
+  \begin{tabular}{lrr}
+  \toprule
+  Feature & Coef. & Sel.\ prob. \\
+  \midrule
+  weight            & $-5.11$ & 100\% \\
+  model year        & $2.28$  & 100\% \\
+  origin: European  & $0.40$  & 99\% \\
+  acceleration      & $0.52$  & 99\% \\
+  origin: Japanese  & $0.41$  & 98\% \\
+  \textbf{cylinders}  & $\bm{0.24}$  & \textbf{75\%} \\
+  \textbf{horsepower} & $\bm{-0.17}$ & \textbf{70\%} \\
+  \bottomrule
+  \end{tabular}
+  }
+\end{minipage}
+\caption{\textbf{Left: choosing the randomization scale $t$.} We take the largest $t$ whose out-of-fold median squared error remains within 5\% of the unperturbed fit (shaded); the selected value is circled. \textbf{Right: a local model for a single test car} with mid-range fuel economy (distillation predicted $23.7$ mpg, observed $23.9$ mpg), ordered by decreasing selection probability. The lasso penalty selected 7 of the 8 features in the unperturbed fit. Selection probability is the fraction of 100 randomized refits retaining the feature at the selected scale $\hat t$ (circled at left), and features retained in under 90\% are shown in bold. Region coefficients are contrasts against American manufacture.}
+\label{fig:single_model}
+\end{figure}
+
+Here, with only $8$ features, most selections are stable across refits. This is not the case in higher dimensions: in the gene expression example of Section~\ref{sec:bctcga} ($p = 17{,}322$), the median local fit selects $94$ genes, of which typically only $15$ are retained in over $90\%$ of refits. In simulation (Appendix~\ref{app:simulation}), we find that the selection frequencies distinguish the true support while yielding a smaller, more interpretable set of features.
+
+Using randomized refits to address the instability of lasso-selected features is not new; a prominent example is stability selection \citep{meinshausen2010stability} based on subsampling.
+The randomization mechanism in our approach, however, is deliberately different from subsampling.
+This distinction has consequences for both the computational cost of local refitting and the interpretation of the resulting stability measures, which we discuss below.
+
+{
+\small
+{
+\begin{remark}
+Across randomized refits of local distillation, as proposed in  \eqref{eq:randomized_objective}, the similarity weights and teacher predictions are computed once from the training data and then held fixed. 
+The added randomization perturbs only the optimization objective, while keeping the design fixed and using all $n$ observations in each refit.
+From a computational perspective, this avoids the potentially substantial additional cost of subsampling-based refitting procedures such as stability selection. 
+Under subsampling, Steps 1 and 2 of Algorithm \ref{alg:local_distill} would need to be recomputed for each refit, as would the teacher predictions whenever they depend on the sampled training data; take, for example, predictions from tabular foundation models deploying in-context learning.
+\label{rem: stability sel1}
+\end{remark}
+
+\begin{remark}
+The choice of randomization determines the notion of stability being assessed and, consequently, the interpretation of the resulting predictions.
+Beyond its computational advantages, our randomization mechanism is designed to remain faithful to the locality learned from the training data: each refit preserves the same similarity weights and the teacher prediction anchor.
+By contrast, under subsampling-based refits, even small changes in sample composition can potentially alter the local structure in data, especially when the effective sample size $\hat n_{\text{eff}}$ is small, i.e., when the weights $\hat S_j$ are concentrated on only a few observations, or when outcomes have heterogeneous noise levels. 
+In such settings, variation across refits may reflect changes in the local structure rather than instability in the local feature--response relationship itself, making stability a less reliable characterization of that relationship.
+\label{rem: stability sel2}
+\end{remark}
+}
+}
+
+
+\subsection{Interpreting the local models in aggregate}
+\label{sec:interpretation_aggregate}
+
+Beyond individual models, we are also interested in understanding our sample and the heterogeneity within it. A natural approach would be to fit locally distilled models on a test set with $n_{\text{test}}$ observations (or in a leave-one-out setting on the training data), and then cluster the fitted coefficient vectors into $k$ clusters. 
+However, our goal is to identify and interpret subgroups that are stable under small perturbations of the response $\bm{y}$ rather than artifacts of a single fit. 
+We therefore aggregate the clustering obtained across the randomized refits from Section~\ref{sec:randomized_estimator} using \emph{evidence accumulation clustering}~\cite{fred2005combining}, allowing the same refits used to characterize local feature--response relationships to also inform stable subgroup structure in the data.
+We proceed as follows:
+
+\begin{enumerate}
+  \item \textbf{Fit unperturbed local models:} run local distillation to obtain $n_{\text{test}}$ fitted local 
+  models, with coefficient vectors in $\R^p$.
+  \item \textbf{Choose the number of clusters:} cluster the $n_{\text{test}}$ unperturbed coefficient vectors and select the appropriate $k$.
+  \item \textbf{Cluster the randomized refits:} draw $B$ independent  randomization vectors $\bm{w}_1, \ldots, \bm{w}_B$, as described in Section~\ref{sec:randomized_estimator}. For each draw  $\bm{w}_b$, run randomized local distillation (solve \eqref{eq:randomized_objective}) to obtain $n_{\text{test}}$ randomized coefficient vectors, and cluster these into $k$ groups, yielding $B$ cluster assignments of  the test observations.
+  \item \textbf{Cluster the co-occurrence matrix:} define the similarity between two test observations as the fraction of the $B$ clusterings in which they fall in the same group, and use this metric for a final clustering into $k$ groups.
+\end{enumerate}
+
+
+We illustrate this using the Auto MPG data. 
+We \textbf{(1) fit local models} for the ${n_{\text{test}} = 157}$ observations and \textbf{(2) select the number of clusters $\mathbf{k}$} using $k$-means clustering of the unperturbed local coefficient vectors; the silhouette score selects $k = 3$.
+We then \textbf{(3) cluster the randomized refits}: for each of $B = 100$ randomized local distillation runs, we cluster the refitted coefficient vectors using $k$-means with $k = 3$.
+Finally, we \textbf{(4) cluster the co-occurrence matrix}: the similarity between two cars is the fraction of the $100$ runs in which they are assigned to the same cluster, and clustering this matrix by average linkage yields the three groups shown in Figure~\ref{fig:coef_heatmap}. 
+To visualize the result, we display the unperturbed coefficients in a heatmap, either ordered by cluster, or averaged within cluster. 
+The three clusters use different features: cylinders is predictive among the least efficient cars, and displacement among the most efficient.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{paper_plots/autompg_local_coefs.pdf}
+  \caption{\textbf{Vehicle subgroups and their local miles per gallon models.} Local coefficients for the Auto MPG data, with test cars grouped into three subgroups (C1--C3) by the stable clustering of Section~\ref{sec:interpretation_aggregate}. Subgroups are ordered left to right by mean MPG, and cars by predicted MPG within subgroup.}
+  \label{fig:coef_heatmap}
+\end{figure}
+
+\section{Theoretical analysis of stability} 
+\label{sec:theory}
+
+In this section, we establish stability guarantees for feature--selection probabilities under randomized local distillation \eqref{eq:randomized_objective}, whose local coefficients enable interpretation of the distilled fits both individually and in aggregate.
+Throughout this section, we treat the similarity weights $\hat S_j$ and the regularization parameters $\hat\mu$ and $\hat\lambda$ as fixed. 
+To avoid confusion, we drop the hats and write these quantities as $S_j$, $\mu$, and $\lambda$, respectively; similarly we write $n_{\mathrm{eff}}$ for the effective sample size.
+We slightly modify our notation for the teacher's prediction at the query point, denoting it by $\hat\phi(\bm{x}^*; \bm{y})$, to make explicit that it may depend on the training response, as is the case in tabular foundation models, for example.
+We focus on the lasso penalty, i.e., $\alpha=1$, while deferring an extension to the elastic-net penalty for future work to keep the theoretical development streamlined.
+
+Our main result, Theorem \ref{thm:stability}, characterizes how the feature--selection probabilities are sensitive to changes in the input responses, leading to the uniform stability guarantee in Corollary \ref{cor:stability} under small perturbations of the training response.
+To prove this result, we first establish a stability guarantee for randomized lasso regression of a perturbed response on the design matrix; see Theorem \ref{thm:single-feature-stability} in Appendix \ref{App:stability:lasso}.
+To the best of our knowledge, this is the first such guarantee for Gaussian randomization introduced through linear perturbations of the optimization objective, providing a theoretical basis for the stability-based interpretation of feature--selection probabilities under the lasso penalty.
+
+\subsection{Notation and preliminaries}
+Before proceeding, we introduce notation used to develop the theory.
+
+First, let 
+\begin{equation*}
+  \bm{\ybar} = \begin{pmatrix} y_1 \\ \vdots \\ y_n \\ \hat\phi(\bm{x}^*; \bm{y})\end{pmatrix}
+  \in \R^{n+1},
+  \qquad
+  \bm{\Xbar} = \begin{pmatrix} \bm{x}_1^{\top} \\ \vdots \\ \bm{x}_n^{\top} \\ (\bm{x}^{\ast})^{\top}\end{pmatrix}
+  \in \R^{(n+1)\times p},
+\end{equation*}
+denote the augmented response vector and design matrix, obtained by appending the teacher's prediction $\hat\phi(\bm{x}^*; \bm{y})$ and the query point $\bm{x}^*$ to the response vector and design matrix, respectively. 
+
+
+Let 
+\begin{equation*}
+  \bm{\Om} \;=\; \diag\!\left(S_1, \dots, S_n, S_{n+1}\right)
+  \in \R^{(n+1)\times(n+1)},
+\end{equation*}
+denote the diagonal matrix of weights for the $n+1$ observations in the augmented dataset, where $S_{n+1}=\frac{\mu}{\sqrt{n_{\mathrm{eff}}}}$ is the weight assigned to the pseudo-response at the query point.
+We then define
+\begin{equation}
+\label{eq:whitened}
+  \bm{z}= \bm{z}(y_1,\ldots, y_n) \;=\; \bm{\Om}^{1/2}\,\bm{\ybar} \in \R^{n+1},
+  \qquad
+  \bm{V} \;=\; \bm{\Om}^{1/2}\,\bm{\Xbar} \in \R^{(n+1)\times p} ,
+\end{equation}
+to be the weight-adjusted response and design, respectively, i.e.,  coordinatewise, $Z_k = \sqrt{S_k}\, y_k \quad (k \le n)$, and $Z_{n+1} = \sqrt{S_{n+1}} \, \hat\phi(\bm{x}^*; \bm{y}) = \frac{\sqrt{\mu}}{\neff^{1/4}}\, \hat\phi(\bm{x}^*; \bm{y})$.
+
+Under this notation, when $\alpha=1$ and $\lambda$ denotes the tuning parameter for the lasso penalty, the randomized local distillation problem \eqref{eq:randomized_objective} is equivalent to solving 
+\begin{equation}
+\label{eq:randomized-lasso}
+  \bm{\bhat}^{\,\bm{\omega}}
+  \;=\;
+  \operatorname*{argmin}_{\bm{\beta} \in \R^{p}}
+  \; \tfrac{1}{2}\,\norm{\bm{z} + \bm{\omega} - \bm{V}\bm{\beta}}_{2}^{2}
+  \;+\; \lambda \norm{\bm{\beta}}_{1},
+\end{equation}
+where $\bm{\omega}\sim \mathcal{N}(0, \tau^2 \bm{I}_{n+1})$ is drawn independently of the training response.
+The equivalent optimization problem, which follows from straightforward algebra, is used throughout this section. 
+An advantage of this formulation is that it allows us to first establish guarantees for randomized lasso regression of a perturbed response on a design matrix. These results then yield the desired guarantees for local distillation, while also being of potential independent interest beyond the present setting.
+
+Let $\widehat E_V(\boldsymbol z,\boldsymbol\omega)=\operatorname{supp}\!\left(\widehat{\boldsymbol\beta}^{\boldsymbol\omega}(\boldsymbol z)\right)$
+denote the active set obtained by solving the randomized lasso in \eqref{eq:randomized-lasso}.
+The quantity of interest is the feature-selection probability for predictor $j$, evaluated as a function of $\bm{y}$ and denoted by
+\begin{equation}
+\label{eq:pi-def}
+  \pi_j(\bm{y})
+  \;=\;
+  \PPo\!\left[\, j \in \Ehat_V(\bm{z},\bm{\omega})\right],
+  \quad \text{ for } j \in [p],
+\end{equation}
+where the probability is over the randomization $\bm{\omega}$, with $\bm{y}$ and hence $\bm{z}=\bm{z}(y_1,\ldots, y_n)$ treated as fixed, and $[p]=\{1,2,\ldots, p\}$. 
+The subscript $\bm{\omega}$ on the probability, here and throughout, indicates that the probability is taken only with respect to the randomization.
+
+
+
+%--------------------------------------------------------------------
+\subsection{Stability of randomized local distillation}
+\label{sec:stability-main}
+
+Because the selection probabilities in \eqref{eq:pi-def} are obtained by convolving the discontinuous feature--selection indicator with the Gaussian density of $\bm{w}$, they are smooth provided that the teacher's prediction is a smooth function of the input $\bm{y}$. 
+Lemma \ref{lem:smoothness} formalizes this observation before we turn to the stability guarantee for randomized local distillation; the proof is provided in Appendix \ref{App: main}.
+
+\begin{lemma}[Smoothness of feature--selection probabilities]
+Fix $k\in\mathbb{N}\cup\{\infty\}$ and suppose that $\bm y\mapsto\hat\phi(\bm{x}^*; \bm{y})$ belongs to $\mathcal{C}^k(\R^n)$. Then for every
+$j\in[p]$, the selection probability $\pi_j(\bm{y})$, defined in \eqref{eq:pi-def}, also belongs to $\mathcal{C}^k(\R^n)$.
+\label{lem:smoothness}
+\end{lemma}
+
+
+We now state Theorem \ref{thm:stability}, which bounds the sensitivity of the feature--selection probabilities to perturbations of the training response $\bm{y}$, leveraging the smoothness of these probabilities established in Lemma \ref{lem:smoothness}.
+We derive this result under the following assumptions on the design matrix $\bm{X}$, the similarity weights $S_j$ and the weight-adjusted design matrix $\bm{V}$.
+
+\begin{assumption}[Weight-adjusted design in general position]
+\label{assump:general-position}
+The columns of $\bm{V}$ are in \textit{general position} \cite{Tibshirani2012TheLP}.
+\end{assumption}
+
+\begin{assumption}[Bounded weight concentration]
+\label{assump:distillation-weight-spikiness}
+We assume that there exists a constant $C_S<\infty$ such that $n_{\mathrm{eff}}S_{\max}\le C_S$.
+\end{assumption}
+
+\begin{assumption}[Bounded design and local distillation weight]
+\label{assump:distillation-bounded-covariates}
+For some constants $B_X,C_\mu>0$, we assume that
+$\max\left\{\max_{i\in[n]}\|\boldsymbol x_i\|_\infty, \|\bm{x}^*\|_\infty \right\}\le B_X$, and $0<\mu\le C_\mu$.
+\end{assumption}
+
+\begin{assumption}[Non-degeneracy of restricted design]
+\label{assump:distillation-local-nondegeneracy}
+For some constant $\kappa_X>0$, we assume that, uniformly over $j\in[p]$ and $E\in\mathcal E_{-j}^V$, where $\mathcal E_{-j}^V$ denotes the collection of essential active sets from lasso regression on $\bm{V}_{-j}$ (i.e., active sets from the leave-$j$-covariate-out lasso fit whose corresponding selection regions have positive Lebesgue measure),
+\[\sigma_{\min}\left(\frac{1}{\sqrt{|\mathcal I_S|}}\,\boldsymbol X_{\mathcal I_S,E\cup\{j\}}\right)\ge \kappa_X,\]
+where $\mathcal I_S=\left\{i\in[n]:S_i\ge\frac{1}{2n_{\mathrm{eff}}}\right\}$ collects the training observations whose similarity weights are at least one half of the effective uniform weight.
+\end{assumption}
+
+Under Assumption~\ref{assump:general-position}, the randomized local distillation problem \eqref{eq:randomized-lasso} admits a unique solution.
+Assumption~\ref{assump:distillation-weight-spikiness} prevents the similarity weights from concentrating too heavily on a small number of observations. Assumption~\ref{assump:distillation-bounded-covariates} requires both the design covariates and the distillation-weight parameter to be bounded. Assumption~\ref{assump:distillation-local-nondegeneracy} imposes a lower singular-value condition on the design restricted to the effective similarity neighborhood $\mathcal I_S$, preventing the relevant design columns from becoming nearly linearly dependent among observations receiving non-negligible weights.
+
+
+\begin{theorem}[Sensitivity bound for selection probabilities]
+\label{thm:stability}
+Suppose that $\bm y\mapsto\hat\phi(\bm{x}^*; \bm{y})$ belongs to $\mathcal{C}^1(\R^n)$ with $L_{\hat\phi}(\bm{x}^*) = \sup_{\bm{y}\in \R^n} \|\nabla \hat\phi(\bm{x}^*; \bm{y})\|_{\infty}<\infty$, and that Assumptions \ref{assump:general-position}, \ref{assump:distillation-weight-spikiness}, \ref{assump:distillation-bounded-covariates} and \ref{assump:distillation-local-nondegeneracy} hold.
+Then there exists a constant $C<\infty$ such that, for every $j\in[p]$, 
+\begin{equation*}
+  \sup_{\bm{y}\in \R^n} \|\nabla \pi_j(\bm{y})\|_{\infty}
+  \;\le\;
+  \sqrt{\frac{2}{\pi}}\frac{C}{\tau}
+  \left(\frac{1}{\sqrt{\neff}}
+    \;+\; \frac{L_{\hat\phi}(\bm{x}^*)}{\neff^{1/4}}\right).
+\end{equation*}
+\end{theorem}
+
+A proof of Theorem \ref{thm:stability} is provided in Appendix \ref{App: main}.
+The proof consists of two main components. 
+First, we analyze the stability of the randomized lasso obtained by regressing a perturbed response on a $p$-dimensional feature matrix, as detailed in Appendix \ref{App:stability:lasso}. 
+Second, we apply the chain rule to characterize the additional contribution from local distillation, as detailed in Appendix \ref{App:stability:aux}.
+
+We make a few observations on the above-stated result.
+\begin{enumerate}[leftmargin=*]
+\item[(i)] It follows directly from the bound in Theorem \ref{thm:stability} that the contribution of each training observation to the sensitivity of a feature's selection probability has two components: the first is a direct contribution, excluding the effect of distillation, which is of order $\neff^{-1/2}$, and the second contribution arises through the teacher's prediction, which is of order $\neff^{-1/4} L_{\hat\phi}(\bm{x}^*)$.
+\item[(ii)] Although we make no assumption on $L_{\hat\phi}(\bm{x}^*)$, which reflects how the sensitivity of the teacher's prediction scales with the effective sample size, it may decrease as the effective sample size grows, leading to a sharper rate for the second contribution in the bound.
+\item[(iii)] When the teacher is a fully pretrained model (i.e., the teacher's prediction does not depend on the training samples), the bound in Theorem \ref{thm:stability} simplifies to 
+$$\sup_{\bm{y}\in \R^n} \|\nabla \pi_j(\bm{y})\|_{\infty}\;\le\;\sqrt{\frac{2}{\pi}}\frac{C}{\tau} \neff^{-1/2},$$
+since $L_{\hat\phi}(\bm{x}^*)=0$. 
+As a further special case, for the global lasso fit without using the teacher as a Bayesian prior to shrink the linear predictor toward its predictions, and with uniform similarity weights $S_j= 1/n$, the same bound holds with $\neff=n$.
+\end{enumerate}
+
+Theorem \ref{thm:stability} immediately yields the following corollary, which quantifies the stability of the feature--selection probabilities in response to a perturbation of a single response value, paralleling notions of algorithmic stability under single-observation perturbations \citep{bousquet2002stability}.
+
+
+
+\begin{corollary}[Stability guarantee]
+Under the assumptions of Theorem \ref{thm:stability}, there exists a constant $C<\infty$ such that, for every $j\in[p]$, $i\in[n]$, and for any $\bm{y},\bm{y}'\in\mathbb{R}^n$ satisfying $y_k=y_k'$ for all $k\neq i$ (equivalently, differing only in the $i$-th coordinate),
+$$\bigl\lvert \pi_j(\bm{y}) - \pi_j(\bm{y}') \bigr\rvert\;\le \sqrt{\frac{2}{\pi}}\frac{C}{\tau}
+  \left(\frac{1}{\sqrt{\neff}}
+    \;+\; \frac{L_{\hat\phi}(\bm{x}^*)}{\neff^{1/4}}\right) |y_i - y'_i|.$$ 
+\label{cor:stability}
+\end{corollary}
+
+The proof of Corollary \ref{cor:stability} follows directly from the sensitivity bound in Theorem \ref{thm:stability} and is therefore omitted.
+
+The stability bound presented in Corollary \ref{cor:stability} improves with the randomization standard deviation $\tau$.
+However, this does not imply that arbitrarily increasing the amount of randomization is desirable, since doing so can compromise predictive accuracy.
+Accordingly, as described in Section \ref{sec:randomized_estimator}, we choose $\tau$ to balance stability against a user-specified tolerance for loss in predictive accuracy.
+
+\paragraph{Extension to stability over a regularization-grid.} Our stability-based approach could be extended to base decisions on a grid $\Lambda$ of lasso regularization parameters $\lambda$, rather than on a single fixed value of $\lambda$.
+As proposed in the stability selection framework of \cite{meinshausen2010stability}, a natural quantity on which to base decisions is $\displaystyle\max_{\lambda\in\Lambda}\pi_j(\bm{y}; \lambda)$, where $\pi_j(\bm{y}; \lambda)$ denotes the selection probability at $\lambda$ (with the dependence on $\lambda$ made explicit in the notation), and the maximum taken over the grid of regularization parameters.
+However, our proof techniques for controlling the sensitivity of this quantity to perturbations of the training input, and hence for establishing stability guarantees, may not extend directly to the maximum operation because it is not smooth.
+
+Instead, one can consider a smooth approximation to $\displaystyle\max_{\lambda\in\Lambda}\pi_j(\bm{y}; \lambda)$, namely $\Pi_{\Lambda}(\bm{y})=\frac{1}{\eta}\log\left(\frac{1}{|\Lambda|}\sum_{\lambda\in\Lambda}\exp\left(\eta\pi_j(\bm{y}; \lambda)\right)\right)$, for fixed $\eta \in \mathbb{R}^{+}$. 
+Like the selection probability for any fixed $\lambda$, this quantity also takes values in $[0,1]$.
+In practice, using its empirical counterpart $\widehat\Pi_{\Lambda}(\bm{y})$, one can then determine the set of selected features as $\{j: \widehat{\Pi}_{\Lambda}(\bm{y}) \geq p_{\text{thr}}\}$, for a chosen threshold $p_{\text{thr}}$.
+ Furthermore, the gradient of $\Pi_{\Lambda}(\bm{y})$ can be written as
+$$\nabla\Pi_{\Lambda}(\bm y)
+=
+\sum_{\lambda\in\Lambda}
+w_{\lambda}(\bm y)\,
+\nabla\pi_j(\bm y;\lambda), \quad \text{with } \ w_{\lambda}(\bm y)
+=
+\dfrac{\exp\!\left(\eta\pi_j(\bm y;\lambda)\right)}
+{\sum_{\lambda'\in\Lambda}\exp\!\left(\eta\pi_j(\bm y;\lambda')\right)},
+$$
+a convex combination of the derivatives of the selection probabilities. 
+Consequently, a fairly straightforward extension of our results to establish a uniform stability bound over the grid $\Lambda$ would yield a corresponding stability guarantee for $\Pi_{\Lambda}(\bm{y})$ under perturbations to a single coordinate of the input response, analogous to the bound in Corollary \ref{cor:stability}.
+We omit the details of this extension from the present work.
+
+
+\section{A high-dimensional example: predicting gene expression}
+\label{sec:bctcga}
+
+Here, we turn to a breast cancer gene expression study from The Cancer Genome Atlas (TCGA)~\citep{tcga2012}, distributed by \citet{breheny2025hdrm}. Tumor samples from $n = 536$ patients were assayed on Agilent mRNA expression microarrays, and measurements are on the log scale. Following the example in \citet{breheny2025hdrm}, we treat BRCA1 expression as the response and the remaining $p = 17{,}322$ genes as predictors, excluding 491 genes with missing data. BRCA1 is the first gene identified whose mutations increase the risk of early onset breast cancer, and because it is likely to interact with many others, those whose expression is related to BRCA1 are candidates for further study.
+
+We divide the data into a 60/40 train/test split, with $n_{\text{train}} = 321$ and $n_{\text{test}} = 215$. The student model is lasso regression. 
+For the teacher, we considered two candidates and chose between them using cross-validated error as described in Section~\ref{sec:generalization}: TabPFN applied to all $17{,}322$ genes, and TabPFN applied to the $500$ genes most correlated with BRCA1 expression, screened within each training fold. 
+The screened teacher performed far better and was selected. (The global lasso did not improve when restricted to the $500$ gene subset.) 
+Note that in this setting, the teacher and student have different feature representations, as in cross-modal distillation: the teacher uses $500$ genes while the student uses all $17{,}322$.
+
+On this split, the global lasso had test PSE $0.189$ ($R^2 = 0.579$), TabPFN $0.150$ ($R^2 = 0.666$), and local distillation $0.148$ ($R^2 = 0.670$): a 22\% reduction relative to the global lasso, matching (here, slightly exceeding) its teacher, while retaining transparency. Additionally, the local fits were sparser than the global lasso fit: the global fit selected $123$ genes, while the median local fit selected $94$.%
+\footnote{The PSE improvement was robust across 100 random 60/40 train/test splits, where local distillation improved on the global lasso in 96\% of runs, with a median PSE reduction of 22\%. The sparsity comparison was also stable: the median local fit was sparser than the global fit on 97 of 100 splits, with a median reduction of 15\% in the number of selected genes.}  
+Applying the stability screen of Section~\ref{sec:interpretation} ($\hat\pi_j > 0.9$ across $100$ randomized refits) reduces this further: the local models retained a median of $15$ stably selected genes (IQR $13$–$17$).
+
+ 
+ We then clustered the local models using 100 randomized fits with randomization scale $t = 0.1$ and $k=5$ clusters, with all parameters selected as described and exemplified in Section~\ref{sec:interpretation_aggregate}; the resulting clusters are visualized in Figure~\ref{fig:brca1_clusters}. The clusters reveal heterogeneity across patients: FAM107A is selected almost only in cluster one, KLF14 almost only in cluster five, both with negative coefficients, and both given a coefficient of zero by the global lasso. These are reported tumor suppressors down-regulated in cancer \citep{ou2022identification, chu2022klf14}. This heterogeneity is not visible to a global linear model, and is difficult to surface in black-box models.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{paper_plots/bctcga_local_coefs.pdf}
+  \caption{\textbf{Local BRCA1-model coefficients across patient clusters.} Columns are test patients ($n = 215$); rows are the genes whose local coefficients vary most across clusters, together with two of the largest-magnitude genes for reference.  Patients are grouped into five clusters using $100$ randomized fits (Section~\ref{sec:interpretation_aggregate}), and ordered within cluster by teacher-predicted BRCA1 expression $\hat\phi(\bm{x}^*)$. The leftmost column is the global lasso fit on the same training data, for comparison. Color scale is clipped at the 99th percentile of $|\hat\beta|$.}
+  \label{fig:brca1_clusters}
+\end{figure}
+
+\section{Benchmark comparisons}
+\label{sec:real_data}
+
+Here, we use common machine learning benchmark datasets to compare local distillation to (1) the student model (global lasso or ridge regression), (2) the teacher model (TabPFN or XGBoost~\cite{xgboost}) and (3) two local linear models (LOESS and local linear forests).  We evaluate on 17 regression datasets spanning sample sizes $n \in [159, 4177]$ and feature counts $p \in [5, 51]$. The datasets are from the \textbf{UCI Machine Learning Repository} \citep{UCIRepository} ({\em automobile, servo, liver disorders, auto MPG, real estate valuation, infrared thermography temperature, student performance}) and the \textbf{OpenML-CTR23 regression benchmark} \citep{bischl2017openml, fischer2023openml} ({\em cars, QSAR fish toxicity, concrete compressive strength, socmob, airfoil self-noise, red wine, auction verification, space ga, abalone, white wine}).
+
+For each dataset, we generate 20 random 80/20 train/test splits. We use a complete-case design and perform one-hot encoding for categorical variables. Within each train/test split, we normalize features using the mean and standard deviation of the training set. Per-dataset sample size and feature counts are given in Appendix Table~\ref{tab:datasets}.
+
+We compare methods using test $R^2$, and we find that local distillation closely matches the predictive performance of its teacher across a wide range of datasets. See Figure~\ref{fig:r2_closeup} for representative examples, where local distillation is labeled as ``LD (teacher, regularization)''. For teacher models, we use TabPFN and XGBoost, and student regularization comparators are lasso (L) and ridge (R). Appendix~\ref{app:real_data} shows complete results.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=\linewidth]{paper_plots/r2_first.pdf}
+      \caption{\textbf{Predictive performance (test $R^2$, median $\pm$ 1 standard error) for six datasets from the UCI ML and OpenML repositories.} Local distillation is labeled as ``LD (teacher, regularization)'', using ``L'' for lasso and ``R'' for ridge. When the teacher outperforms the global linear model, local distillation usually approaches the teacher's performance. Plots for the remaining 11 datasets are included in Appendix~\ref{app:real_data}.}
+    \label{fig:r2_closeup}
+\end{figure}  
+
+\section{Discussion}
+\label{sec:discussion}
+
+Modern black-box models are presenting new opportunities for predictive modeling across domains and data types, often with performance that classical methods cannot easily match without significant feature engineering~\cite{rudin2019stop}. 
+However, predictive models are only useful to the extent that decision-makers can draw trustworthy conclusions from them.
+We posit that well-constructed local linear models are in a ``sweet spot'' between interpretable modeling and modern AI: they retain the benefits of linear models (transparent, easy to understand, computationally simple) while rivaling the performance of black-box models.
+The statistical principle underlying this intuition is familiar: a smooth regression surface is locally well approximated by a linear model.
+But it is nontrivial to determine what constitutes \emph{local}, how the local models should be fit, and how the resulting collection of fits should be interpreted.
+
+Local distillation, as proposed in this work, relies on a black-box ``teacher'' for prediction and on randomized refits for interpretation. 
+For prediction, the teacher plays two roles: its predictions (1) define \emph{locality} by determining which training observations inform the fit at each query point, and (2) provide anchoring pseudo-observations. 
+Across 17 benchmark datasets and a high-dimensional gene expression example, and across a range of teacher models (TabPFN, TabFM, XGBoost), local distillation consistently matches or approaches the predictive accuracy of its teacher. 
+
+For interpretation, we apply a small amount of Gaussian randomization to the local distillation optimization, leaving both the loss and penalty unchanged. 
+The randomized refits identify which interpretations are sufficiently stable and therefore reliable, both at an individual test point (through selection frequencies) and across the test dataset as a whole (through clustering into stable subgroups). 
+Under the lasso penalty, we established theoretical guarantees showing that this randomization yields stability under small perturbations of the training responses. These results are of independent interest and extend beyond local distillation, providing a general mechanism for stabilizing feature--selection probabilities under lasso penalization.
+
+%\paragraph{Limitations.} The distillation strength $\hat\mu$ is estimated using a ratio of losses; this rule is intuitive and it performed well in our experiments, but we have not made any claims about optimality. We additionally use a hard cutoff to decide when to revert to the global linear model (when $\hat \mu \leq 1$, the estimated teacher error is worse than that of the student).
+%We considered a continuous alternative, weighting the teacher by its \textit{excess} performance $(\hat\mu - 1)_+$, but found that this reduced predictive performance: when the teacher is stronger than the student, the local fits benefit from a strong teacher weight. 
+%A similar observation was made in the distillation paper from Hinton et al.~\cite{hinton2015distilling}, where they found the best results placed most of the weight on the teacher's soft targets rather than the true labels.
+
+%Local distillation also fits one model per query point, which is more expensive than a single global fit; the local fits are embarrassingly parallel, however, and $\hat\lambda$ and $\hat\mu$ are estimated only once.
+
+\paragraph{Extensions.} Section~\ref{sec:generalization} suggests several extensions of local distillation. For example, when a linear student fails to recover the teacher's accuracy, using a richer student class (with interactions or transformations of the covariates) may narrow the gap. And, when there are many candidate teacher models, the teacher may be selected through cross-validation with the training data. Finally, local distillation can incorporate external datasets or other data modalities through cross-modal distillation, in which the teacher is built on a different feature set than the student. Our gene expression example provides one instance of this approach, and we view distillation across genuinely different modalities as a promising avenue.
+
+The distillation strength $\hat\mu$ is estimated using a ratio of losses; this rule is intuitive and it performed well in our experiments, but we have not made any claims about optimality. We additionally use a hard cutoff to decide when to revert to the global linear model (when $\hat \mu \leq 1$, the estimated teacher error is worse than that of the student).
+We considered a continuous alternative, weighting the teacher by its \textit{excess} performance $(\hat\mu - 1)_+$, but found that this reduced predictive performance: when the teacher is stronger than the student, the local fits benefit from a strong teacher weight. 
+A similar observation was made in the distillation paper from Hinton et al.~\cite{hinton2015distilling}, where they found the best results placed most of the weight on the teacher's soft targets rather than the true labels.
+Alternative approaches to estimating $\hat\mu$ and determining when to revert to a simpler model may nevertheless be worth exploring.
+
+\paragraph{Local regression more generally.} We view local linear modeling as a general and flexible framework that can compete with modern predictive methods, built from modular components that can be chosen to suit the problem: the weights, which define locality (kernels in LOESS, forest proximities, or, here, similarity of the teacher's predictions); the penalty, which defines structure (e.g., lasso, elastic-net, group lasso); and pseudo-observations, which carry external information to anchor the fit (elicited priors, or, here, the teacher's prediction at the query point).
+The choice of weights deserves particular care, because the definition of ``local'' determines \textit{which} heterogeneity the local models can express. 
+This is analogous to unsupervised clustering, where many clusterings may be equally valid though not all are equally informative; we expect different definitions of locality to likewise have different virtues. 
+Interpretation methods for local regression also require careful consideration: conclusions drawn from the local fits are only reliable when they are stable, and the appropriate notion of stability depends on the choice of locality. 
+The stability theory under Gaussian randomization is agnostic to the specific choice of weights in our approach, allowing the guarantees to extend beyond our construction of local linear models. 
+Their specific form, however, may offer additional structure that can be exploited for deriving different theoretical guarantees, which we leave for future investigation.
+
+Local distillation is one instantiation of local linear modeling: a black-box
+teacher defines locality and anchors each fit, and randomization assesses
+stability. Our results suggest that this framework is a promising path
+toward predictive, interpretable, and trustworthy statistical modeling.
+
+\iffalse
+Here, we have defined similarity through the lens of predicted response for two reasons: (1) it is a natural axis along which the feature--outcome relationship may vary, and (2) it is often an axis of scientific and clinical interest. In medicine, for example, we wish to understand what distinguishes high-risk from low-risk patients and predicted responders from non-responders. 
+However, there are many other possible axes of interest and local model constructions, which we consider 
+\fi
+
+% OLD
+
+\iffalse
+
+\textcolor{blue}
+{Here are some ideas for the discussion. Perhaps we could first tie our contributions to the broader problem (that we highlighted earlier in the introduction), so that folks see our approach as the right-type of bridge between flexible black-box prediction and interpretable modeling: rather than having to choose between a more predictive but opaque black-box model and a potentially less predictive but more transparent one, our approach to interpretable AI with local distillation aims to bridge this trade-off: we match the predictive performance of black-box teacher models, such as XGBoost or tabular foundation models, while returning easy-to-interpret predictions. While the statistical principle underlying our approach is simple ``a nonlinear regression surface can be approximated locally by a linear model'', determining what constitutes ``local'' and how such local models should be fit is far from trivial. Then, we can talk about how our particular approach addresses this problem: as you write, ``Local distillation defines ....''
+}
+
+\textcolor{blue}{Say this in a better way perhaps: Ultimately, the value of locally distilled models lies in whether decision-makers can use their predictions to draw trustworthy conclusions. Our stability-based framework is designed to make this possible: it identifies which interpretations are sufficiently stable to be relied upon, both for individual predictions at a test point and across the test dataset as a whole. Through a slight Gaussian randomization of the local distillation optimization while leaving both the loss and penalty unchanged, we develop a broadly applicable toolkit for stability-based interpretation. For the lasso penalty, we establish novel theoretical guarantees showing that this randomization yields stability under small perturbations of the training inputs. These results are of independent interest and extend beyond local distillation, providing a general mechanism for stabilizing feature--selection probabilities under lasso penalization.}
+\fi
+\iffalse
+\paragraph{Richer students.} Across our benchmarks, the linear student recovers most of the teacher's accuracy, though a gap remains on some datasets (Figure~\ref{fig:r2_closeup}). A student class admitting interactions or transformations of the original covariates may narrow the gap to the teacher while preserving interpretability (Section~\ref{sec:generalization}).
+
+\paragraph{Teacher selection.} The cross-validated selection rule of Section~\ref{sec:generalization} worked well in our benchmarks and extends naturally to larger candidate sets.
+
+
+\paragraph{Cross-modal distillation.}
+\fi
+% ──────────────────────────────────────────────────────────────────────────────
+
+\if0\blind{
+{\bf Acknowledgements}. We would like to thank Robert Tibshirani, Trevor Hastie and Shihan Khan for helpful comments. The authors used Claude Opus 4.5 (model ID: claude-opus-4-5-20251101) and ChatGPT 5.0 for coding support and text editing. The gene expression example shown here is based upon data generated by the TCGA Research Network: \url{https://www.cancer.gov/tcga}.
+}
+\fi
+\if1\blind{
+{\bf Acknowledgements}. The authors used Claude Opus 4.5 (model ID: claude-opus-4-5-20251101) and ChatGPT 5.0 for coding support and text editing. The gene expression example shown here is based upon data generated by the TCGA Research Network: \url{https://www.cancer.gov/tcga}.
+}
+\fi
+
+\if0\blind{
+{\bf Funding}. S.P. was supported by NSF CAREER Award DMS-2337882.}
+\fi 
+\if1\blind{
+{\bf Funding}. Authors were supported by XXXXXXXXXXXX.}\fi
+
+\indent {\bf Disclosure}. The authors report there are no competing interests to declare.
+
+\if0\blind{
+{\bf Data availability}. The data that support the findings of this study are public and cited throughout. The scripts to download data and run simulations are published on Github at \url{https://github.com/erincr/local-distillation-benchmark}. The breast cancer expression data are from
+The Cancer Genome Atlas (\url{https://www.cancer.gov/tcga}); we use the processed version distributed with the \texttt{hdrm} R package (\url{https://github.com/pbreheny/hdrm}).
+}
+\fi
+\if1\blind{
+{\bf Data availability}. The data that support the findings of this study are public and cited throughout. The scripts to download data and run simulations are published on Github. The breast cancer expression data are from The Cancer Genome Atlas (\url{https://www.cancer.gov/tcga}); we use the processed version distributed with the \texttt{hdrm} R package (\url{https://github.com/pbreheny/hdrm}).
+}
+\fi
+
+% ──────────────────────────────────────────────────────────────────────────────
+
+
+\bibliographystyle{unsrtnat}
+% \bibliographystyle{rss}
+\bibliography{main}
+
+\appendix
+
+\section{Details of theoretical results}
+
+\subsection{Proof of main results}
+\label{App: main}
+
+\begin{proof}[Proof of Lemma \ref{lem:smoothness}]
+Let $\pi_j^{\circ}(\bm{z})=\PPo[\,j\in\Ehat_V(\bm{z},\bm{\omega})]$ denote the selection probability of predictor $j$ under lasso regression of $\bm{z}+\bm{\omega}$ on $\bm{V}$, evaluated as a function of the weight-adjusted response $\bm{z}$.
+Then, by definition, $$\pi_j(\bm{y})=\pi_j^{\circ}\bigl(\bm{z}(\bm{y})\bigr) = \pi_j^{\circ} \circ \bm{z}(\bm{y}).$$
+
+ 
+The map $\bm{y} \mapsto \bm{z}(\bm{y})$ has entries $\sqrt{S_k}\,y_k$ for
+$k\le n$ and $\sqrt{\mu}\,n_{\mathrm{eff}}^{-1/4}\hat\phi(\bm x^{*};\bm y)$ for $k=n+1$; the first $n$ entries are linear in $\bm y$, while the final entry is $k$ times differentiable by assumption, and hence, $\bm z:\R^{n}\to\R^{n+1}$ is $k$ times differentiable. 
+ 
+Observe that we can write
+\[
+  \pi_j^{\circ}(\bm z)
+  :=\PPo\bigl[\,j\in\Ehat_V(\bm z,\bm\omega)\bigr]
+  =\int_{\R^{n+1}}\chi_j(\bm z+\bm w)\,\varphi_\tau(\bm w)\,d\bm w
+  =(\chi_j*\varphi_\tau)(\bm z),
+\]
+where $\chi_j(\bm t)=\mathbf 1\{\,j\in\Ehat(\bm t)\,\}$, and
+$\varphi_\tau(\bm u)$ is the $N(\bm 0,\tau^{2}\bm I_{n+1})$ density function at $\bm u$. 
+
+Since $\chi_j$ is bounded and $\varphi_\tau$ has integrable derivatives of all orders, differentiation under the integral sign yields $\pi_j^{\circ}\in C^{\infty}(\R^{n+1})$, with $\partial^{\alpha}\pi_j^{\circ}=\chi_j*\partial^{\alpha}\varphi_\tau$ for every multi-index $\alpha$. Applying the chain rule to $\pi_j=\pi_j^{\circ}\circ\bm z$ shows that, for each $r\le k$, every derivative of $\pi_j$ of order $r$ can be expressed in terms of derivatives of $\pi_j^{\circ}$ and derivatives of $\bm z$ of order at most $r$. Since all such derivatives exist, $\pi_j$ is $k$ times differentiable on $\R^{n}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:stability}]
+Combining Proposition~\ref{thm:distillation-coordinate-stability} with Lemma~\ref{lem:distillation-native-comparison-bounds} (both stated in Appendix \ref{App:stability:aux}) yields, for any $y\in \R^n$ and $i\in [n]$, that
+\begin{align*}
+|\partial_i \pi_j(\bm{y})|
+&\le \sqrt{\frac{2}{\pi}}\,\frac{1}{\tau}
+\left\{ \sqrt{S_i}\,\rho^{{V}}_{ij}
++ \sqrt{S_{n+1}}\,|\partial_i \hat\phi(\bm{x}^*; \bm{y})|\,\rho^{{V}}_{n+1,j} \right\} \\
+&\le \sqrt{\frac{2}{\pi}}\,\frac{C}{\tau}
+\left\{ \frac{1}{\sqrt{n_{\mathrm{eff}}}}
++ \frac{|\partial_i \hat\phi(\bm{x}^*; \bm{y})|}{n_{\mathrm{eff}}^{1/4}} \right\}.
+\end{align*}
+Taking supremum over $y$ and $i\in [n]$ proves our claim.
+\end{proof}
+
+\subsection{Theoretical analysis of stability under randomized lasso}
+\label{App:stability:lasso}
+
+Throughout this section, we study the stability of the feature--selection probabilities 
+\[
+    \pi_j^{\circ}(\boldsymbol z)
+    =
+    \mathbb P_{\boldsymbol\omega}
+   \left[j\in\widehat E_V(\boldsymbol z,\boldsymbol\omega)\right].
+\]
+with respect to perturbations in $\bm{z}$.
+The main result of this section, Theorem \ref{thm:single-feature-stability}, characterizes the sensitivity of feature-selection probabilities to perturbations in the response under randomized lasso regression.
+
+\subsubsection{Leave-$j$-out score and lasso geometry}
+
+For a feature $j\in[p]$, define the leave-$j$-out lasso
+\begin{equation}
+    \widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol z)
+    =
+    \argmin_{\boldsymbol b\in\mathbb R^{p-1}}
+    \left\{
+        \frac12\|\boldsymbol z-\boldsymbol V_{-j}\boldsymbol b\|_2^2+\lambda\|\boldsymbol b\|_1
+    \right\}.
+    \label{eq:leave-j-out-lasso}
+\end{equation}
+Furthermore, let $\boldsymbol R_{-j}^V(\boldsymbol z)=\boldsymbol z-\boldsymbol V_{-j}\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol z)$
+be the leave-$j$-out residual, and define
+\begin{equation}
+    T_j^V(\boldsymbol z)=\boldsymbol V_j^\top \boldsymbol R_{-j}^V(\boldsymbol z).
+    \label{defn:Tj}
+\end{equation}
+
+
+\begin{lemma}[KKT characterization]
+\label{lem:leave-j-out-kkt}
+Under Assumption \ref{assump:general-position}, it holds that
+\[
+    j\notin\widehat E_V(\boldsymbol z,\boldsymbol\omega)
+    \quad\Longleftrightarrow\quad
+    |T_j^V(\boldsymbol z+\boldsymbol\omega)|\le\lambda,
+\]
+where $T_j^V(\cdot)$ is as defined in \eqref{defn:Tj}.
+\end{lemma}
+
+\begin{proof}
+Set $\boldsymbol t=\boldsymbol z+\boldsymbol\omega$. By definition,
+$\widehat E_V(\boldsymbol z,\boldsymbol\omega)$ is the support of the
+full Lasso solution with response $\boldsymbol t$.
+The KKT conditions for the full Lasso problem state that a vector
+$\boldsymbol{\beta}\in\mathbb R^p$ is optimal if and only if there exists
+$\boldsymbol{\gamma}\in\mathbb R^p$ such that
+\begin{equation}
+    \boldsymbol V^\top(\boldsymbol t-\boldsymbol V\boldsymbol{\beta})=\lambda\boldsymbol{\gamma},
+    \label{eq:full-lasso-kkt}
+\end{equation}
+where, for every $k\in[p]$,
+$ \boldsymbol{\gamma}_k=
+    \begin{cases}
+        \operatorname{sign}(\boldsymbol{\beta}_k), & \boldsymbol{\beta}_k\ne0,\\
+        u_k\in[-1,1], & \boldsymbol{\beta}_k=0.
+    \end{cases}
+$
+
+Let $\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol t)$ be the solution of the leave-$j$-out
+Lasso, and define
+$\boldsymbol R_{-j}^V(\boldsymbol t)
+    =
+    \boldsymbol t-\boldsymbol V_{-j}\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol t).
+$
+The KKT conditions for the restricted problem imply that there exists
+$\boldsymbol{\gamma}_{-j}\in\mathbb R^{p-1}$ such that
+\begin{equation}
+    \boldsymbol V_{-j}^\top \boldsymbol R_{-j}^V(\boldsymbol t)
+    =
+    \lambda\boldsymbol{\gamma}_{-j},
+    \label{eq:restricted-lasso-kkt}
+\end{equation}
+with
+\[
+    (\boldsymbol{\gamma}_{-j})_k
+    =
+    \begin{cases}
+        \operatorname{sign}
+        \bigl(\widehat{\boldsymbol\beta}_{V,k}^{(-j)}(\boldsymbol t)\bigr),
+        &
+        \widehat{\boldsymbol\beta}_{V,k}^{(-j)}(\boldsymbol t)\ne0,\\
+        u_k\in[-1,1],
+        &
+        \widehat{\boldsymbol\beta}_{V,k}^{(-j)}(\boldsymbol t)=0.
+    \end{cases}
+\]
+
+Now construct the $p$-dimensional candidate $\widetilde{\boldsymbol\beta}$ with
+\[
+    \widetilde{\boldsymbol\beta}_j=0,
+    \qquad
+    \widetilde{\boldsymbol\beta}_{-j}
+    =
+    \widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol t).
+\]
+Its residual in the full Lasso problem is exactly
+$
+    \boldsymbol t-\boldsymbol V\widetilde{\boldsymbol\beta}
+    =
+    \boldsymbol R_{-j}^V(\boldsymbol t).
+$
+Equation~\eqref{eq:restricted-lasso-kkt} verifies the full KKT
+conditions for every coordinate other than $j$. 
+Since
+$\widetilde{\boldsymbol\beta}_j=0$, the remaining KKT condition is
+$
+    \boldsymbol V_j^\top \boldsymbol R_{-j}^V(\boldsymbol t)\in\lambda[-1,1].$
+By definition,
+$
+    T_j^V(\boldsymbol t)=\boldsymbol V_j^\top \boldsymbol R_{-j}^V(\boldsymbol t),
+$
+which gives
+$
+    |T_j^V(\boldsymbol t)|\le\lambda.
+$
+Therefore,
+\begin{equation}
+    |T_j^V(\boldsymbol t)|\le\lambda
+    \quad\Longleftrightarrow\quad
+    \widetilde{\boldsymbol\beta}
+    \text{ is a solution of the full Lasso problem}.
+    \label{eq:candidate-full-solution}
+\end{equation}
+
+If $|T_j^V(\boldsymbol t)|\le\lambda$, then
+\eqref{eq:candidate-full-solution} shows that $\widetilde{\boldsymbol\beta}$ is a
+full Lasso solution. By uniqueness of the full Lasso solution, guaranteed  by Assumption \ref{assump:general-position},
+$
+    \widehat{\boldsymbol\beta}(\boldsymbol t)=\widetilde{\boldsymbol\beta}.$
+Since $\widetilde{\boldsymbol\beta}_j=0$, it follows that
+$j\notin\widehat E_V(\boldsymbol z,\boldsymbol\omega)$.
+
+Conversely, suppose that $j\notin\widehat E_V(\boldsymbol z,\boldsymbol\omega)$, so that
+$\widehat{\boldsymbol\beta}_j(\boldsymbol t)=0$. The vector $\widehat{\boldsymbol\beta}_{-j}(\boldsymbol t)$ must then
+solve the leave-$j$-out problem. Indeed, if some
+$\boldsymbol b\in\mathbb R^{p-1}$ had a strictly smaller restricted objective,
+then the full vector $(\boldsymbol b,0)$ would have a strictly smaller full Lasso
+objective than $\widehat{\boldsymbol\beta}(\boldsymbol t)$, contradicting its optimality.
+By uniqueness of the restricted solution, implied by Assumption \ref{assump:general-position},
+$
+    \widehat{\boldsymbol\beta}_{-j}(\boldsymbol t)
+    =
+    \widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol t).
+$
+The full KKT condition at the zero coefficient
+$\widehat{\boldsymbol\beta}_j(\boldsymbol t)=0$ therefore gives
+\[
+    \left|
+        \boldsymbol V_j^\top
+        \left(
+            \boldsymbol t-\boldsymbol V_{-j}\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol t)
+        \right)
+    \right|
+    \le\lambda.
+\]
+Equivalently, $|T_j^V(\boldsymbol t)|\le\lambda$. 
+We have thus proved
+\[
+    j\notin\widehat E_V(\boldsymbol z,\boldsymbol\omega)
+    \quad\Longleftrightarrow\quad
+    |T_j^V(\boldsymbol t)|\le\lambda.
+\]
+\end{proof}
+
+Having characterized the lasso active set through the leave-$j$-out score, we now turn to the analysis of this score. To this end, we introduce some additional notation.
+For an active set $E\subseteq[p]\setminus\{j\}$ and sign vector
+$\boldsymbol s\in\{-1,1\}^{|E|}$, define the polyhedral selection region
+\[
+    \mathcal R_{E,\boldsymbol s}^{V,-j}
+    =
+    \left\{
+        \boldsymbol z\in\mathbb R^n:
+        \operatorname{supp}\bigl(\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol z)\bigr)=E,\ 
+        \operatorname{sign}\bigl(\widehat{\boldsymbol\beta}_{V,E}^{(-j)}(\boldsymbol z)\bigr)=\boldsymbol s
+    \right\},
+\]
+and let $\mathcal E_{-j}^V=\left\{E:\operatorname{Leb}_n\bigl(\mathcal R_{E,\boldsymbol s}^{V,-j}\bigr)>0\text{ for some }\boldsymbol s\right\}$
+be the set of essential active sets from lasso regression on $\bm{V}_{-j}$, i.e., whose corresponding selection regions have positive Lebesgue measure.
+
+\begin{lemma}[Almost-everywhere gradient of the score]
+\label{lem:ae-gradient-score}
+For every $\boldsymbol z\in \cup_{E,s} \text{\normalfont int}(\mathcal R_{E,\boldsymbol s}^{V,-j})$, let
+$E=\operatorname{supp}\bigl(\widehat{\boldsymbol\beta}_V^{(-j)}(\boldsymbol z)\bigr)$.
+Then
+\[
+    \nabla T_j^V(\boldsymbol z)=\boldsymbol P_{\boldsymbol V_E}^\perp \boldsymbol V_j,
+\]
+where
+$ \boldsymbol P_{\boldsymbol V_E}=\boldsymbol V_E(\boldsymbol V_E^\top \boldsymbol V_E)^{-1}\boldsymbol V_E^\top$, and 
+    $\boldsymbol P_{\boldsymbol V_E}^\perp=\boldsymbol I-\boldsymbol P_{\boldsymbol V_E}.$
+\end{lemma}
+
+\begin{proof}
+Fix $\boldsymbol z\in \cup_{E,s} \text{\normalfont int}(\mathcal R_{E,\boldsymbol s}^{V,-j})$, and let $(E,\boldsymbol s)$ denote the support and sign of
+the leave-$j$-out lasso solution. 
+Assumption \ref{assump:general-position} implies that $\boldsymbol V_E$ has full column rank, and therefore
+\[
+    \widehat{\boldsymbol\beta}_{V,E}^{(-j)}(\boldsymbol z)
+    =
+    (\boldsymbol V_E^\top \boldsymbol V_E)^{-1}(\boldsymbol V_E^\top \boldsymbol z-\lambda\boldsymbol s)
+\]
+throughout this neighborhood. 
+It follows that
+\[
+    \boldsymbol R_{-j}^V(\boldsymbol z)
+    =
+    \boldsymbol z-\boldsymbol V_E\widehat{\boldsymbol\beta}_{V,E}^{(-j)}(\boldsymbol z)
+    =
+    \boldsymbol P_{\boldsymbol V_E}^\perp \boldsymbol z
+    +
+    \lambda \boldsymbol V_E(\boldsymbol V_E^\top \boldsymbol V_E)^{-1}\boldsymbol s,
+\]
+and therefore,
+\[
+    \nabla T_j^V(\boldsymbol z)
+    =
+    \nabla\left(\boldsymbol V_j^\top \boldsymbol R_{-j}^V(\boldsymbol z)\right)
+    =
+    \boldsymbol P_{\boldsymbol V_E}^\perp \boldsymbol V_j.
+\]
+Here, $\bm{z} \in \cup_{E,s} \text{\normalfont int}(\mathcal R_{E,\boldsymbol s}^{V,-j})$ guarantees that $\bm z$ is in the interior of $\mathcal R_{E,\boldsymbol s}^{V,-j}$, and therefore $(E, \bm s)$ stay constant in a local neighborhood of $\bm z$ during differentiation.
+\end{proof}
+
+
+\begin{lemma}[Sandwich-bound on leave-$j$-out score]
+\label{lem:coordinate-direction-comparison}
+Let $\boldsymbol v_j^V=\frac{\boldsymbol V_j}{\|\boldsymbol V_j\|_2}$ and $\boldsymbol r_{j\mid E}^V=\boldsymbol P_{\boldsymbol V_E}^\perp \boldsymbol V_j$. 
+For every $\boldsymbol z\in\mathbb R^{n+1}$ and $h>0$,
+\[
+    T_j^V(\boldsymbol z-\rho_{ij}^V h\boldsymbol v_j^V)
+    \le
+    T_j^V(\boldsymbol z+h\boldsymbol e_i)
+    \le
+    T_j^V(\boldsymbol z+\rho_{ij}^V h\boldsymbol v_j^V),
+\]
+where, for $i\in[n+1]$, 
+\[
+    \rho_{ij}^V
+    =
+    \sup_{{E\in\mathcal E_{-j}^V,\boldsymbol r_{j\mid E}^V\ne0}}
+    \frac{|(\boldsymbol r_{j\mid E}^V)_i|\|\boldsymbol V_j\|_2}
+         {\|\boldsymbol r_{j\mid E}^V\|_2^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:ae-gradient-score}, for almost every
+$\boldsymbol z$, if $E\in\mathcal E_{-j}^V$ is the locally active
+leave-$j$-out model at $\boldsymbol z$, then
+\[
+    D_{\boldsymbol v_j^V}T_j^V(\boldsymbol z)
+    =
+    \bigl(\boldsymbol r_{j\mid E}^V\bigr)^\top
+    \boldsymbol v_j^V
+    =
+    \frac{\|\boldsymbol r_{j\mid E}^V\|_2^2}
+         {\|\boldsymbol V_j\|_2}
+    \ge 0.
+\]
+When $\boldsymbol r_{j\mid E}^V\ne0$, the definition of
+$\rho_{ij}^V$ gives
+\[
+\begin{aligned}
+    |\partial_iT_j^V(\boldsymbol z)|
+    &=
+    |(\boldsymbol r_{j\mid E}^V)_i|\\
+    &\le
+    \rho_{ij}^V
+    \frac{\|\boldsymbol r_{j\mid E}^V\|_2^2}
+         {\|\boldsymbol V_j\|_2}\\
+    &=
+    \rho_{ij}^V
+    D_{\boldsymbol v_j^V}T_j^V(\boldsymbol z).
+\end{aligned}
+\]
+When $\boldsymbol r_{j\mid E}^V=0$, both sides vanish. Hence,
+\[
+    |\partial_iT_j^V|
+    \le
+    \rho_{ij}^V D_{\boldsymbol v_j^V}T_j^V
+\]
+Lebesgue-almost everywhere.
+
+By linearity of directional derivatives in the direction of differentiation,
+it follows almost everywhere that
+\[
+\begin{aligned}
+    D_{\boldsymbol e_i+\rho_{ij}^V\boldsymbol v_j^V}T_j^V
+    &=
+    \partial_iT_j^V
+    +
+    \rho_{ij}^V D_{\boldsymbol v_j^V}T_j^V
+    \ge0,\\
+    D_{\rho_{ij}^V\boldsymbol v_j^V-\boldsymbol e_i}T_j^V
+    &=
+    \rho_{ij}^V D_{\boldsymbol v_j^V}T_j^V
+    -
+    \partial_iT_j^V
+    \ge0.
+\end{aligned}
+\]
+
+To apply Lemma~\ref{lem:ae-directional-monotonicity}, observe that
+\[
+\begin{aligned}
+    (\boldsymbol z+h\boldsymbol e_i)
+    -
+    (\boldsymbol z-\rho_{ij}^Vh\boldsymbol v_j^V)
+    &=
+    h(\boldsymbol e_i+\rho_{ij}^V\boldsymbol v_j^V),\\
+    (\boldsymbol z+\rho_{ij}^Vh\boldsymbol v_j^V)
+    -
+    (\boldsymbol z+h\boldsymbol e_i)
+    &=
+    h(\rho_{ij}^V\boldsymbol v_j^V-\boldsymbol e_i).
+\end{aligned}
+\]
+Thus, applying the lemma first from
+$\boldsymbol z-\rho_{ij}^Vh\boldsymbol v_j^V$ in direction
+$\boldsymbol e_i+\rho_{ij}^V\boldsymbol v_j^V$, and then from
+$\boldsymbol z+h\boldsymbol e_i$ in direction
+$\rho_{ij}^V\boldsymbol v_j^V-\boldsymbol e_i$, gives
+\[
+    T_j^V(\boldsymbol z-\rho_{ij}^Vh\boldsymbol v_j^V)
+    \le
+    T_j^V(\boldsymbol z+h\boldsymbol e_i)
+    \le
+    T_j^V(\boldsymbol z+\rho_{ij}^Vh\boldsymbol v_j^V).
+\]
+This proves the claim.
+\end{proof}
+
+
+\subsubsection{Stability bound for feature--selection probabilities}
+
+\begin{lemma}[Bounding probabilities under randomization]
+\label{lem:gaussian-score-bound}
+Let $A\subseteq\mathbb R^{n+1}$ be measurable and define
+\[
+    p_A(\boldsymbol z)=\mathbb P_{\boldsymbol\omega}(\boldsymbol z+\boldsymbol\omega\in A),
+    \qquad
+    \boldsymbol\omega\sim N(0,\tau^2\boldsymbol I_n).
+\]
+Then, for every unit vector $\boldsymbol v$, $D_{\boldsymbol v}p_A(\boldsymbol z)
+=\frac1{\tau^2}\mathbb E_{\boldsymbol\omega}\left[ (\boldsymbol v^\top \boldsymbol\omega)\mathds{1}\{\boldsymbol z+\boldsymbol\omega\in A\}\right]$, 
+and $|D_{\boldsymbol v}p_A(\boldsymbol z)|\le \frac1{\tau\sqrt{2\pi}}$.
+\end{lemma}
+
+\begin{proof}
+Differentiation under the Gaussian convolution gives us 
+\[D_{\boldsymbol v}p_A(\boldsymbol z)
+=\frac1{\tau^2}\mathbb E_{\boldsymbol\omega}\left[ (\boldsymbol v^\top \boldsymbol\omega)\mathds{1}\{\boldsymbol z+\boldsymbol\omega\in A\}\right].
+\]
+
+If $G=\boldsymbol v^\top\boldsymbol\omega$, then
+$G\sim N(0,\tau^2)$ and
+\[
+    -\mathbb E_{\boldsymbol\omega}[(-G)_+]
+    \le
+    \mathbb E_{\boldsymbol\omega}\left[G\mathds{1}\{\boldsymbol z+\boldsymbol\omega\in A\}\right]
+    \le
+    \mathbb E_{\boldsymbol\omega}[G_+], \text{ where } G_+= \max\{G, 0\}.
+\]
+By symmetry, $\mathbb E_{\boldsymbol\omega}[G_+]=\mathbb E_{\boldsymbol\omega}[(-G)_+]=\frac{\tau}{\sqrt{2\pi}}$, and the result follows.
+\end{proof}
+
+\begin{theorem}[Sensitivity bound for selection probabilities under randomized lasso]
+\label{thm:single-feature-stability}
+Under Assumption {\ref{assump:general-position}}, for every $\boldsymbol z\in\mathbb R^{n+1}$ and
+$i\in[n+1]$,
+\begin{equation}
+    |\partial_i\pi_j^{\circ}(\boldsymbol z)|
+    \le
+    \sqrt{\frac{2}{\pi}}\frac{\rho_{ij}^V}{\tau}.
+    \label{eq:single-feature-coordinate-bound}
+\end{equation}
+Consequently, we have 
+\begin{equation}
+    \sup_{\boldsymbol z\in\mathbb R^n}
+    \|\nabla\pi_j^{\circ}(\boldsymbol z)\|_\infty
+    \le
+    \sqrt{\frac{2}{\pi}}\frac{a_j^V}{\tau},
+    \label{eq:single-feature-gradient-bound}
+\end{equation}
+where 
+\[a_j^V
+    :=
+    \max_{i\in[n+1]}\rho_{ij}^V
+    =
+    \sup_{{E\in\mathcal E_{-j}^V,\boldsymbol r_{j\mid E}^V\ne0}}
+    \frac{\|\boldsymbol r_{j\mid E}^V\|_\infty\|\boldsymbol V_j\|_2}
+         {\|\boldsymbol r_{j\mid E}^V\|_2^2}.
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:leave-j-out-kkt}, 
+\[
+    \pi_j^{\circ}(\boldsymbol z)
+    =
+    p_{j,+}(\boldsymbol z)+p_{j,-}(\boldsymbol z),
+\]
+where
+\[
+    p_{j,+}(\boldsymbol z)
+    =
+    \mathbb P_{\boldsymbol\omega}\{T_j^V(\boldsymbol z+\boldsymbol\omega)>\lambda\},
+    \qquad
+    p_{j,-}(\boldsymbol z)
+    =
+    \mathbb P_{\boldsymbol\omega}\{T_j^V(\boldsymbol z+\boldsymbol\omega)<-\lambda\}.
+\]
+
+Then, applying Lemma \ref{lem:coordinate-direction-comparison} yields
+\[
+    p_{j,+}(\boldsymbol z-\rho_{ij}^V h\boldsymbol v_j^V)
+    \le
+    p_{j,+}(\boldsymbol z+h\boldsymbol e_i)
+    \le
+    p_{j,+}(\boldsymbol z+\rho_{ij}^V h\boldsymbol v_j^V).
+\]
+Letting $h\downarrow0$, we have
+\[
+    |\partial_i p_{j,+}(\boldsymbol z)|
+    \le
+    \rho_{ij}^V|D_{\boldsymbol v_j^V}p_{j,+}(\boldsymbol z)|.
+\]
+Analogously, applying Lemma \ref{lem:coordinate-direction-comparison} to $p_{j,-}(\boldsymbol z)$ yields
+\[
+|\partial_i p_{j,-}(\boldsymbol z)|
+    \le
+    \rho_{ij}^V|D_{\boldsymbol v_j^V}p_{j,-}(\boldsymbol z)|
+\]
+
+Finally, applying Lemma~\ref{lem:gaussian-score-bound} to bound the directional derivatives on the right-hand side directional derivatives of the two above-stated inequalities, we have
+\[
+    |\partial_i p_{j,+}(\boldsymbol z)|
+    \le
+    \frac{\rho_{ij}^V}{\tau\sqrt{2\pi}},
+    \qquad
+    |\partial_i p_{j,-}(\boldsymbol z)|
+    \le
+    \frac{\rho_{ij}^V}{\tau\sqrt{2\pi}}.
+\]
+Therefore,
+\[
+    |\partial_i\pi_j^{\circ}(\boldsymbol z)|
+    \le
+    \frac{2\rho_{ij}^V}{\tau\sqrt{2\pi}}
+    =
+    \sqrt{\frac{2}{\pi}}\frac{\rho_{ij}^V}{\tau}.
+\]
+Taking the maximum over $i$ proves
+\eqref{eq:single-feature-gradient-bound}.
+\end{proof}
+
+\subsection{Auxiliary results}
+\label{App:stability:aux}
+
+
+For $E\in\mathcal E_{-j}^V$, recall from Lemma \ref{lem:ae-gradient-score} and Lemma \ref{lem:coordinate-direction-comparison} that $\boldsymbol P_{\boldsymbol V_E}$ denotes the orthogonal projection onto the column space of $\boldsymbol V_E$, and that 
+\[
+    \boldsymbol r_{j\mid E}^V
+    =
+    \boldsymbol P_{\boldsymbol V_E}^{\perp}\boldsymbol V_j,
+    \quad \text{where, } \quad 
+    \boldsymbol P_{\boldsymbol V_E}^{\perp}
+    =
+    \boldsymbol I_{n+1}-\boldsymbol P_{\boldsymbol V_E},
+\]
+and that for $i \in [n+1]$,
+\[
+    \rho_{ij}^V
+    =
+    \sup_{\substack{
+        E\in\mathcal E_{-j}^V\\
+        \boldsymbol r_{j\mid E}^V\ne0
+    }}
+    \frac{
+        |(\boldsymbol r_{j\mid E}^V)_i|\,\|\boldsymbol V_j\|_2
+    }{
+        \|\boldsymbol r_{j\mid E}^V\|_2^2
+    }.
+\]
+
+\begin{proposition}[Sensitivity bound under randomized local distillation]
+\label{thm:distillation-coordinate-stability}
+Suppose that $\boldsymbol y\longmapsto\hat\phi(\bm{x}^*, \bm{y})$
+belongs to $C^1(\mathbb R^n)$, and that Assumption {\ref{assump:general-position}} holds. Then, for every $\boldsymbol y\in\mathbb R^n$,
+$i\in[n]$, and $j\in[p]$,
+\begin{align*}
+    |\partial_i\pi_j(\boldsymbol y)|
+    \le
+    \sqrt{\frac{2}{\pi}}\frac{1}{\tau}
+    \left\{
+        \sqrt{S_i}\,\rho_{ij}^V
+        +
+        \sqrt{S_{n+1}}\,
+        |\partial_i\hat\phi(\bm{x}^*, \bm{y})|\,
+        \rho_{n+1,j}^V
+    \right\}.
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:smoothness},
+\[
+    \pi_j(\boldsymbol y)
+    =
+    \pi_j^\circ\bigl(\boldsymbol z(\boldsymbol y)\bigr)
+\]
+is continuously differentiable. 
+
+The coordinates of $\boldsymbol z(\boldsymbol y)$ satisfy
+\[
+    z_k(\boldsymbol y)
+    =
+    \sqrt{S_k}\,y_k,
+    \qquad k\in[n], \qquad
+    z_{n+1}(\boldsymbol y)
+    =
+    \sqrt{S_{n+1}}\,\hat\phi(\bm{x}^*, \bm{y}),
+\]
+where $S_{n+1}=\frac{\mu}{\sqrt{n_{\mathrm{eff}}}}$.
+Consequently, for $i\in[n]$ and $k\in[n+1]$,
+\[
+    \frac{\partial z_k(\boldsymbol y)}{\partial y_i}
+    =
+    \sqrt{S_i}\,\mathds{1}\{k=i\}
+    +
+    \sqrt{S_{n+1}}\,
+    \partial_i\hat\phi(\bm{x}^*, \bm{y})\,
+    \mathds{1}\{k=n+1\}.
+\]
+The chain rule therefore gives
+\begin{align}
+    \partial_i\pi_j(\boldsymbol y)
+    &=
+    \sum_{k=1}^{n+1}
+    \partial_{z_k}\pi_j^\circ\bigl(\boldsymbol z(\boldsymbol y)\bigr)
+    \frac{\partial z_k(\boldsymbol y)}{\partial y_i}
+    \nonumber\\
+    &=
+    \sqrt{S_i}\,
+    \partial_{z_i}\pi_j^\circ\bigl(\boldsymbol z(\boldsymbol y)\bigr)
+    +
+    \sqrt{S_{n+1}}\,
+    \partial_i\hat\phi(\bm{x}^*, \bm{y})\,
+    \partial_{z_{n+1}}\pi_j^\circ\bigl(\boldsymbol z(\boldsymbol y)\bigr).
+    \label{eq:distillation-chain-rule}
+\end{align}
+
+Applying Theorem~\ref{thm:single-feature-stability} gives, for every $\boldsymbol z\in\mathbb R^{n+1}$ and $k\in[n+1]$,
+\[
+    \left|
+        \partial_{z_k}\pi_j^\circ(\boldsymbol z)
+    \right|
+    \le
+    \sqrt{\frac{2}{\pi}}\frac{\rho_{kj}^V}{\tau}.
+\]
+Substituting these bounds into
+\eqref{eq:distillation-chain-rule} and applying the triangle
+inequality proves the bound.
+\end{proof}
+
+\begin{lemma}[Directional monotonicity]
+\label{lem:ae-directional-monotonicity}
+Let $f:\mathbb R^n\to\mathbb R$ be Lipschitz, and let
+$\boldsymbol d\in\mathbb R^n$. 
+If $D_{\boldsymbol d}f(\boldsymbol z)\ge0$ for Lebesgue-almost every $\boldsymbol z$, then $f(\boldsymbol z+t\boldsymbol d)\ge f(\boldsymbol z)$ for every $\boldsymbol z\in\mathbb R^n$ and $t\ge0$.
+\end{lemma}
+
+\begin{proof}
+The result is immediate if $\boldsymbol d=0$. Otherwise, let
+$\widetilde{\boldsymbol d}=\boldsymbol d/\|\boldsymbol d\|_2$ and decompose
+$\mathbb R^n=\widetilde{\boldsymbol d}^\perp\oplus\operatorname{span}(\widetilde{\boldsymbol d})$, and for $\boldsymbol u\in\widetilde{\boldsymbol d}^\perp$, define $g_{\boldsymbol u}(t)=f(\boldsymbol u+t\widetilde{\boldsymbol d})$.
+By Fubini's theorem, for almost every $\boldsymbol u$, the inequality
+\[
+    D_{\widetilde{\boldsymbol d}}f(\boldsymbol u+t\widetilde{\boldsymbol d})\ge0
+\]
+holds for almost every $t\in\mathbb R$. Since $f$ is Lipschitz,
+$g_{\boldsymbol u}$ is absolutely continuous, and
+\[
+    g_{\boldsymbol u}'(t)
+    =
+    D_{\widetilde{\boldsymbol d}}f(\boldsymbol u+t\widetilde{\boldsymbol d})
+    \ge0
+\]
+for almost every $t$. Hence $g_{\boldsymbol u}$ is nondecreasing.
+
+Now fix an arbitrary $\boldsymbol u\in\widetilde{\boldsymbol d}^\perp$. Choose a sequence
+$\boldsymbol u_m\to \boldsymbol u$ such that $g_{\boldsymbol u_m}$ is nondecreasing. For $t_1<t_2$,
+\[
+    f(\boldsymbol u_m+t_1\widetilde{\boldsymbol d})
+    \le
+    f(\boldsymbol u_m+t_2\widetilde{\boldsymbol d}).
+\]
+Passing to the limit and using continuity of $f$ yields $f(\boldsymbol u+t_1\widetilde{\boldsymbol d})\le f(\boldsymbol u+t_2\widetilde{\boldsymbol d})$.
+Thus $f$ is nondecreasing along every line parallel to $\boldsymbol d$.
+\end{proof}
+
+\begin{lemma}[Effective similarity neighborhood: size and weights]
+\label{lem:distillation-effective-neighborhood-size}
+Let $\mathcal I_S=\left\{i\in[n]:S_i\ge\frac{1}{2n_{\mathrm{eff}}}\right\}$.
+Under Assumption~\ref{assump:distillation-weight-spikiness}, $|\mathcal I_S| \ge \frac{n_{\mathrm{eff}}}{2C_S^2}$.
+Moreover, for every $i\in\mathcal I_S$, $\frac{1}{2n_{\mathrm{eff}}}\le S_i\le
+\frac{C_S}{n_{\mathrm{eff}}}$.
+\end{lemma}
+
+\begin{proof}
+For every $i\notin\mathcal I_S$, the definition of
+$\mathcal I_S$ gives $S_i<\frac{1}{2n_{\mathrm{eff}}}$, and therefore
+\[
+    \sum_{i\notin\mathcal I_S}S_i^2
+    \le
+    \frac{1}{2n_{\mathrm{eff}}}
+    \sum_{i\notin\mathcal I_S}S_i
+    \le
+    \frac{1}{2n_{\mathrm{eff}}},
+\]
+where the last inequality uses
+$\sum_{i=1}^nS_i=1$. 
+Since $\sum_{i=1}^nS_i^2=\frac{1}{n_{\mathrm{eff}}}$,
+it follows that
+\[
+    \sum_{i\in\mathcal I_S}S_i^2
+    \ge
+    \frac{1}{2n_{\mathrm{eff}}}.
+\]
+
+On the other hand, Assumption~\ref{assump:distillation-weight-spikiness} implies
+$S_i\le S_{\max}\le\frac{C_S}{n_{\mathrm{eff}}}$, for $i\in[n]$.
+Therefore, 
+$$\sum_{i\in\mathcal I_S}S_i^2\le |\mathcal I_S| \frac{C_S^2}{n_{\mathrm{eff}}^2}.$$
+
+Combining the preceding two displays yields $|\mathcal I_S|
+    \frac{C_S^2}{n_{\mathrm{eff}}^2}
+    \ge
+    \frac{1}{2n_{\mathrm{eff}}}$, i.e.,
+\[
+    |\mathcal I_S|
+    \ge
+    \frac{n_{\mathrm{eff}}}{2C_S^2}.
+\]
+
+Finally, for $i\in\mathcal I_S$, the lower bound on $S_i$ follows
+from the definition of $\mathcal I_S$, while the upper bound follows
+from
+Assumption~\ref{assump:distillation-weight-spikiness}.
+\end{proof}
+
+\begin{lemma}[Bounds on residual and design in augmented regression]
+\label{lem:distillation-augmented-residual-geometry}
+Under
+Assumptions~\ref{assump:distillation-weight-spikiness}--%
+\ref{assump:distillation-local-nondegeneracy}, define
+$C_V =B_X\sqrt{1+C_\mu}$, and $c_R=\frac{\kappa_X}{2C_S}$.
+Then, uniformly over $j\in[p]$,
+\[
+    \|\boldsymbol V_j\|_2\le C_V,
+\]
+and, uniformly over $j\in[p]$ and
+$E\in\mathcal E_{-j}^V$,
+\[
+    \|\boldsymbol r_{j\mid E}^V\|_2\ge c_R.
+\]
+In particular, $\boldsymbol r_{j\mid E}^V\ne0$ for every $j\in[p]$ and every
+$E\in\mathcal E_{-j}^V$.
+\end{lemma}
+
+\begin{proof}
+First, because the training weights are nonnegative and sum to one,
+\[
+    \sum_{i=1}^nS_i^2
+    \le
+    \left(\sum_{i=1}^nS_i\right)^2
+    =
+    1.
+\]
+Therefore, \(n_{\mathrm{eff}}\ge1\). Using
+\(S_{n+1}=\mu/\sqrt{n_{\mathrm{eff}}}\) and
+Assumption~\ref{assump:distillation-bounded-covariates}, we obtain
+\begin{align*}
+    \|\boldsymbol V_j\|_2^2
+    &=
+    \sum_{i=1}^nS_i x_{ij}^2
+    +
+    S_{n+1}(x_j^*)^2
+    \le
+    B_X^2\sum_{i=1}^nS_i
+    +
+    \frac{\mu}{\sqrt{n_{\mathrm{eff}}}}B_X^2
+    \le
+    B_X^2(1+C_\mu)
+    =
+    C_V^2.
+\end{align*}
+This proves the asserted upper bound on \(\|\boldsymbol V_j\|_2\).
+
+Next, fix arbitrary $j\in[p]$ and \(E\in\mathcal E_{-j}^V\). 
+By the definition of an orthogonal projection,
+$\|\boldsymbol r_{j\mid E}^V\|_2^2
+    =
+    \inf_{\boldsymbol{\gamma}\in\mathbb R^{|E|}}
+    \|\boldsymbol V_j-\boldsymbol V_E\boldsymbol{\gamma}\|_2^2$.
+For every \(\boldsymbol{\gamma}\in\mathbb R^{|E|}\),
+\begin{align*}
+    \|\boldsymbol V_j-\boldsymbol V_E\boldsymbol{\gamma}\|_2^2
+    &=
+    \sum_{i=1}^n
+        S_i\bigl(x_{ij}-\boldsymbol x_{i,E}^{\top}\boldsymbol{\gamma}\bigr)^2
+    +
+    S_{n+1}
+        \bigl(x_j^*-\boldsymbol x_E^{*\top}\boldsymbol{\gamma}\bigr)^2\\
+    &\ge
+    \sum_{i\in\mathcal I_S}
+        S_i\bigl(x_{ij}-\boldsymbol x_{i,E}^{\top}\boldsymbol{\gamma}\bigr)^2\ge
+    \frac{1}{2n_{\mathrm{eff}}}
+    \left\|
+        \boldsymbol X_{\mathcal I_S,j}
+        -
+        \boldsymbol X_{\mathcal I_S,E}\boldsymbol{\gamma}
+    \right\|_2^2,
+\end{align*}
+where the final inequality follows from the definition of
+\(\mathcal I_S\).
+
+After ordering the columns of
+\(\boldsymbol X_{\mathcal I_S,E\cup\{j\}}\) so that \(j\) is last, we write
+\[
+    \boldsymbol X_{\mathcal I_S,j}
+    -
+    \boldsymbol X_{\mathcal I_S,E}\boldsymbol{\gamma}
+    =
+    \boldsymbol X_{\mathcal I_S,E\cup\{j\}}
+    \begin{pmatrix}
+        -\boldsymbol{\gamma}\\
+        1
+    \end{pmatrix}.
+\]
+Assumption~\ref{assump:distillation-local-nondegeneracy} therefore
+implies
+\begin{align*}
+    \left\|
+        \boldsymbol X_{\mathcal I_S,j}
+        -
+        \boldsymbol X_{\mathcal I_S,E}\boldsymbol{\gamma}
+    \right\|_2
+    &\ge
+    \kappa_X\sqrt{|\mathcal I_S|}
+    \left\|
+        \begin{pmatrix}
+            -\boldsymbol{\gamma}\\
+            1
+        \end{pmatrix}
+    \right\|_2
+    \ge
+    \kappa_X\sqrt{|\mathcal I_S|}.
+\end{align*}
+It follows that
+\[
+    \|\boldsymbol V_j-\boldsymbol V_E\boldsymbol{\gamma}\|_2^2
+    \ge
+    \frac{\kappa_X^2|\mathcal I_S|}
+         {2n_{\mathrm{eff}}}.
+\]
+By Lemma~\ref{lem:distillation-effective-neighborhood-size}, $|\mathcal I_S|\ge\frac{n_{\mathrm{eff}}}{2C_S^2}$, and therefore,
+\[
+    \|\boldsymbol V_j-\boldsymbol V_E\boldsymbol{\gamma}\|_2^2
+    \ge
+    \frac{\kappa_X^2}{4C_S^2}
+    =
+    c_R^2.
+\]
+Taking the infimum over \(\boldsymbol{\gamma}\) proves $\|\boldsymbol r_{j\mid E}^V\|_2\ge c_R$, which completes the proof.
+\end{proof}
+
+\begin{lemma}[Bounds for weighted contributions from local distillation]
+\label{lem:distillation-native-comparison-bounds}
+Under Assumptions~\ref{assump:distillation-weight-spikiness}--%
+\ref{assump:distillation-local-nondegeneracy}, there exists a constant
+$C_\rho<\infty$, such that, uniformly over $j\in[p]$,
+\[
+    \max_{i\in[n]}
+    \sqrt{S_i}\,\rho_{ij}^V
+    \le
+    \frac{C_\rho}{\sqrt{n_{\mathrm{eff}}}}, \quad
+    \sqrt{S_{n+1}}\,\rho_{n+1,j}^V
+    \le
+    \frac{C_\rho}{n_{\mathrm{eff}}^{1/4}}.
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:distillation-augmented-residual-geometry},
+uniformly over $j\in[p]$ and $E\in\mathcal E_{-j}^V$, we have
+\[
+    \|\boldsymbol V_j\|_2\le C_V,
+    \qquad
+    \|\boldsymbol r_{j\mid E}^V\|_2\ge c_R.
+\]
+Since  $|(\boldsymbol r_{j\mid E}^V)_k|\le \|\boldsymbol r_{j\mid E}^V\|_2$,
+we obtain, for every $k\in[n+1]$,
+\[
+    \rho_{kj}^V
+    \le
+    \frac{C_V}{c_R}
+    =:\overline C_\rho.
+\]
+
+For $i\in[n]$, Assumption~%
+\ref{assump:distillation-weight-spikiness} gives $S_i\le S_{\max}\le \frac{C_S}{n_{\mathrm{eff}}}$, and therefore
+\[
+    \sqrt{S_i}\,\rho_{ij}^V
+    \le
+    \frac{\sqrt{C_S}\,\overline C_\rho}
+         {\sqrt{n_{\mathrm{eff}}}}.
+\]
+Finally,
+\[
+    \sqrt{S_{n+1}}\,\rho_{n+1,j}^V
+    =
+    \frac{\sqrt{\mu}}{n_{\mathrm{eff}}^{1/4}}
+    \rho_{n+1,j}^V
+    \le
+    \frac{\sqrt{C_\mu}\,\overline C_\rho}
+         {n_{\mathrm{eff}}^{1/4}}.
+\]
+Letting $C_\rho=\sqrt{C_S}\,\overline C_\rho \vee \sqrt{C_\mu}\,\overline C_\rho$ proves both claims.
+\end{proof}
+
+\section{Performance on UCI ML and OpenML datasets}
+\label{app:real_data}
+
+Here we report the complete results across all 17 benchmark datasets and methods, including a second tabular foundation-model teacher, TabFM~\citep{kong2026tabfm}, and the cross-validated teacher-selection rule (Section~\ref{sec:generalization}) omitted from the main-text figure for legibility. Table~\ref{tab:datasets} lists per-dataset sample sizes and feature counts; Figure~\ref{fig:appendix_r2} shows test $R^2$.
+
+  \begin{table}[ht] 
+  \centering      
+  \footnotesize
+  \begin{tabular}{lrrl}
+  \toprule
+  Dataset & $n$ & $p$ & Source \\
+  \midrule 
+   Automobile & 159 & 51 & UCI \\
+  Servo & 167 & 10 & UCI \\
+  Liver Disorders & 341 & 5 & UCI \\
+  Auto MPG & 392 & 8 & UCI \\
+  Real Estate Valuation & 414 & 6 & UCI \\
+  Student Performance & 649 & 39 & UCI \\
+  Cars & 804 & 17 & OpenML \\
+  QSAR Fish Toxicity & 907 & 6 & OpenML \\
+  Concrete Compressive Strength & 1005 & 8 & OpenML \\
+  Infrared Thermography Temperature & 1018 & 43 & UCI \\
+  Socmob & 1156 & 35 & OpenML \\
+  Red Wine & 1359 & 11 & OpenML \\
+  Airfoil Self-Noise & 1503 & 5 & OpenML \\
+  Auction Verification & 2043 & 7 & OpenML \\
+  Space GA & 3107 & 6 & OpenML \\
+  White Wine & 3961 & 11 & OpenML \\
+  Abalone & 4177 & 9 & OpenML \\
+  \bottomrule
+  \end{tabular}
+\caption{\textbf{Benchmark datasets after complete-case filtering and de-duplication, sorted by sample size.} $p$ is the number of columns in the design matrix, i.e.\ after one-hot encoding of categorical variables.}  
+\label{tab:datasets}    
+  \end{table}
+
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=\linewidth]{paper_plots/appendix_r2_p1.pdf} 
+    \caption{\textbf{Predictive performance (test $R^2$) across 17 UCI ML and OpenML regression datasets.} Each teacher is shown with its two distilled local-linear students, lasso~(L) and ridge~(R). Local distillation approaches its teacher's accuracy across datasets. \emph{Dist (best teacher)} selects, per split, the teacher with the lowest cross-validated error. LLF and LOESS are teacher-unaware local methods and are more variable.} 
+    \label{fig:appendix_r2}
+\end{figure} 
+
+\begin{figure}[H]\ContinuedFloat
+    \centering 
+    \includegraphics[width=\linewidth]{paper_plots/appendix_r2_p2.pdf} 
+  \caption{(Continued.) Remaining datasets, same methods and axes as above.}
+\end{figure} 
+
+\section{Ablation study}
+\label{app:ablation}
+
+Local distillation has two components: (1) the similarity weights and (2) the ``prior'' prediction from the teacher. Here, we find that both combined usually have the best predictive performance (Figure~\ref{fig:appendix_ablation}).
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=\linewidth]{paper_plots/ablation_by_dataset.pdf} 
+    \caption{\textbf{Similarity weights and prediction prior are both useful for prediction.}  Ablation of local distillation's two teacher-derived components: the \emph{similarity weights} and the \emph{prediction prior}. There are four comparators: \emph{Neither} (a global lasso), \emph{Weights only}, \emph{Prior only}, and \emph{Both} (the full method); each panel shows one dataset. Points show median test $R^2$ over 20 splits ($\pm1$ SE); the teacher is TabPFN, the student a lasso. Both components help, and using both is best or tied-best on nearly every dataset.}
+    \label{fig:appendix_ablation}
+\end{figure} 
+
+
+\section{Performance with simulated data}
+\label{app:simulation}
+
+Local distillation is intended to summarize the feature--outcome relationship linearly at each prediction point.
+Here we study its performance when the data generating process is known, and test how the method responds to changes in the amount of noise, and the sizes of $n$ and $p$.
+ We simulate training data as follows:
+\begin{align}
+ x_i &\sim N_p(0, \Sigma), \qquad \Sigma_{jk} = 0.3^{|j-k|}, \nonumber \\
+ y_i &= f(x_i) + \varepsilon_i, \qquad \varepsilon_i \sim N(0, \sigma^2),
+ \quad \text{where} \nonumber \\
+ f(x) &= (1 + x_3)\,x_1 + (1 - x_3)\,x_2 + 2x_3 \nonumber \\
+      &= x_1 + x_2 + (2 + x_1  - x_2) x_3.
+ \label{eq:sim-dgp}
+\end{align}
+The \textit{true} local coefficients
+$\nabla f(x) = (1 + x_3,\ 1 - x_3,\ 2 + x_1 - x_2,\ 0, \ldots, 0)$ vary with respect to $x_1, x_2$ and $x_3$, but the global linear model cannot model this heterogeneity. Our testing data in all cases is $40$ query points drawn from the same distribution.
+
+We vary $n$, $p$ and $\sigma$; for each combination, we run 50 iterations of local distillation with a gradient boosting teacher and lasso student.
+Table~\ref{tab:sim-recovery} reports (1) correlations across query points between the fitted local coefficients $\hat\beta_1, \hat\beta_2$ and $\hat\beta_3$ and the true local gradients; (2) support recovery described by feature selection true positive rate and the number of false positives (incorrectly selected features); (3) $\hat\mu$ and the fraction of runs in which $\hat\mu \le 1$ and the method reverted to the global fit.
+
+We find that local distillation is generally strong across $\sigma$, $n$ and $p$ (including $p > n$), though it naturally degrades as the level of noise grows (and eventually reverts to the global linear model). In particular, the first two coefficients $(1 + x_3)$ and $(1 - x_3)$ are typically well fit, with correlation to the true values between $0.63$ and $0.79$. 
+However, the third coefficient, $2 + x_1 - x_2$, is harder to recover (correlation $0.14$--$0.34$). This is a result of our definition of ``similarity'': the difference $x_1 - x_2$ affects the response only through its interaction with $x_3$, so observations with very different values of $x_1 - x_2$ can have similar teacher predictions, and each local fit returns roughly the average coefficient over its neighborhood.  
+
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabular}{rrr | cc | ccc | cc}
+\toprule
+$n$ & $p$ & $\sigma$ & $\hat\mu$ & reverted
+  & $\mathrm{corr}(\hat\beta_1)$ & $\mathrm{corr}(\hat\beta_2)$
+  & $\mathrm{corr}(\hat\beta_3)$ & TPR & FP \\
+\midrule
+400 & 100 & 0.3 & 2.89 (0.49) & 0/50 & 0.79 (0.06) & 0.78 (0.06) & 0.34 (0.13) & 0.97 (0.02) & 7.4 (3.7) \\
+400 & 100 & 1 & 1.46 (0.15) & 0/50 & 0.77 (0.07) & 0.77 (0.07) & 0.30 (0.13) & 0.96 (0.02) & 9.3 (5.6) \\
+400 & 100 & 2 & 1.07 (0.06) & 11/50 & 0.73 (0.08) & 0.72 (0.08) & 0.24 (0.16) & 0.94 (0.04) & 10.3 (5.9) \\
+400 & 100 & 3 & 1.02 (0.02) & 40/50 & 0.63 (0.09) & 0.64 (0.06) & 0.14 (0.14) & 0.92 (0.05) & 9.3 (5.3) \\
+200 & 100 & 0.3 & 1.86 (0.37) & 0/50 & 0.76 (0.07) & 0.75 (0.07) & 0.33 (0.17) & 0.96 (0.02) & 7.7 (4.6) \\
+400 & 800 & 0.3 & 2.43 (0.33) & 0/50 & 0.78 (0.06) & 0.77 (0.07) & 0.34 (0.15) & 0.95 (0.02) & 10.4 (7.6) \\
+200 & 500 & 0.3 & 1.66 (0.36) & 0/50 & 0.77 (0.06) & 0.75 (0.08) & 0.25 (0.17) & 0.94 (0.03) & 9.8 (7.8) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Recovery of local structure using a gradient boosting teacher and lasso student.} Means (standard
+deviations) reported over runs, with $50$ replicates per row. ``reverted'' counts replicates with $\hat\mu \le 1$, in which the method reverted to the global fit. The correlation columns show the correlations between the fitted and true coefficients, for runs when $\hat\mu > 1$. ``TPR'' is the true positive rate of the selected coefficients, ``FP'' is the number of false positive selections.}
+\label{tab:sim-recovery}
+\end{table}
+
+We then repeated this experiment to test the effect of filtering by selection probabilities. For each configuration, we took the first $10$ replicates, selected $\hat t$ using the rule of Section~\ref{sec:randomized_estimator}, and ran $B = 100$ randomized refits per query point to compute $\hat\pi_j$ for every selected feature. Table~\ref{tab:sim-stability} reports the results. We find that filtering reduces the false positive rate for feature selection, and retains most of the true positives.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabular}{rrr c c | cc | cc | c}
+\toprule
+&&&&& \multicolumn{2}{c|}{share with $\hat\pi_j > 0.9$}
+   & \multicolumn{2}{c|}{FP per query} & \\
+$n$ & $p$ & $\sigma$ & reverted & $\hat t$
+  & active & spurious & unfiltered & filtered & TPR (filtered) \\
+\midrule
+400 & 100 & 0.3 & 0/10 & 1.14 (0.98) & 0.98 (0.02) & 0.12 (0.14) & 8.3 (5.1) & 0.9 (1.0) & 0.95 (0.02) \\
+400 & 100 & 1 & 0/10 & 0.67 (0.76) & 0.98 (0.03) & 0.21 (0.23) & 10.4 (6.5) & 2.0 (2.2) & 0.93 (0.05) \\
+400 & 100 & 2 & 0/10 & 0.89 (0.92) & 0.95 (0.06) & 0.12 (0.12) & 12.4 (6.7) & 1.8 (2.2) & 0.87 (0.09) \\
+400 & 100 & 3 & 8/10 & 0.62 (0.53) & 0.93 (0.03) & 0.05 (0.07) & 9.1 (0.6) & 0.5 (0.7) & 0.86 (0.01) \\
+200 & 100 & 0.3 & 0/10 & 0.39 (0.37) & 0.98 (0.02) & 0.21 (0.27) & 7.3 (4.9) & 1.6 (2.0) & 0.94 (0.03) \\
+400 & 800 & 0.3 & 0/10 & 0.66 (0.76) & 0.98 (0.02) & 0.15 (0.22) & 10.1 (9.1) & 1.7 (2.3) & 0.93 (0.02) \\
+200 & 500 & 0.3 & 0/10 & 0.42 (0.75) & 0.98 (0.02) & 0.27 (0.28) & 9.0 (5.5) & 2.4 (2.9) & 0.94 (0.01) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Validation of the selection probabilities against ground truth.} Means (standard deviations) across replicates with
+$\hat\mu > 1$; maximum $10$ per row, with $B = 100$ randomized refits per query point at the scale $\hat t$ selected per replicate as described in Section~\ref{sec:randomized_estimator}. ``Reverted'' counts replicates with $\hat\mu \le 1$, which are excluded from the other columns. 
+``Active'' and ``spurious'' refer to selections of the $3$ truly active and the $p - 3$ null features, respectively; ``filtered'' retains only selections with $\hat\pi_j > 0.9$. The selection probabilities identify the false selections: filtering at $\hat\pi_j > 0.9$ reduces them from roughly $8$--$12$ per query point to fewer than $2.5$, and retains $86$--$95\%$ of the truly active features.}
+\label{tab:sim-stability}
+\end{table}
+
+
+
+
+\end{document}

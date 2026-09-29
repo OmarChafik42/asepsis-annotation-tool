@@ -1,0 +1,1718 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      408.0,
+      86.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Evaluation Resolution Confounds Learning-Rule Comparisons in Model-Brain RSA of Early Visual Cortex",
+    "page": 0,
+    "bbox": [
+      180.0,
+      166.0,
+      1043.0,
+      249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      417.0,
+      278.0,
+      806.0,
+      363.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      110.0,
+      408.0,
+      240.0,
+      439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      106.0,
+      469.0,
+      607.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      614.0,
+      415.0,
+      1115.0,
+      940.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      615.0,
+      944.0,
+      1115.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      614.0,
+      1043.0,
+      1115.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      614.0,
+      1167.0,
+      1116.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      605.0,
+      1514.0,
+      619.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      108.0,
+      116.0,
+      603.0,
+      403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      107.0,
+      406.0,
+      605.0,
+      618.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      108.0,
+      620.0,
+      604.0,
+      790.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 1,
+    "bbox": [
+      110.0,
+      828.0,
+      342.0,
+      857.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      107.0,
+      878.0,
+      605.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      107.0,
+      1286.0,
+      604.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      115.0,
+      1013.0,
+      140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      614.0,
+      149.0,
+      1113.0,
+      411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      614.0,
+      416.0,
+      1116.0,
+      1352.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      615.0,
+      1357.0,
+      1115.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      604.0,
+      1514.0,
+      620.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      107.0,
+      116.0,
+      604.0,
+      163.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      107.0,
+      165.0,
+      606.0,
+      599.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Methods",
+    "page": 2,
+    "bbox": [
+      109.0,
+      636.0,
+      289.0,
+      665.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      105.0,
+      687.0,
+      605.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      107.0,
+      1215.0,
+      605.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      116.0,
+      1115.0,
+      283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      614.0,
+      288.0,
+      1115.0,
+      433.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      437.0,
+      1114.0,
+      631.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      614.0,
+      635.0,
+      1116.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      614.0,
+      1094.0,
+      1116.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      604.0,
+      1514.0,
+      620.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      117.0,
+      604.0,
+      595.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      600.0,
+      604.0,
+      935.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      939.0,
+      606.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      1208.0,
+      604.0,
+      1376.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      1381.0,
+      606.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      615.0,
+      116.0,
+      1115.0,
+      524.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      615.0,
+      534.0,
+      1114.0,
+      989.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Results",
+    "page": 3,
+    "bbox": [
+      619.0,
+      1074.0,
+      777.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      1142.0,
+      1115.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      604.0,
+      1515.0,
+      620.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 The V1 rule ranking is a function of evaluation resolution",
+    "page": 4,
+    "bbox": [
+      108.0,
+      112.0,
+      606.0,
+      166.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      106.0,
+      182.0,
+      604.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      106.0,
+      396.0,
+      606.0,
+      683.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      107.0,
+      685.0,
+      608.0,
+      1043.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 It is not the untrained baseline's nor- malization",
+    "page": 4,
+    "bbox": [
+      108.0,
+      1074.0,
+      603.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      106.0,
+      1141.0,
+      604.0,
+      1404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      109.0,
+      1405.0,
+      605.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      121.0,
+      1101.0,
+      557.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: V1 alignment is a function of evaluation resolution. Mean Spearman ρ (Conv1→V1) ± SEM across 5 seeds. Every trained condition peaks at the 32 px training resolution and declines; only the untrained random network rises. The Random-Backprop gap is ≈ 0 at 32 px and grows to +0.044 at 224 px; the same pattern holds, shifted downward, after low-level statistics are partialled out (§3.4).",
+    "page": 4,
+    "bbox": [
+      616.0,
+      592.0,
+      1115.0,
+      786.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      615.0,
+      828.0,
+      1116.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      615.0,
+      1071.0,
+      1115.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      616.0,
+      1405.0,
+      1115.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      605.0,
+      1514.0,
+      620.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      124.0,
+      123.0,
+      579.0,
+      541.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: The effect is not the untrained baseline's normalization. V1 alignment vs. evaluation resolution for the untrained network with its initialized (identity) batch-normalization statistics and for four calibrated variants (2×2: CIFAR-10 or disjoint THINGS images, at 32 px or at the evaluation resolution), with the backprop- trained network for reference. Calibration leaves the con- volutional weights bit-identical. Resolution-matched cal- ibration costs little and preserves the untrained network's V1 advantage over backprop.",
+    "page": 5,
+    "bbox": [
+      106.0,
+      576.0,
+      604.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      861.0,
+      606.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 Train/eval resolution matching does not account for it: ResNet-50 and Swin-Tiny",
+    "page": 5,
+    "bbox": [
+      108.0,
+      1187.0,
+      604.0,
+      1269.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1285.0,
+      605.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      630.0,
+      122.0,
+      1092.0,
+      531.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure3: Architecture-independent,not train/eval matching. V1 alignment vs. evalua- tion resolution for three architecture families. All three trained models, including ResNet-50 and Swin-Tiny (both trained at 224px), fall toward 224px; only the untrained CNN rises. There is no crossover at the 224 px training resolution.",
+    "page": 5,
+    "bbox": [
+      615.0,
+      563.0,
+      1115.0,
+      732.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      615.0,
+      774.0,
+      1114.0,
+      896.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.4 Low-level accounts: Gabor, pixel, and global colour",
+    "page": 5,
+    "bbox": [
+      616.0,
+      928.0,
+      1112.0,
+      985.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      614.0,
+      996.0,
+      1116.0,
+      1283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      614.0,
+      1286.0,
+      1115.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1514.0,
+      620.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      115.0,
+      605.0,
+      237.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      246.0,
+      606.0,
+      965.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      974.0,
+      606.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      631.0,
+      124.0,
+      1098.0,
+      491.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: The effect is not a simple Gabor account. Gabor-model similarity (x) vs. V1 alignment (y) across models and resolutions. We see no relationship between the two; the ResNet-50, far more Gabor-like, is less V1- aligned than the untrained CNN.",
+    "page": 6,
+    "bbox": [
+      616.0,
+      524.0,
+      1114.0,
+      645.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      615.0,
+      711.0,
+      1114.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      614.0,
+      867.0,
+      1115.0,
+      1348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      614.0,
+      1357.0,
+      1115.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      605.0,
+      1514.0,
+      619.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.5 Content, not pooled positions",
+    "page": 7,
+    "bbox": [
+      108.0,
+      112.0,
+      528.0,
+      140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      106.0,
+      153.0,
+      605.0,
+      419.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      107.0,
+      418.0,
+      605.0,
+      680.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      106.0,
+      681.0,
+      605.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      107.0,
+      969.0,
+      606.0,
+      1210.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.6 It generalizes over training time and across species",
+    "page": 7,
+    "bbox": [
+      109.0,
+      1240.0,
+      604.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      106.0,
+      1309.0,
+      605.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      614.0,
+      116.0,
+      1115.0,
+      573.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.7 What survives: a genuine learning effect at LOC",
+    "page": 7,
+    "bbox": [
+      616.0,
+      601.0,
+      1114.0,
+      655.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      615.0,
+      670.0,
+      1115.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Discussion",
+    "page": 7,
+    "bbox": [
+      617.0,
+      1067.0,
+      821.0,
+      1096.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      615.0,
+      1118.0,
+      1115.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1515.0,
+      620.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      122.0,
+      123.0,
+      1100.0,
+      639.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5: The dependence is on image content, not on pooled positions. V1 alignment (Conv1→V1) vs. evaluation resolution, mean ± SEM over 5 seeds, with stimuli at their native resolution (left) and with their content capped at 32 px before upsampling (right). The arms are identical at 32 px by construction. What differs is the shape. At native resolution the trained conditions decline steadily across the whole sweep; with content fixed they drop once at the first step, where the resize chain is introduced, and then run flat or turn back up. Across the shaded 64 → 224 px span the pooled positions increase twelvefold while the right-hand arm's content stays fixed, and the Random-Backprop gap opens by +0.003 there against +0.030 on the left. Only the untrained network rises in both arms.",
+    "page": 8,
+    "bbox": [
+      105.0,
+      673.0,
+      1114.0,
+      868.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      106.0,
+      907.0,
+      606.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      106.0,
+      1261.0,
+      605.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      614.0,
+      908.0,
+      1116.0,
+      1148.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      614.0,
+      1166.0,
+      1117.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      604.0,
+      1514.0,
+      620.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      123.0,
+      122.0,
+      1086.0,
+      615.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      123.0,
+      122.0,
+      1086.0,
+      615.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6: \"Training degrades V1\" tracks the same dependence. V1 alignment (Conv1→V1) over training, evaluated at 224 px (left) and at the 32 px training resolution (right), mean across seeds and subjects. At 224 px backprop appears to degrade; at 32 px it returns to baseline, showing no net degradation.",
+    "page": 9,
+    "bbox": [
+      106.0,
+      649.0,
+      1113.0,
+      724.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      106.0,
+      763.0,
+      605.0,
+      1006.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 A correction to our own earlier work",
+    "page": 9,
+    "bbox": [
+      107.0,
+      1050.0,
+      604.0,
+      1076.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      106.0,
+      1094.0,
+      606.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      614.0,
+      764.0,
+      1116.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Relation to prior work",
+    "page": 9,
+    "bbox": [
+      616.0,
+      1145.0,
+      951.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      614.0,
+      1190.0,
+      1116.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      600.0,
+      1514.0,
+      626.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      121.0,
+      124.0,
+      625.0,
+      561.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      627.0,
+      125.0,
+      1101.0,
+      559.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7: A genuine learning effect survives at higher areas. Backprop vs. untrained alignment (± SEM, 5 seeds) across resolution at LOC (left) and IT (right). Backprop exceeds the untrained baseline at every resolution (5/5 seeds), unlike at V1.",
+    "page": 10,
+    "bbox": [
+      105.0,
+      592.0,
+      1113.0,
+      666.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      707.0,
+      605.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3 Limitations",
+    "page": 10,
+    "bbox": [
+      108.0,
+      1197.0,
+      312.0,
+      1222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      1237.0,
+      606.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      613.0,
+      706.0,
+      1117.0,
+      1475.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      600.0,
+      1514.0,
+      624.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      115.0,
+      606.0,
+      645.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.4 Future work",
+    "page": 11,
+    "bbox": [
+      108.0,
+      675.0,
+      323.0,
+      700.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      714.0,
+      606.0,
+      1316.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Conclusion",
+    "page": 11,
+    "bbox": [
+      108.0,
+      1354.0,
+      319.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      1404.0,
+      605.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      615.0,
+      114.0,
+      1115.0,
+      645.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgements",
+    "page": 11,
+    "bbox": [
+      617.0,
+      672.0,
+      850.0,
+      698.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      615.0,
+      710.0,
+      1115.0,
+      833.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Code and Data Availability",
+    "page": 11,
+    "bbox": [
+      617.0,
+      860.0,
+      949.0,
+      888.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      617.0,
+      900.0,
+      1073.0,
+      926.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Appendix A: Hyperparameter Details",
+    "page": 11,
+    "bbox": [
+      618.0,
+      954.0,
+      1071.0,
+      983.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      617.0,
+      993.0,
+      1055.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      615.0,
+      1262.0,
+      1115.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      600.0,
+      1514.0,
+      625.0,
+      1534.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      108.0,
+      115.0,
+      605.0,
+      165.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix B: Weight Displacement from Initialization",
+    "page": 12,
+    "bbox": [
+      109.0,
+      197.0,
+      604.0,
+      252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      109.0,
+      266.0,
+      605.0,
+      410.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      128.0,
+      414.0,
+      513.0,
+      509.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix C: Best-Layer Selection",
+    "page": 12,
+    "bbox": [
+      111.0,
+      541.0,
+      516.0,
+      568.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      108.0,
+      581.0,
+      605.0,
+      701.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      129.0,
+      702.0,
+      535.0,
+      884.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 12,
+    "bbox": [
+      110.0,
+      919.0,
+      268.0,
+      948.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      112.0,
+      968.0,
+      602.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      112.0,
+      1059.0,
+      603.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      112.0,
+      1176.0,
+      605.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      112.0,
+      1290.0,
+      602.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      112.0,
+      1382.0,
+      604.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      116.0,
+      1114.0,
+      210.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      226.0,
+      1113.0,
+      297.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      311.0,
+      1112.0,
+      407.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      421.0,
+      1113.0,
+      516.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      531.0,
+      1113.0,
+      628.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      642.0,
+      1113.0,
+      760.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      775.0,
+      1112.0,
+      871.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      620.0,
+      886.0,
+      1113.0,
+      957.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      618.0,
+      972.0,
+      1112.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      1035.0,
+      1112.0,
+      1105.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      618.0,
+      1120.0,
+      1111.0,
+      1191.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      620.0,
+      1207.0,
+      1112.0,
+      1277.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      620.0,
+      1292.0,
+      1112.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      1402.0,
+      1113.0,
+      1471.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      601.0,
+      1514.0,
+      625.0,
+      1534.0
+    ]
+  }
+]

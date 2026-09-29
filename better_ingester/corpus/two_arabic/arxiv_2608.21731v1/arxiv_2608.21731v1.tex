@@ -1,0 +1,1448 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for USENIX papers.
+%
+% History:
+%
+% - TEMPLATE for Usenix papers, specifically to meet requirements of
+%   USENIX '05. originally a template for producing IEEE-format
+%   articles using LaTeX. written by Matthew Ward, CS Department,
+%   Worcester Polytechnic Institute. adapted by David Beazley for his
+%   excellent SWIG paper in Proceedings, Tcl 96. turned into a
+%   smartass generic template by De Clarke, with thanks to both the
+%   above pioneers. Use at your own risk. Complaints to /dev/null.
+%   Make it two column with no page numbering, default is 10 point.
+%
+% - Munged by Fred Douglis <douglis@research.att.com> 10/97 to
+%   separate the .sty file from the LaTeX source template, so that
+%   people can more easily include the .sty file into an existing
+%   document. Also changed to more closely follow the style guidelines
+%   as represented by the Word sample file.
+%
+% - Note that since 2010, USENIX does not require endnotes. If you
+%   want foot of page notes, don't include the endnotes package in the
+%   usepackage command, below.
+% - This version uses the latex2e styles, not the very ancient 2.09
+%   stuff.
+%
+% - Updated July 2018: Text block size changed from 6.5" to 7"
+%
+% - Updated Dec 2018 for ATC'19:
+%
+%   * Revised text to pass HotCRP's auto-formatting check, with
+%     hotcrp.settings.submission_form.body_font_size=10pt, and
+%     hotcrp.settings.submission_form.line_height=12pt
+%
+%   * Switched from \endnote-s to \footnote-s to match Usenix's policy.
+%
+%   * \section* => \begin{abstract} ... \end{abstract}
+%
+%   * Make template self-contained in terms of bibtex entires, to allow
+%     this file to be compiled. (And changing refs style to 'plain'.)
+%
+%   * Make template self-contained in terms of figures, to
+%     allow this file to be compiled. 
+%
+%   * Added packages for hyperref, embedding fonts, and improving
+%     appearance.
+%   
+%   * Removed outdated text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix-2020-09}
+\usepackage{authblk}
+\usepackage{todonotes}
+% General packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\let\Bbbk\relax
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{tikz}% to be able to draw some self-contained figs
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{flexisym}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{pgfplots}
+\usepackage[title]{appendix}
+\usepackage{xspace}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{comment}
+
+% Table
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\usepackage{multirow}
+
+% math
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+%\newtheorem{lemma}{Lemma}
+
+% URL break
+\def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
+\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
+\do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
+\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n
+\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
+\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
+\do\?\do\'\do+\do\=\do\#}
+
+% Caption font
+\renewcommand{\captionfont}{\small \bf}
+
+% Squish list
+\newcommand{\squishlist}{
+  \begin{list}{$\bullet$}{
+    \setlength{\itemsep}{0pt}       \setlength{\parsep}{3pt}
+    \setlength{\topsep}{3pt}        \setlength{\partopsep}{0pt}
+    \setlength{\leftmargin}{1em}    \setlength{\labelwidth}{1em}
+    \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+  \end{list} }
+
+% Space saving
+\usepackage[small,compact]{titlesec}
+\setlength{\belowcaptionskip}{0.03in}
+\textfloatsep 0.03in
+\floatsep 0.03in
+\dbltextfloatsep 0.03in
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\abovedisplayshortskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt} % equations
+
+% Symbols
+\usepackage{amssymb}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\at}{\makeatletter @\makeatother}
+\usepackage{stmaryrd}
+
+% Algorithm
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode,color,colortbl}
+
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE
+\RequirePackage[normalem]{ulem}
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1}
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}}
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}
+%DIF SAFE PREAMBLE
+\providecommand{\DIFaddbegin}{}
+\providecommand{\DIFaddend}{}
+\providecommand{\DIFdelbegin}{}
+\providecommand{\DIFdelend}{}
+%DIF FLOATSAFE PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}}
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}}
+\providecommand{\DIFaddbeginFL}{}
+\providecommand{\DIFaddendFL}{}
+\providecommand{\DIFdelbeginFL}{}
+\providecommand{\DIFdelendFL}{}
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+
+%\newcommand{\ming}[1]{{\color{magenta}{\bf ML:#1}}}
+%\newcommand{\zerui}[1]{{\color{red}{\bf ZR:#1}}}
+\newcommand{\ming}[1]{}
+\newcommand{\zerui}[1]{}
+
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{Building A CSFQ-Inspired Transport for Switched CXL Memory Pooling}
+
+\makeatletter 
+\renewcommand\AB@affilsepx{\hspace{2mm} \protect\Affilfont} 
+\makeatother
+
+\author[1]{Zerui Guo}
+\author[2]{Emily Shriver}
+\author[1]{Ming Liu}
+\affil[1]{University of Wisconsin-Madison}
+\affil[2]{Intel}
+
+\newcommand{\sys}{MemChannel\xspace}
+
+\pagenumbering{gobble}
+
+
+%\if 0
+% Switch to these files to compile a normal pdf
+\maketitle
+\begin{abstract}
+\label{sec:abst}
+
+Emerging switched CXL memory pooling systems, albeit promising, suffer from significant performance interference due to the shared but performance-uncontrolled data path among concurrent memory streams between a host core and a remote DIMM. We systematically characterize a memory pooling appliance based on the XConn’s Apollo CXL switch, and identify three issues: intra-host contention, in-fabric congestion, and unmanaged host-remote DIMM interaction.
+
+%Emerging memory pooling systems over load-store interconnects, albeit promising, suffer from performance unpredictability due to the uncontrolled data path between a host core and a remote DIMM. We characterize a commodity memory pooling appliance (IntelliProp's Omega Fabric) and identify three root causes: intra-host contention, in-fabric congestion, and unmanaged host-remote DIMM interaction.
+
+This paper presents a new transport layer, {\bf \sys}, which provides the \texttt{mchannel} abstraction to manage end-to-end fabric bandwidth among competing memory flows and enable application-specific traffic for switched CXL memory pooling. Under the hood, our key idea is to build a {\it Sender-Driven Fabric-Informed} transport protocol--inspired by Core-Stateless Fair Queueing (CSFQ)--that admits just the right amount of CXL requests to each \texttt{mchannel} based on the estimated $Core \leftrightarrow DIMM_{CXL}$ bandwidth availability. To grapple with the ramifications of CXL-induced idiosyncrasies, \sys introduces a couple of techniques: time-based rate control, host-side admission control, cross-host bookkeeping, new congestion signals, rate estimation based on the fluid model, and delay-based link capacity adjustment. We build \sys from scratch and support unmodified applications. Our evaluations over switched memory pooling demonstrate the effectiveness of \sys from performance isolation, scalability, and multi-tenancy perspectives.
+
+%\sys is inspired by Core-Stateless Fair Queueing (CSFQ), and we carefully tailor it to the CXL switching fabric. To grapple with the ramifications of CXL-induced idiosyncrasies, \sys introduces a couple of techniques: token-based rate control, host-side admission control, cross-host bookkeeping, new congestion signals, rate estimation based on the fluid model, and delay-based link capacity adjustment. We build \sys from scratch and port several applications. Our evaluations over switched memory pooling demonstrate the effectiveness of \sys from performance isolation, scalability, and multi-tenancy perspectives.
+
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+% Step 1: CXL and memory pooling are promising.
+Load-Store interconnects--such as Compute Express Link (CXL)--and the resulting memory pooling have gained significant traction recently. They transparently extend a commodity server's memory capacity, enable elastic memory resource sharing, and allow applications to access remote memory using load/store instructions. Such composable memory technology holds great potential to remedy the DRAM scaling issue, ameliorate hardware resource utilization, and boost the cost efficiency of rack/cluster-scale computing. The last few years have seen several industrial prototypes~\cite{asteralab-leo, omega-fabric, intel-agilex-dev-kit, xconn-titan, samsung-cmmb} being developed, evaluated, and sampled.
+
+% Step 2/3: Switched memory pooling suffers from performance interference.
+However, memory pooling, especially under switched deployment, suffers from significant performance interference. Unlike local memory connected via dedicated memory buses, {\it the data path between a host core and a remote CXL DIMM under switched pooling is shared among concurrent intra-/inter-host memory streams without explicit performance control.} We systematically characterize the problem using the XConn's Apollo CXL switch and Titan evaluation platform and identify three issues ($\S$\ref{subsec:chara-issues}). First, at the server host, taking the Intel EMR (Emerald Rapids) processor as an example, access contentions happen at both (a) the CHA (caching and home agent) and M2PCIe modules of the host uncore; and (b) the virtual lane inside a CXL host adapter, increasing the CXL memory access latency by up to 13.4$\times$ with 82.6\% bandwidth drops. Second, within the switch fabric, the link-layer credit-based flow control is workload-agnostic, causing head-of-link blocking and unfair bandwidth partition at the egress port. As such, when a cacheline-sized memory stream interleaves with a 4KB-sized one, it experiences 6.9$\times$/3.8$\times$ higher read/write latencies, with 97.8\% link bandwidth being taken (even though both have the same amount of outstanding bytes). Third, the hardware prefetching implicitly induces many more loads into the target adapter under regular access patterns and predictable data locality, which is completely transparent to the CXL fabric. We observed that while the switch downstream port is not congested, the target adapter sees twice as much traffic, causing dramatic queue build-up.
+
+%We carefully dissect the remote memory read/write data path and identify three performance interference factors ($\S$\ref{subsec:chara-issues}). First, at the server host, contention at the uncore and CXL host adapter affects the number of outstanding CXL load/store requests, jeopardizing remote memory bandwidth. Second, within the fabric, the link layer credit-based flow control is workload-agnostic, easily causing head-of-link blocking and unfair bandwidth partition issues. Third, CXL memory can be implicitly accelerated by the host server, especially when applications present regular access patterns and predictable data locality. Such acceleration, transparently generating more remote requests, would conversely impact the performance of other concurrent memory streams.
+
+% Step 4: Solving the problem is hard.
+Therefore, the switched CXL memory pooling lacks a transport layer that can effectively manage end-to-end fabric bandwidth among competing memory flows and enable application-specific traffic control.
+%This paper aims to build a transport layer for switched memory pooling that allows memory streams to share the CXL fabric bandwidth in a controlled manner through end-to-end core--DIMM communication channels. 
+However, realizing this is non-trivial. First, CXL packets (FLITs) traverse through the CPU pipeline, system bus, switching fabric, and remote DIMM, whose transmissions are implicit. Specifically, a load/store instruction is issued depending on data locality and the execution condition of micro-architectural components, and its response directly resumes the stalled processor execution without signaling. Second, CXL adapters and switches employ an ultra-fast data plane with limited in-network computing capabilities, whose hardware architecture is opaque, eluding any active traffic control mechanisms. Third, monitoring the data transmission performance requires us to bridge the gap between high-level memory streams and low-level hop-by-hop link-layer credits. The problem is further exacerbated by the inherent nature of the lossless network and the massive amount of application-induced memory requests.
+
+% Step 5: Key idea
+We design and implement a new transport layer (dubbed {\bf \sys}) atop today's \texttt{CXL.mem} protocol stack, inspired by a seminal technique -- Core-Stateless Fair Queueing (CSFQ)~\cite{csfq-sigcomm98}. It achieves max-min bandwidth in the Internet for competing flows without maintaining per-flow states. We find that CSFQ is promising to tackle the above challenges in our context because (a) it is highly scalable, where core switches only maintain a few aggregated variables (e.g., arrival rate, accepted rate, and fair share rate) with fixed computing complexity;  (b) edge-driven, requiring minimal in-network support; (c) lightweight on the data plane,  whose traffic manipulation primitives (e.g., statistic bookkeeping, labeling, and packet dropping) are compute-efficient.
+
+% Step 6: Techniques
+\sys comprises three pieces: (a) host programming interfaces that center around the \texttt{mchannel} system object with APIs to support unmodified applications; (b) the host runtime that runs the protocol stack, interacts with CXL fabric components, and performs rate control; and (c) in-fabric system extensions at the switch, adapter, and CXL DIMM, participating in the protocol execution. \sys probes the end-to-end bandwidth capability at runtime on the data plane, introduces new fabric congestion signals, and computes the per-\texttt{mchannel} transmission rate. {\it Key to \sys is a Sender-Driven Fabric-Informed transport protocol that admits just the right amount of CXL requests to each \texttt{mchannel} based on the estimated $Core \leftrightarrow DIMM_{CXL}$ bandwidth availability.} Specifically, we first apply the fluid model to the entire CXL fabric, figure out how to tailor CSFQ to our context, and derive the theoretical bound. Next, to handle the implicit transmission issue, \sys applies the time-based rate control that translates the end-to-end bandwidth usage and availability to the available running time. To avoid in-network data-plane operations, we push rate calculation to the edge, reserve a designated remote memory region for bookkeeping cross-host statistics, and translate in-network packet dropping to endhost admission control. We then follow the fluid model to determine the per-\texttt{mchannel} access speed and fair share rate and use a delay-based approach to probe the link bandwidth capacity. Further, we extend the \sys to support weight and multi-layer CXL switching.
+
+
+%From the application perspective, it provides the \texttt{mchannel} abstraction to carry a memory stream and uses the native \texttt{C++ Smart Pointer} to mediate CXL memory accesses. Key to \sys is the transport algorithm that runs across the underlying CXL fabric. The idea is to determine the fair share rate of each \texttt{mchannel} and only issue the right amount of load/store instructions to the remote DIMM. Specifically, we first apply the fluid model to the entire CXL fabric, figure out how to tailor CSFQ to our case, and derive the theoretic bound. Next, to handle the implicit transmission issue, \sys applies the token-based rate control that translates the end-to-end bandwidth usage and availability to the token quantity. A token is a communication permission that allows issuing a CXL flit to the fabric. To avoid in-network data-plane operations, we push rate calculation to the edge, reserve a designated remote memory region for bookkeeping cross-host statistics, and translate in-network packet dropping to endhost admission control. We then follow the fluid model to determine the per-\texttt{mchannel} access speed and fair share rate and use a delay-based approach to probe the link bandwidth capacity. Besides, we extend the \sys to support weight and multi-layer CXL switching.
+
+% Step 7: Results
+We prototyped the \sys, ported several applications~\cite{workstealing-ppopp13, trie-accs07, gap-arxiv, mica-nsdi14} atop, and performed end-to-end evaluation over a real switched memory pooling setup. Our evaluations show that \sys fully uses the underlying link bandwidth, mitigates intra-host and cross-host performance interference, provides CSFQ-like fairness, adapts to the fabric bandwidth availability, and scales with the application demands. Applications running over \texttt{mchannel}s receive efficient multi-tenancy and achieve 2--3.5$\times$ improvements.
+
+%over other comparing schemes~\cite{tpp-asplos23, aifm-osdi20}.
+
+%In this paper, we propose a hardware-software co-designed performance isolation interface (called {\bf \sys}) for CXL memory pooling. \emph{The idea is to establish a dedicated core-DIMM data path and share the CXL fabric and memory bandwidth in an explicit and deterministic way.} \sys provides programming abstraction and APIs such that developers can effectively manage remote memory and encapsulate application threads. To address the intra-host interference, \sys develops a \emph{software-managed token tunnel}, consisting of a token distributor for bandwidth allocation, a per-tunnel thread scheduler to achieve execution fairness, and a token adjustment scheme to adapt the workload demand. To tackle the cross-host interference, \sys builds a \emph{hardware-controlled flit tunnel} based on the Phantom Queue technique~\cite{phantom-ieeenet04, hull-nsdi12, phantom-sigcomm24}. It establishes an end-to-end communication channel across all on-path CXL entities (including host/endpoint adapter and fabric switch) and delivers memory requests with a performance guarantee.
+
+% Step 6: Apps
+%Using \sys, we build two applications: an object-based remote memory and a distributed shuffle service. The former provides the native \texttt{C++ Smart Pointer} programming interface, applies the MemKind library~\cite{memkind} for heap management, and develops a streamlined object runtime by harnessing the {\sys}'s capabilities. It introduces a CLOCK-enhanced object migration engine, which imbues object migration directly into data access, eliminates uncontrolled remote loads/stores, and amortizes the bulky object relocation cost. The latter enables fast cross-host coordination and data synchronization over the memory pool. It creates {\sys}s between mappers/reducers and remote DIMMs and orchestrates concurrent data transfers.
+
+% Step 7: Results
+%We prototyped the \sys system and performed end-to-end evaluations. On the hardware side, we built a small-scale CXL-based memory pooling testbed using Xilinx FPGA boards and COTS devices. On the software side, we developed \sys from scratch and ported several applications: a work-stealing queueing~\cite{workstealing-ppopp13}, a Trie for fast data lookup~\cite{trie-accs07}, an in-memory key-value store (MICA~\cite{mica-nsdi14}), a graph processing benchmark suite~\cite{gap-arxiv}, and a distributed merge sort. Our evaluations show that \sys provides both intra-host and cross-host performance isolation, adapts to the fabric bandwidth availability, and scales with the application demands. Applications running over {\sys}s receive efficient multi-tenancy and achieve up to 3.2$\times$ improvements over other comparing schemes.
+%\section{Understanding CXL Switching}
+%\section{Understanding Switched CXL Memory Pooling}
+\section{Understanding Switched CXL MEM Pooling}
+\label{sec:chara}
+
+%This section introduces switched CXL memory pooling, describes CXL switching, and characterizes its performance.
+
+\subsection{Switched CXL Memory Pooling}
+\label{subsec:chara-cxl-mempool}
+
+\begin{figure}[tp]
+    %\centering
+    \includegraphics[width=\linewidth]{graphs/hw-overall-v2.pdf}
+    \vspace{-1.0\baselineskip}
+    \caption{The architecture and hardware testbed of a switched CXL memory pool. (c) shows the architecture of a CXL switch. VL=Virtual Lane. vPPB=Virtual PCI-to-PCI Bridge.}
+    %\vspace{-0.25\baselineskip}
+    \label{fig:hw-overall}
+\end{figure}
+
+CXL~\cite{cxl} is an emerging high-speed cluster interconnect built atop the physical layer of PCIe Express~\cite{pcie}. It provides a load/store interface for CPU, memory, and device communications. The interconnect uses the Flex Bus I/O architecture~\cite{cxl-spec}, and is organized into physical, data link, and transaction layers. CXL supports three types of channels: \texttt{CXL.cache}, \texttt{CXL.mem}, and  \texttt{CXL.io}.
+%(1) \texttt{CXL.cache}, enableing host-device cache coherence via snoop filter~\cite{jetty-hpca01, ibm-sf-hpca08}; (2) \texttt{CXL.mem}, allowing device-side memory via host load/store instructions; (3) \texttt{CXL.io}, encapsulating the native PCIe protocol with some enhancements, like reduced latency.
+Memory pooling is constructed using \texttt{CXL.mem} and the corresponding memory expanders (Type-3 device). Since CXL 2.0, CXL fabrics allow resource pooling via single-level and multi-tiered switching~\cite{cxl-spec}. Figure~\ref{fig:hw-overall} depicts the system architecture of a switched CXL memory pool.
+
+\squishlist
+    \item {\bf CXL Host Adapter.} It exposes access root ports (RPs) and cooperates with the host memory subsystem. The adapter converts load/store instructions into fabric-routable FLITs and transmits them over the wire. Upon responses, it parses the packets, obtains fetched read data or write completions, and delivers them to the processor pipeline.
+
+    \item {\bf CXL Switch.} A CXL switch consists of upstream ports (UPs) for host adapters' connectivity, downstream ports (DPs) for remote memory, and internal forwarding tables for traffic orchestration. Upon initialization, it discovers all connected components, configures the routing structure, and fills table entries based on the topology. The switch carries CXL transactions on the data plane and employs some scheduling policies. CXL supports a hybrid of Port-Based Routing (PBR) and Hierarchy-Based Routing (HBR).
+
+    \item {\bf CXL Endpoint Adapter.} It stays close to target memory devices, operating as a responder for remote memory. The adapter processes CXL protocols and converts between FLITs and memory commands. It also performs integrity checking, request steering (when multiple logic devices are used), and transmission speed synchronization.
+    
+    \item {\bf CXL Attached Memory.} The remote DIMMs (rDIMMs) are housed in a standalone chassis or appliance, including an SoC backplane, memory controllers, and a power supply. Each module uses a DDR-compatible PHY interface, supporting different kinds of memory media.
+\squishend
+
+\noindent
+{\bf Evaluation Target.} Several memory appliances~\cite{samsung-cmmb, h3-falcon, unifabrix-max, omega-fabric, xconn-titan} have been developed, sampled, and tested in the past few years. We take the recent Titan platform~\cite{xconn-titan} from the XConn Tech as the evaluation target (Figure~\ref{fig:hw-overall}-b).
+%latest IntelliProp's Omega Fabric~\cite{omega-fabric} as the evaluation target (its early version uses the ARM CPU and runs slow). 
+It consists of (1) ASIC-based host and endpoint adapters;
+%in a CEM form factor~\cite{cem-pcie}; 
+(2) an XConn B2 Apollo CXL switch with 14 upstream and downstream ports, 2 CEM~\cite{cem-pcie} slots, and 128 CXL2.0 lanes, supporting $\times$2, $\times$4, and $\times$8 bifurcations;
+%, which achieves up to 30 GB/s bandwidth per port; 
+(3) a memory chassis using an MCIO/EDSFF backplane that holds up to 12 vendor-agnostic CXL DIMMs~\cite{smart-cxldimm, micron-cxldimm} under the compact EDSFF E1.S, E3.S, and E3.L form factors~\cite{jedec-cxldimm}; and (4) an MX8 board operating as the management host and fabric manager.
+
+%(a) proprietary ASIC-based host and endpoint adapters; (b) a CXL switch with 64 lanes, supporting $\times$2, $\times$4, and $\times$8 bifurcations, which achieves up to 30 GB/s bandwidth per port; and (c) a 2U memory chassis that supports four to eight vendor-agnostic CXL DIMMs~\cite{smart-cxldimm, micron-cxldimm} under the compact EDSFF E1.S, E3.S, and E3.L form factors~\cite{jedec-cxldimm}.
+
+\noindent
+{\bf Software Stack.} A switched CXL memory pooling platform has three software components: (1) a fabric manager running on a dedicated host, which interacts with each fabric hardware, discovers the system topology, enumerates hosts and target memory nodes, and monitors their living status; (2) the memory controller firmware for the remote DIMMs, which configures the communication ID, initializes its address space, and processes traversed data; (3) a device driver that makes remote memory as host-managed device memory (HDM) and exposes it as a CPUless NUMA node. The host OS fabricates an attached CXL DIMM as a memory node, manages it with object or tiered memory systems~\cite{directcxl-atc22, pond-asplos23, tpp-asplos23, cxlshm-sosp23, nomad-osdi24, aol-osdi25, collid-sosp24, hybridtier-asplos25}, and runs applications atop. After a CXL DIMM is mapped to the host memory subsystem, applications can access it via load/store instructions. Take the Intel x86 processor as an example. A memory read, missed from the last-level cache (LLC), fetches the corresponding cache line from the CXL memory. Memory writes hit the store buffer first, then are issued to the remote memory under eviction. Hardware/Software prefetch and cache coherence-induced events (like read-for-ownership) also cause data loads~\cite{melody-asplos25, pathfinder-sigcomm25}.
+
+\subsection{CXL Switching Architecture}
+\label{subsec:chara-cxl-switching}
+
+A CXL switch provides high-performance and lossless connectivity between upstream and downstream ports (Figure~\ref{fig:hw-overall}-c). Data is transmitted at the FLIT granularity, a fixed-sized amount of data traversed over the underlying link, such as 68B and 256B. An incoming FLIT arrives at one virtual lane (VL) and is then forwarded to an arbiter (multiplexer). Next, the FLIT is delivered to a vPPB (virtual PCI-to-PCI bridge) module, acting as a logical connection point to accommodate different types of CXL devices and facilitate the routing. vPPBs can also be organized hierarchically to construct multiple VCS (virtual CXL Switch) within a physical switch. There is a credit engine (CEngine) interacting with all vPPBs and running (1) a hop-by-hop credit-based flow control~\cite{cfc-network95, cfc-sigcomm94}; (2) a credit update protocol (like N23) for reliable device-switch and switch-switch coordination~\cite{cfc-sigcomm94}; and (3) an adaptive and statistical credit allocation scheme to maximize bandwidth usage~\cite{cfc-network95}. Last, most of today's CXL switches (like XConn Apollo XC50256~\cite{xconn-titan} and Omega Fabric~\cite{omega-fabric}) employ a crossbar topology, where the routing logic is determined by the fabric manager during the memory pool initialization. Note that (1) the CXL switch is nearly bufferless but still incurs transmission stall when credit starvation happens; (2) there is little programmability on the switch data-plane, unlike Ethernet ones offering some in-network primitives in the traffic manager; (3) host and endpoint adapters usually adopt a similar switching architecture, just with much fewer ports. 
+
+\subsection{Characterizing Switched CXL Memory Pooling}
+\label{subsec:chara-issues}
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=\linewidth]{graphs/path-contention.pdf}
+    \vspace{-1.25\baselineskip}
+    \caption{Different access contention points along the CXL data path under switched CXL memory pooling.}
+    %\caption{Different contention points across the CXL data path in a switched CXL memory pool.}
+    \vspace{-0.25\baselineskip}
+    \label{fig:path-contention}
+\end{figure}
+
+Researchers have studied extensively about a direct-attached CXL Type-3 memory expander~\cite{cxl-chara-micro23, cxl-against-hotnets23, fcc-hotos23, directcxl-atc22, cxlintro-arxiv23, melody-asplos25, pathfinder-sigcomm25}. This section characterizes the performance of switched CXL memory pooling with a focus on analyzing the performance interference. Figure~\ref{fig:path-contention} presents how intra- and inter-host memory requests would interleave at different locations along the CXL data path in a switched memory pool. We configure experiments to locate the contention points, quantify how performance isolation is affected, and explore the root causes.
+
+%characterized the basic performance of a CXL Type-3 memory expander~\cite{cxl-chara-micro23, cxl-against-hotnets23, fcc-hotos23, directcxl-atc22, cxlintro-arxiv23}. This section analyzes the performance of a switched memory pool with different co-located applications. Such consolidated deployments interleave memory requests with diverse performance requirements over the same underlying CXL fabric entities, easily causing performance interference. We carefully examine the data path of memory load/store (Figure~\ref{fig:path-contention}), categorize root causes that yield performance variability, and configure experiments to quantify these overheads.
+
+\noindent
+{\bf Experimental Methodology.} We use 2U Intel Emerald Rapids servers as hosts, where each contains two Xeon Gold 6530 CPUs, 1536GB DDR5 memory, and two Samsung 9MA3 960GB NVMe drives. Each processor has 32 cores running at 2.1GHz and 160MB LLC. All the hosts run Ubuntu 24.04. Each server is equipped with one CXL host adapter enclosing two $\times$8 CXL ports. Using Intel MLC~\cite{intel-mlc}, we observe that the server achieves 220.5ns and 47.2GB/s when accessing the switched CXL memory pool. We developed a micro-benchmark (similar to~\cite{spa-asplos25, pchase, cxl-chara-micro23}) that can launch any number of memory streams between host cores and local/CXL DIMMs with different access patterns. It supports various configurations, such as enabling/disabling prefetching, issuing temporal read/write and non-temporal write, injecting NOP instructions, and performing random/sequential/strided accesses. The benchmark uses data and instruction synchronization barriers to complete pending reads and writes in the CPU pipeline before starting the test. When running, it spawns several pinned threads, initiates memory streams, issues reads/writes, and collects execution statistics.
+
+%to configure different types of workloads and measure the latency/throughput of memory accesses. When initialization, it allocates memory from local DRAM, remote CXL DRAM, or a hybrid of both. Before launching the test, our benchmark uses data and instruction synchronization barriers to complete pending read/write requests and flush the CPU pipeline. When benchmarking, it spawns several pinned threads, issues memory reads, writes, or copies based on stipulated patterns (such as random, sequential, or strided), and collects execution statistics. The application can disable/enable prefetching, perform pointer chasing, and issue NOP instructions to flush the CPU pipeline.
+
+\begin{figure*} [t!]
+	\centering
+	\subfloat[Uncore contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-uncore.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Host adapter contention (latency).]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-ha-lat.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Host adapter contention (bandwidth).]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-ha-bw.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-1.0\baselineskip}
+        \caption{(a) runs background threads on one socket, issues sequential accesses, and maxes out its memory bandwidth. We report random access latency. The ``Local-Affect-Local'' and ``CXL-Affect-Local'' cases are added for comparisons. (b)/(c) present the host contention issue. X--Y shows that the victim stream (X) is impacted by co-located streams (Y). All experiments use one $\times$8 CXL port.}
+        \vspace{-1.0\baselineskip}
+        \label{fig:rc1-intrahost}
+\end{figure*}
+
+\begin{figure*} [t!]
+	\centering
+	\subfloat[Host-rDIMM interference.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-inter.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[rDIMM-rDIMM interference.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-rdimm.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Bandwidth partition.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/cxl-concur-bw.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-1.0\baselineskip}
+        \caption{In (a), X--Y describes the case that a latency stream X is co-located with throughput streams (Y), where we report the average latency of X. (b) presents the latency results of four data movements. We add the local-rDIMM scenario for comparison. rnd=Random. seq=Sequential. In (c), we run two throughput streams each over four cores, issuing 64B/4KB read/write requests.}
+        \vspace{-0.25\baselineskip}
+        \label{fig:cxl-concur}
+\end{figure*}
+
+\noindent
+{\bf Issue \#1: Intra-host Contention.} Host uncore and CXL host adapter are the first two contending locations. In an Intel X86 processor, the uncore--enclosing LLC, CHA (Caching and Home Agent), and FlexBus, connected via a mesh NoC~\cite{intel-sapphire-isscc22}--is shared by local and CXL memory requests, e.g., stream1 and stream2 in Figure~\ref{fig:path-contention}. We configure two kinds of threads: \emph{T1}, whose working set fits into the LLC, accessing local or CXL memory and measuring latency; and \emph{T2}, which generates competing traffic with gradually increased loads by adding the number of threads without overwhelming the host adapter's bandwidth capacity. As shown in Figure~\ref{fig:rc1-intrahost}-a, when the FlexBus is congested, accessing the CXL memory experiences up to 13.4$\times$ latency increases, rising from 50.1ns to 669.4ns. Using the recent PathFinder tool~\cite{pathfinder-sigcomm25}, we find out that this is because significant queueing happens at the M2PCIe ingress, which slows down CXL request transmission. When contentions occur at the LLC/CHA under mixed local and CXL traffic, we observe that both the LLC miss rate and the total amount of cache snooping requests greatly increase, yielding at most 2.9$\times$ CXL access latency increases.
+
+%\textit{Uncore Contention.} 
+%As CXL memory is integrated into the host memory subsystem, concurrent memory accesses between local and remote (e.g., stream1 and stream2 in Figure~\ref{fig:path-contention}) or among remote would contend for the uncore resources and affect performance. We configure two kinds of threads: \emph{T1}, which accesses local (CXL) memory to measure latency with a working set that fits into the LLC; and \emph{T2}, which reads from and writes to local (CXL) memory with a smaller working set. We then gradually increase the number of \emph{T2} threads. As shown in Figure~\ref{fig:rc1-intrahost}-a, when the CXL memory contends for the uncore, its access latency increases by 13.4$\times$, rising from 50.1 ns to 669.4 ns. Conversely, when the cache is shared by CXL memory accesses, the local memory latency is only increased by 2.9$\times$. This happens because CXL underperforms local memory and thus benefits more from the cache.
+
+Next, we analyze the host adapter contention by issuing cache-bypassed CXL requests (stream2 and stream3 in Figure~\ref{fig:path-contention}). We set up two memory streams: \emph{T1} accesses CXL memory with one outstanding load/store (i.e., victim memory stream); \emph{T2} reads/writes to remote memory, with the number of outstanding accesses gradually increased.
+%by reducing the number of NOP instructions between memory accesses. 
+As shown in Figures~\ref{fig:rc1-intrahost}-b/c, T1 starts to experience a performance drop even when the total traffic only reaches 30\%, far below the adapter's bandwidth capacity. By discussing with the device vendor, we learn that this is because the host adapter schedules CXL FLITs over several VLs of the virtual lane in a best-effort fashion, completely agnostic of how requests are issued from host cores, which causes skewed cross-lane FLIT distribution.
+%experiences considerable performance degradation when less than 2K NOP instructions are issued from T2.
+When the adapter is nearly saturated, we observe that in the Read(T1)-Read(T2) case, the victim stream's bandwidth is reduced by 82.6\%, with latencies increased from 230.2ns to 1624.2ns. The other three cases are similar.
+
+%\textit{Host Adapter Contention.}
+%Similarly, concurrent memory streams sharing the host adapter interfere with each other (stream2 and stream3 in Figure~\ref{fig:path-contention}) over the data link layer. We set up two such memory streams to emulate this scenario: \emph{T1} accesses CXL memory with 1 outstanding load/store (i.e., victim memory stream); \emph{T2} reads/writes to remote memory, with the number of outstanding accesses gradually increased by reducing the number of NOP instructions between memory accesses. As shown in Figures~\ref{fig:rc1-intrahost}-b/c, T1 experiences considerable performance degradation when less than 2K NOP instructions are issued from T2. For example, in the \emph{Read(T1)-Read(T2)} case, the victim stream's bandwidth is reduced by 82.6\%, whose latencies are increased from 230.2 ns to 1624.2 ns. The other cases are similar, except for the bandwidth in the \emph{Write-Read} case, where writes follow a different path than reads. 
+
+\noindent
+{\bf Issue \#2: In-fabric Congestion.} The CXL switch is the second interference point (stream3 and stream4 in Figure~\ref{fig:path-contention}). Since the CXL switching relies on a hop-by-hop credit-based flow control~\cite{cfc-sigcomm94, cfc-network95, rpcibench-nsdi24}, the amount of credits that a downstream entity receives is proportional to its bandwidth usage and the contention degree at the upstream device. Hence, when a small-sized request stream competes with a large one that causes credit over-subscription, it would experience stalls due to delayed credit replenishment. To quantify this, we configure two kinds of random access memory streams: the latency stream that issues one memory read/write at a time, and the throughput one, which generates larger data blocks, yielding multiple outstanding memory transactions. 
+%We then set up the following testing scenarios using them.
+
+%\textit{Head-of-Line (HoL) Blocking.} 
+We intermix small and large memory requests and deploy memory streams in two directions: host$\rightarrow$rDIMM and rDIMM$\rightarrow$rDIMM. Regarding the host$\rightarrow$rDIMM case, as shown in Figure~\ref{fig:cxl-concur}-a, when the fabric is under-utilized, a 64B read mixed with 128B reads and writes causes a 7.5\% and 54.2\% latency increase, respectively. In the case of a 64B write contending with throughput streams, when the data block size is 256B, its latency is increased by 6.2\% and 98.6\%. This is due to the head-of-line (HoL) blocking effect at the upstream port. When bandwidth over-subscription happens, one would experience considerable performance drops. For example, when interleaved with a 4KB memory request, a 64B read/write experiences a 6.9$\times$/3.8$\times$ slowdown. The rDIMM$\rightarrow$rDIMM scenario presents similar behaviors (Figure~\ref{fig:cxl-concur}-b), where the 64B CXL memory access latency starts to rise when the data block size is above 256B. 
+%Sequential accesses yield higher latency when the data block size is small because of increased contention arising from data locality (as discussed below).
+
+%\textit{Bandwidth Partition.} 
+Next, we deploy two competing throughput streams, vary their request configurations, and explore how bandwidth is allocated in different cases. As shown in Figure~\ref{fig:cxl-concur}-c, we find that the bandwidth a memory stream receives is mainly proportional to its data block size, regardless of request type. For example, when two 4KB read(write) streams interleave, each would achieve 10.6(11.0) GB/s. However, if a 4KB stream is interleaved with a 64B one, it can take nearly 97.8\% of the total bandwidth. These results make sense for two reasons. First, memory requests from one memory stream are synchronously served one by one. The number of outstanding cacheline-sized reads/writes depends on the data block size. Second, when multiple concurrent streams compete for the fabric, the CXL switch/adapter mainly performs round-robin scheduling to decide the next issuing request. Thus, the stream with more pending transactions has more opportunities to be scheduled, yielding higher bandwidth.
+
+\noindent
+{\bf Issue \#3: Unmanaged Host-rDIMM Interaction.}
+The endpoint adapter %usually 
+provisions enough bandwidth for CXL DIMMs. Since it connects directly to the switch, access congestion is first resolved at the downstream port, which should leave the adapter and rDIMM free from contending traffic. However, we find out this is sometimes not the case. Even though we control the aggregated traffic across all hosts to be lower than the link/port bandwidth, contention still happens. This is because host prefetching, under regular access patterns,
+%and predictable data locality, 
+implicitly generates more memory requests, which are transparent to the CXL fabric but cause bandwidth over-subscription.
+
+%The CXL memory and endpoint adapter are usually provisioned with enough channels and bandwidth, eluding contention-induced performance degradation. However, we find that CXL memory can be implicitly accelerated via host prefetching, especially when applications present regular access patterns and predictable data locality. Such performance expedition comes with the cost that more unmanaged memory accesses are issued through the fabric transparently. 
+%We drill down into two aspects: access locality and instruction prefetch.
+
+\begin{table}[t!]
+%\newcommand{\strided}{
+    %\raggedleft
+    %\centering
+    \scriptsize
+    \begin{tabular}{C{12mm}|| C{11mm} | C{14mm} | C{11mm} | C{14mm}}
+    \hline
+    \textbf{Stride Len.} & \textbf{RD Lat.} & \textbf{RD Th.} & \textbf{WR Lat.} & \textbf{WR Th.} \\
+    \hline
+    \textbf{1} & 10.9 ns & 21.9 GB/s & 10.8 ns & 22.0 GB/s \\
+    \hline
+    \textbf{2} & 15.6 ns & 15.3 GB/s & 13.2 ns & 18.0 GB/s \\
+    \hline
+    \textbf{4} & 18.7 ns & 12.7 GB/s & 13.3 ns & 17.9 GB/s \\
+    \hline
+    \textbf{6} & 18.2 ns & 13.1 GB/s & 12.3 ns & 19.4 GB/s \\
+    \hline
+    \textbf{8} & 18.6 ns & 12.8 GB/s & 12.4 ns & 19.2 GB/s \\
+    \hline
+    \end{tabular}
+    \vspace{-1.0\baselineskip}
+    \caption{CXL memory performance under a fixed stride size $X$. The distance between two consecutive requests is $X \times 64$ bytes.}
+    %\caption{We report CXL memory performance by issuing cacheline-sized memory accesses (64 bytes) sequentially with a fixed stride size $X$. The distance between two consecutive requests is $X \times 64$ bytes.}
+    \label{tbl:strided-perf}
+    \vspace{-0.5\baselineskip}
+%}
+\end{table}
+
+%\textit{Access Locality.}
+We configure our microbenchmark to issue strided memory reads and writes. Table~\ref{tbl:strided-perf} presents the latency and throughput as the stride length increases from 1 to 8. When the stride length is 1, compared with the random access, remote memory read and write achieve 10.9ns and 10.8ns (hitting in the L1 and L2 cache), sustaining at 21.9GB/s and 22.0GB/s bandwidth. Apparently, the access locality results in multiple cacheline reads and writes issuing concurrently to hide latency. When the stride length increases to 8, the read and write bandwidth drops to 12.8 GB/s and 19.2 GB/s. Further, we perturb the CPU prefetching effect by issuing NOP instructions between two consecutive memory accesses and measure its performance impact. We find that both local and CXL memory performance drops significantly when inserting more NOP instructions (Figure~\ref{fig:cxl-prefetch}). When prefetching helps little, a remote memory read/write matches the local one. Therefore, host prefetching causes unmanaged host-rDIMM interaction, which would introduce much more traffic than expected and cause contention within the target memory pool.
+
+%, indicating that modern multi-core processors heavily leverage prefetching to boost performance.
+
+%\textit{Access Locality.} 
+%We configure our microbenchmark to issue strided memory accesses. Compared with vanilla CXL memory performance (w/ random access), the latency of a remote memory read and write is significant lower at 10.9 ns and 10.8 ns, yielding 21.9 GB/s and 22.0 GB/s bandwidth. The latency improvement occurs because a CPU can issue multiple cache line reads and writes concurrently to hide latency, especially when the access pattern is predictable, resulting in better access locality. When the stride length increases (e.g., 8), the read and write bandwidth drops to 12.8 GB/s and 19.2 GB/s.
+
+% Such performance improvements are attributed to the predicted access pattern and resulting better access locality, where one cacheline fetch can serve up to eight subsequent reads/writes. The benefits diminish as further increases the stride size because more cache misses happen. For example, when the stride length exceeds 8, the read/write performance approaches the case of random accesses.
+
+%\textit{Instruction Prefetching.} We perturb the CPU prefetching effect by issuing NOP instructions between two consecutive cachelined memory accesses and measure its performance impact. We find that both local and CXL memory performance drops significantly when inserting more NOP instructions (Figure~\ref{fig:cxl-prefetch}). When prefetching helps little, a remote memory read/write matches the local one, indicating that modern multi-core processors heavily leverage prefetching to boost performance.
+
+%\textbf{Design Implication \#3:} CXL memory can be implicitly accelerated by the host-side cache hierarchy, especially when applications present regular memory access patterns and predictable data locality. Cache pollution impacts the CXL memory more than the local one. Therefore, when building applications in such a hybrid system, one should (1) estimate the application working set and perform locality-aware request scheduling; (2) carefully adjust the application working set layout based on the access intensity to different memory regions to maximize the overall caching benefit.
+
+\subsection{Problem and Challenges}
+\label{subsec:chara-problem-challenges}
+
+Our characterization study unearths and quantifies three issues (i.e., intra-host contention, in-fabric congestion, and host-rDIMM interaction) that cause performance interference in a switched CXL memory pool. {\it The fundamental problem is that the data path between a host core and a remote CXL DIMM is shared among concurrent memory requests without explicit performance control.} As such, any on-path entities, like the host memory subsystem, switch, and host/endpoint adapter, could become a communication choke point, which would break the target latency and bandwidth of a memory stream. This calls for a new transport layer for switched memory pooling that effectively allocates communication resources based on the application requirements. Realizing this incurs the following three challenges that have not been tackled before.
+
+\begin{figure} [t!]
+	\centering
+        \subfloat[Latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/rmem-prefetch-lat.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Bandwidth.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/rmem-prefetch-throu.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-1.0\baselineskip}
+        \caption{Performance when perturbing instruction prefetching. }
+        \vspace{-0.25\baselineskip}
+        \label{fig:cxl-prefetch}
+\end{figure}
+
+\squishlist
+
+    \item {\bf \#1: Implicit transmission.} Under switched memory pooling, a CXL request traverses across the CPU pipeline, cache hierarchy, system bus, adapters, switching fabric, and remote DIMM. Whether and when to issue a CXL load/store transaction is affected by several factors, such as data locality (L1D, L2, and LLC), queueing occupancy at different micro-architectural components (such as store buffer and line fill buffer), and hardware prefetching. Similarly, a data response returns to the host memory subsystem and directly resumes the processor execution. Therefore, tracking CXL requests, measuring the per-flow performance, and controlling the transmission rate become non-trivial.
+    %This challenges how to measure and adjust per-\texttt{mchannel} data rate; 
+    
+    \item {\bf \#2: Hardware non-programmability and opaqueness.} To sustain at sub-microsecond latency and hundreds of Gigabytes per second of bandwidth (CXL 3.2~\cite{cxl-spec}), CXL adapters and switches streamline their data plane and offer nearly no reconfigurability and telemetry capability, making our conventional in-network transport design~\cite{abm-sigcomm22, dcqcn-sigcomm15, hpcc-sigcomm19, aeolus-sigcomm20, harmony-nsdi24} impractical. Further, there is no consensus system model or open implementation standard (like PISA~\cite{rmt-sigcomm13}).
+
+    \item {\bf \#3: Fine-grained cross-layer traffic monitoring.} Measuring end-to-end bandwidth availability is already challenging enough since this requires tracking how many link-layer credits are allocated across the entire data path. However, in a switched pool, the transport layer has to further break down this information at a finer granularity to individual host cores/threads. As described above, the round-trip delay is impractical to obtain, given the integrated pipeline. The inherent nature of lossless fabric (back-pressure and credit starvation) further exacerbates the issue.
+
+\squishend
+
+
+
+
+%Our characterization unearths and quantifies three factors (i.e., intra-host contention, in-fabric congestion, and host-rDIMM interaction) that cause unpredictable performance of CXL memory pooling. {\bf The fundamental problem is that the data path between a host core and a remote CXL DIMM is shared among concurrent memory streams without explicit performance control.} This is in significant contrast to today's local DIMM which uses a dedicated bus. Therefore, we propose a new transport layer (called \emph{\sys}) to tackle these issues.
+
+\section{\sys: a Designated Memory Lane}
+\label{sec:mchannel}
+
+This section introduces the \sys transport, including semantics, APIs, and system model. Our system design goals:
+
+%introduces the \sys transport, describes the semantics and APIs of its interface, and discusses the targeted system model. Our system design goals are:
+
+\squishlist
+
+    \item {\bf High Utilization.} \sys should fully use the bandwidth at any vantage point and link. It should be able to ramp up the CXL memory access speed for other needed applications when some bandwidth becomes available.
+
+    \item {\bf Efficient Multi-tenancy.} \sys should mitigate the performance interference across the end-to-end CXL data path ($\S$\ref{subsec:chara-issues}). It should achieve low (tail) latency and approximate Max-Min fairness under contention.
+        
+    \item {\bf Low overheads.} \sys should have little impact on the de facto CXL load and store access. It should incur few memory footprints and consume tolerable host CPU cycles when holding existing applications.
+    
+\squishend
+
+\subsection{Overview}
+\label{subsec:mchannel-overview}
+
+\sys is a transport layer that orchestrates remote memory accesses between host cores and CXL DIMMs in a switched CXL memory pool. It offers a performance-controlled data pipe (\texttt{mchannel}), provisions proper communication resources based on workload demands and remote DIMM's free bandwidth, and mitigates interference from contending memory streams. A \texttt{mchannel}, established between a host core ($C_i$) and a CXL DIMM ($rDIMM_j$), is associated with a dedicated application process. One can also group multiple \texttt{mchannels} for each application (discussed in $\S$\ref{subsec:proto-ext}).
+
+Key to \sys is a {\it Sender-Driven Fabric-Informed} transport protocol that admits just enough CXL requests to the switched memory pool based on the estimated $C_i \leftrightarrow rDIMM_j$ bandwidth availability.
+%{\it Our key insight is a shim transport layer makes efficient data movements in a switched CXL memory pool possible.}
+Essentially, it probes the end-to-end bandwidth capability at runtime on the data plane, introduces new fabric congestion signals, computes the per-\texttt{mchannel} transmission rate
+%via a CSFQ-inspired transport algorithm, 
+and admits an adequate amount of CXL load/store commands to the memory pool. \sys encompasses three major pieces. One is the programming interface that allows porting unmodified applications.
+%that facilitates unmodified application development. 
+The second is the host runtime that runs the protocol stack, interacts with other CXL fabric components, and performs rate control. The third is in-fabric system extensions at the switch, adapter, and CXL DIMM, which participate in the protocol processing.
+
+\subsection{The \texttt{mchannel} Semantics}
+\label{subsec:mchannel-semantics}
+
+\sys exposes the \texttt{mchannel} as a system object from the host OS perspective, consisting of the following attributes:
+
+\squishlist
+    \item {\it Host/Core ID and Registered Memory Node}, specifying the requester (source) and responder (destination) of a \sys. Akin to commodity systems~\cite{omega-fabric, unifabrix-max, samsung-cmmb}, we support DAX memory, mounted as a CPUless NUMA node.
+
+    \item {\it CXL Data Path}, describing the end-to-end data path between $C_i$ and $rDIMM_j$, provided by the fabric manager, including host adapter, switches, and endpoint adapter.
+    
+    \item {\it Channel Representation}, like \texttt{struct sock}, instantiated by our host runtime, serving as an intermediate connection point between applications and the transport protocol.  
+    
+    \item {\it Performance Attributes}, like bandwidth envelope and interference degree. Developers specify them upon registration or at runtime. When omitted, the \texttt{mchannel} is labeled as best-effort and uses what bandwidth is available.
+
+    % \item  {\it PID}, the \texttt{mchannel} owners. We also support lightweight coroutines as used by Demikernel~\cite{demikernel-sosp21} and others~\cite{snap-sosp19, junction-nsdi24}.
+\squishend
+
+\begin{figure}[tp]
+    \centering
+    \includegraphics[width=\linewidth]{graphs/hw-model.pdf}
+    \vspace{-1.5\baselineskip}
+    \caption{The system model of \sys.}
+    \label{fig:sys-model}
+    \vspace{-0.25\baselineskip}    
+\end{figure}
+
+\subsection{The \texttt{mchannel} Interface}
+\label{subsec:mchannel-intf}
+
+\sys provides a user-space CLI (Command-Line Interface), similar to \texttt{numactl}, which onboards the unmodified applications and controls their execution behaviors to achieve the performance target. \sys runtime offers four lightweight APIs to control the remote memory access:
+
+%that controls the execution of unmodified applications running within it, achieving fair remote memory bandwidth allocation. To manage application remote memory accesses, the \sys runtime offers five lightweight interfaces:
+
+\squishlist
+
+% read config, find CXL Data Path, create shared memory, launch app
+\item \texttt{mchannel\_init} creates \texttt{mchannels} and takes user-specified configurations, such as which applications to run, host core mappings, remote memory nodes, and performance attributes. It then identifies the CXL data path for each \texttt{mchannel}, allocates local memory for \texttt{mchannel} metadata, maps shared CXL memory for inter-host coordination, and launches the applications as subprocesses.
+
+% set signal handler
+% \item \texttt{mchannel\_app\_init} is invoked when an application process starts. It arms a POSIX timer with a scheduling window $T_W$. When the timer expires, it invokes \texttt{mchannel\_sched} as the signal handler for all application threads to ensure fair remote memory access bandwidth allocation. Additionally, \texttt{mchannel\_app\_init} opens a \texttt{mchannel} on the application's main thread by calling \texttt{mchannel\_open}.
+
+% m_bind, cpu_bind, open perf cnt 
+\item \texttt{mchannel\_open} opens a \texttt{mchannel} to a rDIMM in the pool, invoked when a new application thread is launched. It allocates the per-thread \texttt{mchannel} states and resources, and then arms a POSIX timer with a scheduling window $T_W$. When the timer expires, it invokes \texttt{mchannel\_sched} as the signal handler and readjusts the bandwidth allocation.
+%ensure fair remote memory access bandwidth allocation. 
+It also uses the \texttt{m\_bind} system call to ensure the application places its data on the remote DIMM specified by the \texttt{mchannel}, sets the thread’s core affinity based on the host core mappings, and opens as well as maps the performance counters for CXL bandwidth monitoring.
+
+% clean up, unset signal
+\item \texttt{mchannel\_close} closes the \texttt{mchannel} to the remote DIMM, cleans up allocated resources, and unsets the timer signal handler.  It is called when the application thread exits.
+%It is called during the destruction of the thread-local variable (i.e., when the application thread exits).
+
+% bandwidth monitoring & execution control
+\item \texttt{mchannel\_sched} enforces application-specific bandwidth allocation via our transport protocol ($\S$\ref{sec:proto}), which monitors the remote pool access bandwidth and then controls application execution to meet the application performance needs.
+%fair CXL bandwidth allocation by monitoring remote memory access bandwidth for application threads and controlling their execution to regulate bandwidth. 
+For bandwidth measurement, we use off-core response (OCR) architectural event counters to track three types of CXL requests~\cite{pathfinder-sigcomm25, melody-asplos25}: demand reads, reads for ownership, and hardware prefetches. The results are collected via \texttt{rdpmc} commands and aggregated as the remote bandwidth. For bandwidth control, during a scheduling window $T_W$, we adjust the POSIX timer expiration such that the application thread runs for $T_R$ and sleeps for $T_W - T_R$.
+
+%the running time $T_R$ of the application thread during a scheduling window $T_W$ is regulated by adjusting the POSIX timer expiration to $T_R$ and letting the application thread sleep for $T_W - T_R$.
+
+\squishend
+
+% support for unmodified apps
+\sys relies on code injection techniques~\cite{ci-wiki}, such as \texttt{LD\_PRELOAD} and \texttt{ptrace}, to support unmodified applications. Specifically, \sys injects a dynamic link library (DLL) into applications when launching them. Inside the DLL constructor and \texttt{pthread\_create} interposed by DLL, \sys calls \texttt{mchannel\_open}.
+% lightweight
+The \texttt{mchannel} interfaces incur low overheads,
+%are lightweight and do not incur high overhead for applications, 
+because \texttt{mchannel\_sched} is invoked only once per scheduling window $T_W$ and halts application execution only once during that window. In addition, we utilize lockless data structures to synchronize between \texttt{mchannels} and the \texttt{rdpmc} command to read performance counters inside \texttt{mchannel\_sched} instead of system calls.
+
+% limitations
+
+
+% \subsection{Programming Interface and APIs}
+% \label{subsec:mchannel-prog}
+
+% \sys provides the native \texttt{C++ Smart Pointer} interface and augments it to support CXL memory. As shown in Figure~\ref{fig:sys-api}-a (Appendix~\ref{appdix:sys-more}), it has 8 bytes, consisting of five fields: 2 bytes as a hotness counter, 1 locality bit (L) indicating if the object is cached, 1 remote bit (R) indicating if the object is remote, 1 reserved bit, and a 45-bit object address. The remote pointer is similar, except it has a special field to support arbitrary pointer types. Figure~\ref{fig:sys-api}-b (Appendix~\ref{appdix:sys-more}) shows the local pointer template class, enclosing a series of functionalities, such as pointer dereferencing and manipulations. The remote pointer has the same support. One can directly use the object address when dereferencing a local or remote pointer, unlike RDMA-based remote memory systems~\cite{farm-nsdi14, aifm-osdi20, grappa-atc15}. For example, in AIFM~\cite{aifm-osdi20}, dereferencing a remote object involves multiple steps: translating an object ID to a remote address, issuing a network fetch request, performing a key-value operation at the remote memory server, and returning the result back again through the network, which takes at least 6.8us (versus 0.6us in our case). Existing applications that use the \texttt{C++ smart pointer} class (such as \texttt{std::unique_ptr} or \texttt{std::shared_ptr}) can use \sys with minimal modifications. One can also use complex data structures, where \sys figures out the offset of each member field via \texttt{\&(reinterpret_cast<T const volatile *>(NULL)->*member)}.
+
+% We provide a series of APIs. There are three categories. The first offers \sys management functionalities (e.g., create, destroy, and update). For example, \texttt{create\_mchannel} (a) takes the host core, memory node, and workload specification as input parameters; (b) initiates the \texttt{mchannel} and registers it into the \sys runtime; (c) interacts with the pooling fabric manager to obtain the request path. The second type manipulates the relation between applications and {\sys}s. One can trigger these primitives at runtime, such as upgrading the bandwidth demand or sharing the \texttt{mchannel} with another approach. The third API type, which is the most important, mediates CXL load/store, i.e., \texttt{mchannel->Access()}. This is where the \sys transport protocol kicks in. The \texttt{mchannel} examines the token availability and determines whether to fire the request or not. Under token starvation, we would yield to another thread.
+
+\begin{comment}
+\begin{figure}[tp]
+    \centering
+    \includegraphics[width=\linewidth]{graphs/hw-model.pdf}
+    %\vspace{-2.5\baselineskip}
+    \caption{The system model of \sys.}
+    \label{fig:sys-model}
+    \vspace{-0.25\baselineskip}    
+\end{figure}
+\end{comment}
+
+\subsection{System Model}
+\label{subsec:channel-model}
+% Note: For now, CXL only allow one layer of switches staying between host and memory expanders, and support at maximum of 4096 devices in theory, 100s of devices in practice, making our only one contention point in the fabric more realistic.
+
+We divide our running environment into six layers (Figure~\ref{fig:sys-model}): applications, \textbf{mchannel}s, host adapters, CXL switches, endpoint adapters, and CXL DIMMs. Our \sys layer carries application-induced CXL memory requests %load/store commands 
+and delivers them to the host adapter. The CXL FLIT traverses the underlying fabric as it is. Following the recent CXL specification~\cite{cxl-spec}, the memory device continuously reports service loads, reflecting its internal queueing status. There are two ways: (a) {\it piggyback in memory responses} (red line in Figure~\ref{fig:sys-model}), where the memory transaction response reserves 2 bits to indicate four levels of loads: light load, optimal load, moderate overload, and server overload; (b) {\it QoS telemetry messages} (blue line in Figure~\ref{fig:sys-model}), i.e., the host issues explicit QoS status queries through the CXL Component Command Interface (CCI), whereas the memory expander (rDIMM) returns the average load of the last profiling epoch. 
+
+
+%We divide CXL memory pooling systems into five layers: Applications, Memory Channels, Host Bridges, CXL Switches, and Memory expanders, as shown in Figure~\ref{fig:sys-model}. 
+% data path
+%Applications issue load/store instructions to the different remote memory locations via multiple memory channels. MemChannel, a software abstraction running within one thread, associates with a memory region inside the pool and provides fair memory access rate control to the applications. Once the memory access instructions are issued by the MemChannels from the host CPU pipeline, host bridge converts load and store instructions into flits and transmits them to the CXL switch. When receiving flits from the bridge through its upstream ports, the CXL switch forwards the flits to the downstream ports based on its internal forwarding table. The switch also employs a credit-based flow control algorithm to avoid congestion. Memory expanders, connected to the upstream ports of the switch, interpret flits back into memory commands and issue the commands to the attached DDR memory using its local memory controller. 
+
+% control path
+%A CXL memory expender must continuously monitor its internal load condition according to CXL 3.2 specification~\cite{cxl-spec}. The loading information reflects the internal queueing status, which can be the queue depth of the device or the memory fabric. The device reports load information to the host via two path: a) \textbf{piggyback in memory responses}. CXL architects 2 bits in the S2M(Subordinate to Master) response for indicating four levels of loading: light load, optimal load, moderate overload, and severe overload.  b) \textbf{QoS telemetry messages}. The host can send get QoS status request via CXL Component Command Interface(CCI), and the memory expander will report the average load percentage back.
+% Backpressure Average Percentage to be exact
+
+\section{An CSFQ-Inspired Transport}
+\label{sec:proto}
+
+This section describes our core transport protocol 
+%(including the algorithm details, theoretical analysis, and extensions), 
+and shows how we address the above challenges (\(\S\)\ref{subsec:chara-problem-challenges}).
+
+\begin{comment}
+\subsection{Design Challenges}
+\label{subsec:proto-challenges}
+
+The CXL switching fabric is tightly coupled with the processor pipeline, making the transport design non-trivial.
+
+\squishlist
+
+    \item {\bf Implicit transmission.} CXL flits traverse among the CPU pipeline, system bus, CXL switching fabric, and remote DIMM. Whether and when to issue a CXL load/store transaction depends on several factors, such as data locality (L1D, L2, and LLC), queueing occupancy at different micro-architectural components (such as store buffer and line fill buffer), and hardware prefetching. Similarly, a data response directly resumes the process execution. This challenges how to measure and adjust per-\texttt{mchannel} data rate; 
+    
+    \item {\bf Hardware non-programmability and opaqueness.} To sustain at sub-microsecond latency and hundreds of Gigabytes per second of bandwidth (like PCIe Gen6/Gen7 hardware), CXL adapters and switches streamline their data plane and offer nearly no reconfigurability, making all in-network transport design impractical. Besides, there is no open implementation standard (like PISA~\cite{rmt-sigcomm13});
+
+    \item {\bf Cross-layer performance monitoring.} Measuring end-to-end bandwidth availability is already challenging enough since this requires us to track how many link-layer credits are allocated across the entire data path. However, in \sys, the transport layer has to further break down this information at the \texttt{mchannel} granularity. As described above, round-trip delay is impractical to obtain, given the integrated pipeline. Packet drops are not happening.
+
+\squishend
+\end{comment}
+
+\subsection{Why Core-Stateless Fair Queueing}
+\label{subsec:proto-csfq}
+
+Core-Stateless Fair Queueing (CSFQ)~\cite{csfq-sigcomm98}, a seminal work in computer networks, introduced a fair queueing algorithm for the Internet several decades ago. 
+%Unlike other schemes~\cite{fq-sigcomm89, drr-sigcomm95}, 
+It achieves max-min fair bandwidth allocation among competing flows without maintaining per-flow states. The algorithm %carefully 
+divides the rate control logic between the networking edge and core, where 
+(1) edges 
+%switches 
+calculate the flow arrival rate and label the rates into packets; 
+(2) the core 
+%switches 
+estimates the fair rate iteratively and probabilistically drops packets to achieve the fair share rate. %Therefore, 
+CSFQ is (a) %highly 
+scalable, where core routers only maintain a few aggregated variables (e.g., arrival rate, accepted rate, and fair share rate) with fixed computing complexity; (b) edge-driven, requiring minimal in-network support; (c) lightweight on the data plane, the traffic manipulation primitives (e.g., statistic bookkeeping, labeling, and packet dropping) are compute-efficient, making it promising to address our problem.
+
+However, naively applying CSFQ and its successor HCSFQ~\cite{hcsfq-nsdi21} is still not feasible for three reasons. First, these approaches take packet drops as a congestion signal, but CXL fabric is a lossless network. Second, core switches require the packet-dropping primitive for traffic regulation, which is not supported on CXL switches. Third, CSFQ needs accurate flow rate and link bandwidth availability estimations, but CXL switching lacks such capabilities. Therefore, akin to CSFQ and HCSFQ, we first apply the fluid model to the CXL switching, derive the theoretical guarantees when achieving the max-min fairness (\(\S\)\ref{subsec:proto-fluid}), and redesign the transport algorithm (\(\S\)\ref{subsec:proto-alg}). To handle the implicit transmission issue, \sys applies the time-based rate control that translates the end-to-end bandwidth usage and availability to the available running time. To avoid in-network data-plane operations, we push rate calculation to the edge, reserve a designated remote memory region for bookkeeping cross-host statistics, and translate in-network packet dropping to endhost admission control. We then follow the fluid model to determine the per-\texttt{mchannel} access speed and fair share rate and use a delay-based approach to probe the link bandwidth capacity.
+
+
+%Two and a half decades back, Stoica et al.~\cite{csfq-sigcomm98} propose a fair queueing algorithm for Internet that doesn't require maintain per-flow states in core switches. The goal of fair queueing is to provide max-min fairness bandwidth allocation across competing flows, where increasing the bandwidth of one flow will result in bandwidth decreases in other flows. Most fair queueing solutions require maintain per-flow queue and status at each switches, leading to the poor stability issue. To support larger number of flows, Core-Stateless Fair Queueing (CSFQ) algorithm calculates flow arrival rate at the edge switches and label the rates into packets. Based on the aggregated rates and the link capacities, core switch estimate fair share rate iteratively and  probabilistically drop packets to reach fair share rate for all the flows.
+
+%The major benefit of CSFQ is it is highly scalable. The complexity of algorithm running on the core switches almost never changes with the number of the flows, since it only uses aggregated variables(arrival rate, accepted rate, and fair share rate). Edge switches are distributed, and per-flow statistics and labeling operations are considered to be light weighted. 
+
+%However, CSFQ~\cite{csfq-sigcomm98} and its successor HCSFQ~\cite{hcsfq-nsdi21}, are designed for traditional network settings (e.g., Internet and data center networking), which has three fundamental differences with memory fabric:
+
+%\textbf{Lossless network.} Integrating directly into processors pipeline, memory fabrics are designed to be lossless. Flits are guaranteed to be transmitted to memory expander and sent back to CPU. This along will lead to three challenges for adopting CSFQ: 1) once flits are issued from the host, the arrival rate and accepted rate will be measured the same across CXL components, making fair share rate estimation impractical; 2) CSFQ employs probabilistic packet dropping to regulate flows on the switch. Without the drop mechanism, CSFQ has no control of the flow rate; 3) Packet dropping traditionally use as a congestion signals for best-effort networks. Lacking of it requires one to find new ways to detect congestion.
+
+%\textbf{Opaque hardware.} CXL vendors have developed their own propitiatory solutions over the years, but there are no end-to-end open source platform available. As a result, modifying existing hardware logic and implementing experimental protocol are extremely frustrating and costly. Akin to Ethernet/Infiniband, where the networking device internal are clear and programmable switch/NIC are widely available, memory fabric is difficult to modify for implementing CSFQ logic. 
+
+% Unknown link capacity. % delay
+%\textbf{Measurement challenges.} The performance of memory fabric is hard to measure from two perspective. First, round trip latency, a vital congestion signal in Internet, is difficult to measure and quantify in memory pooling, since a remote memory load/store is issued implicitly from the processor pipeline.
+%Second, link capacity, a parameter indicating congestion in CSFQ, is unknown for CXL components, while the network bandwidth is clearly listed on the specification. Although it is possible to get capacity estimation through offline profiling, it is hard to compensate for dynamic capacity changes due to diverse traffic pattern and complex device internal execution.
+
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\abovedisplayshortskip}{6pt plus 2pt minus 2pt} % equations
+\setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt} % equations
+
+\subsection{Applying Fluid Model to CXL Switching}
+\label{subsec:proto-fluid}
+
+% node: capacity C, total access demand D, total access rate F, fair share rate \(\alpha\)
+% link: demand d, access rate r
+We apply the fluid model to formalize switched CXL memory pooling systems. The system is viewed as a directed acyclic graph \(G(V, E)\), where \(V\) represents system components (e.g., the ones in Figure~\ref{fig:sys-model}),
+%Memory Channels, Host Bridges, CXL Switches, and Memory expanders), 
+and \(E\) represents the traffic flows between components. We assume the flows are continuous memory streams from a host core to a remote CXL DIMM. We consider a single layer of switching in the following discussion, but our analysis applies to multiple layers.
+%CXL specification only allows one layer of switches staying between host and memory expanders and support at maximum of 4096 devices in theory, 100s of devices in practice. 
+A flow starts from a memory channel, goes through a bridge and a switch, and reaches the CXL DIMM. 
+Therefore, graph \(G(V, E)\) is a complete multipartite graph, where the vertex set is partitioned into four disjoint subsets \(\{V_C, V_H, V_S, V_E\}\) for channels, host adapters, switches, and endpoint adapters, respectively.
+
+% \(p=(v_1, v_2, v_3, v_4)\) where \(v_1 \in V_C, v_2 \in V_H, v_3 \in V_S, v_4 \in V_E\)
+% \(E_p = \{ (v_1, v_2), (v_2, v_3), (v_3, v_4) | (v_1, v_2, v_3,v_4) \in P\}\)
+
+Each CXL hardware component has a maximum link transmission capacity \(C_v\). 
+% for \(v \in  V_H \cup V_S \cup V_E\). 
+Let \(\alpha_v\) be the fair share rate a node \(v\) allocated to its successors. We know the application access demand \(D_c\) for channel \(v_c \in V_C\) via our mechanism (\(\S\)~\ref{subsec:proto-alg}).
+%From MemChannels(\(\S\)~\ref{subsubsec:memchann}), we can get the application memory access demand \(D_c\) for channel \(v_c \in V_C\). 
+For the edge between a channel and a host adapter, the aggregated demand is the channel's demand, e.g., \(D_{ch}=D_c; v_h \in V_H \). The demand for other edges can be calculated recursively.
+\begin{equation}
+\label{eq:demand} 
+D_{vw}= \sum_{e_{uv}\in p;  \forall p \in P_{vw}} \min(\alpha_v, D_{uv})
+\end{equation}
+\(p = (e_{ch}, e_{hs}, e_{se}); e_{ch}, e_{hs}, e_{se} \in E\) describes a flow path. \(P_{vw} = \{p|e_{vw} \in p\}\) is all the flows going through edge \(e_{vw}\). Therefore, under contention, where the aggregated memory demand \(D_v = \sum_{e_{uv} \in E} D_{uv} > C_v\), one can achieve the max-min fair bandwidth allocation among competing flows when \(\alpha_v\) is the unique solution to the following equation.
+\begin{equation}
+\label{eq:alpha-1}
+C_v = \sum_{e_{uv}\in E} min(\alpha_v, D_{uv})
+\end{equation}
+% \[C_{vw} = \sum_{e_{uv}, e_{vw}\in P_v} min(\alpha_{vw}, D_{uv})\]
+Without contention (e.g., \(D_v \leq C_v\)), all demands can be satisfied by setting \(\alpha_v\) to the max, i.e., \(\alpha_v = \max_{e_{uv}\in E} D_{uv}\).
+%\begin{equation}
+%\label{eq:alpha-2}
+%\alpha_v = \max_{e_{uv}\in E} D_{uv} 
+%\end{equation}
+There are two key differences when applying the fluid model in our case compared with CSFQ. First, memory access rates remain the same along the flow path. As a result, we compute memory access demand instead of using flow arrival rates for edges and vertices. Second, we use the link transmission capacity at each node rather than the default maximum bandwidth specified in the hardware documentation. This is because the number of FLITs a CXL port of an adapter or switch can handle and transmit is not static but depends on the queuing conditions and internal execution status.
+
+%, contrasting to CSFQ where the capacity constrain in on the link. This is because the bottleneck of CXL hardware components is usually within its internal, in which the queueing and computations happen. In the rate case, where the link capacity needs to be considered, we insert a layer of virtual nodes to the links and put the link capacity on virtual nodes.
+
+\subsection{The Transport Algorithm}
+\label{subsec:proto-alg}
+
+\begin{algorithm}[t]
+\caption{Transport Algorithm.}\label{alg:proto-alg}
+\small
+\begin{algorithmic}[1]    
+
+    \Procedure{mchannel_sched}{mchannel $c$}
+        \State \(n\) = read_perf_counters() \Comment{CXL memory access count}
+        \State \(c.demand\) = estimate_rate(\(c.demand\), \(n\), \(c.T_W\));
+        \Comment{Eq.~\ref{eq:rate-est}}
+        \State \(c.rate\) = estimate_rate(\(c.rate\), \(n\), \(c.T_R\));  \Comment{Eq.~\ref{eq:rate-est}}
+        \For {On_Path_Device \ \(dev\) \ in c.path}
+            \State \(\alpha\) = estimate_\(\alpha\)(\(dev\));
+            \State \(c.\alpha\) = min(\(\alpha\), \(c.\alpha\)); %\Comment {Eq.~\ref{eq:chann-alpha}}
+        \EndFor
+    
+        \State \(c.T_R\) = estimate_\(T_R\)(\(c.demand\), \(c.\alpha\), \( T_W\)); 
+        \Comment{ Eq.~\ref{eq:time-alloc}}
+        \State sleep(\(c.T_W - c.T_R\))  \Comment{Yield to other mchannels}
+    \EndProcedure
+
+    \Procedure{estimate_\(\alpha\)}{On_Path_Device $dev$}
+        \If {cur_time \(\ge\) start_time + \(K\)} 
+            \State \(F\), \(D\) = 0, 0; \Comment{local rate \(F\), local demand \(D\)}
+            \For {mchannel \ \(c\) \ in \(dev.mchannels\)}
+                \State \(F\) += \(c.rate\);
+                \State \(D\) = max(\(D\), \(c.demand\));
+            \EndFor
+            \State \(dev.F\), \(dev.D\) = agg_rate(\(F\), \(D\)); \Comment{via shared memory}
+            \If {\(localhost\) is \(dev.host\)}
+            \State \(dev.\alpha\) = min(\(dev.\alpha \times \frac{dev.C}{dev.F}\), \(dev.D\));  \Comment {Eq.~\ref{eq:alpha-est}}
+            \EndIf
+            \State start_time = cur_time;
+        \EndIf         
+        \State \Return \(dev.\alpha\);        
+    \EndProcedure  
+
+    \Procedure{adjust_capacity}{On_Path_Device $dev$}
+    \If {\(dev.F < dev.C\) and \(dev.l > \delta\)}
+        \State \(dev.C\) = \(dev.C \times (1 - \frac{dev.l-\delta}{2(1-\delta)})\) \Comment{Multiplicative Decrease}
+    \ElsIf {\(dev.l \le \delta\)}
+        \State \(dev.C\) = \(dev.C + \lambda \times (\delta -dev.l)\times K \) \Comment{Additive Increase}
+    \EndIf
+    \State \(dev.C\) = max(\(dev.C\), \(dev.\)max_capacity)
+    \EndProcedure
+    % \State \(total\_tokens\): per-round total amount of available tokens;
+    % \State \(alloc\_tokens[1...n]\): per-round per-task allocated tokens; 
+    % \State \(used\_tokens[1...n]\): per-round per-task used tokens;
+    % \State \(token\_usage[1...n]\): per-task token usage from the past;
+    % \Procedure{token_distribution}{} \Comment{Executed per-round}
+    %     \For {task \ i \ in all\_tasks}
+    %         \State usage = used_tokens[i]/alloc_tokens[i];
+    %         \State token_usage[i] = apply_ema(token_usage[i], usage);
+    %     \EndFor
+    %     \State alloc\_tokens = weight_alloc(total_tokens, token_usage);
+    %     %\State reset(used\_tokens);
+    % \EndProcedure
+    
+    % \State \(total\_epoch\): per-round total execution time;
+    % \State \(exe\_epoch[1...n]\): per-task allocated time of each round;
+    % \Procedure{task_scheduler}{}
+    %     \While {True}
+    %         \State total_tokens = token_adjustment();
+    %         \State token_distribution();
+    %         \State exe_epoch[i] = weight_alloc(total_epoch, token_usage);
+    %         \For {task \ i \ in all\_tasks}
+    %             \State total_idle += run_task (task[i], exe_epoch[i]);
+    %         \EndFor
+    %         \State run\_task(ghost\_task, total\_idle);
+    %         %\State total_idle = 0;
+    %     \EndWhile
+    % \EndProcedure
+    
+    % \Procedure{token_adjustment}{} \Comment{Executed per-round}
+    %     \State N = total\_tokens;
+    %     \If {\(bws \ge 1\)}
+    %         \State N = \(N \times \frac{\alpha}{bws}\); \Comment{Multiplicative Decrease}
+    %     \ElsIf {\(bws \approx 1\)}
+    %         \State N = \(N + \lambda \times \frac{1}{exeo}\); \Comment{Additive Increase}
+    %     \Else
+    %         \State N = \(N \times \beta \times exeo\); \Comment{Hyper-Multiplicative Decrease}
+    %     \EndIf
+    %     \State N = min(N, max_token);
+    %     \State \Return \(N\);
+    % \EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+%\subsubsection{Pushing Computation to the Edge}
+\noindent
+% {\bf Pushing Computation to the Edge.}
+% {\bf Host-local Computation.}
+%Because of the hardware limitations (\(\S\)\ref{subsec:proto-challenges}), \sys 
+%modifying the hardware and challenges of controlling the rate on the lossless network, we 
+
+% \sys calculates the fair share rate \(\alpha\) on the host and issues the right amount of load/store instructions to avoid congestion. However, using Eq.~\ref{eq:alpha-1} to compute \(\alpha\) directly requires a host to know the aggregated memory demands on edges (\(D_{uv}\)) across all on-path hardware it traverses. Unlike Ethernet, where the arrival rate (i.e., demand) can be directly measured at the switch port, here it must be obtained through recursive calculations (Eq.~\ref{eq:demand}). Specifically, the memory demand of a CXL endpoint adapter depends on incoming memory streams from all corresponding upstream CXL switch ports, which in turn depend on incoming streams from upstream host adapters. This recursive dependency can easily lead to an accumulation of error margins. Furthermore, both demands and fair share rates must be shared across hosts, making the algorithm difficult to scale. Instead, we estimate the fair share rate based on the aggregated remote memory access rate at hardware node \(v\), defined as the number of load/store commands transmitted through \(v\). This approach is straightforward to compute and can be calibrated using hardware bandwidth telemetry.
+
+
+%), which remains unchanged after leaving the memory channel, to estimate the fair share rate. The aggregated access rate can be easily calculated or directly measured if hardware bandwidth telemetry is supported.
+
+%\begin{figure}[tp]
+%    \centering
+%    \includegraphics[width=\linewidth]{figures/memchannel_demo.eps}
+%    \vspace{-1.5\baselineskip}
+%    \caption{MemChannel Demonstration.}
+%    \label{fig:memchann-demo}
+%\end{figure}
+
+
+
+% \noindent
+% {\bf Rate Estimation.} Next, we examine how to perform accurate rate estimation in \sys (Algorithm~\ref{alg:proto-alg} L9--L19).
+
+%Since the remote memory access rate of an application varies and application may run intermittently, we need to estimate memory access rate and fair share rate to ensure the fair memory allocation. 
+\noindent
+{\bf Access Rate and Demand Estimation.} 
+We measure the number of remote cacheline accesses \(n\) during a scheduling window \(T_W\) by reading performance counters (§\ref{subsec:mchannel-intf}). %Accordingly, 
+The measured CXL memory access rate for \textit{mchannel} \(c\) is \(r_c' = \frac{nS}{T_W}\), where \(S\) denotes the cacheline size. \(r_c'\) reflects the amount of CXL bandwidth consumed by \textit{mchannel} \(c\) over \(T_W\). Similarly, the measured memory demand is \(D_c' = \frac{nS}{T_R}\), where \(T_R\) is the application’s running time within \(T_W\). \(D_c'\) indicates the memory bandwidth that \textit{mchannel} \(c\) would generate if it were not throttled by the transport algorithm. Measuring application demand in this manner is possible because the application runs at full speed without interruptions or slowdowns during \(T_R\), as our algorithm ensures that CXL components are not oversubscribed. Following the definition of CSFQ, we then estimate the memory access rate as the following equation, where \(K\) is a constant for adjusting the sampling window.
+\begin{equation}
+\label{eq:rate-est}
+    r_c^{new} = (1-e^{-T_W/K}) r_c' + e^{-T_W/K} r_c^{old}
+\end{equation}
+We estimate the access demand \(D_c\) by substituting \(r_c'\) with \(D_c'\). Hence, hosts update \(r_c\) and \(D_c\) of each channel at the beginning of the scheduling function (ALG\ref{alg:proto-alg} L2–4). Since CXL fabric is lossless, the aggregated memory access rate can be calculated directly, rather than using Eq.~\ref{eq:rate-est} as in CSFQ.
+
+\noindent
+{\bf Fair Share Rate Estimation.} \sys then calculates the fair share rate \(\alpha\) on the host and issues the right amount of load/store instructions to avoid congestion. However, using Eq.~\ref{eq:alpha-1} to compute \(\alpha\) directly requires a host to know the aggregated memory demands on edges (\(D_{uv}\)) across all on-path hardware it traverses. Unlike Ethernet, where the arrival rate (i.e., demand) can be directly measured at the switch port, here it must be obtained through recursive calculations (Eq.~\ref{eq:demand}). Specifically, the memory demand of a CXL endpoint adapter depends on incoming memory streams from all corresponding upstream CXL switch ports, which in turn depend on incoming streams from upstream host adapters. This recursive dependency can easily lead to an accumulation of error margins. Furthermore, both demands and fair share rates must be shared across hosts, making the algorithm difficult to scale. Instead, we estimate the fair share rate based on the aggregated remote memory access rate \(F_v\) on the host for hardware node \(v\), defined as the number of load/store commands transmitted through \(v\). This approach is straightforward to compute and can be calibrated using hardware bandwidth telemetry.
+
+We next describe how \sys performs fair-share rate estimation (Algorithm\ref{alg:proto-alg} L10--20). We define the aggregated memory access rate as \(F_v = \sum_{e_{uv} \in E} f_{uv}\), where \(f_{uv}\) is the flow on edge \(e_{uv}\) and \(f_{cb} = r_c\) for \(\forall v_c \in V_C, \forall v_h \in V_H\). Since the access rate is the same within a flow \(p\), the aggregated rate \(F_v\) is expressed as \(\sum_{e_{cb} \in p, \forall p \in P_v} r_c\), where \(P_v\) denotes all flows passing through node \(v\). Under congestion (Eq.~\ref{eq:alpha-1}), we estimate \(\alpha\) iteratively using the current congestion condition \(\frac{C_v}{F_v}\). If the estimated fair share rate exceeds the largest local demand \(\max_{c \in V_L} D_c\), there is no congestion within the local host, and thus \(\alpha\) is set to the maximum demand, i.e., \(\max_{e_{uv}\in E} D_{uv}\). %Thus,
+\begin{equation}
+\label{eq:alpha-est}
+\alpha_{new} = \min( \alpha_{old} \frac{C_v}{F_v}, \max_{e_{cb} \in p, \forall p \in P_v} D_c )
+\end{equation}
+At the end of the sampling window \(K\), hosts calculate the fair share rates of all hardware components used by their \texttt{mchannels}. The aggregated memory access rate \(F_v\) is the only variable shared across hosts to compute the fair share rates for shared CXL hardware (e.g., switches and expanders). To disseminate this information, each host writes the local sum of the memory access rates for each hardware component to a small, dedicated shared memory address. The aggregated rate \(F_v\) can then be obtained by summing these local rates. The \texttt{mchannel} fair share rate \(\alpha_c\) is the minimum value along path \(p\) (i.e., \(\alpha_c = \min_{e_{uv} \in p} \alpha_v\)), which is then translated into the running time to control application execution.
+
+%\begin{equation}
+%\label{eq:chann-alpha}
+%\alpha_c = \min_{e_{uv} \in p} \alpha_v 
+%\end{equation}
+ 
+\noindent
+{\bf Time-based Rate Control.} 
+\sys controls the FLIT transmission rate by adjusting the application thread running time \(T_R\) within each scheduling window \(T_W\) ($\S$\ref{subsec:mchannel-intf}). After running for \(T_R\), the application thread yields to another and remains in the waiting queue until the next scheduling window begins. A short scheduling window \(T_W\) enables fine-grained control over application execution but incurs high context-switching overhead due to frequent timer-expiration interrupts. Conversely, a larger \(T_W\) reduces scheduling overhead but causes tail latency increases
+%for memory accesses 
+because requests are less tightly coordinated. We choose \(T_W = 100\,\mu\text{s}\) in our prototype, which strikes a balance between these two trade-offs.
+
+
+Similar to TCP, a flow cannot transmit bytes when there is no free space in the congestion window. By temporarily stalling application execution, we can regulate the memory access rate to prevent congestion. To avoid temporal contention, application threads and their \texttt{mchannels} run asynchronously, even though they may have the same scheduling window. \sys estimates the CXL memory access size \(B\) during one scheduling window as \(D_c T_R\). To ensure fair sharing of CXL memory, the max-min fair remote memory size \(B_{fair}\) that an application can access during \(T_W\) is \(\min(\alpha_c, D_c) \times T_W\). The goal of our transport is to achieve max-min fair resource allocation without wasting CXL memory bandwidth. Therefore, we set \(B = B_{fair}\). Rearranging gives a fair running time during one scheduling window:
+\begin{equation}
+\label{eq:time-alloc}
+T_R = \frac{\min(\alpha_c, D_c)T_W}{D_c}
+\end{equation}
+
+
+% \noindent
+% {\bf Token-based Rate Control.} 
+% \sys uses tokens to control the flit transmission rate. A token is a communication permission that defines whether a flit can traverse through the CXL fabric or not.
+% %Integrated closely with the applications, MemChannel is a software abstraction that measures the application memory access demand and controls the memory access rate to ensure the fair share across applications. We will discuss application integration in detail in \(\S\)~\ref{sec:endhost}.
+% In a nutshell, each \texttt{mchannel} maintains the token statistics and performs token management on the data plane (ALG~\ref{alg:proto-alg}). Inside one scheduling window \(T_W\), the scheduler distributes \(n\) available tokens to all active \texttt{mchannels}. A token is consumed when an application issues a load/store instruction through the \texttt{mchannel}.
+% %, it will consumes one token. 
+% When the application runs out of tokens, the OS scheduler yields to another thread and puts the current in the waiting queue. Thus, application threads and their \texttt{mchannel}s run asynchronously, depending on how many available tokens they hold. Akin to a TCP, a flow cannot transmit bytes when there is no room in the congestion window.
+% %If the application runs out of token, the scheduler puts the application in the waiting queue. MemChannels (on different threads) runs asynchronously, as shown in Figure~\ref{fig:memchann-demo}. Memory instructions are only issued when the application is running. 
+% By temporarily stalling the application execution, one can control the memory access speed to avoid congestion. 
+% %By forcing the application to wait, the memory access rate can be reduced to avoid congestion in the memory fabric.
+% Using tokens, we can also compute the memory access demand. Suppose a \texttt{mchannel} consumes \(N\) tokens given a time window (\(T_W)\), its memory access rate is \(\frac{N\times S}{T_W}\), where \(S\) is the cacheline size. This is the same as an application issuing \(m\) cachelines during \(T_R\)=\(\frac{m \times S}{T_R}\).
+% %Given the same amount of token to memory channels, they may have different running time \(T_R\), since the applications have different remote memory access demand. Thus, memory channel's access demand can be calculated using number of consumed tokens \(m\): \(mS/T_R\), where \(S\) is the cacheline size. Similarly, we can get memory access rate from the token number: \(mS/T_W\).
+% Thus, the goal of our transport is to achieve max-min fair token allocation without wasting tokens. 
+% %Our goal is to achieve max-min fair allocation and minimize the token waste. 
+% We distribute just the right amount of token \(n\) based on the channel fair share rate \(\alpha_c\).
+% \begin{equation}
+% \label{eq:token}
+% n = \frac{\min(\alpha_c, D_c)T_W}{S}
+% \end{equation}
+
+%\subsubsection{New Congestion Signals}
+\noindent
+{\bf New Congestion Signals.} In Ethernet, congestion can be readily inferred from explicit signals like packet loss.
+%or increased delay. 
+However, such signals are largely unavailable in the CXL fabric. Instead, the CXL 3.2 specification~\cite{cxl-spec} mandates that memory expanders include a 2‑bit device‑internal load indication in memory responses (S2M), which encodes four levels of congestion typically derived from the expander’s internal queue occupancy. In addition, the specification strongly recommends that memory devices expose a QoS telemetry mechanism that periodically reports (1) egress‑port backpressure, indicating that one or more upstream queues between the expander and the host are saturated, and (2) temporary throughput reductions %, for example 
+during DRAM refresh operations.
+
+Congestion at the adapter can be queried at the host since the device is attached locally. For CXL DIMMs, we leverage the device‑load field to capture both the device’s internal queueing pressure and temporary throughput reductions, while disabling the egress‑port backpressure signal. The backpressure information is conveyed through telemetry messages and is treated as a congestion signal for CXL switches, since switches expose no explicit congestion notifications.
+
+% Memory Device Internal Loading
+% Egress Port Backpressure
+% Qos plus Devload
+
+%\subsubsection{Process Capacity Estimation} 
+%\label{subusubsec:est-cap}
+\noindent
+{\bf Transmission Capacity Estimation.}
+Due to the internal complexity of CXL hardware components, the transmission capacity is difficult to measure and may change dynamically. Inspired by the delay-based congestion control~\cite{tcpvegas-sigcomm94, timely-sigcomm15, dctcp-sigcomm10}, we maintain load factors \(l\) based on the congestion signals.
+\begin{equation}
+    l_{new} = (1 - g) \times l_{old} + g \times L
+\end{equation}
+\(L\) represents the percentage of responses marked as having moderate or severe overload in the device load field. For telemetry cases, the backpressure average percentage in the QoS response is directly used as \(L\). \(g\) is a configurable parameter. Using them, we then divide the operation region into the following categories and apply different scaling strategies:
+
+\squishlist
+    \item {\bf Congestion Avoidance}, occurring when fair share rate is increasing and \(l\) is relatively large. This means that some remote memory accesses have experienced high delays. We perform a multiplicative decrease and scale the reducing factor based on the load factor \(l\) (ALG\ref{alg:proto-alg} L22--23).
+    
+    \item {\bf Congestion Free}, where \(l < \delta\). This indicates that the rDIMM is able to deliver predefined bandwidth. Depending on how much idleness the channel has observed, our algorithm will add \(\lambda \times (\delta -h.l)\times K\) (ALG\ref{alg:proto-alg} L24--25).
+        
+\squishend
+
+\subsection{Algorithm Extensions}
+\label{subsec:proto-ext}
+
+\noindent
+\textbf{Weight Support.} \sys can be extended to support \texttt{mchannel}s with different weights \(w_c\), meaning that all congestion channels will receive a fair share rate of \(w_c\alpha_c\). The only modification required is to update Eq.~\ref{eq:time-alloc} accordingly.
+\begin{equation}
+\label{eq:weighted-time-alloc}
+    T_R = \frac{\min(w_c\alpha_c, D_c)T_W}{D_c}
+\end{equation}
+
+\noindent
+\textbf{HCSFQ Support.} Our algorithm achieves the fair share among \texttt{mchannel}s, equivalent to a single-layer HCSFQ.
+%of hardware processing capability for memory channels, which is equivalent to a single-layer HCSFQ. 
+However, in practice, an application may use multiple \texttt{mchannel}s (two-layer HCSFQ), and a tenant may run multiple applications (three-layer HCSFQ). Supporting HCSFQ is straightforward in \sys. In \(\S\)\ref{subsec:proto-alg}, we know (a) the transmission capacity of the hardware, which corresponds to the root node of the tree, and (b) memory access demand and access rate of the \texttt{mchannel}, which correspond to the leaf nodes of the tree. The aggregated demand/rate of the parent node is the sum of its children's (i.e., \(D_v = \sum D_u\)). By applying Eq.~\ref{eq:alpha-est} recursively from the root to the leaves, we can determine the fair share rate, \(\alpha\), for each layer. We then translate the \(\alpha\) of the last layer into the \texttt{mchannel} running time using Eq.~\ref{eq:time-alloc}. Note that the tree is used for all hardware components (adapters, switches, and DIMMs) as shown in our system model (\(\S\)\ref{subsec:channel-model}).
+%and represents a logical graph distinct from the graph \(G(V,E)\).
+
+\subsection{Bound Analysis}
+\label{subsec:proto-theoretical}
+
+We present the following theorem to show that our algorithm provides performance bounds for applications. Consider a memory channel with a fixed fair share rate  \(\alpha_c\) and weight  \(w_c\) during a sampling window  \(K\). In the ideal case, the memory channel should not issue load/store traffic exceeding  \( w_c \alpha_c K \). We can prove that no matter how the application tries to game the system, our mechanism ensures that the bytes of load/store traffic from a memory channel are no more than: \(w_c\alpha_c K(1+2 \frac{T_W}{K})\),
+%\begin{equation}
+%    w_c\alpha_c K(1+2 \frac{T_W}{K})
+%\end{equation}
+where \(T_W\) is the scheduling window.
+
+\noindent
+\textbf{Proof.} Consider any interval \( K = [t', t'') \), and let \( h = \lfloor \frac{K}{T_W} \rfloor \). In an interval, there will be \(h\) full scheduling windows, at most one scheduling window before \( t' \), and at most one scheduling window after \( t'' \). Thus, the maximum number of bytes transmitted during \( K \) is \(\sum_{i=0}^{h+1} B_i\).
+Based on Eq.~\ref{eq:weighted-time-alloc}, we have:
+\begin{equation}
+B_i \leq B_{fair} = \min(w_c \alpha_c, D_c) T_W \leq w_c \alpha_c T_W.
+\end{equation}
+Therefore, we can derive the bound as follows:
+%\begin{multline}
+\begin{equation}
+\begin{split}
+\sum_{i=0}^{h+1} B_i \leq (h+2) w_c \alpha_c T_W 
+\leq \left(\frac{K}{T_W} + 2\right) w_c \alpha_c T_W \\
+= w_c \alpha_c K \left(1 + 2 \frac{T_W}{K}\right). \\
+\end{split}
+\end{equation}
+%\end{multline}
+%
+This bound indicates that the application can issue at most \(2 \frac{T_W}{K}\) fractional more requests in the short run, ensuring that our algorithm achieves a max-min fair bandwidth allocation.
+
+% 
+\section{Evaluation}
+\label{sec:eval}
+
+
+\subsection{Experimental Methodology}
+\label{subsec:eval-exp-methodology}
+
+{\bf Testbeds and Workloads.} We use the same experimental setup as $\S$\ref{subsec:chara-issues}. Our evaluations use a diverse set of memory-intensive workloads as prior studies~\cite{nomad-osdi24,memstrata-osdi24,soar-osdi25,colloid-sosp24}.
+%
+%We evaluate \sys performance using a diverse set of memory-intensive workloads, which has been widely used for testing CXL memory systems~\cite{nomad-osdi24,memstrata-osdi24,soar-osdi25,colloid-sosp24}.
+%\squishlist
+%\item 
+{\it (a). In-memory databases.} We run a hashtable-based in-memory key-value store, MICA~\cite{mica-nsdi14}, configured with 8-byte keys and 100-byte values, and we focus on its in-memory components: circular logs, lossy concurrent hash indexes, and bulk chaining. We also evaluate a B-tree–based database, Silo~\cite{silo-sosp13}, designed for low-latency transaction processing, with a 1KB value size. The client traffic is generated via YCSB~\cite{ycsb-socc}.
+%\item 
+{\it (b). Graph analytics.} We deploy the GAP~\cite{gap-arxiv} benchmark suite, including several graph kernels: Breadth-First Search (BFS), Single-Source Shortest Paths (SSSP), PageRank (PR), Connected Components (CC), and Betweeness Centrality (BC), which use a Kronecker graph and a uniform random graph.
+%
+%\item 
+{\it (c). High-performance computing (HPC).} We also use SPEC CPU 2017~\cite{spec-cpu} and PARSEC~\cite{bienia2008parsec}, including scientific and numerical applications that stress memory access.
+%We select two benchmarks from it: 603.bwaves\_s, which models explosions, and 654.roms\_s, which performs regional ocean modeling.
+%\squishend
+
+\noindent
+{\bf Performance Metrics.} We report application throughput, latency, and performance slowdown. 
+%For databases, we report throughput, while for other applications we compute the slowdown ratio, defined as the average running time divided by the running time without contention. 
+\sys obtains per-\textit{mchannel} bandwidth using performance counters (\S~\ref{subsec:mchannel-intf}) and aggregates them to derive both application-level and host-level memory bandwidth. We measure CXL memory access latency via CHA queues, i.e., dividing occupancy by the number of CXL requests, following the Colloid's approach~\cite{colloid-sosp24}.
+%To capture tail latency, we sample latency in each scheduling window.
+
+%\noindent
+%{\bf Implementation. } \sys is implemented in C++ with 1,728 LoCs. It compiles into a DLL that is injected into applications for opening \textit{mchannel}, along with a user-space command-line tool to control application behavior. To share information across processes and hosts, \sys maps a shared CXL memory region.
+
+
+\subsection{Application Performance over \sys}
+\label{subsec:eval-app}
+
+\begin{figure} [t!]
+	\centering
+	\subfloat[MICA latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-mica-lat.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[MICA throughput.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-mica-thr.pdf}
+        \end{minipage}\hfill
+        }
+        \\
+        \subfloat[Silo latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-silo-lat.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Silo throughput.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-silo-thr.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Throughput and latency of MICA and Silo over one $\times$8 adapter to the memory pool, comparing between w/ and w/o \sys scenarios. We use 32 threads in this experiment.}
+        %on one endpoint adapter under 32 threads, comparing runs with and without \sys. (a) and (c) show throughput, while (b) and (d) report CXL memory access average (tail) latency. }
+        \vspace{-0.25\baselineskip}
+        \label{fig:app-perf}
+\end{figure}
+
+\begin{figure} [t!]
+	\centering
+	\subfloat[MICA latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/dual-app-mica-lat.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[MICA throughput.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/dual-app-mica-thr.pdf}
+        \end{minipage}\hfill
+        }
+        \\
+        \subfloat[Silo latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/dual-app-silo-lat.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Silo throughput.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/dual-app-silo-thr.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Throughput and latency of MICA and Silo over two $\times$8 adapters to the memory pool, comparing between w/ and w/o \sys scenarios. We use 64 threads in this experiment.}
+        \vspace{-0.25\baselineskip}
+        \label{fig:dual-app-perf}
+\end{figure}
+
+We first examine how much performance \sys delivers to applications when accessing the switched CXL memory pool. In this experiment, we use MICA and Silo and report the throughput and latency. With one $\times$8 CXL port, as shown in Figure~\ref{fig:app-perf}-a/c, applications show nearly no throughput degradation, and \sys can provide 19.6 GB/s bandwidth to the remote memory pool. However, \sys reduces the in-fabric congestion and yields latency savings. For example, as shown in Figure~\ref{fig:app-perf}-b/d, \sys reduces the average CXL memory access latency of Silo by 28.6\%/38.0\%/38.4\%/38.3\%/28.8\%, and tail latency by 8.7\%/28.0\%/27.7\%/29.3\%/5.8\% across five workloads compared with the cases when disabling \sys. MICA shows similar results. We then use two CXL adapters and run 64 threads. The average throughput over five applications reaches 225.3 MOPS under \textit{mchannel} (Figure~\ref{fig:dual-app-perf}), achieving 41.0GB/s CXL bandwidth to the remote memory pool. In terms of latency, similarly, \sys mitigates the fabric contention and achieves 23.9\% and 19.6\% lower average and tail latencies compared to the cases without \sys.
+
+
+%We generate five types of YCSB workloads, run them on both MICA and Silo with 32 threads, and report the maximum achievable throughput on CXL memory, as shown in Figure~\ref{fig:app-perf} (a) and (c). When running inside \textit{mchannel}, the applications show little to no performance degradation. On average, \sys achieves 93.8\% and 97.1\% of the throughput across the five workloads for MICA and Silo, respectively. This is because \sys’s lightweight interface introduces minimal overhead on applications (\S~\ref{subsec:mchannel-intf}). For latency, as shown in Figure~\ref{fig:app-perf} (b) and (d), \sys reduces Silo’s memory access latency by 28.6\%/38.0\%/38.4\%/38.3\%/28.8\% and the 95th-percentile tail latency by 8.7\%/28.0\%/27.7\%/29.3\%/5.8\% across the five workloads. MICA shows similar results. These latency reductions stem from \sys’s accurate estimation of transmission capacity using new congestion signals, which helps avoid congestion in the memory fabric.
+
+%We further scale the applications by running 64 threads across two CXL endpoint adapters, as shown in Figure~\ref{fig:dual-app-perf}. The throughput reaches 225.3 MOPS under \textit{mchannel}, and scales linearly without degradation. For latency, \sys continues to avoid congestion on the fabric under this configuration. For example, it reduces the latency of the YCSB-A workload on MICA by 219 ns.
+
+\subsection{Intra-Host Performance Isolation}
+\label{subsec:eval-ha-contention}
+
+\begin{figure} [t!]
+	\centering
+	\subfloat[Bwares Slowdown.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-bwares-slowdown.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Roms Slowdown.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-roms-slowdown.pdf}
+        \end{minipage}\hfill
+        }
+        \\
+    \subfloat[Bwares Bandwidth.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-bwares-bw.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Roms Bandwidth.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-roms-bw.pdf}
+        \end{minipage}\hfill
+        }
+        \\
+        \subfloat[Bwares Latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-bwares-lat.pdf}  
+        \end{minipage}\hfill
+        }
+        \subfloat[Roms Latency.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/intra-host-roms-lat.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Application slowdown, CXL bandwidth, and latency when varying contending traffic under host adapter contention.}
+        \vspace{-0.25\baselineskip}
+        \label{fig:intra-host}
+\end{figure}
+
+We create intra-host contention by sharing the host adapter between an application and competing background traffic. 
+%with a 24-thread traffic generator from \S~\ref{subsec:chara-cxl-mempool}, which emits and adjusts contending traffic on the memory fabric by varying the number of NOP instructions between memory accesses. 
+We use Bwaves and Roms from CPU SPEC as our applications. As shown in Figure~\ref{fig:intra-host}-a/b, applications running without \sys experience $7.0\times$ and $8.8\times$ slowdowns as the contending traffic load increases to 100\% for bwaves and roms, respectively. In contrast, applications running under \sys only see a $2.5\times$ slowdown. This improvement occurs because \sys provides performance isolation among co-located channels through its transport algorithm (\S~\ref{subsec:proto-alg}). To better understand this effect, we further measure the CXL access bandwidth of the applications and the total bandwidth, as shown in Figure~\ref{fig:intra-host}-c/d. \sys allocates more bandwidth to applications based on max-min fairness. Under heavy contention (e.g., when the contending traffic load is $\geq 80\%$), \sys achieves an average of 96.1\% bandwidth utilization across two applications, while reducing average latency by 51.6\% and 35.1\% and tail latency by 25.8\% and 26.3\% for Bwaves and Roms, as shown in Figure~\ref{fig:intra-host}-e/f.
+
+% We create contention at the host adapter and see how \sys addresses it.
+
+% %\subsubsection{Homogeneous Applications}
+% \noindent
+% {\bf Homogeneous Applications.}
+% We first evaluate the \texttt{mchannel} performance over a homogeneous application. We run MICA with the same YCSB-A workload across multiple threads, with each thread associated with a \texttt{mchannel}. We gradually increase the number of threads and compare the average latency and aggregated throughput. As shown in Figure~\ref{fig:multi-memchann}, under heavy contention (i.e., 12+ threads), the \texttt{mchannel} can reduce KV operation latency by up to 38.7\%. This is because the \textit{mchannel} ensures that the memory access rate of the applications does not exceed the processing capacity of the host adapter by controlling the fair share rate. As a result, buffers in the CXL memory remain relatively empty, leading to latency savings. Under light or no contention (i.e., fewer than 8 threads), the \texttt{mchannel} achieves similar latency and throughput compared with the case without \sys, indicating that our transport layer incurs little overheads.
+
+% %when running it directly, with a 8.8\% throughput drop
+% %matches the latency of the application running directly, and the average throughput only drops by 8.8\%, demonstrating that the memory channel introduces minimal overhead to the applications due to the use of aggregated variables.
+
+
+
+% %\subsubsection{Heterogeneous Applications}
+% \noindent
+% {\bf Heterogeneous Applications.}
+% \sys can also mitigate contention when running heterogeneous applications. In this experiment, we select MICA as the victim and use the work-stealing (WS) application to generate adversarial traffic. As shown in Figure~\ref{fig:inter-memchann}, as the number of work-stealing applications increases, the \texttt{mchannel} causes the MICA latency increase by up to $2.7\times$ compared to the case without WS tasks. However, without \sys, the latency increases by $14.4\times$! Under light contention (i.e., co-located with eleven WS tasks), the \texttt{mchannel} increases the victim throughput by $2.0\times$. Hence, our transport algorithm provides performance isolation among concurrent channels through its token adjustment mechanism.
+
+
+%\subsection{Tackling Fabric and Endpoint Contention}
+\subsection{Inter-Host Performance Isolation}
+\label{subsec:eval-infabric}
+
+We then set up in-fabric congestion as $\S$\ref{subsec:chara-issues} and evaluate how \sys mitigates the issue. We use two graph applications, i.e., Betweeness Centrality (BC) and PageRank (PR), in this experiment. As shown in Figure~\ref{fig:inter-host}-a/c, applications running without \sys experience $7.2\times$ and $4.2\times$ slowdowns as the contending traffic load increases to 100\% for BC and PR, respectively. In contrast, applications running under \sys only see 3.1$\times$ and 2.1$\times$ slowdown, respectively. The performance improvement comes from the fact that \sys allocates bandwidth across competing applications based on their performance requirements. Again, we measure the application CXL access bandwidth and the total bandwidth, as shown in Figure~\ref{fig:inter-host}-b/d. \sys allocates bandwidth in a max-min fairness manner at the CXL switching point. Under heavy contention (e.g., more than 80\% traffic load), \sys achieves an average of 97.2\% bandwidth utilization across two applications.
+
+%At 100\%
+%BC slowdown: 7.227841953	3.104318115		
+%PR slowdown: 4.224777388	2.120146758
+
+%BC APP BW: 0.3569906	0.8134544
+%PR APP BW: 1.1410067	2.3223915
+
+% We create contention at the endpoint adapter and fabric and see how \sys addresses it.
+
+% %An endpoint adapter and its attached CXL DIMMs can be shared across multiple hosts. Thus, contention can occur at the endpoint. We emulate this scenario using two NUMA nodes.
+
+% \noindent
+% {\bf Homogeneous Applications.}  
+% In this experiment, we simultaneously increase the number of MICA instances running on NUMA node 0 and node 1. Node 1 observes higher latency and lower throughput because the host adapter is connected to node 0. Similar to the host adapter experiment, we find that latency drops by 27.0\% under heavy contention, as shown in Figure~\ref{fig:multi-memchann-numa-lat}. The throughput (Figure~\ref{fig:multi-memchann-numa-throu}) remains almost the same after the endpoint adapter experiences contention (i.e., when the number of threads exceeds 4). However, without \sys, identical applications may suffer performance degradation under contention due to hardware topology. \sys ensures fairness across multiple hosts by calculating a fair share rate using aggregated variables that contain global information about the CXL memory fabric.
+
+% \noindent
+% {\bf Heterogeneous Applications.} Similar to the host adapter experiment, we continuously increase the number of threads in the WS application to measure the performance impact on the victim. However, in this case, we place MICA on the remote NUMA node, causing it to suffer greater performance penalties. Once again, we observe a $4.1\times$ reduction in latency under heavy contention (i.e., 31 WS threads) and a $2.0\times$ performance improvement under moderate contention (i.e., 15 WS threads), as shown in Figure~\ref{fig:inter-memchann-numa}. This indicates that the transport algorithm enhances the performance of the victim and remains effective regardless of hardware topology.
+
+\begin{comment}
+\begin{figure} [t!]
+	\centering
+	\subfloat[Channel adeptness.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/chann-adept.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Mchannel Overhead]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/overhead.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.5\baselineskip}
+        \caption{}
+        %\vspace{-0.25\baselineskip}
+        \label{fig:drilldown}
+\end{figure}
+\end{comment}
+
+\begin{figure} [t!]
+	\centering
+	\subfloat[BC Slowdown.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/inter-host-bc-slowdown.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[BC Bandwidth.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/inter-host-bc-bw.pdf}
+        \end{minipage}\hfill
+        }
+        \\
+        \subfloat[PR Slowdown.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/inter-host-pr-slowdown.pdf}  
+        \end{minipage}\hfill
+        }
+        \subfloat[PR Bandwidth.]{
+	\begin{minipage}{0.24\textwidth}
+	\includegraphics[width=\linewidth]{figures/inter-host-pr-bw.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Application slowdown and CXL bandwidth when varying contending traffic under in-fabric congestion.}
+        \vspace{-0.25\baselineskip}
+        \label{fig:inter-host}
+\end{figure}
+
+\subsection{Fairness}
+\label{subsec:eval-fairness}
+
+\begin{figure*} [t!]
+	\centering
+	\subfloat[Bwaves+SILO.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/fair-bwaves-silo.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Bwaves+MICA.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/fair-bwaves-mica.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[MICA+Silo.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/fair-mica-silo.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Compare the CXL memory bandwidth when running two applications with and without \sys support on a host. We gradually increase the thread number for both applications to create contention the memory fabric. }
+        \vspace{-0.75\baselineskip}
+        \label{fig:fairness}
+\end{figure*}
+
+\begin{figure*} [t!]
+	\centering
+	\subfloat[No Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-no-contention.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Moderate Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-mod-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Heavy Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-heavy-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Latency and throughput for MICA running in \sys and TPP under five YCSB workloads. Y-1 axis is latency, and Y-2 axis is throughput. WS application is used to generate background traffic.}
+        \vspace{-0.25\baselineskip}
+        \label{fig:chann-app}
+\end{figure*}
+
+We achieve a fair bandwidth share by calculating the \texttt{mchannel} rate, and \sys enforces it via the rate control algorithm. To measure effectiveness, we co-locate pairs of SPEC CPU, MICA, and Silo applications, gradually increasing the number of threads for both applications to induce contention in the CXL fabric, and report the resulting memory bandwidth for each. As shown in Figure~\ref{fig:fairness}, under light contention (e.g., one thread), \sys matches the baseline by allocating bandwidth according to application demand. Under heavy contention (e.g., 15 threads), compared with the case without \sys, \sys significantly reduces the bandwidth gap between two applications: from 8.9GB/s to 1.3GB/s for Bwaves+Silo, from 11.5GB/s to 1.8GB/s for Bwaves+MICA, and from 3.1GB/s to 0.1GB/s for MICA+Silo. Our transport %mechanism successfully 
+controls the application's remote access bandwidth, ensuring a fair share of hardware resources. 
+%However, a side effect of this approach is a slight reduction in overall bandwidth.
+
+\begin{comment}
+
+\subsection{Adaptiveness}
+\label{subsec:eval-util}
+
+\begin{figure}[tp]
+    %\centering
+    \includegraphics[width=\linewidth]{graphs/chann-adapt.png}
+    \vspace{-1.5\baselineskip}
+    \caption{Channel bandwidth when adding four channels compared between with and without \sys cases.}
+    \vspace{-0.25\baselineskip}
+    \label{fig:chann-adapt}
+\end{figure}
+
+We further examine how the channel bandwidth adjusts when adding more \texttt{mchannel}s at runtime. We first run a synthetic workload with and without \sys. Then, at 2.5s, 7.5s, 12.5s, and 17.5s, we gradually add one more synthetic workload and measure the average channel bandwidth every half second. When a \texttt{mchannel} is added to the system, \sys updates the fair share rate and regulates the remote memory access rate (Figure~\ref{fig:chann-adapt}), causing a bandwidth drop at 3s, 8s, 13s, and 18s. Subsequently, the transport algorithm recalculates the hardware processing capacity based on congestion signals, increasing the average bandwidth.
+\end{comment}
+
+%\subsection{\sys v.s. TPP for E2E Applications}
+%\label{sucsec:eval-tpp}
+
+\begin{comment}
+\begin{figure*} [t!]
+	\centering
+	\subfloat[No Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-no-contention.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Moderate Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-mod-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Heavy Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-heavy-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Latency and throughput for MICA running in \sys and TPP under five YCSB workloads. Y-1 axis is latency, and Y-2 axis is throughput. WS application is used to generate background traffic.}
+        %\vspace{-0.5\baselineskip}
+        \label{fig:chann-app}
+\end{figure*}
+\end{comment}
+
+%Our system runtime allows applications to use the switched CXL memory pool in a transparent and performant manner. 
+%Objects can be allocated either locally or remotely based on available capacity and dynamically migrated depending on their access frequency. Frequently accessed objects are relocated to the host-side DRAM via a lightweight CLOCK-enhanced scheme, reducing the number of CXL memory accesses on the performance path.  
+We compare our runtime with TPP~\cite{tpp-asplos23} under different background traffic generated by the same SPEC application as above (Figure~\ref{fig:chann-app}). We run five types of YCSB workloads over MICA, with the local-to-remote memory capacity ratio set to eight. Without background traffic, TPP slightly outperforms our system by $1.2\times$ in terms of throughput and reduces latency by 16\% across all five workloads. This is because sufficient remote memory bandwidth is available to support page demotion and promotion. However, under moderate contention, our runtime matches the performance of TPP. Under heavy contention, our runtime achieves a $1.5\times$ throughput improvement and reduces latency by 43\%. This is due to the performance isolation capability provided by \sys.
+
+%Our enhanced CLOCK algorithm reduces remote access, significantly improving performance under heavy contention. 
+%One exception is the YCSB-D workload, where the latest distribution results in more memory access being directed to local memory.
+
+% \begin{figure}[tp]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/chann-bw.eps}
+%     \vspace{-1.5\baselineskip}
+%     \caption{}
+%     \label{fig:chann-bw}
+% \end{figure}
+
+%\subsection{Limitation. Discussion.}
+
+\subsection{System Overheads}
+\label{subsec:eval-overheads}
+
+\sys incurs marginal overheads to the application.
+%in terms of CPU and memory usage. 
+Fair-share rate calculation and assignment are performed only once per scheduling window for all on-path devices, based on shared aggregated application demands and rates. Each core needs to read only one single performance counter via \textit{rdpmc}. The primary overhead introduced by \sys comes from POSIX timer timeout interruptions, used to suspend application execution. Based on our testing, this overhead amounts to 1.7\% when the scheduling window is set to 100 us, enabling fine-grained control of CXL memory access.
+
+\subsection{Discussion}
+\label{subsec:eval-discussion}
+
+%\noindent
+%{\bf \sys Supporting Future CXL Fabrics.} 
+CXL ecosystems are under significant development. We believe that \sys can still be applied, but requires several changes. First, \sys currently advocates the device-internal load to indicate the traffic condition of each remote DIMM and uses end-to-end delay to estimate the fabric bandwidth capacity. With in-fabric explicit congestion notification,
+%(like out-of-credit), the transport algorithm of \sys 
+our transport can be further improved. Second, \sys is evaluated at rack scale rather than at cluster scale. It will be interesting to explore how \sys operates in a scale-out CXL fabric with PBR. 
+%Third, there is a growing interest to expand pooled accelerator with composable memory pools~\cite{xu2026ccclnodespanninggpucollectives}. Although \sys can support this use case, one needs to refine the scheduling logic and couple it with acceleration kernels to avoid bandwidth waste. Last, 
+Third, the recent CXL specification introduces the CXL bundled port to support devices with higher bandwidth requirements. Since it enables logical aggregation of multiple CXL ports, \sys should account for the intra-bundle traffic condition and develop a new device-load estimation technique.
+
+\section{Related Work}
+\label{sec:related}
+
+%\noindent
+{\bf CXL Memory System.} 
+Researchers have explored how to build CXL-based remote memory systems extensively~\cite{directcxl-atc22, tpp-asplos23, cxl-chara-micro23, melody-asplos25, fcc-hotos23, pathfinder-sigcomm25, pond-asplos23, nomad-osdi24, memstrata-osdi24}. 
+For example, 
+%DirectCXL~\cite{directcxl-atc22}, an early proposal, systematically compares the \textit{CXL.mem} protocol with RDMA for remote memory systems.
+%builds a disaggregated memory prototype using the \textit{CXL.mem} protocol and systematically compares it with the RDMA-based remote memory system. 
+Pond~\cite{pond-asplos23} analyzes the memory stranding issue within Azure and proposes a CXL-based small pooled system architecture. 
+%TPP~\cite{tpp-asplos23} develops an OS-level application-transparent page placement mechanism for CXL-based tiered memory. 
+%Yan Sun \emph{et al.} characterize a CXL1.1 memory expander on an Intel Sapphire Rapids server~\cite{cxl-chara-micro23}. 
+%Nomad~\cite{nomad-osdi24} proposes non-exclusive memory tiering that retains a copy of pages recently promoted from slow memory to fast memory. 
+%Memstrata~\cite{memstrata-osdi24} develops a lightweight multi-tenant memory allocator for hardware-managed tiering.
+%Colloid~\cite{collid-sosp24} leverages balancing access latencies to make page placement decisions in a memory tiering system.
+Melody~\cite{melody-asplos25} develops a framework to characterize
+%and analyze 
+CXL memory performance. 
+%We focus on switched CXL memory pooling and build a transport layer. 
+
+\noindent
+{\bf Load-Store Interconnect and Programmable Networks.} Load-store fabrics~\cite{cxl, rpcibench-nsdi24, ualink, nvlink} have gained great interest recently to build scale-up networks for resource disaggregation~\cite{gimbal-sigcomm21, dremel-sigmetrics22, leed-sigcomm23, ezns-osdi23, ezns-tos24, flint-nsdi25, ntprof-nsdi25, megastation-nsdi25, frsm-nsdi20, tapdb-asplos26}, but are mostly used in an exclusive deployment. As it moves to multi-tenant cases, similar transport techniques like \sys would be needed. We believe our past exploration on programmable networks~\cite{afq-nsdi18, calq-nsdi20, lognic-micro23, bf3charac-icnp24, rpcnic-hpca25, scr-nsdi25, sgiov-asplos26, pedal-nsdi26} and in-network computing~\cite{incbricks-asplos17, luo2017motivating, floem-osdi18, e3-atc19, ipipe-sigcomm19, liu2020building, clara-hotnets20, clara-sosp21, xenic-sosp21, ask-asplos23} can shed great light on.
+
+\noindent
+{\bf Congestion Control in Host Networks.} 
+Researchers have built models to understand congestion happening within a single host~\cite{cai2021understanding, agarwal2023host, vuppalapati2024understanding, scn-hotnets25}.
+%Qizhe Cai \emph{et al.} analyze why Linux kernel network stacks fail to scale to motivate rethinking future OS, protocol, and hardware designs~\cite{cai2021understanding}.
+HostCC~\cite{agarwal2023host} locates and identifies both host‑internal and network fabric congestion, significantly reducing host queueing and packet loss while improving throughput and tail latency.
+Midhul Vuppalapati \emph{et al.} develop a domain‑by‑domain credit‑based flow control model to capture the subtle interplay that leads to latency inflation and host resource underutilization~\cite{vuppalapati2024understanding}.
+%Jinshu Liu \emph{et al.} introduce the amortized core latency to balance between memory access latency and memory-level parallelism~\cite{aol-osdi25}. 
+%PathFinder~\cite{pathfinder-sigcomm25} dissects the end-to-end \texttt{CXL.mem} execution path using Intel architectural performance counters. 
+\sys coordinates tenants in a load–store memory pooling setting and enables fair sharing of memory bandwidth.   
+%by combining hardware-managed tiering with software-managed performance isolation. 
+%These studies focus on directly attached memory expanders. We build a transport layer for switched memory pooling.
+
+
+\section{Conclusion}
+\label{sec:concl}
+
+This paper presents \sys, a transport layer for switched CXL memory pooling. \sys introduces the \texttt{mchannel} abstraction for end-to-end fabric bandwidth management among competing memory streams and enables application-specific traffic control. Key to \sys is a Sender-Driven Fabric-Informed transport protocol--inspired by Core-Stateless Fair Queueing (CSFQ)--that admits just enough CXL requests to each \texttt{mchannel} based on the estimated $Core \leftrightarrow DIMM_{remote}$ bandwidth availability. Our evaluations demonstrate that \sys achieves high utilization, performance isolation, scalability, and multi-tenancy.
+
+
+%\sys is inspired by Core-Stateless Fair Queueing (CSFQ), and proposes several techniques: token-based rate control, host-side admission control, cross-host bookkeeping, new congestion signals, rate estimation based on the fluid model, and delay-based link capacity adjustment. Together, \sys provides end-to-end performance control for memory streams in a performance-controlled manner. Our evaluations demonstrate that \sys achieves performance isolation, scalability, and efficient multi-tenancy. This work does not raise any ethical issues.
+
+\section*{Acknowledgement}
+We would like to thank the anonymous reviewers and our shepherd, Paolo Costa, for their comments and feedback. This work is supported in part by NSF grants CNS-2106199, CNS-2212192, CAREER-2339755, and Intel faculty awards.
+
+\bibliographystyle{plain}
+\bibliography{bibs/reference,bibs/ming}
+
+\clearpage
+\appendix
+\section{Appendix}
+\label{sec:appdix}
+
+\subsection{\sys Adaptiveness}
+\label{subsec:eval-util}
+
+\begin{figure}[t]
+    %\centering
+    \includegraphics[width=\linewidth]{graphs/chann-adapt.png}
+    \vspace{-1.5\baselineskip}
+    \caption{Channel bandwidth when adding four channels compared between with and without \sys cases.}
+    \vspace{-0.25\baselineskip}
+    \label{fig:chann-adapt}
+\end{figure}
+
+We further examine how the channel bandwidth adjusts when adding more \texttt{mchannel}s at runtime. We first run a synthetic workload with and without \sys. Then, at 2.5s, 7.5s, 12.5s, and 17.5s, we gradually add one more synthetic workload and measure the average channel bandwidth every half second. When a \texttt{mchannel} is added to the system, \sys updates the fair share rate and regulates the remote memory access rate (Figure~\ref{fig:chann-adapt}), causing a bandwidth drop at 3s, 8s, 13s, and 18s. Subsequently, the transport algorithm recalculates the hardware processing capacity based on congestion signals, increasing the average bandwidth.
+
+\begin{comment}
+\begin{figure*} [t!]
+	\centering
+	\subfloat[No Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-no-contention.pdf}
+        \end{minipage}\hfill
+        }
+	\subfloat[Moderate Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-mod-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \subfloat[Heavy Contention.]{
+	\begin{minipage}{0.32\textwidth}
+	\includegraphics[width=\linewidth]{figures/app-heavy-contention.pdf}
+        \end{minipage}\hfill
+        }
+        \vspace{-0.75\baselineskip}
+        \caption{Latency and throughput for MICA running in \sys and TPP under five YCSB workloads. Y-1 axis is latency, and Y-2 axis is throughput. WS application is used to generate background traffic.}
+        %\vspace{-0.5\baselineskip}
+        \label{fig:chann-app}
+\end{figure*}
+
+\subsection{\sys v.s. TPP for E2E Applications}
+\label{sucsec:eval-tpp}
+
+Our system runtime allows applications to use the switched CXL memory pool in a transparent and performant manner. 
+%Objects can be allocated either locally or remotely based on available capacity and dynamically migrated depending on their access frequency. Frequently accessed objects are relocated to the host-side DRAM via a lightweight CLOCK-enhanced scheme, reducing the number of CXL memory accesses on the performance path.  
+We compare our runtime with TPP~\cite{tpp-asplos23} under different background traffic generated by the same SPEC application as above. We run five types of YCSB workloads over MICA (Figure~\ref{fig:chann-app}), with the local-to-remote memory capacity ratio set to eight. Without background traffic, TPP slightly outperforms our system by $1.2\times$ in terms of throughput and reduces latency by 16\% across all five workloads. This is because sufficient remote memory bandwidth is available to support page demotion and promotion. However, under moderate contention, our runtime matches the performance of TPP. Under heavy contention, our runtime achieves a $1.5\times$ throughput improvement and reduces latency by 43\%. This is due to the performance isolation capability provided by \sys.
+
+%Our enhanced CLOCK algorithm reduces remote access, significantly improving performance under heavy contention. 
+%One exception is the YCSB-D workload, where the latest distribution results in more memory access being directed to local memory.
+
+\end{comment}
+
+%\fi
+
+\end{document}

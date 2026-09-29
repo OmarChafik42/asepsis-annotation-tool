@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "app_version": "1.0.0",
+  "session_id": "dfd0c460-9b90-49d9-a132-12201b1e5a34",
+  "document_id": "doc-2165cd4f3555703a",
+  "filename": "c023fe2a_WHO_Guidelines_on_Hand_Hygiene_in_Health_Care_2009_2026-09-11_origin.pdf",
+  "annotator_id": "anonymous",
+  "created_at": "2026-09-19T06:21:59.036Z",
+  "updated_at": "2026-09-20T05:42:42.672Z",
+  "finalised_at": "2026-09-20T05:42:42.624Z",
+  "status": "approved",
+  "active_seconds": 4840,
+  "initial_state_sha256": "69e1d411371af6c6f0a18afb743e338f0ca7086aac5189fe49efcf8b64ebadb9",
+  "events_sha256": "9182e0036aab7658f3d7e8e9e940214a310fc05f32300fc40b223ed4df9a6c8c",
+  "final_state_sha256": "08c053379a536d0374fdb699c8a2b519f37b6ce9b54ae303ea796b0ab676454e",
+  "replay_valid": true,
+  "metadata": {
+    "document": "c023fe2a_WHO_Guidelines_on_Hand_Hygiene_in_Health_Care_2009_2026-09-11",
+    "last_sequence": 1448,
+    "state_revision": 363,
+    "approval": {
+      "checklist": {
+        "checklist_version": "1.0",
+        "reviewed_all_pages": true,
+        "missing_spurious_regions_checked": true,
+        "boundaries_checked": true,
+        "types_checked": true,
+        "structure_checked": true,
+        "uncertainty_documented": true
+      },
+      "approval_note": null
+    }
+  }
+}

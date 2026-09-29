@@ -1,0 +1,10 @@
+{
+  "cell": "two_arabic",
+  "columns": "two",
+  "numbering": "arabic",
+  "documentclass": "acmart",
+  "category": "q-fin.ST",
+  "published": "2026-08-14",
+  "title": "Dependence-Informed Sparse Neural Architecture for Stock Return Prediction",
+  "arxiv_id": "2608.14323v1"
+}

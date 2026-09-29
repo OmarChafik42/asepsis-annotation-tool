@@ -1,0 +1,3170 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      369.0,
+      85.0,
+      1210.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Critical Topological Photonics in Synthetic Dimensions",
+    "page": 0,
+    "bbox": [
+      287.0,
+      102.0,
+      944.0,
+      131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      302.0,
+      153.0,
+      927.0,
+      179.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      377.0,
+      183.0,
+      857.0,
+      207.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      383.0,
+      206.0,
+      851.0,
+      227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      288.0,
+      225.0,
+      946.0,
+      249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      161.0,
+      246.0,
+      1070.0,
+      312.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      211.0,
+      324.0,
+      1019.0,
+      556.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      594.0,
+      602.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      1142.0,
+      602.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      625.0,
+      595.0,
+      1128.0,
+      740.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      626.0,
+      749.0,
+      1129.0,
+      1061.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      625.0,
+      1069.0,
+      1129.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1111.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      106.0,
+      601.0,
+      274.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      274.0,
+      602.0,
+      705.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      129.0,
+      715.0,
+      548.0,
+      822.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      573.0,
+      758.0,
+      597.0,
+      782.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      100.0,
+      840.0,
+      604.0,
+      1250.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      114.0,
+      1263.0,
+      562.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      572.0,
+      1271.0,
+      597.0,
+      1294.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1329.0,
+      601.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      633.0,
+      99.0,
+      890.0,
+      306.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      872.0,
+      111.0,
+      1125.0,
+      319.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 1. (a) Schematic of two coupled ring resonators, la- beled A and B, with coupling strength g. Each ring con- tains an electro-optic modulator (EOM), shown in yellow. (b) Synthetic-frequency lattice in the supermode basis {Cn, Dn} with intra-cell hopping J0 and inter-cell hoppings J1, J2. (c) Topological phase diagram in the (J1/J0, J2/J0) plane, ex- hibiting three gapped phases distinguished by the winding number W = 0, 1, 2, separated by three critical lines (blue, red, and green) that meet at a multicritical point (red star).",
+    "page": 1,
+    "bbox": [
+      627.0,
+      347.0,
+      1126.0,
+      535.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      625.0,
+      604.0,
+      1133.0,
+      1043.0
+    ]
+  },
+  {
+    "label": "inline_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      972.0,
+      586.0,
+      1032.0,
+      608.0
+    ]
+  },
+  {
+    "label": "inline_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1082.0,
+      587.0,
+      1105.0,
+      608.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      625.0,
+      1045.0,
+      1129.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      104.0,
+      107.0,
+      354.0,
+      306.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      360.0,
+      104.0,
+      597.0,
+      306.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      112.0,
+      309.0,
+      348.0,
+      505.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      354.0,
+      309.0,
+      599.0,
+      499.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 2. Evidence for a critical topological photonic state on the W = 1 ↔ 2 transition line. (a) Open-boundary spectrum as a function of J2/J0 for an extended SSH chain with Nf = 40 unit cells and J1/J0 = 2.5. The green hexagon marks the critical point J2/J0 = 1.5. (b) Bipartite entanglement entropy scaling at the same critical point, computed under anti-periodic boundary conditions up to Nf = 2000 unit cells. (c) Open-boundary energy spectrum at the critical point for Nf = 30 unit cells. The inset shows the corresponding wave- function intensities |ψj|2 along the synthetic-frequency chain. (d) Single-particle entanglement spectrum with Nf = 80 unit cells.",
+    "page": 2,
+    "bbox": [
+      101.0,
+      529.0,
+      602.0,
+      781.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      825.0,
+      601.0,
+      945.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      949.0,
+      602.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      627.0,
+      106.0,
+      1128.0,
+      514.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      628.0,
+      516.0,
+      1130.0,
+      946.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      626.0,
+      946.0,
+      1128.0,
+      1185.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      627.0,
+      1186.0,
+      1128.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1112.0,
+      57.0,
+      1127.0,
+      74.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      103.0,
+      356.0,
+      256.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      360.0,
+      106.0,
+      596.0,
+      269.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      105.0,
+      285.0,
+      595.0,
+      455.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 3. (a) Effective central charge scaling along the criti- cal trajectory J2 = J1 − J0. The system size is Nf = 2000 unit cells. (b) Number of boundary zero modes as a func- tion of J1/J0 along the critical line. (c, i)-(c, iii) Schematic photonic single-particle energy spectra: linear dispersion in the topologically trivial regime (J1/J0 = 1.5, J2/J0 = 0.5), quadratic band touching at the multicritical point (J1/J0 = 2.0, J2/J0 = 1.0), and linear dispersion at shifted momen- tum in the topologically nontrivial regime (J1/J0 = 3.0, J2/J0 = 2.0).",
+    "page": 3,
+    "bbox": [
+      100.0,
+      478.0,
+      602.0,
+      692.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      734.0,
+      602.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1070.0,
+      602.0,
+      1239.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      111.0,
+      1255.0,
+      563.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      573.0,
+      1271.0,
+      597.0,
+      1294.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1329.0,
+      601.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      103.0,
+      1127.0,
+      507.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 4. 2D extension of critical topological photonics. (a, b)Single-particle entanglement spectra of the extended QWZ model at λ = 1 for (a) the conventional critical point M = 3 and (b) the critical topological point M = −1. The finite fre- quency direction contains Nf = 40 unit cells, the momentum kx is sampled with Nk = 800, and the horizontal axis is mea- sured relative to the gap-closing momentum, δkx = kx − k. with k = 0 for M = 3 and k = π for M = −1. The color indicates the mean frequency position of the entanglement eigenstate. (c, d) Time-averaged probability density ρ(x, y) of the same edge-localized Gaussian wavepacket evolved in a 50 × 50 open lattice.",
+    "page": 3,
+    "bbox": [
+      626.0,
+      527.0,
+      1126.0,
+      781.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      627.0,
+      827.0,
+      1127.0,
+      971.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      625.0,
+      973.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      103.0,
+      107.0,
+      601.0,
+      226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      103.0,
+      228.0,
+      602.0,
+      586.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      103.0,
+      587.0,
+      603.0,
+      1210.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      1210.0,
+      602.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      209.0,
+      1126.0,
+      250.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      252.0,
+      1125.0,
+      292.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      293.0,
+      1125.0,
+      354.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      355.0,
+      1125.0,
+      437.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      640.0,
+      439.0,
+      1126.0,
+      480.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      482.0,
+      1125.0,
+      542.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      544.0,
+      1126.0,
+      584.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      641.0,
+      586.0,
+      1126.0,
+      647.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      639.0,
+      649.0,
+      1125.0,
+      689.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      690.0,
+      1127.0,
+      753.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      753.0,
+      1126.0,
+      814.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      816.0,
+      1126.0,
+      877.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      879.0,
+      1126.0,
+      939.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      942.0,
+      1126.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1026.0,
+      1126.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1087.0,
+      1125.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1130.0,
+      1126.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      1213.0,
+      1126.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1297.0,
+      1127.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      1339.0,
+      1126.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      1422.0,
+      1126.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1111.0,
+      57.0,
+      1127.0,
+      74.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      139.0,
+      108.0,
+      599.0,
+      169.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      105.0,
+      171.0,
+      599.0,
+      212.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      214.0,
+      599.0,
+      274.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      276.0,
+      599.0,
+      337.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      339.0,
+      600.0,
+      399.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      402.0,
+      599.0,
+      524.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      527.0,
+      599.0,
+      588.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      590.0,
+      600.0,
+      672.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      105.0,
+      673.0,
+      600.0,
+      714.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      716.0,
+      602.0,
+      756.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      757.0,
+      599.0,
+      817.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      105.0,
+      819.0,
+      598.0,
+      880.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      883.0,
+      599.0,
+      964.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      967.0,
+      599.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1050.0,
+      599.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      1092.0,
+      600.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1175.0,
+      599.0,
+      1237.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1239.0,
+      599.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1322.0,
+      599.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1405.0,
+      600.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      665.0,
+      109.0,
+      1124.0,
+      148.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      151.0,
+      1126.0,
+      211.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      631.0,
+      214.0,
+      1125.0,
+      273.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      276.0,
+      1125.0,
+      337.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      339.0,
+      1125.0,
+      399.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      402.0,
+      1125.0,
+      442.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      444.0,
+      1125.0,
+      525.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      527.0,
+      1125.0,
+      567.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      569.0,
+      1125.0,
+      610.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      611.0,
+      1126.0,
+      692.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      694.0,
+      1126.0,
+      776.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      779.0,
+      1126.0,
+      838.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      841.0,
+      1125.0,
+      901.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      631.0,
+      903.0,
+      1126.0,
+      965.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      967.0,
+      1126.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      1070.0,
+      1126.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      1176.0,
+      1125.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      1260.0,
+      1125.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      1344.0,
+      1127.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      1427.0,
+      1126.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      140.0,
+      109.0,
+      598.0,
+      149.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      151.0,
+      599.0,
+      211.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      213.0,
+      599.0,
+      275.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      276.0,
+      600.0,
+      336.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      338.0,
+      599.0,
+      421.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      422.0,
+      600.0,
+      505.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      506.0,
+      600.0,
+      567.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      569.0,
+      600.0,
+      650.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      652.0,
+      599.0,
+      734.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      737.0,
+      600.0,
+      818.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      105.0,
+      820.0,
+      599.0,
+      880.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      882.0,
+      599.0,
+      943.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      108.0,
+      946.0,
+      600.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1050.0,
+      599.0,
+      1091.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1092.0,
+      600.0,
+      1153.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1155.0,
+      599.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1218.0,
+      600.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1302.0,
+      600.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "End Matter",
+    "page": 6,
+    "bbox": [
+      807.0,
+      103.0,
+      951.0,
+      129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      164.0,
+      1129.0,
+      645.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      693.0,
+      675.0,
+      882.0,
+      874.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      921.0,
+      677.0,
+      1065.0,
+      873.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 5. Complex-plane diagnosis of the winding-number breakdown. (a) At the gapped point (J1/J0, J2/J0) = (2.3, 0.9), G(kf) avoids the origin and the winding number is well defined. (b) At the critical point (J1/J0, J2/J0) = (2.5, 1.5), G(k*) = 0, so arg G(kf) is singular and the conven- tional winding number is ill defined.",
+    "page": 6,
+    "bbox": [
+      628.0,
+      898.0,
+      1127.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      1067.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1112.0,
+      57.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      107.0,
+      562.0,
+      131.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      239.0,
+      151.0,
+      463.0,
+      204.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      571.0,
+      158.0,
+      597.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      102.0,
+      224.0,
+      600.0,
+      298.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      198.0,
+      318.0,
+      505.0,
+      346.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      572.0,
+      320.0,
+      598.0,
+      344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      99.0,
+      369.0,
+      602.0,
+      515.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      627.0,
+      107.0,
+      1129.0,
+      226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      625.0,
+      228.0,
+      1129.0,
+      514.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Supplemental Material for \"Critical Topological Photonics in Synthetic Dimensions\"",
+    "page": 8,
+    "bbox": [
+      116.0,
+      102.0,
+      1114.0,
+      132.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "CONTENTS",
+    "page": 8,
+    "bbox": [
+      553.0,
+      200.0,
+      679.0,
+      223.0
+    ]
+  },
+  {
+    "label": "content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      107.0,
+      251.0,
+      1128.0,
+      587.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix I: Physical origin of critical topological photonics: kinetic inversion",
+    "page": 8,
+    "bbox": [
+      250.0,
+      636.0,
+      980.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      690.0,
+      1127.0,
+      784.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      786.0,
+      1127.0,
+      953.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      955.0,
+      1127.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      489.0,
+      1071.0,
+      741.0,
+      1096.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1086.0,
+      1071.0,
+      1124.0,
+      1096.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      1117.0,
+      1125.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      1167.0,
+      1127.0,
+      1261.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      1262.0,
+      1127.0,
+      1336.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      481.0,
+      1355.0,
+      747.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1086.0,
+      1356.0,
+      1123.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      1401.0,
+      1127.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1102.0,
+      56.0,
+      1127.0,
+      76.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a)",
+    "page": 9,
+    "bbox": [
+      112.0,
+      106.0,
+      148.0,
+      136.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      122.0,
+      128.0,
+      610.0,
+      379.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b)",
+    "page": 9,
+    "bbox": [
+      633.0,
+      107.0,
+      670.0,
+      135.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      637.0,
+      129.0,
+      1130.0,
+      380.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S1. Physical origin of the critical topological photonic states from the kinetic inversion. (a) In a conventional gapped topological interface, a localized zero mode is generated by a sign change of the mass term m(x). (b) In a critical topological interface, the boundary mode is instead generated by a sign change of the kinetic coefficient κ(x) while the mass remains tuned to the critical line m ≈ 0. This provides a gapless analogue of the Jackiw-Rebbi domain-wall mechanism [37]",
+    "page": 9,
+    "bbox": [
+      103.0,
+      408.0,
+      1126.0,
+      496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      104.0,
+      533.0,
+      1126.0,
+      582.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      492.0,
+      592.0,
+      739.0,
+      622.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1087.0,
+      595.0,
+      1123.0,
+      620.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      633.0,
+      886.0,
+      658.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      525.0,
+      667.0,
+      704.0,
+      712.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1087.0,
+      677.0,
+      1124.0,
+      702.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      721.0,
+      1126.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      770.0,
+      1127.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      889.0,
+      1127.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix II: Entanglement-spectrum diagnosis of critical topology",
+    "page": 9,
+    "bbox": [
+      299.0,
+      1051.0,
+      929.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Numerical construction of the entanglement spectrum",
+    "page": 9,
+    "bbox": [
+      337.0,
+      1101.0,
+      893.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      1151.0,
+      1126.0,
+      1200.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      395.0,
+      1210.0,
+      835.0,
+      1261.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1087.0,
+      1216.0,
+      1123.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      1275.0,
+      1127.0,
+      1374.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      524.0,
+      1386.0,
+      704.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1086.0,
+      1408.0,
+      1124.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1102.0,
+      57.0,
+      1125.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      99.0,
+      106.0,
+      1127.0,
+      182.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      461.0,
+      196.0,
+      767.0,
+      223.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1086.0,
+      197.0,
+      1124.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      238.0,
+      1128.0,
+      360.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Quantum-classical correspondence of the entanglement spectrum",
+    "page": 10,
+    "bbox": [
+      287.0,
+      402.0,
+      942.0,
+      424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      452.0,
+      1127.0,
+      571.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      104.0,
+      572.0,
+      1125.0,
+      666.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      103.0,
+      668.0,
+      1127.0,
+      740.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Experimental reconstruction of the entanglement spectrum",
+    "page": 10,
+    "bbox": [
+      314.0,
+      783.0,
+      916.0,
+      805.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      102.0,
+      834.0,
+      1126.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      103.0,
+      930.0,
+      1127.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      391.0,
+      1086.0,
+      838.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1087.0,
+      1089.0,
+      1123.0,
+      1113.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      1135.0,
+      1127.0,
+      1183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      415.0,
+      1202.0,
+      812.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1087.0,
+      1218.0,
+      1124.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      103.0,
+      1277.0,
+      1117.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      481.0,
+      1316.0,
+      747.0,
+      1346.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1076.0,
+      1318.0,
+      1124.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      104.0,
+      1359.0,
+      999.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      509.0,
+      1398.0,
+      717.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1076.0,
+      1413.0,
+      1124.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1101.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      102.0,
+      108.0,
+      497.0,
+      357.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      503.0,
+      116.0,
+      1128.0,
+      361.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S2. (a) Real-space coupling schematic for the two-leg implementation of the two-dimensional extended QWZ model. Each cell contains two optical modes, Ai and Bi, forming the pseudospin Ψi,n = (Ai,n, Bi,n)1. The four inter-cell links between neighboring cells realize the effective real-space hopping matrix Tx. (b) Phase diagram of the two-dimensional extended QWZ model. The color denotes the Chern number C of the lower band. Solid black curves mark the Chern-sector boundaries obtained from the analytical gap-closing conditions. The solid red curve highlights the critical topological phase boundary M = λ – 2, which separates two nontrivial Chern sectors (C = 2 and C = 1). The dotted horizontal line indicates the cut λ = 1 used in the main text. The two marked points, (M, λ) = (3, 1) and (-1, 1), correspond respectively to the topological trivial and nontrivial critical points studied in Fig. 4 of the main text.",
+    "page": 11,
+    "bbox": [
+      103.0,
+      386.0,
+      1126.0,
+      557.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      104.0,
+      601.0,
+      1126.0,
+      650.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      434.0,
+      670.0,
+      793.0,
+      736.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1076.0,
+      691.0,
+      1124.0,
+      716.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      104.0,
+      758.0,
+      1125.0,
+      808.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      121.0,
+      808.0,
+      679.0,
+      833.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      128.0,
+      852.0,
+      1056.0,
+      877.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      129.0,
+      897.0,
+      1126.0,
+      946.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      127.0,
+      967.0,
+      1117.0,
+      993.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      126.0,
+      1012.0,
+      1031.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      128.0,
+      1058.0,
+      1117.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      129.0,
+      1103.0,
+      1124.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix III: Two-dimensional synthetic-frequency extension",
+    "page": 11,
+    "bbox": [
+      324.0,
+      1179.0,
+      906.0,
+      1202.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Feasible implementation route",
+    "page": 11,
+    "bbox": [
+      450.0,
+      1229.0,
+      783.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      100.0,
+      1282.0,
+      1129.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1102.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      122.0,
+      106.0,
+      922.0,
+      131.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      269.0,
+      150.0,
+      962.0,
+      217.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1076.0,
+      170.0,
+      1124.0,
+      195.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      100.0,
+      238.0,
+      1126.0,
+      287.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      387.0,
+      304.0,
+      840.0,
+      355.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1076.0,
+      319.0,
+      1124.0,
+      344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      102.0,
+      370.0,
+      334.0,
+      393.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      100.0,
+      393.0,
+      1127.0,
+      468.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      395.0,
+      483.0,
+      835.0,
+      533.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1076.0,
+      497.0,
+      1124.0,
+      523.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      549.0,
+      1128.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      122.0,
+      698.0,
+      870.0,
+      723.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      425.0,
+      741.0,
+      805.0,
+      805.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1076.0,
+      760.0,
+      1124.0,
+      785.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      821.0,
+      1127.0,
+      942.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      100.0,
+      943.0,
+      1129.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Phase diagram of the two-dimensional extended QWZ model",
+    "page": 12,
+    "bbox": [
+      306.0,
+      1253.0,
+      925.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      1305.0,
+      1128.0,
+      1400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      104.0,
+      1401.0,
+      1126.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1101.0,
+      56.0,
+      1128.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      153.0,
+      100.0,
+      489.0,
+      372.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      503.0,
+      100.0,
+      776.0,
+      371.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      789.0,
+      99.0,
+      1062.0,
+      371.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      159.0,
+      378.0,
+      497.0,
+      606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      503.0,
+      380.0,
+      782.0,
+      598.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      789.0,
+      380.0,
+      1074.0,
+      614.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Index of entanglement levels Index of entanglement levels Index of entanglement levels",
+    "page": 13,
+    "bbox": [
+      214.0,
+      604.0,
+      1060.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S3. Robustness of the 1D critical topological phase against chiral-symmetry-preserving hopping disorder at (J1/J0, J2/J0) = (2.5, 1.5). Results are averaged over Ndis = 30 Gaussian disorder realizations of Eq. (S18); shaded bands around the edge states in (a,b,c) denote one standard deviation. (a)-(c) Disorder-averaged left- and right-edge profiles for σ = 0.1, 0.2, and 0.3 on an open chain with Nf = 80 unit cells. (d)-(f) Corresponding half-filled entanglement spectra on an anti-periodic chain with Nf = 100 unit cells. The pair of levels closest to ξ = 1/2 remains pinned near the dashed line, confirming the persistence of the symmetry-protected boundary modes under disorder.",
+    "page": 13,
+    "bbox": [
+      99.0,
+      649.0,
+      1126.0,
+      779.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      101.0,
+      815.0,
+      1127.0,
+      864.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      417.0,
+      875.0,
+      812.0,
+      901.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1075.0,
+      876.0,
+      1124.0,
+      901.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      100.0,
+      915.0,
+      1130.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix IV: Robustness of critical topological photonic states in 1D and 2D synthetic lattices",
+    "page": 13,
+    "bbox": [
+      166.0,
+      1148.0,
+      1064.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      101.0,
+      1200.0,
+      1127.0,
+      1272.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Robustness against symmetry-preserving perturbations in 1D synthetic lattices",
+    "page": 13,
+    "bbox": [
+      220.0,
+      1314.0,
+      1010.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      101.0,
+      1364.0,
+      1126.0,
+      1413.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      345.0,
+      1424.0,
+      885.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1076.0,
+      1425.0,
+      1124.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1101.0,
+      57.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      107.0,
+      1072.0,
+      376.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S4. Robustness of the two-dimensional critical topological response against structure-preserving hopping disorder at (M, λ) = (−1, 1). (a)-(c) Time-accumulated intensity of a boundary wavepacket for σ = 0.1, 0.2, and 0.3, respectively. White arrows indicate the clockwise boundary-guided propagation. The persistence edge flow shows that the critical boundary modes remain robust under sizable hopping-amplitude disorder.",
+    "page": 14,
+    "bbox": [
+      101.0,
+      400.0,
+      1125.0,
+      486.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      528.0,
+      1126.0,
+      624.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      100.0,
+      626.0,
+      1127.0,
+      744.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Robustness against structure-preserving perturbations in 2D synthetic lattices",
+    "page": 14,
+    "bbox": [
+      225.0,
+      788.0,
+      1006.0,
+      810.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      102.0,
+      838.0,
+      1126.0,
+      958.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      123.0,
+      959.0,
+      501.0,
+      981.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      415.0,
+      1000.0,
+      813.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1076.0,
+      1001.0,
+      1123.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      100.0,
+      1046.0,
+      1126.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      1118.0,
+      1127.0,
+      1190.0
+    ]
+  }
+]

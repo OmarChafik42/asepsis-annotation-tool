@@ -1,0 +1,1586 @@
+[
+  {
+    "label": "doc_title",
+    "text": "A ProbLog program to infer individual genotypes from familial phenotypes in autosomal, X-linked, and Y-linked Mendelian disorders",
+    "page": 0,
+    "bbox": [
+      189.0,
+      166.0,
+      1034.0,
+      292.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      527.0,
+      334.0,
+      696.0,
+      361.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      208.0,
+      411.0,
+      1015.0,
+      867.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      185.0,
+      892.0,
+      849.0,
+      918.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      187.0,
+      921.0,
+      765.0,
+      946.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      185.0,
+      949.0,
+      916.0,
+      975.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      154.0,
+      1013.0,
+      317.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      152.0,
+      1066.0,
+      1071.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      153.0,
+      1417.0,
+      574.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      153.0,
+      1439.0,
+      649.0,
+      1461.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      154.0,
+      74.0,
+      195.0,
+      96.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      573.0,
+      74.0,
+      1070.0,
+      99.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      151.0,
+      146.0,
+      1069.0,
+      225.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      151.0,
+      228.0,
+      1070.0,
+      523.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      152.0,
+      525.0,
+      1070.0,
+      798.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methods",
+    "page": 1,
+    "bbox": [
+      154.0,
+      832.0,
+      270.0,
+      861.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      151.0,
+      884.0,
+      1071.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Phenotype and genotype inference",
+    "page": 1,
+    "bbox": [
+      153.0,
+      1295.0,
+      512.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      151.0,
+      1337.0,
+      1069.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      156.0,
+      73.0,
+      309.0,
+      97.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1029.0,
+      74.0,
+      1067.0,
+      96.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      152.0,
+      146.0,
+      1070.0,
+      335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      152.0,
+      339.0,
+      1070.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      152.0,
+      532.0,
+      1070.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      152.0,
+      724.0,
+      1070.0,
+      860.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Hardy-Weinberg equilibrium",
+    "page": 2,
+    "bbox": [
+      154.0,
+      906.0,
+      462.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      152.0,
+      954.0,
+      1070.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      500.0,
+      1147.0,
+      658.0,
+      1178.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1039.0,
+      1152.0,
+      1066.0,
+      1175.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      497.0,
+      1183.0,
+      727.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1039.0,
+      1185.0,
+      1065.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      495.0,
+      1218.0,
+      709.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1039.0,
+      1222.0,
+      1065.0,
+      1244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      153.0,
+      1310.0,
+      1071.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      154.0,
+      74.0,
+      195.0,
+      96.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      573.0,
+      74.0,
+      1070.0,
+      100.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      387.0,
+      193.0,
+      726.0,
+      221.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1039.0,
+      195.0,
+      1066.0,
+      218.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      385.0,
+      227.0,
+      759.0,
+      254.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1039.0,
+      228.0,
+      1066.0,
+      251.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      399.0,
+      261.0,
+      722.0,
+      287.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1039.0,
+      262.0,
+      1065.0,
+      284.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      402.0,
+      292.0,
+      756.0,
+      321.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1039.0,
+      295.0,
+      1065.0,
+      317.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      399.0,
+      327.0,
+      716.0,
+      353.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1039.0,
+      328.0,
+      1065.0,
+      351.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      151.0,
+      407.0,
+      1071.0,
+      678.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Simulating disorder transmission across generations",
+    "page": 3,
+    "bbox": [
+      152.0,
+      708.0,
+      697.0,
+      735.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      151.0,
+      752.0,
+      1071.0,
+      994.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      151.0,
+      997.0,
+      1071.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      152.0,
+      1213.0,
+      1071.0,
+      1348.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      273.0,
+      1365.0,
+      941.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      156.0,
+      73.0,
+      309.0,
+      98.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1029.0,
+      74.0,
+      1068.0,
+      96.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      201.0,
+      140.0,
+      1019.0,
+      633.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Description of the mendelprob.pl functioning: A Internal logic representation of genotypes and phenotypes, B: Simplified pseudo-code algorithm for genotype and phenotype probabilities trans- mission. Allele probabilities of direct family are inherited (InheritGenotype) from probabilities of parent genotypes using the internal logic representation, genotypes of spouses and last ascendants follow Hardy-Weinberg distribution, while disorder type and children gender – when they are not inferred from genotypes – assume a random uniform distribution (RandUniform). Finally, ComputePhenotype links phenotypes and genotypes using the internal logic.",
+    "page": 4,
+    "bbox": [
+      152.0,
+      664.0,
+      1071.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      151.0,
+      891.0,
+      1071.0,
+      1056.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      505.0,
+      1073.0,
+      713.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      393.0,
+      1106.0,
+      828.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      397.0,
+      1139.0,
+      824.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      393.0,
+      1171.0,
+      829.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      398.0,
+      1204.0,
+      822.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      300.0,
+      1236.0,
+      919.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      300.0,
+      1269.0,
+      919.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      152.0,
+      1310.0,
+      1070.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      154.0,
+      73.0,
+      196.0,
+      97.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      573.0,
+      73.0,
+      1070.0,
+      99.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      333.0,
+      136.0,
+      886.0,
+      643.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Pedigree of Rhonda, patient diagnosed with Cystic Fibrosis. Phenotypes marked as affected (filled black), unknown or unaffected (filled white). Pedigree constructed with pedtools from pedsuite.",
+    "page": 5,
+    "bbox": [
+      152.0,
+      670.0,
+      1070.0,
+      726.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      150.0,
+      765.0,
+      1070.0,
+      874.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Results",
+    "page": 5,
+    "bbox": [
+      154.0,
+      911.0,
+      252.0,
+      941.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      150.0,
+      965.0,
+      1071.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Cystic Fibrosis",
+    "page": 5,
+    "bbox": [
+      154.0,
+      1185.0,
+      315.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      151.0,
+      1229.0,
+      1072.0,
+      1393.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      156.0,
+      73.0,
+      309.0,
+      97.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1029.0,
+      74.0,
+      1066.0,
+      96.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      151.0,
+      145.0,
+      1071.0,
+      254.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      303.0,
+      281.0,
+      926.0,
+      535.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      152.0,
+      553.0,
+      1071.0,
+      717.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Genotype probabilities obtained with pedprobr and mendelprob.p1 for the Cystic Fibro- sis case of Rhonda. For column labels: numbers correspond to individuals on the pedigree tree of Figure 2, used as identifiers in pedprobr, while Mi and Fi correspond to identifiers of individuals in mendelprob.pl.",
+    "page": 6,
+    "bbox": [
+      152.0,
+      753.0,
+      1071.0,
+      859.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      231.0,
+      861.0,
+      992.0,
+      960.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      151.0,
+      991.0,
+      1070.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      154.0,
+      73.0,
+      195.0,
+      96.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      573.0,
+      74.0,
+      1069.0,
+      100.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      151.0,
+      145.0,
+      1070.0,
+      253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      151.0,
+      255.0,
+      1072.0,
+      471.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Huntington's disease",
+    "page": 7,
+    "bbox": [
+      153.0,
+      504.0,
+      375.0,
+      531.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      152.0,
+      548.0,
+      1069.0,
+      681.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      152.0,
+      683.0,
+      1070.0,
+      792.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      372.0,
+      815.0,
+      842.0,
+      1267.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      152.0,
+      1283.0,
+      1071.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      156.0,
+      73.0,
+      309.0,
+      98.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1029.0,
+      74.0,
+      1068.0,
+      96.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      375.0,
+      135.0,
+      841.0,
+      596.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: Pedigree of an American family with Huntington's disease, patient from the 5th generation. Phenotypes marked as affected (filled black), unknown or unaffected (filled white). Pedigree constructed with pedtools.",
+    "page": 8,
+    "bbox": [
+      153.0,
+      620.0,
+      1070.0,
+      704.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      152.0,
+      781.0,
+      1069.0,
+      865.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Comparison of features of interest between mende1prob.p1 and pedprobr, a part of pedsuite.",
+    "page": 8,
+    "bbox": [
+      152.0,
+      940.0,
+      1071.0,
+      991.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      154.0,
+      993.0,
+      1075.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      152.0,
+      1229.0,
+      1071.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      155.0,
+      74.0,
+      194.0,
+      96.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      574.0,
+      73.0,
+      1070.0,
+      100.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion",
+    "page": 9,
+    "bbox": [
+      154.0,
+      144.0,
+      291.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      152.0,
+      198.0,
+      1071.0,
+      658.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      151.0,
+      660.0,
+      1071.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      151.0,
+      1068.0,
+      1071.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      156.0,
+      73.0,
+      309.0,
+      98.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1029.0,
+      74.0,
+      1068.0,
+      96.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      152.0,
+      145.0,
+      1070.0,
+      200.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgments",
+    "page": 10,
+    "bbox": [
+      154.0,
+      240.0,
+      387.0,
+      271.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      151.0,
+      294.0,
+      1069.0,
+      403.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 10,
+    "bbox": [
+      154.0,
+      442.0,
+      296.0,
+      472.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      154.0,
+      498.0,
+      1069.0,
+      544.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      156.0,
+      552.0,
+      1069.0,
+      601.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      608.0,
+      1068.0,
+      679.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      686.0,
+      1068.0,
+      758.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      766.0,
+      1068.0,
+      836.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      845.0,
+      1068.0,
+      917.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      156.0,
+      924.0,
+      1069.0,
+      996.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      1003.0,
+      1068.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      1058.0,
+      1068.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      155.0,
+      1160.0,
+      1069.0,
+      1254.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      157.0,
+      1263.0,
+      1068.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      154.0,
+      1342.0,
+      1069.0,
+      1387.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      74.0,
+      195.0,
+      96.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      573.0,
+      74.0,
+      1069.0,
+      99.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      148.0,
+      1069.0,
+      218.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      156.0,
+      226.0,
+      1069.0,
+      273.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      156.0,
+      281.0,
+      1069.0,
+      422.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      432.0,
+      1068.0,
+      526.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      158.0,
+      535.0,
+      1068.0,
+      582.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      156.0,
+      590.0,
+      1069.0,
+      685.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      693.0,
+      1068.0,
+      811.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      820.0,
+      1068.0,
+      891.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      899.0,
+      1068.0,
+      994.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      154.0,
+      1002.0,
+      1067.0,
+      1049.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      1057.0,
+      1067.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      157.0,
+      1136.0,
+      1067.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      155.0,
+      1215.0,
+      1067.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      154.0,
+      1318.0,
+      1069.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      156.0,
+      74.0,
+      309.0,
+      97.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1029.0,
+      74.0,
+      1068.0,
+      96.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      156.0,
+      147.0,
+      1068.0,
+      240.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      157.0,
+      247.0,
+      1067.0,
+      318.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      155.0,
+      326.0,
+      1068.0,
+      395.0
+    ]
+  }
+]

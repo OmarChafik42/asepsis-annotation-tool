@@ -1,0 +1,49 @@
+{
+  "session_id": "dfd0c460-9b90-49d9-a132-12201b1e5a34",
+  "document_id": "doc-2165cd4f3555703a",
+  "pages": 270,
+  "initial_regions": 21731,
+  "final_regions": 21691,
+  "final_correction_burden": {
+    "added_regions": 1,
+    "deleted_regions": 41,
+    "existing_regions_materially_changed": 97,
+    "corrected_initial_regions": 138,
+    "corrected_region_rate": 0.006350375040265059,
+    "geometry_changed": 55,
+    "reclassified": 60,
+    "text_changed": 0,
+    "heading_level_changed": 93,
+    "reading_order_changed": 0,
+    "ignored_status_changed": 0,
+    "uncertainty_or_note_changed": 0
+  },
+  "interaction_effort": {
+    "all_logged_interactions": 1449,
+    "committed_edit_events": 364,
+    "undo_count": 0,
+    "redo_count": 0,
+    "actions_by_type": {
+      "CHANGE_HEADING_LEVEL": 150,
+      "CREATE_REGION": 1,
+      "DELETE_REGION": 41,
+      "FINALISE_SESSION": 1,
+      "IGNORE_REGION": 1,
+      "MARK_UNCERTAIN": 1,
+      "MOVE_REGION": 12,
+      "OPEN_SESSION": 17,
+      "RECLASSIFY_REGION": 73,
+      "RESIZE_REGION": 82,
+      "RESTORE_REGION": 3,
+      "SELECT_REGION": 248,
+      "VIEW_PAGE": 819
+    }
+  },
+  "timing": {
+    "active_seconds": 4840,
+    "active_minutes_per_page": 0.29876543209876544
+  },
+  "integrity": {
+    "replay_matches_final_state": true
+  }
+}

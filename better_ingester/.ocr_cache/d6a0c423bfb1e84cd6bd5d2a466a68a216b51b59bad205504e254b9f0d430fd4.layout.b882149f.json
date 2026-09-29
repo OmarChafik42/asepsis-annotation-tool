@@ -1,0 +1,5414 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      367.0,
+      86.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Reputation and institutional certification as complementary trust mechanisms in a single online market",
+    "page": 0,
+    "bbox": [
+      142.0,
+      221.0,
+      1081.0,
+      303.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      453.0,
+      344.0,
+      769.0,
+      370.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      235.0,
+      390.0,
+      988.0,
+      439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      525.0,
+      477.0,
+      698.0,
+      504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      568.0,
+      540.0,
+      655.0,
+      563.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      192.0,
+      578.0,
+      1029.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      261.0,
+      900.0,
+      961.0,
+      926.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      140.0,
+      997.0,
+      309.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      137.0,
+      1050.0,
+      1084.0,
+      1249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      137.0,
+      1251.0,
+      1086.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      162.0,
+      1416.0,
+      743.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      605.0,
+      1485.0,
+      619.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1. Descriptive overview of the Pokémon card transaction dataset. (A) Three stages of a card transaction. In Stage 1, a seller chooses a quality signal (None, Self-graded, or TP-graded). In Stage 2, the seller sets a listing price relative to the market price. In Stage 3, a buyer decides whether to purchase. (B) Price metrics. Top: distribution of listing prices (log USD) by signal type (None, n = 603,587; Self, n = 319,688; TP, n = 36,754). Middle: market price distributions for ungraded (None, Self) and graded (TP) items shown as horizontal violin-boxplots. Bottom: distribution of the log price ratio p = log(P/V) for all listings (N = 960,029) and sold items (n = 131,538), excluding outliers beyond 1.5 × the interquartile range (IQR); dashed line marks p = 0. (C) Seller reputation metrics. Top left: distributions of positive feedback percentage. Top right: distribution of feedback score (log-transformed). Arrows indicate dimensionality reduction using principal component analysis (PCA). Bottom: composite reputation score from the PCA (N = 60,386 sellers).",
+    "page": 1,
+    "bbox": [
+      136.0,
+      730.0,
+      1083.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      973.0,
+      1082.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      1024.0,
+      1084.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      139.0,
+      1225.0,
+      1084.0,
+      1398.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      169.0,
+      1400.0,
+      1084.0,
+      1425.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      150.0,
+      1084.0,
+      373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      375.0,
+      1084.0,
+      550.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Results",
+    "page": 2,
+    "bbox": [
+      140.0,
+      589.0,
+      242.0,
+      617.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Empirical analysis",
+    "page": 2,
+    "bbox": [
+      139.0,
+      643.0,
+      347.0,
+      670.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      686.0,
+      1084.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      1013.0,
+      1084.0,
+      1288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      1288.0,
+      1085.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      126.0,
+      157.0,
+      334.0,
+      179.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      120.0,
+      193.0,
+      646.0,
+      809.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      120.0,
+      193.0,
+      646.0,
+      809.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Signal regime: posterior prediction & observed data",
+    "page": 3,
+    "bbox": [
+      679.0,
+      156.0,
+      1053.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      673.0,
+      183.0,
+      1102.0,
+      475.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C Reputation effect on price ratio by signal (sold-conditional)",
+    "page": 3,
+    "bbox": [
+      680.0,
+      495.0,
+      1101.0,
+      520.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      671.0,
+      516.0,
+      1101.0,
+      810.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2. Hierarchical Bayesian model posterior estimates. (A) Ridgeline density plots of posterior coefficient distributions from the three-equation HBM. Top: signal-selection stage (multinomial logit, reference category was None). Middle: price-setting stage (the dependent variable was the log price ratio p = log(P/V)). Bottom: sold stage (the dependent variable was Pr(Sold = 1)). Vertical dashed line indicates zero. Points within posterior distributions represent medians; horizontal bars show 99% highest density intervals (HDI). (B) Signal regions: posterior prediction and observed data. Left: region map showing posterior predicted probability of TP grading P(TP graded) across reputation (x) and ungraded market price (y, log scale). Red indicates high probability (TP-dominant) and blue low probability (Self-dominant). Boundary contour at 50%. Right: hexbin density of observed TP-graded (top, red) and Self-graded (bottom, blue) listings. (C) Predicted reputation effect on log price ratio by signal type for sold cards. Lines show predicted marginal effects, with the shaded band giving the 95% credible interval.",
+    "page": 3,
+    "bbox": [
+      136.0,
+      843.0,
+      1082.0,
+      1043.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      139.0,
+      1088.0,
+      1083.0,
+      1136.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      1138.0,
+      1084.0,
+      1414.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      170.0,
+      1415.0,
+      1084.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1. Parameters of the theoretical model.",
+    "page": 4,
+    "bbox": [
+      446.0,
+      143.0,
+      776.0,
+      164.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      392.0,
+      184.0,
+      834.0,
+      369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      413.0,
+      1084.0,
+      516.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Signaling model analysis",
+    "page": 4,
+    "bbox": [
+      139.0,
+      546.0,
+      412.0,
+      576.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Model setup",
+    "page": 4,
+    "bbox": [
+      139.0,
+      588.0,
+      258.0,
+      614.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      629.0,
+      1083.0,
+      907.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Trust through self-claim and reputation",
+    "page": 4,
+    "bbox": [
+      140.0,
+      935.0,
+      502.0,
+      959.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      975.0,
+      1085.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1125.0,
+      1085.0,
+      1250.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      506.0,
+      1268.0,
+      713.0,
+      1320.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1054.0,
+      1282.0,
+      1081.0,
+      1305.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1330.0,
+      1085.0,
+      1432.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      374.0,
+      151.0,
+      852.0,
+      498.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3. Extensive-form game tree of the seller signaling model. Nature assigns seller type H (high quality) with probability πo or L (low quality) with probability 1 – π0. H-type sellers choose among three signals: TP-graded (third-party certification at cost crp; buyers' posterior pTp = 1; the seller's payoff is V – crp), Self-graded (no cost; reputation unaffected; buyers' posterior pself; payoff pselfV), or None (no cost; buyers' posterior pNone = π0; payoff π0V). L-type sellers choose between Self-graded (no cost; reputational damage φρ upon detection; payoff pselfV – φρ) and None (no cost; payoff π0V). Dashed curves denote buyer information sets: Iself includes the two Self-graded nodes, and INone includes the two None nodes (i.e., based on the signal alone, the buyer cannot distinguish H from L). TP-graded is available only to H-type sellers, so its node stands alone. The tree shows Stage 1 of Fig. 1; the equilibrium price sV carries Stages 2 and 3.",
+    "page": 5,
+    "bbox": [
+      135.0,
+      521.0,
+      1082.0,
+      701.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      744.0,
+      1083.0,
+      793.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Trust through institutional certification",
+    "page": 5,
+    "bbox": [
+      139.0,
+      825.0,
+      499.0,
+      849.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      864.0,
+      1084.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      527.0,
+      1056.0,
+      693.0,
+      1103.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1054.0,
+      1066.0,
+      1081.0,
+      1089.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      1111.0,
+      1083.0,
+      1315.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Regime structure and empirical correspondence",
+    "page": 5,
+    "bbox": [
+      139.0,
+      1343.0,
+      577.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1382.0,
+      1084.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      360.0,
+      155.0,
+      840.0,
+      463.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 4. Three-regime sorting in the reputation–value space. The map (left) partitions the (ρ, V) space, where ρ is seller reputation and V is item value, into three regimes, colored categorically. Below the lower boundary V(ρ) (Eq. 1) lies the Self regime (blue), in which self-grading fully separates the types. Above the upper boundary V(ρ) + V lies the TP regime (red), in which the H-type prefers TP grading. Between the two parallel boundaries lies the Semi-separating regime (gray), a band of vertical width V (Eq. 2). The right panel shows the same space with item value cut at V(1) + V, colored by the buyer's belief in a self-claim, P(H Self). The belief is 1 throughout the Self regime and rises with reputation as π0 + φρ/V across the Semi-separating band. Above the band, Self is off the equilibrium path and is left blank. Baseline parameters: π0 = 0.3, φ = 0.5, cTp = 0.2.",
+    "page": 6,
+    "bbox": [
+      136.0,
+      491.0,
+      1083.0,
+      647.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      691.0,
+      1083.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      765.0,
+      1082.0,
+      843.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      417.0,
+      896.0,
+      800.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 5. Empirical TP-graded certification rates across reputation and market price. Discrete 5 × 5 heatmap of the third-party certification ratio P(TP  graded), the share of TP-graded listings among all graded listings, across seller reputation quintiles (columns, ρ) and ungraded market price quintiles (rows, V). Each cell reports the TP-graded proportion and the sample sizes (nTp/ntotal, in thousands, rounded to the nearest hundred). The diverging color scale is centered on the marginal TP rate, with red for above (TP-dominant) and blue for below (Self-dominant)",
+    "page": 6,
+    "bbox": [
+      135.0,
+      1324.0,
+      1083.0,
+      1434.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      149.0,
+      1084.0,
+      248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      249.0,
+      1082.0,
+      523.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      525.0,
+      1086.0,
+      602.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Reputation dynamics",
+    "page": 7,
+    "bbox": [
+      139.0,
+      632.0,
+      376.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      676.0,
+      1083.0,
+      825.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      826.0,
+      1084.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      1026.0,
+      1085.0,
+      1278.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion",
+    "page": 7,
+    "bbox": [
+      140.0,
+      1315.0,
+      283.0,
+      1344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      1368.0,
+      1084.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Reputation only",
+    "page": 8,
+    "bbox": [
+      372.0,
+      157.0,
+      510.0,
+      181.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Reputation and institution",
+    "page": 8,
+    "bbox": [
+      626.0,
+      158.0,
+      826.0,
+      180.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      375.0,
+      188.0,
+      587.0,
+      272.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      630.0,
+      187.0,
+      818.0,
+      270.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      367.0,
+      276.0,
+      594.0,
+      466.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      639.0,
+      279.0,
+      821.0,
+      464.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 6. Reputation dynamics under the two trust mechanisms. (A) Reputation only. (B) Reputation and institution. The top strip locates the slice in the (ρ, V) plane (blue, Self; gray, Semi-separating; red, TP). Certification is unavailable in (A), so no TP regime arises; (B) reproduces the partition of Fig. 4. Below it is the phase line f(ρ) = ρ for the seller's reputation (see Methods). On the zero line, an open circle marks the unstable rest point, and arrows give the direction of motion. The filled circle at ρ = 0 marks the absorbing boundary. Shading marks the interval on which reputation erodes. In (B) the accumulation rate falls discontinuously at the reputation s at which H-type sellers switch from certification to self-grading. Where the slice leaves the gray band in the top strip, the full rate is restored. Baseline parameters: π0 = 0.3, φ = 0.5, cTp = 0.2. Both panels are drawn at V = 0.50.",
+    "page": 8,
+    "bbox": [
+      136.0,
+      495.0,
+      1083.0,
+      651.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      695.0,
+      1085.0,
+      896.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Substitution and complementarity of trust mechanisms",
+    "page": 8,
+    "bbox": [
+      138.0,
+      929.0,
+      738.0,
+      955.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      971.0,
+      1085.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      1272.0,
+      1084.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      604.0,
+      1484.0,
+      619.0,
+      1502.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      149.0,
+      1083.0,
+      198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      201.0,
+      1085.0,
+      448.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "The scalability of trust",
+    "page": 9,
+    "bbox": [
+      139.0,
+      482.0,
+      390.0,
+      509.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      525.0,
+      1084.0,
+      799.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      799.0,
+      1084.0,
+      1103.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Limitations and future directions",
+    "page": 9,
+    "bbox": [
+      140.0,
+      1135.0,
+      503.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      1177.0,
+      1085.0,
+      1428.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      600.0,
+      1484.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      148.0,
+      1083.0,
+      199.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Materials and Methods",
+    "page": 10,
+    "bbox": [
+      140.0,
+      236.0,
+      447.0,
+      266.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data and variables",
+    "page": 10,
+    "bbox": [
+      138.0,
+      323.0,
+      350.0,
+      350.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      366.0,
+      1084.0,
+      617.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      620.0,
+      1086.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Hierarchical Bayesian model",
+    "page": 10,
+    "bbox": [
+      139.0,
+      1181.0,
+      456.0,
+      1207.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1222.0,
+      1086.0,
+      1430.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      600.0,
+      1484.0,
+      624.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      149.0,
+      1083.0,
+      195.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      196.0,
+      1085.0,
+      356.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Signaling game",
+    "page": 11,
+    "bbox": [
+      139.0,
+      391.0,
+      311.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      433.0,
+      1084.0,
+      733.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      446.0,
+      748.0,
+      773.0,
+      888.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      897.0,
+      1083.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      1081.0,
+      1082.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1287.0,
+      1083.0,
+      1426.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      600.0,
+      1484.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      148.0,
+      1081.0,
+      195.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      196.0,
+      1083.0,
+      404.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Reputation dynamics",
+    "page": 12,
+    "bbox": [
+      140.0,
+      438.0,
+      376.0,
+      464.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      477.0,
+      1082.0,
+      592.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      473.0,
+      592.0,
+      745.0,
+      640.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      138.0,
+      647.0,
+      1083.0,
+      741.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      484.0,
+      759.0,
+      735.0,
+      784.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      801.0,
+      1083.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      915.0,
+      1083.0,
+      1055.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 12,
+    "bbox": [
+      140.0,
+      1092.0,
+      287.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      150.0,
+      1145.0,
+      1033.0,
+      1169.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      153.0,
+      1187.0,
+      1082.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      152.0,
+      1254.0,
+      1081.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      151.0,
+      1346.0,
+      856.0,
+      1370.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      152.0,
+      1388.0,
+      1081.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      600.0,
+      1484.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      151.0,
+      149.0,
+      1082.0,
+      197.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      152.0,
+      215.0,
+      1083.0,
+      264.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      152.0,
+      281.0,
+      1081.0,
+      331.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      150.0,
+      348.0,
+      1082.0,
+      447.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      465.0,
+      1082.0,
+      515.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      142.0,
+      531.0,
+      1082.0,
+      580.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      598.0,
+      973.0,
+      622.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      143.0,
+      639.0,
+      1081.0,
+      689.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      142.0,
+      706.0,
+      1083.0,
+      755.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      772.0,
+      1084.0,
+      822.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      839.0,
+      1081.0,
+      888.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      906.0,
+      1081.0,
+      954.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      972.0,
+      1081.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      142.0,
+      1040.0,
+      1082.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      142.0,
+      1105.0,
+      1082.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      1172.0,
+      1082.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      1240.0,
+      1082.0,
+      1311.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      1330.0,
+      1081.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      141.0,
+      1397.0,
+      1081.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      600.0,
+      1484.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      148.0,
+      1081.0,
+      197.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      213.0,
+      1082.0,
+      285.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      303.0,
+      1081.0,
+      353.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      369.0,
+      1082.0,
+      417.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      433.0,
+      1081.0,
+      482.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      499.0,
+      1082.0,
+      548.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      564.0,
+      1080.0,
+      612.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      629.0,
+      1082.0,
+      680.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      694.0,
+      1081.0,
+      768.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      785.0,
+      1082.0,
+      834.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      850.0,
+      1083.0,
+      899.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      915.0,
+      1082.0,
+      964.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      980.0,
+      1082.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      1046.0,
+      1081.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      1111.0,
+      1081.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      1176.0,
+      1081.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      1241.0,
+      1082.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      1308.0,
+      1081.0,
+      1355.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      1372.0,
+      1082.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      600.0,
+      1484.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      141.0,
+      149.0,
+      1081.0,
+      196.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      142.0,
+      216.0,
+      1081.0,
+      264.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      142.0,
+      282.0,
+      1082.0,
+      354.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      142.0,
+      374.0,
+      1083.0,
+      447.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      141.0,
+      466.0,
+      1082.0,
+      515.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgments",
+    "page": 15,
+    "bbox": [
+      140.0,
+      577.0,
+      383.0,
+      607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      630.0,
+      1083.0,
+      727.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      730.0,
+      1083.0,
+      802.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      140.0,
+      805.0,
+      1081.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      140.0,
+      856.0,
+      825.0,
+      879.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      880.0,
+      1083.0,
+      1006.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      600.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary Materials",
+    "page": 16,
+    "bbox": [
+      139.0,
+      142.0,
+      477.0,
+      175.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Organization of these Supplementary Materials:",
+    "page": 16,
+    "bbox": [
+      139.0,
+      218.0,
+      580.0,
+      241.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      154.0,
+      244.0,
+      1083.0,
+      341.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      154.0,
+      343.0,
+      1084.0,
+      444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      599.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary Text",
+    "page": 17,
+    "bbox": [
+      139.0,
+      141.0,
+      409.0,
+      175.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Empirical Methods",
+    "page": 17,
+    "bbox": [
+      140.0,
+      199.0,
+      448.0,
+      231.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.1 Data Pipeline",
+    "page": 17,
+    "bbox": [
+      140.0,
+      255.0,
+      354.0,
+      283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      298.0,
+      1083.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      373.0,
+      1084.0,
+      496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      499.0,
+      1084.0,
+      573.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2 Variable Construction",
+    "page": 17,
+    "bbox": [
+      139.0,
+      606.0,
+      448.0,
+      633.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2.1 Price premium",
+    "page": 17,
+    "bbox": [
+      139.0,
+      648.0,
+      349.0,
+      673.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      688.0,
+      1083.0,
+      737.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      537.0,
+      760.0,
+      684.0,
+      788.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1042.0,
+      763.0,
+      1081.0,
+      785.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      139.0,
+      800.0,
+      1083.0,
+      900.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      139.0,
+      901.0,
+      1084.0,
+      1001.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2.2 Seller reputation score",
+    "page": 17,
+    "bbox": [
+      139.0,
+      1031.0,
+      417.0,
+      1055.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      1072.0,
+      1083.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      139.0,
+      1246.0,
+      1083.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      600.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2.3 Certification category",
+    "page": 18,
+    "bbox": [
+      139.0,
+      148.0,
+      409.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      138.0,
+      187.0,
+      1082.0,
+      236.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      238.0,
+      1084.0,
+      464.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2.4 Control variables",
+    "page": 18,
+    "bbox": [
+      140.0,
+      493.0,
+      372.0,
+      517.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      532.0,
+      1084.0,
+      634.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.3 Full HBM Specification",
+    "page": 18,
+    "bbox": [
+      140.0,
+      665.0,
+      462.0,
+      692.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      707.0,
+      1084.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      170.0,
+      858.0,
+      923.0,
+      882.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      470.0,
+      902.0,
+      750.0,
+      968.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1042.0,
+      921.0,
+      1080.0,
+      944.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      136.0,
+      976.0,
+      1082.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      178.0,
+      1065.0,
+      1007.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1042.0,
+      1072.0,
+      1080.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      1115.0,
+      1083.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      170.0,
+      1198.0,
+      662.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      472.0,
+      1246.0,
+      749.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1042.0,
+      1250.0,
+      1080.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      170.0,
+      1284.0,
+      565.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      298.0,
+      1329.0,
+      922.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1042.0,
+      1335.0,
+      1080.0,
+      1357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      1372.0,
+      1082.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      600.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      170.0,
+      149.0,
+      870.0,
+      173.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      464.0,
+      195.0,
+      756.0,
+      224.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1042.0,
+      199.0,
+      1081.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      170.0,
+      236.0,
+      549.0,
+      261.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      454.0,
+      281.0,
+      768.0,
+      312.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1042.0,
+      286.0,
+      1080.0,
+      309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      326.0,
+      1082.0,
+      402.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      403.0,
+      1084.0,
+      477.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      417.0,
+      496.0,
+      804.0,
+      579.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1042.0,
+      527.0,
+      1080.0,
+      549.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      138.0,
+      593.0,
+      1081.0,
+      642.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      643.0,
+      1084.0,
+      829.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.4 MCMC Sampling",
+    "page": 19,
+    "bbox": [
+      139.0,
+      860.0,
+      402.0,
+      888.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      903.0,
+      1083.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      598.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B Theoretical Model",
+    "page": 20,
+    "bbox": [
+      139.0,
+      141.0,
+      434.0,
+      172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B.1 Model Assumptions",
+    "page": 20,
+    "bbox": [
+      139.0,
+      197.0,
+      422.0,
+      224.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      240.0,
+      1083.0,
+      315.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      139.0,
+      325.0,
+      1082.0,
+      376.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      385.0,
+      1074.0,
+      437.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      140.0,
+      447.0,
+      939.0,
+      472.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      443.0,
+      483.0,
+      776.0,
+      632.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1042.0,
+      547.0,
+      1081.0,
+      570.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      140.0,
+      644.0,
+      1082.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      694.0,
+      1082.0,
+      796.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      805.0,
+      1084.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      866.0,
+      1083.0,
+      942.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      952.0,
+      1040.0,
+      978.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      456.0,
+      989.0,
+      765.0,
+      1015.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1031.0,
+      989.0,
+      1081.0,
+      1013.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      139.0,
+      1026.0,
+      697.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "General payoff structure",
+    "page": 20,
+    "bbox": [
+      140.0,
+      1080.0,
+      369.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      1120.0,
+      1084.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Solution concept",
+    "page": 20,
+    "bbox": [
+      139.0,
+      1274.0,
+      297.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      1314.0,
+      1083.0,
+      1363.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      508.0,
+      1364.0,
+      712.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      139.0,
+      1396.0,
+      1082.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      598.0,
+      1483.0,
+      624.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      148.0,
+      1084.0,
+      197.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      406.0,
+      197.0,
+      813.0,
+      224.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      233.0,
+      1082.0,
+      283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      171.0,
+      285.0,
+      518.0,
+      309.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      436.0,
+      319.0,
+      783.0,
+      353.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      367.0,
+      839.0,
+      391.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      393.0,
+      1083.0,
+      442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      453.0,
+      882.0,
+      476.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      478.0,
+      1083.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      528.0,
+      1083.0,
+      604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      614.0,
+      1084.0,
+      664.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Scope of the primitives",
+    "page": 21,
+    "bbox": [
+      138.0,
+      694.0,
+      352.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      733.0,
+      1085.0,
+      885.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B.2 Self-Separating Equilibrium",
+    "page": 21,
+    "bbox": [
+      138.0,
+      915.0,
+      513.0,
+      943.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      956.0,
+      1083.0,
+      1034.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Equilibrium candidate",
+    "page": 21,
+    "bbox": [
+      138.0,
+      1061.0,
+      350.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      1102.0,
+      1083.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      448.0,
+      1150.0,
+      774.0,
+      1176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      1184.0,
+      1084.0,
+      1261.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Equilibrium beliefs",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1289.0,
+      321.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      1328.0,
+      856.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      400.0,
+      1362.0,
+      820.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      170.0,
+      1422.0,
+      778.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Equilibrium payoffs",
+    "page": 22,
+    "bbox": [
+      139.0,
+      147.0,
+      329.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      186.0,
+      1084.0,
+      263.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Incentive compatibility conditions",
+    "page": 22,
+    "bbox": [
+      138.0,
+      291.0,
+      451.0,
+      316.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      142.0,
+      331.0,
+      245.0,
+      353.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      171.0,
+      356.0,
+      319.0,
+      379.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      371.0,
+      380.0,
+      850.0,
+      405.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      173.0,
+      413.0,
+      432.0,
+      438.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      171.0,
+      439.0,
+      298.0,
+      462.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      363.0,
+      463.0,
+      859.0,
+      489.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      170.0,
+      497.0,
+      446.0,
+      520.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      171.0,
+      522.0,
+      392.0,
+      546.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      309.0,
+      557.0,
+      914.0,
+      583.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      170.0,
+      594.0,
+      630.0,
+      619.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      509.0,
+      629.0,
+      712.0,
+      677.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1031.0,
+      640.0,
+      1081.0,
+      664.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      685.0,
+      1083.0,
+      786.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      794.0,
+      1083.0,
+      871.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      881.0,
+      1084.0,
+      957.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      966.0,
+      1084.0,
+      1015.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Comparative statics",
+    "page": 22,
+    "bbox": [
+      140.0,
+      1045.0,
+      326.0,
+      1069.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      1084.0,
+      806.0,
+      1111.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      498.0,
+      1119.0,
+      699.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1031.0,
+      1134.0,
+      1081.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      499.0,
+      1177.0,
+      700.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1031.0,
+      1192.0,
+      1080.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      498.0,
+      1233.0,
+      725.0,
+      1289.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1031.0,
+      1250.0,
+      1080.0,
+      1272.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1296.0,
+      1084.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1371.0,
+      1086.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B.3 TP-Separating Equilibrium and Equilibrium Refinement",
+    "page": 23,
+    "bbox": [
+      137.0,
+      145.0,
+      821.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      187.0,
+      1084.0,
+      338.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Equilibrium candidate",
+    "page": 23,
+    "bbox": [
+      139.0,
+      368.0,
+      350.0,
+      392.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      452.0,
+      407.0,
+      770.0,
+      433.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      445.0,
+      1084.0,
+      547.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Deviation thresholds",
+    "page": 23,
+    "bbox": [
+      139.0,
+      576.0,
+      332.0,
+      599.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      615.0,
+      1083.0,
+      665.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      140.0,
+      665.0,
+      1083.0,
+      716.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      434.0,
+      734.0,
+      787.0,
+      777.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      794.0,
+      1082.0,
+      843.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      845.0,
+      1083.0,
+      897.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      422.0,
+      915.0,
+      799.0,
+      962.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      169.0,
+      978.0,
+      758.0,
+      1005.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      1021.0,
+      1082.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      1213.0,
+      1084.0,
+      1286.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "PBE existence",
+    "page": 23,
+    "bbox": [
+      139.0,
+      1319.0,
+      274.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      145.0,
+      1358.0,
+      717.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      529.0,
+      1401.0,
+      693.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1031.0,
+      1409.0,
+      1081.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      147.0,
+      1081.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      222.0,
+      1085.0,
+      274.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Refinement of the off-path belief",
+    "page": 24,
+    "bbox": [
+      139.0,
+      303.0,
+      439.0,
+      327.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      138.0,
+      342.0,
+      1084.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      455.0,
+      1084.0,
+      555.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      141.0,
+      568.0,
+      1082.0,
+      645.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      140.0,
+      643.0,
+      1083.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      139.0,
+      719.0,
+      1083.0,
+      771.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      138.0,
+      764.0,
+      1081.0,
+      843.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      845.0,
+      1083.0,
+      947.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      958.0,
+      1083.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      138.0,
+      1097.0,
+      1085.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "The semi-separating equilibrium",
+    "page": 24,
+    "bbox": [
+      140.0,
+      1227.0,
+      440.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      1266.0,
+      1083.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      441.0,
+      1330.0,
+      778.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      138.0,
+      1396.0,
+      1080.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      147.0,
+      1083.0,
+      273.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      414.0,
+      272.0,
+      806.0,
+      298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      139.0,
+      306.0,
+      1083.0,
+      356.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      359.0,
+      1083.0,
+      585.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      598.0,
+      1084.0,
+      726.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      736.0,
+      1084.0,
+      838.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      850.0,
+      1085.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Regime partition",
+    "page": 25,
+    "bbox": [
+      139.0,
+      1053.0,
+      299.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      140.0,
+      1092.0,
+      1085.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      174.0,
+      1155.0,
+      894.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      177.0,
+      1194.0,
+      1082.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      174.0,
+      1258.0,
+      909.0,
+      1284.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      1296.0,
+      1084.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Absence of certification",
+    "page": 26,
+    "bbox": [
+      140.0,
+      148.0,
+      357.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      187.0,
+      1084.0,
+      388.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Value-dependent certification cost",
+    "page": 26,
+    "bbox": [
+      140.0,
+      417.0,
+      450.0,
+      441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      457.0,
+      1083.0,
+      507.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      519.0,
+      1086.0,
+      696.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B.4 Reputation Dynamics",
+    "page": 26,
+    "bbox": [
+      138.0,
+      725.0,
+      441.0,
+      753.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      767.0,
+      1082.0,
+      945.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      477.0,
+      956.0,
+      742.0,
+      982.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      1031.0,
+      957.0,
+      1081.0,
+      980.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      995.0,
+      1084.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      138.0,
+      1130.0,
+      1084.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1195.0,
+      1080.0,
+      1244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1245.0,
+      1082.0,
+      1321.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      141.0,
+      1322.0,
+      1080.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1371.0,
+      1082.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      148.0,
+      1083.0,
+      223.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      239.0,
+      1082.0,
+      339.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      356.0,
+      1084.0,
+      434.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      447.0,
+      1082.0,
+      497.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      490.0,
+      498.0,
+      730.0,
+      523.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      1031.0,
+      498.0,
+      1080.0,
+      521.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      535.0,
+      1084.0,
+      585.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      544.0,
+      602.0,
+      676.0,
+      648.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      1031.0,
+      611.0,
+      1081.0,
+      635.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      666.0,
+      1082.0,
+      741.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      744.0,
+      1085.0,
+      820.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      835.0,
+      1084.0,
+      963.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      385.0,
+      977.0,
+      834.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      1046.0,
+      1078.0,
+      1096.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      138.0,
+      1112.0,
+      1084.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      1228.0,
+      1084.0,
+      1357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      138.0,
+      1371.0,
+      1083.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      599.0,
+      1484.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      139.0,
+      148.0,
+      1080.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      224.0,
+      1083.0,
+      325.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      341.0,
+      1083.0,
+      392.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "The continuous approximation",
+    "page": 28,
+    "bbox": [
+      139.0,
+      422.0,
+      423.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      461.0,
+      1084.0,
+      586.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B.5 Numerical Illustration",
+    "page": 28,
+    "bbox": [
+      140.0,
+      620.0,
+      448.0,
+      645.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      662.0,
+      1082.0,
+      814.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary Results",
+    "page": 29,
+    "bbox": [
+      139.0,
+      141.0,
+      448.0,
+      175.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C Descriptive Price Analysis",
+    "page": 29,
+    "bbox": [
+      138.0,
+      199.0,
+      536.0,
+      231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      251.0,
+      1087.0,
+      506.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Self-graded × reputation (all listed, ungraded)",
+    "page": 29,
+    "bbox": [
+      121.0,
+      550.0,
+      450.0,
+      574.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      110.0,
+      573.0,
+      602.0,
+      867.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Self-graded × reputation (sold, ungraded)",
+    "page": 29,
+    "bbox": [
+      624.0,
+      549.0,
+      925.0,
+      574.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      612.0,
+      574.0,
+      1100.0,
+      867.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C TP-graded × reputation (all listed)",
+    "page": 29,
+    "bbox": [
+      121.0,
+      878.0,
+      372.0,
+      903.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "D TP-graded × reputation (sold)",
+    "page": 29,
+    "bbox": [
+      614.0,
+      878.0,
+      838.0,
+      903.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      111.0,
+      903.0,
+      593.0,
+      1195.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      603.0,
+      902.0,
+      1093.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S1. Descriptive interaction plots of seller reputation and quality signal type. Each panel displays estimates from a linear mixed-effects model (lmer) with seller random effects and prediction intervals, controlling for market price bracket and condition category. (A) Reputation × self-graded (all ungraded listings): the reputation × self-graded interaction is positive and significant (βinteraction = 0.073). (B) Reputation × self-graded (sold items only, N = 125,754): restricting to sold items mitigates selection bias. The interaction remains significant (βinteraction = 0.034, SE = 0.006, p < 0.001). (C) Reputation × TP-graded (all listings): negative interaction (βinteraction = -0.118). (D) Reputation × TP-graded (sold items only): substitution pattern persists (βinteraction = -0.179).",
+    "page": 29,
+    "bbox": [
+      135.0,
+      1228.0,
+      1086.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D Seller Volume",
+    "page": 30,
+    "bbox": [
+      139.0,
+      141.0,
+      378.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      194.0,
+      1086.0,
+      373.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Signal × reputation (listings, NB)",
+    "page": 30,
+    "bbox": [
+      118.0,
+      417.0,
+      361.0,
+      442.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      112.0,
+      439.0,
+      434.0,
+      670.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Signal × reputation (sale rate, Beta)",
+    "page": 30,
+    "bbox": [
+      452.0,
+      417.0,
+      717.0,
+      442.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      445.0,
+      419.0,
+      774.0,
+      675.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C Signal × reputation (sold count, NB)",
+    "page": 30,
+    "bbox": [
+      789.0,
+      417.0,
+      1055.0,
+      442.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      784.0,
+      441.0,
+      1097.0,
+      671.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S2. Seller-level volume metrics by signal type (None, Self-graded, TP-graded). (A) Listing count: negative binomial regression (MASS : : g1m. nb), which accounts for overdispersion. (B) Sale rate: beta regression (bet areg) for (0, 1)-bounded proportions. (C) Sale count: negative binomial regression.",
+    "page": 30,
+    "bbox": [
+      137.0,
+      754.0,
+      1083.0,
+      821.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      598.0,
+      1482.0,
+      624.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E Revenue and Margin Analysis",
+    "page": 31,
+    "bbox": [
+      139.0,
+      141.0,
+      586.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      194.0,
+      1085.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      320.0,
+      1086.0,
+      448.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Signal × reputation (price, sold, LME)",
+    "page": 31,
+    "bbox": [
+      120.0,
+      492.0,
+      398.0,
+      516.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      110.0,
+      516.0,
+      598.0,
+      809.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Signal × reputation (margin, sold, LME)",
+    "page": 31,
+    "bbox": [
+      620.0,
+      491.0,
+      911.0,
+      516.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      609.0,
+      519.0,
+      1098.0,
+      810.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C Signal × reputation (expected revenue, two-part)",
+    "page": 31,
+    "bbox": [
+      120.0,
+      821.0,
+      473.0,
+      846.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "D Signal × reputation (expected margin, two-part)",
+    "page": 31,
+    "bbox": [
+      620.0,
+      820.0,
+      964.0,
+      846.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      111.0,
+      848.0,
+      600.0,
+      1138.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      611.0,
+      848.0,
+      1100.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S3. Revenue and margin by signal type and seller reputation: conditional versus expected. (A) Unit sale price (USD) con- ditional on sale, by signal type (None, Self-graded, TP-graded): linear mixed-effects model (lmer) with seller random effects. (B) Margin (sale price – market reference price) conditional on sale: lmer with seller random effects. (C) Expected revenue = P(sold) × Eprice sold]: two-part model combining glmer (sale probability) and lmer (conditional price). (D) Expected margin = P(sold) × E[margin sold]: two-part model combining glmer (sale probability) and lmer (conditional margin).",
+    "page": 31,
+    "bbox": [
+      136.0,
+      1169.0,
+      1083.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      598.0,
+      1482.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F Continuous Regime Boundary in Reputation-Value Space",
+    "page": 32,
+    "bbox": [
+      137.0,
+      141.0,
+      942.0,
+      175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      194.0,
+      1087.0,
+      498.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Grading signal choice in reputation-value space",
+    "page": 32,
+    "bbox": [
+      134.0,
+      534.0,
+      484.0,
+      559.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      126.0,
+      575.0,
+      549.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B P(TP | graded) regime surface",
+    "page": 32,
+    "bbox": [
+      582.0,
+      533.0,
+      810.0,
+      558.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      569.0,
+      574.0,
+      1086.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S4. Continuous regime boundary in reputation-value space. (A) Scatter plot of self-graded (blue; n = 10,000, randomly sampled from the analysis sample) and TP-graded (red; n = 10,000, randomly sampled) listings in the space of the seller reputation score and the ungraded market price (log scale). (B) P(TP | graded) regime surface: predicted probabilities displayed as a continuous color gradient from blue (P ≈ 0%) to red (P ≈ 100%). The black line shows the logistic boundary log(market price) = 4.18 + 0.24 × (reputation score) separating the Self-dominant from the TP-dominant region.",
+    "page": 32,
+    "bbox": [
+      136.0,
+      1049.0,
+      1084.0,
+      1161.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      598.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G MCMC Convergence Diagnostics",
+    "page": 33,
+    "bbox": [
+      139.0,
+      141.0,
+      630.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      195.0,
+      1085.0,
+      321.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table S1. Convergence diagnostics for all 38 parameters of the hierarchical Bayesian model.",
+    "page": 33,
+    "bbox": [
+      273.0,
+      344.0,
+      948.0,
+      366.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      354.0,
+      390.0,
+      863.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      599.0,
+      1482.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "H HBM Model Fit",
+    "page": 34,
+    "bbox": [
+      139.0,
+      141.0,
+      408.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      194.0,
+      1087.0,
+      398.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Signal PPC: P(actual category)",
+    "page": 34,
+    "bbox": [
+      124.0,
+      438.0,
+      360.0,
+      463.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      110.0,
+      466.0,
+      698.0,
+      777.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Signal classification: confusion matrix",
+    "page": 34,
+    "bbox": [
+      708.0,
+      438.0,
+      984.0,
+      462.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      723.0,
+      495.0,
+      1098.0,
+      751.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C Price PPC: observed vs. predicted",
+    "page": 34,
+    "bbox": [
+      118.0,
+      806.0,
+      374.0,
+      831.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      111.0,
+      858.0,
+      420.0,
+      1059.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "D Sold equation: calibration",
+    "page": 34,
+    "bbox": [
+      441.0,
+      807.0,
+      638.0,
+      830.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "E Sold equation: ROC curve",
+    "page": 34,
+    "bbox": [
+      780.0,
+      807.0,
+      982.0,
+      831.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      434.0,
+      835.0,
+      763.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      772.0,
+      837.0,
+      1031.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S5. HBM model fit and predictive diagnostics across three equations. Row 1: (A) Posterior predictive check for signal selection: density of P(correct category) by certification type. Dashed lines indicate empirical base rates; all three categories exceed their respective base rates, indicating discriminative ability. (B) Confusion matrix heatmap for signal selection predictions. Overall accuracy = 0.803, balanced accuracy = 0.577, Cohen's k = 0.584. Row 2: (C) Observed versus predicted log price ratio. R2 = 0.421, RMSE = 0.820, normalized RMSE = 0.762. Residual distributions are similar across signal types. (D) Calibration plot for sale predictions: binned mean predicted P(sold) versus observed sale rate. Calibration slope = 1.111. (E) ROC curve for sale predictions. AUC = 0.954 [95% CI: 0.948, 0.960].",
+    "page": 34,
+    "bbox": [
+      136.0,
+      1119.0,
+      1083.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      599.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I Full Coefficient Estimates",
+    "page": 35,
+    "bbox": [
+      138.0,
+      141.0,
+      521.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      195.0,
+      1084.0,
+      320.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table S2. Full posterior estimates of the hierarchical Bayesian model.",
+    "page": 35,
+    "bbox": [
+      355.0,
+      344.0,
+      866.0,
+      366.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      390.0,
+      385.0,
+      828.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      599.0,
+      1482.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "J Signal Composition Across Price and Reputation Dimensions",
+    "page": 36,
+    "bbox": [
+      139.0,
+      141.0,
+      979.0,
+      175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      136.0,
+      195.0,
+      1087.0,
+      474.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "A Price distribution",
+    "page": 36,
+    "bbox": [
+      122.0,
+      530.0,
+      261.0,
+      555.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      111.0,
+      574.0,
+      605.0,
+      833.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      617.0,
+      538.0,
+      1101.0,
+      833.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "C Reputation distribution",
+    "page": 36,
+    "bbox": [
+      123.0,
+      860.0,
+      301.0,
+      884.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      112.0,
+      914.0,
+      605.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      617.0,
+      869.0,
+      1101.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. S6. Empirical distributions and signal composition across price and reputation dimensions. (A) Distribution of ungraded market prices (N = 960,029): log-scale histogram (y-axis: listing count) with quintile boundaries. (B) Signal composition by market price bracket: 100% stacked bar chart. (C) Distribution of seller reputation scores: histogram (y-axis: listing count) with quintile boundaries. (D) Signal composition by reputation bracket.",
+    "page": 36,
+    "bbox": [
+      135.0,
+      1194.0,
+      1087.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      598.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  }
+]

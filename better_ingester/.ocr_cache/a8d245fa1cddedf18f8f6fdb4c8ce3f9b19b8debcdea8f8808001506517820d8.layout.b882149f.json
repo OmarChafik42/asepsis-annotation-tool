@@ -1,0 +1,10320 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      413.0,
+      85.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "A Privacy Budgeting Framework for Online Experimentation",
+    "page": 0,
+    "bbox": [
+      260.0,
+      190.0,
+      964.0,
+      278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      459.0,
+      312.0,
+      764.0,
+      336.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      405.0,
+      363.0,
+      818.0,
+      383.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      173.0,
+      418.0,
+      1051.0,
+      935.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      176.0,
+      963.0,
+      967.0,
+      986.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1. Introduction",
+    "page": 0,
+    "bbox": [
+      142.0,
+      1015.0,
+      355.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      137.0,
+      1068.0,
+      1086.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      606.0,
+      1482.0,
+      618.0,
+      1498.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      141.0,
+      104.0,
+      157.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      138.0,
+      156.0,
+      1087.0,
+      631.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      138.0,
+      655.0,
+      1086.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      138.0,
+      990.0,
+      1086.0,
+      1352.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      139.0,
+      1383.0,
+      1083.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1067.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      154.0,
+      1087.0,
+      669.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      180.0,
+      696.0,
+      1032.0,
+      844.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1 A decomposition of the tracker's posterior belief update about segment membership into two privacy risk channels, conditional on access.",
+    "page": 2,
+    "bbox": [
+      139.0,
+      852.0,
+      1083.0,
+      917.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      945.0,
+      1086.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      140.0,
+      1320.0,
+      1083.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      141.0,
+      104.0,
+      157.0,
+      123.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      283.0,
+      208.0,
+      959.0,
+      434.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      296.0,
+      525.0,
+      962.0,
+      713.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2 Privacy budgeting in online experimentation operates at three connected levels: (1) the customer, (2) the experiment, and (3) the firm level.",
+    "page": 3,
+    "bbox": [
+      136.0,
+      810.0,
+      1083.0,
+      876.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      928.0,
+      1087.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1068.0,
+      105.0,
+      1082.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      324.0,
+      1087.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1095.0,
+      1087.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      141.0,
+      105.0,
+      157.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      156.0,
+      1086.0,
+      408.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2. Privacy protection and experimentation via MABs",
+    "page": 5,
+    "bbox": [
+      139.0,
+      439.0,
+      845.0,
+      468.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      139.0,
+      496.0,
+      1085.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      141.0,
+      717.0,
+      1084.0,
+      801.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1. Experimentation via MABs",
+    "page": 5,
+    "bbox": [
+      140.0,
+      827.0,
+      507.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      881.0,
+      1086.0,
+      1190.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1068.0,
+      105.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      138.0,
+      156.0,
+      1087.0,
+      461.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      486.0,
+      1087.0,
+      900.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2. The privacy protection literature",
+    "page": 6,
+    "bbox": [
+      140.0,
+      922.0,
+      566.0,
+      948.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      977.0,
+      1087.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      141.0,
+      1372.0,
+      1083.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      141.0,
+      105.0,
+      157.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      156.0,
+      1088.0,
+      732.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      140.0,
+      757.0,
+      1087.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      1152.0,
+      1088.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1068.0,
+      104.0,
+      1082.0,
+      122.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      139.0,
+      157.0,
+      1084.0,
+      242.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      265.0,
+      1087.0,
+      625.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      659.0,
+      1087.0,
+      1130.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      1153.0,
+      1087.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      357.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3. Quantifying the privacy risk of experimental output",
+    "page": 9,
+    "bbox": [
+      139.0,
+      396.0,
+      861.0,
+      425.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      454.0,
+      1086.0,
+      771.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      797.0,
+      1087.0,
+      1169.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1. Experimentation via MABs",
+    "page": 9,
+    "bbox": [
+      139.0,
+      1200.0,
+      507.0,
+      1226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      138.0,
+      1256.0,
+      1086.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      455.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      479.0,
+      1082.0,
+      619.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      397.0,
+      659.0,
+      824.0,
+      692.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1050.0,
+      662.0,
+      1079.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      738.0,
+      209.0,
+      762.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      428.0,
+      790.0,
+      791.0,
+      820.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      859.0,
+      1084.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      163.0,
+      1074.0,
+      562.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      430.0,
+      1124.0,
+      790.0,
+      1200.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      1222.0,
+      1084.0,
+      1304.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      397.0,
+      1331.0,
+      822.0,
+      1396.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1050.0,
+      1351.0,
+      1079.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      139.0,
+      1426.0,
+      382.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      139.0,
+      156.0,
+      1086.0,
+      352.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      376.0,
+      1087.0,
+      570.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      599.0,
+      1084.0,
+      741.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      140.0,
+      779.0,
+      1084.0,
+      919.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      487.0,
+      967.0,
+      733.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1050.0,
+      968.0,
+      1079.0,
+      996.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1051.0,
+      1087.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1058.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      139.0,
+      155.0,
+      1083.0,
+      239.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      319.0,
+      254.0,
+      900.0,
+      401.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1050.0,
+      315.0,
+      1079.0,
+      344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      422.0,
+      1084.0,
+      667.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      691.0,
+      1084.0,
+      775.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      139.0,
+      809.0,
+      1084.0,
+      946.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      510.0,
+      971.0,
+      710.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1050.0,
+      989.0,
+      1079.0,
+      1018.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      162.0,
+      1064.0,
+      864.0,
+      1093.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      429.0,
+      1133.0,
+      790.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1050.0,
+      1138.0,
+      1079.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      1212.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2. Linking the ε-greedy policy to differential privacy",
+    "page": 13,
+    "bbox": [
+      138.0,
+      157.0,
+      745.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      138.0,
+      208.0,
+      1082.0,
+      289.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      138.0,
+      321.0,
+      1084.0,
+      557.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      577.0,
+      1084.0,
+      711.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      473.0,
+      719.0,
+      748.0,
+      939.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1050.0,
+      817.0,
+      1079.0,
+      845.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      950.0,
+      1086.0,
+      1239.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      140.0,
+      1261.0,
+      1084.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      415.0,
+      1397.0,
+      803.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1050.0,
+      1416.0,
+      1080.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1058.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      139.0,
+      155.0,
+      516.0,
+      184.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      461.0,
+      230.0,
+      759.0,
+      289.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1050.0,
+      246.0,
+      1080.0,
+      275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      336.0,
+      1086.0,
+      599.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      426.0,
+      625.0,
+      796.0,
+      845.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1038.0,
+      721.0,
+      1079.0,
+      751.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      877.0,
+      1085.0,
+      1133.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      411.0,
+      1162.0,
+      808.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1038.0,
+      1172.0,
+      1079.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1254.0,
+      1083.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      138.0,
+      1368.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      155.0,
+      1083.0,
+      240.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      502.0,
+      260.0,
+      715.0,
+      476.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1038.0,
+      351.0,
+      1079.0,
+      380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      493.0,
+      1081.0,
+      689.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      713.0,
+      1083.0,
+      852.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      287.0,
+      871.0,
+      929.0,
+      1002.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1038.0,
+      924.0,
+      1079.0,
+      952.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1024.0,
+      1084.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      139.0,
+      1301.0,
+      1086.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1057.0,
+      103.0,
+      1083.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      154.0,
+      1087.0,
+      508.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      282.0,
+      538.0,
+      931.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3 The privacy risk parameter ξ bounds how much a tracker's belief about a visitor's segment can shift after observing the experimental output. Note: Darker curves (small ξ) show less updating, and lighter curves (larger ξ) show more updating away from the prior.",
+    "page": 16,
+    "bbox": [
+      139.0,
+      1193.0,
+      1084.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      139.0,
+      1374.0,
+      1085.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      157.0,
+      1086.0,
+      518.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      557.0,
+      1087.0,
+      975.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      550.0,
+      1000.0,
+      670.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1038.0,
+      999.0,
+      1079.0,
+      1028.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      1071.0,
+      1084.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3. Privacy budget spending strategies and the trade-off between privacy and performance",
+    "page": 17,
+    "bbox": [
+      140.0,
+      1291.0,
+      1007.0,
+      1346.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      139.0,
+      1372.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1058.0,
+      104.0,
+      1082.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      155.0,
+      1086.0,
+      298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      335.0,
+      1086.0,
+      809.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      149.0,
+      846.0,
+      1079.0,
+      1267.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4 The privacy risk under the constant strategy ξt (left panel) and the exploration/exploitation probabilities εt and 1 - εt (middle/right panel) for different privacy budgets γ ∈ {0.05, 0.5, 1, 3, 5}.",
+    "page": 18,
+    "bbox": [
+      139.0,
+      1371.0,
+      1083.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      141.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      156.0,
+      1087.0,
+      528.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      297.0,
+      552.0,
+      901.0,
+      639.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1038.0,
+      584.0,
+      1079.0,
+      612.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      673.0,
+      1086.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      1200.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1056.0,
+      104.0,
+      1081.0,
+      124.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      433.0,
+      183.0,
+      787.0,
+      290.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1038.0,
+      221.0,
+      1079.0,
+      250.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      310.0,
+      1086.0,
+      513.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      352.0,
+      536.0,
+      867.0,
+      647.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1038.0,
+      577.0,
+      1079.0,
+      606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      675.0,
+      1087.0,
+      939.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      963.0,
+      1086.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      1254.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      145.0,
+      164.0,
+      1080.0,
+      606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5 The privacy risk under the dynamic strategy ξt (left panel) and the exploitation/exploration probabilities 1 – εt and εt (middle/right panel). We use different line types to show the varying the privacy budget levelsγ∈ {0.05,0.5,1,3,5}.",
+    "page": 21,
+    "bbox": [
+      139.0,
+      721.0,
+      1084.0,
+      827.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      896.0,
+      506.0,
+      924.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      162.0,
+      966.0,
+      1063.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      1038.0,
+      1137.0,
+      1079.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      1194.0,
+      1083.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      1383.0,
+      1082.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      155.0,
+      1086.0,
+      515.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      162.0,
+      542.0,
+      1082.0,
+      571.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4. Two applications of the privacy risk strategies",
+    "page": 22,
+    "bbox": [
+      139.0,
+      602.0,
+      785.0,
+      631.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      660.0,
+      1086.0,
+      909.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      934.0,
+      1086.0,
+      1239.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1. Website design",
+    "page": 22,
+    "bbox": [
+      139.0,
+      1262.0,
+      371.0,
+      1288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      1317.0,
+      1085.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      156.0,
+      1084.0,
+      240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      266.0,
+      1087.0,
+      572.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      597.0,
+      1087.0,
+      903.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      931.0,
+      1087.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      351.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6 Website design application — Total clicks as a function of different strategies.",
+    "page": 24,
+    "bbox": [
+      140.0,
+      384.0,
+      892.0,
+      408.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      149.0,
+      424.0,
+      1077.0,
+      762.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Note. The \"Other\" category on the x-axis includes the optimal strategies—the Gittins index and ε-greedy policies and the theoretical lower and upper bounds represented by random and perfect information, respectively.",
+    "page": 24,
+    "bbox": [
+      141.0,
+      802.0,
+      1083.0,
+      868.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      931.0,
+      1086.0,
+      1348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      1372.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      156.0,
+      1087.0,
+      444.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      466.0,
+      1086.0,
+      807.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      829.0,
+      1083.0,
+      908.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2. Recommendation system",
+    "page": 25,
+    "bbox": [
+      140.0,
+      929.0,
+      478.0,
+      954.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      981.0,
+      1085.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      139.0,
+      1388.0,
+      1084.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      156.0,
+      1087.0,
+      527.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7 Recommendations — Total clicks as a function of different strategies.",
+    "page": 26,
+    "bbox": [
+      140.0,
+      577.0,
+      821.0,
+      601.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      147.0,
+      613.0,
+      1077.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Note. The \"Other\" category on the x-axis includes the benchmark policies—the Gittins-index policy and the non- private ε-greedy policy—as well as the theoretical lower and upper bounds represented by random and perfect information, respectively.",
+    "page": 26,
+    "bbox": [
+      140.0,
+      1195.0,
+      1083.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      156.0,
+      1087.0,
+      663.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      685.0,
+      1087.0,
+      978.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5. Privacy risk elasticities of expected regret",
+    "page": 27,
+    "bbox": [
+      139.0,
+      1003.0,
+      733.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      1058.0,
+      1087.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      1056.0,
+      105.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1. The privacy elasticity of regret for the constant strategy",
+    "page": 28,
+    "bbox": [
+      138.0,
+      157.0,
+      818.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      211.0,
+      1085.0,
+      463.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8 Privacy risk elasticity of regret as a function of the privacy budget γ, for different numbers of arms (K ∈ 2,5, 20) and visitors (T ∈ 10, 000, 100, 000, 1, 000, 000).",
+    "page": 28,
+    "bbox": [
+      140.0,
+      496.0,
+      1083.0,
+      565.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      144.0,
+      578.0,
+      1075.0,
+      970.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Note. The elasticity is negative where relaxing privacy protection (increasing γ) reduces regret, and positive where further increases in γ raise regret. The zero-crossings mark is the ideal privacy budgets that minimize regret for each (k,T) combination.",
+    "page": 28,
+    "bbox": [
+      139.0,
+      1033.0,
+      1083.0,
+      1139.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      1206.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      155.0,
+      1084.0,
+      293.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      317.0,
+      1086.0,
+      880.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      901.0,
+      1086.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2. The privacy elasticity of regret for the dynamic strategy",
+    "page": 29,
+    "bbox": [
+      139.0,
+      1322.0,
+      819.0,
+      1349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      140.0,
+      1373.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      1056.0,
+      104.0,
+      1081.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      138.0,
+      155.0,
+      1083.0,
+      243.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 9 Privacy risk elasticity of regret as a function of the privacy budget γ, for different numbers of arms (K ∈ 2,5, 20) and visitors (T ∈ 10, 000, 100, 000, 1, 000, 000).",
+    "page": 30,
+    "bbox": [
+      140.0,
+      282.0,
+      1083.0,
+      350.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      148.0,
+      365.0,
+      1074.0,
+      725.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Note. The elasticity is negative where relaxing privacy protection (increasing γ) reduces regret, and positive where further increases in γ raise regret. The zero-crossings mark is the ideal privacy budgets that minimizes regret for each (k,T) combination.",
+    "page": 30,
+    "bbox": [
+      140.0,
+      804.0,
+      1084.0,
+      912.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      980.0,
+      1087.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      399.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      138.0,
+      421.0,
+      1084.0,
+      716.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      740.0,
+      1086.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6. Firm-level privacy budget allocation",
+    "page": 31,
+    "bbox": [
+      139.0,
+      1059.0,
+      659.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1114.0,
+      1083.0,
+      1193.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.1. The optimization problem",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1216.0,
+      492.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      138.0,
+      1268.0,
+      1086.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      1056.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      155.0,
+      1087.0,
+      464.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      501.0,
+      1084.0,
+      696.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      722.0,
+      1084.0,
+      919.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      382.0,
+      940.0,
+      839.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      1038.0,
+      1102.0,
+      1079.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      1315.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      137.0,
+      155.0,
+      1086.0,
+      354.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      137.0,
+      394.0,
+      1085.0,
+      649.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      481.0,
+      684.0,
+      738.0,
+      745.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      1038.0,
+      700.0,
+      1079.0,
+      729.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      783.0,
+      1083.0,
+      982.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      1008.0,
+      1084.0,
+      1374.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      278.0,
+      1424.0,
+      943.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      1038.0,
+      1425.0,
+      1079.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      1056.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      139.0,
+      155.0,
+      1084.0,
+      247.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      137.0,
+      276.0,
+      1086.0,
+      667.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      190.0,
+      754.0,
+      1017.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10 Privacy budget reallocation across two experiments and assuming a single strategy. The x-axis shows the allocated privacy budget γ, and the y-axis shows the marginal learning gain Ge,s(γ). The firm reallocates the budget toward the experiment with the higher marginal learning gain (red arrows).",
+    "page": 34,
+    "bbox": [
+      139.0,
+      1330.0,
+      1083.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      141.0,
+      103.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      156.0,
+      1086.0,
+      391.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2. Benchmark policies",
+    "page": 35,
+    "bbox": [
+      139.0,
+      408.0,
+      419.0,
+      435.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      457.0,
+      1083.0,
+      540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      569.0,
+      1086.0,
+      701.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      369.0,
+      732.0,
+      848.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      796.0,
+      1084.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      960.0,
+      1084.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1223.0,
+      1086.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.3. Application of the firm-wide privacy budget",
+    "page": 36,
+    "bbox": [
+      138.0,
+      157.0,
+      684.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      213.0,
+      1086.0,
+      410.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      453.0,
+      1087.0,
+      709.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      734.0,
+      1085.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      958.0,
+      1086.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      140.0,
+      1307.0,
+      1083.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      139.0,
+      1425.0,
+      686.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      287.0,
+      163.0,
+      613.0,
+      406.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      615.0,
+      164.0,
+      925.0,
+      403.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      284.0,
+      409.0,
+      616.0,
+      650.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      613.0,
+      413.0,
+      939.0,
+      651.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 11 Empirical distributions of key inputs and outputs from the ASOS online experiments.",
+    "page": 37,
+    "bbox": [
+      139.0,
+      682.0,
+      955.0,
+      705.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      754.0,
+      1087.0,
+      1170.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      138.0,
+      1207.0,
+      1085.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      137.0,
+      155.0,
+      1088.0,
+      546.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      185.0,
+      627.0,
+      1024.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 12 Median improvement in portfolio clicks relative to the random-policy baseline across firm-wide privacy budgets. Points report medians over simulation repetitions, and error bars show the interquartile range. Colors indicate the firm-wide allocation rule, while shapes indicate the within-experiment budgeting regime.",
+    "page": 38,
+    "bbox": [
+      139.0,
+      1289.0,
+      1084.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      138.0,
+      156.0,
+      1085.0,
+      296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      138.0,
+      322.0,
+      1085.0,
+      517.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      137.0,
+      542.0,
+      1086.0,
+      956.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7. Discussion",
+    "page": 39,
+    "bbox": [
+      140.0,
+      985.0,
+      330.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      138.0,
+      1043.0,
+      1087.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      1057.0,
+      104.0,
+      1081.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      138.0,
+      154.0,
+      1086.0,
+      298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      136.0,
+      323.0,
+      1088.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      137.0,
+      876.0,
+      1087.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.1. Limitations and future research",
+    "page": 40,
+    "bbox": [
+      140.0,
+      1316.0,
+      551.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      140.0,
+      1371.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      142.0,
+      104.0,
+      168.0,
+      123.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      137.0,
+      156.0,
+      1088.0,
+      560.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      580.0,
+      1088.0,
+      981.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      137.0,
+      1002.0,
+      1088.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      141.0,
+      1373.0,
+      1083.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      1057.0,
+      104.0,
+      1083.0,
+      124.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      137.0,
+      154.0,
+      1088.0,
+      517.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      142.0,
+      563.0,
+      376.0,
+      593.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix A: A model of privacy risk in experimentation",
+    "page": 43,
+    "bbox": [
+      140.0,
+      158.0,
+      832.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      139.0,
+      211.0,
+      1082.0,
+      283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      306.0,
+      1084.0,
+      566.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      137.0,
+      588.0,
+      1083.0,
+      755.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      139.0,
+      778.0,
+      1086.0,
+      943.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      489.0,
+      983.0,
+      732.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      139.0,
+      1052.0,
+      1083.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.1. Privacy risk from experimental output",
+    "page": 43,
+    "bbox": [
+      141.0,
+      1207.0,
+      596.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      137.0,
+      1258.0,
+      1084.0,
+      1376.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      415.0,
+      1404.0,
+      807.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      158.0,
+      1085.0,
+      276.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      557.0,
+      311.0,
+      665.0,
+      337.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2. Privacy risk from behavior after experimental output",
+    "page": 44,
+    "bbox": [
+      140.0,
+      374.0,
+      746.0,
+      398.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      424.0,
+      1086.0,
+      587.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      361.0,
+      607.0,
+      860.0,
+      661.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      685.0,
+      1085.0,
+      848.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.3. The full posterior update",
+    "page": 44,
+    "bbox": [
+      140.0,
+      875.0,
+      463.0,
+      900.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      135.0,
+      927.0,
+      1087.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      295.0,
+      1155.0,
+      926.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      158.0,
+      1233.0,
+      922.0,
+      1257.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      202.0,
+      1269.0,
+      936.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix B: Differential privacy in the context of bandits",
+    "page": 45,
+    "bbox": [
+      140.0,
+      157.0,
+      847.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      208.0,
+      1083.0,
+      280.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      459.0,
+      309.0,
+      760.0,
+      335.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      1043.0,
+      310.0,
+      1080.0,
+      335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      367.0,
+      1083.0,
+      483.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      140.0,
+      503.0,
+      1083.0,
+      574.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      515.0,
+      604.0,
+      706.0,
+      631.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      662.0,
+      1083.0,
+      732.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      275.0,
+      763.0,
+      944.0,
+      791.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      1044.0,
+      764.0,
+      1079.0,
+      789.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      139.0,
+      822.0,
+      1082.0,
+      892.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      366.0,
+      921.0,
+      853.0,
+      951.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      1043.0,
+      924.0,
+      1080.0,
+      947.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      981.0,
+      1087.0,
+      1136.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix C: Parallel composition",
+    "page": 45,
+    "bbox": [
+      140.0,
+      1153.0,
+      585.0,
+      1179.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      1203.0,
+      1084.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      159.0,
+      1430.0,
+      484.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      1058.0,
+      104.0,
+      1083.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      159.0,
+      158.0,
+      1027.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      441.0,
+      219.0,
+      780.0,
+      246.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      1043.0,
+      221.0,
+      1080.0,
+      245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      140.0,
+      282.0,
+      853.0,
+      308.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      399.0,
+      343.0,
+      821.0,
+      370.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      137.0,
+      407.0,
+      1084.0,
+      799.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      458.0,
+      801.0,
+      762.0,
+      864.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      139.0,
+      877.0,
+      1083.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      138.0,
+      969.0,
+      1082.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      336.0,
+      1076.0,
+      884.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      158.0,
+      1140.0,
+      778.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      429.0,
+      1185.0,
+      791.0,
+      1249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      139.0,
+      1264.0,
+      264.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      372.0,
+      1301.0,
+      848.0,
+      1357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      140.0,
+      1367.0,
+      927.0,
+      1392.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      495.0,
+      1428.0,
+      726.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      139.0,
+      158.0,
+      800.0,
+      185.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      450.0,
+      213.0,
+      772.0,
+      240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      139.0,
+      272.0,
+      928.0,
+      296.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      383.0,
+      327.0,
+      837.0,
+      358.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      138.0,
+      386.0,
+      1085.0,
+      545.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix D: Regret analysis",
+    "page": 47,
+    "bbox": [
+      140.0,
+      557.0,
+      531.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      137.0,
+      608.0,
+      1084.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      139.0,
+      788.0,
+      1083.0,
+      858.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      513.0,
+      883.0,
+      708.0,
+      932.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      1044.0,
+      890.0,
+      1079.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      137.0,
+      946.0,
+      1070.0,
+      970.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      538.0,
+      1003.0,
+      682.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      1043.0,
+      1003.0,
+      1080.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      137.0,
+      1058.0,
+      1086.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.1. The regret bound of the ε-greedy policy",
+    "page": 47,
+    "bbox": [
+      139.0,
+      1200.0,
+      611.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      138.0,
+      1249.0,
+      1085.0,
+      1408.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      404.0,
+      1428.0,
+      817.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      1044.0,
+      1429.0,
+      1080.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      139.0,
+      159.0,
+      980.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      138.0,
+      203.0,
+      1085.0,
+      364.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      585.0,
+      376.0,
+      636.0,
+      419.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1043.0,
+      384.0,
+      1080.0,
+      409.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      137.0,
+      440.0,
+      1084.0,
+      602.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      531.0,
+      618.0,
+      689.0,
+      673.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1043.0,
+      634.0,
+      1080.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      139.0,
+      692.0,
+      1083.0,
+      763.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      158.0,
+      784.0,
+      197.0,
+      806.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      503.0,
+      827.0,
+      717.0,
+      864.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1043.0,
+      828.0,
+      1079.0,
+      853.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      139.0,
+      885.0,
+      762.0,
+      909.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      529.0,
+      946.0,
+      691.0,
+      978.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1043.0,
+      942.0,
+      1080.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      140.0,
+      1000.0,
+      1083.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      529.0,
+      1094.0,
+      692.0,
+      1119.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      138.0,
+      1147.0,
+      271.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      410.0,
+      1204.0,
+      810.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      1043.0,
+      1412.0,
+      1080.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      141.0,
+      103.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      159.0,
+      1085.0,
+      320.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      379.0,
+      336.0,
+      839.0,
+      502.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1043.0,
+      463.0,
+      1080.0,
+      488.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      137.0,
+      522.0,
+      1083.0,
+      635.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      536.0,
+      641.0,
+      683.0,
+      696.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1043.0,
+      657.0,
+      1080.0,
+      682.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      140.0,
+      714.0,
+      236.0,
+      737.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      545.0,
+      745.0,
+      675.0,
+      797.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1044.0,
+      758.0,
+      1080.0,
+      783.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      138.0,
+      815.0,
+      264.0,
+      837.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      518.0,
+      842.0,
+      702.0,
+      899.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1044.0,
+      859.0,
+      1079.0,
+      884.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      140.0,
+      915.0,
+      1082.0,
+      986.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      466.0,
+      1003.0,
+      752.0,
+      1060.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1043.0,
+      1020.0,
+      1080.0,
+      1043.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      137.0,
+      1078.0,
+      1085.0,
+      1194.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      429.0,
+      1207.0,
+      790.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1044.0,
+      1294.0,
+      1080.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      159.0,
+      1352.0,
+      534.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      517.0,
+      1405.0,
+      702.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      1043.0,
+      1411.0,
+      1080.0,
+      1436.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1057.0,
+      104.0,
+      1081.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      139.0,
+      158.0,
+      529.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      434.0,
+      220.0,
+      785.0,
+      249.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1043.0,
+      223.0,
+      1080.0,
+      248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      137.0,
+      289.0,
+      1086.0,
+      456.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.2. The regret bound under differential privacy",
+    "page": 50,
+    "bbox": [
+      137.0,
+      487.0,
+      649.0,
+      512.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      137.0,
+      537.0,
+      1084.0,
+      659.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      533.0,
+      682.0,
+      687.0,
+      733.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1043.0,
+      696.0,
+      1080.0,
+      721.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      137.0,
+      761.0,
+      1083.0,
+      834.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      478.0,
+      856.0,
+      745.0,
+      913.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1043.0,
+      873.0,
+      1080.0,
+      898.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      139.0,
+      939.0,
+      321.0,
+      963.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      461.0,
+      959.0,
+      758.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1043.0,
+      992.0,
+      1080.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      141.0,
+      1058.0,
+      1082.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      157.0,
+      1152.0,
+      892.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      395.0,
+      1200.0,
+      822.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      1043.0,
+      1289.0,
+      1080.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      158.0,
+      1353.0,
+      877.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      518.0,
+      1401.0,
+      702.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      138.0,
+      158.0,
+      571.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      398.0,
+      200.0,
+      821.0,
+      373.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      1043.0,
+      336.0,
+      1080.0,
+      360.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      159.0,
+      393.0,
+      929.0,
+      419.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      435.0,
+      449.0,
+      785.0,
+      479.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      1043.0,
+      452.0,
+      1080.0,
+      477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      512.0,
+      1084.0,
+      674.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      138.0,
+      694.0,
+      1084.0,
+      765.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.3. The regret bound without asymptotic approximation",
+    "page": 51,
+    "bbox": [
+      139.0,
+      791.0,
+      744.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      840.0,
+      1083.0,
+      909.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      452.0,
+      928.0,
+      767.0,
+      983.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      1043.0,
+      944.0,
+      1080.0,
+      969.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      159.0,
+      1003.0,
+      218.0,
+      1028.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      535.0,
+      1036.0,
+      686.0,
+      1085.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      139.0,
+      1106.0,
+      181.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      517.0,
+      1136.0,
+      704.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      140.0,
+      1206.0,
+      349.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      396.0,
+      1251.0,
+      822.0,
+      1365.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      1043.0,
+      1325.0,
+      1080.0,
+      1350.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      138.0,
+      1385.0,
+      1083.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix E: Regret of the dynamic strategy",
+    "page": 52,
+    "bbox": [
+      139.0,
+      157.0,
+      701.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      140.0,
+      208.0,
+      1042.0,
+      234.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      540.0,
+      265.0,
+      681.0,
+      291.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      137.0,
+      323.0,
+      1084.0,
+      485.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      414.0,
+      488.0,
+      804.0,
+      578.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1043.0,
+      520.0,
+      1080.0,
+      545.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      158.0,
+      585.0,
+      651.0,
+      610.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      530.0,
+      628.0,
+      690.0,
+      678.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1043.0,
+      641.0,
+      1080.0,
+      666.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      159.0,
+      698.0,
+      879.0,
+      723.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      508.0,
+      739.0,
+      713.0,
+      796.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1043.0,
+      756.0,
+      1080.0,
+      781.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      138.0,
+      814.0,
+      1083.0,
+      883.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      137.0,
+      903.0,
+      1083.0,
+      974.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      454.0,
+      993.0,
+      763.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1043.0,
+      1005.0,
+      1080.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E.1. The local exhaustion threshold",
+    "page": 52,
+    "bbox": [
+      138.0,
+      1062.0,
+      517.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      137.0,
+      1111.0,
+      1082.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      447.0,
+      1194.0,
+      771.0,
+      1259.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1044.0,
+      1214.0,
+      1080.0,
+      1239.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      139.0,
+      1272.0,
+      1083.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      159.0,
+      1362.0,
+      641.0,
+      1386.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      407.0,
+      1399.0,
+      816.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      1043.0,
+      1418.0,
+      1080.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      158.0,
+      1083.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      254.0,
+      1084.0,
+      374.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      429.0,
+      401.0,
+      790.0,
+      428.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      1043.0,
+      403.0,
+      1080.0,
+      427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      468.0,
+      1083.0,
+      588.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      138.0,
+      611.0,
+      1084.0,
+      685.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E.2. Pre-cap regret",
+    "page": 53,
+    "bbox": [
+      140.0,
+      721.0,
+      352.0,
+      746.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      139.0,
+      772.0,
+      1082.0,
+      843.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      518.0,
+      856.0,
+      702.0,
+      913.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      139.0,
+      940.0,
+      877.0,
+      964.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      451.0,
+      992.0,
+      769.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      1043.0,
+      1009.0,
+      1080.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      1078.0,
+      1082.0,
+      1152.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      549.0,
+      1194.0,
+      671.0,
+      1220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      140.0,
+      1263.0,
+      1083.0,
+      1336.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      375.0,
+      1361.0,
+      845.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      1043.0,
+      1364.0,
+      1080.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      159.0,
+      1430.0,
+      1040.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E.3. Post-cap regret",
+    "page": 54,
+    "bbox": [
+      139.0,
+      158.0,
+      361.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      137.0,
+      209.0,
+      1082.0,
+      279.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      573.0,
+      312.0,
+      648.0,
+      335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      139.0,
+      372.0,
+      499.0,
+      398.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      432.0,
+      421.0,
+      787.0,
+      514.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      1043.0,
+      441.0,
+      1080.0,
+      466.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      140.0,
+      528.0,
+      1084.0,
+      603.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      581.0,
+      644.0,
+      641.0,
+      670.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      136.0,
+      711.0,
+      1083.0,
+      785.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      486.0,
+      804.0,
+      732.0,
+      941.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      1043.0,
+      898.0,
+      1080.0,
+      923.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      140.0,
+      965.0,
+      1083.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      159.0,
+      1059.0,
+      289.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      421.0,
+      1092.0,
+      797.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      1043.0,
+      1112.0,
+      1080.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      140.0,
+      1177.0,
+      1082.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      432.0,
+      1291.0,
+      790.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      139.0,
+      1360.0,
+      237.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      356.0,
+      1391.0,
+      864.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      1043.0,
+      1412.0,
+      1080.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      372.0,
+      230.0,
+      851.0,
+      406.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      1043.0,
+      305.0,
+      1080.0,
+      330.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      138.0,
+      418.0,
+      1084.0,
+      536.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      137.0,
+      557.0,
+      1084.0,
+      767.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix F: Regret of the constant strategy",
+    "page": 55,
+    "bbox": [
+      141.0,
+      781.0,
+      702.0,
+      808.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      141.0,
+      834.0,
+      846.0,
+      858.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      578.0,
+      898.0,
+      643.0,
+      923.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      1043.0,
+      896.0,
+      1080.0,
+      921.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      140.0,
+      961.0,
+      586.0,
+      985.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      511.0,
+      1010.0,
+      707.0,
+      1060.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      1043.0,
+      1024.0,
+      1080.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      141.0,
+      1087.0,
+      1082.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      541.0,
+      1180.0,
+      681.0,
+      1206.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      140.0,
+      1240.0,
+      1063.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      404.0,
+      1301.0,
+      816.0,
+      1328.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      1043.0,
+      1302.0,
+      1080.0,
+      1326.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      140.0,
+      1368.0,
+      343.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      531.0,
+      1395.0,
+      687.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      1043.0,
+      1413.0,
+      1080.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      1058.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      159.0,
+      159.0,
+      1006.0,
+      184.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      483.0,
+      208.0,
+      737.0,
+      271.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      1043.0,
+      229.0,
+      1080.0,
+      253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      158.0,
+      298.0,
+      701.0,
+      322.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      586.0,
+      367.0,
+      632.0,
+      392.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      140.0,
+      438.0,
+      1083.0,
+      510.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      495.0,
+      533.0,
+      724.0,
+      666.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      1043.0,
+      622.0,
+      1080.0,
+      647.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      140.0,
+      692.0,
+      1051.0,
+      718.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      159.0,
+      741.0,
+      770.0,
+      765.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      431.0,
+      785.0,
+      794.0,
+      857.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      1043.0,
+      809.0,
+      1080.0,
+      834.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      159.0,
+      880.0,
+      295.0,
+      903.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      588.0,
+      933.0,
+      634.0,
+      958.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      137.0,
+      1000.0,
+      1078.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      137.0,
+      1094.0,
+      1084.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      137.0,
+      1286.0,
+      1087.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix G: Regret of the dynamic strategy",
+    "page": 57,
+    "bbox": [
+      138.0,
+      157.0,
+      705.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      138.0,
+      209.0,
+      726.0,
+      233.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      428.0,
+      248.0,
+      791.0,
+      316.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      137.0,
+      330.0,
+      861.0,
+      356.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      529.0,
+      378.0,
+      690.0,
+      427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      140.0,
+      451.0,
+      914.0,
+      476.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      521.0,
+      500.0,
+      700.0,
+      545.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      139.0,
+      571.0,
+      1083.0,
+      643.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      456.0,
+      650.0,
+      763.0,
+      700.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      136.0,
+      721.0,
+      1083.0,
+      791.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      438.0,
+      819.0,
+      780.0,
+      860.0
+    ]
+  },
+  {
+    "label": "inline_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      362.0,
+      889.0,
+      451.0,
+      911.0
+    ]
+  },
+  {
+    "label": "inline_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      261.0,
+      936.0,
+      281.0,
+      957.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      444.0,
+      964.0,
+      780.0,
+      1016.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      1043.0,
+      979.0,
+      1080.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      137.0,
+      1036.0,
+      1082.0,
+      1107.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G.1. Pre-cap regret (t ≤tγ).",
+    "page": 57,
+    "bbox": [
+      140.0,
+      1135.0,
+      429.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      139.0,
+      1184.0,
+      1082.0,
+      1257.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      325.0,
+      1279.0,
+      894.0,
+      1325.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      138.0,
+      1351.0,
+      1029.0,
+      1377.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      461.0,
+      1393.0,
+      757.0,
+      1457.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      1043.0,
+      1412.0,
+      1080.0,
+      1437.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G.2. Post-cap regret (t > tγ)",
+    "page": 58,
+    "bbox": [
+      139.0,
+      158.0,
+      436.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      136.0,
+      206.0,
+      1082.0,
+      264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      139.0,
+      255.0,
+      218.0,
+      277.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      380.0,
+      278.0,
+      840.0,
+      373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      138.0,
+      379.0,
+      464.0,
+      404.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      381.0,
+      418.0,
+      840.0,
+      485.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      1043.0,
+      439.0,
+      1080.0,
+      464.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      140.0,
+      498.0,
+      879.0,
+      523.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      524.0,
+      538.0,
+      696.0,
+      602.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      137.0,
+      616.0,
+      633.0,
+      641.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      507.0,
+      660.0,
+      715.0,
+      714.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      138.0,
+      736.0,
+      205.0,
+      759.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      316.0,
+      762.0,
+      904.0,
+      825.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      139.0,
+      836.0,
+      236.0,
+      860.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      488.0,
+      878.0,
+      732.0,
+      909.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      1043.0,
+      882.0,
+      1080.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      138.0,
+      939.0,
+      665.0,
+      963.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      334.0,
+      977.0,
+      885.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      138.0,
+      1056.0,
+      523.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      287.0,
+      1093.0,
+      931.0,
+      1190.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      1043.0,
+      1116.0,
+      1080.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      136.0,
+      1202.0,
+      1084.0,
+      1456.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      141.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix H: Regret of the constant strategy",
+    "page": 59,
+    "bbox": [
+      138.0,
+      157.0,
+      705.0,
+      184.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      137.0,
+      210.0,
+      565.0,
+      234.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      426.0,
+      258.0,
+      793.0,
+      311.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      139.0,
+      339.0,
+      465.0,
+      362.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      377.0,
+      383.0,
+      843.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      138.0,
+      468.0,
+      499.0,
+      491.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      487.0,
+      512.0,
+      732.0,
+      575.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      1043.0,
+      532.0,
+      1080.0,
+      557.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      140.0,
+      597.0,
+      535.0,
+      622.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      396.0,
+      640.0,
+      827.0,
+      735.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      138.0,
+      749.0,
+      1083.0,
+      821.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      138.0,
+      841.0,
+      1084.0,
+      961.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix I: Privacy risk budget elasticities",
+    "page": 59,
+    "bbox": [
+      140.0,
+      976.0,
+      689.0,
+      1002.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      139.0,
+      1030.0,
+      784.0,
+      1054.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I.1. Constant privacy risk strategy",
+    "page": 59,
+    "bbox": [
+      138.0,
+      1086.0,
+      505.0,
+      1111.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      139.0,
+      1138.0,
+      178.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      331.0,
+      1168.0,
+      888.0,
+      1226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      138.0,
+      1245.0,
+      455.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      524.0,
+      1292.0,
+      698.0,
+      1317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      140.0,
+      1356.0,
+      595.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      500.0,
+      1405.0,
+      718.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      1056.0,
+      104.0,
+      1081.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      158.0,
+      159.0,
+      324.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      546.0,
+      192.0,
+      677.0,
+      246.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      139.0,
+      268.0,
+      440.0,
+      293.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      329.0,
+      318.0,
+      892.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      139.0,
+      398.0,
+      409.0,
+      423.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      391.0,
+      479.0,
+      831.0,
+      532.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      140.0,
+      555.0,
+      455.0,
+      580.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      392.0,
+      606.0,
+      827.0,
+      657.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      158.0,
+      675.0,
+      765.0,
+      718.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      417.0,
+      738.0,
+      804.0,
+      786.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      394.0,
+      802.0,
+      825.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      139.0,
+      880.0,
+      423.0,
+      903.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      322.0,
+      919.0,
+      894.0,
+      1008.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I.2. Elasticity of the dynamic privacy risk strategy",
+    "page": 60,
+    "bbox": [
+      137.0,
+      1024.0,
+      667.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      136.0,
+      1074.0,
+      1082.0,
+      1142.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      537.0,
+      1172.0,
+      683.0,
+      1222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      138.0,
+      1251.0,
+      633.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      557.0,
+      1299.0,
+      665.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      1043.0,
+      1315.0,
+      1080.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      158.0,
+      1381.0,
+      198.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      482.0,
+      1426.0,
+      738.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      137.0,
+      158.0,
+      1082.0,
+      220.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      411.0,
+      242.0,
+      808.0,
+      467.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      342.0,
+      1080.0,
+      367.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      156.0,
+      488.0,
+      999.0,
+      514.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      461.0,
+      542.0,
+      760.0,
+      595.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      556.0,
+      1080.0,
+      581.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      159.0,
+      625.0,
+      594.0,
+      650.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      511.0,
+      679.0,
+      710.0,
+      734.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      693.0,
+      1080.0,
+      718.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      159.0,
+      762.0,
+      1039.0,
+      787.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      509.0,
+      815.0,
+      713.0,
+      867.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      139.0,
+      899.0,
+      232.0,
+      920.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      502.0,
+      934.0,
+      720.0,
+      991.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      140.0,
+      1014.0,
+      197.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      502.0,
+      1050.0,
+      720.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      1067.0,
+      1080.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      159.0,
+      1130.0,
+      1071.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      391.0,
+      1174.0,
+      830.0,
+      1289.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      1220.0,
+      1080.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      158.0,
+      1309.0,
+      759.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      413.0,
+      1354.0,
+      809.0,
+      1459.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      1043.0,
+      1390.0,
+      1080.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      1057.0,
+      105.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      158.0,
+      158.0,
+      811.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      335.0,
+      195.0,
+      887.0,
+      391.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      1043.0,
+      279.0,
+      1080.0,
+      304.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      159.0,
+      401.0,
+      1027.0,
+      425.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      408.0,
+      446.0,
+      813.0,
+      501.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      1043.0,
+      461.0,
+      1080.0,
+      485.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      136.0,
+      521.0,
+      1084.0,
+      729.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      137.0,
+      749.0,
+      1086.0,
+      909.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      158.0,
+      931.0,
+      695.0,
+      955.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      522.0,
+      973.0,
+      697.0,
+      1028.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      139.0,
+      1051.0,
+      954.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      568.0,
+      1106.0,
+      653.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      1043.0,
+      1110.0,
+      1079.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Web Appendix J: Heterogeneity in privacy risk among arms",
+    "page": 62,
+    "bbox": [
+      141.0,
+      1151.0,
+      814.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      137.0,
+      1201.0,
+      1085.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      140.0,
+      1385.0,
+      1084.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      136.0,
+      158.0,
+      1084.0,
+      227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      137.0,
+      246.0,
+      1083.0,
+      317.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      362.0,
+      320.0,
+      856.0,
+      438.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      367.0,
+      1080.0,
+      392.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      136.0,
+      447.0,
+      1082.0,
+      520.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      392.0,
+      521.0,
+      826.0,
+      638.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      570.0,
+      1080.0,
+      595.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      137.0,
+      648.0,
+      1084.0,
+      851.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      158.0,
+      869.0,
+      758.0,
+      895.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      497.0,
+      913.0,
+      725.0,
+      961.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      921.0,
+      1080.0,
+      946.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      139.0,
+      973.0,
+      602.0,
+      999.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      531.0,
+      1014.0,
+      691.0,
+      1065.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      1025.0,
+      1079.0,
+      1049.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      140.0,
+      1078.0,
+      439.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      519.0,
+      1122.0,
+      701.0,
+      1148.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1044.0,
+      1122.0,
+      1079.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      139.0,
+      1174.0,
+      264.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      546.0,
+      1206.0,
+      675.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      1219.0,
+      1079.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      138.0,
+      1269.0,
+      1083.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      512.0,
+      1391.0,
+      706.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      1043.0,
+      1411.0,
+      1080.0,
+      1435.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      137.0,
+      156.0,
+      769.0,
+      185.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      509.0,
+      210.0,
+      709.0,
+      272.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      227.0,
+      1080.0,
+      252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      139.0,
+      296.0,
+      443.0,
+      321.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      519.0,
+      328.0,
+      701.0,
+      396.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      349.0,
+      1080.0,
+      374.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      139.0,
+      414.0,
+      520.0,
+      438.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      523.0,
+      464.0,
+      697.0,
+      528.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      484.0,
+      1080.0,
+      509.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      159.0,
+      553.0,
+      962.0,
+      578.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      278.0,
+      599.0,
+      940.0,
+      747.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      659.0,
+      1080.0,
+      683.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      159.0,
+      765.0,
+      826.0,
+      791.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      406.0,
+      810.0,
+      812.0,
+      970.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      877.0,
+      1080.0,
+      900.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      159.0,
+      987.0,
+      587.0,
+      1013.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      436.0,
+      1044.0,
+      786.0,
+      1097.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1043.0,
+      1057.0,
+      1080.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      140.0,
+      1125.0,
+      197.0,
+      1149.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      533.0,
+      1172.0,
+      688.0,
+      1217.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1033.0,
+      1178.0,
+      1080.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      135.0,
+      1244.0,
+      1080.0,
+      1311.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      539.0,
+      1357.0,
+      682.0,
+      1394.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      1032.0,
+      1360.0,
+      1080.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      140.0,
+      1430.0,
+      612.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      141.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "J.1. Numerical example",
+    "page": 65,
+    "bbox": [
+      139.0,
+      158.0,
+      398.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      138.0,
+      207.0,
+      831.0,
+      233.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      470.0,
+      264.0,
+      751.0,
+      290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      137.0,
+      322.0,
+      1083.0,
+      393.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      577.0,
+      400.0,
+      645.0,
+      447.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      137.0,
+      468.0,
+      1086.0,
+      628.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      158.0,
+      648.0,
+      716.0,
+      672.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      494.0,
+      692.0,
+      729.0,
+      741.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      498.0,
+      748.0,
+      724.0,
+      799.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      138.0,
+      817.0,
+      181.0,
+      839.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      500.0,
+      850.0,
+      723.0,
+      898.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      137.0,
+      916.0,
+      1084.0,
+      987.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      418.0,
+      1000.0,
+      800.0,
+      1064.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      139.0,
+      1076.0,
+      1086.0,
+      1192.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      510.0,
+      1198.0,
+      710.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      138.0,
+      1266.0,
+      448.0,
+      1291.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      550.0,
+      1312.0,
+      673.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      159.0,
+      1366.0,
+      594.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      306.0,
+      1410.0,
+      912.0,
+      1460.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      140.0,
+      158.0,
+      684.0,
+      183.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      331.0,
+      193.0,
+      889.0,
+      301.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      158.0,
+      311.0,
+      458.0,
+      334.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      199.0,
+      366.0,
+      1022.0,
+      390.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      139.0,
+      423.0,
+      667.0,
+      446.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      137.0,
+      480.0,
+      1211.0,
+      504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      158.0,
+      536.0,
+      598.0,
+      559.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      478.0,
+      570.0,
+      742.0,
+      703.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      136.0,
+      714.0,
+      1083.0,
+      830.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      362.0,
+      846.0,
+      858.0,
+      901.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      136.0,
+      917.0,
+      1084.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      138.0,
+      1051.0,
+      1084.0,
+      1167.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      140.0,
+      1186.0,
+      1083.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      520.0,
+      1265.0,
+      703.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      139.0,
+      1330.0,
+      388.0,
+      1355.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      542.0,
+      1362.0,
+      676.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      140.0,
+      1430.0,
+      1044.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      141.0,
+      104.0,
+      167.0,
+      123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "J.2. Regret bound under weighted exploration",
+    "page": 67,
+    "bbox": [
+      137.0,
+      159.0,
+      626.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      137.0,
+      208.0,
+      1084.0,
+      368.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      555.0,
+      390.0,
+      667.0,
+      413.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1032.0,
+      386.0,
+      1080.0,
+      411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      158.0,
+      440.0,
+      876.0,
+      465.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      537.0,
+      498.0,
+      684.0,
+      531.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      496.0,
+      1080.0,
+      521.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      136.0,
+      551.0,
+      1083.0,
+      620.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      477.0,
+      622.0,
+      743.0,
+      684.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      641.0,
+      1080.0,
+      666.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      139.0,
+      695.0,
+      1084.0,
+      812.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      502.0,
+      818.0,
+      717.0,
+      886.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      841.0,
+      1080.0,
+      865.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      158.0,
+      896.0,
+      540.0,
+      921.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      514.0,
+      932.0,
+      706.0,
+      998.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      952.0,
+      1080.0,
+      977.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      140.0,
+      1008.0,
+      595.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      456.0,
+      1044.0,
+      764.0,
+      1110.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      1064.0,
+      1079.0,
+      1089.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      137.0,
+      1119.0,
+      1084.0,
+      1237.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      570.0,
+      1267.0,
+      652.0,
+      1293.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1032.0,
+      1265.0,
+      1080.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      138.0,
+      1321.0,
+      1083.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      467.0,
+      1391.0,
+      751.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      1033.0,
+      1411.0,
+      1080.0,
+      1436.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1057.0,
+      104.0,
+      1082.0,
+      123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      137.0,
+      158.0,
+      1084.0,
+      226.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      513.0,
+      246.0,
+      705.0,
+      278.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1032.0,
+      249.0,
+      1080.0,
+      274.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      136.0,
+      305.0,
+      1084.0,
+      422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      137.0,
+      446.0,
+      1082.0,
+      519.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      533.0,
+      551.0,
+      687.0,
+      586.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      551.0,
+      1080.0,
+      577.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      137.0,
+      611.0,
+      1084.0,
+      772.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      489.0,
+      772.0,
+      731.0,
+      838.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      792.0,
+      1080.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      158.0,
+      848.0,
+      741.0,
+      874.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      338.0,
+      891.0,
+      881.0,
+      967.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      920.0,
+      1080.0,
+      945.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      159.0,
+      981.0,
+      602.0,
+      1005.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      500.0,
+      1040.0,
+      721.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      1039.0,
+      1080.0,
+      1064.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      140.0,
+      1098.0,
+      608.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      442.0,
+      1140.0,
+      777.0,
+      1200.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      1158.0,
+      1080.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      140.0,
+      1217.0,
+      803.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      443.0,
+      1257.0,
+      777.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      1275.0,
+      1080.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      159.0,
+      1336.0,
+      619.0,
+      1359.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      369.0,
+      1376.0,
+      851.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      1033.0,
+      1407.0,
+      1080.0,
+      1432.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      141.0,
+      104.0,
+      168.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      136.0,
+      158.0,
+      1083.0,
+      322.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      493.0,
+      340.0,
+      724.0,
+      403.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      1033.0,
+      357.0,
+      1080.0,
+      383.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      138.0,
+      418.0,
+      1083.0,
+      490.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      558.0,
+      507.0,
+      664.0,
+      536.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      1033.0,
+      510.0,
+      1080.0,
+      535.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      137.0,
+      567.0,
+      1083.0,
+      639.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      390.0,
+      654.0,
+      829.0,
+      720.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      1033.0,
+      675.0,
+      1080.0,
+      699.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      140.0,
+      736.0,
+      1082.0,
+      808.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      504.0,
+      806.0,
+      714.0,
+      871.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      1033.0,
+      827.0,
+      1080.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      136.0,
+      885.0,
+      1086.0,
+      1143.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      137.0,
+      1159.0,
+      1084.0,
+      1278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      137.0,
+      1303.0,
+      1084.0,
+      1375.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      464.0,
+      1393.0,
+      755.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      1033.0,
+      1410.0,
+      1080.0,
+      1435.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      1057.0,
+      104.0,
+      1081.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      137.0,
+      158.0,
+      1082.0,
+      233.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      136.0,
+      253.0,
+      1083.0,
+      326.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      283.0,
+      349.0,
+      937.0,
+      421.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      1033.0,
+      379.0,
+      1080.0,
+      404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      140.0,
+      448.0,
+      1082.0,
+      520.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      139.0,
+      541.0,
+      1201.0,
+      608.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      1032.0,
+      611.0,
+      1080.0,
+      635.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      159.0,
+      658.0,
+      333.0,
+      682.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      437.0,
+      697.0,
+      785.0,
+      748.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      139.0,
+      774.0,
+      181.0,
+      796.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      473.0,
+      814.0,
+      750.0,
+      865.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      140.0,
+      890.0,
+      438.0,
+      913.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      154.0,
+      935.0,
+      1068.0,
+      1013.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      1034.0,
+      1011.0,
+      1079.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      138.0,
+      1057.0,
+      1084.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      158.0,
+      1246.0,
+      495.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      514.0,
+      1301.0,
+      707.0,
+      1349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      138.0,
+      1383.0,
+      1084.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      138.0,
+      159.0,
+      1083.0,
+      229.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      344.0,
+      243.0,
+      876.0,
+      329.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      1033.0,
+      273.0,
+      1080.0,
+      297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      138.0,
+      342.0,
+      1084.0,
+      505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 71,
+    "bbox": [
+      140.0,
+      538.0,
+      285.0,
+      564.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      141.0,
+      587.0,
+      1081.0,
+      703.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      142.0,
+      735.0,
+      1082.0,
+      806.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      141.0,
+      838.0,
+      1081.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      141.0,
+      939.0,
+      1081.0,
+      1057.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      141.0,
+      1088.0,
+      1081.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      141.0,
+      1189.0,
+      1083.0,
+      1304.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      142.0,
+      1336.0,
+      1083.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      1057.0,
+      104.0,
+      1083.0,
+      124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      140.0,
+      158.0,
+      1083.0,
+      326.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      356.0,
+      1083.0,
+      475.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      509.0,
+      1082.0,
+      629.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      661.0,
+      1082.0,
+      734.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      765.0,
+      1082.0,
+      885.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      140.0,
+      916.0,
+      1081.0,
+      990.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      1022.0,
+      1081.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      1172.0,
+      1082.0,
+      1246.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      141.0,
+      1277.0,
+      1082.0,
+      1350.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 72,
+    "bbox": [
+      140.0,
+      1382.0,
+      1081.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      140.0,
+      158.0,
+      1081.0,
+      271.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      302.0,
+      1083.0,
+      373.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      402.0,
+      1081.0,
+      518.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      548.0,
+      1081.0,
+      619.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      647.0,
+      1082.0,
+      764.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      792.0,
+      1082.0,
+      910.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      140.0,
+      939.0,
+      1082.0,
+      1055.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      140.0,
+      1084.0,
+      1078.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      141.0,
+      1184.0,
+      1082.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      140.0,
+      1284.0,
+      1080.0,
+      1354.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 73,
+    "bbox": [
+      140.0,
+      1383.0,
+      1082.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      1058.0,
+      104.0,
+      1082.0,
+      124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      140.0,
+      158.0,
+      1084.0,
+      315.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      342.0,
+      1083.0,
+      412.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      440.0,
+      1080.0,
+      554.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      582.0,
+      1082.0,
+      694.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      723.0,
+      1082.0,
+      836.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      864.0,
+      1081.0,
+      934.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      140.0,
+      961.0,
+      1079.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      1059.0,
+      1081.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      142.0,
+      1200.0,
+      1083.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 74,
+    "bbox": [
+      141.0,
+      1341.0,
+      1083.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      142.0,
+      104.0,
+      167.0,
+      124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      158.0,
+      1083.0,
+      322.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      355.0,
+      1080.0,
+      428.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      459.0,
+      1082.0,
+      532.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      562.0,
+      1082.0,
+      682.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      712.0,
+      1085.0,
+      786.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      817.0,
+      1081.0,
+      936.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      968.0,
+      1081.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      1071.0,
+      1079.0,
+      1143.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      1175.0,
+      1081.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      1277.0,
+      1080.0,
+      1350.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 75,
+    "bbox": [
+      141.0,
+      1382.0,
+      1083.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      1057.0,
+      104.0,
+      1083.0,
+      124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      143.0,
+      158.0,
+      1083.0,
+      273.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      141.0,
+      305.0,
+      1081.0,
+      378.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      141.0,
+      405.0,
+      1080.0,
+      478.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      142.0,
+      506.0,
+      1081.0,
+      624.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      140.0,
+      653.0,
+      1082.0,
+      772.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 76,
+    "bbox": [
+      141.0,
+      800.0,
+      1083.0,
+      872.0
+    ]
+  }
+]

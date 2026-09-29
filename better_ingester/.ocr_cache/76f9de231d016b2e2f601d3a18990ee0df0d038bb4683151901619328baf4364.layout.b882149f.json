@@ -1,0 +1,3335 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      367.0,
+      86.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Amphibian water to land transition reveals physical limits of olfaction",
+    "page": 0,
+    "bbox": [
+      199.0,
+      102.0,
+      1031.0,
+      131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      351.0,
+      153.0,
+      881.0,
+      177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      310.0,
+      178.0,
+      919.0,
+      203.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      211.0,
+      349.0,
+      1018.0,
+      703.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 0,
+    "bbox": [
+      244.0,
+      743.0,
+      459.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      793.0,
+      601.0,
+      1092.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      1092.0,
+      602.0,
+      1345.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      627.0,
+      741.0,
+      1128.0,
+      905.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      626.0,
+      913.0,
+      1129.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      626.0,
+      1222.0,
+      1128.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      106.0,
+      1405.0,
+      325.0,
+      1425.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      108.0,
+      1427.0,
+      317.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      218.0,
+      154.0,
+      1026.0,
+      302.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      415.0,
+      340.0,
+      787.0,
+      604.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      800.0,
+      336.0,
+      1091.0,
+      602.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 1. Odorant molecules are adsorbed much more efficiently in air (low Schmidt number (Sc)) than in water (high Sc). (a) Aquatic and (b) terrestrial axolotls together with their olfactory chamber morphologies reconstructed from computed tomography scans. (c) Binary mask of the aquatic olfactory chamber used to define the approximate cylindrical geometry and a schematic of the cylindrical model with a constant odor source fixing the concentration to co at the entrance. The wall is perfectly absorbing and the axial velocity follows a Poiseuille profile u(r). (d) Steady-state adsorption efficiency φ/φo as a function of Sc, obtained by solving Eq. (A11) for three different Reynolds numbers (Re). Note that since Péclet (Pe) is the relevant nondimensional number here, the solutions for all Re are related by rescaling Sc. (e) Odor fields in the cylinder at Sc = 1 and 200 for Re = 2.1. At low Sc, odor is depleted near the inlet and nearly all incoming molecules are adsorbed. At high Sc, the concentration remains high in the flow core and adsorption decreases.",
+    "page": 1,
+    "bbox": [
+      99.0,
+      639.0,
+      1131.0,
+      829.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      873.0,
+      506.0,
+      896.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      897.0,
+      601.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1104.0,
+      603.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      626.0,
+      873.0,
+      1128.0,
+      964.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      626.0,
+      967.0,
+      1129.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      627.0,
+      1403.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      106.0,
+      600.0,
+      154.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. RESULTS",
+    "page": 2,
+    "bbox": [
+      279.0,
+      199.0,
+      425.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      251.0,
+      601.0,
+      642.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      643.0,
+      602.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      1032.0,
+      601.0,
+      1288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      1289.0,
+      602.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      626.0,
+      106.0,
+      1128.0,
+      382.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      626.0,
+      383.0,
+      1128.0,
+      659.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      835.0,
+      674.0,
+      922.0,
+      725.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      689.0,
+      1124.0,
+      715.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      739.0,
+      833.0,
+      763.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      812.0,
+      778.0,
+      944.0,
+      828.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      792.0,
+      1124.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      626.0,
+      841.0,
+      1127.0,
+      889.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      803.0,
+      905.0,
+      951.0,
+      954.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1098.0,
+      917.0,
+      1124.0,
+      942.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      627.0,
+      967.0,
+      1128.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      625.0,
+      1197.0,
+      1128.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1111.0,
+      57.0,
+      1127.0,
+      74.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      130.0,
+      120.0,
+      554.0,
+      385.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      559.0,
+      121.0,
+      877.0,
+      385.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      883.0,
+      122.0,
+      1120.0,
+      384.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 2. For intermittent odor sources, the adsorption in water can reach over 80% of the total odor, but requires a long waiting time. (a) Fraction of odor molecules adsorbed from an instantaneous odor pulse at the inlet for different Re as a function of time. (b) Time to reach N/No = 0.1 of the total odor as a function of flow velocities in air and water. Even at the optimal flow velocity, the time to reach N/N0 = 0.1 exceeds 20 s in water. (c) Asymptotic adsorption efficiency N∞/N0 as a function of flow velocities, with the lower axis giving flow velocity in air (Sc = 1) and the upper axis flow velocity in water (Sc = 1000). Note that in the nondimensionalized form, there exists an optimal Re that maximizes adsorption (see also Fig. S6 in the Supporting Information).",
+    "page": 3,
+    "bbox": [
+      103.0,
+      423.0,
+      1126.0,
+      572.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      615.0,
+      598.0,
+      685.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      688.0,
+      601.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1011.0,
+      601.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      1242.0,
+      602.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      616.0,
+      1128.0,
+      824.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      625.0,
+      826.0,
+      1129.0,
+      1170.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      626.0,
+      1173.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1111.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      127.0,
+      156.0,
+      446.0,
+      341.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      474.0,
+      131.0,
+      779.0,
+      380.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      831.0,
+      141.0,
+      1117.0,
+      378.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      116.0,
+      397.0,
+      422.0,
+      650.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      465.0,
+      399.0,
+      768.0,
+      650.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      832.0,
+      396.0,
+      1116.0,
+      650.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 3. Metachronal beating of cilia increases the rate of odor adsorption and maximum odor flux – results shown for the chamber in water (Sc = 1000, Re = 0). (a) Streamlines and magnitude of the velocity field due to the metachronal beating of cilia at the top wall. (b) Adsorption efficiency N/N0 as a function of time for cilia beating with different wavelengths λ. The dashed curve shows adsorption efficiency without cilia. (c) Time to reach N/N0 = 0.1 for cilia beating at different λ. The dashed line shows the corresponding value when no cilia are present. (d) Instantaneous odor flux into the epithelium as a function of time for different λ, with (e) the maximum flux and (f) the time to reach it shown as functions of λ. Dashed lines show the corresponding values without cilia.",
+    "page": 4,
+    "bbox": [
+      102.0,
+      685.0,
+      1127.0,
+      836.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      878.0,
+      603.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      628.0,
+      877.0,
+      869.0,
+      900.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      626.0,
+      901.0,
+      1128.0,
+      1085.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      729.0,
+      1102.0,
+      1027.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1098.0,
+      1115.0,
+      1124.0,
+      1140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      626.0,
+      1164.0,
+      1127.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      752.0,
+      1221.0,
+      1006.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1098.0,
+      1235.0,
+      1124.0,
+      1259.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      627.0,
+      1288.0,
+      1127.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      628.0,
+      1403.0,
+      1127.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      171.0,
+      117.0,
+      457.0,
+      476.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 4. Direct numerical simulations in reconstructed axolotl chambers match the cylindrical model and reveal the spatial structure of wall adsorption (a) Odor concentration within the aquatic morphology at Sc = 100 with a steady odor source, fixing Re = 2.1. The concentration (color coded) remains high over most of the chamber, showing that much of the odor field travels through the chamber without reaching the epithelium. White arrows show the velocity field. (b) Odor concentration within the terrestrial morphology at Sc = 1. The odor field quickly reaches the epithelium where it is adsorbed, causing a strong depletion within the bulk of the chamber. (c) Odor molecules per unit surface reaching the surface in a unit time, J = |D∇c·], in the aquatic chamber and (d) in the terrestrial chamber, projected onto the visualization plane. The boundary color shows J normalized with the maximum flux. The inner color shows the odor field. Consistent with (a) and (b), most of the adsorption occurs immediately near the entrance in air, whereas it occurs throughout the chamber in water. (e) Adsorption efficiency as a function of Sc for the aquatic chamber. The cylindrical theory from Fig. 1 is shown for reference, together with direct numerical simulations for continuous and sinusoidal inhalation.",
+    "page": 5,
+    "bbox": [
+      100.0,
+      525.0,
+      1129.0,
+      758.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      798.0,
+      602.0,
+      1028.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1037.0,
+      603.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      626.0,
+      797.0,
+      1128.0,
+      1006.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. DISCUSSION",
+    "page": 5,
+    "bbox": [
+      783.0,
+      1052.0,
+      973.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      627.0,
+      1103.0,
+      1128.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      627.0,
+      1403.0,
+      1129.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1112.0,
+      57.0,
+      1126.0,
+      75.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "a",
+    "page": 6,
+    "bbox": [
+      213.0,
+      117.0,
+      232.0,
+      136.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      179.0,
+      136.0,
+      515.0,
+      446.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "b",
+    "page": 6,
+    "bbox": [
+      212.0,
+      454.0,
+      234.0,
+      476.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      178.0,
+      502.0,
+      526.0,
+      725.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 5. When the olfactory target is close and odor is near saturation, a large number of odor molecules are adsorbed, despite inefficiencies in the process. However, higher concen- trations do not help with detection speedup. (a) Comparison of the adsorption rate in air, φair, with the adsorption rate in water, φwater, obtained by combining the saturated molecular concentration with the hydrodynamic adsorption efficiency. The dashed line denotes equal adsorption rates in the two me- dia. Red triangles indicate molecules expected to be sensed in air, whereas blue circles indicate molecules expected to be sensed in water. (b) Normalized odor detection time t*/tD as a function of increase in concentration near the inlet. An increase in the concentration by a factor of 104 only speeds up detection by about four times.",
+    "page": 6,
+    "bbox": [
+      101.0,
+      761.0,
+      602.0,
+      1057.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      1105.0,
+      602.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      106.0,
+      1129.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      627.0,
+      593.0,
+      1128.0,
+      892.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      895.0,
+      1129.0,
+      1217.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      626.0,
+      1220.0,
+      1129.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1111.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      170.0,
+      119.0,
+      679.0,
+      387.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      730.0,
+      144.0,
+      1064.0,
+      371.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. 6. Axolotls in the aquatic phase show very weak inhalation but respond to odor with head movements. (a) Inhalation flow for three aquatic (left) and three terrestrial (right) axolotls. Aquatic flow is near zero, whereas terrestrial animals display strong inhalation. (b) Number of head snaps in the presence and absence of odor. Points are individual trials. The square and bars show the mean and the orange line the median. Head snapping increases markedly when odor is present.",
+    "page": 7,
+    "bbox": [
+      103.0,
+      421.0,
+      1126.0,
+      508.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      103.0,
+      551.0,
+      353.0,
+      575.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      608.0,
+      601.0,
+      911.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      944.0,
+      603.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "AUTHOR CONTRIBUTIONS",
+    "page": 7,
+    "bbox": [
+      733.0,
+      550.0,
+      1025.0,
+      572.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      627.0,
+      600.0,
+      1128.0,
+      788.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ACKNOWLEDGMENTS",
+    "page": 7,
+    "bbox": [
+      758.0,
+      828.0,
+      1001.0,
+      850.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      627.0,
+      879.0,
+      1128.0,
+      1065.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix A: Methods",
+    "page": 7,
+    "bbox": [
+      770.0,
+      1107.0,
+      986.0,
+      1130.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Governing equations",
+    "page": 7,
+    "bbox": [
+      630.0,
+      1158.0,
+      843.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      626.0,
+      1181.0,
+      1126.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      728.0,
+      1245.0,
+      1030.0,
+      1322.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1083.0,
+      1258.0,
+      1124.0,
+      1283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      627.0,
+      1343.0,
+      1126.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      781.0,
+      1407.0,
+      974.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1082.0,
+      1419.0,
+      1124.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1110.0,
+      56.0,
+      1127.0,
+      74.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      106.0,
+      601.0,
+      269.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      236.0,
+      285.0,
+      467.0,
+      337.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      556.0,
+      296.0,
+      597.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      353.0,
+      601.0,
+      423.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      250.0,
+      440.0,
+      453.0,
+      491.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      556.0,
+      452.0,
+      597.0,
+      476.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      508.0,
+      600.0,
+      580.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      275.0,
+      594.0,
+      429.0,
+      649.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      556.0,
+      612.0,
+      597.0,
+      636.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      665.0,
+      600.0,
+      713.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      280.0,
+      729.0,
+      424.0,
+      783.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      556.0,
+      746.0,
+      598.0,
+      770.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      799.0,
+      600.0,
+      847.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      268.0,
+      859.0,
+      437.0,
+      910.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      557.0,
+      870.0,
+      598.0,
+      895.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      924.0,
+      385.0,
+      947.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      948.0,
+      599.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      147.0,
+      1034.0,
+      514.0,
+      1089.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      557.0,
+      1047.0,
+      597.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Cylindrical approximation",
+    "page": 8,
+    "bbox": [
+      103.0,
+      1130.0,
+      375.0,
+      1153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      1153.0,
+      600.0,
+      1247.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      251.0,
+      1262.0,
+      451.0,
+      1316.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      557.0,
+      1277.0,
+      597.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      1333.0,
+      458.0,
+      1358.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      129.0,
+      1374.0,
+      570.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      547.0,
+      1426.0,
+      598.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      627.0,
+      105.0,
+      1127.0,
+      155.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      639.0,
+      171.0,
+      1065.0,
+      223.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1073.0,
+      188.0,
+      1124.0,
+      213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      626.0,
+      242.0,
+      1129.0,
+      677.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      628.0,
+      678.0,
+      1127.0,
+      726.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      748.0,
+      745.0,
+      1006.0,
+      801.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1073.0,
+      761.0,
+      1124.0,
+      786.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      627.0,
+      817.0,
+      1126.0,
+      866.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      686.0,
+      885.0,
+      1021.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1073.0,
+      972.0,
+      1124.0,
+      997.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Full-geometry direct numerical simulations",
+    "page": 8,
+    "bbox": [
+      630.0,
+      1058.0,
+      1069.0,
+      1082.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      626.0,
+      1082.0,
+      1129.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1102.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      105.0,
+      602.0,
+      270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      278.0,
+      601.0,
+      740.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      749.0,
+      601.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      100.0,
+      1173.0,
+      602.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix B: Optimal adsorption of an odor patch inside a cylinder",
+    "page": 9,
+    "bbox": [
+      640.0,
+      107.0,
+      1117.0,
+      152.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      178.0,
+      1128.0,
+      295.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      757.0,
+      307.0,
+      997.0,
+      357.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1083.0,
+      321.0,
+      1124.0,
+      346.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      626.0,
+      367.0,
+      1128.0,
+      551.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      723.0,
+      562.0,
+      1032.0,
+      617.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1083.0,
+      578.0,
+      1124.0,
+      603.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      629.0,
+      1125.0,
+      674.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      675.0,
+      1126.0,
+      757.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      796.0,
+      768.0,
+      958.0,
+      816.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1083.0,
+      781.0,
+      1124.0,
+      806.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      827.0,
+      1125.0,
+      875.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      819.0,
+      904.0,
+      936.0,
+      954.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1083.0,
+      918.0,
+      1124.0,
+      943.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix C: Cilia-driven flow and adsorption",
+    "page": 9,
+    "bbox": [
+      662.0,
+      992.0,
+      1095.0,
+      1016.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      1042.0,
+      1127.0,
+      1298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      629.0,
+      1294.0,
+      1126.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      794.0,
+      1354.0,
+      962.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1083.0,
+      1357.0,
+      1124.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      627.0,
+      1398.0,
+      1127.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1101.0,
+      56.0,
+      1125.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      100.0,
+      106.0,
+      601.0,
+      155.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      210.0,
+      168.0,
+      491.0,
+      213.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      557.0,
+      177.0,
+      598.0,
+      203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      102.0,
+      228.0,
+      599.0,
+      289.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      260.0,
+      303.0,
+      442.0,
+      356.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      557.0,
+      317.0,
+      598.0,
+      343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      372.0,
+      602.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      628.0,
+      103.0,
+      1127.0,
+      160.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      752.0,
+      177.0,
+      1002.0,
+      207.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1083.0,
+      181.0,
+      1124.0,
+      206.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      625.0,
+      222.0,
+      1129.0,
+      420.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      114.0,
+      508.0,
+      602.0,
+      571.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      115.0,
+      572.0,
+      600.0,
+      634.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      115.0,
+      635.0,
+      599.0,
+      697.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      116.0,
+      698.0,
+      600.0,
+      780.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      115.0,
+      781.0,
+      600.0,
+      864.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      115.0,
+      865.0,
+      601.0,
+      907.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      114.0,
+      907.0,
+      601.0,
+      1052.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      114.0,
+      1054.0,
+      600.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      111.0,
+      1116.0,
+      599.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      1159.0,
+      599.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      1242.0,
+      599.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      107.0,
+      1306.0,
+      600.0,
+      1407.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      104.0,
+      1408.0,
+      600.0,
+      1431.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      663.0,
+      508.0,
+      1127.0,
+      592.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      632.0,
+      593.0,
+      1126.0,
+      676.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      633.0,
+      677.0,
+      1126.0,
+      780.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      631.0,
+      781.0,
+      1127.0,
+      823.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      632.0,
+      824.0,
+      1127.0,
+      926.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      631.0,
+      928.0,
+      1127.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      632.0,
+      1012.0,
+      1126.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      631.0,
+      1096.0,
+      1126.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      631.0,
+      1159.0,
+      1125.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      632.0,
+      1222.0,
+      1126.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      632.0,
+      1325.0,
+      1127.0,
+      1386.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      631.0,
+      1388.0,
+      1128.0,
+      1431.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1101.0,
+      56.0,
+      1128.0,
+      75.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      140.0,
+      109.0,
+      387.0,
+      128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      130.0,
+      600.0,
+      190.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      193.0,
+      599.0,
+      255.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      257.0,
+      600.0,
+      336.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      339.0,
+      600.0,
+      421.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      422.0,
+      600.0,
+      525.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      528.0,
+      599.0,
+      608.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      611.0,
+      600.0,
+      671.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      674.0,
+      599.0,
+      735.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      737.0,
+      598.0,
+      779.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      780.0,
+      601.0,
+      839.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      107.0,
+      841.0,
+      600.0,
+      881.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      882.0,
+      599.0,
+      964.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      106.0,
+      967.0,
+      599.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1101.0,
+      56.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "S I. ASYMPTOTICS OF ADSORPTION INSIDE A CYLINDER AND SATURATED ADSORPTION RATES OF ODORANT MOLECULES",
+    "page": 12,
+    "bbox": [
+      120.0,
+      197.0,
+      1113.0,
+      243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      270.0,
+      1126.0,
+      317.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      423.0,
+      333.0,
+      806.0,
+      386.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      348.0,
+      1124.0,
+      373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      100.0,
+      405.0,
+      1126.0,
+      452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      122.0,
+      451.0,
+      960.0,
+      477.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      467.0,
+      496.0,
+      761.0,
+      556.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      511.0,
+      1124.0,
+      536.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      574.0,
+      1126.0,
+      646.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      443.0,
+      660.0,
+      785.0,
+      714.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      676.0,
+      1124.0,
+      701.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      102.0,
+      733.0,
+      1126.0,
+      779.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      100.0,
+      779.0,
+      1127.0,
+      849.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      515.0,
+      867.0,
+      714.0,
+      924.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      885.0,
+      1124.0,
+      910.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      940.0,
+      479.0,
+      965.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      428.0,
+      983.0,
+      802.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1087.0,
+      995.0,
+      1124.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      101.0,
+      1051.0,
+      838.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      473.0,
+      1094.0,
+      756.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      1141.0,
+      455.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      516.0,
+      1184.0,
+      714.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      1203.0,
+      1124.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      105.0,
+      1260.0,
+      1127.0,
+      1306.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      1306.0,
+      1127.0,
+      1375.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      480.0,
+      1394.0,
+      747.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1086.0,
+      1414.0,
+      1124.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1101.0,
+      56.0,
+      1128.0,
+      75.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      312.0,
+      104.0,
+      920.0,
+      532.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S1. Comparison of adsorption efficiency for the long tube (low Pe, Eq. (S3)) and short tube (high Pe, Eq. (S6)) approxi- mations with numerical results obtained by solving Eq. (S1), for the aquatic chamber geometry (L/R = 8.67).",
+    "page": 13,
+    "bbox": [
+      103.0,
+      561.0,
+      1126.0,
+      607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      100.0,
+      645.0,
+      1128.0,
+      923.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "S II. SHORT TIME LIMIT OF ADSORPTION INSIDE A CYLINDER FOR AN EPHEMERAL ODOR SOURCE",
+    "page": 13,
+    "bbox": [
+      112.0,
+      962.0,
+      1118.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      101.0,
+      1035.0,
+      1126.0,
+      1152.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      101.0,
+      1153.0,
+      1127.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      518.0,
+      1230.0,
+      709.0,
+      1278.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1086.0,
+      1243.0,
+      1124.0,
+      1268.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      103.0,
+      1286.0,
+      531.0,
+      1307.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      122.0,
+      1309.0,
+      593.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      480.0,
+      1339.0,
+      749.0,
+      1394.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1086.0,
+      1355.0,
+      1124.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      103.0,
+      1402.0,
+      1127.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1101.0,
+      57.0,
+      1127.0,
+      75.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      106.0,
+      1128.0,
+      223.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      521.0,
+      239.0,
+      709.0,
+      277.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1086.0,
+      252.0,
+      1124.0,
+      276.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      295.0,
+      1022.0,
+      320.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      259.0,
+      342.0,
+      974.0,
+      760.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S2. Comparison of the short-time limit of adsorption inside a cylinder with the numerical results for adsorption of a pulse source in water with Re = 0.1.",
+    "page": 14,
+    "bbox": [
+      103.0,
+      790.0,
+      1126.0,
+      833.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "S III. SENSING TIMESCALE",
+    "page": 14,
+    "bbox": [
+      460.0,
+      901.0,
+      770.0,
+      923.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      100.0,
+      952.0,
+      1130.0,
+      1161.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      456.0,
+      1178.0,
+      771.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1086.0,
+      1192.0,
+      1124.0,
+      1217.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      1241.0,
+      1128.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      104.0,
+      1333.0,
+      1127.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1101.0,
+      56.0,
+      1128.0,
+      76.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      259.0,
+      104.0,
+      972.0,
+      515.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S3. Speedup in odor detection from a pulse source, t*/t, when the inlet concentration is increased by a factor α, with detection defined by a threshold on the instantaneous adsorbed flux. The orange curve is the numerical solution with Re = 0.1. The threshold when α = 1 is the maximum flux in the numerical solution.",
+    "page": 15,
+    "bbox": [
+      99.0,
+      543.0,
+      1125.0,
+      607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      101.0,
+      647.0,
+      1128.0,
+      766.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      259.0,
+      782.0,
+      972.0,
+      1187.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S4. Total odor flux into the wall of a cylinder in water for an instantaneous odor pulse located at the inlet.",
+    "page": 15,
+    "bbox": [
+      155.0,
+      1216.0,
+      1072.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1101.0,
+      57.0,
+      1127.0,
+      76.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      219.0,
+      118.0,
+      615.0,
+      406.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      616.0,
+      115.0,
+      1013.0,
+      405.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S5. Adsorption of odor inside a cylinder when the odor concentration at the inlet is fixed to a constant. (a) Adsorption efficiency of total odor, N/N0, as a function of time for flows at different Re (solid lines) at Sc = 1000. (b) Total adsorbed odor N, normalized with Nc0 = C0V where V is the volume of the cylinder, as a function of time. Note that here ν and R are kept fixed and U is varied to achieve different Re.",
+    "page": 16,
+    "bbox": [
+      103.0,
+      440.0,
+      1127.0,
+      528.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      218.0,
+      586.0,
+      605.0,
+      839.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      623.0,
+      589.0,
+      1012.0,
+      836.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S6. Adsorption of an odor pulse located at the inlet of a cylinder. (a) Asymptotic adsorption efficiency N∞/No as a function of Re with the lower axis giving Re in air (Sc = 1) and the upper axis Re in water (Sc = 1000). In water, N∞/N0 achieves a maximum at very low Re. (b) Time to reach N/N0 = 0.1 of the total odor as a function of Re. Even for the optimal Re, the time to reach N/N0 = 0.1 takes over 20s in water.",
+    "page": 16,
+    "bbox": [
+      103.0,
+      875.0,
+      1129.0,
+      960.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      112.0,
+      1022.0,
+      509.0,
+      1259.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      511.0,
+      1023.0,
+      819.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      836.0,
+      1024.0,
+      1117.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FIG. S7. Total odor flux into the walls of a cylinder for an instantaneous odor pulse, as a function of Re. (a) Odor flux as a function of time for different values of Re. (b) Maximum odor flux as a function of Re. The maximum increases with Re, eventually reaching a peak at an intermediate Re. (c) Time to reach a threshol flux as a function of Re.",
+    "page": 16,
+    "bbox": [
+      100.0,
+      1356.0,
+      1127.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1101.0,
+      56.0,
+      1128.0,
+      75.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE S1. Panel of odor molecules used to estimate saturated water and air adsorption rates.",
+    "page": 17,
+    "bbox": [
+      225.0,
+      120.0,
+      1004.0,
+      144.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      97.0,
+      143.0,
+      1147.0,
+      1139.0
+    ]
+  }
+]

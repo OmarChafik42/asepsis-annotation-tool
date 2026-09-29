@@ -1,0 +1,794 @@
+{
+  "two_unnumbered": [
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4",
+      "category": "q-bio.PE",
+      "published": "2026-07-20",
+      "title": "How genome redundancy can promote evolutionary innovation",
+      "arxiv_id": "2607.17687v1"
+    },
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4-2",
+      "category": "q-bio.PE",
+      "published": "2026-08-12",
+      "title": "A multiscale theory based on metabolic scaling connects forest dynamics to tree-",
+      "arxiv_id": "2608.11918v1"
+    },
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4-2",
+      "category": "physics.bio-ph",
+      "published": "2026-08-14",
+      "title": "Length scale of cellular activity determines signatures of epithelial remodeling",
+      "arxiv_id": "2608.14458v1"
+    },
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "physics.bio-ph",
+      "published": "2026-08-19",
+      "title": "Elongation suppresses rheotaxis and enables microfluidic enrichment of \\b{eta}-l",
+      "arxiv_id": "2608.19077v1"
+    },
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "math.ST",
+      "published": "2026-08-21",
+      "title": "The geometry of AI validation: Exact certification limits for iid best-of-N sear",
+      "arxiv_id": "2608.21496v1"
+    },
+    {
+      "cell": "two_unnumbered",
+      "columns": "two",
+      "numbering": "unnumbered",
+      "documentclass": "wlscirep",
+      "category": "econ.GN",
+      "published": "2026-08-22",
+      "title": "Debt relief and remittances can offset foreign aid cuts for most countries, but ",
+      "arxiv_id": "2608.21843v1"
+    }
+  ],
+  "single_unnumbered": [
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "eptcs",
+      "category": "q-bio.PE",
+      "published": "2026-07-22",
+      "title": "A ProbLog program to infer individual genotypes from familial phenotypes in auto",
+      "arxiv_id": "2607.20250v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4-2",
+      "category": "q-bio.PE",
+      "published": "2026-07-23",
+      "title": "Evolutionary Le Chatelier's Principle: Phenotypic Plasticity and Genetic Assimil",
+      "arxiv_id": "2607.20915v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "q-bio.PE",
+      "published": "2026-07-22",
+      "title": "Jointly estimating transmissibility and prior immunity from epidemic time series",
+      "arxiv_id": "2607.21657v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "elsarticle",
+      "category": "physics.bio-ph",
+      "published": "2026-08-07",
+      "title": "Permutation theory governs long-term dynamics of critical Boolean networks",
+      "arxiv_id": "2608.07790v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "cs.DL",
+      "published": "2026-08-11",
+      "title": "HexEval: An Evidence-Driven Hexagonal Framework for Multidimensional Scholar Ass",
+      "arxiv_id": "2608.10584v2"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "econ.GN",
+      "published": "2026-08-12",
+      "title": "Robustness over efficiency in climate coalitions: a bistable model and a map of ",
+      "arxiv_id": "2608.12143v3"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "wlscirep",
+      "category": "econ.GN",
+      "published": "2026-08-12",
+      "title": "Oil price shocks reveal unequal capacities for mobility adaptation",
+      "arxiv_id": "2608.12281v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4-2",
+      "category": "physics.bio-ph",
+      "published": "2026-08-13",
+      "title": "Local molecular motions encode time-resolved infrared spectra of proteins",
+      "arxiv_id": "2608.12914v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "q-bio.QM",
+      "published": "2026-08-17",
+      "title": "tSymPerturb converts longitudinal symptom networks into time-indexed interventio",
+      "arxiv_id": "2608.16366v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "revtex4-2",
+      "category": "q-bio.NC",
+      "published": "2026-08-17",
+      "title": "Phase-based spatial ordinal patterns for characterizing oscillatory dynamics",
+      "arxiv_id": "2608.17196v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "econ.GN",
+      "published": "2026-08-18",
+      "title": "Reputation and institutional certification as complementary trust mechanisms in ",
+      "arxiv_id": "2608.17312v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "q-bio.QM",
+      "published": "2026-08-18",
+      "title": "Empirical mode decomposition and interpretable machine learning for preterm birt",
+      "arxiv_id": "2608.17643v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "sn-jnl",
+      "category": "physics.soc-ph",
+      "published": "2026-08-19",
+      "title": "Removing Population Size, World Cities Leave on Land a Footprint of Wealth",
+      "arxiv_id": "2608.18792v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "stat.AP",
+      "published": "2026-08-20",
+      "title": "SoilWaterNow: Soil water nowcasting for mapping plant available water (PAW) acro",
+      "arxiv_id": "2608.19930v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "q-bio.PE",
+      "published": "2026-08-20",
+      "title": "Novel models of trait evolution via an expansion of Lande's fitness function: Th",
+      "arxiv_id": "2608.20232v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "cs.CY",
+      "published": "2026-08-21",
+      "title": "Fine-tuning LLMs for Tourist Trajectory Prediction using Field Experiment Data",
+      "arxiv_id": "2608.20830v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "wlscirep",
+      "category": "stat.AP",
+      "published": "2026-08-21",
+      "title": "Knowledge-guided Transfer Prediction In Underrepresented Populations: A GRU-D-St",
+      "arxiv_id": "2608.21073v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "cs.CY",
+      "published": "2026-08-21",
+      "title": "The Substitution Escrow Threshold: When \"Compatible With\" Becomes Safe Enough to",
+      "arxiv_id": "2608.21221v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "amia",
+      "category": "stat.AP",
+      "published": "2026-08-21",
+      "title": "Predicting Early Functional Decline from Longitudinal Laboratory and Vital Sign ",
+      "arxiv_id": "2608.21589v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "stat.AP",
+      "published": "2026-08-22",
+      "title": "Bayesian spatio-temporal exposure modelling of air pollution in Rome, Italy, and",
+      "arxiv_id": "2608.21848v1"
+    },
+    {
+      "cell": "single_unnumbered",
+      "columns": "single",
+      "numbering": "unnumbered",
+      "documentclass": "article",
+      "category": "cs.CY",
+      "published": "2026-08-24",
+      "title": "Large language models simulate intersectional synthetic identities with a budget",
+      "arxiv_id": "2608.23005v1"
+    }
+  ],
+  "two_arabic": [
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "revtex4",
+      "category": "q-bio.PE",
+      "published": "2026-07-26",
+      "title": "Spatial spread of infection: transitions between pulled and pushed fronts",
+      "arxiv_id": "2607.23728v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "econ.GN",
+      "published": "2026-08-07",
+      "title": "FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Ret",
+      "arxiv_id": "2608.07400v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "q-bio.NC",
+      "published": "2026-08-11",
+      "title": "Evaluation Resolution Confounds Learning-Rule Comparisons in Model-Brain RSA of ",
+      "arxiv_id": "2608.12408v2"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "acmart",
+      "category": "q-fin.ST",
+      "published": "2026-08-14",
+      "title": "Dependence-Informed Sparse Neural Architecture for Stock Return Prediction",
+      "arxiv_id": "2608.14323v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "revtex4-2",
+      "category": "physics.soc-ph",
+      "published": "2026-08-18",
+      "title": "Conditional-path Monte Carlo for rare stochastic dynamics on networks: Details a",
+      "arxiv_id": "2608.17511v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "revtex4-2",
+      "category": "physics.bio-ph",
+      "published": "2026-08-21",
+      "title": "Amphibian water to land transition reveals physical limits of olfaction",
+      "arxiv_id": "2608.20765v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "cs.NI",
+      "published": "2026-08-22",
+      "title": "Building A CSFQ-Inspired Transport for Switched CXL Memory Pooling",
+      "arxiv_id": "2608.21731v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "revtex4-2",
+      "category": "cond-mat.stat-mech",
+      "published": "2026-08-22",
+      "title": "Critical Topological Photonics in Synthetic Dimensions",
+      "arxiv_id": "2608.21791v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "revtex4-1",
+      "category": "cond-mat.soft",
+      "published": "2026-08-24",
+      "title": "Collective self-sorting on a chip",
+      "arxiv_id": "2608.22673v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "acmart_modified",
+      "category": "cs.LG",
+      "published": "2026-08-24",
+      "title": "Spicing up Genetic Netlist Generation with LLMs",
+      "arxiv_id": "2608.23317v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "acmart",
+      "category": "cs.CY",
+      "published": "2026-08-24",
+      "title": "Enabling Organisational Change Through Ground-Up Initiatives: A Case Study from ",
+      "arxiv_id": "2608.23374v1"
+    },
+    {
+      "cell": "two_arabic",
+      "columns": "two",
+      "numbering": "arabic",
+      "documentclass": "aastex701",
+      "category": "astro-ph.GA",
+      "published": "2026-08-24",
+      "title": "The Road to Normalcy: Environment-Driven Evolutionary Pathways for Primordial Bl",
+      "arxiv_id": "2608.23498v1"
+    }
+  ],
+  "single_arabic": [
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "q-bio.PE",
+      "published": "2026-07-29",
+      "title": "Hybrid SINDy-EnKF in Learning Chikungunya Dynamics from Incomplete, Noisy or Par",
+      "arxiv_id": "2607.27137v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "q-fin.ST",
+      "published": "2026-08-01",
+      "title": "AI and Exchange Rate Predictability",
+      "arxiv_id": "2608.00761v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "econ.GN",
+      "published": "2026-08-11",
+      "title": "A Note on the Identification Step in \"A Semistructural Methodology for Policy Co",
+      "arxiv_id": "2608.10596v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "q-bio.QM",
+      "published": "2026-08-16",
+      "title": "The Little Scientist: LLM Agent-Driven Discovery via the Scientific Method",
+      "arxiv_id": "2608.16951v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "informs3",
+      "category": "econ.EM",
+      "published": "2026-08-20",
+      "title": "A Privacy Budgeting Framework for Online Experimentation",
+      "arxiv_id": "2608.19944v2"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "math.ST",
+      "published": "2026-08-20",
+      "title": "Self-Normalizing Denominators in Rational Causal Estimation",
+      "arxiv_id": "2608.20223v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "physics.soc-ph",
+      "published": "2026-08-20",
+      "title": "Growth Without Us: Machine Consumers, Corporate Circularity, and the Decoupling ",
+      "arxiv_id": "2608.20231v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "stat.ME",
+      "published": "2026-08-21",
+      "title": "LABS: Extending the scope of binary segmentation via a look-ahead device",
+      "arxiv_id": "2608.21122v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "amsart",
+      "category": "math.PR",
+      "published": "2026-08-24",
+      "title": "Locally finite fixed points of branching Brownian motion",
+      "arxiv_id": "2608.23202v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "stat.AP",
+      "published": "2026-08-24",
+      "title": "An Approach to Study the Structural Consistency of Triangle Badness Functions an",
+      "arxiv_id": "2608.23267v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "siamart250211",
+      "category": "math.NA",
+      "published": "2026-08-24",
+      "title": "Transform-Based Multilinear Algebra via Tensor Decomposition",
+      "arxiv_id": "2608.23366v1"
+    },
+    {
+      "cell": "single_arabic",
+      "columns": "single",
+      "numbering": "arabic",
+      "documentclass": "article",
+      "category": "cs.LG",
+      "published": "2026-08-24",
+      "title": "Interpretable AI with Local Distillation",
+      "arxiv_id": "2608.23538v1"
+    }
+  ],
+  "two_roman": [
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "q-fin.ST",
+      "published": "2026-08-09",
+      "title": "Hybrid Neural-Classical Correction for Frozen Time Series Foundation Models: A C",
+      "arxiv_id": "2608.08825v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeeconf",
+      "category": "q-bio.PE",
+      "published": "2026-08-11",
+      "title": "Removal-Only Actuation in Age-Structured Branching Populations: Fundamental Limi",
+      "arxiv_id": "2608.10641v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "q-bio.QM",
+      "published": "2026-08-18",
+      "title": "GenEx: A Graph-Based Representational Paradigm for SARS-CoV-2 Variant Detection ",
+      "arxiv_id": "2608.18238v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "q-bio.NC",
+      "published": "2026-08-19",
+      "title": "The Role of Grid Cells in Reducing Spatial Aliasing in Hippocampal Place Represe",
+      "arxiv_id": "2608.18569v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "physics.med-ph",
+      "published": "2026-08-20",
+      "title": "Flow Matching-Based PET Image Reconstruction",
+      "arxiv_id": "2608.20112v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "econ.GN",
+      "published": "2026-08-21",
+      "title": "A Synthetic Benchmark Dataset with Endogenous Marketing Spend for Validating Mar",
+      "arxiv_id": "2608.21130v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.CY",
+      "published": "2026-08-21",
+      "title": "Counterfactual, Per-Decision Bias Auditing for Automated Hiring: Localizing and ",
+      "arxiv_id": "2608.21537v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.NI",
+      "published": "2026-08-22",
+      "title": "Reliability-Aware Scheduling for Digital Twin Maintenance",
+      "arxiv_id": "2608.21866v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-23",
+      "title": "EM Informed Holographic Imaging via Unrolled Deep Networks",
+      "arxiv_id": "2608.22409v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeeconf",
+      "category": "eess.SY",
+      "published": "2026-08-24",
+      "title": "General-Sum Linear Regulator Games for Positive Systems",
+      "arxiv_id": "2608.22711v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-24",
+      "title": "Breakdown of Edgeworth Expansion in Finite-Blocklength Regime and Exact Absorpti",
+      "arxiv_id": "2608.23303v1"
+    },
+    {
+      "cell": "two_roman",
+      "columns": "two",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.LG",
+      "published": "2026-08-24",
+      "title": "Robustness of Anomaly Detection Models for Industrial Control Systems under Trai",
+      "arxiv_id": "2608.23547v1"
+    }
+  ],
+  "single_roman": [
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-22",
+      "title": "Construction and Design of MPAC Codes",
+      "arxiv_id": "2608.21757v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-22",
+      "title": "Quantum Locally Repairable Codes from Negacyclic and Repeated-Root Cyclic Codes ",
+      "arxiv_id": "2608.21852v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-22",
+      "title": "Tight Weighted Second-Order Asymptotics for the Wyner--Ahlswede--K\u00f6rner Problem ",
+      "arxiv_id": "2608.21991v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-23",
+      "title": "Secure Wireless Information Transfer and Energy Harvesting in HAPS-Based Network",
+      "arxiv_id": "2608.22495v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-23",
+      "title": "Waveform Design for Simultaneous MIMO Radar Sensing and Multi-User Communication",
+      "arxiv_id": "2608.22588v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-24",
+      "title": "IMNet: Intercarrier Interference Mitigation Network for Integrated Sensing and C",
+      "arxiv_id": "2608.22860v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-24",
+      "title": "Rethinking the Foundations of Two-Sided AI Models for 6G",
+      "arxiv_id": "2608.22918v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-25",
+      "title": "Receive Diversity for Differential Binary Noise Modulation",
+      "arxiv_id": "2608.23950v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-22",
+      "title": "Construction and Design of MPAC Codes",
+      "arxiv_id": "2608.21757v2"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "eess.SP",
+      "published": "2026-08-25",
+      "title": "Coherent Direct D-MIMO Localization",
+      "arxiv_id": "2608.24880v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-26",
+      "title": "Beyond Minimum Distance: The Optimal Leading Coefficient in the High-SNR Error-P",
+      "arxiv_id": "2608.25805v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-25",
+      "title": "Distributed Hypothesis Testing Against Dependence",
+      "arxiv_id": "2608.24403v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-25",
+      "title": "Convertible Polynomial Evaluation Codes in the Merge Regime: A Skew-Polynomial F",
+      "arxiv_id": "2608.24179v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-25",
+      "title": "The Optimal Asymptotic Rate of Generalized Covering Codes",
+      "arxiv_id": "2608.24856v1"
+    },
+    {
+      "cell": "single_roman",
+      "columns": "single",
+      "numbering": "roman",
+      "documentclass": "ieeetran",
+      "category": "cs.IT",
+      "published": "2026-08-26",
+      "title": "Exact Common Information and Exact Channel Synthesis for Correlated Gaussian Sou",
+      "arxiv_id": "2608.26012v1"
+    }
+  ]
+}

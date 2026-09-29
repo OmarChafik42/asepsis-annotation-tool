@@ -1,0 +1,233 @@
+% TODOS: Citations (ctrl+f TODO) and Bib file
+% PaddleOCR-V-1.6 links: https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6, technical report https://arxiv.org/pdf/2606.03264, bibtex
+% OpenKB: https://github.com/VectifyAI/OpenKB
+% PageIndex: https://github.com/VectifyAI/PageIndex, bibtex
+
+\documentclass[11pt, a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+% biblatex with the bibtex backend (no biber dependency, so it compiles under
+% tectonic).  Switch to backend=biber on a full TeX Live install if preferred.
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+
+\title{\textbf{Structure-Faithful PDF Ingestion for Tree-Based RAG}}
+\author{Federico Mizzaro, Omar Chafik, Abdul Rahim}
+
+\begin{document}
+\maketitle
+
+% ==============================================================
+\section*{Motivation}
+% ==============================================================
+
+Hospital infection-prevention and control (IPC) teams rely on
+multi-level clinical guidelines to make (time-sensitive) decisions.
+Recent vectorless RAG frameworks such as PageIndex\cite{zhang} would be
+able to make use of such document hierarchy for reasoning-based,
+top-down retrieval boasting extreme accuracy\cite{benchmark}.  However,
+these tools assume clean, correctly-structured input of the document
+set: the heading hierarchy and leaf content must survive ingestion
+intact. The PageIndex documentation itself warns that for markdown
+converted from PDF, the de facto format for published and archived
+documents, ``most existing conversion tools cannot preserve the original
+hierarchy'' \cite{pageindexrepo}.
+
+The PageIndex ecosystem's own answer to this problem, used by the OpenKB
+knowledge base\cite{openkb}, converts documents with Microsoft's
+\texttt{markitdown} and extracts images with \texttt{pymupdf}. For
+``large or complex PDFs,'' both projects direct users to the
+proprietary, hosted \emph{PageIndex Cloud} OCR service. No open-source,
+locally-deployable OCR ingestion path exists yet in this ecosystem.
+
+For clinical deployment, a cloud OCR dependency is questionable at best,
+and the quality gap left by text-layer extraction alone is a
+patient-safety risk. Our target deployment is therefore deliberately
+constrained: \textbf{commodity, CPU-only, fully local} --- no GPU, no
+hosted service. This project addresses the gap directly: we build an
+open ingestion path on top of the PaddleOCR-VL-1.6 \cite{paddle} model
+family, and we supply the reproducible fidelity benchmark that the
+ecosystem currently lacks to measure the quality of such a path.
+
+% ==============================================================
+\section*{Analysis}
+% ==============================================================
+
+The project has two separable contributions.
+
+\textbf{Contribution A: a benchmark harness.} We construct a
+ground-truth corpus of structured PDFs by compiling LaTeX documents to
+PDF while retaining the source. Ground-truth heading trees are extracted
+directly from \texttt{\textbackslash section}, \texttt{\textbackslash
+subsection} (and so on) commands, and ground-truth asset inventories
+from (as examples) \texttt{\textbackslash includegraphics} and
+\texttt{\textbackslash begin\{table\}} declarations. This gives us
+unambiguous, machine-readable ground truth without human annotation. The
+harness then runs competing ingestion paths --- the OpenKB-style
+\texttt{markitdown}+LLM reconstruction (the current default) and our OCR
+pipeline --- and compares the resulting trees against ground truth. A
+central methodological commitment is that we score \emph{detection} and
+\emph{nesting} \textbf{separately} (see Implementation), so a win in
+finding the right headings is never confused with a win in nesting them
+correctly.
+
+\textbf{Contribution B: an open, CPU-tractable OCR ingestion pipeline.}
+The naive use of PaddleOCR-VL --- running the 0.9B vision-language model
+over every block --- is far too slow to be local and practical (a single
+14-page paper took $\sim$48\,min on our CPU-only target). Our pipeline
+instead recovers the heading \emph{tree} with a fast detection model and
+a lightweight recogniser, reserving the heavy VLM for optional content
+recognition. On top of detection we add a \emph{leveling} layer that
+turns flat heading blocks into a relative hierarchy, driven primarily by
+the headings' own rendered numbering and falling back to a font-size
+signal when numbering is absent. A planned third stage (Contribution
+B$'$, below) introduces an \emph{anchored-asset leaf} scheme that
+attaches figures and tables as dedicated, addressable leaf nodes in the
+PageIndex tree rather than inline blobs the LLM happens to read.
+
+% ==============================================================
+\section*{Implementation}
+% ==============================================================
+
+Main libraries: \texttt{paddlex}/\texttt{paddleocr} (PP-DocLayoutV3 +
+mobile PP-OCR), \texttt{pypdfium2}, \texttt{markitdown}, and the
+open-source PageIndex codebase.
+
+\textbf{Document layout analysis (the speed decision).} We found
+empirically that the VLM's cost is dominated by \emph{autoregressive text
+generation} over every block, not vision encoding --- shrinking the input
+image made it \emph{slower}, and no single knob (\texttt{max\_pixels},
+\texttt{max\_new\_tokens}, disabling sub-pipelines) made it tractable.
+The win is architectural: for the heading tree, only the short
+\emph{title} blocks need to be read. We therefore use
+\texttt{PP-DocLayoutV3}, a detection model with \emph{no} generation, to
+label every block (\texttt{doc\_title}, \texttt{paragraph\_title},
+\texttt{text}, \texttt{figure\_title}, \texttt{table}, \ldots) with a
+bounding box at $\sim$1--4\,s/page, and a mobile \texttt{PaddleOCR}
+(classic lite det+rec) to recognise only the title crops --- at
+\emph{identical} title quality to the VLM. This is one to two orders of
+magnitude faster than the full VLM, which remains available for the
+separate, slower content-fidelity pass.
+
+\textbf{Heading detection, not heading levels.} The layout model gives a
+reliable \emph{label} but not a reliable level. We isolate real section
+headings by label alone (\texttt{paragraph\_title}), with \emph{no} text
+heuristics: captions carry a distinct \texttt{figure\_title} label, so
+filtering on the label --- rather than a rule like ``drop titles starting
+with \emph{Table}'' --- avoids overfitting the evaluator to any one
+document. (A rare caption mislabelled \texttt{paragraph\_title} is then
+an honest false positive, not a hidden patch.)
+
+\textbf{Leveling.} Levels are reconstructed from the signal already
+present in the recognised title text: its \textbf{rendered numbering}.
+Dotted arabic (\texttt{1}, \texttt{1.1}, \texttt{1.2.3}) gives level by
+component count; IEEE-style \texttt{I.}/\texttt{A.}/\texttt{1)} maps to
+section/subsection/subsubsection. The hard case --- single tokens like
+\texttt{I}, \texttt{V}, \texttt{C}, \texttt{D} that are valid roman
+numerals \emph{and} subsection letters, made worse because IEEEtran
+renders sections in Title Case (so capitalisation is uninformative) ---
+is resolved by \textbf{sequence}: a token is a section if it continues
+the roman run, a subsection if it continues the letter run. For
+\emph{unnumbered} documents we fall back to an independent
+\textbf{text-layer font-size} signal read via \texttt{pypdfium2} (largest
+size = level~1); font size is unreliable in general (it inverts on IEEE
+small-caps) but is safe here precisely because numbered docs take the
+numbering path, so the font fallback only fires where size decreases
+cleanly with depth. Throughout, we interpret the heading sequence as a
+\emph{relative} hierarchy: a level gap (a heading nested more than one
+step below its parent, possibly an authoring artefact) is absorbed as the
+next nesting step, not treated as an error to repair. A column-aware
+\textbf{reading-order} sort is applied first, since two-column layouts
+otherwise return blocks out of order (e.g.\ placing \texttt{2.1} before
+section~\texttt{2}).
+
+\textbf{Baseline.} The comparison point is the OpenKB/PageIndex path:
+\texttt{markitdown} dumps the PDF text layer to flat markdown (no
+headings) and an LLM reconstructs the heading list. We make this a
+\emph{strong} and \emph{deterministic} baseline --- the reconstruction is
+produced by a capable LLM \textbf{blind to the LaTeX ground truth},
+cached as one frozen artefact per document, so runs are reproducible and
+we are beating the conservative target rather than a weak local model.
+
+\textbf{Benchmark computation.} LaTeX source is parsed to ground-truth
+trees and asset inventories. We replace a single tree-edit-distance score
+with two decomposable F1 metrics over normalised titles: \texttt{title\_f1},
+the level-free bag overlap of section titles (pure \emph{detection}), and
+\texttt{edge\_f1}, the overlap of parent$\to$child pairs (\emph{nesting}
+and identity together). Both use a \texttt{normalise\_title} step that
+strips rendered numbering and markdown emphasis, and both are computed
+identically for every condition. Content fidelity (recognising body prose
+under each heading) is a separate, slower concern handled by the full VLM
+pass and scored by token-level edit distance over aligned leaves; the
+fast structure path deliberately does not attempt it. OCR results are
+cached by \texttt{(pdf, config)}; we verified the OCR output is
+bit-stable across repeated runs, so the benchmark is fully reproducible.
+The ingest module slots into the existing PageIndex
+\texttt{modules/ingest/} registry, altering only how the tree is built
+and leaving retrieval untouched: the goal is not to improve retrieval but
+to make the OCR path open, local, and measurable.
+
+\textbf{Contribution B$'$ (planned): anchored assets.} Figures and tables
+will be attached as dedicated leaf nodes anchored to the prose leaf under
+which they appear (by spatial association from the layout bounding
+boxes), making non-text content a first-class, addressable part of the
+retrieval tree. This stage is designed but not yet implemented; the
+evaluation below treats it as the final ablation step.
+
+% ==============================================================
+\section*{Evaluation}
+% ==============================================================
+
+We evaluate ingestion fidelity comparatively, against the OpenKB
+\texttt{markitdown}+LLM reconstruction baseline, on a LaTeX ground-truth
+corpus spanning the layout and numbering axes: synthetic documents in
+distinct templates (single- and two-column \texttt{article} with arabic
+numbering, \texttt{IEEEtran} with roman/letter/paren numbering, and
+unnumbered \texttt{article} both flat and three-level nested), plus real
+two-column IEEE papers --- seven documents in total, each compiled from
+source with \texttt{tectonic}. The design is a four-condition ablation
+that isolates each component: (A) \texttt{markitdown}+LLM (OpenKB
+default); (B) OCR title detection with \emph{no} leveling (flat tree);
+(C) OCR with numbering/font leveling; (D) the full pipeline including
+anchored-asset leaves. Detection is scored by \texttt{title\_f1}
+(A vs.\ B), nesting by \texttt{edge\_f1} (C), and the asset contribution
+by the (C)$\to$(D) contrast, measured as asset recall: the fraction of
+\texttt{\textbackslash includegraphics} / \texttt{\textbackslash
+begin\{table\}} declarations recovered as anchored leaves.
+
+This design is suitable because it is fully automatable, needs no
+subjective human annotation, compares \emph{text against text} at every
+stage (avoiding the ambiguity of PDF-versus-text comparison), and
+directly measures the gap between the current open-source default and our
+pipeline --- attributing each gain to a specific component rather than to
+the pipeline as a whole.
+
+Early results on the assembled corpus already support the core thesis.
+On a hard real two-column IEEE paper, OCR recovers \emph{every} heading
+(\texttt{title\_f1} $\approx 0.97$, recall $1.0$) where the
+\texttt{markitdown} baseline reaches only $\approx 0.64$ (recall $0.53$):
+text-layer extraction interleaves the two columns and even drops
+inter-word spaces, scattering the \texttt{1)}/\texttt{2)} subsubsections
+beyond recovery, whereas reading the rendered image per block isolates
+each heading regardless of column flow. On a clean single-column document
+the two tie at $1.0$ --- OCR earns its cost on hard layouts, not on easy
+ones, which we state plainly. With leveling enabled, five of the seven
+documents reconstruct the tree \emph{exactly} (\texttt{edge\_f1} $= 1.0$).
+The two residual cases are \textbf{characterised, not patched}: IEEEtran
+renders \texttt{\textbackslash subsubsection} run-in (inline, so those
+headings do not exist as blocks in the rendered PDF --- a rendering
+boundary OCR cannot cross), and one table caption mislabelled by the
+layout model cascades into its neighbours' nesting. We deliberately do
+not add document-specific rules to erase these, so the reported numbers
+reflect the pipeline's true behaviour rather than a tuned evaluator.
+
+% ==============================================================
+
+
+\printbibliography
+
+
+\end{document}

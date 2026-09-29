@@ -1,0 +1,10 @@
+{
+  "cell": "single_arabic",
+  "columns": "single",
+  "numbering": "arabic",
+  "documentclass": "siamart250211",
+  "category": "math.NA",
+  "published": "2026-08-24",
+  "title": "Transform-Based Multilinear Algebra via Tensor Decomposition",
+  "arxiv_id": "2608.23366v1"
+}

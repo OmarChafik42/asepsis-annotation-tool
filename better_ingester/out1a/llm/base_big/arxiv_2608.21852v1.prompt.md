@@ -1,0 +1,498 @@
+Below is a document converted to flat markdown. Its heading hierarchy was lost in conversion.
+
+TASK: recover the section headings and their nesting depth. Use only headings that literally appear in the text — do not invent, and do not include running heads or figure captions. Drop any leading numbering from the title itself. Level 1 is a top-level section.
+
+Output ONLY a JSON object of the form
+  {"headings": [{"title": "...", "level": 1}, ...]}
+in reading order, with no commentary before or after it.
+
+---- DOCUMENT ----
+| SUBMITTEDFORPUBLICATION |         |     |     |               |       |            |               |        |       |      | 1   |
+| ----------------------- | ------- | --- | --- | ------------- | ----- | ---------- | ------------- | ------ | ----- | ---- | --- |
+|                         | Quantum |     |     | Locally       |       | Repairable |               | Codes  | from  |      |     |
+| Negacyclic              |         |     | and | Repeated-Root |       |            |               | Cyclic | Codes | over |     |
+|                         |         |     |     |               | Small | Fields     |               |        |       |      |     |
+|                         |         |     |     | Ruipan        | Yang, | Qiang Fu,  | and Liangdong | Lu     |       |      |     |
+Abstract
+Quantumlocallyrecoverablecodes(qLRCs),introducedrecentlybyGolowichandGuruswami,allowanysingle-quditerasure
+toberecoveredfromasmallsetofotherqudits.Mostknownconstructionsrequirealargealphabet.Wesystematicallyinvestigate
+qLRCsobtained,viatheCSSconstruction,fromclassicalconstacycliccodesoversmallfieldsF withq∈{2,3,4,5,7}.First,we
+| 6202 guA 22  ]TI.sc[  1v25812.8062:viXra |     |     |     |     |     |     |     | q   |     |     |     |
+| ---------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+prove that a nonzero dual-containing λ-constacyclic code exists only when λ2 =1, so that negacyclic and (repeated-root) cyclic
+codes exhaust the constacyclic route to qLRCs. Second, we show that the locality of a constacyclic code equals the minimum
+distanceofitsdualminusone,andwegiveasimplepuritycriterionfortheresultingquantumcodes.Third,weshowthatodd-like
+duadic codes whose splitting is given by µ yield pure qLRCs; specializing to q-ary quadratic residue codes of prime length
+−1
+p ≡ 3 (mod 4) gives an infinite family of pure qLRCs with unbounded minimum distance and certified locality. Finally, by
+means of concrete computations, we obtain a classification of qLRCs from cyclic, negacyclic, and repeated-root cyclic codes of
+moderate lengths, which contains the first binary qLRCs from repeated-root cyclic codes and many parameter sets that cyclic
+| codes | cannot | attain. |     |     |     |             |     |     |     |     |     |
+| ----- | ------ | ------- | --- | --- | --- | ----------- | --- | --- | --- | --- | --- |
+|       |        |         |     |     |     | Index Terms |     |     |     |     |     |
+Constacyclic code, quadratic residue code, quantum CSS code, quantum locally repairable code.
+I. INTRODUCTION
+CLASSICAL
+locally repairable codes (LRCs) [1] are a cornerstone of modern distributed storage: an [n,k,d] q linear code
+has locality r if every code symbol can be recovered from at most r other symbols. The parameters of an LRC with
+| locality | r obey the | Singleton-like |     | bound |     |     |     |     |     |     |     |
+| -------- | ---------- | -------------- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
+(cid:24) k (cid:25)
+|     |     |     |     |     | d≤n−k− |     | +2, |     |     |     | (1) |
+| --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- |
+r
+and a large body of work provides optimal or near-optimal constructions; see, e.g., [2]–[5] and the references therein.
+Quantum locally recoverable codes (qLRCs) were introduced by Golowich and Guruswami [6] as the quantum analogue
+of LRCs, motivated by large-scale quantum storage and by connections to quantum LDPC codes. An [[n,κ,δ]] qLRC with
+q
+locality r is a quantum error-correcting code in which every erased qudit can be recovered by a recovery channel acting on
+at most r other qudits. In the stabilizer formalism, locality is certified by the existence of low-weight stabilizers anchored at
+each coordinate. Building on the CSS construction, Luo, Chen, Ezerman, and Ling [7] derived bounds on qLRCs from their
+| classical | ingredients, | including | the | quantum Singleton-like |     | bound |     |     |     |     |     |
+| --------- | ------------ | --------- | --- | ---------------------- | --- | ----- | --- | --- | --- | --- | --- |
+(cid:108)κ(cid:109)
+|     |     |     |     |     | 2δ ≤n−κ−2 |     | +4, |     |     |     | (2) |
+| --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- |
+r
+and characterized the optimal pure qLRCs attaining (2) with equality. Galindo et al. [8] introduced quantum (r,δ)-LRCs and
+gave a necessary and sufficient condition for local recoverability of stabilizer codes.
+Known explicit qLRC constructions [6]–[11] predominantly require a large field size q (GRS-type, algebraic-geometry,
+matrix-product, or good-polynomial ingredients). By contrast, small-alphabet qLRCs—which are the most relevant ones for
+physical qubit or qutrit systems—remain scarce; to the best of our knowledge, the only systematic binary families appear in
+theveryrecentwork[12],whichisbasedonsubset-inclusionmatricesratherthanalgebraiccodefamilies.Wenotethatduadic
+constacyclic codes over F were used in [13] to construct binary quantum stabilizer codes with growing minimum distance,
+4
+but without any local repair property; quantum codes from duadic codes more generally, e.g., [14], likewise do not address
+locality. To our knowledge, the present work is the first to use duadic and QR codes for quantum locally repairable codes.
+In this paper, we construct quantum locally repairable codes from cyclic, negacyclic, and repeated-root cyclic codes over
+| small fields. | Our | work is as | follows. |     |     |     |     |     |     |     |     |
+| ------------- | --- | ---------- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
+λ2
+1) A classification theorem (Theorem 2): a nonzero dual-containing λ-constacyclic code exists only when = 1. This
+extends the self-dual case settled by Blackford [15, Corollary 2] to the dual-containing condition required by the CSS
+TheauthorsarewithAirForceEngineeringUniversity,Xi’an,China.e-mail:yangruipan@aliyun.com.
+ManuscriptreceivedXXXX,2026;revisedXXXX,2026.
+
+| SUBMITTEDFORPUBLICATION |     |     |     |     |     |     |     |     |     |     |     |     |     | 2   |
+| ----------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+construction. Hence the constacyclic route to qLRCs is exhausted by cyclic and negacyclic codes, including repeated-root
+ones.
+2) Twostructurallemmas(Lemmas3and4):foraconstacycliccodeC,thelocalityequalsd(C⊥)−1;andtheCSSquantum
+code from a dual-containing C with d(C)<d(C⊥) is pure with δ =d(C). Together they reduce the construction of pure
+|     | qLRCs | to the computation |     | of d(C) | and d(C⊥). |     |     |     |     |     |     |     |     |     |
+| --- | ----- | ------------------ | --- | ------- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+3) An infinite family from duadic codes (Theorem 6): every odd-like duadic code whose splitting is given by µ and
+−1
+|     |     | d⊥  |     |     |     |     |     | d⊥  |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+satisfying d < yields a pure qLRC with locality r = −1. In particular (Corollary 7), for every prime p ≡ 3
+(mod 4) and every prime power q that is a quadratic residue modulo p, the q-ary QR code of length p yields a pure
+|     | qLRC | [[p,1,d]] with | r =d⊥−1, |     | where d⊥ | =d+1 | in  | all computed | instances. |     |     |     |     |     |
+| --- | ---- | -------------- | -------- | --- | -------- | ---- | --- | ------------ | ---------- | --- | --- | --- | --- | --- |
+q
+4) An extensive computational classification (Theorem 8) for q ∈ {2,3,4,5,7} and moderate lengths (Tables I–V in
+Section V), containing the first binary qLRCs from repeated-root cyclic codes and parameter sets attainable only by
+negacyclic codes. All computational results are reproducible by the Magma programs described in the Appendix.
+The paper is organized as follows. Section II collects the preliminaries. Section III proves the classification theorem and the
+two structural lemmas. Section IV presents the duadic and QR-code family. Section V reports the classification theorem and
+tables, and discusses several sporadic near-optimal codes. Section VI concludes with open problems.
+|              |     |      |     |     |     | II. | PRELIMINARIES |     |     |     |     |     |     |     |
+| ------------ | --- | ---- | --- | --- | --- | --- | ------------- | --- | --- | --- | --- | --- | --- | --- |
+| A. Classical |     | LRCs |     |     |     |     |               |     |     |     |     |     |     |     |
+Let q be a prime power and F the finite field with q elements. An [n,k,d] linear code C has (all-symbol) locality r if
+|     |     |     |     | q   |     |     |     |     |     | q   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+C⊥
+for every i ∈ [n] there exists a codeword c¯ ∈ of the Euclidean dual with wt(c¯) ≤ r+1 and i ∈ supp(c¯). Such a word
+| provides   | a   | recovery relation | for | the i-th | symbol. |     |     |     |     |     |     |     |     |     |
+| ---------- | --- | ----------------- | --- | -------- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| B. Quantum |     | LRCs from         | CSS |          |         |     |     |     |     |     |     |     |     |     |
+C⊥ ⊊
+We use the standard CSS construction [16]. If C is an [n,k,d] q linear code with C, then there exists an [[n,κ,δ]] q
+quantum code with κ=2k−n and δ =wt(C\C⊥); the code is pure if δ =d. The following is due to Golowich–Guruswami
+| [6] and | Luo | et al. [7, Corollary |     | 1]. |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | -------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Proposition 1 ( [7, Corollary 1]). Let C be an [n,k,d] dual-containing linear code with locality r. Then there exists an
+q
+[[n,2k−n,δ]] qLRC with locality r, where δ =wt(C\C⊥); its parameters satisfy (2).
+q
+| C. Constacyclic |     | codes |     |     |     |     |     |     |     |     |     |     |     |     |
+| --------------- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Let λ ∈ F∗. A linear code C of length n is λ-constacyclic if it is invariant under the constashift T (c ,c ,...,c ) =
+|     |     | q   |     |     |     |     |     |     |     |     |     | λ   | 0 1 | n−1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(λc ,c ,...,c ).SuchcodesareidealsofF [x]/⟨xn−λ⟩,withgeneratorpolynomialg(x)|xn−λ.Thecasesλ=1and
+| n−1 | 0   | n−2 |     |     |     | q   |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+λ=−1 give cyclic and negacyclic codes, respectively; when gcd(n,q)>1 one speaks of repeated-root codes. The Euclidean
+| dual | of a λ-constacyclic |     | code is | λ−1-constacyclic. |     |     |     |          |      |     |         |     |           |     |
+| ---- | ------------------- | --- | ------- | ----------------- | --- | --- | --- | -------- | ---- | --- | ------- | --- | --------- | --- |
+|      | gcd(n,q)=1,         |     |         |                   |     |     |     | defining | set: |     | D ={i∈Z |     | :g(αi)=0} |     |
+When a constacyclic code is described by its for cyclic codes, n where
+α is a primitive n-th root of unity, and D is a union of q-cyclotomic cosets modulo n; for negacyclic codes one works modulo
+2n with odd residues. The BCH bound applies (see, e.g., [17, Ch. 5]): if D contains t−1 consecutive integers, then d≥t.
+III. THESCOPEOFTHECONSTACYCLICROUTEANDTWOSTRUCTURALLEMMAS
+Theorem 2. Let C be a nonzero λ-constacyclic code over F . If C⊥ ⊆C, then λ2 =1.
+q
+Proof: Since C is λ-constacyclic, C is invariant under T ; since C⊥ is λ−1-constacyclic and C⊥ ⊆ C, the code C⊥ is
+λ
+| invariant | under | both T | and T | . For     | 1≤j ≤n, | a direct | computation |          | gives |           |     |     |     |     |
+| --------- | ----- | ------ | ----- | --------- | ------- | -------- | ----------- | -------- | ----- | --------- | --- | --- | --- | --- |
+|           |       | λ      | λ−1   |           |         |          |             |          |       |           |     |     |     |     |
+|           |       |        |       | Tj ◦T−j(c | ,...,c  |          | )=(λ2c      | ,...,λ2c |       | ,c ,...,c | ),  |     |     |     |
+|           |       |        |       | λ         | λ−1 0   | n−1      |             | 0        | j−1   | j         | n−1 |     |     |     |
+so C⊥ is invariant under scaling the first j coordinates by λ2, for every j. Composing such maps for consecutive j shows that
+| C⊥ is | invariant | under scaling | any | single | coordinate | by  | λ2. |     |     |     |     |     |     |     |
+| ----- | --------- | ------------- | --- | ------ | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|       |           | λ2            |     |        |            |     | Fn  |     |     |     |     |     | λ2  |     |
+Suppose ̸= 1. We claim that any linear subspace S ⊆ invariant under single-coordinate scalings by contains the
+q
+unit vector e for every i in the support of any of its members. Indeed, let c∈S and i∈supp(c); the vector c′−λ2c, where
+i
+c′ is c with the i-th coordinate scaled by λ2, belongs to S, vanishes at i, and is nonzero on supp(c)\{i}; induction on the
+support size yields the claim. Since C⊥ is closed under the constashift, every coordinate is covered by the support of some
+| word | of C⊥; | hence C⊥ =Fn | and | C ={0}, | a contradiction. |     |     |     |     |     |     |     |     |     |
+| ---- | ------ | ------------ | --- | ------- | ---------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+q
+λ2
+Remark 1. For self-dual constacyclic codes the restriction = 1 is known [15, Corollary 2]. Theorem 2 extends this
+necessary condition to dual-containing constacyclic codes, which is precisely the condition required by the CSS construction.
+It also matches the common practice in the quantum constacyclic code literature, where λ=±1 is assumed from the outset;
+
+| SUBMITTEDFORPUBLICATION |     |     |     |     |     |     |     |     | 3   |
+| ----------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+see, e.g., [16]. For F and F only λ = 1 survives, while over fields of odd characteristic both cyclic and negacyclic codes
+|     |     | 2 4 |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+are available.
+Lemma 3. Let C be a λ-constacyclic code and d⊥ =d(C⊥). Then C has all-symbol locality r =d⊥−1.
+haveminimumweightd⊥.ItsconstashiftsTj
+Proof:ThedualC⊥ isλ−1-constacyclic.Letc¯∈C⊥ (c¯),j =0,...,n−1,
+λ−1
+are words of C⊥ of weight d⊥ whose supports are the cyclic shifts of supp(c¯); hence every coordinate is covered by one of
+|     |     | C⊥  |     |     | d⊥, |     |     | d⊥−1. |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- |
+them. Since no word of has weight less than each coordinate has locality exactly
+Lemma 4. Let C be a dual-containing [n,k,d] code with d < d(C⊥). Then the CSS quantum code from C is pure and its
+q
+| minimum | distance equals | d.  |     |     |     |     |     |     |     |
+| ------- | --------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+Proof: Every word of C⊥ has weight at least d(C⊥) > d, so all minimum-weight words of C lie in C \C⊥ and δ =
+wt(C\C⊥)=d.
+| Combining | Proposition | 1 with | Lemmas | 3   | and 4: |     |     |     |     |
+| --------- | ----------- | ------ | ------ | --- | ------ | --- | --- | --- | --- |
+>n/2andd<d(C⊥).
+Corollary5. LetC beadual-containingcyclic,negacyclic,orrepeated-rootcyclic[n,k,d] q codewithk
+| Then there | exists a | pure qLRC |     |            |     |          |                      |     |     |
+| ---------- | -------- | --------- | --- | ---------- | --- | -------- | -------------------- | --- | --- |
+|            |          |           |     | [[n, 2k−n, |     | d]] with | locality r =d(C⊥)−1, |     |     |
+q
+| whose parameters | obey | (2). |     |     |     |     |     |     |     |
+| ---------------- | ---- | ---- | --- | --- | --- | --- | --- | --- | --- |
+IV. ANINFINITEFAMILYFROMDUADICANDQUADRATICRESIDUECODES
+Duadic codes [18] generalize quadratic residue codes to composite lengths. Recall that for a length n with gcd(n,q) = 1
+F
+such that q is a quadratic residue modulo n, duadic codes over q come in like pairs: two even-like codes C 1 ,C 2 of dimension
+(n−1)/2 and two odd-like codes D ,D of dimension (n+1)/2, with D ⊋C . The splitting of the pair is said to be given
+|     |     |     | 1   | 2   |     |     | i i |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+by the multiplier µ if C µ = C ; by [17, Theorem 6.4.2], this happens if and only if C⊥ = D , in which case D is
+|     | −1  | 1 −1 | 2   |     |     |     |     | i i | i   |
+| --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
+dual-containing.
+Theorem 6. Let D be an odd-like duadic code of length n over F whose splitting is given by µ , with minimum distance
+|     |     |     |     |     |     |     | q   | −1  |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+d<d(D⊥).
+d satisfying Then D is dual-containing, and there exists a pure qLRC
+|     |     |     |     | [[n, 1, | d]] | with locality | r =d(D⊥)−1≥d. |     |     |
+| --- | --- | --- | --- | ------- | --- | ------------- | ------------- | --- | --- |
+q
+Proof: By [17, Theorem 6.4.2], D⊥ is the even-like subcode of D, so D is dual-containing and κ = 2· n+1 −n = 1.
+2
+d<d(D⊥); =d(D⊥)−1
+Purity and δ =d follow from Lemma 4 since the locality is r by Lemma 3.
+Let now p be an odd prime and q a prime power that is a quadratic residue modulo p. The set of quadratic residues modulo
+p is then a union of q-cyclotomic cosets, and the q-ary QR code C of length p is the cyclic code with defining set QR(p);
+p
+it is the odd-like duadic (indeed, QR) code with parameters [p,(p+1)/2,d] , where d2 ≥p, and even d2−d+1≥p when
+q
+| p≡−1 | (mod 4) (the | square-root | bound | [17, | Theorem | 6.6.22]). |     |     |     |
+| ---- | ------------ | ----------- | ----- | ---- | ------- | --------- | --- | --- | --- |
+Corollary 7. Let p≡3 (mod 4) be a prime and q a prime power that is a quadratic residue modulo p. Then the q-ary QR
+| code C | is dual-containing, | and | there | exists a | pure | qLRC |     |     |     |
+| ------ | ------------------- | --- | ----- | -------- | ---- | ---- | --- | --- | --- |
+p
+|     |     |     |     | [[p, | 1, d]] | with | locality r =d⊥−1, |     |     |
+| --- | --- | --- | --- | ---- | ------ | ---- | ----------------- | --- | --- |
+q
+|     |     | d⊥ d(C⊥) |     |     |     |     |     |     |     |
+| --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- |
+where d = d(C p ) and = ≥ d+1. In particular, this holds for q = 2 whenever p ≡ −1 (mod 8) and for q = 3
+p
+| whenever | p≡−1 (mod | 12). |     |     |     |     |     |     |     |
+| -------- | --------- | ---- | --- | --- | --- | --- | --- | --- | --- |
+Proof: Since p≡3 (mod 4), −1 is a non-residue modulo p [17, Lemma 6.2.4], so the splitting of the QR codes is given
+byµ (thespecializationsq =2,3,4arespelledoutin[17,Theorem6.6.14]).EveryminimumweightwordofC isodd-like
+| −1  |     |     |     |     |     |     |     | p   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+[17, Theorem 6.6.22], hence d⊥ ≥ d+1 > d; Theorem 6 applies. The final statement uses that 2 (resp. 3) is a quadratic
+| residue modulo | p iff | p≡±1 | (mod 8) | (resp. | p≡±1 | (mod | 12)). |     |     |
+| -------------- | ----- | ---- | ------- | ------ | ---- | ---- | ----- | --- | --- |
+Remark 2. In all instances we computed (Table V), one has d⊥ = d+1 and hence r = d. Note that d⊥ ≥ d+1 always
+holds, since every minimum weight word of a QR code is odd-like [17, Theorem 6.6.22]. Moreover, for binary QR codes with
+p ≡ −1 (mod 8) one has d ≡ 3 (mod 4) and the even-like subcode is doubly-even [17, Theorems 6.6.14 and 6.6.22], so
+| d⊥  |     |     |     |     |     |     | d⊥  |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+that ≡ 0 (mod 4); in all binary instances we computed, one has = d+1. We are not aware of a general proof that
+d⊥ =d+1, and our computations confirm it for every ternary and septenary instance listed as well. These codes encode only
+one logical qudit (κ=1), but they are, to our knowledge, the first infinite family of binary qLRCs with unbounded minimum
+| distance | and certified | locality | r =d. |     |     |     |     |     |     |
+| -------- | ------------- | -------- | ----- | --- | --- | --- | --- | --- | --- |
+
+SUBMITTEDFORPUBLICATION 4
+V. COMPUTATIONALCLASSIFICATIONOVERSMALLFIELDS
+By Theorem 2, the constacyclic route is exhausted by λ=±1. We enumerated all divisors g(x) of xn∓1 over F for q ∈
+q
+{2,3,4,5,7}andmoderaten(includingrepeated-rootcases),testeddual-containmentbytherankconditionrank[G;H⊥]=k,
+| computed d(C) | and d(C⊥), | and evaluated | the gap      |                     |          |     |     |
+| ------------- | ---------- | ------------- | ------------ | ------------------- | -------- | --- | --- |
+|               |            |               | (cid:16)     | (cid:108)κ(cid:109) | (cid:17) |     |     |
+|               |            |               | gap := n−κ−2 | +4                  | −2δ      |     |     |
+r
+to the quantum Singleton-like bound (2). All codes listed are pure: Lemma 4 applies whenever d < d⊥, and the remaining
+cases (where d=d⊥) are verified by direct computation, unless stated otherwise (the [[30,2,8]] entry in Table III is impure,
+7
+=d⊥−1.
+withδ =8>d=6;cf.[19]forthephenomenonofimpurecodesexceedingpurebounds).Allcodeshavelocalityr
+The Magma programs are described in the Appendix. The outcome is summarized in the following computational theorem.
+Theorem 8. For each combination of q, λ ∈ {1,−1}, and length range in Table I, we have found a large number of dual-
+containing λ-constacyclic codes with κ = 2k −n ≥ 1, d ≥ 3, and locality r = d⊥ −1 ≤ 12. The counts (by generator
+polynomial; equivalent codes may be counted multiply) are given in Table I, where N is the number of dual-containing codes
+with r ≤12, N d≥3 those with d≥3, N 2 those within gap 2 of the bound (2), and d max the largest minimum distance found.
+In particular, the parameter sets in Table III, which arise from negacyclic codes, improve on what cyclic codes of the same
+| length can | offer. |     |     |     |     |     |     |
+| ---------- | ------ | --- | --- | --- | --- | --- | --- |
+TABLEI
+SEARCHRANGESANDOUTCOMECOUNTSOFTHEOREM8.
+|     |     | q   | λ rangeofn | N N d≥3     | N2 dmax |     |     |
+| --- | --- | --- | ---------- | ----------- | ------- | --- | --- |
+|     |     | 2   | 1 n≤63     | 1265 612    | 2 11    |     |     |
+|     |     | 3   | 1 n≤72     | 8463 7208   | 6 10    |     |     |
+|     |     | 3   | −1 n≤72    | 1457 1322   | 12 10   |     |     |
+|     |     | 4   | 1 n≤50     | 7213 4986   | 16 12   |     |     |
+|     |     | 5   | 1 n≤50     | 9379 9038   | 89 12   |     |     |
+|     |     | 5   | −1 n≤50    | 1379 1028   | 19 10   |     |     |
+|     |     | 7   | 1 n≤45     | 15052 14632 | 88 12   |     |     |
+|     |     | 7   | −1 n≤45    | 1284 1188   | 24 12   |     |     |
+72−1=48
+Remark 3. For lengths n dividing we found near-optimal codes with gap=2: [24,20,3] 7 and [48,42,3] 7 , both
+with d⊥ = 12, giving [[24,16,3]] and [[48,36,3]] qLRCs with r = 11. Their defining sets are {1,7}∪{2,14} modulo 24
+|     |     | 7   | 7   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+and {1,7}∪{2,14}∪{26,38} modulo 48. The pattern, however, does not extend to an infinite family: for n∈{72,96,120}
+the same defining-set rule gives codes with d⊥ = 12 but gap ≥ 8, because the 7-cyclotomic cosets modulo n grow as soon
+as ord (7)>2. This illustrates a general phenomenon: near-optimal qLRCs from cyclic codes are concentrated at lengths n
+n
+| with small | ord n (q). |     |     |     |     |     |     |
+| ---------- | ---------- | --- | --- | --- | --- | --- | --- |
+We briefly comment on how close the codes in Tables I–V come to the bound (2). Of the 69 parameter sets listed, 25 are
+within gap 2 of the bound, including the 8 optimal ones in Table II, and 28 are within gap 4. In particular, seven of the eight
+quinary entries in Table VI are within gap 2, including the high-rate codes [[24,14,4]] , [[48,34,4]] , and [[60,46,3]] . It is also
+|     |     |     |     |     | 5   | 5   | 5   |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+worth noting that the impure code [[30,2,8]] in Table III has gap 14, which is smaller than the gap 18 that a pure code from
+7
+the same ingredient would have: impurity can bring the parameters closer to the bound, in line with the phenomenon studied
+in [19]. On the other hand, the binary entries in Table IV have relatively large gaps; we believe that this reflects the looseness
+|     | q = 2 |     |     |     |     |     |     |
+| --- | ----- | --- | --- | --- | --- | --- | --- |
+of the bound (2) for rather than the quality of the codes, since the alphabet-dependent quantum Cadambe–Mazumdar
+bound of [7] is known to be tighter for small alphabets. An evaluation of our binary codes against that bound is left for future
+work.
+Table II lists the codes attaining (2) with equality. All of them are (generalized) MDS codes, and hence are also covered,
+| in the (r,δ)-LRC | sense, by | [8, Proposition | 37]. |     |     |     |     |
+| ---------------- | --------- | --------------- | ---- | --- | --- | --- | --- |
+More interesting are the codes in Table III: negacyclic codes yield parameters that improve on those of cyclic codes of the
+same length over the same field (within the ranges of Theorem 8). In this sense the negacyclic route genuinely enlarges the
+| known parameter | set of small-alphabet | qLRCs. |     |     |     |     |     |
+| --------------- | --------------------- | ------ | --- | --- | --- | --- | --- |
+TableIVturnstothebinarycase.Notably,thehigh-distanceentriescomefromrepeated-rootcycliccodes(e.g.,a[[62,2,10]]
+2
+qLRC with locality 11 from the repeated-root cyclic [62,32,10] code); to our knowledge, these are among the first algebraic
+2
+| binary qLRCs | with δ >5. |     |     |     |     |     |     |
+| ------------ | ---------- | --- | --- | --- | --- | --- | --- |
+Table V lists members of the QR family of Corollary 7, covering the binary, ternary, septenary, and quaternary cases with
+| certified locality | r =d. |     |     |     |     |     |     |
+| ------------------ | ----- | --- | --- | --- | --- | --- | --- |
+Finally, Table VI gives a selection over F ,F ,F ,F . Together with the previous tables, it shows that good—and in many
+3 4 5 7
+| cases near-optimal | (gap≤2)—qLRCs | exist | abundantly | already over small | fields. |     |     |
+| ------------------ | ------------- | ----- | ---------- | ------------------ | ------- | --- | --- |
+
+SUBMITTEDFORPUBLICATION 5
+TABLEII
+OPTIMALPUREQUANTUMLRCSFROMCONSTACYCLICCODES.
+|     | Quantumcode  | r Ingredient[n,k,d]q | Type       | Structureofg(x)        |
+| --- | ------------ | -------------------- | ---------- | ---------------------- |
+|     | [[5,1,3]]5   | 3 [5,3,3]5           | rr-cyc/neg | (x∓1)2                 |
+|     | [[6,2,3]]7   | 4 [6,4,3]7           | cyc        | definingset{1,2}       |
+|     | [[7,1,4]]7   | 4 [7,4,4]7           | rr-cyc/neg | (x∓1)3                 |
+|     | [[7,3,3]]7   | 5 [7,5,3]7           | rr-cyc/neg | (x∓1)2                 |
+|     | [[8,4,3]]7   | 6 [8,6,3]7           | neg        | definingset{9,15}mod16 |
+|     | [[12,6,3]]7  | 5 [12,9,3]7          | cyc        | definingset{4}∪{5,11}  |
+|     | [[14,8,3]]7  | 6 [14,11,3]7         | rr-cyc     | (x+1)(x−1)2-type       |
+|     | [[21,13,3]]7 | 6 [21,17,3]7         | rr-cyc     | (x−3)2(x−2)(x−1)-type  |
+TABLEIII
+QUANTUMLRCSFROMNEGACYCLICCODES(PUREUNLESSNOTEDOTHERWISE);NOCYCLICCODEOFTHESAMELENGTHATTAINSTHESE
+PARAMETERS.
+|     | Quantumcode  | r Ingredient   | gap Notes                           |     |
+| --- | ------------ | -------------- | ----------------------------------- | --- |
+|     | [[10,2,4]]3  | 5 [10,6,4]3    | 2 singlecosetmod20                  |     |
+|     | [[12,4,4]]5  | 5 [12,8,4]5    | 2 twocosetsmod24                    |     |
+|     | [[10,2,4]]7  | 5 [10,6,4]7    | 2                                   |     |
+|     | [[16,8,3]]7  | 6 [16,12,3]7   | 2                                   |     |
+|     | [[24,8,7]]7  | 8 [24,14,7]7   | 8 cycliccodesreachonlyd=5           |     |
+|     | [[30,2,8]]7  | 5 [30,16,6]7   | 14 impure:δ=8>d=6                   |     |
+|     | [[19,1,8]]7  | 8 [19,10,8]7   | 4 cyclicQRcodereachesonly[19,10,7]7 |     |
+|     | [[68,4,10]]3 | 11 [68,36,10]3 | 46 two16-elementcosetsmod136        |     |
+TABLEIV
+BINARYQUANTUMLRCSFROMCYCLICANDREPEATED-ROOTCYCLICCODES.
+|     |     | Quantumcode  | r Ingredient      | Type gap |
+| --- | --- | ------------ | ----------------- | -------- |
+|     |     | [[7,1,3]]2   | 3 [7,4,3]2        | cyc 2    |
+|     |     | [[15,7,3]]2  | 7 [15,11,3]2      | cyc 4    |
+|     |     | [[21,9,3]]2  | 7 [21,15,3]2      | cyc 6    |
+|     |     | [[21,3,5]]2  | 7 [21,12,5]2      | cyc 10   |
+|     |     | [[30,4,6]]2  | 5 [30,17,6]2      | rr 16    |
+|     |     | [[30,2,6]]2  | [30,16,6]2        |          |
+|     |     |              | 7                 | rr 18    |
+|     |     | [[31,11,5]]2 | 11 [31,21,5]2     | cyc 12   |
+|     |     | [[35,5,6]]2  | 7 [35,20,6]2      | cyc 20   |
+|     |     | [[42,4,6]]2  | 5 [42,23,6]2      | rr 28    |
+|     |     | [[46,2,7]]2  | 7 [46,24,7]2      | rr 32    |
+|     |     | [[56,8,6]]2  | 7 [56,32,6]2      | rr 36    |
+|     |     | [[62,2,10]]2 | 11 [62,32,10]2    | rr 42    |
+|     |     | [[63,21,7]]2 | 11 [63,42,7]2     | cyc 28   |
+|     |     | VI.          | CONCLUDINGREMARKS |          |
+(λ2
+In this manuscript, we have (i) determined the exact scope of the constacyclic route to qLRCs = 1), (ii) reduced the
+construction of pure qLRCs from cyclic-type codes to two minimum-distance computations, (iii) exhibited an infinite family
+from duadic and QR codes with locality r = d⊥ −1, and (iv) provided extensive small-field classification tables including
+negacyclic-only parameters and the first repeated-root binary qLRCs. Possible directions for future research are as follows.
+|     |     | (r,δ)-LRCs |     | (r,δ) |
+| --- | --- | ---------- | --- | ----- |
+1) Extend the classification to quantum in the sense of [8]; cyclic ingredients were recently used in [11].
+2) Determine whether the equality d⊥ = d+1 in Corollary 7 holds for all QR codes with p ≡ 3 (mod 4) (it holds in all
+| our computed | instances). |     |     |     |
+| ------------ | ----------- | --- | --- | --- |
+3) Our QR family has κ = 1. Find infinite binary families with κ > 1 and bounded gap to (2); our data suggests that
+| repeated-root | codes are a promising | source. |     |     |
+| ------------- | --------------------- | ------- | --- | --- |
+APPENDIXA
+THEMAGMAPROGRAMS
+All computations were carried out in Magma; the scripts and data are available from the authors upon request. In brief, the
+xn−λ
+search enumerates the monic divisors g of with 1 ≤ degg ≤ n−1, certifies dual-containment by the rank condition
+
+SUBMITTEDFORPUBLICATION 6
+TABLEV
+QUANTUMLRCSFROMq-ARYQUADRATICRESIDUECODES(COROLLARY7).
+| p QRcode[p,(p+1)/2,d]q |                        | Quantumcode   | r   |
+| ---------------------- | ---------------------- | ------------- | --- |
+| Binaryq=2(p≡−1         | (mod8))                |               |     |
+| 7 [7,4,3]2             |                        | [[7,1,3]]2    | 3   |
+| 23 [23,12,7]2          |                        | [[23,1,7]]2   | 7   |
+| 31 [31,16,7]2          |                        | [[31,1,7]]2   | 7   |
+| 47 [47,24,11]2         |                        | [[47,1,11]]2  | 11  |
+| 71 [71,36,11]2         |                        | [[71,1,11]]2  | 11  |
+| [79,40,15]2            |                        | [[79,1,15]]2  |     |
+| 79                     |                        |               | 15  |
+| 103 [103,52,19]2       |                        | [[103,1,19]]2 | 19  |
+| 127 [127,64,19]2       |                        | [[127,1,19]]2 | 19  |
+| Ternaryq=3(p≡−1        | (mod12))               |               |     |
+| 11 [11,6,5]3           |                        | [[11,1,5]]3   | 5   |
+| 23 [23,12,8]3          |                        | [[23,1,8]]3   | 8   |
+| 47 [47,24,14]3         |                        | [[47,1,14]]3  | 14  |
+| 59 [59,30,17]3         |                        | [[59,1,17]]3  | 17  |
+| 71 [71,36,17]3         |                        | [[71,1,17]]3  | 17  |
+| Septenaryq=7(p≡3       | (mod4)and7aQR;p=19,31) |               |     |
+| 19 [19,10,7]7          |                        | [[19,1,7]]7   | 7   |
+| 31 [31,16,12]7         |                        | [[31,1,12]]7  | 12  |
+| Quaternaryq=4(p≡3      | (mod4);4isalwaysaQR)   |               |     |
+| 43 [43,22,13]4         |                        | [[43,1,13]]4  | 13  |
+TABLEVI
+FURTHERPUREQUANTUMLRCSOVERSMALLFIELDS(SELECTION).
+| Quantumcode | r Ingredient | Type | gap |
+| ----------- | ------------ | ---- | --- |
+Ternaryq=3
+| [[44,4,8]]3 | 11 [44,24,8]3 | cyc | 26  |
+| ----------- | ------------- | --- | --- |
+Quaternaryq=4
+| [[11,1,5]]4  | 5 [11,6,5]4    | cyc | 2   |
+| ------------ | -------------- | --- | --- |
+| [[12,2,4]]4  | 3 [12,7,4]4    | rr  | 4   |
+| [[19,1,7]]4  | 7 [19,10,7]4   | cyc | 6   |
+| [[21,1,6]]4  | 5 [21,11,6]4   | cyc | 10  |
+| [[23,1,7]]4  | 7 [23,12,7]4   | cyc | 10  |
+| [[30,2,6]]4  | 7 [30,16,6]4   | rr  | 18  |
+| [[31,1,7]]4  | 7 [31,16,7]4   | cyc | 18  |
+| [[33,1,10]]4 | 9 [33,17,10]4  | cyc | 14  |
+| [[42,2,9]]4  | 8 [42,22,9]4   | rr  | 24  |
+| [[47,1,11]]4 | 11 [47,24,11]4 | cyc | 26  |
+q=5
+| [[8,2,3]]5   | 3 [8,5,3]5    | cyc     | 2   |
+| ------------ | ------------- | ------- | --- |
+| [[10,2,4]]5  | 4 [10,6,4]5   | neg-rr  | 2   |
+| [[11,1,5]]5  | 5 [11,6,5]5   | cyc/neg | 2   |
+| [[19,1,7]]5  | 7 [19,10,7]5  | cyc/neg | 6   |
+| [[24,14,4]]5 | 11 [24,19,4]5 | cyc     | 2   |
+| [[30,16,4]]5 | 5 [30,23,4]5  | neg-rr  | 2   |
+| [[48,34,4]]5 | 11 [48,41,4]5 | cyc     | 2   |
+| [[60,46,3]]5 | 11 [60,53,3]5 | rr      | 2   |
+q=7
+| [[24,14,3]]7 | [24,19,3]7     |     |     |
+| ------------ | -------------- | --- | --- |
+|              | 5              | cyc | 2   |
+| [[48,36,3]]7 | 11 [48,42,3]7  | cyc | 2   |
+| [[29,1,8]]7  | 10 [29,15,8]7  | cyc | 14  |
+| [[37,1,9]]7  | 11 [37,19,9]7  | cyc | 20  |
+| [[38,2,11]]7 | 11 [38,20,11]7 | cyc | 16  |
+
+SUBMITTEDFORPUBLICATION 7
+rank[G;H⊥]=k, and computes d(C) and d(C⊥) by the Brouwer–Zimmermann algorithm; the parameters and the gap to (2)
+are recorded whenever d≥3.
+REFERENCES
+[1] P.Gopalan,C.Huang,H.Simitci,andS.Yekhanin,“Onthelocalityofcodewordsymbols,”IEEETransactionsonInformationTheory,vol.58,no.11,
+pp.6925–6934,2012.
+[2] I.TamoandA.Barg,“Afamilyofoptimallocallyrecoverablecodes,”IEEETransactionsonInformationTheory,vol.60,no.8,pp.4661–4676,2014.
+[3] L.Jin,“Explicitconstructionofoptimallocallyrecoverablecodesofdistance5and6viabinaryconstantweightcodes,”IEEETransactionsonInformation
+Theory,vol.65,no.8,pp.4658–4663,2019.
+[4] B.Chen,S.-T.Xia,J.Hao,andF.-W.Fu,“Constructionsofoptimalcyclic(r,δ)locallyrepairablecodes,”IEEETransactionsonInformationTheory,
+vol.64,no.4,pp.2499–2511,2018.
+[5] Y. Luo, C. Xing, and C. Yuan, “Optimal locally repairable codes of distance 3 and 4 via cyclic codes,” IEEE Transactions on Information Theory,
+vol.65,no.2,pp.1048–1053,2019.
+[6] L.GolowichandV.Guruswami,“Quantumlocallyrecoverablecodes,”inProceedingsofthe2025AnnualACM-SIAMSymposiumonDiscreteAlgorithms
+(SODA),2025,pp.5512–5522,alsoarXiv:2311.08653,2023.
+[7] G. Luo, B. Chen, M. F. Ezerman, and S. Ling, “Bounds and constructions of quantum locally recoverable codes from quantum css codes,” IEEE
+TransactionsonInformationTheory,vol.71,no.3,pp.1794–1802,2025,alsoarXiv:2312.11115.
+[8] C.Galindo,F.Hernando,H.Mart´ın-Cruz,andR.Matsumoto,“Quantum(r,δ)-locallyrecoverablecodes,”arXiv:2412.16590,2024.
+[9] S. Sharma, V. Ramkumar, and I. Tamo, “Quantum locally recoverable codes via good polynomials,” IEEE Journal on Selected Areas in Information
+Theory,vol.6,pp.100–110,2025,alsoarXiv:2411.01504.
+[10] Y.Li,S.Li,G.Luo,andS.Ling,“Improvedboundsandoptimalconstructionsofpurequantumlocallyrecoverablecodes,”arXiv:2512.07256,2025.
+[11] R.P.RajpurohitandM.Bhaintwal,“Constructionsofquantum(r,δ)-lrcsfromcycliccodes,”arXiv:2606.09522,2026.
+[12] E.Stylianou,V.Ramkumar,H.Boche,andR.Bitar,“Cssquantumlrcswithintersectingrecoverysets:Constructionsandbounds,”arXiv:2608.10912,
+2026.
+[13] R. Dastbasteh, J. E. Martinez, A. Nemec, A. deMarti iOlius, and P. C. Bofill, “An infinite class of quantum codes derived from duadic constacyclic
+codes,”arXiv:2312.06504,2023.
+[14] S.A.Aly,A.Klappenecker,andP.K.Sarvepalli,“Remarkabledegeneratequantumstabilizercodesderivedfromduadiccodes,”IEEETransactionson
+InformationTheory,vol.53,no.2,pp.603–608,2007.
+[15] T.Blackford,“Isodualconstacycliccodes,”FiniteFieldsandTheirApplications,vol.24,pp.29–44,2013.
+[16] A. Ketkar, A. Klappenecker, S. Kumar, and P. Sarvepalli, “Nonbinary stabilizer codes over finite fields,” IEEE Transactions on Information Theory,
+vol.52,no.11,pp.4892–4914,2006.
+[17] W.C.HuffmanandV.Pless,FundamentalsofError-CorrectingCodes. Cambridge:CambridgeUniversityPress,2003.
+[18] J.S.Leon,J.M.Masley,andV.Pless,“Duadiccodes,”IEEETransactionsonInformationTheory,vol.30,no.5,pp.709–714,1984.
+[19] C.Galindo,F.Hernando,H.Mart´ın-Cruz,andR.Matsumoto,“Impurecodesexceedingthepureboundsforquantumlocalrecovery,”arXiv:2604.03569,
+2026.
+---- END DOCUMENT ----

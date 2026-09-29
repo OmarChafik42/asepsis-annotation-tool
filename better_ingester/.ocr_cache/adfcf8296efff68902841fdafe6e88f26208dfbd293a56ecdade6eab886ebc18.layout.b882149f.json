@@ -1,0 +1,1487 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      423.0,
+      84.0,
+      1153.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Knowledge-guided Transfer Prediction In Underrepresented Populations: A GRU-D-Static Framework For Maternal And Neonatal Outcomes",
+    "page": 0,
+    "bbox": [
+      107.0,
+      121.0,
+      1051.0,
+      263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      106.0,
+      276.0,
+      1098.0,
+      448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      105.0,
+      473.0,
+      945.0,
+      617.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ABSTRACT",
+    "page": 0,
+    "bbox": [
+      108.0,
+      798.0,
+      246.0,
+      826.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      112.0,
+      852.0,
+      1112.0,
+      1229.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      108.0,
+      1282.0,
+      255.0,
+      1307.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      106.0,
+      1319.0,
+      1118.0,
+      1465.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      106.0,
+      131.0,
+      1119.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      107.0,
+      375.0,
+      1119.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      106.0,
+      859.0,
+      1118.0,
+      1315.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      106.0,
+      1320.0,
+      1119.0,
+      1466.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1072.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      107.0,
+      131.0,
+      1113.0,
+      178.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      107.0,
+      181.0,
+      1118.0,
+      276.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methods",
+    "page": 2,
+    "bbox": [
+      109.0,
+      310.0,
+      215.0,
+      336.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data",
+    "page": 2,
+    "bbox": [
+      109.0,
+      352.0,
+      160.0,
+      374.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      108.0,
+      378.0,
+      838.0,
+      402.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      135.0,
+      423.0,
+      1117.0,
+      471.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      493.0,
+      1116.0,
+      541.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      133.0,
+      562.0,
+      755.0,
+      587.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      133.0,
+      609.0,
+      914.0,
+      632.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      133.0,
+      655.0,
+      1123.0,
+      726.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      749.0,
+      916.0,
+      772.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      235.0,
+      815.0,
+      987.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1. Summary of risk factor categories and definitions",
+    "page": 2,
+    "bbox": [
+      370.0,
+      1178.0,
+      852.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      159.0,
+      1211.0,
+      1065.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      106.0,
+      1272.0,
+      1117.0,
+      1464.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Notations",
+    "page": 3,
+    "bbox": [
+      108.0,
+      129.0,
+      210.0,
+      152.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      155.0,
+      1115.0,
+      227.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      157.0,
+      245.0,
+      407.0,
+      306.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1087.0,
+      264.0,
+      1113.0,
+      287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      327.0,
+      1114.0,
+      479.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "GRU-D-Static framework",
+    "page": 3,
+    "bbox": [
+      107.0,
+      499.0,
+      349.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      525.0,
+      1117.0,
+      643.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      643.0,
+      1117.0,
+      717.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      474.0,
+      730.0,
+      747.0,
+      760.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      107.0,
+      774.0,
+      486.0,
+      798.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      404.0,
+      815.0,
+      814.0,
+      851.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      105.0,
+      870.0,
+      1113.0,
+      920.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      920.0,
+      410.0,
+      943.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      423.0,
+      959.0,
+      796.0,
+      998.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      422.0,
+      1014.0,
+      795.0,
+      1053.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      389.0,
+      1064.0,
+      830.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      481.0,
+      1112.0,
+      740.0,
+      1138.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      1147.0,
+      1114.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      492.0,
+      1196.0,
+      729.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      1230.0,
+      739.0,
+      1254.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      474.0,
+      1268.0,
+      747.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      108.0,
+      1314.0,
+      519.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      533.0,
+      1355.0,
+      688.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      1398.0,
+      997.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      497.0,
+      1437.0,
+      722.0,
+      1465.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      126.0,
+      174.0,
+      1130.0,
+      704.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1. GRU-D-Static framework",
+    "page": 4,
+    "bbox": [
+      458.0,
+      755.0,
+      764.0,
+      780.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      536.0,
+      819.0,
+      684.0,
+      846.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      108.0,
+      855.0,
+      1114.0,
+      924.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      106.0,
+      927.0,
+      1119.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Transfer prediction by integrating external scientific knowledge",
+    "page": 4,
+    "bbox": [
+      107.0,
+      1138.0,
+      716.0,
+      1161.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      107.0,
+      1164.0,
+      1116.0,
+      1404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      134.0,
+      1416.0,
+      1114.0,
+      1463.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      259.0,
+      122.0,
+      951.0,
+      771.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2. Flowchart of transfer prediction framework for GRU-D-Static based on Scenario 1 and 2",
+    "page": 5,
+    "bbox": [
+      207.0,
+      793.0,
+      1014.0,
+      818.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      131.0,
+      863.0,
+      1114.0,
+      913.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      131.0,
+      931.0,
+      1108.0,
+      955.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      973.0,
+      1118.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      494.0,
+      1043.0,
+      727.0,
+      1069.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      107.0,
+      1091.0,
+      1116.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      106.0,
+      1240.0,
+      1117.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Results",
+    "page": 6,
+    "bbox": [
+      108.0,
+      127.0,
+      203.0,
+      153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      167.0,
+      1118.0,
+      547.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      549.0,
+      1118.0,
+      716.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      718.0,
+      1116.0,
+      862.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      864.0,
+      1117.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1032.0,
+      1115.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      105.0,
+      1153.0,
+      1118.0,
+      1321.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion",
+    "page": 6,
+    "bbox": [
+      109.0,
+      1353.0,
+      244.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      106.0,
+      1392.0,
+      1116.0,
+      1465.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1072.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2. ROC-AUC on target data under Scenarios 1 and 2",
+    "page": 7,
+    "bbox": [
+      369.0,
+      240.0,
+      854.0,
+      264.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      288.0,
+      283.0,
+      934.0,
+      649.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      312.0,
+      654.0,
+      825.0,
+      673.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3. ROC-AUC on target data under Scenario 3",
+    "page": 7,
+    "bbox": [
+      398.0,
+      914.0,
+      826.0,
+      936.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      294.0,
+      956.0,
+      932.0,
+      1322.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      315.0,
+      1326.0,
+      826.0,
+      1344.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1521.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      107.0,
+      132.0,
+      913.0,
+      153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      107.0,
+      156.0,
+      1117.0,
+      417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      419.0,
+      570.0,
+      440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      134.0,
+      458.0,
+      1114.0,
+      480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      132.0,
+      498.0,
+      1114.0,
+      545.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      134.0,
+      561.0,
+      935.0,
+      585.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      109.0,
+      602.0,
+      1116.0,
+      674.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1073.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 9,
+    "bbox": [
+      109.0,
+      127.0,
+      247.0,
+      154.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      118.0,
+      165.0,
+      908.0,
+      189.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      119.0,
+      199.0,
+      1115.0,
+      245.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      119.0,
+      255.0,
+      1113.0,
+      303.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      120.0,
+      313.0,
+      1113.0,
+      361.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      120.0,
+      370.0,
+      1115.0,
+      418.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      119.0,
+      429.0,
+      1116.0,
+      499.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      119.0,
+      509.0,
+      1115.0,
+      557.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      120.0,
+      568.0,
+      1114.0,
+      614.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      118.0,
+      625.0,
+      1113.0,
+      673.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      111.0,
+      682.0,
+      1113.0,
+      730.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      111.0,
+      740.0,
+      1113.0,
+      788.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      798.0,
+      1112.0,
+      844.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      854.0,
+      1115.0,
+      879.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      111.0,
+      889.0,
+      1113.0,
+      937.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      947.0,
+      1113.0,
+      994.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      111.0,
+      1003.0,
+      1114.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1061.0,
+      1112.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      111.0,
+      1118.0,
+      1113.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1176.0,
+      1113.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1232.0,
+      1113.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1291.0,
+      1112.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1347.0,
+      988.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      110.0,
+      1381.0,
+      834.0,
+      1406.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      109.0,
+      1416.0,
+      1113.0,
+      1462.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1063.0,
+      1500.0,
+      1113.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgements",
+    "page": 10,
+    "bbox": [
+      108.0,
+      128.0,
+      342.0,
+      154.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      164.0,
+      1118.0,
+      309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Author Contributions Statement",
+    "page": 10,
+    "bbox": [
+      108.0,
+      335.0,
+      480.0,
+      362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      107.0,
+      372.0,
+      1115.0,
+      445.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Funding Information",
+    "page": 10,
+    "bbox": [
+      108.0,
+      471.0,
+      349.0,
+      498.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      508.0,
+      897.0,
+      533.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data Availability",
+    "page": 10,
+    "bbox": [
+      108.0,
+      560.0,
+      300.0,
+      587.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      598.0,
+      1118.0,
+      671.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Human Subjects Research",
+    "page": 10,
+    "bbox": [
+      108.0,
+      696.0,
+      417.0,
+      723.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      105.0,
+      734.0,
+      1207.0,
+      997.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1063.0,
+      1500.0,
+      1113.0,
+      1521.0
+    ]
+  }
+]

@@ -1,0 +1,992 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      433.0,
+      83.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Enabling Organisational Change Through Ground-Up Initiatives: A Case Study from the STFC Scientific Computing Department",
+    "page": 0,
+    "bbox": [
+      104.0,
+      161.0,
+      1123.0,
+      240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      283.0,
+      259.0,
+      447.0,
+      285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      765.0,
+      259.0,
+      951.0,
+      285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      791.0,
+      310.0,
+      930.0,
+      333.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      693.0,
+      286.0,
+      1023.0,
+      309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      103.0,
+      395.0,
+      196.0,
+      418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      741.0,
+      333.0,
+      978.0,
+      357.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      425.0,
+      594.0,
+      776.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      105.0,
+      798.0,
+      269.0,
+      820.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      827.0,
+      593.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      1287.0,
+      592.0,
+      1331.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      399.0,
+      1121.0,
+      772.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Developing a Sustainability Strategy",
+    "page": 0,
+    "bbox": [
+      631.0,
+      799.0,
+      1030.0,
+      823.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      829.0,
+      1122.0,
+      1026.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      1026.0,
+      1120.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      1312.0,
+      1123.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      103.0,
+      1347.0,
+      397.0,
+      1366.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      103.0,
+      1383.0,
+      255.0,
+      1420.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      103.0,
+      122.0,
+      397.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      893.0,
+      122.0,
+      1119.0,
+      141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      170.0,
+      592.0,
+      302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      303.0,
+      593.0,
+      436.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Strategy",
+    "page": 1,
+    "bbox": [
+      104.0,
+      454.0,
+      225.0,
+      478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      481.0,
+      593.0,
+      550.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      105.0,
+      566.0,
+      589.0,
+      949.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: An illustration of the five projects that make up the SCD Sustainability Strategy.",
+    "page": 1,
+    "bbox": [
+      103.0,
+      976.0,
+      591.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1044.0,
+      593.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Sustainability Support",
+    "page": 1,
+    "bbox": [
+      103.0,
+      1195.0,
+      382.0,
+      1218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1224.0,
+      593.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      172.0,
+      1122.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      523.0,
+      1122.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      764.0,
+      1122.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 Emissions Monitoring Across SCD Services",
+    "page": 1,
+    "bbox": [
+      630.0,
+      1084.0,
+      1112.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      1116.0,
+      1122.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      109.0,
+      482.0,
+      146.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      826.0,
+      127.0,
+      1119.0,
+      145.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      171.0,
+      592.0,
+      237.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      238.0,
+      592.0,
+      433.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      435.0,
+      594.0,
+      720.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 Sustainability Certification",
+    "page": 2,
+    "bbox": [
+      103.0,
+      745.0,
+      428.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      774.0,
+      593.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      949.0,
+      593.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.4 User Engagement and Training",
+    "page": 2,
+    "bbox": [
+      102.0,
+      1304.0,
+      469.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      1332.0,
+      593.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      171.0,
+      1121.0,
+      281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      282.0,
+      1123.0,
+      521.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      522.0,
+      1122.0,
+      832.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.5 Best Practice and Knowledge Sharing",
+    "page": 2,
+    "bbox": [
+      631.0,
+      849.0,
+      1057.0,
+      873.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      881.0,
+      1120.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      1010.0,
+      1121.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Discussion and Conclusion",
+    "page": 2,
+    "bbox": [
+      631.0,
+      1316.0,
+      941.0,
+      1339.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Outcomes and lessons learned",
+    "page": 2,
+    "bbox": [
+      631.0,
+      1347.0,
+      987.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      630.0,
+      1376.0,
+      1122.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      103.0,
+      122.0,
+      397.0,
+      140.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      893.0,
+      122.0,
+      1119.0,
+      141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      170.0,
+      593.0,
+      301.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      304.0,
+      593.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      676.0,
+      594.0,
+      941.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      523.0,
+      594.0,
+      675.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Transferability",
+    "page": 3,
+    "bbox": [
+      103.0,
+      997.0,
+      310.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1026.0,
+      591.0,
+      1091.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1093.0,
+      593.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1334.0,
+      593.0,
+      1423.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      629.0,
+      171.0,
+      1122.0,
+      303.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      665.0,
+      311.0,
+      1122.0,
+      465.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      664.0,
+      466.0,
+      1121.0,
+      595.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      664.0,
+      596.0,
+      1121.0,
+      705.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      663.0,
+      706.0,
+      1122.0,
+      816.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      629.0,
+      824.0,
+      1121.0,
+      979.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Acknowledgments",
+    "page": 3,
+    "bbox": [
+      632.0,
+      1000.0,
+      856.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      629.0,
+      1029.0,
+      1123.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 3,
+    "bbox": [
+      631.0,
+      1359.0,
+      748.0,
+      1382.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      637.0,
+      1386.0,
+      1120.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      103.0,
+      110.0,
+      482.0,
+      146.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      827.0,
+      129.0,
+      1120.0,
+      144.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      112.0,
+      175.0,
+      591.0,
+      208.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      112.0,
+      208.0,
+      589.0,
+      226.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      114.0,
+      214.0,
+      590.0,
+      270.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      271.0,
+      589.0,
+      303.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      304.0,
+      590.0,
+      349.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      351.0,
+      543.0,
+      366.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      369.0,
+      590.0,
+      429.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      431.0,
+      590.0,
+      477.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      635.0,
+      176.0,
+      1118.0,
+      254.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      634.0,
+      256.0,
+      1119.0,
+      316.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      635.0,
+      320.0,
+      1118.0,
+      351.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      635.0,
+      352.0,
+      1118.0,
+      383.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      635.0,
+      384.0,
+      1119.0,
+      428.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      636.0,
+      431.0,
+      1120.0,
+      478.0
+    ]
+  }
+]

@@ -1,0 +1,498 @@
+{
+  "generated": "2026-09-14T12:10:15",
+  "corpus_n": 60,
+  "conditions": {
+    "base_big": {
+      "title_f1": {
+        "mean": 0.875533,
+        "sd": 0.125194,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.882567,
+        "sd": 0.116318,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.826367,
+        "sd": 0.188179,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.8319,
+        "sd": 0.182275,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.9424,
+        "sd": 0.165431,
+        "n": 60
+      }
+    },
+    "base_small": {
+      "title_f1": {
+        "mean": 0.832567,
+        "sd": 0.147071,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.816583,
+        "sd": 0.141043,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.76135,
+        "sd": 0.198524,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.746733,
+        "sd": 0.191961,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.918183,
+        "sd": 0.182205,
+        "n": 60
+      }
+    },
+    "ceiling": {
+      "title_f1": {
+        "mean": 0.893433,
+        "sd": 0.158349,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.854917,
+        "sd": 0.176081,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.858617,
+        "sd": 0.205761,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.823567,
+        "sd": 0.217174,
+        "n": 60
+      },
+      "floor_recall": {
+        "mean": 0.938188,
+        "sd": 0.037564,
+        "n": 60
+      }
+    },
+    "ladder0": {
+      "title_f1": {
+        "mean": 0.828,
+        "sd": 0.208265,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.8041,
+        "sd": 0.21578,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.640867,
+        "sd": 0.295215,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.62065,
+        "sd": 0.289907,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.756633,
+        "sd": 0.324468,
+        "n": 60
+      }
+    },
+    "ladder1": {
+      "title_f1": {
+        "mean": 0.828,
+        "sd": 0.208265,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.8041,
+        "sd": 0.21578,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.716383,
+        "sd": 0.273205,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.693183,
+        "sd": 0.269581,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.882917,
+        "sd": 0.263536,
+        "n": 60
+      }
+    },
+    "ladder2": {
+      "title_f1": {
+        "mean": 0.828,
+        "sd": 0.208265,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.8041,
+        "sd": 0.21578,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.790067,
+        "sd": 0.242583,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.76685,
+        "sd": 0.245741,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.959133,
+        "sd": 0.18204,
+        "n": 60
+      }
+    },
+    "ours": {
+      "title_f1": {
+        "mean": 0.837667,
+        "sd": 0.183106,
+        "n": 60
+      },
+      "title_f2": {
+        "mean": 0.832317,
+        "sd": 0.182067,
+        "n": 60
+      },
+      "edge_f1": {
+        "mean": 0.793183,
+        "sd": 0.221487,
+        "n": 60
+      },
+      "edge_f2": {
+        "mean": 0.788617,
+        "sd": 0.220227,
+        "n": 60
+      },
+      "depth_acc": {
+        "mean": 0.986533,
+        "sd": 0.052652,
+        "n": 60
+      },
+      "order_tau": {
+        "mean": 0.999707,
+        "sd": 0.002232,
+        "n": 58
+      },
+      "content_f1": {
+        "mean": 0.869937,
+        "sd": 0.103267,
+        "n": 60
+      },
+      "content_f2": {
+        "mean": 0.882926,
+        "sd": 0.084343,
+        "n": 60
+      },
+      "content_r": {
+        "mean": 0.907425,
+        "sd": 0.055935,
+        "n": 60
+      },
+      "leaf_match": {
+        "mean": 0.852976,
+        "sd": 0.197081,
+        "n": 60
+      },
+      "coverage": {
+        "mean": 0.7431,
+        "sd": 0.088988,
+        "n": 60
+      },
+      "furniture_rate": {
+        "mean": 0.004417,
+        "sd": 0.007184,
+        "n": 60
+      },
+      "excluded_rate": {
+        "mean": 0.102317,
+        "sd": 0.048696,
+        "n": 60
+      },
+      "asset_rate": {
+        "mean": 0.080033,
+        "sd": 0.057153,
+        "n": 60
+      },
+      "unaccounted_rate": {
+        "mean": 0.070133,
+        "sd": 0.052436,
+        "n": 60
+      },
+      "asset_f1": {
+        "mean": 0.886158,
+        "sd": 0.143245,
+        "n": 57
+      },
+      "asset_f2": {
+        "mean": 0.920228,
+        "sd": 0.114373,
+        "n": 57
+      },
+      "asset_type_acc": {
+        "mean": 0.906754,
+        "sd": 0.225288,
+        "n": 57
+      },
+      "reach_f1": {
+        "mean": 0.706704,
+        "sd": 0.294747,
+        "n": 54
+      },
+      "reach_f2": {
+        "mean": 0.686185,
+        "sd": 0.297996,
+        "n": 54
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "comparison": "ours vs ladder0",
+      "n": 60,
+      "mean_x": 0.838,
+      "mean_y": 0.828,
+      "mean_diff": 0.01,
+      "sd_diff": 0.122,
+      "p_wilcoxon": 0.25732,
+      "metric": "title_f1",
+      "a": "ours",
+      "b": "ladder0"
+    },
+    {
+      "comparison": "ours vs ladder0",
+      "n": 60,
+      "mean_x": 0.832,
+      "mean_y": 0.804,
+      "mean_diff": 0.028,
+      "sd_diff": 0.14,
+      "p_wilcoxon": 0.08904,
+      "metric": "title_f2",
+      "a": "ours",
+      "b": "ladder0"
+    },
+    {
+      "comparison": "ours vs ladder0",
+      "n": 60,
+      "mean_x": 0.793,
+      "mean_y": 0.641,
+      "mean_diff": 0.152,
+      "sd_diff": 0.265,
+      "p_wilcoxon": 0.00015,
+      "metric": "edge_f1",
+      "a": "ours",
+      "b": "ladder0"
+    },
+    {
+      "comparison": "ours vs ladder0",
+      "n": 60,
+      "mean_x": 0.789,
+      "mean_y": 0.621,
+      "mean_diff": 0.168,
+      "sd_diff": 0.252,
+      "p_wilcoxon": 1e-05,
+      "metric": "edge_f2",
+      "a": "ours",
+      "b": "ladder0"
+    },
+    {
+      "comparison": "ours vs ladder0",
+      "n": 60,
+      "mean_x": 0.987,
+      "mean_y": 0.757,
+      "mean_diff": 0.23,
+      "sd_diff": 0.336,
+      "p_wilcoxon": 1e-05,
+      "metric": "depth_acc",
+      "a": "ours",
+      "b": "ladder0"
+    },
+    {
+      "comparison": "ours vs base_small",
+      "n": 60,
+      "mean_x": 0.838,
+      "mean_y": 0.833,
+      "mean_diff": 0.005,
+      "sd_diff": 0.171,
+      "p_wilcoxon": 0.23377,
+      "metric": "title_f1",
+      "a": "ours",
+      "b": "base_small"
+    },
+    {
+      "comparison": "ours vs base_small",
+      "n": 60,
+      "mean_x": 0.832,
+      "mean_y": 0.817,
+      "mean_diff": 0.016,
+      "sd_diff": 0.18,
+      "p_wilcoxon": 0.13132,
+      "metric": "title_f2",
+      "a": "ours",
+      "b": "base_small"
+    },
+    {
+      "comparison": "ours vs base_small",
+      "n": 60,
+      "mean_x": 0.793,
+      "mean_y": 0.761,
+      "mean_diff": 0.032,
+      "sd_diff": 0.24,
+      "p_wilcoxon": 0.05338,
+      "metric": "edge_f1",
+      "a": "ours",
+      "b": "base_small"
+    },
+    {
+      "comparison": "ours vs base_small",
+      "n": 60,
+      "mean_x": 0.789,
+      "mean_y": 0.747,
+      "mean_diff": 0.042,
+      "sd_diff": 0.251,
+      "p_wilcoxon": 0.02022,
+      "metric": "edge_f2",
+      "a": "ours",
+      "b": "base_small"
+    },
+    {
+      "comparison": "ours vs base_small",
+      "n": 60,
+      "mean_x": 0.987,
+      "mean_y": 0.918,
+      "mean_diff": 0.068,
+      "sd_diff": 0.18,
+      "p_wilcoxon": 0.00066,
+      "metric": "depth_acc",
+      "a": "ours",
+      "b": "base_small"
+    },
+    {
+      "comparison": "ours vs base_big",
+      "n": 60,
+      "mean_x": 0.838,
+      "mean_y": 0.876,
+      "mean_diff": -0.038,
+      "sd_diff": 0.155,
+      "p_wilcoxon": 0.97693,
+      "metric": "title_f1",
+      "a": "ours",
+      "b": "base_big"
+    },
+    {
+      "comparison": "ours vs base_big",
+      "n": 60,
+      "mean_x": 0.832,
+      "mean_y": 0.883,
+      "mean_diff": -0.05,
+      "sd_diff": 0.155,
+      "p_wilcoxon": 0.99629,
+      "metric": "title_f2",
+      "a": "ours",
+      "b": "base_big"
+    },
+    {
+      "comparison": "ours vs base_big",
+      "n": 60,
+      "mean_x": 0.793,
+      "mean_y": 0.826,
+      "mean_diff": -0.033,
+      "sd_diff": 0.179,
+      "p_wilcoxon": 0.91536,
+      "metric": "edge_f1",
+      "a": "ours",
+      "b": "base_big"
+    },
+    {
+      "comparison": "ours vs base_big",
+      "n": 60,
+      "mean_x": 0.789,
+      "mean_y": 0.832,
+      "mean_diff": -0.043,
+      "sd_diff": 0.18,
+      "p_wilcoxon": 0.96879,
+      "metric": "edge_f2",
+      "a": "ours",
+      "b": "base_big"
+    },
+    {
+      "comparison": "ours vs base_big",
+      "n": 60,
+      "mean_x": 0.987,
+      "mean_y": 0.942,
+      "mean_diff": 0.044,
+      "sd_diff": 0.172,
+      "p_wilcoxon": 0.02186,
+      "metric": "depth_acc",
+      "a": "ours",
+      "b": "base_big"
+    }
+  ],
+  "cells": {
+    "single_unnumbered": 12,
+    "two_arabic": 12,
+    "single_arabic": 12,
+    "two_roman": 12,
+    "two_unnumbered": 6,
+    "single_roman": 6
+  },
+  "completeness": {
+    "base_big": {
+      "tier": 1,
+      "done": 60
+    },
+    "base_small": {
+      "tier": 1,
+      "done": 60
+    },
+    "ceiling": {
+      "tier": 0,
+      "done": 60
+    },
+    "ladder0": {
+      "tier": 0,
+      "done": 60
+    },
+    "ladder1": {
+      "tier": 0,
+      "done": 60
+    },
+    "ladder2": {
+      "tier": 0,
+      "done": 60
+    },
+    "ours": {
+      "tier": 0,
+      "done": 60
+    },
+    "refine": {
+      "tier": 1,
+      "parked": 60
+    }
+  },
+  "offline_models": {
+    "base_big": "deepseek/deepseek-v4-pro-0813 (OpenRouter, temperature 0, max_tokens 2048, JSON mode)",
+    "base_small": "google/gemma-4-31b-it (OpenRouter, temperature 0, max_tokens 2048, JSON mode)"
+  }
+}

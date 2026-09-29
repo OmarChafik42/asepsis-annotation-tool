@@ -1,0 +1,3577 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      34.0,
+      573.0,
+      82.0,
+      1304.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Hybrid SINDy-EnKF in Learning Chikungunya Dynamics from Incomplete, Noisy, or Partially Observed Data",
+    "page": 0,
+    "bbox": [
+      167.0,
+      150.0,
+      1051.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      288.0,
+      250.0,
+      932.0,
+      279.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      172.0,
+      296.0,
+      1045.0,
+      324.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      565.0,
+      341.0,
+      653.0,
+      362.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      186.0,
+      374.0,
+      1033.0,
+      618.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      184.0,
+      632.0,
+      1033.0,
+      678.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      156.0,
+      1389.0,
+      629.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      156.0,
+      1409.0,
+      488.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      157.0,
+      1428.0,
+      447.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 1,
+    "bbox": [
+      137.0,
+      153.0,
+      367.0,
+      182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      134.0,
+      201.0,
+      1085.0,
+      538.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      134.0,
+      537.0,
+      1084.0,
+      968.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      134.0,
+      968.0,
+      1082.0,
+      1111.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1111.0,
+      1083.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      166.0,
+      1422.0,
+      1083.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      603.0,
+      1487.0,
+      617.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      159.0,
+      1085.0,
+      349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      350.0,
+      1084.0,
+      447.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Learning the Chikungunya Virus Model",
+    "page": 2,
+    "bbox": [
+      134.0,
+      481.0,
+      754.0,
+      512.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1 The chikungunya virus (CHIKV) model",
+    "page": 2,
+    "bbox": [
+      135.0,
+      531.0,
+      676.0,
+      559.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      572.0,
+      1083.0,
+      718.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      155.0,
+      759.0,
+      1063.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Illustration of the Chikungunya virus (CHIKV) model.",
+    "page": 2,
+    "bbox": [
+      321.0,
+      1372.0,
+      896.0,
+      1397.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      603.0,
+      1487.0,
+      619.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1.1 Host population",
+    "page": 3,
+    "bbox": [
+      136.0,
+      159.0,
+      374.0,
+      182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      196.0,
+      1082.0,
+      268.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      424.0,
+      287.0,
+      793.0,
+      311.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1038.0,
+      287.0,
+      1079.0,
+      311.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      331.0,
+      1084.0,
+      644.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1.2 Vector population",
+    "page": 3,
+    "bbox": [
+      135.0,
+      670.0,
+      392.0,
+      693.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      707.0,
+      1083.0,
+      756.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      520.0,
+      773.0,
+      698.0,
+      797.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1038.0,
+      774.0,
+      1079.0,
+      797.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      819.0,
+      1083.0,
+      866.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      475.0,
+      883.0,
+      741.0,
+      933.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1038.0,
+      897.0,
+      1079.0,
+      920.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      949.0,
+      1082.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      603.0,
+      1486.0,
+      619.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1.3 Governing equations",
+    "page": 4,
+    "bbox": [
+      135.0,
+      159.0,
+      419.0,
+      183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      195.0,
+      1083.0,
+      245.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      394.0,
+      258.0,
+      821.0,
+      767.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1037.0,
+      500.0,
+      1080.0,
+      525.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      782.0,
+      342.0,
+      805.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      298.0,
+      824.0,
+      921.0,
+      912.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1037.0,
+      855.0,
+      1079.0,
+      880.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2 Sparse identification of nonlinear dynamics (SINDy)",
+    "page": 4,
+    "bbox": [
+      135.0,
+      959.0,
+      820.0,
+      986.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      997.0,
+      1083.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      558.0,
+      1088.0,
+      661.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1037.0,
+      1099.0,
+      1079.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1152.0,
+      1084.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2.1 Model discovery from clean data",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1228.0,
+      541.0,
+      1251.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1265.0,
+      1083.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      439.0,
+      1330.0,
+      777.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1037.0,
+      1376.0,
+      1079.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      604.0,
+      1487.0,
+      618.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Definitions of the parameters and state variables used in the CHIKV model (2.4) subject to the initial conditions (2.5).",
+    "page": 5,
+    "bbox": [
+      135.0,
+      154.0,
+      1083.0,
+      206.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      141.0,
+      220.0,
+      1148.0,
+      888.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Initial conditions.",
+    "page": 5,
+    "bbox": [
+      490.0,
+      909.0,
+      728.0,
+      932.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      286.0,
+      952.0,
+      938.0,
+      1116.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      1157.0,
+      1082.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      435.0,
+      1203.0,
+      780.0,
+      1232.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1038.0,
+      1205.0,
+      1079.0,
+      1229.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      1236.0,
+      1084.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      535.0,
+      1344.0,
+      685.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1038.0,
+      1356.0,
+      1079.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      134.0,
+      1400.0,
+      1083.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1487.0,
+      618.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: The parameter values.",
+    "page": 6,
+    "bbox": [
+      469.0,
+      155.0,
+      748.0,
+      179.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      394.0,
+      199.0,
+      825.0,
+      479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      527.0,
+      680.0,
+      551.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      434.0,
+      567.0,
+      781.0,
+      602.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      572.0,
+      1080.0,
+      596.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      135.0,
+      622.0,
+      1083.0,
+      721.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2.2 Model discovery from noisy data",
+    "page": 6,
+    "bbox": [
+      136.0,
+      747.0,
+      541.0,
+      771.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      135.0,
+      784.0,
+      1066.0,
+      809.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      537.0,
+      826.0,
+      683.0,
+      851.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      827.0,
+      1079.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      134.0,
+      869.0,
+      1083.0,
+      943.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      449.0,
+      959.0,
+      769.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      1005.0,
+      1079.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1092.0,
+      785.0,
+      1116.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      431.0,
+      1134.0,
+      785.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      1136.0,
+      1079.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1180.0,
+      497.0,
+      1204.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      534.0,
+      1201.0,
+      685.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      1213.0,
+      1079.0,
+      1237.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      134.0,
+      1256.0,
+      949.0,
+      1279.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      437.0,
+      1294.0,
+      779.0,
+      1331.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1027.0,
+      1300.0,
+      1079.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      135.0,
+      1353.0,
+      530.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      603.0,
+      1487.0,
+      618.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3 Ensemble Kalman Filter",
+    "page": 7,
+    "bbox": [
+      136.0,
+      156.0,
+      491.0,
+      182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      196.0,
+      960.0,
+      220.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      491.0,
+      239.0,
+      686.0,
+      265.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      239.0,
+      1079.0,
+      262.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      491.0,
+      268.0,
+      727.0,
+      294.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      269.0,
+      1079.0,
+      292.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      312.0,
+      1083.0,
+      408.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      408.0,
+      1083.0,
+      460.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      502.0,
+      477.0,
+      715.0,
+      545.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      498.0,
+      1079.0,
+      523.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      564.0,
+      1082.0,
+      612.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      483.0,
+      609.0,
+      734.0,
+      670.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      627.0,
+      1079.0,
+      651.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      682.0,
+      1082.0,
+      731.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      455.0,
+      745.0,
+      741.0,
+      792.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      754.0,
+      1079.0,
+      779.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      437.0,
+      797.0,
+      781.0,
+      839.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1028.0,
+      805.0,
+      1079.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      857.0,
+      625.0,
+      880.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      349.0,
+      899.0,
+      806.0,
+      935.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1028.0,
+      905.0,
+      1079.0,
+      928.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      329.0,
+      940.0,
+      887.0,
+      975.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1028.0,
+      944.0,
+      1079.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      166.0,
+      989.0,
+      844.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      267.0,
+      1033.0,
+      950.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      1084.0,
+      1079.0,
+      1109.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      1140.0,
+      1082.0,
+      1189.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      347.0,
+      1207.0,
+      869.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      1214.0,
+      1079.0,
+      1238.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      1264.0,
+      1082.0,
+      1317.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      405.0,
+      1332.0,
+      811.0,
+      1369.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1027.0,
+      1338.0,
+      1079.0,
+      1363.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      1390.0,
+      1083.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1487.0,
+      618.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      159.0,
+      1083.0,
+      208.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      603.0,
+      1487.0,
+      618.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      227.0,
+      848.0,
+      1026.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Illustration of learning chikungunya transmission dynamics proposed in this paper: a sparse identification and sequential data assimilation approach.",
+    "page": 9,
+    "bbox": [
+      135.0,
+      1334.0,
+      1084.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      603.0,
+      1486.0,
+      618.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Numerical Results",
+    "page": 10,
+    "bbox": [
+      137.0,
+      152.0,
+      450.0,
+      182.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      202.0,
+      1084.0,
+      369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      369.0,
+      1083.0,
+      468.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      353.0,
+      486.0,
+      864.0,
+      556.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1038.0,
+      508.0,
+      1080.0,
+      533.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      576.0,
+      508.0,
+      601.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      500.0,
+      618.0,
+      716.0,
+      675.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1037.0,
+      635.0,
+      1080.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      690.0,
+      1083.0,
+      764.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Identification of CHIKV Dynamics from Clean Observations",
+    "page": 10,
+    "bbox": [
+      134.0,
+      792.0,
+      917.0,
+      818.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      831.0,
+      1083.0,
+      905.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      931.0,
+      1084.0,
+      1125.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      1151.0,
+      1084.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      1345.0,
+      1084.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      599.0,
+      1486.0,
+      623.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      135.0,
+      158.0,
+      1082.0,
+      208.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) True CHIKV dynamics",
+    "page": 11,
+    "bbox": [
+      411.0,
+      228.0,
+      743.0,
+      259.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      142.0,
+      272.0,
+      607.0,
+      578.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      611.0,
+      268.0,
+      1076.0,
+      584.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) SINDy reconstruction using clean data",
+    "page": 11,
+    "bbox": [
+      349.0,
+      649.0,
+      867.0,
+      681.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      694.0,
+      616.0,
+      1001.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      615.0,
+      689.0,
+      1079.0,
+      1000.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: Time evolution of the host and vector compartments obtained by numerically solving the original CHIKV model. The left panel shows the host population dynamics, while the right panel shows the vector population dynamics.",
+    "page": 11,
+    "bbox": [
+      135.0,
+      1023.0,
+      1083.0,
+      1096.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 SINDy Reconstruction from Noisy Data",
+    "page": 11,
+    "bbox": [
+      135.0,
+      1152.0,
+      677.0,
+      1178.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      134.0,
+      1192.0,
+      1083.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2.1 Noise model and threshold selection",
+    "page": 11,
+    "bbox": [
+      136.0,
+      1289.0,
+      575.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      1327.0,
+      606.0,
+      1350.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      498.0,
+      1363.0,
+      720.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      134.0,
+      1400.0,
+      1083.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      598.0,
+      1487.0,
+      622.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4: Component-wise RMSE between the true CHIKV model and the discovered SINDy models. Where λ = 0.0000000001 for clean data, λ = 0.00002 for 5% noise, λ = 0.000028 for 10% noise, λ = 0.000001 for 20% noise, λ = 0.0006 for 25% noise, λ = 0.0006 for 30% noise, λ = 0.001 for 40% noise, and λ = 0.005 for 50%noise.",
+    "page": 12,
+    "bbox": [
+      134.0,
+      153.0,
+      1084.0,
+      252.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      143.0,
+      268.0,
+      1209.0,
+      542.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 5: Relative RMSE between the true CHIKV model and the discovered SINDy models. Where λ = 0.0000000001 for clean data, λ = 0.00002 for 5% noise, λ = 0.000028 for 10% noise, λ = 0.000001 for 20% noise, λ = 0.0006 for 25% noise, λ = 0.0006 for 30% noise, λ = 0.001 for 40% noise, and λ = 0.005 for 50% noise.",
+    "page": 12,
+    "bbox": [
+      135.0,
+      566.0,
+      1083.0,
+      661.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      179.0,
+      681.0,
+      1038.0,
+      838.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      880.0,
+      1084.0,
+      950.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2.2 Small noise regime (ε ≤ 10%)",
+    "page": 12,
+    "bbox": [
+      136.0,
+      980.0,
+      497.0,
+      1003.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      1016.0,
+      1085.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2.3 Moderate-to-large noise regime (ε ≥ 20%)",
+    "page": 12,
+    "bbox": [
+      135.0,
+      1284.0,
+      623.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      1320.0,
+      1087.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      599.0,
+      1487.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      138.0,
+      159.0,
+      238.0,
+      181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      183.0,
+      1083.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      350.0,
+      1084.0,
+      613.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      613.0,
+      1083.0,
+      758.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 State Estimation via Ensemble Kalman Filtering",
+    "page": 13,
+    "bbox": [
+      135.0,
+      785.0,
+      779.0,
+      811.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      824.0,
+      1084.0,
+      946.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3.1 Experimental setup",
+    "page": 13,
+    "bbox": [
+      136.0,
+      973.0,
+      408.0,
+      996.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      1010.0,
+      1083.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3.2 Sensitivity to observation frequency",
+    "page": 13,
+    "bbox": [
+      136.0,
+      1229.0,
+      572.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      1266.0,
+      1083.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      1337.0,
+      1085.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      599.0,
+      1487.0,
+      623.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) SINDy reconstruction from 5% noisy state data",
+    "page": 14,
+    "bbox": [
+      362.0,
+      196.0,
+      988.0,
+      229.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      142.0,
+      236.0,
+      616.0,
+      547.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      615.0,
+      233.0,
+      1078.0,
+      545.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) SINDy reconstruction from 10% noisy state data",
+    "page": 14,
+    "bbox": [
+      340.0,
+      573.0,
+      982.0,
+      605.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      139.0,
+      618.0,
+      610.0,
+      925.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      611.0,
+      615.0,
+      1073.0,
+      929.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) SINDy reconstruction from 20% noisy state data",
+    "page": 14,
+    "bbox": [
+      349.0,
+      973.0,
+      972.0,
+      1005.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      138.0,
+      1021.0,
+      613.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      612.0,
+      1014.0,
+      1079.0,
+      1330.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: Numerical simulation of the SINDy-identified CHIKV model using noisy state measurements. The left panel shows the host compartments, and the right panel shows the vector compartments.",
+    "page": 14,
+    "bbox": [
+      135.0,
+      1353.0,
+      1083.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      599.0,
+      1486.0,
+      624.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) SINDy reconstruction from 25% noisy state data",
+    "page": 15,
+    "bbox": [
+      275.0,
+      201.0,
+      915.0,
+      233.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      239.0,
+      621.0,
+      554.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      616.0,
+      236.0,
+      1079.0,
+      548.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) SINDy reconstruction from 30% noisy state data",
+    "page": 15,
+    "bbox": [
+      276.0,
+      595.0,
+      919.0,
+      627.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      142.0,
+      627.0,
+      617.0,
+      935.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      615.0,
+      631.0,
+      1078.0,
+      937.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) SINDy reconstruction from 40% noisy state data",
+    "page": 15,
+    "bbox": [
+      293.0,
+      977.0,
+      932.0,
+      1007.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      139.0,
+      1016.0,
+      620.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      616.0,
+      1014.0,
+      1079.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5: Numerical simulation of the SINDy-identified CHIKV model using noisy state measurements. The left panel shows the host compartments, and the right panel shows the vector compartments.",
+    "page": 15,
+    "bbox": [
+      135.0,
+      1348.0,
+      1083.0,
+      1397.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      598.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      138.0,
+      203.0,
+      615.0,
+      513.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      618.0,
+      200.0,
+      1078.0,
+      516.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6: Numerical simulation of the SINDy-identified CHIKV model using noisy state measurements. The left panel shows the host compartments, and the right panel shows the vector compartments.",
+    "page": 16,
+    "bbox": [
+      135.0,
+      536.0,
+      1083.0,
+      587.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      626.0,
+      1082.0,
+      674.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      675.0,
+      1083.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      134.0,
+      771.0,
+      1083.0,
+      866.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 6: RMSE comparison between the noisy SINDy trajectory and the SINDy-EnKF posterior estimate.",
+    "page": 16,
+    "bbox": [
+      140.0,
+      885.0,
+      1081.0,
+      909.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      324.0,
+      929.0,
+      899.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3.3 Recovery of unobserved state variables",
+    "page": 16,
+    "bbox": [
+      135.0,
+      1269.0,
+      603.0,
+      1292.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      1305.0,
+      1084.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      599.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      144.0,
+      474.0,
+      611.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      619.0,
+      481.0,
+      1055.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7: Sensitivity of Ensemble Kalman Filter to the observational time interval dtobs for the CHIKV model (2.4). The left panel shows the Normalized Root Mean Square Error, while the right panel shows the correlation between the host and vector compartments. Data points represent intervals ranging from 0.1 to 10. Observed variables: Vh, Ih, Jh, and Th. Unobserved variables: Sh, Eh, Rh, Sv, Ev, and Iv.",
+    "page": 17,
+    "bbox": [
+      135.0,
+      1038.0,
+      1083.0,
+      1136.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      598.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      223.0,
+      488.0,
+      996.0,
+      1006.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8: EnKF reconstruction of observed host compartments. Comparison of the 25% noisy SINDy trajectory, forecast prior mean, true clean trajectory, filtered posterior mean, and observations for the observed compartments Vh, Ih, Jh, and Th.",
+    "page": 18,
+    "bbox": [
+      134.0,
+      1050.0,
+      1083.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      599.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      217.0,
+      483.0,
+      995.0,
+      998.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 9: EnKF reconstruction of host compartments. Comparison of the 25% noisy SINDy trajectory, forecast prior mean, true clean trajectory, and filtered posterior mean for all host compartments. The EnKF corrects the noisy SINDy forecast and closely tracks the clean reference dynamics.",
+    "page": 19,
+    "bbox": [
+      134.0,
+      1049.0,
+      1084.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      598.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      226.0,
+      488.0,
+      994.0,
+      646.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      209.0,
+      665.0,
+      996.0,
+      815.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      233.0,
+      829.0,
+      996.0,
+      989.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10: EnKF reconstruction of vector compartments. Comparison of the 25% noisy SINDy trajectory, forecast prior mean, true clean trajectory, and filtered posterior mean for the vector compartments Sv, Ev, and Iv. The filtered estimates remain close to the true clean trajectories despite noise-induced deviations in the SINDy forecast.",
+    "page": 20,
+    "bbox": [
+      135.0,
+      1038.0,
+      1084.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      597.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      160.0,
+      1082.0,
+      421.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      422.0,
+      1083.0,
+      540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      542.0,
+      1083.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      661.0,
+      1083.0,
+      804.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      804.0,
+      1083.0,
+      994.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      996.0,
+      1083.0,
+      1092.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Conclusion",
+    "page": 21,
+    "bbox": [
+      137.0,
+      1127.0,
+      343.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      1177.0,
+      1084.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      598.0,
+      1487.0,
+      621.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      134.0,
+      159.0,
+      1082.0,
+      205.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      134.0,
+      208.0,
+      1084.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      374.0,
+      1083.0,
+      469.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      134.0,
+      469.0,
+      1085.0,
+      1070.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Availability of data and material",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1096.0,
+      527.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      1136.0,
+      1083.0,
+      1184.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supporting information",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1213.0,
+      422.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      1252.0,
+      1083.0,
+      1325.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Authors' contributions",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1353.0,
+      412.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      1392.0,
+      1084.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      598.0,
+      1487.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      134.0,
+      159.0,
+      1084.0,
+      231.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Conflicts of Interest",
+    "page": 23,
+    "bbox": [
+      136.0,
+      258.0,
+      380.0,
+      284.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      297.0,
+      715.0,
+      321.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Funding",
+    "page": 23,
+    "bbox": [
+      136.0,
+      357.0,
+      260.0,
+      388.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      405.0,
+      276.0,
+      430.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix A: CHIKV model",
+    "page": 23,
+    "bbox": [
+      137.0,
+      464.0,
+      545.0,
+      496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      514.0,
+      1083.0,
+      562.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      326.0,
+      574.0,
+      889.0,
+      604.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1047.0,
+      578.0,
+      1080.0,
+      603.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      615.0,
+      451.0,
+      638.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      493.0,
+      638.0,
+      724.0,
+      663.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1047.0,
+      638.0,
+      1079.0,
+      662.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      670.0,
+      391.0,
+      692.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      434.0,
+      701.0,
+      786.0,
+      732.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1047.0,
+      705.0,
+      1079.0,
+      730.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      740.0,
+      762.0,
+      766.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      203.0,
+      774.0,
+      1005.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1048.0,
+      885.0,
+      1079.0,
+      910.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      1029.0,
+      1082.0,
+      1222.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix B: SINDy identification using partial and noisy data",
+    "page": 23,
+    "bbox": [
+      135.0,
+      1256.0,
+      1035.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      134.0,
+      1306.0,
+      1084.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      598.0,
+      1487.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) SINDy reconstruction using partial training data",
+    "page": 24,
+    "bbox": [
+      263.0,
+      363.0,
+      912.0,
+      396.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      142.0,
+      410.0,
+      619.0,
+      721.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      618.0,
+      404.0,
+      1078.0,
+      719.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) SINDy reconstruction using partial training data with 25% noise",
+    "page": 24,
+    "bbox": [
+      191.0,
+      783.0,
+      1038.0,
+      816.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      832.0,
+      614.0,
+      1139.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      616.0,
+      829.0,
+      1081.0,
+      1140.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 11: Numerical simulations show the trajectories obtained when SINDy is trained on only the first half of the clean dataset. The left panel shows the reconstructed host dynamics, and the right panel shows the reconstructed vector dynamics.",
+    "page": 24,
+    "bbox": [
+      135.0,
+      1163.0,
+      1083.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      598.0,
+      1486.0,
+      624.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      152.0,
+      742.0,
+      186.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      597.0,
+      1486.0,
+      623.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      354.0,
+      156.0,
+      863.0,
+      178.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      139.0,
+      204.0,
+      1076.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      134.0,
+      159.0,
+      1077.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      138.0,
+      151.0,
+      1077.0,
+      1507.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      162.0,
+      1077.0,
+      1536.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      139.0,
+      242.0,
+      1074.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      597.0,
+      1487.0,
+      623.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 31,
+    "bbox": [
+      137.0,
+      153.0,
+      297.0,
+      182.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      202.0,
+      1081.0,
+      272.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      289.0,
+      1083.0,
+      362.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      377.0,
+      1082.0,
+      448.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      465.0,
+      1081.0,
+      536.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      552.0,
+      1083.0,
+      625.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      640.0,
+      1081.0,
+      712.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      148.0,
+      728.0,
+      1080.0,
+      776.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      791.0,
+      1082.0,
+      864.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      147.0,
+      879.0,
+      1082.0,
+      928.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      943.0,
+      1083.0,
+      991.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1007.0,
+      1082.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      139.0,
+      1094.0,
+      1081.0,
+      1142.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1158.0,
+      1083.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      138.0,
+      1246.0,
+      1081.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      1357.0,
+      1082.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      597.0,
+      1486.0,
+      622.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      138.0,
+      159.0,
+      1083.0,
+      230.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      138.0,
+      246.0,
+      1081.0,
+      316.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      333.0,
+      1081.0,
+      382.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      397.0,
+      1081.0,
+      468.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      485.0,
+      1080.0,
+      510.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      524.0,
+      1081.0,
+      596.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      611.0,
+      1081.0,
+      684.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      700.0,
+      1082.0,
+      773.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      787.0,
+      1081.0,
+      836.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      852.0,
+      1082.0,
+      923.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      939.0,
+      1081.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      1027.0,
+      1082.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      1090.0,
+      1080.0,
+      1139.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      1154.0,
+      1083.0,
+      1202.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      1217.0,
+      1081.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      1282.0,
+      1081.0,
+      1354.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      1369.0,
+      1083.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      598.0,
+      1486.0,
+      623.0,
+      1505.0
+    ]
+  }
+]

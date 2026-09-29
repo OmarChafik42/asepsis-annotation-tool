@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "document": {
+    "document_id": "doc-4c5c90c4818df4e7",
+    "filename": "ddb35d27_41b50400-a607-11f1-8b82-5f5342bdc0ca_origin.pdf",
+    "pdf_sha256": "4c5c90c4818df4e780ee70d99ea0e6934cdf0f93397748a3af25c43b7f867a1d",
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "width": 1440.0,
+        "height": 817.9199829101562
+      }
+    ]
+  },
+  "pipeline": {
+    "name": "MinerU",
+    "version": null,
+    "ocr_engine": null,
+    "ocr_version": null,
+    "config_hash": null,
+    "processed_at": null,
+    "adapter": "mineru-model-v1",
+    "metadata": {
+      "import_format": "mineru_model"
+    }
+  },
+  "regions": [
+    {
+      "region_id": "f24ac7c6-b7eb-5966-b269-6d3e31bf9bd0",
+      "source_region_id": "mineru:p0:i0",
+      "page": 0,
+      "bbox": {
+        "x0": 0.0,
+        "y0": 0.0035211267605633804,
+        "x1": 0.6602857142857143,
+        "y1": 0.039235412474849095
+      },
+      "type": "header",
+      "text": "",
+      "ocr_confidence": 0.5373,
+      "reading_order": 1,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": 12
+      }
+    },
+    {
+      "region_id": "45518506-1d18-58a7-940f-f14838dcc0a9",
+      "source_region_id": "mineru:p0:i1",
+      "page": 0,
+      "bbox": {
+        "x0": 0.8231428571428572,
+        "y0": 0.06237424547283702,
+        "x1": 0.964,
+        "y1": 0.10764587525150905
+      },
+      "type": "header",
+      "text": "",
+      "ocr_confidence": 0.533,
+      "reading_order": 2,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": 12
+      }
+    },
+    {
+      "region_id": "9fe323ef-2fd1-5166-8707-b5a0aea4ae3f",
+      "source_region_id": "mineru:p0:i2",
+      "page": 0,
+      "bbox": {
+        "x0": 0.0008571428571428571,
+        "y0": 0.14537223340040242,
+        "x1": 0.7445714285714286,
+        "y1": 0.9869215291750503
+      },
+      "type": "table",
+      "text": "",
+      "ocr_confidence": 0.9782,
+      "reading_order": 3,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": 21,
+        "html": "<table><tr><td rowspan=1 colspan=1>Indicator</td><td rowspan=2 colspan=8>Proportion of bloodstream infection due to methicillin-resistant Staphylococcus aureus (MRSA) (%)2016</td></tr><tr><td rowspan=1 colspan=1>Location</td><td rowspan=1 colspan=1>2023</td><td rowspan=1 colspan=1>2022</td><td rowspan=1 colspan=1>2021</td><td rowspan=1 colspan=1>2020</td><td rowspan=1 colspan=1>2019</td><td rowspan=1 colspan=1>2018</td><td rowspan=1 colspan=1>2017</td></tr><tr><td rowspan=1 colspan=1>Algeria</td><td rowspan=1 colspan=1>467</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Argentina</td><td rowspan=1 colspan=1>35.7</td><td rowspan=1 colspan=1>32.8 </td><td rowspan=1 colspan=1>34.3 </td><td rowspan=1 colspan=1>38.4 </td><td rowspan=1 colspan=1>42 7</td><td rowspan=1 colspan=1>42.5 </td><td rowspan=1 colspan=1>45  7</td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Australia</td><td rowspan=1 colspan=1>15.8</td><td rowspan=1 colspan=1>15 7</td><td rowspan=1 colspan=1>16.9</td><td rowspan=1 colspan=1>17.7 </td><td rowspan=1 colspan=1>18.5 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Austria</td><td rowspan=1 colspan=1>4.37</td><td rowspan=1 colspan=1>3.97</td><td rowspan=1 colspan=1>3.17</td><td rowspan=1 colspan=1>4.57</td><td rowspan=1 colspan=1>5.37</td><td rowspan=1 colspan=1>6.47</td><td rowspan=1 colspan=1>5.9 7</td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Bahrain</td><td rowspan=1 colspan=1>53.3</td><td rowspan=1 colspan=1>42.1</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>34.4</td><td rowspan=1 colspan=1>40  7</td><td rowspan=1 colspan=1>35.5</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Bangladesh</td><td rowspan=1 colspan=1>78  7</td><td rowspan=1 colspan=1>88.5 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Belgium</td><td rowspan=1 colspan=1>7    7</td><td rowspan=1 colspan=1>4.6 7</td><td rowspan=1 colspan=1>4.2</td><td rowspan=1 colspan=1>6.8 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Benin</td><td rowspan=1 colspan=1>62.8</td><td rowspan=1 colspan=1>52.6 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Bhutan</td><td rowspan=1 colspan=1>5    7</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>11.7</td><td rowspan=1 colspan=1>20.8</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Bosnia and Herzegovina</td><td rowspan=1 colspan=1>28.4 </td><td rowspan=1 colspan=1>26.5 </td><td rowspan=1 colspan=1>20.8 </td><td rowspan=1 colspan=1>23.2 </td><td rowspan=1 colspan=1>10.6 </td><td rowspan=1 colspan=1>16.3 </td><td rowspan=1 colspan=1>25.8</td><td rowspan=1 colspan=1>18                                                       7</td></tr><tr><td rowspan=1 colspan=1>Brazil</td><td rowspan=1 colspan=1>27.5</td><td rowspan=1 colspan=1>31.6</td><td rowspan=1 colspan=1>7    7</td><td rowspan=1 colspan=1>24.4</td><td rowspan=1 colspan=1>20.6</td><td rowspan=1 colspan=1>11.1 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Brunei Darussalam</td><td rowspan=1 colspan=1>5.3 7</td><td rowspan=1 colspan=1>12.2</td><td rowspan=1 colspan=1>14.6</td><td rowspan=1 colspan=1>12.5</td><td rowspan=1 colspan=1>12.3</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Burkina Faso</td><td rowspan=1 colspan=1>22  7</td><td rowspan=1 colspan=1>30.4 </td><td rowspan=1 colspan=1>51.2 </td><td rowspan=1 colspan=1>68.8 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Cote d&#x27;Ivoire</td><td rowspan=1 colspan=1>1007</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>71.5 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=2 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Cambodia</td><td rowspan=1 colspan=1>54.2 </td><td rowspan=1 colspan=1>81.3 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>68.1 </td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>48.8</td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Cameroon</td><td rowspan=1 colspan=1>62.5 </td><td rowspan=1 colspan=1>76 7</td><td rowspan=1 colspan=1>45.5</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=2 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Canada</td><td rowspan=1 colspan=1>18.3</td><td rowspan=1 colspan=1>21 7</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>China, Hong Kong Special Administrative Region</td><td rowspan=1 colspan=1>45.7 </td><td rowspan=1 colspan=1>45.8</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=2 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Colombia</td><td rowspan=1 colspan=1>47.8 </td><td rowspan=1 colspan=1>45.2</td><td rowspan=1 colspan=1>45.2</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Croatia</td><td rowspan=1 colspan=1>27.4 </td><td rowspan=1 colspan=1>53.8 </td><td rowspan=1 colspan=1>66.7 </td><td rowspan=1 colspan=1>50 7</td><td rowspan=1 colspan=1>24.9</td><td rowspan=1 colspan=1>26.4 </td><td rowspan=1 colspan=1>28.5</td><td rowspan=4 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Cyprus</td><td rowspan=1 colspan=1>53 7</td><td rowspan=1 colspan=1>55.9 </td><td rowspan=1 colspan=1>42.9</td><td rowspan=1 colspan=1>49.5 </td><td rowspan=1 colspan=1>100</td><td rowspan=1 colspan=1>40.2</td><td rowspan=1 colspan=1>31.2 </td></tr><tr><td rowspan=1 colspan=1>Czechia</td><td rowspan=1 colspan=1>28.5 </td><td rowspan=1 colspan=1>7.67</td><td rowspan=1 colspan=1>9.47</td><td rowspan=1 colspan=1>9.37</td><td rowspan=1 colspan=1>12.5 </td><td rowspan=1 colspan=1>13.6 </td><td rowspan=1 colspan=1>13.2 </td></tr><tr><td rowspan=1 colspan=1>Democratic Renublic of the Conao</td><td rowspan=1 colspan=1>90.4</td><td rowspan=1 colspan=1>88.5</td><td rowspan=1 colspan=1>100</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr></table>"
+      }
+    },
+    {
+      "region_id": "ed95ba72-721d-5d97-82ee-0fa03252f5c6",
+      "source_region_id": "mineru:p0:i3",
+      "page": 0,
+      "bbox": {
+        "x0": 0.0014285714285714286,
+        "y0": 0.005030181086519115,
+        "x1": 0.6574285714285715,
+        "y1": 0.03873239436619718
+      },
+      "type": "ocr_text",
+      "text": "",
+      "ocr_confidence": 1.0,
+      "reading_order": null,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": null
+      }
+    },
+    {
+      "region_id": "ee8db892-b4a6-5031-be29-eebfbdac824d",
+      "source_region_id": "mineru:p0:i4",
+      "page": 0,
+      "bbox": {
+        "x0": 0.8262857142857143,
+        "y0": 0.06639839034205232,
+        "x1": 0.962,
+        "y1": 0.08350100603621731
+      },
+      "type": "ocr_text",
+      "text": "",
+      "ocr_confidence": 1.0,
+      "reading_order": null,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": null
+      }
+    },
+    {
+      "region_id": "d2dcdd26-d52c-5c9e-9304-8405e7a6c6ed",
+      "source_region_id": "mineru:p0:i5",
+      "page": 0,
+      "bbox": {
+        "x0": 0.8257142857142857,
+        "y0": 0.08651911468812877,
+        "x1": 0.9485714285714286,
+        "y1": 0.10412474849094568
+      },
+      "type": "ocr_text",
+      "text": "",
+      "ocr_confidence": 1.0,
+      "reading_order": null,
+      "heading_level": null,
+      "heading_level_source": null,
+      "heading_level_uncertain": false,
+      "uncertainty_reason": null,
+      "origin": "machine",
+      "ignored": false,
+      "uncertain": false,
+      "note": null,
+      "metadata": {
+        "source": "mineru_model",
+        "cls_id": null
+      }
+    }
+  ],
+  "state_revision": 0,
+  "metadata": {
+    "import_format": "mineru_model"
+  }
+}

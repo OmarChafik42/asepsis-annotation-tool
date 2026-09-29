@@ -1,0 +1,2572 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xr}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\numberwithin{equation}{section}
+% Uncomment this line to hide draft margin labels produced by showlabels.
+\newcommand{\hideshowlabels}{}
+
+%% packages needed for personal formating (not PNAS)
+\usepackage{framed}    % framed environment (e.g., framed, shaded)
+\usepackage{xspace}    % clever spacing or not spacing
+\usepackage{multicol}  % multi-column mode
+
+%% Build-mode switch for source shared by formatted and arXiv drivers.
+\newif\ifepimomarxiv
+\epimomarxivfalse
+
+%% Generic anonymous-review build switch; formatted classes may define it first.
+\makeatletter
+\@ifundefined{ifanonymous}{%
+  \newif\ifanonymous
+  \anonymousfalse
+}{}
+\makeatother
+
+%% Draft label display
+\ifdefined\hideshowlabels
+\else
+  \definecolor{labelgray}{gray}{0.8}
+  \newcommand{\myshowlabelsize}{\tiny}
+  \usepackage{showlabels}
+  \renewcommand{\showlabelsetlabel}[1]{\textcolor{labelgray}{\myshowlabelsize\ttfamily #1}}
+\fi
+
+%% Latin abbreviations
+\newcommand{\ie}{\textit{i.e., }}
+\newcommand{\eg}{\textit{e.g., }}
+\newcommand{\etc}{\emph{etc.}\xspace}
+\newcommand{\nb}{\textit{N.B., }}
+\newcommand{\vs}{\textit{vs.\ }}
+\newcommand{\cf}{\textit{cf.\ }}
+
+%% text abbreviations
+\newcommand{\KM}{KM\xspace}
+\newcommand{\RE}{renewal equation\xspace}
+%%\newcommand{\FoItext}{force of infection\xspace}
+\newcommand{\FoItext}{FoI\xspace}
+
+%% Robust smaller subscript fonts:
+\newcommand{\mathscale}[2]{%
+  \mathchoice
+    {\scalebox{#1}{$\displaystyle #2$}}%
+    {\scalebox{#1}{$\textstyle #2$}}%
+    {\scalebox{#1}{$\scriptstyle #2$}}%
+    {\scalebox{#1}{$\scriptscriptstyle #2$}}%
+}
+
+%% math symbols
+\newcommand{\Tau}{{\mathcal T}} % capital \tau
+\newcommand{\R}{{\mathcal R}}
+\newcommand{\Rn}{\R_{\mathscale{\mymathscale}{0}}}
+\newcommand{\Reff}{\R_{\mathscale{\mymathscale}{{\mathrm{eff}}}}}
+\newcommand{\Ra}{\R_{\mathscale{\mymathscale}{\alpha}}}
+\newcommand{\Rc}{\R_{\rm c}}
+\newcommand{\FoI}{F}        % force of infection (or "field of infectivity")
+\newcommand{\aoi}{\alpha}   % age of infection
+\newcommand{\aoidum}{\aoi'}
+\newcommand{\taudum}{\tau'}
+\newcommand{\inc}{\iota}    % incidence
+\newcommand{\cuminc}{\overline{\iota}}
+\newcommand{\obsinc}{\inc_{\scalebox{0.7}{\textrm{obs}}}}
+\newcommand{\Timetrans}{\mathsf{T}}
+\newcommand{\Volterra}{V}
+\newcommand{\CFPvar}{\texttt{\upshape CFP}}
+\newcommand{\gimean}{\mu}
+\newcommand{\gisd}{\sigma}
+\newcommand{\Erate}{\gamma_{\!\scalebox{0.5}{$E$}}}
+\newcommand{\Irate}{\gamma_{\!\scalebox{0.5}{$I$}}}
+\newcommand{\Eprop}{Y_{\!\scalebox{0.5}{$E$}}}
+\newcommand{\Iprop}{Y_{\!\scalebox{0.5}{$I$}}}
+\newcommand{\Tchar}{T}
+\newcommand{\Tlat}{T_{\rm lat}}
+\newcommand{\Tinf}{T_{\rm inf}}
+\newcommand{\Winv}{\mathscr{E}} % inverse of Lambert W
+\newcommand{\Wp}{W_{\!\smallplus}}
+\newcommand{\Wm}{W_{\!\smallminus}}
+\newcommand{\Wpm}{W_{\!\smallplusminus}}
+\newcommand{\Wmp}{W_{\!\smallminusplus}}
+\newcommand{\Xp}{X^{+}}
+\newcommand{\Xm}{X^{-}}
+\newcommand{\Xpm}{X^{\smallplusminus}}
+\newcommand{\FoIpm}{\FoI^{\smallplusminus}}
+\newcommand{\rpm}{r^{\smallplusminus}}
+%% messy subscripted symbols:
+\newcommand{\mymathscale}{0.7} % originally 0.6
+\newcommand{\Xall}{X_{\mathscale{\mymathscale}{\Rn,\xinit,\yinit}}}
+\newcommand{\xpmall}{\xpm_{\mathscale{\mymathscale}{\Rn,\xinit,\yinit}}}
+\newcommand{\xpmsubinit}{\xpm_{\mathscale{\mymathscale}{\xinit,\yinit}}}
+\newcommand{\Xpall}{\Xall^+}
+\newcommand{\Xmall}{\Xall^-}
+\newcommand{\Xpmall}{\Xall^\pm}
+
+%% initial conditions
+\newcommand{\tauinit}{\tau_{\rm i}}
+\newcommand{\xinit}{x_{\rm i}}
+\newcommand{\yinit}{y_{\rm i}}
+\newcommand{\zinit}{z_{\rm i}}
+\newcommand{\einit}{e_{\rm i}}
+\newcommand{\epropinit}{y^{\scalebox{0.5}{$E$}}_{\mathrm{i}}}
+\newcommand{\ipropinit}{y^{\scalebox{0.5}{$I$}}_{\mathrm{i}}}
+\newcommand{\incinit}{\inc_{\rm i}}
+
+%% peak values
+\newcommand{\taupeak}{\hat{\tau}}
+\newcommand{\xpeak}{\hat{x}}
+\newcommand{\ypeak}{\hat{y}}
+\newcommand{\zpeak}{\hat{z}}
+\newcommand{\incpeak}{\hat{\inc}}
+
+%% asymptotic values
+\newcommand{\smallplus}{{\mathscale{\mymathscale}{+}}}
+\newcommand{\smallminus}{{\mathscale{\mymathscale}{-}}}
+\newcommand{\smallplusminus}{{\mathscale{\mymathscale}{\pm}}}
+\newcommand{\smallminusplus}{{\mathscale{\mymathscale}{\mp}}}
+\newcommand{\xp}{x^{\smallplus}}  %{\infty}}
+\newcommand{\xm}{x^{\smallminus}} %{-\infty}}
+\newcommand{\xpm}{x^\smallplusminus}
+\newcommand{\xmp}{x^\smallminusplus}
+\newcommand{\zp}{z^{\smallplus}} %{\infty}}
+\newcommand{\zptot}{\zp_{\mathscale{\mymathscale}{\mathrm{tot}}}}
+\newcommand{\zm}{z^{\smallminus}} %{-\infty}}
+\newcommand{\lamp}{\lambda^{\!{\smallplus}}}
+\newcommand{\lamm}{\lambda^{\!{\smallminus}}}
+\newcommand{\lampm}{\lambda^{\!{\smallplusminus}}}
+
+%% specific macros for epimom ms:
+%%\newcommand{\tspanel}[1]{{\bfseries\textsf{#1}}\xspace}
+\newcommand{\tspanel}[1]{{\bfseries\textsf{\MakeLowercase{#1}}}\xspace}
+\newcommand{\pppanel}{\tspanel{C}} % phase plane panel symbol
+
+%% derivatives
+%% note that \d is a built-in accent macro
+\newcommand{\dee}{{\rm d}}
+\newcommand{\dd}[2]{{\frac{\dee{#1}}{\dee{#2}}}}
+\newcommand{\dbyd}[2]{{{\dee{#1}}/{\dee{#2}}}}
+\newcommand{\ddx}[1]{\dd{#1}{x}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\ddtau}[1]{\dd{#1}{\tau}}
+\newcommand{\dbydx}[1]{\dbyd{#1}{x}}
+\newcommand{\dbydt}[1]{\dbyd{#1}{t}}
+\newcommand{\dbydtau}[1]{\dbyd{#1}{\tau}}
+\newcommand{\didi}[2]{\frac{\partial#1}{\partial#2}}
+
+%% Laplace transforms
+\usepackage{mathrsfs} % \mathscr
+\DeclareFontFamily{U}{rsfs}{\skewchar\font127}
+\DeclareFontShape{U}{rsfs}{m}{n}{%
+   <-6> rsfs5
+   <6-8> rsfs7
+   <8-> rsfs10
+}{}
+\newcommand{\Lapsym}{{\mathscr{L}}}
+\newcommand{\Lap}[1]{{\Lapsym}\!\left[#1\right]}
+\newcommand{\Lapinv}[1]{{{\Lapsym}^{-1}}\!\left[#1\right]}
+\newcommand{\Lappm}{\Lapsym_{\!\smallplusminus}}
+\newcommand{\Lapm}{\Lapsym_{\!\smallminus}}
+\newcommand{\Lapp}{\Lapsym_{\!\smallplus}}
+
+%% orders of magnitude
+\newcommand{\oh}{{o}} % {\mathcal o} is a vertical tilde
+\newcommand{\Oh}{{\mathcal O}}
+
+%% style macros
+\newcommand{\term}[1]{{\bfseries\slshape #1}}
+%%\newcommand{\term}[1]{\emph{#1}}
+
+%% typesetting TeX macros
+\newcommand\ttbackslash{{\tt\char`\\}}
+\newcommand{\macro}[1]{{\tt\ttbackslash#1}}
+
+%% –––––––––––––––––––––––– %%
+%% Main section referencing %%
+%% –––––––––––––––––––––––– %%
+
+\makeatletter
+
+% Starred section with working \nameref, \hyperref target, and PDF bookmark
+\newcommand{\beginsection}[2]{%
+  \section*{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[1]{#1}{#2}%
+}
+\newcommand{\beginappendix}[2]{\beginsection{#1}{#2}}
+
+% Starred subsection with working \nameref, \hyperref target, and PDF bookmark
+\newcommand{\beginsubsection}[2]{%
+  \subsection*{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+\newcommand{\beginsubappendix}[2]{\beginsubsection{#1}{#2}}
+
+% Starred subsubsection with working \nameref, \hyperref target, and PDF bookmark
+\newcommand{\beginsubsubsection}[2]{%
+  \subsubsection*{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+\newcommand{\beginsubsubappendix}[2]{\beginsubsubsection{#1}{#2}}
+
+\makeatother
+
+\newif\ifshowappbackrefs
+%%\showappbackrefstrue
+\showappbackrefsfalse  % uncomment for clean submission builds
+
+\newcommand{\mainref}[1]{\cref{#1}}
+
+% Cross-manuscript references should cite the manuscript plus its local label.
+\newcommand{\theoryref}[1]{%
+  \citeref[\cref*{theory:#1}]{EarnPars25_epimom_theory}%
+}
+\newcommand{\inferenceref}[1]{%
+  \citeref[\cref*{inference:#1}]{EarnPars26_epimom_inference}%
+}
+
+\DeclareRobustCommand{\appref}[2][]{%
+  \if\relax\detokenize{#1}\relax
+    \cref{#2}%
+  \else
+    \hypertarget{appref:#1}{}\cref{#2}%
+  \fi
+}
+
+\newcommand{\appbackref}[2]{%
+  \hyperlink{appref:#1}{#2}%
+}
+
+\newcommand{\appbackrefs}[1]{%
+  \ifshowappbackrefs
+    \par\smallskip
+    %%\noindent{\footnotesize\textit{Referenced from: }#1.}%
+    \noindent{\color{red}{\bfseries Referenced from: }#1.}%
+    \par\smallskip
+  \fi
+}
+
+\newcommand{\appfilename}[1]{%
+  \ifshowappbackrefs
+    \par\smallskip
+    \noindent{\footnotesize\textit{Appendix source file: }\texttt{\detokenize{#1}}.}%
+    \par\smallskip
+  \fi
+}
+
+%% –––––––––––––––––––––––––––––––––––––––––––––– %%
+%% Materials and Methods (mm) section referencing %%
+%% –––––––––––––––––––––––––––––––––––––––––––––– %%
+
+\makeatletter
+
+%% –––––––––––– %%
+%% PNAS VERIONS %%
+%% –––––––––––– %%
+% Label the start of the PNAS Materials & Methods block (inside \matmethods{...})
+\newcommand{\mmsectionlabel}[1]{%
+  \phantomsection%
+  \def\@currentlabelname{Materials and Methods}%
+  \label{#1}%
+  \pdfbookmark[1]{Materials and Methods}{#1}%
+}
+
+% Starred subsection inside Materials & Methods, with label + nameref + PDF bookmark
+\newcommand{\mmsubsection}[2]{%
+  \subsection*{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+
+% Starred subsection inside Materials & Methods, with label + nameref + PDF bookmark
+\newcommand{\mmsubsubsection}[2]{%
+  \subsubsection*{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+
+%% –––––––––––– %%
+%% RSIF VERIONS %%
+%% –––––––––––– %%
+\renewcommand{\mmsectionlabel}[1]{%
+  \phantomsection%
+  \def\@currentlabelname{Appendix A}%
+  \label{#1}%
+  \pdfbookmark[1]{Appendix A}{#1}%
+}
+
+% Starred subsection inside Materials & Methods, with label + nameref + PDF bookmark
+\renewcommand{\mmsubsection}[2]{%
+  \subsection{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+
+% Starred subsection inside Materials & Methods, with label + nameref + PDF bookmark
+\renewcommand{\mmsubsubsection}[2]{%
+  \subsubsection{#1}%
+  \phantomsection%
+  \def\@currentlabelname{#1}%
+  \label{#2}%
+  \pdfbookmark[2]{#1}{#2}%
+}
+
+\makeatother
+
+\newcommand{\metheqref}[1]{\cref{#1} in \cref{sec:methods}}
+\newcommand{\SI}{\hyperlink{SI}{{\slshape SI}}}
+\newcommand{\SIsecref}[1]{\SI: \cref{#1}}
+
+%% –––––––––––––––––––––––––––––––––––––––––––––– %%
+
+%% math spacing
+% Adjustable inter-row spacing macro for align environments
+\newcommand{\eqrowpad}{140mu}  % adjust this as needed
+\newcommand{\eqrow}[1]{%
+  \mkern\eqrowpad#1\mkern\eqrowpad
+}
+\renewcommand{\eqrow}{\relax}
+
+%% –––––––––– %%
+%% REFERENCES %%
+%% –––––––––– %%
+
+%%\usepackage{multibib}
+%%\newcites{note}{Endnotes} % defines \citenote, \bibliographynote, etc.
+
+% Normal refs -> main bibliography
+\let\citeref\cite
+
+%% FIX: temporary to avoid endnote complications for now
+\let\citenote\cite
+\let\citenumlink\cite
+
+% ORCID icon macro: baseline aligned, clickable
+\newcommand{\orcidicon}{%
+  \raisebox{-0.12\height}{\includegraphics[height=1.9ex]{ORCID-iD_icon_32x32.png}}%
+}
+
+%%
+
+%% comments
+\newcommand{\commentmacro}{\showcomment}
+\newcommand{\showcomment}[3]{\textcolor{#1}{\textbf{[#2: }\textsl{#3}\textbf{]}}}
+\newcommand{\nocomment}[3]{}
+\newcommand{\todd}[1]{\commentmacro{red}{Todd}{#1}}
+\newcommand{\david}[1]{\commentmacro{cyan}{David}{#1}}
+\newcommand{\dsugg}[1]{{\color{red}#1}}
+
+%% Show cut text with strikethrough
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{{\color{blue}\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}}
+%\newcommand{\stkout}[1]{}
+
+%% to indicate where I reached when editing
+\newcommand{\thickredline}{%
+  \par\bigskip\noindent
+  {\color{red}\rule{\linewidth}{4pt}}%
+  \par\bigskip
+}
+
+%% init and prev
+\newcommand{\init}{{\mathrm{i}}}
+\newcommand{\prev}{P}
+
+%% for \Rn range associated with \xm consistency
+\newcommand{\Rnmin}{\R_{\mathscale{\mymathscale}{0,\textrm{min}}}}
+\newcommand{\Rnmax}{\R_{\mathscale{\mymathscale}{0,\textrm{max}}}}
+\newcommand{\ypeakmax}{\ypeak_{\textrm{max}}}
+
+%% various
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Rnstar}{{\Rn^\ast}}
+\newcommand{\xpeakstar}{{\xpeak_\ast}}
+\newcommand{\xpeakmax}{{\xpeak_{\mathrm{max}}}}
+\newcommand{\xlim}{x_{\lim}}
+\newcommand{\xpeaklim}{\xpeak_{\lim}}
+\newcommand{\deltapm}{\delta^\pm}
+\newcommand{\denom}{\mathcal{D}}
+\newcommand{\critratio}{\mathcal{C}_{\mathrm{crit}}}
+\newcommand{\deltacrit}{\delta_{\mathrm{crit}}}
+\newcommand{\turning}{\mathcal{T}}
+
+%%\newcommand{\zpmin}{\zp_{\mathscale{\mymathscale}{\mathrm{min}}}}
+\newcommand{\zpmin}{\zp_{\mathscale{\mymathscale}{\vee}}}
+%%\newcommand{\zpmax}{\zp_{\mathscale{\mymathscale}{\mathrm{max}}}}
+\newcommand{\zpmax}{\zp_{\mathscale{\mymathscale}{\wedge}}}
+\newcommand{\zplim}{\zp_{\mathscale{\mymathscale}{\mathrm{lim}}}}
+%%\newcommand{\Rnstarmin}{\R^*_{\mathscale{\mymathscale}{\mathrm{0,min}}}}
+\newcommand{\Rnstarmin}{\R^*_{\mathscale{\mymathscale}{\mathrm{0},\vee}}}
+%%\newcommand{\Rnstarmax}{\R^*_{\mathscale{\mymathscale}{\mathrm{0,max}}}}
+\newcommand{\Rnstarmax}{\R^*_{\mathscale{\mymathscale}{\mathrm{0},\wedge}}}
+
+\epimomarxivtrue
+% Generated from the counterpart manuscript auxiliary file.
+% It preserves cross-manuscript citation locations without shipping .aux files.
+\makeatletter
+\newlabel{theory:sec:intro}{{1}{2}{Introduction}{section.1}{}}
+\newlabel{theory:sec:intro@cref}{{[section][1][]1}{[1][1][]2}{}{}{}}
+\newlabel{theory:eq:SIRstandard}{{1.1}{2}{Introduction}{equation.1.1}{}}
+\newlabel{theory:eq:SIRstandard@cref}{{[equation][1][1]1.1}{[1][2][]2}{}{}{}}
+\newlabel{theory:sec:models}{{2}{2}{Epidemic models and phase plane solutions}{section.2}{}}
+\newlabel{theory:sec:models@cref}{{[section][2][]2}{[1][2][]2}{}{}{}}
+\newlabel{theory:sec:SIR}{{2(a)}{2}{SIR model}{subsection.2.1}{}}
+\newlabel{theory:sec:SIR@cref}{{[subsection][1][2]2(a)}{[1][2][]2}{}{}{}}
+\newlabel{theory:eq:SIR}{{2.1}{3}{SIR model}{equation.2.1}{}}
+\newlabel{theory:eq:SIR@cref}{{[subequation][1][2]2.1}{[1][2][]3}{}{}{}}
+\newlabel{theory:eq:SIR;X}{{2.1{\it  a}}{3}{SIR model}{equation.2.1a}{}}
+\newlabel{theory:eq:SIR;X@cref}{{[subequation][1][2,1]2.1{\it  a}}{[1][2][]3}{}{}{}}
+\newlabel{theory:eq:SIR;Y}{{2.1{\it  b}}{3}{SIR model}{equation.2.1b}{}}
+\newlabel{theory:eq:SIR;Y@cref}{{[subequation][2][2,1]2.1{\it  b}}{[1][2][]3}{}{}{}}
+\newlabel{theory:eq:initial.simplex.constraint}{{2.2}{3}{SIR model}{equation.2.2}{}}
+\newlabel{theory:eq:initial.simplex.constraint@cref}{{[equation][2][2]2.2}{[1][3][]3}{}{}{}}
+\newlabel{theory:sec:ppsol}{{2(b)}{3}{Phase plane solution}{subsection.2.2}{}}
+\newlabel{theory:sec:ppsol@cref}{{[subsection][2][2]2(b)}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:dYdx}{{2.3}{3}{Phase plane solution}{equation.2.3}{}}
+\newlabel{theory:eq:dYdx@cref}{{[equation][3][2]2.3}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:Yofx}{{2.4}{3}{Phase plane solution}{equation.2.4}{}}
+\newlabel{theory:eq:Yofx@cref}{{[equation][4][2]2.4}{[1][3][]3}{}{}{}}
+\newlabel{theory:sec:SEIR}{{2(c)}{3}{SEIR model}{subsection.2.3}{}}
+\newlabel{theory:sec:SEIR@cref}{{[subsection][3][2]2(c)}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:SEIR}{{2.5}{3}{SEIR model}{equation.2.5}{}}
+\newlabel{theory:eq:SEIR@cref}{{[subequation][5][2]2.5}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:SEIR;X}{{2.5{\it  a}}{3}{SEIR model}{equation.2.5a}{}}
+\newlabel{theory:eq:SEIR;X@cref}{{[subequation][1][2,5]2.5{\it  a}}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:SEIR;Eprop}{{2.5{\it  b}}{3}{SEIR model}{equation.2.5b}{}}
+\newlabel{theory:eq:SEIR;Eprop@cref}{{[subequation][2][2,5]2.5{\it  b}}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:SEIR;Iprop}{{2.5{\it  c}}{3}{SEIR model}{equation.2.5c}{}}
+\newlabel{theory:eq:SEIR;Iprop@cref}{{[subequation][3][2,5]2.5{\it  c}}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:XYF}{{2.6}{3}{SEIR model}{equation.2.6}{}}
+\newlabel{theory:eq:XYF@cref}{{[subequation][6][2]2.6}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:XYF;X}{{2.6{\it  a}}{3}{SEIR model}{equation.2.6a}{}}
+\newlabel{theory:eq:XYF;X@cref}{{[subequation][1][2,6]2.6{\it  a}}{[1][3][]3}{}{}{}}
+\newlabel{theory:eq:XYF;Y}{{2.6{\it  b}}{3}{SEIR model}{equation.2.6b}{}}
+\newlabel{theory:eq:XYF;Y@cref}{{[subequation][2][2,6]2.6{\it  b}}{[1][3][]3}{}{}{}}
+\newlabel{theory:fig:phaseplane}{{1}{4}{\textbf {Universality of the susceptible-momentum ($x$-$y$) phase plane.} (\tspanel {A},\tspanel {B}) Time series of the susceptible fraction, $X(\tau )$, and epidemic momentum, $Y(\tau )$, for the SIR and SEIR models [\cref {eq:SIR,eq:SEIR}] with basic reproduction number $\Rn =4$ and initial conditions $(\xinit ,\yinit )=(0.999,0.00075)$. For the SEIR model, the mean latent period is the same as the mean infectious period ($\ell =1$) and the initial exposed and infectious fractions [\cref {eq:SEIR;Eprop,eq:SEIR;Iprop}] are $\epropinit =\ipropinit =\yinit /2$. (\pppanel ) Phase portraits in the susceptible-momentum phase plane, which are identical for both models, and are expressed explicitly by \cref {eq:Yofx}. Trajectories are contours of constant $C(x,y)$ [\protect \cref {eq:FI}] and are labelled with the value of the constant. Both the SIR and SEIR time series on the left correspond to the same (coloured) phase plane trajectory on the right. The dotted line is the biological boundary, $x+y=1$. The dashed line indicates peak epidemic momentum, which occurs at $x=\xpeak =\frac {1}{\Rn }$. The points plotted on the $x$-axis are at $\xm $ (white) and $\xp $ (black), the pre- and post-epidemic susceptible proportion for each trajectory [\cref {eq:xpm}]}{figure.1}{}}
+\newlabel{theory:fig:phaseplane@cref}{{[figure][1][]1}{[1][3][]4}{}{}{}}
+\newlabel{theory:sec:SI1I2R}{{2(d)}{4}{SI$_1$I$_2$R model}{subsection.2.4}{}}
+\newlabel{theory:sec:SI1I2R@cref}{{[subsection][4][2]2(d)}{[1][4][]4}{}{}{}}
+\newlabel{theory:eq:SI1I2R}{{2.7}{4}{SI$_1$I$_2$R model}{equation.2.7}{}}
+\newlabel{theory:eq:SI1I2R@cref}{{[subequation][7][2]2.7}{[1][4][]4}{}{}{}}
+\newlabel{theory:eq:SI1I2R;X}{{2.7{\it  a}}{4}{SI$_1$I$_2$R model}{equation.2.7a}{}}
+\newlabel{theory:eq:SI1I2R;X@cref}{{[subequation][1][2,7]2.7{\it  a}}{[1][4][]4}{}{}{}}
+\newlabel{theory:eq:SI1I2R;Y1}{{2.7{\it  b}}{4}{SI$_1$I$_2$R model}{equation.2.7b}{}}
+\newlabel{theory:eq:SI1I2R;Y1@cref}{{[subequation][2][2,7]2.7{\it  b}}{[1][4][]4}{}{}{}}
+\newlabel{theory:eq:SI1I2R;Y2}{{2.7{\it  c}}{4}{SI$_1$I$_2$R model}{equation.2.7c}{}}
+\newlabel{theory:eq:SI1I2R;Y2@cref}{{[subequation][3][2,7]2.7{\it  c}}{[1][4][]4}{}{}{}}
+\newlabel{theory:eq:SI1I2R;prev}{{2.8}{5}{SI$_1$I$_2$R model}{equation.2.8}{}}
+\newlabel{theory:eq:SI1I2R;prev@cref}{{[equation][8][2]2.8}{[1][4][]5}{}{}{}}
+\newlabel{theory:eq:SI1I2R;prevdot}{{2.9}{5}{SI$_1$I$_2$R model}{equation.2.9}{}}
+\newlabel{theory:eq:SI1I2R;prevdot@cref}{{[equation][9][2]2.9}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:SI1I2R;prevalence.phase}{{2.10}{5}{SI$_1$I$_2$R model}{equation.2.10}{}}
+\newlabel{theory:eq:SI1I2R;prevalence.phase@cref}{{[equation][10][2]2.10}{[1][5][]5}{}{}{}}
+\newlabel{theory:sec:re}{{2(e)}{5}{Renewal equation}{subsection.2.5}{}}
+\newlabel{theory:sec:re@cref}{{[subsection][5][2]2(e)}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:re}{{2.11}{5}{Renewal equation}{equation.2.11}{}}
+\newlabel{theory:eq:re@cref}{{[subequation][11][2]2.11}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:re;X}{{2.11{\it  a}}{5}{Renewal equation}{equation.2.11a}{}}
+\newlabel{theory:eq:re;X@cref}{{[subequation][1][2,11]2.11{\it  a}}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:re;FoI}{{2.11{\it  b}}{5}{Renewal equation}{equation.2.11b}{}}
+\newlabel{theory:eq:re;FoI@cref}{{[subequation][2][2,11]2.11{\it  b}}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:re;inc}{{2.12}{5}{Renewal equation}{equation.2.12}{}}
+\newlabel{theory:eq:re;inc@cref}{{[equation][12][2]2.12}{[1][5][]5}{}{}{}}
+\newlabel{theory:eq:re.initial.history}{{2.13}{6}{Renewal equation}{equation.2.13}{}}
+\newlabel{theory:eq:re.initial.history@cref}{{[equation][13][2]2.13}{[1][6][]6}{}{}{}}
+\newlabel{theory:eq:re.initial.split}{{2.14}{6}{Renewal equation}{equation.2.14}{}}
+\newlabel{theory:eq:re.initial.split@cref}{{[equation][14][2]2.14}{[1][6][]6}{}{}{}}
+\newlabel{theory:eq:re.initial.change.variable}{{2.15}{6}{Renewal equation}{equation.2.15}{}}
+\newlabel{theory:eq:re.initial.change.variable@cref}{{[equation][15][2]2.15}{[1][6][]6}{}{}{}}
+\newlabel{theory:eq:re.initial.FoI}{{2.16}{6}{Renewal equation}{equation.2.16}{}}
+\newlabel{theory:eq:re.initial.FoI@cref}{{[equation][16][2]2.16}{[1][6][]6}{}{}{}}
+\newlabel{theory:sec:epimom.etc}{{3}{6}{Epidemic momentum}{section.3}{}}
+\newlabel{theory:sec:epimom.etc@cref}{{[section][3][]3}{[1][6][]6}{}{}{}}
+\newlabel{theory:sec:epimom}{{3(a)}{6}{Definition of epidemic momentum}{subsection.3.1}{}}
+\newlabel{theory:sec:epimom@cref}{{[subsection][1][3]3(a)}{[1][6][]6}{}{}{}}
+\newlabel{theory:eq:Ra}{{3.1}{6}{Definition of epidemic momentum}{equation.3.1}{}}
+\newlabel{theory:eq:Ra@cref}{{[equation][1][3]3.1}{[1][6][]6}{}{}{}}
+\newlabel{theory:eq:re.Y}{{3.2}{7}{Definition of epidemic momentum}{equation.3.2}{}}
+\newlabel{theory:eq:re.Y@cref}{{[equation][2][3]3.2}{[1][6][]7}{}{}{}}
+\newlabel{theory:eq:re.Y.history}{{3.3}{7}{Definition of epidemic momentum}{equation.3.3}{}}
+\newlabel{theory:eq:re.Y.history@cref}{{[equation][3][3]3.3}{[1][7][]7}{}{}{}}
+\newlabel{theory:eq:re.Ydot}{{3.4}{7}{Definition of epidemic momentum}{equation.3.4}{}}
+\newlabel{theory:eq:re.Ydot@cref}{{[equation][4][3]3.4}{[1][7][]7}{}{}{}}
+\newlabel{theory:eq:re;yinit}{{3.5}{7}{Definition of epidemic momentum}{equation.3.5}{}}
+\newlabel{theory:eq:re;yinit@cref}{{[equation][5][3]3.5}{[1][7][]7}{}{}{}}
+\newlabel{theory:sec:phaseplane}{{3(b)}{8}{Universality of the SIR phase portrait}{subsection.3.2}{}}
+\newlabel{theory:sec:phaseplane@cref}{{[subsection][2][3]3(b)}{[1][8][]8}{}{}{}}
+\newlabel{theory:sec:timechange}{{3(c)}{8}{Equivalence of generic and SIR epidemics via time transformation}{subsection.3.3}{}}
+\newlabel{theory:sec:timechange@cref}{{[subsection][3][3]3(c)}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:timechange}{{3.6}{8}{Equivalence of generic and SIR epidemics via time transformation}{equation.3.6}{}}
+\newlabel{theory:eq:timechange@cref}{{[equation][6][3]3.6}{[1][8][]8}{}{}{}}
+\newlabel{theory:sec:FI}{{3(d)}{8}{A first integral for generic epidemics, $C(x,y)$}{subsection.3.4}{}}
+\newlabel{theory:sec:FI@cref}{{[subsection][4][3]3(d)}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:FI.derivation}{{3.7}{8}{A first integral for generic epidemics, $C(x,y)$}{equation.3.7}{}}
+\newlabel{theory:eq:FI.derivation@cref}{{[equation][7][3]3.7}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:FI}{{3.8}{8}{A first integral for generic epidemics, $C(x,y)$}{equation.3.8}{}}
+\newlabel{theory:eq:FI@cref}{{[equation][8][3]3.8}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:Volterra}{{3.9}{8}{A first integral for generic epidemics, $C(x,y)$}{equation.3.9}{}}
+\newlabel{theory:eq:Volterra@cref}{{[equation][9][3]3.9}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:FI.value}{{3.10}{8}{A first integral for generic epidemics, $C(x,y)$}{equation.3.10}{}}
+\newlabel{theory:eq:FI.value@cref}{{[equation][10][3]3.10}{[1][8][]8}{}{}{}}
+\newlabel{theory:sec:pp.pi.fs}{{3(e)}{8}{Prior immunity and final size from the universal phase portrait}{subsection.3.5}{}}
+\newlabel{theory:sec:pp.pi.fs@cref}{{[subsection][5][3]3(e)}{[1][8][]8}{}{}{}}
+\newlabel{theory:eq:Xofy}{{3.11}{9}{Prior immunity and final size from the universal phase portrait}{equation.3.11}{}}
+\newlabel{theory:eq:Xofy@cref}{{[subequation][11][3]3.11}{[1][8][]9}{}{}{}}
+\newlabel{theory:eq:Xpmofy}{{3.11{\it  b}}{9}{Prior immunity and final size from the universal phase portrait}{equation.3.11b}{}}
+\newlabel{theory:eq:Xpmofy@cref}{{[subequation][2][3,11]3.11{\it  b}}{[1][8][]9}{}{}{}}
+\newlabel{theory:eq:xpm}{{3.12}{9}{Prior immunity and final size from the universal phase portrait}{equation.3.12}{}}
+\newlabel{theory:eq:xpm@cref}{{[equation][12][3]3.12}{[1][9][]9}{}{}{}}
+\newlabel{theory:eq:zm}{{3.13}{9}{Prior immunity and final size from the universal phase portrait}{equation.3.13}{}}
+\newlabel{theory:eq:zm@cref}{{[equation][13][3]3.13}{[1][9][]9}{}{}{}}
+\newlabel{theory:eq:zp}{{3.14}{9}{Prior immunity and final size from the universal phase portrait}{equation.3.14}{}}
+\newlabel{theory:eq:zp@cref}{{[equation][14][3]3.14}{[1][9][]9}{}{}{}}
+\newlabel{theory:sec:rise.fall}{{3(f)}{9}{Rising and falling tail exponents, $\lampm $}{subsection.3.6}{}}
+\newlabel{theory:sec:rise.fall@cref}{{[subsection][6][3]3(f)}{[1][9][]9}{}{}{}}
+\newlabel{theory:eq:lamLaplace}{{3.15}{9}{Rising and falling tail exponents, $\lampm $}{equation.3.15}{}}
+\newlabel{theory:eq:lamLaplace@cref}{{[subequation][15][3]3.15}{[1][9][]9}{}{}{}}
+\newlabel{theory:eq:lamLaplace;lam}{{3.15{\it  a}}{9}{Rising and falling tail exponents, $\lampm $}{equation.3.15a}{}}
+\newlabel{theory:eq:lamLaplace;lam@cref}{{[subequation][1][3,15]3.15{\it  a}}{[1][9][]9}{}{}{}}
+\newlabel{theory:eq:lamLaplace;Laplace}{{3.15{\it  b}}{9}{Rising and falling tail exponents, $\lampm $}{equation.3.15b}{}}
+\newlabel{theory:eq:lamLaplace;Laplace@cref}{{[subequation][2][3,15]3.15{\it  b}}{[1][9][]9}{}{}{}}
+\newlabel{theory:tab:GI.properties}{{1}{10}{Intrinsic generation-interval distributions, Laplace transforms, and tail exponents for the SIR model \labelcref {eq:SIR}, SEIR model \labelcref {eq:SEIR}, and the \RE \cref {eq:re} with a Gamma distributed intrinsic generation interval $g(\aoi )$ ($\aoi $ denotes age of infection). In the SEIR row, $\ell $ is the ratio of the mean latent period to the mean infectious period. In the Gamma GI row, $a>0$ and $b>0$ are the Gamma shape and rate parameters, respectively, so the mean is $a/b$ and the variance is $a/b^2$}{table.1}{}}
+\newlabel{theory:tab:GI.properties@cref}{{[table][1][]1}{[1][10][]10}{}{}{}}
+\newlabel{theory:sec:est.Rn.xm}{{3(g)}{10}{\texorpdfstring {Disentangling $\Rn $ from prior population immunity}{Disentangling R0 from prior population immunity}}{subsection.3.7}{}}
+\newlabel{theory:sec:est.Rn.xm@cref}{{[subsection][7][3]3(g)}{[1][10][]10}{}{}{}}
+\newlabel{theory:eq:R.C.lampm}{{3.16}{10}{\texorpdfstring {Disentangling $\Rn $ from prior population immunity}{Disentangling R0 from prior population immunity}}{equation.3.16}{}}
+\newlabel{theory:eq:R.C.lampm@cref}{{[equation][16][3]3.16}{[1][10][]10}{}{}{}}
+\newlabel{theory:eq:zm.compute}{{3.17}{10}{\texorpdfstring {Disentangling $\Rn $ from prior population immunity}{Disentangling R0 from prior population immunity}}{equation.3.17}{}}
+\newlabel{theory:eq:zm.compute@cref}{{[equation][17][3]3.17}{[1][10][]10}{}{}{}}
+\newlabel{theory:eq:zp.compute}{{3.18}{10}{\texorpdfstring {Disentangling $\Rn $ from prior population immunity}{Disentangling R0 from prior population immunity}}{equation.3.18}{}}
+\newlabel{theory:eq:zp.compute@cref}{{[equation][18][3]3.18}{[1][10][]10}{}{}{}}
+\newlabel{theory:eq:V=V}{{3.19}{10}{\texorpdfstring {Disentangling $\Rn $ from prior population immunity}{Disentangling R0 from prior population immunity}}{equation.3.19}{}}
+\newlabel{theory:eq:V=V@cref}{{[equation][19][3]3.19}{[1][10][]10}{}{}{}}
+\newlabel{theory:sec:further.insights}{{3(h)}{11}{Further insights on prior immunity and final size}{subsection.3.8}{}}
+\newlabel{theory:sec:further.insights@cref}{{[subsection][8][3]3(h)}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:R.vs.Reff.identity}{{3.20}{11}{Relationship to na\"ive final size}{equation.3.20}{}}
+\newlabel{theory:eq:R.vs.Reff.identity@cref}{{[equation][20][3]3.20}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:zp.vs.naive}{{3.21}{11}{Relationship to na\"ive final size}{equation.3.21}{}}
+\newlabel{theory:eq:zp.vs.naive@cref}{{[equation][21][3]3.21}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:yinit.constraint}{{3.22}{11}{Constraints on initial conditions and final size}{equation.3.22}{}}
+\newlabel{theory:eq:yinit.constraint@cref}{{[equation][22][3]3.22}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:xp.lt.xm}{{3.23}{11}{Constraints on initial conditions and final size}{equation.3.23}{}}
+\newlabel{theory:eq:xp.lt.xm@cref}{{[equation][23][3]3.23}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:Rnmin}{{3.24}{11}{Constraint on $\Rn $ from given initial conditions}{equation.3.24}{}}
+\newlabel{theory:eq:Rnmin@cref}{{[equation][24][3]3.24}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:zpmin.Rnstar.leading.approx}{{3.25}{11}{Non-monotonicity of final size}{equation.3.25}{}}
+\newlabel{theory:eq:zpmin.Rnstar.leading.approx@cref}{{[equation][25][3]3.25}{[1][11][]11}{}{}{}}
+\newlabel{theory:eq:zp.before.after.tauinit}{{3.26}{12}{Non-monotonicity of final size}{equation.3.26}{}}
+\newlabel{theory:eq:zp.before.after.tauinit@cref}{{[equation][26][3]3.26}{[1][11][]12}{}{}{}}
+\newlabel{theory:tab:zp.critical.values}{{2}{12}{Critical points and limiting values of $\zp (\Rn )$ for the initial conditions used in \cref {fig:zpm}. The lower bound $\Rnmin $ is the value at which $\xm =1$. The quantities $\Rnstarmin $ and $\Rnstarmax $ denote the local minimum and local maximum points of $\zp (\Rn )$, respectively. The limiting value is $\zplim =\xinit +\yinit =\lim _{\Rn \to \infty }\zp (\Rn )$. The dagger marks the case in which the local minimum lies below $\Rnmin $, so it would imply $\xm >1$}{table.2}{}}
+\newlabel{theory:tab:zp.critical.values@cref}{{[table][2][]2}{[1][12][]12}{}{}{}}
+\newlabel{theory:fig:zpm}{{2}{13}{\textbf {Prior immunity ($\zm $) [\cref {eq:zm}], total post-epidemic immune fraction ($\zptot =1-\xp $) and final size ($\zp $) [\cref {eq:zp}] vs $\Rn $ for six given initial states.} The vertical dotted grey line is at $\Rn =\frac {1}{\xinit -\yinit }$, which closely approximates the reproduction number at which the final size is minimized [\cref {eq:zpmin.Rnstar.leading.approx}]. Non-monotonicity of the final size is possible because the initial conditions are fixed as $\Rn $ is increased (see \cref {sec:further.insights}). For $(\xinit ,\yinit )=(0.9,0.01)$ (bottom left panel), the exact critical-point condition for $\zp (\Rn )$ has two solutions, $\Rnstar \approx 1.124$ and $\Rnstar \approx 9.38$. The leading approximation \labelcref {eq:zpmin.Rnstar.leading.approx}, indicated in the figure, agrees with the exact lower critical point to four significant digits. However, this point lies below $\Rnmin \approx 1.171$ [\cref {eq:Rnmin}], so it would imply an inferred pre-epidemic susceptible fraction greater than one. The second critical point is a large-$\Rn $ local maximum, beyond which $\zp (\Rn )$ decreases to $\xinit +\yinit =0.91$. See \cref {tab:zp.critical.values}}{figure.2}{}}
+\newlabel{theory:fig:zpm@cref}{{[figure][2][]2}{[1][12][]13}{}{}{}}
+\newlabel{theory:sec:Discussion}{{4}{13}{Discussion}{section.4}{}}
+\newlabel{theory:sec:Discussion@cref}{{[section][4][]4}{[1][13][]13}{}{}{}}
+\newlabel{theory:sec:physics.analogies}{{4(a)}{14}{Physics analogies}{subsection.4.1}{}}
+\newlabel{theory:sec:physics.analogies@cref}{{[subsection][1][4]4(a)}{[1][14][]14}{}{}{}}
+\newlabel{theory:eq:dY.again}{{4.1}{14}{Physics analogies}{equation.4.1}{}}
+\newlabel{theory:eq:dY.again@cref}{{[equation][1][4]4.1}{[1][14][]14}{}{}{}}
+\newlabel{theory:eq:epidemic.charge}{{4.2}{15}{Physics analogies}{equation.4.2}{}}
+\newlabel{theory:eq:epidemic.charge@cref}{{[equation][2][4]4.2}{[1][15][]15}{}{}{}}
+\newlabel{theory:sec:ext.gen}{{4(b)}{15}{Extensions and Generalizations}{subsection.4.2}{}}
+\newlabel{theory:sec:ext.gen@cref}{{[subsection][2][4]4(b)}{[1][15][]15}{}{}{}}
+\newlabel{theory:sec:nli}{{i}{15}{Nonlinear incidence}{subsubsection.4.2.1}{}}
+\newlabel{theory:sec:nli@cref}{{[subsubsection][1][4,2]i}{[1][15][]15}{}{}{}}
+\newlabel{theory:sec:approx}{{ii}{15}{Approximation of solutions of epidemic models}{subsubsection.4.2.2}{}}
+\newlabel{theory:sec:approx@cref}{{[subsubsection][2][4,2]ii}{[1][15][]15}{}{}{}}
+\newlabel{theory:sec:time.dep}{{iii}{15}{Time-dependent transmission rates}{subsubsection.4.2.3}{}}
+\newlabel{theory:sec:time.dep@cref}{{[subsubsection][3][4,2]iii}{[1][15][]15}{}{}{}}
+\newlabel{theory:sec:srpb}{{iv}{16}{Susceptible recruitment, perturbations, and burnout}{subsubsection.4.2.4}{}}
+\newlabel{theory:sec:srpb@cref}{{[subsubsection][4][4,2]iv}{[1][16][]16}{}{}{}}
+\newlabel{theory:sec:pop.mom}{{v}{16}{Population momentum more generally}{subsubsection.4.2.5}{}}
+\newlabel{theory:sec:pop.mom@cref}{{[subsubsection][5][4,2]v}{[1][16][]16}{}{}{}}
+\newlabel{theory:app:re.to.seir}{{A}{17}{Equivalence of the \RE and compartmental models}{appendix.A}{}}
+\newlabel{theory:app:re.to.seir@cref}{{[appendix][1][2147483647]A}{[1][17][]17}{}{}{}}
+\newlabel{theory:eq:re.SEIR;X}{{A1{\it  a}}{17}{Equivalence of the \RE and compartmental models}{equation.A.1a}{}}
+\newlabel{theory:eq:re.SEIR;X@cref}{{[subequation][1][2147483647,1,1]A1{\it  a}}{[1][17][]17}{}{}{}}
+\newlabel{theory:eq:re.SEIR;Iprop}{{A1{\it  b}}{17}{Equivalence of the \RE and compartmental models}{equation.A.1b}{}}
+\newlabel{theory:eq:re.SEIR;Iprop@cref}{{[subequation][2][2147483647,1,1]A1{\it  b}}{[1][17][]17}{}{}{}}
+\newlabel{theory:eq:ddtauIprop}{{A2{\it  a}}{17}{Equivalence of the \RE and compartmental models}{equation.A.2a}{}}
+\newlabel{theory:eq:ddtauIprop@cref}{{[subequation][1][2147483647,1,2]A2{\it  a}}{[1][17][]17}{}{}{}}
+\newlabel{theory:eq:SEIR-E}{{A7}{17}{Equivalence of the \RE and compartmental models}{equation.A.7}{}}
+\newlabel{theory:eq:SEIR-E@cref}{{[equation][7][2147483647,1]A7}{[1][17][]17}{}{}{}}
+\newlabel{theory:app:y.equiv}{{B}{18}{\texorpdfstring {Equivalence of integral and ODE representations of epidemic momentum $Y(\tau )$}{Equivalent representations of epidemic momentum Y(tau)}}{appendix.B}{}}
+\newlabel{theory:app:y.equiv@cref}{{[appendix][2][2147483647]B}{[1][18][]18}{}{}{}}
+\newlabel{theory:subapp:re.to.Y}{{B(a)}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{subsection.B.1}{}}
+\newlabel{theory:subapp:re.to.Y@cref}{{[subappendix][1][2147483647,2]B(a)}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:Y.ode.inc}{{B1}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.1}{}}
+\newlabel{theory:eq:Y.ode.inc@cref}{{[equation][1][2147483647,2]B1}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:Y.int.inc}{{B2}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.2}{}}
+\newlabel{theory:eq:Y.int.inc@cref}{{[subequation][2][2147483647,2]B2}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:integral-diff}{{B2{\it  d}}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.2d}{}}
+\newlabel{theory:eq:integral-diff@cref}{{[subequation][4][2147483647,2,2]B2{\it  d}}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:inner-rewritten}{{B3}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.3}{}}
+\newlabel{theory:eq:inner-rewritten@cref}{{[equation][3][2147483647,2]B3}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:double-integral-before-switch}{{B4}{18}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.4}{}}
+\newlabel{theory:eq:double-integral-before-switch@cref}{{[equation][4][2147483647,2]B4}{[1][18][]18}{}{}{}}
+\newlabel{theory:eq:first-final}{{B5}{19}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.5}{}}
+\newlabel{theory:eq:first-final@cref}{{[equation][5][2147483647,2]B5}{[1][18][]19}{}{}{}}
+\newlabel{theory:eq:Y.int.inc;d}{{B6}{19}{The \RE and the ODE for $Y$ imply the integral form of $Y$}{equation.B.6}{}}
+\newlabel{theory:eq:Y.int.inc;d@cref}{{[equation][6][2147483647,2]B6}{[1][19][]19}{}{}{}}
+\newlabel{theory:subapp:Y.to.re}{{B(b)}{19}{The integral form and ODE for $Y$ together imply the the \RE }{subsection.B.2}{}}
+\newlabel{theory:subapp:Y.to.re@cref}{{[subappendix][2][2147483647,2]B(b)}{[1][19][]19}{}{}{}}
+\newlabel{theory:eq:FoI.via.int.by.parts}{{B7}{19}{The integral form and ODE for $Y$ together imply the the \RE }{equation.B.7}{}}
+\newlabel{theory:eq:FoI.via.int.by.parts@cref}{{[equation][7][2147483647,2]B7}{[1][19][]19}{}{}{}}
+\newlabel{theory:app:lampm.re}{{C}{19}{\texorpdfstring {Asymptotic growth rates $\lampm $ from the renewal equation}{Asymptotic growth rates lambda+/- from the renewal equation}}{appendix.C}{}}
+\newlabel{theory:app:lampm.re@cref}{{[appendix][3][2147483647]C}{[1][19][]19}{}{}{}}
+\newlabel{theory:subapp:lampm.re.sir}{{C(a)}{19}{$\lampm $ for the SIR model}{subsection.C.1}{}}
+\newlabel{theory:subapp:lampm.re.sir@cref}{{[subappendix][1][2147483647,3]C(a)}{[1][19][]19}{}{}{}}
+\newlabel{theory:subapp:lampm.re.generic}{{C(b)}{20}{$\lampm $ from the \RE }{subsection.C.2}{}}
+\newlabel{theory:subapp:lampm.re.generic@cref}{{[subappendix][2][2147483647,3]C(b)}{[1][19][]20}{}{}{}}
+\newlabel{theory:eq:inc;tail}{{C4}{20}{$\lampm $ from the \RE }{equation.C.4}{}}
+\newlabel{theory:eq:inc;tail@cref}{{[equation][4][2147483647,3]C4}{[1][20][]20}{}{}{}}
+\newlabel{theory:eq:rLaplace}{{C6}{20}{$\lampm $ from the \RE }{equation.C.6}{}}
+\newlabel{theory:eq:rLaplace@cref}{{[equation][6][2147483647,3]C6}{[1][20][]20}{}{}{}}
+\newlabel{theory:eq:Yinc}{{C8}{20}{$\lampm $ from the \RE }{equation.C.8}{}}
+\newlabel{theory:eq:Yinc@cref}{{[equation][8][2147483647,3]C8}{[1][20][]20}{}{}{}}
+\newlabel{theory:eq:Yinc.const}{{C9}{20}{$\lampm $ from the \RE }{equation.C.9}{}}
+\newlabel{theory:eq:Yinc.const@cref}{{[equation][9][2147483647,3]C9}{[1][20][]20}{}{}{}}
+\newlabel{theory:app:lampm.re.exist}{{C(c)}{20}{\texorpdfstring {Existence of $\rpm $}{Existence of r+/-}}{subsection.C.3}{}}
+\newlabel{theory:app:lampm.re.exist@cref}{{[subappendix][3][2147483647,3]C(c)}{[1][20][]20}{}{}{}}
+\newlabel{theory:eq:r.ineq}{{C12}{20}{\texorpdfstring {Existence of $\rpm $}{Existence of r+/-}}{equation.C.12}{}}
+\newlabel{theory:eq:r.ineq@cref}{{[equation][12][2147483647,3]C12}{[1][20][]20}{}{}{}}
+\newlabel{theory:app:tail.exponents}{{C(d)}{20}{Tail exponents for specific models}{subsection.C.4}{}}
+\newlabel{theory:app:tail.exponents@cref}{{[subappendix][4][2147483647,3]C(d)}{[1][20][]20}{}{}{}}
+\newlabel{theory:app:yinit.from.incinit}{{D}{21}{Initial epidemic momentum $\yinit $ from initial incidence $\incinit $}{appendix.D}{}}
+\newlabel{theory:app:yinit.from.incinit@cref}{{[appendix][4][2147483647]D}{[1][21][]21}{}{}{}}
+\newlabel{theory:eq:inc.init}{{D1}{21}{Initial epidemic momentum $\yinit $ from initial incidence $\incinit $}{equation.D.1}{}}
+\newlabel{theory:eq:inc.init@cref}{{[equation][1][2147483647,4]D1}{[1][21][]21}{}{}{}}
+\newlabel{theory:Yinc.init}{{D2}{21}{Initial epidemic momentum $\yinit $ from initial incidence $\incinit $}{equation.D.2}{}}
+\newlabel{theory:Yinc.init@cref}{{[equation][2][2147483647,4]D2}{[1][21][]21}{}{}{}}
+\newlabel{theory:app:timechange}{{E}{21}{Time transformation to map a general epidemic onto the SIR model}{appendix.E}{}}
+\newlabel{theory:app:timechange@cref}{{[appendix][5][2147483647]E}{[1][21][]21}{}{}{}}
+\newlabel{theory:app:LambertW}{{F}{21}{\texorpdfstring {Lambert's $W$-function}{Lambert's W-function}}{appendix.F}{}}
+\newlabel{theory:app:LambertW@cref}{{[appendix][6][2147483647]F}{[1][21][]21}{}{}{}}
+\newlabel{theory:eq:Wid}{{F1}{22}{\texorpdfstring {Lambert's $W$-function}{Lambert's W-function}}{equation.F.1}{}}
+\newlabel{theory:eq:Wid@cref}{{[subequation][1][2147483647,6]F1}{[1][21][]22}{}{}{}}
+\newlabel{theory:app:Rn.from.lamp}{{G}{22}{\texorpdfstring {$\Rn \xm $ from $\lamp $}{R0 x- from lambda+}}{appendix.G}{}}
+\newlabel{theory:app:Rn.from.lamp@cref}{{[appendix][7][2147483647]G}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:Rnxp.of.Rnxm}{{G1}{22}{\texorpdfstring {$\Rn \xm $ from $\lamp $}{R0 x- from lambda+}}{equation.G.1}{}}
+\newlabel{theory:eq:Rnxp.of.Rnxm@cref}{{[equation][1][2147483647,7]G1}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:Rn.via.Lapp}{{G2}{22}{\texorpdfstring {$\Rn \xm $ from $\lamp $}{R0 x- from lambda+}}{equation.G.2}{}}
+\newlabel{theory:eq:Rn.via.Lapp@cref}{{[equation][2][2147483647,7]G2}{[1][22][]22}{}{}{}}
+\newlabel{theory:app:zp.min}{{H}{22}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{appendix.H}{}}
+\newlabel{theory:app:zp.min@cref}{{[appendix][8][2147483647]H}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:Yofx.root.equation}{{H1}{22}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.1}{}}
+\newlabel{theory:eq:Yofx.root.equation@cref}{{[equation][1][2147483647,8]H1}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:dxpm.dxpeak}{{H2}{22}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.2}{}}
+\newlabel{theory:eq:dxpm.dxpeak@cref}{{[equation][2][2147483647,8]H2}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:zpmin.endpoint.immunity.derivative}{{H3}{22}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.3}{}}
+\newlabel{theory:eq:zpmin.endpoint.immunity.derivative@cref}{{[equation][3][2147483647,8]H3}{[1][22][]22}{}{}{}}
+\newlabel{theory:eq:zpmin.zp.difference.immunity}{{H4}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.4}{}}
+\newlabel{theory:eq:zpmin.zp.difference.immunity@cref}{{[equation][4][2147483647,8]H4}{[1][22][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.zp.derivative.difference}{{H5}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.5}{}}
+\newlabel{theory:eq:zpmin.zp.derivative.difference@cref}{{[equation][5][2147483647,8]H5}{[1][22][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.dzp.factorization}{{H6}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.6}{}}
+\newlabel{theory:eq:zpmin.dzp.factorization@cref}{{[equation][6][2147483647,8]H6}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.Phi1.Phi2}{{H7}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.7}{}}
+\newlabel{theory:eq:zpmin.Phi1.Phi2@cref}{{[equation][7][2147483647,8]H7}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.Phi2.derivative.xpeak}{{H8}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.8}{}}
+\newlabel{theory:eq:zpmin.Phi2.derivative.xpeak@cref}{{[equation][8][2147483647,8]H8}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.Phi2.derivative.Rn.stationary}{{H9}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.9}{}}
+\newlabel{theory:eq:zpmin.Phi2.derivative.Rn.stationary@cref}{{[equation][9][2147483647,8]H9}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.minimum.condition}{{H10}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.10}{}}
+\newlabel{theory:eq:zpmin.minimum.condition@cref}{{[equation][10][2147483647,8]H10}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.log.expansion.near.xinit}{{H11}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.11}{}}
+\newlabel{theory:eq:zpmin.log.expansion.near.xinit@cref}{{[equation][11][2147483647,8]H11}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.roots.near.xinit}{{H12}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.12}{}}
+\newlabel{theory:eq:zpmin.roots.near.xinit@cref}{{[equation][12][2147483647,8]H12}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.small.upper.bound}{{H13}{23}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.13}{}}
+\newlabel{theory:eq:zpmin.small.upper.bound@cref}{{[equation][13][2147483647,8]H13}{[1][23][]23}{}{}{}}
+\newlabel{theory:eq:zpmin.double.root.expansion.point}{{H14}{24}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.14}{}}
+\newlabel{theory:eq:zpmin.double.root.expansion.point@cref}{{[equation][14][2147483647,8]H14}{[1][23][]24}{}{}{}}
+\newlabel{theory:eq:zpmin.xpeakstar.expansion}{{H15}{24}{Extrema of prior immunity and final size as a function of \texorpdfstring {$\Rn $}{R0}}{equation.H.15}{}}
+\newlabel{theory:eq:zpmin.xpeakstar.expansion@cref}{{[equation][15][2147483647,8]H15}{[1][23][]24}{}{}{}}
+\newlabel{theory:app:general.z}{{I}{24}{Generalization of the removed compartment}{appendix.I}{}}
+\newlabel{theory:app:general.z@cref}{{[appendix][9][2147483647]I}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:XYF;Z}{{I1}{24}{Generalization of the removed compartment}{equation.I.1}{}}
+\newlabel{theory:eq:XYF;Z@cref}{{[equation][1][2147483647,9]I1}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:YZ.incidence.history}{{I2}{24}{Generalization of the removed compartment}{equation.I.2}{}}
+\newlabel{theory:eq:YZ.incidence.history@cref}{{[equation][2][2147483647,9]I2}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:re;Z}{{I3}{24}{Generalization of the removed compartment}{equation.I.3}{}}
+\newlabel{theory:eq:re;Z@cref}{{[equation][3][2147483647,9]I3}{[1][24][]24}{}{}{}}
+\newlabel{theory:app:epimom.Rt}{{J}{24}{Time-varying reproduction number}{appendix.J}{}}
+\newlabel{theory:app:epimom.Rt@cref}{{[appendix][10][2147483647]J}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:Rt.def}{{J1}{24}{Time-varying reproduction number}{equation.J.1}{}}
+\newlabel{theory:eq:Rt.def@cref}{{[equation][1][2147483647,10]J1}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:Rt.sep}{{J2}{24}{Time-varying reproduction number}{equation.J.2}{}}
+\newlabel{theory:eq:Rt.sep@cref}{{[equation][2][2147483647,10]J2}{[1][24][]24}{}{}{}}
+\newlabel{theory:eq:re.Rt}{{J3}{25}{Time-varying reproduction number}{equation.J.3}{}}
+\newlabel{theory:eq:re.Rt@cref}{{[subequation][3][2147483647,10]J3}{[1][24][]25}{}{}{}}
+\newlabel{theory:eq:re.Rt;X}{{J3{\it  a}}{25}{Time-varying reproduction number}{equation.J.3a}{}}
+\newlabel{theory:eq:re.Rt;X@cref}{{[subequation][1][2147483647,10,3]J3{\it  a}}{[1][24][]25}{}{}{}}
+\newlabel{theory:eq:re.Rt;FoI}{{J3{\it  b}}{25}{Time-varying reproduction number}{equation.J.3b}{}}
+\newlabel{theory:eq:re.Rt;FoI@cref}{{[subequation][2][2147483647,10,3]J3{\it  b}}{[1][24][]25}{}{}{}}
+\newlabel{theory:eq:Ra.Rt}{{J4}{25}{Time-varying reproduction number}{equation.J.4}{}}
+\newlabel{theory:eq:Ra.Rt@cref}{{[equation][4][2147483647,10]J4}{[1][24][]25}{}{}{}}
+\newlabel{theory:eq:re.Y.Rt}{{J5}{25}{Time-varying reproduction number}{equation.J.5}{}}
+\newlabel{theory:eq:re.Y.Rt@cref}{{[equation][5][2147483647,10]J5}{[1][24][]25}{}{}{}}
+\newlabel{theory:eq:dYdtau.Rt}{{J6{\it  c}}{25}{Time-varying reproduction number}{equation.J.6c}{}}
+\newlabel{theory:eq:dYdtau.Rt@cref}{{[subequation][3][2147483647,10,6]J6{\it  c}}{[1][25][]25}{}{}{}}
+\newlabel{theory:eq:dYdx.Rt}{{J7}{25}{Time-varying reproduction number}{equation.J.7}{}}
+\newlabel{theory:eq:dYdx.Rt@cref}{{[equation][7][2147483647,10]J7}{[1][25][]25}{}{}{}}
+\newlabel{theory:LastPage}{{27}{27}}
+\makeatother
+
+\newcommand{\mstitle}{Jointly estimating transmissibility and prior immunity from epidemic time series}
+\newcommand{\msshorttitle}{}
+
+\newcommand{\msauthorone}{David J.\,D.\ Earn}
+\newcommand{\msauthortwo}{Todd L.\ Parsons}
+\newcommand{\mscitationauthors}{Earn DJD, Parsons TL}
+\newcommand{\msauthors}{%
+  \msauthorone\textsuperscript{1,2} and
+  \msauthortwo\textsuperscript{3}%
+}
+\newcommand{\msarticleauthors}{%
+  \msauthorone\thanks{Department of Mathematics \& Statistics and
+  M.\,G.\ DeGroote Institute for Infectious Disease Research, McMaster
+  University, 1280 Main Street West, Hamilton, Ontario, L8S 4K1, Canada.
+  Email: \href{mailto:\mscorrespondingemail}{\mscorrespondingemail}.
+  ORCID: \href{https://orcid.org/0000-0002-7562-1341}{0000-0002-7562-1341}.}
+  \and
+  \msauthortwo\thanks{LPSM, Sorbonne Universit\'e, CNRS UMR 8001,
+  Paris 75005, France. ORCID:
+  \href{https://orcid.org/0000-0002-2599-8415}{0000-0002-2599-8415}.}%
+}
+
+\newcommand{\msaffiliationone}{Department of Mathematics \& Statistics}
+\newcommand{\msaffiliationtwo}{M.\,G.\ DeGroote Institute for Infectious Disease Research}
+\newcommand{\msaffiliationthree}{LPSM, Sorbonne Universit\'e, CNRS UMR 8001, Paris 75005, France}
+\newcommand{\msaffiliations}{%
+  \footnotesize
+  \textsuperscript{1}{\msaffiliationone{} and \textsuperscript{2}\msaffiliationtwo, McMaster University, 1280 Main Street West, Hamilton, Ontario, L8S 4K1, Canada}\\
+  \textsuperscript{3}{\msaffiliationthree}\\
+
+  \medskip
+  \href{https://orcid.org/0000-0002-7562-1341}{\orcidicon}\,
+  \textbf{DJDE}, \href{https://orcid.org/0000-0002-7562-1341}{0000-0002-7562-1341};
+  \textbf{TLP}, \href{https://orcid.org/0000-0002-2599-8415}{0000-0002-2599-8415}%
+}
+
+\newcommand{\mscorresponding}{David J.\,D.\ Earn\\
+\email{\mscorrespondingemail}}
+\newcommand{\mscorrespondingemail}{earn@math.mcmaster.ca}
+
+\newcommand{\mssubjects}{health and disease and epidemiology}
+\newcommand{\mskeywords}{epidemic momentum, prior immunity, epidemic inference, basic reproduction number, 1918 influenza pandemic}
+
+\newcommand{\msethics}{This work did not require ethical approval from a human subject or animal welfare committee.}
+\newcommand{\msdata}{The 1918 pneumonia and influenza mortality data shown in \cref{fig:philaflu} have been published previously \cite{Gold+09} and are available in the \textsf{fastbeta} R package \citeref{fastbeta}. R code that reproduces all the figures will be included as supplementary material to the published version.}
+\newcommand{\mscontributions}{Both authors contributed to all aspects of the work.}
+\newcommand{\mscompeting}{We declare we have no competing interests.}
+\newcommand{\msfunding}{We were supported by the Fields Institute for Research in
+  Mathematical Sciences; the contents of this paper are solely the
+  responsibility of the authors and do not necessarily represent the
+  official views of the Institute.  DJDE was supported by an NSERC
+  Discovery Grant.}
+\newcommand{\msacknowledgements}{We are grateful to Ben Bolker, Caroline Colijn, Jonathan Dushoff,
+  Maya Earn, Mark Lewis, Junling Ma, David Price, and Steve Walker for
+  comments and discussions.  Deterministic and stochastic simulations,
+  and deconvolution of mortality to incidence, were facilitated by
+  convenient functions in the \textsf{fastbeta} R package, written by
+  Mikael Jagan.}
+
+\newcommand{\msaiuse}{We used ChatGPT and OpenAI Codex to assist with
+  R coding, \LaTeX\ coding, and language editing.  All scientific
+  arguments, mathematical derivations, analyses, interpretations, and
+  conclusions were developed by the authors, who take full
+  responsibility for the final manuscript.}
+
+\newcommand{\msmaterials}{}
+\newcommand{\msdisclaimer}{}
+
+%% Generic article-style metadata shared by the ordinary and anonymous drivers.
+%% Journal subject categories belong only to the journal-formatted wrappers.
+\newcommand{\epimomarticlemetadata}{%
+  \title{\mstitle}%
+  \ifanonymous
+    \author{}%
+    \hypersetup{%
+      pdfauthor={},
+      pdftitle={\mstitle},
+      pdfsubject={Anonymous review manuscript},
+      pdfkeywords={\mskeywords}}%
+  \else
+    \author{\msarticleauthors}%
+    \hypersetup{%
+      pdftitle={\mstitle},
+      pdfsubject={},
+      pdfkeywords={\mskeywords}}%
+  \fi
+  \date{}%
+}
+
+\newcommand{\epimomarticlekeywords}{%
+  \par\medskip
+  \noindent\textbf{Keywords:} \mskeywords\par
+}
+
+\let\hypercref\labelcref
+
+\renewcommand{\beginsection}[2]{\section{#1}\label{#2}}
+\renewcommand{\beginsubsection}[2]{\subsection{#1}\label{#2}}
+\renewcommand{\beginsubsubsection}[2]{\subsubsection{#1}\label{#2}}
+\renewcommand{\beginappendix}[2]{\section{#1}\label{#2}}
+\renewcommand{\beginsubappendix}[2]{\subsection{#1}\label{#2}}
+\renewcommand{\beginsubsubappendix}[2]{\subsubsection{#1}\label{#2}}
+
+\usepackage{endnotes}
+\usepackage{endnotes-hy}
+\renewcommand\notesname{Endnotes}
+%%
+
+\makeatletter
+\renewcommand{\citenote}[1]{%
+  \@ifundefined{citenote@num@#1}{%
+    \endnote{\epinote{#1}}%
+    \label{citenote:#1}%
+    \expandafter\xdef\csname citenote@num@#1\endcsname{\theendnote}%
+  }{%
+    \hyperref[citenote:#1]{%
+      \@textsuperscript{\normalfont\csname citenote@num@#1\endcsname}%
+    }%
+  }%
+}
+\makeatother
+
+\newtheorem{theorem}{\bf Theorem}[section]
+\newtheorem{condition}{\bf Condition}[section]
+\newtheorem{corollary}{\bf Corollary}[section]
+
+\epimomarticlemetadata
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  
+Infectious disease time series are often used to estimate a pathogen's basic reproduction number, $\Rn$.  However, fits of epidemic models to time series conflate pathogen transmissibility with pre-existing population immunity, so only the \emph{effective} reproduction number, $\Reff$, can be inferred.  This composite parameter is the product of the underlying $\Rn$ and the pre-epidemic susceptible fraction, $\xm$. We show that a conservation law associated with \emph{epidemic momentum}---prevalence weighted by potential to infect---makes it possible to disentangle transmissibility from prior immunity and to infer $\Rn$ and $\xm$ separately from a single epidemic time series. We test the methodology using stochastic epidemic simulations, and illustrate the approach with a reappraisal of influenza transmissibility during the 1918 pandemic, estimating rather than assuming the degree of prior population immunity.  For the autumn wave in Philadelphia, USA, we find $\Rn\approx2.7$ and $\xm\approx0.8$, implying that about 20\% of the population was already immune before that wave, plausibly as a result of infection during the spring 1918 herald wave.
+
+\end{abstract}
+
+\epimomarticlekeywords
+
+%%\tableofcontents
+
+\beginsection{Introduction}{sec:intro}
+
+Epidemic time series are commonly used to infer how well an infection
+spreads, as measured by the basic reproduction number, $\Rn$---the
+expected number of secondary infections caused by a typical infected
+individual in a fully susceptible population.  A standard approach
+estimates the initial exponential growth rate and combines it with an
+estimated or assumed distribution of intrinsic generation
+intervals---the delays between infection of an individual and the
+secondary infections caused by that individual---to obtain a
+reproduction number \citeref{WallLips07,Ma+14,Ma20}.  More precisely,
+if $\xm$ is the fraction of the population that was susceptible before
+the epidemic began, initial growth identifies the effective
+reproduction number $\Reff=\Rn\xm$, rather than $\Rn$
+\citeref{McCaw+2009}.  Early growth alone does not separate pathogen
+transmissibility from pre-existing population immunity, because
+different combinations of $\Rn$ and $\xm$ can give the same $\Reff$.
+
+The fraction of the population that was already immune when the
+epidemic began is $\zm=1-\xm$.  Allowing for pre-existing immunity
+($\xm<1$) changes both the transmissibility inferred for the pathogen
+and the estimated proportion infected during the focal epidemic,
+$\zp=\xm-\xp$, where $\xp$ is the fraction susceptible after the
+epidemic.  Thus, assuming that the population was initially fully
+susceptible confounds the interpretation of transmissibility, prior
+immunity, and final size.
+
+Epidemic momentum \cite{EarnPars25_epimom_theory} provides the
+additional information needed to separate $\Rn$ from $\xm$.
+Conceptually, epidemic momentum measures the infectious potential
+carried by the population, weighting past infections by their
+remaining potential to transmit.  It can be constructed from an
+incidence time series and the intrinsic generation-interval
+distribution $g(\aoi)$, where $\aoi$ is the time since infection.  The
+susceptible fraction and epidemic momentum satisfy a conservation
+law \theoryref{sec:FI}; the value of the conserved quantity is
+$\ypeak$, the maximum epidemic momentum.  Together with
+$\Reff=\Rn\xm$, an estimate of $\ypeak$ supplies the additional
+relation needed to determine $\Rn$ and $\xm$ separately.
+
+In this paper, we exploit epidemic momentum to infer $\Rn$ and $\xm$
+separately from the same epidemic time series.  We assess this
+momentum-based method for inferring transmissibility and prior
+immunity using stochastic epidemic simulations for which both
+quantities are known, and then apply it to the autumn wave of the 1918
+influenza pandemic in Philadelphia. The application illustrates the
+biological consequences of estimating, rather than assuming, the
+population immunity present before an epidemic.
+
+The inference proceeds from an observed incidence time series, or from
+a time series from which incidence can be reconstructed (\eg
+mortality \cite{Gold+09}), together with an assumed or estimated
+intrinsic generation interval distribution $g(\aoi)$.  Initial
+exponential growth gives $\Reff=\Rn\xm$.  The incidence history and
+$g(\aoi)$ then determine the epidemic momentum through time, from
+which we extract its maximum $\ypeak$.  Combining $\ypeak$ with the
+early growth estimate separates $\Rn$ from $\xm$; prior immunity and
+final size follow from the inferred susceptible fractions.
+
+We first introduce the renewal-equation formulation of epidemic
+models, from which we derive the relations underlying the
+momentum-based method. We then assess its accuracy using stochastic simulations,
+apply it to main-wave data recorded in Philadelphia in 1918, and
+discuss the biological interpretation and limitations of the
+inferences.
+
+\beginsection{Methods}{sec:methods}
+
+\beginsubsection{Kermack and McKendrick's renewal equation}{sec:re}
+
+We formulate the momentum-based method using the \RE, which represents
+a broad class of epidemic models without requiring a particular
+compartmental structure \citeref{KermMcKe27,Bred+12,Cham+18}. This
+formulation is particularly convenient for inference because it is
+written in terms of incidence---the quantity observed, or
+reconstructed, from an epidemic time series---and the intrinsic
+generation-interval distribution, which must already be estimated or
+assumed to convert an epidemic growth rate into a reproduction
+number \cite{WallLips07}.
+
+We measure time in units of a convenient epidemiological timescale,
+often the mean infectious period, so that $\tau$ is dimensionless and
+the equations can be written in terms of $\Rn$ rather than separate
+transmission and recovery-rate parameters.  We write $X(\tau)$ for the
+susceptible fraction at time $\tau$, and $\inc(\tau)$ for the
+incidence, the fraction of the population newly infected per unit
+time.  The probability density $g(\aoi)$ specifies the distribution of
+the \term{intrinsic generation interval}, the delay between infection
+of an individual and a secondary infection caused by that
+individual \citeref{Sven07,ChamDush15}.  In dimensionless time, the
+\term{\RE} is
+\begin{subequations}\label{eq:re}
+\begin{align}
+  \ddtau{X}
+  &\;=\;
+  -\inc(\tau),
+  \label{eq:re;X}
+  \\
+  \inc(\tau)
+  &\;=\;
+  \Rn X(\tau)
+  \int_{-\infty}^{\tau}
+    \inc(s)g(\tau-s)\,\dee s.
+  \label{eq:re;inc}
+\end{align}
+\end{subequations}
+The first equation identifies incidence with the rate at which
+susceptibles are depleted.  In the second equation, infections that
+occurred at time $s$ contribute to incidence at time $\tau$ according
+to the generation-interval density evaluated at their infection age,
+$\tau-s$.  The factor $\Rn X(\tau)$ is the effective reproduction
+number at time $\tau$.
+
+In the framework represented by \cref{eq:re}, differences in
+infection-age structure among epidemic models are captured by
+$g(\aoi)$.  Standard examples of generation-interval distributions,
+including those corresponding to the SIR and SEIR models, are given
+in \cref{tab:models}.  Other choices of $g(\aoi)$ represent
+models with more general infection-age structure \cite{Cham+18}.  A
+fuller account of the \RE, its initial history, and its relation to
+compartmental models is given in \theoryref{sec:re}.
+
+The lower limit of integration in \cref{eq:re;inc} makes explicit that
+incidence at time $\tau$ depends on the preceding incidence history.
+This history enters the inference in two ways.  First, exponentially
+growing incidence in the early epidemic tail yields the Euler--Lotka
+relation that identifies $\Reff=\Rn\xm$.  Second, the incidence
+history and $g(\aoi)$ determine epidemic momentum, which weights past
+infections by their remaining reproductive potential. In practice,
+observations begin at a finite time, but the early exponential
+approximation also allows the unobserved part of the incidence history
+to be included in the momentum calculation.  We begin with the
+relationship between the asymptotic exponential growth and decay rates
+and transmissibility.
+
+%%\beginsubsection{Inferring $\Reff$ from incidence}{sec:WL}
+\beginsubsection{Tail exponents and reproduction numbers}{sec:WL}
+
+In the initial ($\tau\to-\infty$) and final
+($\tau\to+\infty$) phases of an epidemic, incidence grows and decays
+exponentially, 
+\begin{equation}
+  \inc(\tau)
+  \;\propto\;
+  e^{\lampm\tau},
+  \label{eq:inc.exp}
+\end{equation}
+where $\lamm>0$ applies near the start of the epidemic and $\lamp<0$
+applies near the end; we refer to $\lampm$ as the \term{tail
+exponents}.  During these early and late phases, incidence is small
+and the susceptible fraction is nearly constant, at $\xm$ and $\xp$,
+respectively.  Substituting \cref{eq:inc.exp} into \cref{eq:re;inc},
+rearranging, and cancelling common factors gives the Euler--Lotka
+equation
+\citeref{DublLotk25,Fell41,KeyfCasw05},
+\begin{equation}
+  \frac{1}{\Rn\xpm}
+  \;=\;
+  \int_0^\infty
+    e^{-\lampm\aoi}g(\aoi)\,\dee\aoi
+  \;\equiv\;
+  \Lap{g}(\lampm)
+  \;\equiv\;
+  \Lappm.
+  \label{eq:lamLaplace}
+\end{equation}
+For the initial growth phase, setting $\xm=1$ in
+\cref{eq:lamLaplace} gives the formula of Wallinga and
+Lipsitch \citeref[Equation~(2.7)]{WallLips07}, which is often used with
+empirical estimates of $\lamm$ to infer $\Rn$
+\citeref{WallLips07,Ma+14,Ma20}.  If $\xm<1$, the same calculation
+instead yields $\Reff=\Rn\xm$ \citeref{McCaw+2009}.
+
+Estimating $\xm$ empirically is sometimes possible
+(\eg \citeref{Ston+07}).  Computationally demanding and/or
+model-specific methods that attempt to infer or constrain $\xm$
+indirectly from the observed epidemic data have also been proposed
+(see \cref{sec:discuss.prior}).  Our approach obtains the additional
+information directly from epidemic momentum, which we now define
+precisely.
+
+\beginsubsection{Constructing epidemic momentum from incidence}{sec:epimom}
+
+At infection age $\aoi$, the upper tail of the generation-interval
+distribution is the fraction of an individual's intrinsic transmission
+potential that remains.  Multiplying this fraction by $\Rn$, we define
+the \term{reduced reproduction number}
+\begin{equation}
+  \Ra
+  \;=\;
+  \Rn
+  \int_{\aoi}^{\infty}
+    g(\aoidum)\,\dee\aoidum .
+  \label{eq:Ra}
+\end{equation}
+Thus $\Ra$ is the expected number of future secondary infections caused
+by an individual of infection age $\aoi$ in a fully susceptible
+population, while $\Ra/\Rn$ is the fraction of that individual's
+reproductive potential that remains (which depends only on $g(\aoi)$,
+not $\Rn$).
+
+At time $\tau$, the cohort infected at time $\tau-\aoi$ contributes
+$\inc(\tau-\aoi)\,\dee\aoi$ to the infection-age distribution.
+Weighting each cohort by its remaining reproductive potential we
+obtain the \term{epidemic momentum} \cite{EarnPars25_epimom_theory},
+\begin{equation}
+  Y(\tau)
+  \;=\;
+  \int_0^\infty
+    \inc(\tau-\aoi)
+    \frac{\Ra}{\Rn}\,\dee\aoi .
+  \label{eq:re.Y}
+\end{equation}
+For the SIR and SEIR models, epidemic momentum coincides with the
+total prevalence of infection.  
+More generally, epidemic momentum is a weighted prevalence: each
+currently infected individual contributes according to their remaining
+potential to infect, so individuals at different infection ages carry
+different weights.
+
+An equivalent representation is useful when epidemic observations are
+expressed as cumulative incidence.  Writing
+$\cuminc(\tau)=\int_{-\infty}^{\tau}\inc(s)\,\dee s$ and integrating
+\cref{eq:re.Y} by parts, using
+$\dd{}{\aoi}(\Ra/\Rn)=-g(\aoi)$, gives
+\begin{equation}
+  Y(\tau)
+  \;=\;
+  \cuminc(\tau)
+  -
+  \int_0^\infty
+    \cuminc(\tau-\aoi)g(\aoi)\,\dee\aoi .
+  \label{eq:re.Y.g}
+\end{equation}
+Thus epidemic momentum can be computed either directly from incidence
+using \cref{eq:re.Y}, or from the corresponding cumulative-incidence
+curve using \cref{eq:re.Y.g}.
+
+Both representations formally involve the complete incidence history.
+In practice, suppose observations begin at time $\tauinit$ during the
+initial exponential-growth phase, with
+$\inc(\tauinit)=\incinit$.  Incidence before $\tauinit$ can then be
+approximated by
+$\inc(s)\approx\incinit e^{\lamm(s-\tauinit)}$.  Splitting
+\cref{eq:re.Y} into the contributions before and after $\tauinit$ gives,
+for $\tau\geq\tauinit$,
+\begin{align}
+  Y(\tau)
+  \quad\approx\quad
+  \incinit e^{\lamm(\tau-\tauinit)}
+  \int_{\tau-\tauinit}^{\infty}
+    e^{-\lamm\aoi}
+    \frac{\Ra}{\Rn}\,\dee\aoi
+  \quad
+  +
+  \quad
+  \int_0^{\tau-\tauinit}
+    \inc(\tau-\aoi)
+    \frac{\Ra}{\Rn}\,\dee\aoi \,.
+  \label{eq:re.Y.finite}
+\end{align}
+The first term in \cref{eq:re.Y.finite} reconstructs the contribution
+from infections that occurred before observations began, while the
+second is computed directly from the observed incidence history.  A
+Laplace-transform representation of the first term, including the
+explicit SEIR expressions used in our calculations, is derived in
+\appref[finite-history-momentum]{app:yinit.from.incinit.finite.int.rep}.
+
+Consequently, the observed incidence curve, its initial growth rate
+$\lamm$, and the generation-interval distribution $g(\aoi)$ determine
+the epidemic momentum throughout the observed epidemic and, in
+particular, its maximum $\ypeak$.  We next combine this information
+with $\Reff=\Rn\xm$ to infer $\Rn$ and $\xm$ separately.
+
+\beginsubsection
+    {\texorpdfstring{Inferring $\Rn$ and prior population immunity using epidemic momentum}{Disentangling R0 from prior population immunity}}{sec:est.Rn.xm}
+
+The preceding subsections provide the two quantities needed to
+separate $\Rn$ from $\xm$.  First, the rising tail exponent $\lamm$
+and the generation-interval distribution $g(\aoi)$ determine $\Lapm$
+and hence $\Reff=\Rn\xm=1/\Lapm$ [\cref{eq:lamLaplace}].  Second, the
+incidence history and $g(\aoi)$ determine the epidemic momentum
+$Y(\tau)$ [\cref{eq:re.Y}] and hence its maximum $\ypeak$.  We now use
+the conservation law presented in Ref.~\cite{EarnPars25_epimom_theory}
+to infer $\Rn$ from $\ypeak$ and $\Lapm$, and then infer the
+pre-epidemic susceptible fraction $\xm$ from $\Reff=\Rn\xm$.
+
+The quantity that is conserved along epidemic trajectories is a
+function of susceptible fraction and epidemic momentum, and can be
+written \theoryref{sec:FI}
+\begin{equation}
+  C(x,y)
+  \;=\;
+  y
+  +
+  \xpeak\,
+  \Volterra\!\left(\frac{x}{\xpeak}\right),
+  \label{eq:FI}
+\end{equation}
+where $\Volterra(u)=u-1-\ln u$ is the ``Volterra function''
+\citeref{EarnMcCl25} and $\xpeak=\frac{1}{\Rn}$.  The conserved value of $C$ is the maximum
+epidemic momentum,
+\begin{equation}
+  C\big(X(\tau),Y(\tau)\big)
+  \;=\;
+  C\big(\xpeak,\ypeak\big)
+  \;=\;
+  \ypeak.
+  \label{eq:CQ}
+\end{equation}
+At the pre- and post-epidemic endpoints, $X=\xpm$ and $Y=0$.
+Consequently, $\ypeak=C(\xpm,0)=\frac{1}{\Rn}\Volterra(\Rn\xpm)$.
+Since \cref{eq:lamLaplace} gives $\Rn\xpm=1/\Lappm$, we obtain
+\begin{equation}
+  \Rn
+  \;=\;
+  \frac{1}{\ypeak} \,
+  \Volterra\!\Big(\frac{1}{\Lappm}\Big) \,.
+  \label{eq:R.C.lampm}
+\end{equation}
+Thus either epidemic tail provides an exact expression for $\Rn$ in
+terms of its tail exponent, $\lamm$ or $\lamp$, the generation
+interval distribution $g(\aoi)$, and the maximum epidemic momentum
+$\ypeak$, with no dependence on the pre-epidemic susceptible
+fraction $\xm$.
+
+For inference from the initial growth phase, we use $\Lappm=\Lapm$
+in \cref{eq:R.C.lampm}.  Then \cref{eq:lamLaplace} gives
+\begin{equation}
+  \xm
+  \,=\;
+  \frac{1}{\Rn\Lapm}
+  \qquad\text{and}\qquad
+  \zm
+  \,=\;
+  1-\xm
+  \;=\;
+  1-\frac{1}{\Rn\Lapm}.
+  \label{eq:zm.compute}
+\end{equation}
+Hence estimates of $\lamm$ and $\ypeak$, together with $g(\aoi)$,
+determine both pathogen transmissibility ($\Rn$) and prior population
+immunity ($\zm$).
+
+The falling tail exponent $\lamp$ is difficult to estimate because the
+asymptotic decay occurs when incidence is very low.  However, it is
+not necessary to observe the falling tail in order to estimate the
+final size of the epidemic.  Applying \cref{eq:R.C.lampm} to the two
+endpoints gives
+\begin{equation}
+  \Volterra\!\Big(\frac{1}{\Lapm}\Big)
+  \;=\;
+  \Volterra\!\Big(\frac{1}{\Lapp}\Big).
+  \label{eq:V=V}
+\end{equation}
+The solution corresponding to the post-epidemic endpoint is
+\begin{equation}
+  \frac{1}{\Lapp}
+  \;=\;
+  -\Wp\!\Big(\!\!
+    -\tfrac{1}{\Lapm}
+    e^{-1/\Lapm}
+  \Big),
+  \label{eq:Lapp.from.Lapm}
+\end{equation}
+where $\Wp$ is the principal branch of Lambert's $W$ function
+(\appref{app:LambertW}).  Since $\xp=1/(\Rn\Lapp)$, the proportion
+infected during the focal epidemic---the final size---is therefore
+\begin{equation}
+  \zp
+  \;=\;
+  \xm-\xp
+  \;=\;
+  \frac{1}{\Rn}
+  \left(
+    \frac{1}{\Lapm}
+    -
+    \frac{1}{\Lapp}
+  \right).
+  \label{eq:zp.compute}
+\end{equation}
+
+Operationally, we estimate $\lamm$ from the initial exponential-growth
+phase, evaluate $\Lapm$, construct $Y(\tau)$ from the incidence
+history, and identify its maximum $\ypeak$.
+\Cref{eq:R.C.lampm,eq:zm.compute} determine $\Rn$,
+$\xm$, and $\zm$.  \Cref{eq:Lapp.from.Lapm} then determines $\Lapp$,
+and \cref{eq:zp.compute} gives $\zp$; the post-epidemic susceptible
+fraction follows from $\xp=\xm-\zp$.  Observations must extend long
+enough to estimate the maximum of epidemic momentum, but need not
+extend into the asymptotic falling tail.
+
+The absolute scale of the incidence curve is required because
+$\ypeak$, unlike $\lamm$ and $\Lapm$, depends on that scale.
+Multiplying incidence by a constant multiplies $Y(\tau)$ and $\ypeak$
+by the same constant, and therefore changes the value of $\Rn$ inferred
+from \cref{eq:R.C.lampm}.  Incidence must therefore be expressed as a
+fraction of the population, or the factor connecting the observed time
+series to incidence must be known or examined explicitly, as in the
+influenza mortality application below.
+
+\beginsection{Results}{sec:results}
+
+\beginsubsection
+  {\texorpdfstring{Estimates of prior immunity and $\Rn$ from stochastic simulations}{Estimates of prior immunity and R0 from stochastic simulations}}
+  {sec:est.sm.Rn.stoch}
+
+We assessed the momentum-based method using stochastic SEIR
+simulations for which $\Rn$ and the pre-epidemic susceptible fraction
+$\xm$ were known.  The simulations spanned a wide range of $\Rn$ for
+several combinations of $\xm$ and population size $N$, allowing us to
+examine the effects of demographic stochasticity on each stage of the
+inference.
+
+
+\begin{figure*}
+\begin{center}
+%% predict_xm_plot.R
+\includegraphics[width=0.95\textwidth]{fig_lamm_ypeak_relerr_crop.pdf}
+\end{center}
+\caption{\textbf{Estimates of initial growth rate $\lamm$ and peak
+    epidemic momentum $\ypeak$ from stochastic SEIR simulations.}  The
+  top panels show the relative error in the initial growth rate
+  $\lamm$ as a function of the true $\Rn$ specified in the simulations
+  (with population size $N=10^5$ on the left and $N=10^6$ on the
+  right).  The exact value of $\lamm$ is given by the SEIR row in
+  \protect\mainref{tab:models}.
+%%
+Simulations were carried out with equal mean latent and infectious
+periods ($\ell=1$) and incidence time series were obtained by
+``observing'' five times per infectious period, corresponding to daily
+data for a disease with a five day infectious period.
+%%
+Realistic initial conditions were chosen by ensuring
+approximate agreement with the initial exponential growth phase of the
+SEIR ODEs.
+%%
+Estimates of $\lamm$ were obtained by applying the \texttt{R} package
+\textsf{epigrowthfit} \citeref{Ma+14,Earn+20,epigrowthfit} to the simulated
+incidence time series.
+%%
+The second row of panels shows the relative error in the peak epidemic
+momentum ($\ypeak$, the exact value of which is given
+by $Y(\xpeak)$ in \protect\theoryref{eq:Yofx}); the
+epidemic momentum $Y(\tau)$ was estimated by convolving the simulated
+cumulative incidence $\cuminc(\tau)$ with the generation interval
+distribution $g(\aoi)$ [\protect\cref{eq:re.Y.g,tab:models}].
+%%
+A small systematic underestimate in $\ypeak$ is evident, but the
+magnitude of the relative error in $\ypeak$ is an order of magnitude
+smaller than the magnitude of the relative error in $\lamm$, so the
+systematic error has a negligible effect on the estimate of $\Rn$.
+%%
+}
+\label{fig:lamm.ypeak}
+\end{figure*}
+
+\begin{figure*}
+\newcommand{\bigfigwidth}{\textwidth}
+\begin{center}
+  %% predict_xm_plot.R
+  \null\hspace{0cm}\includegraphics[width=\bigfigwidth]{fig_xm_prediction_crop.pdf}
+  \vspace{20pt}
+  \includegraphics[width=\bigfigwidth]{fig_R0_prediction_crop.pdf}
+\end{center}
+\caption{\textbf{Prior population immunity ($\zm=1-\xm$)
+and basic reproduction number ($\Rn$) estimated from stochastic SEIR simulations.}
+Exploiting the epidemic momentum, we successfully disentangle and
+accurately estimate both $\zm$ and $\Rn$.
+%%
+The top panels show the predicted pre-epidemic susceptible proportion
+$\xm$, so the pre-existing level of population immunity is $\zm=1-\xm$
+[estimated via \protect\cref{eq:zm.compute}].  The true $\xm$ associated with
+the deterministic skeleton of the model [computed via \cref{eq:zm.compute} using 
+the exact value of $\lamm$ from \cref{tab:models}]
+is indicated with grey squares.
+Symbols and colours are associated with the initial susceptible
+proportion $\xinit$ as in \protect\cref{fig:lamm.ypeak}.
+%%
+The bottom panels show the predicted $\Rn$ from the same simulations.
+The smaller symbols show the value of $\Rn$ estimated using the
+uncorrected Wallinga-Lipsitch (WL) formula \citeref{WallLips07}, 
+which uses only the estimated growth rate $\lamm$, whereas
+the larger symbols show $\Rn$ as estimated using \protect\cref{eq:R.C.lampm},
+which uses both $\lamm$ and the estimated peak epidemic momentum $\ypeak$.
+The grey line corresponds to ``Predicted $\Rn=$ True $\Rn$''.  }
+\label{fig:xm.R0.pred}
+\end{figure*}
+
+
+The method first estimates the initial growth rate $\lamm$ from the
+rising tail and constructs the epidemic momentum from incidence to
+estimate its maximum $\ypeak$.  
+(Details of the computation, including estimating initial conditions,
+are given in \cref{app:yinit.from.incinit.finite.int.rep}.)
+\Cref{fig:lamm.ypeak} shows the
+relative errors in these two quantities.  Inserting the estimated
+values of $\lamm$ and $\ypeak$ into \cref{eq:R.C.lampm,eq:zm.compute}
+gives the corresponding estimates of $\Rn$ and $\xm$, shown
+in \cref{fig:xm.R0.pred}.
+
+In the upper panels of \cref{fig:xm.R0.pred}, grey squares show the
+true values of $\xm$.  The estimated values are distributed around the
+corresponding true values across the simulated parameter combinations,
+with greater stochastic variation in smaller populations.  The lower
+panels show the estimates of $\Rn$, which similarly lie close to the
+line of perfect agreement, with accuracy improving as population size
+increases.
+
+For comparison, the smaller symbols in the lower panels show the
+reproduction numbers obtained from the initial growth rate under the
+assumption that the population was initially fully susceptible
+($\xm=1$).  When pre-existing immunity is present, these values are
+systematically smaller than the true $\Rn$, because the initial growth
+rate identifies $\Reff=\Rn\xm$ rather than $\Rn$.
+
+All simulations shown in
+\cref{fig:lamm.ypeak,fig:xm.R0.pred} had equal mean latent and
+infectious periods ($\ell=1$ in Eq.\,(\labelcref{eq:SEIR})); the performance of
+the method was similar for other values of $\ell$.
+
+\beginsubsection
+    {\texorpdfstring{Reappraisal of the 1918 influenza pandemic in Philadelphia}{Reappraisal of the 1918 influenza pandemic in Philadelphia}}
+    {sec:1918flu}
+
+%% 2026-07-20 09:19:17.450234 
+%% created by phila_calculations.Rnw; DO NOT EDIT
+\newcommand{\philaTlatdays}{1.9}
+\newcommand{\philaTinfdays}{4.1}
+\newcommand{\philaell}{0.463}
+\newcommand{\philalamm}{0.16}
+\newcommand{\philalammdim}{0.655}
+\newcommand{\philaLapm}{0.464}
+\newcommand{\philaRnlowerbound}{2.16}
+\newcommand{\philaypeakCFP}{0.00287}
+\newcommand{\philaCFP}{0.02}
+\newcommand{\philaCFPpct}{2}
+\newcommand{\philaCFPminpct}{0.739}
+\newcommand{\philaCFPlowerbound}{0.0159}
+\newcommand{\philaCFPlowerboundpct}{1.59}
+\newcommand{\philaypeak}{0.143}
+\newcommand{\philaxm}{0.797}
+\newcommand{\philazm}{0.203}
+\newcommand{\philazmpct}{20}
+\newcommand{\philaRnoverCFP}{135}
+\newcommand{\philaRn}{2.71}
+\newcommand{\philaincpeakdate}{29 September 1918}
+\newcommand{\philaypeakdate}{1 October 1918}
+\newcommand{\philapimpeakdate}{11 October 1918}
+\newcommand{\philapimpeakvalue}{803}
+\newcommand{\philalastdate}{17 December 1918}
+\newcommand{\philaMillszm}{0.3}
+\newcommand{\philaMillszmpct}{30}
+\newcommand{\philaMillsxm}{0.7}
+\newcommand{\philaMillsRnmin}{1.7}
+\newcommand{\philaMillsRnmax}{2.4}
+\newcommand{\philaMillsRncheck}{3.08}
+%% OLD RESULTS using empirical g rather than SEIR g:
+%% \newcommand{\RnONEpct}{4.4}
+%% \newcommand{\RnTWOpct}{8.9}
+%% \newcommand{\RnTHREEpct}{13}
+%% \newcommand{\zmONEpct}{17\%}
+%% \newcommand{\zmTWOpct}{58\%}
+%% \newcommand{\zmTHREEpct}{72\%}
+
+
+Having shown that the momentum-based method recovers known values of
+$\Rn$ and $\xm$ from stochastic simulations, we applied it to daily
+pneumonia and influenza (P\&I) mortality recorded during the main wave
+of the 1918 influenza pandemic in Philadelphia, which occurred in the
+autumn of 1918 (\cref{fig:philaflu}).
+
+\begin{figure*}[!t]
+  \centering
+  %% Rscript -e "knitr::knit2pdf('phila_calculations.Rnw')"
+  %%\includegraphics[width=\columnwidth]{fig_philaflu.pdf}
+  \includegraphics{fig_philaflu.pdf}
+\caption{\textbf{1918 influenza pandemic in Philadelphia, USA.}  Daily
+  deaths from pneumonia and influenza (P\&I) were recorded from 1
+  September to 31 December 1918 \citeref{Roge20}.  We deconvolved the
+  observed mortality time series to obtain estimated daily incidence
+  $\inc(t)$, using an empirically estimated infection to death
+  distribution: as detailed in previous work \citeref{Gold+09} and
+  implemented in the \textsf{fastbeta} R package
+  \citeref{Jaga+20,fastbeta}, gamma distributions were fitted to an
+  empirical incubation period distribution \citeref[Figure~1]{Mose+79}
+  and an empirical symptom onset to death distribution
+  \citeref[Chart~2]{KeetCush18}, which were then convolved to obtain
+  the infection to death distribution.  We then convolved the
+  estimated $\inc(t)$ with the estimated reduced reproduction number
+  [\cref{eq:Ra}] (via $g(\aoi)$ from \cref{tab:models} with
+  $\ell=\philaell$) to obtain the epidemic momentum time series $Y(t)$
+  [\protect\cref{eq:re.Y}].  The peak of the observed daily P\&I
+  mortality occurred on \philapimpeakdate\ (with
+  \philapimpeakvalue\ P\&I deaths), whereas estimated incidence peaked
+  on \philaincpeakdate\ and estimated epidemic momentum peaked on
+  \philaypeakdate\ (vertical grey line).  Note that peak momentum
+  always occurs after peak incidence (see
+  \protect\appref{app:peak.order}).  Associated estimates of $\Rn$ and
+  population immunity are discussed in the main text in
+  \protect\cref{sec:1918flu}.}
+  \label{fig:philaflu}
+\end{figure*}
+
+
+Because mortality rather than incidence was reported, we used
+Richardson--Lucy deconvolution to reconstruct a curve proportional to
+incidence \citeref{Gold+09}.  (Details of the mortality data, the
+infection-to-death distribution used for deconvolution, the
+generation-interval assumptions, and the calculation of epidemic
+momentum are given in the caption to \cref{fig:philaflu}.)  The
+proportionality factor includes the case-fatality proportion,
+$\CFPvar$, because only that fraction of infections resulted in
+recorded deaths.  This unknown scale does not affect the estimated
+initial growth rate \citeref{Ma+14,Earn+20,epigrowthfit}, which was
+$\lamm\simeq\philalamm/\text{day}$.
+
+Following Mills \emph{et al.}\ \citeref{Mill+04}, we assumed mean
+latent and infectious periods of $\Tlat=\philaTlatdays\,$days and
+$\Tinf=\philaTinfdays\,$days, respectively, hence
+$\ell\equiv\Tlat/\Tinf=\philaell$.
+Measuring time in units of $\Tinf$ gives $\lamm\approx\philalammdim$.
+The corresponding SEIR generation-interval distribution
+[\mainref{tab:models}] then yields
+\begin{equation}\label{eq:phila.Lapm}
+  \Lapm
+  \;\approx\;
+  \philaLapm.
+\end{equation}
+This estimate gives a lower bound on $\Rn$ that is independent of the
+incidence scale: since $\xm\le1$, we have $\Rn\ge\Reff$, so
+\cref{eq:lamLaplace} implies
+\begin{equation}\label{eq:phila.Rn.lower}
+  \Rn
+  \;\geq\;
+  \frac{1}{\Lapm}
+  \;\approx\;
+  \philaRnlowerbound.
+\end{equation}
+
+Convolving the reconstructed incidence curve with the remaining
+reproductive-potential kernel [\cref{eq:Ra}] gives the epidemic
+momentum [\cref{eq:re.Y}] shown in \cref{fig:philaflu}.  Because
+epidemic momentum is linearly related to incidence, the multiplicative
+factor $\CFPvar$ is retained in the reconstructed momentum curve; its
+maximum is therefore $\CFPvar \times \ypeak$, rather than $\ypeak$.
+For mortality data, \cref{eq:R.C.lampm} is therefore more usefully
+written
+\begin{equation}\label{eq:R.C.lampm.mort}
+  \Rn
+  \;=\;
+  \frac{\CFPvar}{\CFPvar \times \ypeak}
+  \Volterra\!\Big(\frac{1}{\Lapm}\Big).
+\end{equation}
+The momentum curve in \cref{fig:philaflu} gives
+\begin{equation}\label{eq:phila.ymax.CFP}
+  \CFPvar \times \ypeak
+  \;\approx\;
+  \philaypeakCFP,
+\end{equation}
+so that
+\begin{equation}\label{eq:phila.Rn.CFP}
+  \Rn
+  \;\approx\;
+  \philaRnoverCFP \times \CFPvar.
+\end{equation}
+The lower bound on $\Rn$ given in \cref{eq:phila.Rn.lower} therefore
+implies a $\CFPvar$ lower bound,
+\begin{equation}\label{eq:phila.CFP.lower}
+\CFPvar
+\;\approx\;
+\frac{\Rn}{\philaRnoverCFP}
+\;\gtrsim\;
+\frac{\philaRnlowerbound}{\philaRnoverCFP}
+\;=\;
+%%\philaCFPlowerboundpct\%.
+1.6\%.
+\end{equation}
+
+Frost \citeref[p.\,593]{Frost1920} estimated that the case-fatality
+proportion during the main wave of the 1918 pandemic ranged from
+$0.8\%$ to $3.1\%$ across US cities.  For a group of northeastern
+communities near Philadelphia, he estimated
+$\CFPvar=2.05\%$ \citeref[p.\,593]{Frost1920}, consistent
+with the lower bound in \cref{eq:phila.CFP.lower}.  We therefore use
+$\CFPvar\simeq\philaCFPpct\%$ as a representative value for
+Philadelphia.  Substitution into \cref{eq:phila.Rn.CFP} implies
+\begin{equation}\label{eq:phila.Rn}
+  \Rn
+  \;\approx\;
+  \philaRn.
+\end{equation}
+Equation \labelcref{eq:zm.compute} then gives
+\begin{equation}\label{eq:phila.zm}
+  \zm
+  \;\approx\;
+  \philazm,
+\end{equation}
+indicating that approximately $\philazmpct\%$ of the population was
+immune before the main wave.
+
+Mills \emph{et al.}\ \citeref{Mill+04} also assumed
+$\CFPvar=2\%$, based on the midpoint of Frost's range
+\citeref{Frost1920}, but assumed prior population immunity
+$\zm=\philaMillszmpct\%$ from seasonal-influenza evidence
+\citeref[pp.\,905--906]{Mill+04} (the relevant passages are reproduced
+in \appref{app:quotes}).  They reported
+\begin{equation}\label{eq:phila.Mills.Rn.range}
+  \philaMillsRnmin
+  \;\leq\;
+  \Rn
+  \;\leq\;
+  \philaMillsRnmax
+\end{equation}
+for Philadelphia \citeref[SI p.\,5]{Mill+04}.  However, using the
+observed initial growth rate and the SEIR generation-interval
+distribution assumed both here and by Mills \emph{et al.},
+$\zm=\philaMillszm$ would imply
+\begin{equation}\label{eq:phila.Mills.Rn.check}
+  \Rn \;=\; \frac{1}{(1-\zm)\Lapm} \;\approx\; \philaMillsRncheck,
+\end{equation}
+which lies outside their reported range.  Thus their stated assumption
+about prior immunity and their reported estimate of $\Rn$ are not
+mutually consistent under \cref{eq:zm.compute}.
+
+Our momentum-based analysis instead estimates $\Rn$ and $\zm$
+consistently from the observed initial growth and reconstructed
+momentum curve.  The estimate in \cref{eq:phila.zm} suggests that a
+substantial fraction (20\%) of the Philadelphia population was already
+immune before the main wave, plausibly because of infection during the
+spring 1918 ``herald wave''.
+
+\beginsection{Discussion}{sec:discuss}
+
+Initial epidemic growth does not, by itself, distinguish pathogen
+transmissibility from pre-existing population immunity.  Rather, it
+identifies the effective reproduction number
+$\Reff=\Rn\xm$, the product of the basic reproduction number and the
+fraction of the population susceptible before the epidemic began \citeref{McCaw+2009}.
+Consequently, different combinations of $\Rn$ and $\xm$ can generate
+the same initial growth.  We have shown that epidemic momentum provides
+the additional information needed to separate these quantities.
+Together, the initial growth rate (tail exponent) and maximum epidemic momentum
+determine $\Rn$ and $\xm$, from which prior immunity ($\zm$) and the proportion
+infected during the focal epidemic ($\zp$) follow.
+
+The momentum-based method successfully recovered both $\Rn$ and $\xm$ from
+stochastic SEIR simulations across the parameter combinations examined
+(\cref{fig:lamm.ypeak,fig:xm.R0.pred}).  As expected, stochastic variation was
+greater in smaller populations, but the estimates were distributed
+around the corresponding true values.  By contrast, estimates obtained
+from the initial growth rate while assuming $\xm=1$ were systematically
+smaller than the true $\Rn$ whenever pre-existing immunity was present.
+These estimates are not intrinsically inaccurate: they estimate
+$\Reff=\Rn\xm$, rather than $\Rn$.  The error arises when $\Reff$ is
+interpreted as the basic reproduction number despite uncertainty about
+the initial susceptible fraction.
+
+Our reappraisal of the 1918 influenza pandemic illustrates the
+biological importance of this distinction.  For the main wave in
+Philadelphia, which occurred in the autumn of 1918, the observed
+initial growth and reconstructed epidemic momentum imply
+$\Rn\approx\philaRn$ and $\zm\approx\philazm$.  Thus, approximately
+$\philazmpct\%$ of the population appears to have been immune before
+the main wave began.  Infection during the spring 1918 ``herald wave''
+provides a plausible explanation for at least some of this immunity,
+but other sources of pre-existing immunity are also possible.
+
+The Philadelphia analysis also illustrates the consequences of
+assuming prior immunity rather than estimating it.  Mills \emph{et
+al.}\ \citeref{Mill+04} assumed $\zm=\philaMillszmpct\%$, but the
+observed growth rate and their assumed generation-interval
+distribution imply $\Rn\approx\philaMillsRncheck$, outside the range
+they reported.  Thus, their assumed prior immunity and reported
+estimate of $\Rn$ are not mutually consistent under the standard
+relationship between epidemic growth, prior immunity, and reproduction
+number given in \cref{eq:zm.compute}.  The broader point is not
+specific to this earlier analysis: estimates of $\Rn$ obtained by
+fixing prior immunity necessarily inherit any error in that
+assumption.
+
+\beginsubsection{Relation to previous approaches}{sec:discuss.prior}
+
+Previous attempts to infer transmissibility and prior immunity from
+epidemic time series have generally required additional approximations,
+strong model assumptions, or external information.  Caley \emph{et
+al.}\ \citeref{Cale+2008} estimated the time-dependent effective
+reproduction number during the multi-wave 1919 influenza epidemic in
+Sydney from hospitalization and mortality data.  They combined these
+estimates with cumulative incidence and \emph{a priori} assumptions about periods in
+which contact behaviour had returned to normal to separate susceptible
+depletion from changes in contact rates.  Their analysis suggested
+that more than $90\%$ of the population was initially susceptible and
+gave a preferred estimate $\Rn\approx1.8$.  The inference of prior
+immunity depended on the assumed clinical attack rate, the
+reconstruction of the time-dependent reproduction number, and the
+correct identification of periods without behavioural change.
+
+Cope \emph{et al.}\ \citeref{Cope+2018} used approximate Bayesian
+computation to fit a climate-driven stochastic epidemic model to
+seasonal influenza surveillance data from New South Wales.  Their
+posterior distribution showed a strong relationship between $\Rn$ and
+the initial susceptible fraction: relatively high values of $\Rn$ were
+associated with low susceptibility, while their product was much more
+tightly constrained.  Thus, even with a substantially richer model and
+observation process, the data did not sharply identify the two
+quantities separately.
+
+Bergstr{\"o}m \emph{et al.}\ \citeref{Berg+2026} proved that, in an
+SIR model with under-reporting and prior immunity, the transmission
+rate, reporting fraction, and initial immune fraction are not jointly
+identifiable from reported incidence alone.  They showed that
+identifiability can be restored by supplementing reported incidence
+with an estimate of prior immunity or infection prevalence.  Their
+analysis is restricted to the SIR model and assumes the final size of
+the epidemic has been observed.
+%%
+Our approach, which applies to all models represented by the \RE,
+instead exploits the fact that epidemic momentum peaks at
+$\xpeak=\frac{1}{\Rn}$ so all required information---including an
+estimate of peak momentum $\ypeak$---can be inferred much earlier.
+However, an unknown reporting fraction still determines the scale of
+epidemic momentum and must be estimated or constrained; in the
+Philadelphia analysis, the corresponding unknown scale is the
+case-fatality proportion.
+
+\beginsubsection{Data requirements and statistical challenges}{sec:discuss.limitations}
+
+The momentum-based method requires an estimate of the intrinsic
+generation-interval distribution.  This requirement is not unique to
+our method: the same distribution is already needed to convert an
+epidemic growth rate into an effective reproduction number
+\citeref{WallLips07}.  Nevertheless, uncertainty or misspecification
+in $g(\aoi)$ affects both $\Reff$ and the reconstruction of epidemic
+momentum, and therefore propagates into estimates of $\Rn$ and $\xm$.
+Applications should therefore be mindful of sensitivity to the assumed
+form and parameters of the intrinsic generation-interval distribution.
+
+The absolute scale of incidence is also required for point estimates of
+$\Rn$ and $\xm$.  Multiplying the incidence curve by a constant leaves
+its exponential growth rate unchanged but multiplies epidemic momentum
+and its maximum by the same constant, thereby changing the inferred
+$\Rn$.  Incidence must therefore be expressed as a fraction of the
+population, or the factor connecting the observed time series to
+incidence must be known or estimated.  Even when this scale factor
+cannot be estimated reliably, the initial growth rate still provides a
+useful lower bound on $\Rn$.  For Philadelphia,
+\cref{eq:phila.Rn.lower} gives
+$\Rn\gtrsim\philaRnlowerbound$, independently of the assumed
+case-fatality proportion.
+
+Mortality, hospital admissions, and other delayed observations require
+reconstruction of the underlying incidence curve.  This reconstruction
+depends on the relevant delay distribution and may introduce additional
+uncertainty.  The unobserved incidence history before observations
+begin must also be approximated, although the initial exponential phase
+provides a natural extrapolation
+[\appref{app:yinit.from.incinit.finite.int.rep}].
+
+Peak epidemic momentum occurs after peak incidence
+[\appref{app:peak.order}], but this does not imply that the entire
+rise to $\ypeak$ must be observed before a useful estimate can be
+made.  As an epidemic unfolds, provisional estimates of the eventual
+maximum $\ypeak$, and hence of $\Rn$ and $\xm$, should become
+progressively more informative.  Moreover, when incidence is
+reconstructed from a delayed observable such as hospitalization or
+mortality, a useful estimate of peak momentum may be available well
+before the observed time series reaches its peak, as illustrated
+by \cref{fig:philaflu}.  An important statistical challenge will be to
+develop robust confidence intervals for $\Rn$ and $\xm$ and to
+determine how they improve as more of an epidemic is observed.
+
+\beginsubsection{Model assumptions and extensions}{sec:discuss.extensions}
+
+The derivations in this paper assume mass-action incidence, so that
+susceptibility enters incidence linearly through the susceptible
+fraction of the population.  Individual differences in intrinsic
+susceptibility, contact rate, and other mechanisms can instead produce
+nonlinear dependence of incidence on the susceptible
+fraction \citeref{WilsWorc45,Liu+86,FinkGren00,Novo08}.  In that case,
+the conserved quantity and inference formulae derived here must be
+modified.
+
+\ifanonymous
+The epidemic-momentum framework can be extended to incidence
+that depends nonlinearly on susceptible fraction, and the
+corresponding conserved quantity in this more general setting
+can be derived
+\citeref{epimom-nli}.
+\else
+We have extended the epidemic-momentum framework to incidence that
+depends nonlinearly on susceptible fraction, and derived the
+corresponding conserved quantity in this more general setting
+\citeref{epimom-nli}.
+\fi
+This class provides one way to
+incorporate nonlinear effects of susceptibility without explicitly
+tracking population structure \cite{Novo08}.  More detailed forms of
+host heterogeneity may instead require structured models that
+distinguish among host types.
+
+The present analysis also assumes that the underlying transmissibility
+and intrinsic generation-interval distribution remain fixed over the
+period analysed.  Behavioural change, interventions, pathogen
+evolution, or changes in reporting can violate these assumptions and
+break the conservation law \theoryref{app:epimom.Rt}.  Applications
+should therefore be restricted to periods over which these assumptions
+are defensible, or would require the development of extensions that
+account explicitly for time-varying transmission.
+
+Finally, the method estimates the susceptible fraction relevant to the
+focal epidemic but does not identify the biological source of prior
+immunity.  Such immunity may arise from previous infection with the
+same pathogen, cross-reactive immunity to related strains,
+vaccination, or other differences in susceptibility.  In the
+Philadelphia application, infection during the spring herald wave is
+one plausible source, but other sources of pre-existing immunity are
+possible.
+
+\beginsubsection{Conclusions}{sec:discuss.conclusion}
+
+Epidemic growth reflects both pathogen transmissibility and the
+immunological state of the population in which transmission occurs.
+Assuming that the population was initially fully susceptible can
+therefore lead to substantial underestimation of $\Rn$ and
+misinterpretation of epidemic final size.  Epidemic momentum provides a
+way to separate these effects using information contained in the same
+epidemic time series.  By combining the initial growth rate with the
+maximum epidemic momentum, the momentum-based method yields separate
+estimates of $\Rn$ and prior population immunity while retaining the
+generality of the renewal-equation framework.
+
+
+\section*{Ethics}
+\msethics
+
+\section*{Data accessibility}
+\msdata
+
+\section*{Declaration of AI use}
+\msaiuse
+
+\ifanonymous\else
+  \section*{Author contributions}
+  \mscontributions
+\fi
+
+\section*{Competing interests}
+\mscompeting
+
+\ifanonymous\else
+  \section*{Funding}
+  \msfunding
+
+  \section*{Acknowledgements}
+  \msacknowledgements
+\fi
+
+%%\theendnotes
+
+%%\clearpage
+\bigbreak\bigbreak\bigbreak
+\appendix
+\section*{APPENDICES}
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection\arabic{equation}}
+%% Appendix driver for the epimom inference manuscript.
+%% Appendices cited from the main text are ordered by first main-text citation.
+%%
+
+\beginappendix{Epidemic momentum from finite incidence history}{app:yinit.from.incinit.finite.int.rep}
+\appfilename{epimom_inference/epimom_app_finite_inc_history.tex}
+\appbackrefs{%
+  \appbackref{finite-history-momentum}{main text: finite-history momentum calculation}%
+}
+
+For $\tau\geq\tauinit$, splitting \cref{eq:re.Y} over infections that
+occurred before and after observations began gives
+\begin{equation}
+  Y(\tau)
+  \;=\;
+  \int_{\tau-\tauinit}^{\infty}
+    \inc(\tau-\aoi)
+    \frac{\Ra}{\Rn}\,\dee\aoi
+  +
+  \int_0^{\tau-\tauinit}
+    \inc(\tau-\aoi)
+    \frac{\Ra}{\Rn}\,\dee\aoi.
+  \label{eq:re.Y.finite.split}
+\end{equation}
+The second integral is computed directly from the observed incidence
+history.  During the initial exponential-growth phase,
+\cref{eq:inc.exp}, with $\inc(\tauinit)=\incinit$, gives
+\begin{equation}
+  \inc(\tau-\aoi)
+  \;\approx\;
+  \incinit
+  e^{\lamm(\tau-\tauinit)}
+  e^{-\lamm\aoi},
+  \qquad
+  \aoi>\tau-\tauinit,
+  \label{eq:re.inc.prehistory.approx}
+\end{equation}
+where the initial growth rate $\lamm$ is also estimated from
+the observed incidence time series \citeref{Ma+14,Earn+20,epigrowthfit}.
+The first integral in \cref{eq:re.Y.finite.split} is therefore
+approximated by
+\begin{equation}
+  \incinit e^{\lamm(\tau-\tauinit)}
+  \int_{\tau-\tauinit}^{\infty}
+    e^{-\lamm\aoi}
+    \frac{\Ra}{\Rn}\,\dee\aoi.
+  \label{eq:re.Y.prehistory.approx}
+\end{equation}
+
+Using the definition of $\Ra$ in \cref{eq:Ra}, we obtain
+\begin{align}
+  \int_{\tau-\tauinit}^{\infty}
+    e^{-\lamm\aoi}
+    \frac{\Ra}{\Rn}\,\dee\aoi
+  &\;=\;
+  \int_0^\infty
+    e^{-\lamm(\aoi+\tau-\tauinit)}
+    \int_{\aoi+\tau-\tauinit}^{\infty}
+      g(\aoidum)\,\dee\aoidum\,\dee\aoi
+  \notag\\
+  &\;=\;
+  e^{-\lamm(\tau-\tauinit)}
+  \int_0^\infty
+    e^{-\lamm\aoi}
+    \int_\aoi^\infty
+      g(\aoidum+\tau-\tauinit)\,\dee\aoidum\,\dee\aoi
+  \notag\\
+  &\;=\;
+  e^{-\lamm(\tau-\tauinit)}
+  \int_0^\infty
+    \int_0^{\aoidum}
+      e^{-\lamm\aoi}\,\dee\aoi\,
+    g(\aoidum+\tau-\tauinit)\,\dee\aoidum
+  \notag\\
+  &\;=\;
+  \frac{e^{-\lamm(\tau-\tauinit)}}{\lamm}
+  \int_0^\infty
+    \big(1-e^{-\lamm\aoidum}\big)
+    g(\aoidum+\tau-\tauinit)\,\dee\aoidum
+  \notag\\
+  &\;=\;
+  \frac{e^{-\lamm(\tau-\tauinit)}}{\lamm}
+  \left[
+    \Lap{g_{\tau-\tauinit}}(0)
+    -
+    \Lap{g_{\tau-\tauinit}}(\lamm)
+  \right],
+  \label{eq:Yinc.const}
+\end{align}
+where
+\begin{equation}
+  g_{\tau-\tauinit}(\aoi)
+  \;=\;
+  g(\aoi+\tau-\tauinit)
+  \label{eq:re.g.shifted}
+\end{equation}
+is the shifted generation-interval kernel, with Laplace transform
+\begin{equation}
+  \Lap{g_{\tau-\tauinit}}(\lambda)
+  \;=\;
+  \int_0^\infty
+    e^{-\lambda\aoi}
+    g(\aoi+\tau-\tauinit)\,\dee\aoi.
+  \label{eq:re.g.shifted.Laplace}
+\end{equation}
+
+Substituting \cref{eq:Yinc.const} into
+\cref{eq:re.Y.prehistory.approx,eq:re.Y.finite.split} gives the
+finite-history representation
+\begin{equation}
+  Y(\tau)
+  \;\approx\;
+  \frac{\incinit}{\lamm}
+  \left[
+    \Lap{g_{\tau-\tauinit}}(0)
+    -
+    \Lap{g_{\tau-\tauinit}}(\lamm)
+  \right]
+  +
+  \int_0^{\tau-\tauinit}
+    \inc(\tau-\aoi)
+    \frac{\Ra}{\Rn}\,\dee\aoi.
+  \label{eq:re.Y.finite.Laplace}
+\end{equation}
+The first term reconstructs the contribution from infections that
+occurred before observations began, while the second is calculated
+directly from the observed incidence history.
+
+For the SEIR generation-interval distribution given in
+\cref{tab:models}, the shifted Laplace transform is
+\begin{equation}
+  \Lap{g_{\tau-\tauinit}}(\lambda)
+  \;=\;
+  \begin{cases}
+    \displaystyle
+    \frac{1}{1-\ell}
+    \left[
+      \frac{e^{-(\tau-\tauinit)}}{1+\lambda}
+      -
+      \frac{\ell e^{-(\tau-\tauinit)/\ell}}
+           {1+\ell\lambda}
+    \right],
+    & \ell\ne1,
+    \\[3ex]
+    \displaystyle
+    \frac{
+      1+(1+\lambda)(\tau-\tauinit)
+    }{
+      (1+\lambda)^2
+    }
+    e^{-(\tau-\tauinit)},
+    & \ell=1.
+  \end{cases}
+  \label{eq:re.g.shifted.Laplace.SEIR}
+\end{equation}
+It follows that the contribution from the unobserved incidence history
+is
+\begin{equation}
+  \frac{\incinit}{\lamm}
+  \left[
+    \Lap{g_{\tau-\tauinit}}(0)
+    -
+    \Lap{g_{\tau-\tauinit}}(\lamm)
+  \right]
+  \;=\;
+  \begin{cases}
+    \displaystyle
+    \frac{\incinit}{1-\ell}
+    \left[
+      \frac{e^{-(\tau-\tauinit)}}{1+\lamm}
+      -
+      \frac{\ell^2e^{-(\tau-\tauinit)/\ell}}
+           {1+\ell\lamm}
+    \right],
+    & \ell\ne1,
+    \\[3ex]
+    \displaystyle
+    \incinit e^{-(\tau-\tauinit)}
+    \frac{
+      2+(\tau-\tauinit)
+      +\lamm\big[1+(\tau-\tauinit)\big]
+    }{
+      (1+\lamm)^2
+    },
+    & \ell=1.
+  \end{cases}
+  \label{eq:re.Y.prehistory.SEIR}
+\end{equation}
+These expressions allow the contribution from infections that occurred
+before $\tauinit$ to be calculated directly in the SEIR examples,
+without numerical integration over an unobserved incidence history.
+ 
+\beginappendix{Incidence always peaks before momentum}{app:peak.order}
+
+Differentiating under the integral sign in \cref{eq:re.Y}, we have
+\begin{equation}\label{eq:re.Y'}
+  \ddtau{Y} \;=\; \int_{0}^{\infty} \ddtau{\inc}(\tau-\aoi) \frac{\Ra}{\Rn}\, \dee \aoi.  
+\end{equation}
+We must have $\ddtau{\inc} > 0$ until incidence reaches its peak (where $\ddtau{\inc}=0$), and thus $\ddtau{Y} > 0$ at peak incidence; therefore, momentum always peaks after incidence.  Peak momentum ($\ypeak$) always occurs at $\xpeak$ \theoryref{sec:epimom}, whereas \cref{eq:re;X} shows that the fraction susceptible is monotone decreasing.  Hence the fraction susceptible at peak incidence always exceeds $\xpeak$.
+ % app:peak.order
+% app:yinit.from.incinit.finite.int.rep
+
+\begingroup
+\newcommand{\inferenceLambertWNote}{%
+  This appendix is identical to the corresponding appendix in
+  \theoryref{app:LambertW} and is included here for convenience.}
+
+\beginappendix{\texorpdfstring{Lambert's $W$-function}{Lambert's W-function}}{app:LambertW}
+
+\ifdefined\inferenceLambertWNote
+  \inferenceLambertWNote
+\fi
+
+\appfilename{shared/epimom_app_lambertw.tex}
+\appbackrefs{\appbackref{lambert-w}{Lambert $W$}}
+
+If $\Winv(z) = ze^{z}$, Lambert's
+$W$-function $W(z)$ 
+(\citeref{Corl+96};
+\citeref[\S4.13]{NIST:DLMF})
+solves the ``left-sided''
+inverse relation $\Winv(W(z)) = z$.  This equation has countably many
+solutions, written $W_k(z)$ for solutions with $\arg{z}\in[2\pi
+k,2\pi(k+1))$.  Only $W_0$ and $W_{-1}$ return real values for real
+$z$; for other $k$, $W_k$ is always complex.  We use the two real
+branches: $W_{-1}$ maps $[-\frac{1}{e},0)$ to $(-\infty,-1]$, and
+$W_{0}$ maps $[-\frac{1}{e},\infty)$ to $[-1,\infty)$.
+%%
+For these two branches, $W_{k}$ is a \emph{partial} ``right-sided''
+inverse function for $\Winv(z)$:
+\begin{subequations}\label{eq:Wid}
+	\begin{align}
+		W_{-1}(\Winv(z)) &\;=\; z \quad \text{if $z \leq -1$}\\
+		W_{0}(\Winv(z)) &\;=\; z \quad \text{if $z \geq -1$}.
+	\end{align}
+\end{subequations}
+While the standard notation $W_k$ is chosen to indicate
+the winding number associated with the given branch, for our purposes
+it is more convenient to write $\Wm$ for $W_{-1}$ and $\Wp$ for $W_0$,
+so we can write expressions involving $\Wpm$, where the $\pm$ matches
+the corresponding sign in $\xpm$ and/or $\lampm$ ($\Wp$ and $\Wm$ are 
+also written ${\rm Wp}$ and ${\rm Wm}$ \citeref[\S4.13]{NIST:DLMF}).
+
+\endgroup
+
+
+\beginappendix{Previous estimates of prior immunity to 1918 influenza}{app:quotes}
+
+{\bfseries Mills \emph{et al.}\ \citeref[pp.\,905--906]{Mill+04} state:} ``The proportion of the population susceptible at the start of the pandemic determines the relationship between $R$ and the basic reproductive number ($\Rn$), which is the number of secondary cases generated by a primary case in a completely susceptible population$^2$.  Frost hypothesized that a 1918 pandemic-like strain spread throughout America in the spring of 1918 (ref. 22), and recent analyses support this ‘herald wave’ hypothesis$^{23}$. Anecdotal evidence suggests that those who fell ill in the spring were protected from disease in the autumn pandemic$^{24}$. Nevertheless, a large majority of the population was probably susceptible to the A/H1N1 pandemic strain in September 1918. In a typical epidemic transmission season, 15–25\% of the population becomes infected with influenza$^4$.  The herald wave is believed to have arrived late in the 1917–18 transmission season. Using 70\% as a conservative lower bound for the fraction susceptible at the start of the autumn pandemic, the medians for our initial and extreme $\Rn$ are 2.9 and 3.9.''
+ 
+\bigskip
+\noindent
+{\bfseries Frost \citeref[p.\,593]{Frost1920} states:} ``The case fatality, or ratio of deaths to total cases of influenza, varied in the localities surveyed from 3.1 per cent in New London to 0.8 per cent in San Antonio, the variations showing no consistent relation to incidence rates. There is, however, some relation to geographic location, namely, that the highest case-fatality rates occurred in New London, San Francisco, Baltimore, and minor Maryland communities, in the order named––that is, in communities representing, respectively, the northern half of the Atlantic seaboard and the Pacific coast.  In the central and southern cities the case fatality was generally notably lower. Combining the eleven localities into three groups comprising, respectively––(1) San Francisco, (2) New London, Baltimore, and minor Maryland communities, (3) central and southern cities, comprising all other localities, the case-fatality rates in these three groups are, respectively, 2.33, 2.05, and 1.08 per cent. This is of interest in connection with the observation that from the standpoint of mortality rates the epidemic was generally more severe along the northern Atlantic Seaboard and the Pacific Coast than in the Central States.''
+ % app:quotes
+
+
+\newcommand{\modeltablerule}{\rule{\linewidth}{1.0pt}}
+\newcommand{\modeltablescaleby}{0.7}
+\newcommand{\mysqueeze}{\vspace{-20pt}}
+\newcommand{\mymedsqueeze}{\vspace{-18pt}}
+\newcommand{\mysmallsqueeze}{\vspace{-10pt}}
+
+\newcommand{\tablecaptiontitle}{{\bfseries\slshape Standard infectious disease transmission models.}}
+
+\newcommand{\tablecaptioncontent}{\mdseries
+The susceptible-infectious-removed (\textbf{SIR}) model, first
+proposed by \KM \citeref{KermMcKe27}, assumes that all infected
+individuals are equally infectious, and immunity upon recovery is
+permanent.  It is represented with two equations in standard form
+[(\protect\hypercref{eq:SIRraw}), with parameters $\beta$, the transmission
+  rate, $\gamma$, the removal rate, and population size $N$]
+or dimensionless form
+[(\protect\hypercref{eq:SIR}), with parameter $\Rn$, the basic reproduction
+  number, and time measured in units of the mean infectious period,
+  $\Tinf=\gamma^{-1}$.].  The generation interval 
+distribution is identical to the infectious period distribution, so
+the mean generation interval is $\gimean = \gamma^{-1}$.
+%%
+In this simple model, the epidemic momentum is equal to the prevalence.
+
+\medskip
+Most infectious diseases have a non-negligible \emph{latent period},
+\ie there is a delay between initial infection and becoming
+infectious.  The susceptible-exposed-infectious-removed
+(\textbf{SEIR}) model introduces an \emph{exposed} stage (E) of mean
+duration $\Erate^{-1}$, when individuals are infected but not yet
+infectious \citeref{AndeMay91}.  The mean generation interval $\gimean$
+is the sum of the means of the latent and infectious periods
+\citeref{Sven07,ChamDush15}.  In dimensionless units, we write the mean
+latent period $\ell$, \ie as a proportion of the mean infectious
+period, so the mean generation interval is $\gimean=\ell+1$ in these
+units.  The standard form is (\protect\hypercref{eq:SEIRraw}) and the dimensionless
+form is (\protect\hypercref{eq:SEIR}).
+%%
+We denote the proportions susceptible, exposed, and infectious by $X$,
+$\Eprop$, and $\Iprop$, respectively, and---as in the SIR model---the
+epidemic momentum $Y$ corresponds to the \emph{total proportion
+infected}, \ie $Y=\Eprop+\Iprop$ (see \theoryref{sec:SEIR}),
+consistent with our notation for the SIR model (\hypercref{eq:SIR}).
+%%
+The \emph{per capita} rates at which individuals leave the exposed and
+infectious compartments are $\Erate$ and $\Irate$, respectively.  
+The basic reproduction
+number is $\Rn=\beta/\Irate$ and the mean latent period (as a
+proportion of the mean infectious period $\Irate^{-1}$) is
+$\ell=\Irate/\Erate$.
+
+\medskip
+Generic epidemic models can be specified using the \textbf{\RE}, which
+relates the susceptible fraction $X$ to the
+force of infection
+%%\FoItext
+$\FoI$ with a
+differential equation \labelcref{eq:re.dict.ode.X}, and relates $\FoI$ to
+the generation interval distribution, $g(\aoi)$, via a convolution
+[\cref{eq:re.dict.EL.i}].  If $g(\aoi)$ is not known, it is common to
+assume it is a gamma distribution, as in (\protect\hypercref{eq:regamma}).
+}
+
+%%\FloatBarrier
+%%\begin{landscape}
+
+\ifepimomarxiv
+  \clearpage
+  \begingroup
+  \makeatletter
+  \@dblfptop=0pt
+  \@fptop=0pt
+  \makeatother
+  \begin{table*}[!t]
+  \footnotesize
+  \caption{
+    \tablecaptiontitle
+    \hfill\break
+    \tablecaptioncontent
+  }\label{tab:models}
+  \end{table*}
+  \clearpage
+  \endgroup
+  \begin{table*}[!t]
+  \fontsize{9}{10.8}\selectfont
+\else
+  \begin{table*}
+  %%\vspace{-1cm}
+  \footnotesize
+  %%\caption{{\bfseries{\slshape Epidemic models.}  \emph{Full caption on next page.}}}\label{tab:models}
+  \caption{
+    \tablecaptiontitle
+    \hfill\break
+    \tablecaptioncontent
+  }\label{tab:models}
+\fi
+
+\newcounter{tableeq}
+\renewcommand{\thetableeq}{T\arabic{tableeq}}
+\crefname{tableeq}{equation}{equations}
+\Crefname{tableeq}{Equation}{Equations}
+
+%%%%%%%%%%%%%%%
+%% SIR model %%
+%%%%%%%%%%%%%%%
+
+\centerline{\normalsize\bfseries{SIR model}}
+
+\modeltablerule
+\medskip
+
+\begin{multicols}{4}
+
+\centerline{\bfseries Standard}
+\mysqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SIRraw}
+\hypertarget{eq:SIRraw}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align}
+  \ddt{S} &= - \tfrac{\beta}{N}\, S\,I \tag{\thetableeq a} \label{eq:SIR;S} \\
+  \noalign{\vspace{8pt}}
+  \ddt{I} &= \big(\tfrac{\beta}{N}\,S - \gamma\big) I \tag{\thetableeq b} \label{eq:SIR;I}
+  %%\\
+  %%X &= \tfrac{S}{N}, \ Y=\tfrac{I}{N} \label{eq:SIR;XYdefs}
+\end{align}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries\hspace{15pt}Dimensionless ($X\!=\!\tfrac{S}{N},\,Y\!=\!\tfrac{I}{N}$)}
+\mysmallsqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SIR}
+\hypertarget{eq:SIR}{}
+\makeatother
+%%\begin{linenomath*}
+\begin{align}
+  \ddtau{X} &= - \Rn\,X\,Y \tag{\thetableeq a} \label{eq:SIR;X} \\
+  \noalign{\vspace{4pt}}
+  \ddtau{Y} &= \big(\Rn\,X - 1\big) Y \tag{\thetableeq b} \label{eq:SIR;Y} \\
+  \noalign{\vspace{4pt}}
+  \inc &= \Rn\,X\,Y \tag{\thetableeq c} \label{eq:SIR;inc}
+\end{align}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries Parameters}
+\mysmallsqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SIRparms}
+\hypertarget{eq:SIRparms}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{subequations}
+\begin{align}
+  \beta &= \scalebox{\modeltablescaleby}{\raisebox{2pt}{\parbox[c]{3cm}{\centering transmission rate}}}
+           \tag{\thetableeq a} \label{eq:SIRparms;beta} \\
+  \noalign{\vspace{2pt}}
+  \tfrac{1}{\gamma} &= \scalebox{\modeltablescaleby}{\parbox[c]{3cm}{\centering mean infectious\\period}}
+               \tag{\thetableeq b} \label{eq:SIRparms;gamma} \\
+  \noalign{\vspace{2pt}}
+  \gimean &= \scalebox{\modeltablescaleby}{\parbox[c]{3cm}{\centering mean generation\\interval}}
+           = \tfrac{1}{\gamma} \tag{\thetableeq c} \label{eq:SIRparms;gimean} \\
+  \noalign{\vspace{2pt}}
+  \Rn &= \scalebox{\modeltablescaleby}{\parbox[c]{3cm}{\centering basic reproduction\\number}}
+       = \tfrac{\beta}{\gamma} \tag{\thetableeq d} \label{eq:SIRparms;Rn} 
+\end{align}
+\end{subequations}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries Properties}
+\mysqueeze
+
+\null
+\vfill
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SIRproperties}
+\hypertarget{eq:SIRproperties}{}
+\makeatother
+%%\begin{linenomath*}
+\begin{align}
+  \tau &= \gamma\,t \tag{\thetableeq a} \label{eq:taudef} \\
+  \noalign{\vspace{4pt}}
+  g(\aoi) &= e^{-\aoi} \tag{\thetableeq b} \label{eq:giSIR} \\
+  \noalign{\vspace{4pt}}
+  \Lap{g}(\lambda) &= \tfrac{1}{\lambda+1} \tag{\thetableeq c} \label{eq:LapSIR} \\
+  \noalign{\vspace{4pt}}
+  \lampm &= \Rn\,\xpm - 1 \tag{\thetableeq d} \label{eq:lampmSIR}
+\end{align}
+%%\end{linenomath*}
+
+\vfill
+\null
+
+\end{multicols}
+
+%%%%%%%%%%%%%%%%
+%% SEIR model %%
+%%%%%%%%%%%%%%%%
+\centerline{\normalsize\bfseries{SEIR model}}
+
+\modeltablerule
+\medskip
+
+\begin{multicols}{4}
+
+\centerline{\bfseries Standard}
+\mysqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SEIRraw}
+\hypertarget{eq:SEIRraw}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align}
+  \ddt{S} &= - \tfrac{\beta}{N}\, S\,I \tag{\thetableeq a} \label{eq:SEIR;S} \\
+  \noalign{\vspace{8pt}}
+  \ddt{E} &= \tfrac{\beta}{N}\,S\,I - \Erate E \tag{\thetableeq b} \label{eq:SEIR;E} \\
+  \noalign{\vspace{8pt}}
+  \ddt{I} &= \Erate E - \Irate I \tag{\thetableeq c} \label{eq:SEIR;I}
+\end{align}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries\hspace{15pt}Dimensionless ($\Eprop\!=\!\tfrac{E}{N},\,\Iprop\!=\!\tfrac{I}{N}$)}
+\mymedsqueeze
+\vspace{10pt}
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SEIR}
+\hypertarget{eq:SEIR}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align}
+  \ddtau{X} &= - \Rn\, X\,\Iprop \tag{\thetableeq a} \label{eq:SEIR;X} \\
+  \noalign{\vspace{8pt}}
+  \ddtau{\Eprop} &= \Rn\,X\,\Iprop - \frac{1}{\ell}\Eprop \tag{\thetableeq b} \label{eq:SEIR;Eprop} \\
+  \noalign{\vspace{8pt}}
+  \ddtau{\Iprop} &= \frac{1}{\ell}\Eprop - \Iprop \tag{\thetableeq c} \label{eq:SEIR;Iprop} \\
+  \noalign{\vspace{8pt}}
+  \inc &= \Rn\,X\,\Iprop \tag{\thetableeq d} \label{eq:SEIR;inc}
+\end{align}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries Parameters}
+\mysmallsqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SEIRparms}
+\hypertarget{eq:SEIRparms}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align*}
+  \dfrac{1}{\Erate} &= \scalebox{\modeltablescaleby}{\parbox[c]{3cm}{\centering mean latent\\period}}
+  \tag{\thetableeq a} \label{eq:SEIRparms;Erate}\\
+  \noalign{\vspace{2pt}}
+  \dfrac{1}{\Irate} &= \scalebox{\modeltablescaleby}{\parbox[c]{3cm}{\centering mean infectious\\period}}
+  \tag{\thetableeq b} \label{eq:SEIRparms;Irate}\\
+  \noalign{\vspace{2pt}}
+  \gimean &= \dfrac{1}{\Erate} + \dfrac{1}{\Irate}
+  \tag{\thetableeq c} \label{eq:SEIRparms;gimean}\\
+  \noalign{\vspace{2pt}}
+  \ell &= 
+          \Irate/\Erate
+  \tag{\thetableeq d} \label{eq:SEIRparms;ell}\\
+  \noalign{\vspace{2pt}}
+  \Rn &= \beta\,\Irate^{-1}
+  \tag{\thetableeq e} \label{eq:SEIRparms;Rn}
+\end{align*}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries Properties}
+\mysqueeze
+
+\null
+\vfill
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:SEIRproperties}
+\hypertarget{eq:SEIRproperties}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align}
+  \tau &= \Irate\,t \tag{\thetableeq a} \label{eq:taudef.SEIR} \\
+  \noalign{\vspace{6pt}}
+  g(\aoi) &= 
+    \begin{cases}
+      \aoi e^{-\aoi}, & \scalebox{0.8}{\text{$\ell=1$}} \\
+      \noalign{\vspace{3pt}}
+      \frac{e^{-\aoi} - e^{-\aoi/\ell}}{1 - \ell}, & \scalebox{0.8}{\text{$\ell\ne1$}} 
+    \end{cases}
+    \tag{\thetableeq b} \label{eq:giSEIR} \\
+  \noalign{\vspace{6pt}}
+  \Lap{g}&(\lambda) = \tfrac{1}{\ell\lambda+1}\cdot\tfrac{1}{\lambda+1} \tag{\thetableeq c} \label{eq:LapSEIR} \\
+  \noalign{\vspace{4pt}}
+  &\hspace{-0.9cm}\lampm = \text{\scalebox{0.65}{
+    $\dfrac{2(\Rn\xpm-1)}{\sqrt{(1-\ell)^2 + 4\ell\Rn\xpm} + (1+\ell)}$
+  }}
+  \tag{\thetableeq d} \label{eq:lampmSEIR}
+\end{align}
+%%\end{linenomath*}
+
+\vfill
+\null
+
+\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Renewal equation %%
+%%%%%%%%%%%%%%%%%%%%%%
+%%\renewcommand{\mysqueeze}{\vspace{-15pt}}
+
+\centerline{\normalsize\bfseries{Renewal equation}}
+
+\modeltablerule
+\medskip
+
+\begin{multicols}{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Content spanning two columns:
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:re.dict}
+\hypertarget{eq:re.dict}{}
+\makeatother
+
+%%%%%\noindent\parbox{\dimexpr0.5\textwidth-2\columnsep}{
+\centerline{\bfseries Dimensionless renewal equation}
+%%\mysmallsqueeze
+
+%%\begin{linenomath*}
+\begin{align}
+  \dd{X}{\tau} &= -X(\tau)\FoI(\tau)
+  \tag{\thetableeq a} \label{eq:re.dict.ode.X} \\
+  \noalign{\vspace{4pt}}
+  \FoI(\tau) &= \Rn \int_{-\infty}^{\tau} X(\aoi)\FoI(\aoi)g(\tau - \aoi)\,\dee\aoi
+  \tag{\thetableeq b} \label{eq:re.dict.EL.i} \\
+  \noalign{\vspace{6pt}}
+  \inc &= X\,\FoI
+  \tag{\thetableeq c} \label{eq:re.dict;inc}
+\end{align}
+%%\end{linenomath*}
+%%%%%}% end parbox
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\columnbreak
+
+\centerline{\bfseries For general $g(\aoi)$}
+%%\mysqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:reproperties}
+\hypertarget{eq:reproperties}{}
+\makeatother
+%%\begin{linenomath*}
+\begin{align}
+  \gimean &= \int_0^\infty \aoi\,g(\aoi)\,\dee\aoi
+  \tag{\thetableeq a} \label{eq:re.mean} \\
+  \noalign{\vspace{8pt}}
+  \tau &= t/\gimean
+  \tag{\thetableeq b} \label{eq:re.tau} \\
+  \noalign{\vspace{4pt}}
+  \frac{1}{\Rn\xpm} &= \Lap{g(t)}(\lampm)
+  \tag{\thetableeq c} \label{eq:re.lamgeneric}
+\end{align}
+%%\end{linenomath*}
+
+\columnbreak
+
+\centerline{\bfseries For Gamma $g(\aoi)$ \  [$a=\frac{\gimean^2}{\gisd^2}$, $b=\frac{\gimean}{\gisd^2}$]}
+%%\mysmallsqueeze
+
+\makeatletter
+\refstepcounter{tableeq}
+\protected@edef\currentlabel{T\arabic{tableeq}}%
+\label{eq:regamma}
+\hypertarget{eq:regamma}{}
+\makeatother
+
+%%\begin{linenomath*}
+\begin{align}
+  g(\aoi) &=
+  \frac{b^{a}}{\Gamma(a)}
+  \aoi^{a-1}
+             e^{-b\,\aoi}
+  \tag{\thetableeq a} \label{eq:giRE.gamma} \\
+  %%
+  \noalign{\vspace{2pt}}
+  \Lap{g}(\lambda) &=
+  \left(\tfrac{b}{\lambda + b}\right)^{a} \tag{\thetableeq b} \label{eq:Lap.gamma} \\
+  %%
+  \noalign{\vspace{2pt}}
+  \lampm &=
+    b \big(\!(\Rn\xpm)^{1/a} - 1\!\big)
+  \tag{\thetableeq c} \label{eq:lampmgamma}
+\end{align}
+%%\end{linenomath*}
+
+\vfill
+\null
+
+\end{multicols}
+
+%%\bigskip
+%%\tablecaptioncontent
+
+\end{table*}
+\ifepimomarxiv
+  \clearpage
+\fi
+%%\end{landscape}
+%%\FloatBarrier
+
+%% \begingroup \parskip=5pt \parindent=0pt
+
+%% \subsubsection*{Full caption to \cref{tab:models}.}
+
+%% ... caption was here ...
+
+%% \endgroup
+ % tab:models
+
+
+\bibliographystyle{RS}
+\bibliography{epimom-refs}
+
+%%
+
+\end{document}

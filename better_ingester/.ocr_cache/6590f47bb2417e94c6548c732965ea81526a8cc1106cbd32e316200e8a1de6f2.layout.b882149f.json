@@ -1,0 +1,4765 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      34.0,
+      556.0,
+      85.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      509.0,
+      414.0,
+      716.0,
+      452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      244.0,
+      468.0,
+      979.0,
+      507.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      367.0,
+      523.0,
+      856.0,
+      559.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      514.0,
+      575.0,
+      713.0,
+      613.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 1,
+    "bbox": [
+      558.0,
+      146.0,
+      665.0,
+      176.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      197.0,
+      223.0,
+      1027.0,
+      781.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      140.0,
+      866.0,
+      1082.0,
+      939.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 2,
+    "bbox": [
+      141.0,
+      163.0,
+      415.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      227.0,
+      1085.0,
+      473.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      487.0,
+      1086.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      921.0,
+      1087.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      604.0,
+      1483.0,
+      619.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      138.0,
+      149.0,
+      947.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      191.0,
+      1087.0,
+      611.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      626.0,
+      1087.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      138.0,
+      1102.0,
+      1087.0,
+      1435.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      603.0,
+      1482.0,
+      621.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      150.0,
+      1088.0,
+      1175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      138.0,
+      1189.0,
+      1087.0,
+      1436.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      604.0,
+      1481.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      151.0,
+      1088.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1101.0,
+      1087.0,
+      1436.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      603.0,
+      1482.0,
+      621.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      149.0,
+      1087.0,
+      696.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      712.0,
+      1088.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      603.0,
+      1482.0,
+      620.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      147.0,
+      1084.0,
+      263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      277.0,
+      1085.0,
+      482.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Data",
+    "page": 7,
+    "bbox": [
+      139.0,
+      513.0,
+      285.0,
+      547.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      575.0,
+      1088.0,
+      1257.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "TABLE 1 AND TABLE 2 ABOUT HERE",
+    "page": 7,
+    "bbox": [
+      405.0,
+      1316.0,
+      810.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1482.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Analysing Data Releases",
+    "page": 8,
+    "bbox": [
+      138.0,
+      162.0,
+      620.0,
+      198.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 AI as a financial Analyst",
+    "page": 8,
+    "bbox": [
+      139.0,
+      239.0,
+      569.0,
+      271.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      291.0,
+      1084.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      151.0,
+      606.0,
+      1075.0,
+      785.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 1",
+    "page": 8,
+    "bbox": [
+      540.0,
+      806.0,
+      682.0,
+      840.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      876.0,
+      1082.0,
+      991.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      159.0,
+      1047.0,
+      356.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      159.0,
+      1075.0,
+      1067.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      156.0,
+      1134.0,
+      1071.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Example 1",
+    "page": 8,
+    "bbox": [
+      533.0,
+      1358.0,
+      689.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      604.0,
+      1482.0,
+      620.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      159.0,
+      172.0,
+      356.0,
+      200.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      157.0,
+      202.0,
+      1019.0,
+      230.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      159.0,
+      232.0,
+      1072.0,
+      435.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Example 2",
+    "page": 9,
+    "bbox": [
+      534.0,
+      483.0,
+      690.0,
+      515.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      159.0,
+      563.0,
+      355.0,
+      591.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      158.0,
+      593.0,
+      1051.0,
+      621.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      157.0,
+      623.0,
+      1071.0,
+      827.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Example 3",
+    "page": 9,
+    "bbox": [
+      533.0,
+      875.0,
+      691.0,
+      906.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      944.0,
+      1085.0,
+      1192.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 Variable Construction",
+    "page": 9,
+    "bbox": [
+      140.0,
+      1216.0,
+      530.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      139.0,
+      1265.0,
+      1083.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      603.0,
+      1481.0,
+      620.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      140.0,
+      149.0,
+      295.0,
+      175.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      259.0,
+      211.0,
+      964.0,
+      266.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1050.0,
+      226.0,
+      1079.0,
+      255.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      251.0,
+      288.0,
+      970.0,
+      349.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1049.0,
+      304.0,
+      1079.0,
+      332.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      403.0,
+      384.0,
+      818.0,
+      414.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1050.0,
+      384.0,
+      1079.0,
+      413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      447.0,
+      1086.0,
+      607.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Performance Evaluation",
+    "page": 10,
+    "bbox": [
+      139.0,
+      639.0,
+      609.0,
+      674.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      704.0,
+      1087.0,
+      1125.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Cross-sectional Trading Strategy",
+    "page": 10,
+    "bbox": [
+      139.0,
+      1148.0,
+      680.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      1198.0,
+      1087.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      603.0,
+      1482.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      146.0,
+      1084.0,
+      219.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 1 ABOUT HERE",
+    "page": 11,
+    "bbox": [
+      481.0,
+      268.0,
+      742.0,
+      295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      343.0,
+      1087.0,
+      721.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "TABLE 3, FIGURE 2 AND FIGURE 3 ABOUT HERE",
+    "page": 11,
+    "bbox": [
+      342.0,
+      767.0,
+      881.0,
+      795.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      140.0,
+      843.0,
+      990.0,
+      873.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      304.0,
+      921.0,
+      919.0,
+      1002.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1050.0,
+      972.0,
+      1080.0,
+      1001.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1050.0,
+      1084.0,
+      1387.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      139.0,
+      1396.0,
+      1084.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      598.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      487.0,
+      149.0,
+      737.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      234.0,
+      1087.0,
+      699.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Panel Regression",
+    "page": 12,
+    "bbox": [
+      139.0,
+      722.0,
+      459.0,
+      754.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      773.0,
+      1084.0,
+      846.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      435.0,
+      895.0,
+      787.0,
+      926.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1050.0,
+      895.0,
+      1080.0,
+      924.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      975.0,
+      1088.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      598.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      148.0,
+      1086.0,
+      526.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 4 ABOUT HERE",
+    "page": 13,
+    "bbox": [
+      481.0,
+      588.0,
+      742.0,
+      614.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3 GPT-4o vs DeepSeek-V3",
+    "page": 13,
+    "bbox": [
+      139.0,
+      667.0,
+      572.0,
+      698.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      719.0,
+      1086.0,
+      965.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 5 ABOUT HERE",
+    "page": 13,
+    "bbox": [
+      482.0,
+      1023.0,
+      742.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.4 Alternative ways of constructing the AIFX index",
+    "page": 13,
+    "bbox": [
+      138.0,
+      1097.0,
+      914.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      1149.0,
+      1087.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      598.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      146.0,
+      1083.0,
+      265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      153.0,
+      286.0,
+      1074.0,
+      406.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 2",
+    "page": 14,
+    "bbox": [
+      540.0,
+      428.0,
+      684.0,
+      462.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      509.0,
+      356.0,
+      536.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      538.0,
+      681.0,
+      567.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      157.0,
+      567.0,
+      1071.0,
+      773.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Example 4",
+    "page": 14,
+    "bbox": [
+      534.0,
+      821.0,
+      691.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      901.0,
+      355.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      931.0,
+      852.0,
+      960.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      158.0,
+      960.0,
+      1071.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Example 5",
+    "page": 14,
+    "bbox": [
+      534.0,
+      1208.0,
+      690.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      141.0,
+      1277.0,
+      1082.0,
+      1307.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      599.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      147.0,
+      419.0,
+      175.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      183.0,
+      209.0,
+      1041.0,
+      273.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      175.0,
+      290.0,
+      1046.0,
+      354.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      247.0,
+      389.0,
+      975.0,
+      424.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1049.0,
+      391.0,
+      1080.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      454.0,
+      1086.0,
+      701.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 6 ABOUT HERE",
+    "page": 15,
+    "bbox": [
+      480.0,
+      758.0,
+      743.0,
+      786.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5 Time-Series Strategies",
+    "page": 15,
+    "bbox": [
+      138.0,
+      831.0,
+      536.0,
+      865.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      883.0,
+      1085.0,
+      1044.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      405.0,
+      1090.0,
+      815.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1049.0,
+      1092.0,
+      1080.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      1171.0,
+      1086.0,
+      1376.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      141.0,
+      1396.0,
+      1084.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      598.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      151.0,
+      1087.0,
+      1130.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Look-ahead Bias: Reasoning or Memorization?",
+    "page": 16,
+    "bbox": [
+      139.0,
+      1164.0,
+      997.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      138.0,
+      1229.0,
+      1086.0,
+      1432.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      598.0,
+      1482.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      148.0,
+      1085.0,
+      438.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1 Guess the Year",
+    "page": 17,
+    "bbox": [
+      140.0,
+      462.0,
+      434.0,
+      493.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      513.0,
+      1084.0,
+      760.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      150.0,
+      787.0,
+      1078.0,
+      937.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 3",
+    "page": 17,
+    "bbox": [
+      539.0,
+      960.0,
+      684.0,
+      990.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      1029.0,
+      1086.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 7 AND FIGURE 8 ABOUT HERE",
+    "page": 17,
+    "bbox": [
+      399.0,
+      1333.0,
+      825.0,
+      1360.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      140.0,
+      1420.0,
+      1082.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      599.0,
+      1482.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      148.0,
+      1084.0,
+      219.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      355.0,
+      254.0,
+      848.0,
+      317.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1049.0,
+      269.0,
+      1079.0,
+      297.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      386.0,
+      329.0,
+      865.0,
+      389.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1050.0,
+      344.0,
+      1079.0,
+      372.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      481.0,
+      402.0,
+      738.0,
+      471.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1038.0,
+      416.0,
+      1079.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      136.0,
+      484.0,
+      1088.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2 Cut-off Test: GPT-4o vs GPT-3.5",
+    "page": 18,
+    "bbox": [
+      139.0,
+      1059.0,
+      698.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      136.0,
+      1109.0,
+      1087.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      599.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      138.0,
+      147.0,
+      1085.0,
+      265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      152.0,
+      289.0,
+      1075.0,
+      495.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 4",
+    "page": 19,
+    "bbox": [
+      540.0,
+      518.0,
+      684.0,
+      550.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      154.0,
+      567.0,
+      1074.0,
+      774.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 5",
+    "page": 19,
+    "bbox": [
+      539.0,
+      796.0,
+      684.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      864.0,
+      1087.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      358.0,
+      1418.0,
+      865.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1037.0,
+      1418.0,
+      1080.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      599.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      147.0,
+      1086.0,
+      439.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "TABLE 5 AND TABLE 6 ABOUT HERE",
+    "page": 20,
+    "bbox": [
+      406.0,
+      495.0,
+      810.0,
+      522.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.3 Correlations Between Macro Variables and Currency Returns",
+    "page": 20,
+    "bbox": [
+      140.0,
+      569.0,
+      1083.0,
+      602.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      620.0,
+      1087.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      152.0,
+      1193.0,
+      1074.0,
+      1339.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      172.0,
+      1421.0,
+      1078.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      599.0,
+      1481.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      149.0,
+      1087.0,
+      567.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 9 AND FIGURE 10 ABOUT HERE",
+    "page": 21,
+    "bbox": [
+      392.0,
+      620.0,
+      832.0,
+      646.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.4 Pure Hindsight Portfolio",
+    "page": 21,
+    "bbox": [
+      140.0,
+      688.0,
+      569.0,
+      720.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      740.0,
+      1085.0,
+      943.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      153.0,
+      967.0,
+      1077.0,
+      1113.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 7",
+    "page": 21,
+    "bbox": [
+      540.0,
+      1138.0,
+      684.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1203.0,
+      1084.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      598.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      147.0,
+      1087.0,
+      569.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      338.0,
+      609.0,
+      883.0,
+      648.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1037.0,
+      616.0,
+      1080.0,
+      645.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      695.0,
+      1086.0,
+      855.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      393.0,
+      894.0,
+      828.0,
+      950.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1038.0,
+      905.0,
+      1080.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      985.0,
+      1086.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "TABLE 7 ABOUT HERE",
+    "page": 22,
+    "bbox": [
+      483.0,
+      1332.0,
+      733.0,
+      1359.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      171.0,
+      1421.0,
+      904.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      597.0,
+      1481.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Mechanisms Underlying Predictability",
+    "page": 23,
+    "bbox": [
+      139.0,
+      162.0,
+      855.0,
+      199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      227.0,
+      1087.0,
+      431.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.1 Predictive Power of Different Categories of Fundamentals",
+    "page": 23,
+    "bbox": [
+      137.0,
+      454.0,
+      1035.0,
+      486.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      504.0,
+      1088.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      1350.0,
+      1085.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      597.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      148.0,
+      1086.0,
+      569.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "TABLE 8, FIGURE 11 AND FIGURE 12 ABOUT HERE",
+    "page": 24,
+    "bbox": [
+      330.0,
+      625.0,
+      894.0,
+      652.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2 Decomposing Predictability: Positive vs. Negative News",
+    "page": 24,
+    "bbox": [
+      139.0,
+      699.0,
+      1020.0,
+      731.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      749.0,
+      1087.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2.1 Cross-sectional Trading Strategies",
+    "page": 24,
+    "bbox": [
+      139.0,
+      1144.0,
+      629.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      1191.0,
+      1086.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      598.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      147.0,
+      1087.0,
+      613.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 13 ABOUT HERE",
+    "page": 25,
+    "bbox": [
+      471.0,
+      667.0,
+      745.0,
+      695.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2.2 Panel Regressions",
+    "page": 25,
+    "bbox": [
+      139.0,
+      735.0,
+      439.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      782.0,
+      1083.0,
+      854.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      315.0,
+      905.0,
+      906.0,
+      936.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      1038.0,
+      905.0,
+      1079.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      984.0,
+      1086.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      471.0,
+      1419.0,
+      745.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      597.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2.3 Further Investigation of the Asymmetric Predictive Power",
+    "page": 26,
+    "bbox": [
+      137.0,
+      154.0,
+      918.0,
+      181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      201.0,
+      1088.0,
+      1363.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      138.0,
+      1374.0,
+      1087.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      597.0,
+      1481.0,
+      627.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      149.0,
+      1087.0,
+      396.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "FIGURE 15 ABOUT HERE",
+    "page": 27,
+    "bbox": [
+      472.0,
+      441.0,
+      745.0,
+      466.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.3 A Potential Mechanism",
+    "page": 27,
+    "bbox": [
+      139.0,
+      502.0,
+      551.0,
+      533.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      555.0,
+      1088.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      598.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      150.0,
+      1088.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      139.0,
+      1396.0,
+      1083.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      597.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7 Conclusions",
+    "page": 29,
+    "bbox": [
+      141.0,
+      163.0,
+      402.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      226.0,
+      1088.0,
+      997.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      598.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 30,
+    "bbox": [
+      140.0,
+      147.0,
+      330.0,
+      182.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      201.0,
+      1020.0,
+      285.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      303.0,
+      1072.0,
+      360.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      142.0,
+      376.0,
+      1082.0,
+      462.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      480.0,
+      1004.0,
+      537.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      553.0,
+      1053.0,
+      610.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      627.0,
+      1036.0,
+      684.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      702.0,
+      1060.0,
+      758.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      775.0,
+      1063.0,
+      858.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      140.0,
+      877.0,
+      1069.0,
+      935.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      140.0,
+      951.0,
+      1022.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      1054.0,
+      1064.0,
+      1109.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      1127.0,
+      1043.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      140.0,
+      1230.0,
+      1043.0,
+      1288.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      141.0,
+      1304.0,
+      1074.0,
+      1360.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      140.0,
+      1377.0,
+      1020.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      597.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      147.0,
+      1026.0,
+      205.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      221.0,
+      1014.0,
+      279.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      293.0,
+      1011.0,
+      351.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      368.0,
+      1034.0,
+      425.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      442.0,
+      1056.0,
+      528.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      544.0,
+      1034.0,
+      601.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      617.0,
+      1024.0,
+      676.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      691.0,
+      1038.0,
+      748.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      766.0,
+      1077.0,
+      823.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      839.0,
+      1065.0,
+      925.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      942.0,
+      1019.0,
+      1000.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      1016.0,
+      1081.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1088.0,
+      1074.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1163.0,
+      1080.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1237.0,
+      1064.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1311.0,
+      1080.0,
+      1367.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1384.0,
+      1040.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      597.0,
+      1481.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      147.0,
+      1053.0,
+      205.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      221.0,
+      1017.0,
+      279.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      294.0,
+      1040.0,
+      352.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      368.0,
+      1069.0,
+      426.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      442.0,
+      992.0,
+      501.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      516.0,
+      982.0,
+      573.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      589.0,
+      1064.0,
+      647.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      663.0,
+      1069.0,
+      721.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      737.0,
+      1069.0,
+      795.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      810.0,
+      1065.0,
+      867.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      884.0,
+      963.0,
+      940.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      957.0,
+      1057.0,
+      1044.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1060.0,
+      997.0,
+      1116.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      597.0,
+      1480.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1. Sharpe Ratios",
+    "page": 33,
+    "bbox": [
+      614.0,
+      143.0,
+      968.0,
+      179.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      320.0,
+      204.0,
+      1266.0,
+      865.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure reports the annualized Sharpe ratios of cross-sectional strategies that use the AIFX index (defined in Equation (3)) as the trading signal. I refer to this strategy as the AIFX strategy. For each choice of lookback period, currencies are sorted by their AIFX index at the end of each month and I take long positions in the top two currencies with the highest AIFX index and short positions in the bottom two with the lowest. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 33,
+    "bbox": [
+      136.0,
+      921.0,
+      1448.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      78.0,
+      596.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2. Cumulative Returns",
+    "page": 34,
+    "bbox": [
+      571.0,
+      166.0,
+      1012.0,
+      200.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      189.0,
+      215.0,
+      1399.0,
+      895.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      946.0,
+      1448.0,
+      1063.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      77.0,
+      596.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3. Portfolio Composition",
+    "page": 35,
+    "bbox": [
+      557.0,
+      144.0,
+      1025.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      222.0,
+      196.0,
+      1361.0,
+      956.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1005.0,
+      1448.0,
+      1093.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      79.0,
+      596.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4. t-statistics",
+    "page": 36,
+    "bbox": [
+      642.0,
+      158.0,
+      940.0,
+      192.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      326.0,
+      219.0,
+      1262.0,
+      877.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure displays the t-statistics of β in Equation (5). The regression is repeated for different choices of lookback period. This regression examines whether the AIFX index of a currency at the end of a given month can predict the currency's excess return in the subsequent month. Standard errors are clustered at the currency and time level. The regression includes time fixed effects, although not reported here. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods. The dashed horizontal line marks the 5% statistical significance threshold.",
+    "page": 36,
+    "bbox": [
+      136.0,
+      933.0,
+      1448.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      78.0,
+      597.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5. Sharpe Ratios (GPT-4o vs DeepSeek-V3)",
+    "page": 37,
+    "bbox": [
+      420.0,
+      142.0,
+      1160.0,
+      179.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      318.0,
+      208.0,
+      1266.0,
+      865.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure compares the Sharpe ratios of the AIFX strategy constructed using GPT-4o and DeepSeek-V3. In one strategy the AIFX index (defined in Equation (3)) was constructed using GPT-4o's outputs and in the other strategy, the AIFX index was constructed using DeepSeek V3's outputs. Both strategies are cross-sectional ones that use the AIFX index as the trading signal. For each choice of lookback period, currencies are sorted by their AIFX index at the end of each month and I take long positions in the top two currencies with the highest AIFX index and short positions in the bottom two with the lowest. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 37,
+    "bbox": [
+      135.0,
+      921.0,
+      1448.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      78.0,
+      597.0,
+      106.0,
+      626.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6. Alternative Specification of the AIFX index",
+    "page": 38,
+    "bbox": [
+      404.0,
+      143.0,
+      1179.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      320.0,
+      204.0,
+      1265.0,
+      866.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure reports the annualized Sharpe ratios of cross-sectional strategies that use the AIFX index (defined in Equation (3)) and Weighted AIFX index (defined in Equation (6)) as the trading signal. For each choice of lookback period, currencies are sorted based on the signal at the end of each month and I take long positions in the top two currencies with the highest signal value and short positions in the bottom two with the lowest. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 38,
+    "bbox": [
+      136.0,
+      921.0,
+      1448.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      78.0,
+      597.0,
+      105.0,
+      626.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7. Distribution of Data Releases",
+    "page": 39,
+    "bbox": [
+      506.0,
+      155.0,
+      1078.0,
+      190.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      308.0,
+      216.0,
+      1275.0,
+      909.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      136.0,
+      961.0,
+      1448.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      78.0,
+      596.0,
+      105.0,
+      626.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8. Distribution of AI's Guesses",
+    "page": 40,
+    "bbox": [
+      514.0,
+      148.0,
+      1069.0,
+      183.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      293.0,
+      205.0,
+      1286.0,
+      915.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      136.0,
+      963.0,
+      1448.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 9. Distribution of AI's Correlation Estimates",
+    "page": 41,
+    "bbox": [
+      415.0,
+      183.0,
+      1169.0,
+      217.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      315.0,
+      240.0,
+      1269.0,
+      904.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      956.0,
+      1448.0,
+      1045.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      78.0,
+      597.0,
+      105.0,
+      625.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10. Distribution of AI's Correlation Estimates",
+    "page": 42,
+    "bbox": [
+      407.0,
+      193.0,
+      1175.0,
+      227.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      315.0,
+      240.0,
+      1269.0,
+      896.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 11. Percentage Drop in Sharpe Ratio",
+    "page": 43,
+    "bbox": [
+      470.0,
+      144.0,
+      1113.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      303.0,
+      193.0,
+      1273.0,
+      1016.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      1070.0,
+      1447.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      78.0,
+      597.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 12. Performance of Selected Categories",
+    "page": 44,
+    "bbox": [
+      457.0,
+      143.0,
+      1126.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      321.0,
+      207.0,
+      1267.0,
+      872.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "The figures compares the performance of the AIFX strategy, constructed using all eight categories of data releases, with an alternative strategy that uses only the top three categories: 'Inflation data', 'Employment data', and 'Broad economic activity indicators'. The cross- sectional strategy uses the AIFX index (defined in Equation (3)) as the trading signal. For each choice of lookback period, currencies are sorted by their AIFX index at the end of each month and I take long positions in the top two currencies with the highest AIFX index and short positions in the bottom two with the lowest. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 36 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 44,
+    "bbox": [
+      137.0,
+      930.0,
+      1448.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      78.0,
+      598.0,
+      105.0,
+      626.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 13. Sharpe Ratios (Strength ratio vs Weakness ratio)",
+    "page": 45,
+    "bbox": [
+      355.0,
+      143.0,
+      1226.0,
+      179.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      306.0,
+      200.0,
+      1274.0,
+      873.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure reports the annualized Sharpe ratios of cross-sectional strategies that use the Strength ratio (defined in Equation (1)) and Weakness ratio (defined in Equation (2)) as the trading signal. For the first strategy, for each choice of lookback period, currencies are sorted based on their Strength ratio at the end of each month, and I take long positions in the top two currencies with the highest values and short positions in the bottom two with the lowest. Portfolios are rebalanced at the end of each calendar month. In the second strategy, I use the Weakness ratio as the signal but sort currencies in reverse order. Specifically, at the end of each month, I go long the two currencies with the lowest Weakness ratio and short the two with the highest. The rebalancing schedule and lookback period specifications remain the same as those in the strategy based on the Strength ratio. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 45,
+    "bbox": [
+      136.0,
+      930.0,
+      1448.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 14. t-statistics (Strength ratio vs Weakness ratio)",
+    "page": 46,
+    "bbox": [
+      381.0,
+      152.0,
+      1198.0,
+      188.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      325.0,
+      216.0,
+      1262.0,
+      874.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure displays the t-statistics of β1 and β2 in Equation (14). The regression is repeated for different choices of lookback period. This regression examines whether the Strength ratio and Weakness ratio of a currency at the end of a given month can predict the currency's excess return in the subsequent month. Standard errors are clustered at the currency and time level. The regression includes time fixed effects, although not reported here. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods. The dashed horizontal lines mark the 5% statistical significance threshold.",
+    "page": 46,
+    "bbox": [
+      136.0,
+      931.0,
+      1448.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 15. Average Daily Returns",
+    "page": 47,
+    "bbox": [
+      546.0,
+      151.0,
+      1038.0,
+      185.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      313.0,
+      203.0,
+      1269.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      962.0,
+      1447.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 1. Frequency Table of Data Releases",
+    "page": 48,
+    "bbox": [
+      484.0,
+      145.0,
+      1101.0,
+      177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      138.0,
+      196.0,
+      1448.0,
+      310.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      77.0,
+      597.0,
+      107.0,
+      626.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      393.0,
+      330.0,
+      1184.0,
+      725.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      78.0,
+      596.0,
+      105.0,
+      627.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 2. Summary Statistics",
+    "page": 49,
+    "bbox": [
+      585.0,
+      144.0,
+      1000.0,
+      177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      137.0,
+      197.0,
+      1448.0,
+      340.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      209.0,
+      356.0,
+      1371.0,
+      829.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 3. Performance Statistics",
+    "page": 50,
+    "bbox": [
+      564.0,
+      145.0,
+      1021.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      137.0,
+      197.0,
+      1447.0,
+      368.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      78.0,
+      598.0,
+      105.0,
+      626.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      264.0,
+      387.0,
+      1315.0,
+      609.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 4. Performance Over Benchmark Factors",
+    "page": 51,
+    "bbox": [
+      454.0,
+      233.0,
+      1132.0,
+      264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      138.0,
+      284.0,
+      1446.0,
+      427.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      77.0,
+      596.0,
+      106.0,
+      627.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      345.0,
+      447.0,
+      1234.0,
+      992.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 5. Correlations of the AIFX index",
+    "page": 52,
+    "bbox": [
+      497.0,
+      145.0,
+      1089.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      137.0,
+      196.0,
+      1447.0,
+      282.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      78.0,
+      598.0,
+      106.0,
+      624.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      569.0,
+      303.0,
+      1003.0,
+      636.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 6. Difference-in-Differences Exercise",
+    "page": 53,
+    "bbox": [
+      487.0,
+      145.0,
+      1098.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      197.0,
+      1447.0,
+      367.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      78.0,
+      597.0,
+      106.0,
+      626.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      555.0,
+      388.0,
+      1025.0,
+      766.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      78.0,
+      596.0,
+      106.0,
+      627.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 7. Pure Hindsight Portfolio as Control Factor",
+    "page": 54,
+    "bbox": [
+      419.0,
+      144.0,
+      1166.0,
+      177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      138.0,
+      196.0,
+      1448.0,
+      340.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      315.0,
+      360.0,
+      1259.0,
+      689.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      77.0,
+      596.0,
+      106.0,
+      627.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table 8. Categories Descriptive Table",
+    "page": 55,
+    "bbox": [
+      522.0,
+      189.0,
+      1065.0,
+      221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      137.0,
+      240.0,
+      1447.0,
+      325.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      224.0,
+      344.0,
+      1351.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Internet Appendix",
+    "page": 56,
+    "bbox": [
+      481.0,
+      141.0,
+      743.0,
+      176.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Definition of Currency Factors",
+    "page": 56,
+    "bbox": [
+      140.0,
+      236.0,
+      732.0,
+      272.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      137.0,
+      301.0,
+      1084.0,
+      417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      172.0,
+      474.0,
+      1084.0,
+      592.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      172.0,
+      624.0,
+      1084.0,
+      742.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Cross-sectional Strategies",
+    "page": 56,
+    "bbox": [
+      139.0,
+      785.0,
+      509.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      171.0,
+      836.0,
+      1083.0,
+      951.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      431.0,
+      983.0,
+      849.0,
+      1061.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      1026.0,
+      1008.0,
+      1079.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      197.0,
+      1096.0,
+      1084.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      173.0,
+      1245.0,
+      1084.0,
+      1317.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      582.0,
+      1364.0,
+      699.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      592.0,
+      1480.0,
+      632.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      172.0,
+      147.0,
+      949.0,
+      177.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      477.0,
+      208.0,
+      801.0,
+      290.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      1025.0,
+      235.0,
+      1080.0,
+      265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      196.0,
+      329.0,
+      1083.0,
+      405.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Time-Series Strategies",
+    "page": 57,
+    "bbox": [
+      139.0,
+      449.0,
+      465.0,
+      481.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      138.0,
+      499.0,
+      1084.0,
+      616.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      507.0,
+      615.0,
+      713.0,
+      670.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      1025.0,
+      628.0,
+      1079.0,
+      658.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      137.0,
+      692.0,
+      1084.0,
+      808.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      172.0,
+      860.0,
+      1084.0,
+      935.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      171.0,
+      966.0,
+      1046.0,
+      997.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      585.0,
+      1043.0,
+      696.0,
+      1078.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      197.0,
+      1125.0,
+      704.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      172.0,
+      1186.0,
+      1084.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      596.0,
+      1268.0,
+      685.0,
+      1304.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      199.0,
+      1336.0,
+      704.0,
+      1365.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      141.0,
+      1419.0,
+      1083.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      592.0,
+      1481.0,
+      634.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      137.0,
+      147.0,
+      1085.0,
+      221.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B Time-Series Strategy; Additional Results",
+    "page": 58,
+    "bbox": [
+      139.0,
+      254.0,
+      906.0,
+      288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      137.0,
+      319.0,
+      1087.0,
+      869.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C Categorization Procedure",
+    "page": 58,
+    "bbox": [
+      140.0,
+      900.0,
+      645.0,
+      937.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      137.0,
+      967.0,
+      1086.0,
+      1430.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 58,
+    "bbox": [
+      592.0,
+      1481.0,
+      634.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      139.0,
+      147.0,
+      1084.0,
+      220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      153.0,
+      248.0,
+      1075.0,
+      454.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prompt 8",
+    "page": 59,
+    "bbox": [
+      539.0,
+      477.0,
+      684.0,
+      509.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      138.0,
+      547.0,
+      1086.0,
+      750.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 59,
+    "bbox": [
+      592.0,
+      1480.0,
+      634.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.1. t-statistics (spot returns)",
+    "page": 60,
+    "bbox": [
+      521.0,
+      143.0,
+      1059.0,
+      179.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 60,
+    "bbox": [
+      324.0,
+      203.0,
+      1263.0,
+      871.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure displays the t-statistics of β in Equation (5), where the dependent variable is spot return. The regression is repeated for different choices of lookback period. This regression examines whether the AIFX index of a currency at the end of a given month can predict the currency's spot return in the subsequent month. Standard errors are clustered at the currency and time level. The regression includes time fixed effects, although not reported here. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods. The dashed horizontal lines mark the 5% and 10% statistical significance thresholds.",
+    "page": 60,
+    "bbox": [
+      136.0,
+      927.0,
+      1448.0,
+      1091.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.2. Performance of AI-powered Time-series strategy",
+    "page": 61,
+    "bbox": [
+      355.0,
+      149.0,
+      1227.0,
+      184.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 61,
+    "bbox": [
+      308.0,
+      205.0,
+      1274.0,
+      878.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure reports the annualized Sharpe ratios of time-series strategies that use the Diff AIFX index (defined in Equation (7)) as the trading signal. For each choice of lookback period τ, at the end of each month t, I take a long position in currency c if Diff AIFXc,t,τ is positive and a short position if negative. Thus, portfolio weights are either +1 or -1, depending on the sign of the signal. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 61,
+    "bbox": [
+      137.0,
+      934.0,
+      1446.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.3. Sharpe Ratios (AIFXc vs AIFXusD)",
+    "page": 62,
+    "bbox": [
+      444.0,
+      176.0,
+      1134.0,
+      213.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 62,
+    "bbox": [
+      305.0,
+      238.0,
+      1274.0,
+      908.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "This figure reports the annualized Sharpe ratios of time-series strategies that use the AIFXc and AIFXusD as the trading signal. Portfolios are rebalanced at the end of each calendar month. Lookback periods of 1 to 60 months are considered. The sample period spans from January 1996 to October 2024, but returns start at different dates due to differences in lookback periods.",
+    "page": 62,
+    "bbox": [
+      136.0,
+      963.0,
+      1448.0,
+      1051.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.4. Cumulative Returns",
+    "page": 63,
+    "bbox": [
+      554.0,
+      157.0,
+      1029.0,
+      190.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 63,
+    "bbox": [
+      188.0,
+      217.0,
+      1403.0,
+      901.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "The graph displays the Dollar value of an initial $1 investment in two time-series strategies from January 2000 to October 2024. The blue line uses the Diff AIFX index (defined in Equation (7)) and the red line uses the AIFXusD as the signal. Both trading strategies have a lookback period of 48 months. The green shaded regions denote NBER recession periods. The vertical dotted line marks the knowledge cutoff date of GPT-4o (October 2023).",
+    "page": 63,
+    "bbox": [
+      136.0,
+      954.0,
+      1448.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.5. Comparison of F1 Score and Strategy's Annual Return",
+    "page": 64,
+    "bbox": [
+      309.0,
+      192.0,
+      1275.0,
+      226.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      316.0,
+      246.0,
+      1264.0,
+      920.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 64,
+    "bbox": [
+      138.0,
+      977.0,
+      1448.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.6. Pure Hindsight Portfolio's Performance Over Time",
+    "page": 65,
+    "bbox": [
+      335.0,
+      156.0,
+      1249.0,
+      191.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      190.0,
+      219.0,
+      1399.0,
+      905.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 65,
+    "bbox": [
+      136.0,
+      954.0,
+      1449.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.7. Cross-sectional Standard Deviation",
+    "page": 66,
+    "bbox": [
+      447.0,
+      180.0,
+      1133.0,
+      214.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 66,
+    "bbox": [
+      313.0,
+      229.0,
+      1269.0,
+      909.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure A.8. Average Daily Returns",
+    "page": 67,
+    "bbox": [
+      538.0,
+      144.0,
+      1046.0,
+      178.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      312.0,
+      196.0,
+      1270.0,
+      920.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 67,
+    "bbox": [
+      135.0,
+      974.0,
+      1448.0,
+      1119.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      76.0,
+      584.0,
+      106.0,
+      640.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table A.1. Performance Statistics",
+    "page": 68,
+    "bbox": [
+      549.0,
+      145.0,
+      1037.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      138.0,
+      196.0,
+      1448.0,
+      310.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 68,
+    "bbox": [
+      264.0,
+      329.0,
+      1315.0,
+      550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      76.0,
+      585.0,
+      105.0,
+      640.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table A.2. Performance Statistics",
+    "page": 69,
+    "bbox": [
+      548.0,
+      145.0,
+      1037.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      138.0,
+      197.0,
+      1447.0,
+      367.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 69,
+    "bbox": [
+      428.0,
+      387.0,
+      1148.0,
+      609.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      76.0,
+      584.0,
+      106.0,
+      640.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table A.3. Performance Over Benchmark Factors",
+    "page": 70,
+    "bbox": [
+      436.0,
+      233.0,
+      1149.0,
+      264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      137.0,
+      284.0,
+      1446.0,
+      427.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 70,
+    "bbox": [
+      487.0,
+      448.0,
+      1088.0,
+      993.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      76.0,
+      584.0,
+      106.0,
+      641.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Table A.4. Evaluation of the Classification",
+    "page": 71,
+    "bbox": [
+      486.0,
+      145.0,
+      1099.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      136.0,
+      196.0,
+      1447.0,
+      310.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 71,
+    "bbox": [
+      283.0,
+      331.0,
+      1301.0,
+      1093.0
+    ]
+  }
+]

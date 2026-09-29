@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "app_version": "1.0.0",
+  "session_id": "e466cb2f-0f33-4ebf-bb1c-aae711806370",
+  "document_id": "doc-c355c97911bb7b02",
+  "filename": "5d883081_WHO_Bacterial_Priority_Pathogens_List_2024_2026-09-11_origin.pdf",
+  "annotator_id": "anonymous",
+  "created_at": "2026-09-17T14:21:10.875Z",
+  "updated_at": "2026-09-17T14:45:59.684Z",
+  "finalised_at": "2026-09-17T14:45:59.683Z",
+  "status": "approved",
+  "active_seconds": 1390,
+  "initial_state_sha256": "b51309376668618b8bcf785447fea512c50d0e6deb17535fcf57497bd73d1f2d",
+  "events_sha256": "064fc819d052e51c4168bbb56c24227604e46b9df1edc212b2d6d64746b0bb85",
+  "final_state_sha256": "4353d430534b8efbb9015f8ea06c3bc498d1b374f012ed497b6605a162d56d9d",
+  "replay_valid": true,
+  "metadata": {
+    "document": "5d883081_WHO_Bacterial_Priority_Pathogens_List_2024_2026-09-11",
+    "approval": {
+      "checklist": {
+        "checklist_version": "1.0",
+        "reviewed_all_pages": true,
+        "missing_spurious_regions_checked": true,
+        "boundaries_checked": true,
+        "types_checked": true,
+        "structure_checked": true,
+        "uncertainty_documented": true
+      },
+      "approval_note": "Checked headers and hierarchy levels."
+    }
+  }
+}

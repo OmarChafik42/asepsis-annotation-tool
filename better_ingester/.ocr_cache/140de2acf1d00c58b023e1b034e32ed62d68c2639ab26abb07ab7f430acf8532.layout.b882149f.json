@@ -1,0 +1,2015 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      37.0,
+      573.0,
+      81.0,
+      1269.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "HexEval: An Evidence-Driven Hexagonal Framework for Multidimensional Scholar Assessment",
+    "page": 0,
+    "bbox": [
+      146.0,
+      192.0,
+      1076.0,
+      255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      473.0,
+      278.0,
+      752.0,
+      306.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      246.0,
+      311.0,
+      977.0,
+      380.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      305.0,
+      434.0,
+      387.0,
+      456.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      123.0,
+      469.0,
+      571.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      278.0,
+      1160.0,
+      413.0,
+      1183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      1189.0,
+      590.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      637.0,
+      433.0,
+      1115.0,
+      681.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Paradigm comparison between conventional scholar assessment and HexEval. Conventional approaches aggregate metric-based features into a single score or rank- ing, whereas HexEval evaluates intrinsic research quality and external scholarly evidence separately to produce a traceable six-dimensional profile.",
+    "page": 0,
+    "bbox": [
+      633.0,
+      704.0,
+      1119.0,
+      837.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      633.0,
+      882.0,
+      1117.0,
+      924.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      927.0,
+      1119.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      1123.0,
+      1120.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      633.0,
+      1300.0,
+      1120.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      111.0,
+      589.0,
+      264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      122.0,
+      265.0,
+      353.0,
+      288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      111.0,
+      297.0,
+      588.0,
+      386.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      111.0,
+      390.0,
+      588.0,
+      502.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      111.0,
+      505.0,
+      588.0,
+      597.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Related Work",
+    "page": 1,
+    "bbox": [
+      272.0,
+      616.0,
+      421.0,
+      640.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Scholar-Level Research Assessment",
+    "page": 1,
+    "bbox": [
+      102.0,
+      648.0,
+      442.0,
+      672.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      679.0,
+      588.0,
+      810.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      103.0,
+      811.0,
+      589.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "LLM-Based Research Evaluation",
+    "page": 1,
+    "bbox": [
+      103.0,
+      1028.0,
+      421.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1057.0,
+      588.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1256.0,
+      589.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      111.0,
+      1120.0,
+      223.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Evidence-Grounded Assessment",
+    "page": 1,
+    "bbox": [
+      634.0,
+      242.0,
+      943.0,
+      265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      633.0,
+      274.0,
+      1120.0,
+      427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      633.0,
+      428.0,
+      1119.0,
+      603.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      633.0,
+      604.0,
+      1119.0,
+      738.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "HexEval Framework",
+    "page": 1,
+    "bbox": [
+      768.0,
+      759.0,
+      985.0,
+      784.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Framework Overview and Data Flow",
+    "page": 1,
+    "bbox": [
+      633.0,
+      793.0,
+      986.0,
+      817.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      633.0,
+      825.0,
+      1120.0,
+      937.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      653.0,
+      971.0,
+      1094.0,
+      998.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1092.0,
+      997.0,
+      1117.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      1018.0,
+      1120.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      1128.0,
+      1120.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      739.0,
+      1256.0,
+      1013.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1092.0,
+      1274.0,
+      1117.0,
+      1295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      1320.0,
+      1119.0,
+      1413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      110.0,
+      589.0,
+      157.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      148.0,
+      193.0,
+      541.0,
+      243.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      561.0,
+      207.0,
+      586.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      260.0,
+      588.0,
+      327.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      229.0,
+      350.0,
+      460.0,
+      506.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      560.0,
+      417.0,
+      586.0,
+      439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      521.0,
+      588.0,
+      565.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Representative-Work Anonymization",
+    "page": 2,
+    "bbox": [
+      101.0,
+      658.0,
+      457.0,
+      683.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      567.0,
+      588.0,
+      635.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      695.0,
+      589.0,
+      742.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      297.0,
+      770.0,
+      390.0,
+      795.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      560.0,
+      772.0,
+      585.0,
+      793.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      810.0,
+      589.0,
+      986.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      987.0,
+      589.0,
+      1098.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      1100.0,
+      589.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      1299.0,
+      589.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Intrinsic Research Quality Assessment",
+    "page": 2,
+    "bbox": [
+      633.0,
+      109.0,
+      1002.0,
+      133.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      631.0,
+      140.0,
+      1121.0,
+      274.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      733.0,
+      288.0,
+      1021.0,
+      348.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1091.0,
+      303.0,
+      1117.0,
+      325.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      354.0,
+      1121.0,
+      464.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      691.0,
+      489.0,
+      1059.0,
+      530.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1092.0,
+      497.0,
+      1117.0,
+      520.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      540.0,
+      1117.0,
+      585.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      771.0,
+      601.0,
+      980.0,
+      670.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1091.0,
+      625.0,
+      1117.0,
+      648.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      632.0,
+      673.0,
+      1119.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      632.0,
+      772.0,
+      1120.0,
+      952.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      631.0,
+      959.0,
+      1121.0,
+      1249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      631.0,
+      1254.0,
+      1121.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      211.0,
+      106.0,
+      1005.0,
+      502.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Overview of the HexEval framework. (a) Representative-work anonymization pipeline, where original papers are converted into structured Markdown and processed through rule-based filtering and LLM-based identity cue removal to produce anonymized representative works. (b) Dual-path scholar assessment pipeline, where anonymized works are evaluated through three intrinsic dimensions (D1-D3), while external scholarly evidence is analyzed through three external dimensions (D4–D6) Each dimension independently produces evidence-grounded scores and rationales, which are integrated into an interpretable six-dimensional scholar profile. The radar chart provides illustrative scholar profiles rather than experimental results.",
+    "page": 3,
+    "bbox": [
+      102.0,
+      542.0,
+      1121.0,
+      676.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      718.0,
+      589.0,
+      810.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "External Scholarly Behavior Assessment",
+    "page": 3,
+    "bbox": [
+      103.0,
+      826.0,
+      488.0,
+      849.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      856.0,
+      588.0,
+      968.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      977.0,
+      590.0,
+      1265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      122.0,
+      1265.0,
+      459.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      186.0,
+      1299.0,
+      505.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      560.0,
+      1315.0,
+      585.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1365.0,
+      589.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      718.0,
+      1089.0,
+      741.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      787.0,
+      752.0,
+      965.0,
+      776.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1081.0,
+      752.0,
+      1117.0,
+      774.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      786.0,
+      1120.0,
+      962.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      652.0,
+      962.0,
+      1063.0,
+      986.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      633.0,
+      995.0,
+      1157.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      633.0,
+      1040.0,
+      1063.0,
+      1064.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1081.0,
+      1020.0,
+      1117.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      780.0,
+      1075.0,
+      972.0,
+      1101.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1081.0,
+      1076.0,
+      1117.0,
+      1097.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      1109.0,
+      1117.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      703.0,
+      1229.0,
+      1050.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1081.0,
+      1232.0,
+      1117.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      1265.0,
+      1120.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      1364.0,
+      1122.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      100.0,
+      111.0,
+      589.0,
+      243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      244.0,
+      589.0,
+      507.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      508.0,
+      589.0,
+      620.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      125.0,
+      653.0,
+      562.0,
+      717.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      550.0,
+      716.0,
+      586.0,
+      739.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      752.0,
+      589.0,
+      950.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      951.0,
+      589.0,
+      1130.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Experimental",
+    "page": 4,
+    "bbox": [
+      272.0,
+      1151.0,
+      419.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Evaluation Dataset Construction",
+    "page": 4,
+    "bbox": [
+      103.0,
+      1185.0,
+      417.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      1217.0,
+      589.0,
+      1331.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      1342.0,
+      590.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      675.0,
+      108.0,
+      1076.0,
+      260.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Summary of the evaluation datasets for D1-D5.",
+    "page": 4,
+    "bbox": [
+      648.0,
+      279.0,
+      1105.0,
+      303.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      346.0,
+      1119.0,
+      393.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      401.0,
+      1120.0,
+      670.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Experimental Setting",
+    "page": 4,
+    "bbox": [
+      633.0,
+      685.0,
+      841.0,
+      710.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      715.0,
+      1120.0,
+      848.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      847.0,
+      1120.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1057.0,
+      1120.0,
+      1232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1233.0,
+      1120.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      1299.0,
+      1121.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      186.0,
+      107.0,
+      1033.0,
+      290.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Agreement between intrinsic quality assessments and human peer-review scores using Qwen3.6-27B. Higher values are better for Spearman's ρ and Acc.@0.5, whereas lower MAE is better. Bold values indicate the best result within each dimension and metric.",
+    "page": 5,
+    "bbox": [
+      103.0,
+      310.0,
+      1120.0,
+      378.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Results",
+    "page": 5,
+    "bbox": [
+      305.0,
+      419.0,
+      388.0,
+      444.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Intrinsic Research Quality Evaluation",
+    "page": 5,
+    "bbox": [
+      103.0,
+      453.0,
+      464.0,
+      477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      485.0,
+      590.0,
+      774.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      786.0,
+      589.0,
+      964.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      975.0,
+      589.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1166.0,
+      589.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1343.0,
+      590.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      675.0,
+      417.0,
+      1074.0,
+      637.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: Comparison of individual indicators and the full D4 score.",
+    "page": 5,
+    "bbox": [
+      633.0,
+      658.0,
+      1119.0,
+      704.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      745.0,
+      1118.0,
+      791.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "External Scholarly Behavior Evaluation",
+    "page": 5,
+    "bbox": [
+      633.0,
+      809.0,
+      1014.0,
+      833.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      837.0,
+      1120.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      958.0,
+      1122.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      1364.0,
+      1120.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      117.0,
+      114.0,
+      1104.0,
+      444.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: End-to-end HexEval case study for Scholar A. The figure summarizes the six-dimensional profile and associated evidence outputs. D1-D3 use anonymized representative works, whereas D4-D6 use identity-resolved software, patent, and OpenAlex evidence. Identifying information is removed from the reported case study. The profile is illustrative and should be interpreted together with evidence coverage and attribution status.",
+    "page": 6,
+    "bbox": [
+      103.0,
+      469.0,
+      1121.0,
+      561.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      107.0,
+      599.0,
+      578.0,
+      718.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4: D5 sparse-to-full-career coherence evaluation on the frozen 90-scholar test set. All methods use the same five-bin, three-papers-per-bin sampling manifest and five repeats.",
+    "page": 6,
+    "bbox": [
+      103.0,
+      739.0,
+      589.0,
+      808.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      846.0,
+      589.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      1032.0,
+      590.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Case Study",
+    "page": 6,
+    "bbox": [
+      104.0,
+      1248.0,
+      216.0,
+      1272.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      1276.0,
+      590.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      632.0,
+      602.0,
+      1119.0,
+      713.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      633.0,
+      712.0,
+      1120.0,
+      867.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion",
+    "page": 6,
+    "bbox": [
+      635.0,
+      886.0,
+      741.0,
+      909.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      632.0,
+      914.0,
+      1120.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 6,
+    "bbox": [
+      819.0,
+      1289.0,
+      937.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      634.0,
+      1321.0,
+      1118.0,
+      1408.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      103.0,
+      111.0,
+      586.0,
+      176.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      180.0,
+      587.0,
+      290.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      103.0,
+      294.0,
+      588.0,
+      425.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      429.0,
+      587.0,
+      495.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      499.0,
+      588.0,
+      564.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      568.0,
+      587.0,
+      635.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      638.0,
+      589.0,
+      726.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      728.0,
+      587.0,
+      817.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      820.0,
+      587.0,
+      886.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      890.0,
+      587.0,
+      1001.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      1003.0,
+      587.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      1138.0,
+      588.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      1274.0,
+      586.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      1343.0,
+      588.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      110.0,
+      1118.0,
+      156.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      164.0,
+      1119.0,
+      273.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      281.0,
+      1118.0,
+      349.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      356.0,
+      1117.0,
+      402.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      408.0,
+      1119.0,
+      498.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      505.0,
+      1118.0,
+      572.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      580.0,
+      1120.0,
+      713.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      720.0,
+      1119.0,
+      831.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      839.0,
+      1118.0,
+      907.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      634.0,
+      913.0,
+      1117.0,
+      959.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      633.0,
+      967.0,
+      1118.0,
+      1056.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      1063.0,
+      1119.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      1137.0,
+      1119.0,
+      1247.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      635.0,
+      1255.0,
+      1119.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      103.0,
+      111.0,
+      587.0,
+      200.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      104.0,
+      204.0,
+      588.0,
+      314.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      105.0,
+      318.0,
+      587.0,
+      428.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      104.0,
+      433.0,
+      587.0,
+      500.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      104.0,
+      504.0,
+      588.0,
+      681.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      103.0,
+      683.0,
+      586.0,
+      729.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      103.0,
+      733.0,
+      588.0,
+      865.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      104.0,
+      869.0,
+      589.0,
+      979.0
+    ]
+  }
+]

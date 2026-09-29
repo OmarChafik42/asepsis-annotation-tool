@@ -1,0 +1,1949 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      418.0,
+      86.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Removing Population Size, World Cities Leave on Land a Footprint of Wealth",
+    "page": 0,
+    "bbox": [
+      225.0,
+      268.0,
+      916.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      380.0,
+      389.0,
+      761.0,
+      418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      237.0,
+      432.0,
+      902.0,
+      486.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      261.0,
+      534.0,
+      878.0,
+      587.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      527.0,
+      633.0,
+      614.0,
+      654.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      244.0,
+      661.0,
+      896.0,
+      948.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      245.0,
+      967.0,
+      768.0,
+      987.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      195.0,
+      1060.0,
+      945.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      564.0,
+      1291.0,
+      576.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      244.0,
+      149.0,
+      995.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      243.0,
+      583.0,
+      994.0,
+      774.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      243.0,
+      775.0,
+      995.0,
+      1133.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      243.0,
+      1134.0,
+      995.0,
+      1232.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      613.0,
+      1291.0,
+      628.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      193.0,
+      149.0,
+      945.0,
+      248.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Uniformity of land use in world cities",
+    "page": 2,
+    "bbox": [
+      196.0,
+      268.0,
+      733.0,
+      299.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      209.0,
+      380.0,
+      567.0,
+      667.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      573.0,
+      375.0,
+      930.0,
+      667.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      209.0,
+      675.0,
+      570.0,
+      991.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      574.0,
+      698.0,
+      930.0,
+      988.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1 Urban radial structure of built-up land in 2020. Share of built-up land for the 1800+ largest global cities as a function of the a) non-rescaled distance r and b) rescaled distance r' to the center. c) Statistics on the rescaled profiles, showing a clear common trend. d) Characteristic radius lN as a function of population N, with a line lN = l1√N, where l1 = 6 m, used as a guide to the eye (see Supp. Table 1 and Supp. Fig. 11).",
+    "page": 2,
+    "bbox": [
+      193.0,
+      1002.0,
+      946.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      193.0,
+      1132.0,
+      947.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      564.0,
+      1291.0,
+      578.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      242.0,
+      151.0,
+      995.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      243.0,
+      1039.0,
+      995.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      612.0,
+      1292.0,
+      627.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      209.0,
+      151.0,
+      568.0,
+      463.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      575.0,
+      153.0,
+      931.0,
+      461.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      209.0,
+      473.0,
+      569.0,
+      789.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      573.0,
+      479.0,
+      931.0,
+      788.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2 Deviation from the mean rescaled built up land profile, depending on geographical and economic factors. a) Waterfront cities, b) Polycentric areas, c) 5 countries with high GDP per capita, d) 3 of the BRICS countries (Brazil, China, India) and 3 developing countries (Congo DR., Nigeria, Pakistan).",
+    "page": 4,
+    "bbox": [
+      194.0,
+      800.0,
+      945.0,
+      879.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      193.0,
+      910.0,
+      946.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Wealth, hidden behind the uniformity of land use patterns",
+    "page": 4,
+    "bbox": [
+      196.0,
+      1104.0,
+      905.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      195.0,
+      1184.0,
+      945.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      564.0,
+      1290.0,
+      578.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      243.0,
+      149.0,
+      995.0,
+      462.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      254.0,
+      491.0,
+      981.0,
+      872.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3 Global map of the Urban Built Land Index (UBLI), which indicates cities' extent irrespective of their size. See Supp. Info. for zooms and a comparison with wealth.",
+    "page": 5,
+    "bbox": [
+      243.0,
+      886.0,
+      994.0,
+      926.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      243.0,
+      962.0,
+      996.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      612.0,
+      1291.0,
+      627.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      208.0,
+      150.0,
+      568.0,
+      467.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      573.0,
+      152.0,
+      934.0,
+      466.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 4 Relationship between the median national urban built land index UBLI and a) gross domestic product per capita and b) mean household size (log-log graph).",
+    "page": 6,
+    "bbox": [
+      195.0,
+      478.0,
+      945.0,
+      519.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      195.0,
+      548.0,
+      944.0,
+      596.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      195.0,
+      598.0,
+      945.0,
+      692.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      194.0,
+      693.0,
+      945.0,
+      813.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      194.0,
+      814.0,
+      946.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      564.0,
+      1290.0,
+      578.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methods",
+    "page": 7,
+    "bbox": [
+      245.0,
+      143.0,
+      377.0,
+      172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data",
+    "page": 7,
+    "bbox": [
+      244.0,
+      192.0,
+      311.0,
+      218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      241.0,
+      230.0,
+      996.0,
+      785.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Statistical and spatial analysis",
+    "page": 7,
+    "bbox": [
+      244.0,
+      809.0,
+      609.0,
+      835.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      242.0,
+      848.0,
+      995.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      612.0,
+      1291.0,
+      627.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      192.0,
+      151.0,
+      947.0,
+      823.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      195.0,
+      822.0,
+      945.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      196.0,
+      1026.0,
+      944.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      196.0,
+      1085.0,
+      944.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      197.0,
+      1170.0,
+      945.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      564.0,
+      1291.0,
+      578.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      244.0,
+      150.0,
+      865.0,
+      174.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 9,
+    "bbox": [
+      246.0,
+      200.0,
+      404.0,
+      228.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      257.0,
+      248.0,
+      992.0,
+      295.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      257.0,
+      316.0,
+      993.0,
+      410.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      257.0,
+      431.0,
+      992.0,
+      527.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      256.0,
+      548.0,
+      993.0,
+      619.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      257.0,
+      640.0,
+      993.0,
+      711.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      257.0,
+      732.0,
+      992.0,
+      779.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      256.0,
+      800.0,
+      991.0,
+      847.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      256.0,
+      868.0,
+      991.0,
+      915.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      255.0,
+      936.0,
+      992.0,
+      983.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      248.0,
+      1003.0,
+      993.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      246.0,
+      1095.0,
+      993.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      246.0,
+      1187.0,
+      994.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      609.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      237.0,
+      150.0,
+      834.0,
+      174.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      193.0,
+      944.0,
+      241.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      261.0,
+      944.0,
+      333.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      353.0,
+      944.0,
+      403.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      421.0,
+      944.0,
+      470.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      489.0,
+      944.0,
+      538.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      557.0,
+      942.0,
+      606.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      625.0,
+      892.0,
+      650.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      669.0,
+      942.0,
+      717.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      737.0,
+      938.0,
+      762.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      781.0,
+      942.0,
+      831.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      197.0,
+      849.0,
+      942.0,
+      899.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      197.0,
+      917.0,
+      943.0,
+      967.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      984.0,
+      943.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      198.0,
+      1052.0,
+      944.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      197.0,
+      1144.0,
+      944.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      560.0,
+      1290.0,
+      582.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      149.0,
+      992.0,
+      198.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      216.0,
+      991.0,
+      266.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      284.0,
+      991.0,
+      333.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      247.0,
+      353.0,
+      991.0,
+      401.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      421.0,
+      991.0,
+      493.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      513.0,
+      992.0,
+      584.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      605.0,
+      992.0,
+      677.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      248.0,
+      696.0,
+      992.0,
+      769.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      247.0,
+      788.0,
+      991.0,
+      836.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      246.0,
+      856.0,
+      994.0,
+      905.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary Information",
+    "page": 11,
+    "bbox": [
+      244.0,
+      932.0,
+      643.0,
+      963.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "The GHSL built surface data",
+    "page": 11,
+    "bbox": [
+      244.0,
+      980.0,
+      597.0,
+      1007.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      241.0,
+      1019.0,
+      995.0,
+      1190.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      608.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      201.0,
+      144.0,
+      937.0,
+      658.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 5 The GHSL built surface dataset for the Seine Valley in France (Rouen - Paris axis). A pixel with value 10,000 is fully built, while a pixel with value 0 is not built at all.",
+    "page": 12,
+    "bbox": [
+      194.0,
+      671.0,
+      946.0,
+      712.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Comparison of urban extents for cities of different sizes",
+    "page": 12,
+    "bbox": [
+      193.0,
+      738.0,
+      858.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      192.0,
+      777.0,
+      945.0,
+      873.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      192.0,
+      873.0,
+      947.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      559.0,
+      1290.0,
+      584.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      248.0,
+      139.0,
+      985.0,
+      882.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 6 Comparison of buffer sizes, with a reference to the population of Tokyo using a rNmax =150km radius with a α = 1/2 scaling exponent. Comparison of buffer sizes for cities of different sizes: Tokyo (Japan), Los Angeles (USA), Madrid (Spain), Rabat (Morocco), Jeonju (Republic of Korea). We keep the same scale on all maps of the first and third lines, but the maps of the 2nd and 4th lines are rescaled.",
+    "page": 13,
+    "bbox": [
+      243.0,
+      889.0,
+      995.0,
+      987.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Signal over noise ratio",
+    "page": 13,
+    "bbox": [
+      244.0,
+      1010.0,
+      515.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      243.0,
+      1048.0,
+      996.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      608.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      193.0,
+      148.0,
+      946.0,
+      343.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      348.0,
+      377.0,
+      795.0,
+      764.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 7 Variation of the signal to noise ratio SNR as a function of the rescaling exponent α used, for different threshold values t. The black vertical line represents exponent α = 1/2. The linear behavior for large values of α is linked to the maximal urban extent rmax being reached.",
+    "page": 14,
+    "bbox": [
+      195.0,
+      779.0,
+      946.0,
+      839.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Impact of considering water bodies",
+    "page": 14,
+    "bbox": [
+      194.0,
+      898.0,
+      617.0,
+      925.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      193.0,
+      937.0,
+      946.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Characteristic decrease distance and models",
+    "page": 14,
+    "bbox": [
+      195.0,
+      1154.0,
+      724.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      195.0,
+      1192.0,
+      947.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      560.0,
+      1290.0,
+      583.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      275.0,
+      153.0,
+      611.0,
+      442.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      633.0,
+      155.0,
+      966.0,
+      441.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      435.0,
+      477.0,
+      804.0,
+      777.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 8 Effect of considering water on built-up land shares. Top: for two cities presenting more than 60% of water bodies within their maximal extent, Da Nang (Vietnam, left) and Las Palmas de Gran Canaria (Spain, right). Bottom: statistics on the studied 1800+ rescaled radial profiles of urban built- up land use. The graph compares profiles where water bodies are kept in the analysis, and where water bodies are removed (WR) from the analysis, with consequently slightly higher shares of built- up land.",
+    "page": 15,
+    "bbox": [
+      244.0,
+      789.0,
+      994.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      243.0,
+      936.0,
+      994.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      243.0,
+      1080.0,
+      995.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      609.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      199.0,
+      143.0,
+      939.0,
+      263.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1 Results of a (log-log) linear regression on characteristic distance lN against city population N, log lN ~ log l1 + α log N for different models and samples. Rows: the number of observations is the number of cities considered in the model. The scaling exponent is denoted α. The constant l1 is given in meters. The two measured R² correspond to the median R² of the corresponding non-linear fit over all profiles, and the R2 of our (log-log) linear regression of the scaling law. Columns: each non-linear model processed on the 1800+ cities with one parameter (NL1, where aN is fixed to 35%) and two parameters (NL2), and on a sample of 1747 cities with one and two parameters (NL1* and NL2*). In the first 4 models, which have a w index in their names, water is not considered (that is, water bodies are kept in the computation of radial profiles)",
+    "page": 16,
+    "bbox": [
+      194.0,
+      264.0,
+      938.0,
+      439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      193.0,
+      480.0,
+      944.0,
+      528.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      193.0,
+      529.0,
+      943.0,
+      602.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Distribution of the 1860 studied cities, and of peculiar characteristics: water bodies and polycentric regions",
+    "page": 16,
+    "bbox": [
+      194.0,
+      625.0,
+      843.0,
+      682.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      193.0,
+      692.0,
+      947.0,
+      838.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Urban Built Land Index UBLI",
+    "page": 16,
+    "bbox": [
+      196.0,
+      861.0,
+      566.0,
+      888.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      194.0,
+      900.0,
+      945.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      192.0,
+      1068.0,
+      946.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      560.0,
+      1290.0,
+      583.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      253.0,
+      143.0,
+      983.0,
+      908.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 9 Geographical distribution of urban areas with 300,000 or more inhabitants in 2020. We identify two main types of determining characteristics: top panel, the presence of an important water body, bottom panel, the proximity with other cities.",
+    "page": 17,
+    "bbox": [
+      243.0,
+      921.0,
+      994.0,
+      983.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Relating national observations of the Urban Built Land Index to other variables",
+    "page": 17,
+    "bbox": [
+      243.0,
+      1008.0,
+      982.0,
+      1062.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      242.0,
+      1075.0,
+      994.0,
+      1193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      244.0,
+      1195.0,
+      994.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      608.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      224.0,
+      149.0,
+      561.0,
+      440.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      583.0,
+      150.0,
+      918.0,
+      439.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 10 Characteristic distance computed with the NL2* model. The colors indicate the Urban Built Land Index UBLI= aNl2/N in m2/inhabitant (left panel), which is directly related to the residual of the regression, and the share of built-up land in the center aN (right panel). On the left panel, the line is lN = l1√N, where l1 = 6 m, while on the right panel it is lN = 0.0047N0.52.",
+    "page": 18,
+    "bbox": [
+      194.0,
+      453.0,
+      946.0,
+      532.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      209.0,
+      566.0,
+      571.0,
+      985.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      574.0,
+      569.0,
+      933.0,
+      987.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 11 Relationship between the share of built-up surface in the center aN and the characteristic distance lN computed with the SNL2* model. The colors indicate the percentage of overlap with neighboring cities (left panel) and the total population N (right panel).",
+    "page": 18,
+    "bbox": [
+      195.0,
+      1009.0,
+      944.0,
+      1070.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      192.0,
+      1099.0,
+      947.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      560.0,
+      1290.0,
+      584.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      255.0,
+      144.0,
+      979.0,
+      525.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 12 Built-up surface in the center aN for the 1800+ cities.",
+    "page": 19,
+    "bbox": [
+      244.0,
+      538.0,
+      726.0,
+      559.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      403.0,
+      605.0,
+      823.0,
+      982.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 13 Variation of the correlation R between median UBLI and GDP pc as a function of the number n of countries included in the analysis. Countries are included in the sample in order of decreasing number of cities.",
+    "page": 19,
+    "bbox": [
+      243.0,
+      995.0,
+      994.0,
+      1055.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      242.0,
+      1084.0,
+      995.0,
+      1229.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      608.0,
+      1290.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      205.0,
+      144.0,
+      930.0,
+      523.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 14 Map of the national Gross Domestic Product GDP per capita, where the colors are applied to the studied cities, for comparison with the map of the UBLI (Fig. 3 of the main text).",
+    "page": 20,
+    "bbox": [
+      195.0,
+      538.0,
+      945.0,
+      579.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      196.0,
+      609.0,
+      944.0,
+      656.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      192.0,
+      657.0,
+      946.0,
+      971.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      558.0,
+      1290.0,
+      582.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      286.0,
+      148.0,
+      964.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 15 Zooming on different parts of the global map of the Urban Built Land Index UBLI (Fig. 3 of the main text): West Africa, Central America, North America.",
+    "page": 21,
+    "bbox": [
+      243.0,
+      1236.0,
+      994.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      608.0,
+      1291.0,
+      633.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      365.0,
+      144.0,
+      915.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 16 Zooming on different parts of the global map of the Urban Built Land Index UBLI (Fig. 3 of the main text): South America, East Asia, SouthEast Asia.",
+    "page": 22,
+    "bbox": [
+      196.0,
+      1235.0,
+      946.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      560.0,
+      1291.0,
+      583.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      286.0,
+      148.0,
+      969.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 17 Zooming on different parts of the global map of the Urban Built Land Index UBLI (Fig. 3 of the main text): South Asia, Europe, Middle East.",
+    "page": 23,
+    "bbox": [
+      244.0,
+      1236.0,
+      994.0,
+      1276.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      608.0,
+      1291.0,
+      633.0,
+      1309.0
+    ]
+  }
+]

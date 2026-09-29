@@ -1,0 +1,3830 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      36.0,
+      581.0,
+      81.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings",
+    "page": 0,
+    "bbox": [
+      131.0,
+      162.0,
+      1090.0,
+      244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      111.0,
+      271.0,
+      1110.0,
+      300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      407.0,
+      354.0,
+      819.0,
+      376.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      122.0,
+      375.0,
+      1101.0,
+      400.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      104.0,
+      463.0,
+      234.0,
+      492.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      514.0,
+      606.0,
+      1183.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      106.0,
+      1225.0,
+      336.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      1274.0,
+      606.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      615.0,
+      469.0,
+      1122.0,
+      923.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      615.0,
+      929.0,
+      1123.0,
+      1264.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      614.0,
+      1267.0,
+      1123.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      124.0,
+      1461.0,
+      460.0,
+      1483.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      605.0,
+      1520.0,
+      619.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      111.0,
+      607.0,
+      493.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      494.0,
+      607.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Related Work",
+    "page": 1,
+    "bbox": [
+      103.0,
+      1135.0,
+      357.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1 Financial QA and RAG Benchmarks",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1188.0,
+      604.0,
+      1216.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1230.0,
+      606.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      614.0,
+      110.0,
+      1123.0,
+      783.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      614.0,
+      790.0,
+      1124.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      103.0,
+      1441.0,
+      605.0,
+      1483.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      109.0,
+      606.0,
+      232.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2 Retrieval, Reranking, and Hard Neg- atives",
+    "page": 2,
+    "bbox": [
+      103.0,
+      265.0,
+      607.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      334.0,
+      606.0,
+      720.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3 Attribution and Faithfulness",
+    "page": 2,
+    "bbox": [
+      102.0,
+      753.0,
+      508.0,
+      780.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      795.0,
+      605.0,
+      1013.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Dataset Construction",
+    "page": 2,
+    "bbox": [
+      103.0,
+      1052.0,
+      462.0,
+      1082.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Sources and Design Principles",
+    "page": 2,
+    "bbox": [
+      103.0,
+      1105.0,
+      526.0,
+      1133.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      1147.0,
+      607.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 Question-Generation Criteria",
+    "page": 2,
+    "bbox": [
+      616.0,
+      108.0,
+      1032.0,
+      134.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      614.0,
+      149.0,
+      1121.0,
+      413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      414.0,
+      1121.0,
+      772.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      614.0,
+      773.0,
+      1122.0,
+      919.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 Record Schema",
+    "page": 2,
+    "bbox": [
+      618.0,
+      953.0,
+      868.0,
+      979.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      994.0,
+      1121.0,
+      1212.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.4 Supporting Passages and Hard Nega- tives",
+    "page": 2,
+    "bbox": [
+      617.0,
+      1245.0,
+      1121.0,
+      1298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      1315.0,
+      1122.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      106.0,
+      108.0,
+      1117.0,
+      305.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: FinRank against representative financial QA and retrieval benchmarks. \"Hard neg.\" denotes per-question curated hard-negative passages; \"Reranking\" a gold-vs.-hard-negative reranking task; \"Rich metadata\" per-record difficulty, reasoning-type, and evidence-scope labels. †150 questions are open-sourced. FinDER evaluates LLM reranking of retrieved passages but releases no curated hard-negative candidate set. §FinAgentBench provides 26K graded-relevance annotations for document- and chunk-ranking, without a per-question curated hard-negative set. To our knowledge, FinRank is the first financial QA benchmark to release per-question curated hard negatives and to score discrimination against curated versus random distractors directly.",
+    "page": 3,
+    "bbox": [
+      101.0,
+      325.0,
+      1119.0,
+      495.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      535.0,
+      605.0,
+      583.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      585.0,
+      606.0,
+      779.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.5 Data Collection",
+    "page": 3,
+    "bbox": [
+      103.0,
+      816.0,
+      357.0,
+      841.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      863.0,
+      606.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1267.0,
+      605.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1338.0,
+      606.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      614.0,
+      534.0,
+      1121.0,
+      774.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      614.0,
+      776.0,
+      1123.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.6 Retrieval Corpus Definitions",
+    "page": 3,
+    "bbox": [
+      617.0,
+      1121.0,
+      1023.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      615.0,
+      1162.0,
+      1122.0,
+      1260.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      1291.0,
+      1122.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      605.0,
+      1520.0,
+      620.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      110.0,
+      607.0,
+      375.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      403.0,
+      606.0,
+      593.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.7 Hard-Negative Construction Taxon- omy",
+    "page": 4,
+    "bbox": [
+      103.0,
+      721.0,
+      607.0,
+      777.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      594.0,
+      604.0,
+      693.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      100.0,
+      788.0,
+      606.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.8 Official Label Set and Normalization",
+    "page": 4,
+    "bbox": [
+      103.0,
+      1202.0,
+      602.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      1243.0,
+      606.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      633.0,
+      116.0,
+      1090.0,
+      324.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Taxonomy of the 6021 hard negatives, by the relationship between each negative's originating filing and its source record. A hard negative is most often a passage from a competitor's filing of comparable type and period, the configuration retrievers are most likely to confuse with true evidence.",
+    "page": 4,
+    "bbox": [
+      615.0,
+      353.0,
+      1119.0,
+      498.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      616.0,
+      538.0,
+      1120.0,
+      637.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Dataset Analysis",
+    "page": 4,
+    "bbox": [
+      617.0,
+      671.0,
+      911.0,
+      701.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      616.0,
+      720.0,
+      1121.0,
+      840.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      614.0,
+      840.0,
+      1121.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      614.0,
+      1174.0,
+      1122.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Data Quality and Normalization",
+    "page": 4,
+    "bbox": [
+      617.0,
+      1394.0,
+      1068.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      615.0,
+      1433.0,
+      1122.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      367.0,
+      140.0,
+      536.0,
+      315.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Difficulty",
+    "page": 5,
+    "bbox": [
+      595.0,
+      128.0,
+      716.0,
+      152.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      589.0,
+      155.0,
+      761.0,
+      311.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Reasoning type",
+    "page": 5,
+    "bbox": [
+      821.0,
+      129.0,
+      1000.0,
+      152.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      820.0,
+      155.0,
+      996.0,
+      311.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      367.0,
+      358.0,
+      536.0,
+      542.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      587.0,
+      356.0,
+      775.0,
+      540.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      203.0,
+      587.0,
+      963.0,
+      759.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Composition of FinRank across the 1185 records: (a) sector, (b) difficulty, (c) reasoning type, (d) evidence scope (passage type), (e) document type, and (f) topic. Counts are on the canonical normalized labels. The dataset is deliberately near-uniform over topics (141-158 records each) but skewed along sector, document type, and reasoning type, skews that motivate stratified reporting.",
+    "page": 5,
+    "bbox": [
+      103.0,
+      809.0,
+      1120.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      100.0,
+      947.0,
+      607.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Methodology-to-Dataset Validation",
+    "page": 5,
+    "bbox": [
+      103.0,
+      1345.0,
+      587.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      101.0,
+      1386.0,
+      605.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      616.0,
+      948.0,
+      1058.0,
+      972.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      616.0,
+      975.0,
+      1121.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Tasks",
+    "page": 5,
+    "bbox": [
+      619.0,
+      1213.0,
+      752.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      614.0,
+      1266.0,
+      1122.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      271.0,
+      106.0,
+      952.0,
+      412.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Target distributions mandated by the FinRank question-generation criteria (Section 3.2) against realized values in the canonical normalized release. The 30/40/30 complexity target is met to within about one percentage point per bucket; the 40/30/30 passage-coverage target deviates most, with two-passage records over-represented; and reasoning type shows the largest gap, with qualitative records outnumbering quantitative ones roughly two to one. Consumers should treat these realized values as the authoritative distribution and stratify results accordingly.",
+    "page": 6,
+    "bbox": [
+      101.0,
+      432.0,
+      1119.0,
+      554.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      594.0,
+      605.0,
+      691.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      722.0,
+      607.0,
+      917.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      100.0,
+      946.0,
+      606.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Experimental Protocol and Baselines",
+    "page": 6,
+    "bbox": [
+      103.0,
+      1156.0,
+      605.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      1242.0,
+      606.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      616.0,
+      594.0,
+      1118.0,
+      642.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.1 Baselines",
+    "page": 6,
+    "bbox": [
+      617.0,
+      675.0,
+      795.0,
+      700.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      613.0,
+      713.0,
+      1123.0,
+      1268.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2 Splits and Ablations",
+    "page": 6,
+    "bbox": [
+      617.0,
+      1298.0,
+      927.0,
+      1325.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      614.0,
+      1338.0,
+      1123.0,
+      1483.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      605.0,
+      1520.0,
+      619.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      144.0,
+      106.0,
+      1078.0,
+      590.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: Tasks supported by FinRank, with inputs, outputs, suggested evaluation metrics, and possible baselines.",
+    "page": 7,
+    "bbox": [
+      111.0,
+      609.0,
+      1109.0,
+      634.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      102.0,
+      675.0,
+      606.0,
+      918.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7 Results",
+    "page": 7,
+    "bbox": [
+      105.0,
+      952.0,
+      264.0,
+      982.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      1002.0,
+      608.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.1 Retrieval over the Global Pool",
+    "page": 7,
+    "bbox": [
+      103.0,
+      1198.0,
+      533.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      1238.0,
+      604.0,
+      1336.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      1361.0,
+      606.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      614.0,
+      675.0,
+      1121.0,
+      1085.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.2 Reranking over the In-Record Candi- date Set",
+    "page": 7,
+    "bbox": [
+      618.0,
+      1118.0,
+      1122.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      616.0,
+      1189.0,
+      1120.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.3 Hard-Negative Discrimination",
+    "page": 7,
+    "bbox": [
+      617.0,
+      1296.0,
+      1041.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      614.0,
+      1337.0,
+      1123.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      234.0,
+      133.0,
+      998.0,
+      410.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "B Hardness premium — pairwise accuracy, hard vs. random negatives",
+    "page": 8,
+    "bbox": [
+      294.0,
+      464.0,
+      984.0,
+      487.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      218.0,
+      499.0,
+      1000.0,
+      764.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Gap = random-negative accuracy - hard-negative accuracy. A larger gap means the released hard negatives are genuinely harder.",
+    "page": 8,
+    "bbox": [
+      208.0,
+      779.0,
+      1015.0,
+      798.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: Executed baselines on FinRank. (A) First-stage retrieval over the global pool: Recall@k for the evaluated systems. Even the strongest, a 7B instruction-tuned embedder, reaches only 44.8% Recall@10, and sub-billion- parameter dense encoders gain little over BM25. (B) The hardness premium: pairwise ranking accuracy of each model against its curated hard negatives versus random negatives. The 13.0-20.5 point gap is the empirical evidence that the released hard negatives are genuinely harder than arbitrary distractors.",
+    "page": 8,
+    "bbox": [
+      102.0,
+      821.0,
+      1121.0,
+      942.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      205.0,
+      967.0,
+      1019.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4: Retrieval performance on the global pooled corpus C (|C = 5230, 1185 queries). All values are percentages averaged over queries.",
+    "page": 8,
+    "bbox": [
+      103.0,
+      1182.0,
+      1119.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      1273.0,
+      606.0,
+      1466.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.4 Stratified Performance and Ablations",
+    "page": 8,
+    "bbox": [
+      616.0,
+      1271.0,
+      1119.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      614.0,
+      1314.0,
+      1123.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      604.0,
+      1520.0,
+      620.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      148.0,
+      109.0,
+      562.0,
+      304.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 5: Reranking performance on the in-record candi- date set Lr.",
+    "page": 9,
+    "bbox": [
+      101.0,
+      323.0,
+      607.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      417.0,
+      605.0,
+      540.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.5 Answer Generation and Error Analy- sis",
+    "page": 9,
+    "bbox": [
+      104.0,
+      574.0,
+      608.0,
+      629.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      644.0,
+      605.0,
+      981.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "8 Discussion",
+    "page": 9,
+    "bbox": [
+      104.0,
+      1023.0,
+      306.0,
+      1053.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      1075.0,
+      607.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      614.0,
+      110.0,
+      1121.0,
+      495.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      614.0,
+      530.0,
+      1120.0,
+      939.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      615.0,
+      975.0,
+      1121.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "9 Limitations",
+    "page": 9,
+    "bbox": [
+      618.0,
+      1189.0,
+      834.0,
+      1219.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      614.0,
+      1242.0,
+      1122.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      282.0,
+      107.0,
+      942.0,
+      402.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 6: Recall@10 stratified by document type, reasoning type, passage type, and difficulty. Per-stratum sample sizes are available in ablations.json.",
+    "page": 10,
+    "bbox": [
+      104.0,
+      420.0,
+      1119.0,
+      469.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      106.0,
+      510.0,
+      602.0,
+      609.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 7: Query-rewrite ablation on the subset of records with non-empty query_rewrite lists. Because rewrites are annotator-authored decompositions written with the gold evidence in view, the right column should be read as an oracle upper bound on decomposition-assisted retrieval. The right column concatenates the original question with all listed rewrites; the left uses the question alone.",
+    "page": 10,
+    "bbox": [
+      101.0,
+      629.0,
+      606.0,
+      800.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      842.0,
+      606.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      1114.0,
+      607.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      1361.0,
+      607.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      615.0,
+      510.0,
+      1120.0,
+      608.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "10 Ethical Considerations",
+    "page": 10,
+    "bbox": [
+      619.0,
+      646.0,
+      1009.0,
+      676.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      614.0,
+      696.0,
+      1123.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      614.0,
+      1033.0,
+      1123.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "11 Conclusion",
+    "page": 10,
+    "bbox": [
+      619.0,
+      1312.0,
+      843.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      615.0,
+      1362.0,
+      1120.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      600.0,
+      1519.0,
+      624.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      102.0,
+      111.0,
+      608.0,
+      544.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      600.0,
+      1519.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      105.0,
+      105.0,
+      261.0,
+      133.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      155.0,
+      606.0,
+      296.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      298.0,
+      605.0,
+      392.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      394.0,
+      607.0,
+      511.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      513.0,
+      605.0,
+      606.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      609.0,
+      606.0,
+      727.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      728.0,
+      606.0,
+      846.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      103.0,
+      849.0,
+      606.0,
+      1013.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      104.0,
+      1015.0,
+      605.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      105.0,
+      1183.0,
+      606.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      1302.0,
+      606.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      105.0,
+      1375.0,
+      607.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      111.0,
+      1120.0,
+      250.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      255.0,
+      1120.0,
+      348.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      351.0,
+      1120.0,
+      443.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      447.0,
+      1120.0,
+      516.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      620.0,
+      518.0,
+      1119.0,
+      609.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      618.0,
+      612.0,
+      1120.0,
+      754.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      757.0,
+      1120.0,
+      897.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      900.0,
+      1120.0,
+      969.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      618.0,
+      973.0,
+      1121.0,
+      1138.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      620.0,
+      1140.0,
+      1120.0,
+      1233.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      1235.0,
+      1120.0,
+      1376.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      619.0,
+      1379.0,
+      1122.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      124.0,
+      110.0,
+      604.0,
+      156.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      160.0,
+      605.0,
+      251.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      105.0,
+      254.0,
+      605.0,
+      419.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      422.0,
+      606.0,
+      586.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      105.0,
+      589.0,
+      605.0,
+      707.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      709.0,
+      605.0,
+      873.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      876.0,
+      604.0,
+      945.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      948.0,
+      606.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      1044.0,
+      605.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      104.0,
+      1163.0,
+      606.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      105.0,
+      1330.0,
+      606.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      634.0,
+      111.0,
+      1118.0,
+      156.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      619.0,
+      160.0,
+      1120.0,
+      371.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      619.0,
+      374.0,
+      1120.0,
+      491.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Question Generation and Annotation Criteria",
+    "page": 14,
+    "bbox": [
+      104.0,
+      105.0,
+      816.0,
+      135.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      156.0,
+      1119.0,
+      229.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.1 Purpose",
+    "page": 14,
+    "bbox": [
+      105.0,
+      262.0,
+      276.0,
+      288.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      102.0,
+      303.0,
+      1119.0,
+      376.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2 Core Definitions",
+    "page": 14,
+    "bbox": [
+      105.0,
+      409.0,
+      372.0,
+      435.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      450.0,
+      1119.0,
+      499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      530.0,
+      1119.0,
+      579.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      102.0,
+      610.0,
+      1118.0,
+      659.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.3 Reasoning Types",
+    "page": 14,
+    "bbox": [
+      105.0,
+      693.0,
+      379.0,
+      720.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      733.0,
+      1120.0,
+      783.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      815.0,
+      1120.0,
+      862.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      104.0,
+      881.0,
+      1119.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      102.0,
+      943.0,
+      867.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      980.0,
+      995.0,
+      1005.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.4 Financial Topic Categories",
+    "page": 14,
+    "bbox": [
+      105.0,
+      1038.0,
+      492.0,
+      1064.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      1078.0,
+      1118.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.5 Complexity-Level Definitions",
+    "page": 14,
+    "bbox": [
+      104.0,
+      1161.0,
+      522.0,
+      1188.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      103.0,
+      1201.0,
+      1080.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      1258.0,
+      1120.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      101.0,
+      1362.0,
+      1121.0,
+      1484.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      211.0,
+      108.0,
+      1008.0,
+      502.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 8: Topic-reasoning matrix from the FinRank question-generation methodology. The matrix is prescriptive: it specifies the (topic, reasoning type) cells that the dataset is expected to populate.",
+    "page": 15,
+    "bbox": [
+      105.0,
+      521.0,
+      1119.0,
+      571.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      607.0,
+      1121.0,
+      754.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.6 Query Rewrite Rules",
+    "page": 15,
+    "bbox": [
+      105.0,
+      779.0,
+      428.0,
+      807.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      820.0,
+      1119.0,
+      891.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      902.0,
+      570.0,
+      925.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      936.0,
+      648.0,
+      961.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      104.0,
+      972.0,
+      1118.0,
+      1021.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.7 Passage Coverage Requirements",
+    "page": 15,
+    "bbox": [
+      104.0,
+      1047.0,
+      558.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      1086.0,
+      1121.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.8 Implementation Guidelines",
+    "page": 15,
+    "bbox": [
+      104.0,
+      1187.0,
+      498.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      102.0,
+      1226.0,
+      1119.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      1284.0,
+      671.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      1320.0,
+      834.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      103.0,
+      1354.0,
+      695.0,
+      1378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      104.0,
+      1388.0,
+      703.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      104.0,
+      1423.0,
+      912.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      104.0,
+      1458.0,
+      683.0,
+      1482.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.9 Related Resources",
+    "page": 16,
+    "bbox": [
+      104.0,
+      108.0,
+      397.0,
+      134.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      102.0,
+      147.0,
+      1121.0,
+      293.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.10 What the Methodology Does and Does Not Guarantee",
+    "page": 16,
+    "bbox": [
+      103.0,
+      319.0,
+      841.0,
+      347.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      101.0,
+      360.0,
+      1122.0,
+      528.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B Record Schema",
+    "page": 16,
+    "bbox": [
+      102.0,
+      563.0,
+      385.0,
+      592.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      103.0,
+      612.0,
+      595.0,
+      636.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      216.0,
+      652.0,
+      1006.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 9: Top-level schema of a FinRank record.",
+    "page": 16,
+    "bbox": [
+      399.0,
+      1181.0,
+      822.0,
+      1204.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      124.0,
+      1232.0,
+      1041.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      214.0,
+      1276.0,
+      1006.0,
+      1406.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 10: Schema of an entry in the passages array.",
+    "page": 16,
+    "bbox": [
+      375.0,
+      1428.0,
+      845.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      215.0,
+      106.0,
+      1005.0,
+      347.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 11: Schema of an entry in the hard negatives array.",
+    "page": 17,
+    "bbox": [
+      345.0,
+      369.0,
+      875.0,
+      393.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C Canonical Label Normalization Mapping",
+    "page": 17,
+    "bbox": [
+      103.0,
+      444.0,
+      743.0,
+      477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      103.0,
+      508.0,
+      1120.0,
+      582.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      106.0,
+      614.0,
+      1117.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 12: Canonical label normalization mapping applied in curating the release. Changed values are preserved in parallel <field>_raw fields.",
+    "page": 17,
+    "bbox": [
+      103.0,
+      1058.0,
+      1119.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      101.0,
+      1147.0,
+      1121.0,
+      1486.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D Example Record",
+    "page": 18,
+    "bbox": [
+      104.0,
+      104.0,
+      401.0,
+      135.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      103.0,
+      155.0,
+      1120.0,
+      251.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      107.0,
+      275.0,
+      876.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E Reasoning-Type Examples",
+    "page": 18,
+    "bbox": [
+      104.0,
+      1111.0,
+      537.0,
+      1143.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      103.0,
+      1162.0,
+      1119.0,
+      1257.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Accounting interpretation",
+    "page": 18,
+    "bbox": [
+      121.0,
+      1280.0,
+      348.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      601.0,
+      1520.0,
+      625.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      117.0,
+      1102.0,
+      160.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Risk-disclosure comparison",
+    "page": 19,
+    "bbox": [
+      120.0,
+      218.0,
+      360.0,
+      238.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      785.0,
+      219.0,
+      1103.0,
+      239.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      241.0,
+      1104.0,
+      280.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      282.0,
+      1105.0,
+      341.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      343.0,
+      1103.0,
+      401.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      404.0,
+      1103.0,
+      445.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Quantitative extraction",
+    "page": 19,
+    "bbox": [
+      120.0,
+      502.0,
+      328.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      731.0,
+      503.0,
+      1104.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      526.0,
+      961.0,
+      545.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      548.0,
+      1102.0,
+      607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      609.0,
+      1102.0,
+      649.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      123.0,
+      652.0,
+      1103.0,
+      692.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Business-segment identification",
+    "page": 19,
+    "bbox": [
+      119.0,
+      748.0,
+      394.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      677.0,
+      750.0,
+      1103.0,
+      770.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      772.0,
+      1103.0,
+      811.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      814.0,
+      1103.0,
+      872.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      121.0,
+      874.0,
+      1103.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      121.0,
+      916.0,
+      1103.0,
+      957.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Legal / regulatory interpretation",
+    "page": 19,
+    "bbox": [
+      119.0,
+      1015.0,
+      409.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      761.0,
+      1016.0,
+      1103.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      1038.0,
+      1104.0,
+      1078.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      1080.0,
+      1102.0,
+      1139.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      1140.0,
+      1104.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      1202.0,
+      1105.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Shareholder-return analysis",
+    "page": 19,
+    "bbox": [
+      120.0,
+      1299.0,
+      364.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      663.0,
+      1300.0,
+      1103.0,
+      1320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      119.0,
+      1323.0,
+      1104.0,
+      1404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      118.0,
+      1406.0,
+      1106.0,
+      1463.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      119.0,
+      118.0,
+      1103.0,
+      161.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F Example Prompt Templates",
+    "page": 20,
+    "bbox": [
+      104.0,
+      223.0,
+      561.0,
+      256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      103.0,
+      274.0,
+      1119.0,
+      323.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.1 LLM-Based QA Prompt",
+    "page": 20,
+    "bbox": [
+      104.0,
+      350.0,
+      462.0,
+      378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      103.0,
+      390.0,
+      802.0,
+      511.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      105.0,
+      654.0,
+      183.0,
+      676.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.2 RAG-with-Citations Prompt",
+    "page": 20,
+    "bbox": [
+      103.0,
+      706.0,
+      513.0,
+      733.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      102.0,
+      745.0,
+      801.0,
+      866.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      105.0,
+      937.0,
+      269.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      104.0,
+      1057.0,
+      340.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.3 Hard-Negative Discrimination Prompt",
+    "page": 20,
+    "bbox": [
+      102.0,
+      1107.0,
+      629.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      102.0,
+      1149.0,
+      781.0,
+      1244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      124.0,
+      1269.0,
+      730.0,
+      1315.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      124.0,
+      1317.0,
+      739.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      103.0,
+      1387.0,
+      746.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      103.0,
+      1434.0,
+      320.0,
+      1459.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      599.0,
+      1520.0,
+      624.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      103.0,
+      230.0,
+      215.0,
+      253.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G Reproducibility Notes",
+    "page": 21,
+    "bbox": [
+      103.0,
+      293.0,
+      482.0,
+      324.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      101.0,
+      345.0,
+      1121.0,
+      467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      101.0,
+      495.0,
+      1121.0,
+      690.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "H Cross-Tabulation Tables",
+    "page": 21,
+    "bbox": [
+      103.0,
+      726.0,
+      510.0,
+      756.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      100.0,
+      776.0,
+      1120.0,
+      874.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      105.0,
+      894.0,
+      1118.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 13: Cross-tabulation of industry by topic on the canonical normalized labels.",
+    "page": 21,
+    "bbox": [
+      243.0,
+      1039.0,
+      977.0,
+      1064.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      434.0,
+      1114.0,
+      791.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 14: Cross-tabulation of industry by document type on the canonical normalized labels.",
+    "page": 21,
+    "bbox": [
+      201.0,
+      1275.0,
+      1020.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      100.0,
+      1362.0,
+      1122.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      599.0,
+      1520.0,
+      625.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      446.0,
+      110.0,
+      778.0,
+      226.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 15: Cross-tabulation of filing year by document type on the canonical normalized labels. The Unknown entry is a record whose raw doc_type names multiple source documents and cannot be attributed to a single filing.",
+    "page": 22,
+    "bbox": [
+      101.0,
+      247.0,
+      1119.0,
+      295.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      385.0,
+      321.0,
+      839.0,
+      459.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 16: Cross-tabulation of passage type by reasoning type on the canonical normalized labels.",
+    "page": 22,
+    "bbox": [
+      183.0,
+      480.0,
+      1036.0,
+      505.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      389.0,
+      529.0,
+      835.0,
+      670.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 17: Cross-tabulation of difficulty by reasoning type on the canonical normalized labels. The qualitative-to- quantitative skew is present at every difficulty level.",
+    "page": 22,
+    "bbox": [
+      101.0,
+      690.0,
+      1119.0,
+      740.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      781.0,
+      1121.0,
+      855.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I Dataset Card",
+    "page": 22,
+    "bbox": [
+      103.0,
+      889.0,
+      345.0,
+      919.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      939.0,
+      1121.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      1039.0,
+      1120.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      1162.0,
+      1121.0,
+      1236.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      1262.0,
+      1121.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      101.0,
+      1410.0,
+      1121.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      600.0,
+      1520.0,
+      625.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      101.0,
+      111.0,
+      1121.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      101.0,
+      257.0,
+      1120.0,
+      355.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "J Baselines Reproduction",
+    "page": 23,
+    "bbox": [
+      103.0,
+      389.0,
+      493.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      102.0,
+      440.0,
+      1120.0,
+      488.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      104.0,
+      577.0,
+      887.0,
+      726.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      789.0,
+      289.0,
+      813.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      834.0,
+      558.0,
+      858.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      873.0,
+      813.0,
+      897.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      914.0,
+      762.0,
+      938.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      954.0,
+      1119.0,
+      1002.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      123.0,
+      1016.0,
+      933.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      103.0,
+      1061.0,
+      1120.0,
+      1158.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      599.0,
+      1519.0,
+      625.0,
+      1540.0
+    ]
+  }
+]

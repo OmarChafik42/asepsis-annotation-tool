@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "app_version": "1.0.0",
+  "session_id": "7b6b56b9-8f7e-4469-b9b0-7497e960236a",
+  "document_id": "doc-4c5c90c4818df4e7",
+  "filename": "ddb35d27_41b50400-a607-11f1-8b82-5f5342bdc0ca_origin.pdf",
+  "annotator_id": "anonymous",
+  "created_at": "2026-09-17T14:20:21.063Z",
+  "updated_at": "2026-09-17T14:21:00.073Z",
+  "finalised_at": "2026-09-17T14:21:00.073Z",
+  "status": "approved",
+  "active_seconds": 40,
+  "initial_state_sha256": "1dcff5a9878e66af8c0a80b688763ec894ca35ddeaedb8b0fa86e0c486e8b889",
+  "events_sha256": "d374fff8d34d79ce00c51df115e26034243587e9961a094673a961691675c7ce",
+  "final_state_sha256": "9dec73de3bb1514c1e63e43d29ca6ed774b74ac26db23918b378fcb6ce41543a",
+  "replay_valid": true,
+  "metadata": {
+    "document": "ddb35d27_41b50400-a607-11f1-8b82-5f5342bdc0ca",
+    "approval": {
+      "checklist": {
+        "checklist_version": "1.0",
+        "reviewed_all_pages": true,
+        "missing_spurious_regions_checked": true,
+        "boundaries_checked": true,
+        "types_checked": true,
+        "structure_checked": true,
+        "uncertainty_documented": true
+      },
+      "approval_note": "Only changed header hierarchy"
+    }
+  }
+}

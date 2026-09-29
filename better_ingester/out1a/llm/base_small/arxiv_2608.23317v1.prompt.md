@@ -1,0 +1,955 @@
+Below is a document converted to flat markdown. Its heading hierarchy was lost in conversion.
+
+TASK: recover the section headings and their nesting depth. Use only headings that literally appear in the text — do not invent, and do not include running heads or figure captions. Drop any leading numbering from the title itself. Level 1 is a top-level section.
+
+Output ONLY a JSON object of the form
+  {"headings": [{"title": "...", "level": 1}, ...]}
+in reading order, with no commentary before or after it.
+
+---- DOCUMENT ----
+Spicing up Genetic Netlist Generation with LLMs
+StefanUhlich1,YağızGençer1,2,AndreaBonetti1,
+ArunVenkitaraman1,Chia-YuHsieh1,EisakuOhbuchi3,LorenzoServadei1,4
+1 2 3 4
+SonyAI,Switzerland EPFL,Switzerland SonySemiconductorSolutions,Japan TUMunich,Germany
+Abstract whichdeterminesdevicesandinterconnections,andsizing,which
+Analog circuit topology synthesis remains challenging because setsparameterssuchastransistorwidthsandlengths.Forfixed
+useful designs occupy atiny fraction of a combinatorial search topologies, substantial progress has been made using Bayesian
+space,andsmallstructuralchangescaninducehighlynonlinear optimization[2,3],reinforcementlearning[4–7],andlargelan-
+changesinbehavior.Evolutionaryalgorithmsareattractivebecause guagemodels(LLMs)[8–10].Topologysynthesisremainsharder
+theycanoptimizeoverdiscretecircuittopologiesusingonlyblack- becauseitinvolvesdiscretestructuralchoicesandisstronglycou-
+boxevaluations,buttheyoftenrequiremanySPICEsimulations pledwithsizing.Consequently,manysuccessfulapproachesfocus
+andmayconvergeprematurely.WeintroduceLLM-SPICEMixer, onwell-studiedcircuitfamiliessuchasoperationalamplifiers[11–
+ahybridsynthesisframeworkthataugmentsgeneticnetlistgen- 15],filters[16–18],powerconverters[19–21],orothercommon
+erationwithIGEL(Inspiration-GuidedEvolutionwithLLMs),an circuitclasses[22–25].Thisleavesopenhowtosynthesizeuseful
+LLM-based proposal operator. During search, IGEL prompts an circuitsforlessstandardizedtasks,wherenocanonicaltopologyor
+LLMwithhigh-performingcircuitsfromtheelitesetandinstructs family-specificsearchspaceisavailable.
+ittogenerateanewSPICEnetlist,whichisthenevaluatedbySPICE Evolutionary algorithms are attractive for open-ended topol-
+andselectedusingthesamerewardmechanismasconventional ogy synthesis because they optimize candidate circuits directly
+geneticoperators.Thus,theLLMcontributesstructuredtopology through SPICE simulation. However, purely genetic search can
+proposalswhilesimulationremainsthesourceoftruth.Weevaluate requiremanyevaluationsandmayconvergeprematurely.LLMs
+LLM-SPICEMixeronachallengingbenchmarktask:synthesizing offeracomplementarycapability:theycangeneratestructuredtext
+transistor-levelcircuitsthatimplementadiscriminantfunctionfor andmaycaptureusefulregularitiesfromcircuitdescriptionsand
+Irisclassification.Comparedwiththegeneticframeworkwithout netlists.YetaskinganLLMtodesignacompletecircuitfromscratch
+LLMguidance,LLM-SPICEMixerimprovesthemedianfinaltrain- isunreliable,especiallyfornon-standardtaskswherememorized
+ingrewardby8.4%andthemedianvalidation-selectedtestreward templatesareunlikelytoapply.Thissuggestsahybridstrategy:
+by8.8%.Thebestvalidation-selectedcircuitachieves93.3%test usetheLLMnotasastandalonecircuitdesigner,butasaproposal
+accuracyatthenominalttcornerand85.9%averagetestaccuracy mechanisminsideasimulation-drivenevolutionaryloop.
+across17process,voltage,andtemperaturecorners. Motivatedbythisidea,weintroduceLLM-SPICEMixer,acir-
+cuitsynthesismethodthatextendsSPICEMixer[26]withIGEL,an
+CCSConcepts
+LLM-basedproposaloperatorforInspiration-GuidedEvolutionwith
+LLMs.Duringsearch,IGELsampleshigh-qualitycircuitsfromthe
+•Hardware→Electronicdesignautomation.
+elitesetandprovidesthemtotheLLMasinspirations.TheLLM
+thenproposesanewcandidatenetlist,whichisevaluatedbySPICE
+Keywords
+andselectedusingthesamerewardmechanismasconventionalge-
+Analogcircuitsynthesis,Geneticalgorithms,Largelanguagemod- neticoperatorssuchasmutation,crossover,andpruning.Thus,the
+els,SPICEnetlists,Analogdiscriminant-functionsynthesis LLMinjectsstructuredtopologyvariations,whileSPICEsimulation
+providestheperformanceevaluation.Thegoalisnottoreplace
+ACMReferenceFormat:
+StefanUhlich,YağızGençer,AndreaBonetti,ArunVenkitaraman,Chia-Yu geneticsearch,buttomakeitlesspronetoprematureconvergence
+Hsieh,EisakuOhbuchi,andLorenzoServadei.2026.SpicingupGenetic byaddinginformedanddiverseproposals.
+NetlistGenerationwithLLMs.In2026ACM/IEEEInternationalSymposium WeevaluateLLM-SPICEMixeronananalogdiscriminant-function
+onMachineLearningforCAD(MLCAD’26),September07–09,2026,Jeju synthesistaskbasedonIrisclassification.Thegoalistosynthe-
+Island,RepublicofKorea.ACM,NewYork,NY,USA,16pages.https://doi. sizeatransistor-levelcircuitwhoseinputvoltagesencodethefour
+org/10.1145/3831599.3840324
+Irisfeaturesandwhoseoutputvoltagesrepresentthethreeclass
+scores.Thistaskisusefulasabenchmarkbecauseitisspecifiedby
+1 Introduction data-dependentclassificationbehaviorratherthanstandardana-
+Analogcircuitdesignremainschallengingbecausesmallstructural logdesigntargets,andsuitabletopologiesarenotknownapriori.
+modificationscanleadtohighlynonlinearandnon-smoothchanges Thus,themethodmustdiscovercompacttransistor-levelstructures
+inbehavior[1].Circuitsynthesisrequiresbothtopologyselection, ratherthantuneaknowncircuittemplate.
+Insummary,thecontributionsofthispaperareasfollows:
+• WeintroduceLLM-SPICEMixer,ahybridsynthesismethodthat
+augmentsgeneticnetlistgenerationwithIGEL,anLLM-based
+ThisworkislicensedunderaCreativeCommonsAttribution4.0InternationalLicense.
+proposaloperatorthatgeneratescandidatecircuitsfromelite
+MLCAD’26,JejuIsland,RepublicofKorea
+©2026Copyrightheldbytheowner/author(s). netlistswithinaSPICE-drivenevolutionaryloop.
+ACMISBN979-8-4007-2878-5/2026/09
+https://doi.org/10.1145/3831599.3840324
+6202
+guA
+42
+]EN.sc[
+1v71332.8062:viXra
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+Figure1:OverviewofLLM-SPICEMixer:(a)LLM-augmentedgeneticcircuitoptimizationloop.(b)IGELpromptstheLLMwith
+inspirationcircuits,thenevaluatestheproposednetlistwithSPICE;itisaddedtotheelitesetifgoodenough.
+• Weproposeananalogdiscriminant-functionsynthesisbench- 3 LLM-SPICEMixer
+markbasedontheIrisdatasetanduseittoevaluateopen-ended WefirstbrieflyreviewSPICEMixer[26].WethenintroduceIGEL,
+transistor-leveltopologysynthesis. ourLLM-basedproposaloperator,whichenrichestheelitesetdur-
+• Wepresentanempiricalstudyofpromptingstrategies,decoding inggeneticsearch.TheoverallsystemisillustratedinFig.1.
+settings,modelchoices,andoperatormixtures,showingthat
+IGELimprovessearchperformancewhenusedasacomplement
+3.1 RecapofSPICEMixer
+toconventionalgeneticoperators.
+Thepaperisorganizedasfollows.Sec.2reviewsrelatedwork.Sec.3 SPICEMixerisacircuitsynthesismethodbasedonageneticalgo-
+introducesLLM-SPICEMixerandIGEL.Sec.4describestheanalog rithmthatevolvesSPICEnetlistsdirectly.Ratherthanrelyingon
+discriminant-functionsynthesistaskandevaluationsetup.Sec.5 anabstractgraphrepresentationorahand-craftedchromosome
+presentsresults,includingbaselinecomparisonsandablations.Fi- encoding,ittreatsthenetlistitselfasthegenome.Thismakesthe
+nally,Sec.6concludesandoutlinesfuturework. methodnaturallycompatiblewitharbitrarycomponentsandsub-
+circuits,andthereforeeasytoadapttodifferentcircuitlibrariesand
+processdesignkits.
+SPICEMixerrepeatedlyappliesoneofthreeproposaloperators
+2 RelatedWork
+togeneratenewcandidatecircuits.Thefirstoperatoriscrossover,
+Analogdesignautomationhasseenstrongprogressforsizingfixed
+whichcombinestwoelitenetlistslinebyline.Thesecondoperatoris
+topologiesusingBayesianoptimization,reinforcementlearning,
+mutation,whichcombinesoneelitenetlistwitharandomlysampled
+and,morerecently,LLM-basedoptimization[2–10].Topologysyn-
+netlist to introduce new structural variations while preserving
+thesisismorechallenging:earlyworkreliedonevolutionarysearch
+usefulpartsofastrongparent.Thethirdoperatorispruning,which
+andgeneticprogrammingforjointtopology-and-sizingoptimiza-
+merges compatible component definitions so that the resulting
+tion[16–18],whilerecentmethodsoftenfocusonspecificcircuit
+circuitcanbecomesmallerandmorecompact.
+families, particularly operational amplifiers and power convert-
+EachnewlygeneratednetlististhenevaluatedbySPICEsimula-
+ers[11–15,19,21].Otherapproachesaddressmoregeneralcircuit
+tionunderatask-specifictestbench,anditsperformanceismapped
+generation using graph-based, generative, or LLM-based meth-
+toascalarrewardthatservesasthefitnessvalue.SPICEMixermain-
+ods[20,22–25,27].AgenticLLMframeworkssuchasAnalogA-
+tainsanelitesetcontainingthebestcircuitsfoundsofar,andparent
+gent[28]havealsointroducedmulti-agentworkflowsforiterative
+circuitsaresampledfromthissetusingarank-basedroulette-wheel
+analog circuit generation. These methods typically use learned
+strategy.Thisbiasesthesearchtowardhigh-qualitysolutionswhile
+modelsorLLMsasprimarygeneratorsordesignagents,whereas
+stillpreservingdiversity.
+ourapproachusestheLLMonlyasoneproposaloperatorinsidea
+geneticsearch.
+AseparatelineofworkintegratesLLMsintoevolutionarysearch. 3.2 Inspiration-GuidedEvolutionwithLLMs
+FunSearchandrelatedsystemsuseanLLMtoproposecandidates Becausecircuitscanberepresentedasnetlists,LLMsareanatural
+thatareevaluatedandselectedwithinaniterativesearchloop[29– choiceforcircuitsynthesis.However,theireffectivenessdepends
+35].Ourmethodfollowsthisparadigm,buttransfersittotransistor- stronglyonhowtheyareused.OneoptionistoasktheLLMto
+levelanalogsynthesis:itbuildsonSPICEMixer[26],whichevolves generateacompletecircuitdirectly,asinAnalogCoder[23]and
+SPICEnetlistsdirectly,andextendsitwithIGEL,anLLM-basedpro- AnalogCoder-Pro[24].Inoursetting,however,thisstrategyisoften
+posaloperatorthatgeneratescandidatesfromelitenetlists.Incon- ineffective.Ourgoalistodiscovernovelcircuittopologiesfrom
+trasttogeneralprogram-searchsystems,ourcandidatesarephysi- uncommoncircuitfamilies,andinsuchcasesthemodeloftenre-
+calcircuitswhosequalitymustbedeterminedbySPICEsimulation producesthesamecanonicalsolution[37,38],evenacrossmultiple
+undertask-specifictestbenchesandprocesscorners.Relateduses interactionroundsandevenwhengivenfeedbackoncircuitper-
+ofLLM-generatedSPICEnetlistsalsoappearinSpiceFuzz[36],but formanceaswewillshowinSec.5.6.Althoughsomemethodscan
+therethegoalissimulatorfuzzingratherthanreward-drivenfunc- mitigatethisbehavior[39],itremainsagenerallimitation.Another
+tionalsynthesis.Tothebestofourknowledge,LLM-SPICEMixer possibilitywouldbetousetheLLMasaverificationtool,eitheras
+isthefirstmethodtoembedLLM-generatednetlistproposalsinto apre-checkbeforeSPICEsimulationorasasurrogatemodelfor
+anevolutionaryloopforanalogcircuitsynthesis. estimatingcircuitquality.Weexpectthistobeunreliableaswell,
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+becausethemodelwouldneedtoassessnovelcircuitsfornovel •“raw”vs.“diff”.Inthe“raw”setting,theLLMgeneratesacomplete
+taskssolelyfromtheirnetlists. candidatenetlist.Inthe“diff”setting,theLLMspecifiesonlythe
+WethereforeusetheLLMasaproposaloperatorwithinagenetic linesthatshouldbechangedrelativetoagivenbasenetlist.
+searchprocess,whichwecallIGEL.Inthissense,theLLMisused •“withreasoning”vs.“withoutreasoning”.Inthe“withreasoning”
+inamannerconceptuallysimilartocoding-agentsystemssuchas setting,thepromptaskstheLLMtofirstanalyzethegiveninspira-
+AlphaEvolve[34].SinceLLMsarestrongatcodegeneration,we tionsanddescribeamodificationstrategybeforegeneratingthe
+expectthemtobewellsuitedforproposingnewcandidatenetlists, output.Inthe“withoutreasoning”setting,theLLMisinstructed
+especiallywhendiversepromptformulationsareused.Toreduce toproducetheoutputdirectly,withoutanexplicitplanningstep.
+generation collapse, we do not rely on IGEL alone. Instead, we Thesetwodesignchoicesresultinfourprompttemplates.InAppx.A,
+combineitwiththeoriginalSPICEMixeroperators—crossover,mu- Fig.4andFig.5showexamplepromptstogetherwiththecorre-
+tation,andpruning—asshowninFig.1a.Inthisway,thedifferent spondingLLMoutputs.
+operatorscancomplementoneanother,sinceeachofthemcan Weexpectbothexplicitreasoningandedit-basedgenerationto
+furtherrefineasolutionthatwasproducedbyanotheroperatorin improveperformance.AskingtheLLMtoanalyzetheinspiration
+anearlierstep. circuitsbeforeproposinganewnetlistmayhelpitidentifyuseful
+structuralpatterns.Likewise,the“diff”formatiswellsuitedtoge-
+neticsearchbecauseitencouragessmaller,morelocalmodifications
+GeneralApproach. Fig.1billustratesouruseoftheLLM.Fromthe
+ofhigh-qualitycircuits.Basedonthisintuition,prompttemplates
+currenteliteset,whichcontainsthebestsolutionsfoundsofar,we
+withreasoningandstructurededitsappeartobestrongcandidates,
+sample𝐾 =3netlistsusingrank-basedroulette-wheelsampling.
+althoughthebestdesignremainsanempiricalquestion.Asshown
+Wepopulateaprompttemplatewiththesenetlistsandtheirreward
+inSec.5.3,explicitreasoningisparticularlybeneficial,whereas
+scores,andpasstheresultingprompttotheLLM.Themodelthen
+the difference between “raw” and “diff” is comparatively small.
+analyzesthegivencircuitsand,whenrequestedbytheprompt,
+Overall,thebestperformanceisobtainedbyanalternatingscheme
+firstproducesashortplandescribinghowtheyshouldbemodified.
+thatcyclesbetweenthereasoning-based“raw”and“diff”formats,
+Itsubsequentlyoutputsanewcandidatenetlist.Weextractthis
+suggestingthattheadditionaldiversityintroducedbyusingtwo
+netlistfromtheLLMresponseandevaluateitinaSPICEtestbench.
+promptstylesisadvantageous.
+NetlistPreprocessing. Weapplytwopreprocessingstepstoimprove 4 AnalogDiscriminant-FunctionSynthesis
+theeffectivenessofthemethod.First,weidentifyandremovecir-
+WeevaluateLLM-SPICEMixeronthesynthesisofananalogcircuit
+cuitsthatsharethesametopologyanddifferonlyinparameter
+thatimplementsadiscriminantfunctionfortheIrisclassification
+values.ByensuringthattheLLMonlyseesstructurallydistinct
+task[41].Thisisaninterestingnon-standardsynthesisproblem,
+inspirations,weencourageittoproposetopologicalmodifications
+becausetheobjectiveisnottoreproduceaknowncircuitclass,
+ratherthanmerelyadjusttransistorsizes.Inpreliminaryexperi-
+buttorealizeaclassifierdirectlyasananalogcircuit.Hence,IGEL
+ments,weobservedthatwithoutthisstep,thegeneticalgorithm
+cannotrelyonmemorizedsolutionsfromtheLLM,butmustinstead
+oftenconvergedprematurelytoanelitesetcontainingonlyasingle
+inferusefulpatternsfromtheinspirations.
+topologywithminorsizingvariations,manyofwhichwerepro-
+ducedbyIGEL.Oncethisoccurred,thesearchrarelyrecoveredfrom
+theresultingcollapseandoftenfailedtodiscoverbettercircuits. 4.1 TaskSetup
+Second,ratherthanprovidingtheoriginalnetlistsdirectly,we ToimplementthediscriminantfunctionfortheIrisdataset,the
+convert PDK-specific transistor instances, in our case from the circuithasfourinputnetscorrespondingtothefourIrisfeatures
+SkyWaterPDK[40],intoasimplifiedMOSrepresentation.Inthis (sepallength(cm),sepalwidth(cm),petallength(cm),andpetalwidth
+process,weremovetheexplicitbulkconnectionandrenamenets (cm)), and three output nets corresponding to the three classes
+tomoredescriptivenames,forexamplenet_supply_0tonet_vdd (setosa,versicolor,andvirginica).Allfourfeaturesarenormalized
+and0tonet_gnd.Forexample,theline bymin-maxscalingcomputedonthetrainingset.Duringcircuit
+X6 net_internal_1 net_internal_0 net_supply_0 net_supply_0 evaluation, the normalized feature values are mapped to input
++ sky130_fd_pr__pfet_01v8 w=20 l=1 voltagesintherange [0𝑉,1.8𝑉].Foragiveninputsample,the
+predictedclassisdeterminedbytheoutputnodewiththehighest
+isrewrittenas
+voltage.
+M6 net_internal_1 net_internal_0 net_vdd PMOS w=20 l=1 WeusethestandardIrisdataset,whichcontains150samples.
+Thedataaresplitintotraining,validation,andtestsetsusinga
+Thispreprocessingreducespotentialconfusioncausedbyuncom-
+stratified 60/20/20 split, yielding 90 training samples, 30 valida-
+moncomponentandnetnamesthatmayhavebeenunderrepre-
+tionsamples,and30testsamples.Thissplitisusedsuchthatthe
+sentedduringLLMtraining.Italsoremovesambiguities,forexam-
+searchoptimizesthetrainingreward,thevalidationsetisusedto
+plewhen0couldrefereithertogroundortoaparametervalue.
+selectthebestcircuitsfoundduringthesearch,andthetestsetis
+reservedexclusivelyforfinalevaluation.Toevaluateacandidate
+PromptTemplates. Toanalyzetheeffectofpromptingonsynthesis circuitefficiently,wepresentallsamplesfromthetrainingand
+performance,wecompareprompttemplatesthatvaryalongtwo validationsplitswithinasingletransientsimulation.Eachfeature
+dimensions: isappliedthroughapiecewise-linearvoltagesource.Eachsampleis
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+presentedfor8ns,andthecircuitoutputsarereadattheendofthis correctly,inputnetsareconnectedonlytotransistorgates,no
+timewindow.Toreduceartifactscausedbyafixedsampleorder, floatingnetsexist,outputnetsareconnectedonlytotransistor
+weshuffleeachsplitthreetimeswithdifferentrandomseedsand drainorsourceterminals,andsupplyorgroundnetsarenot
+concatenatetheresultingsequences.Thisproduceslongerinput connectedtotransistorgates.
+streamswhilepreservingtheclassdistribution.Thesameshuffling- • Size penalty. A penalty of 0.0025×𝑁 transistors is subtracted to
+and-concatenationprocedureisappliedtotheheld-outtestsplit favorsmallercircuits,where𝑁 denotesthenumberof
+transistors
+duringfinalevaluation. transistorsinthenetlist,thatis,thenumberofnetlistlines.
+ThesynthesizedcircuitsarebuiltentirelyfromSkyWatertran- Allrewardvaluesreportedinthispaperarepenalizedrewards,
+sistors[40].Inadditiontothetopology,thatis,thetransistorinter- includingboththevalidityandsizepenaltiesdescribedabove.
+connectionpattern,thesearchspacealsoincludestransistorwidth Foreverycandidate,wecomputetrainingandvalidationrewards
+andlengthascontinuousparametersforeachdevice.Weattacha foreachcornerandthenaveragethemoverall17corners.The
+smalloutputloadcapacitanceof10fFtoeachoutputnodetomodel geneticsearchusestheaveragedtrainingrewardasthefitnessvalue,
+theinputcapacitanceofasubsequentstage. whiletheaveragedvalidationmetricisrecordedandlaterusedto
+selectthecircuitwiththehighestvalidationreward.Thisfollows
+4.2 RewardandMulti-CornerEvaluation standardmachinelearningpracticeandhelpsreduceoverfittingto
+EachcandidatenetlistisevaluatedwithNgspice[42]undermul- thetrainingsplit.Ifasimulationfailsortheoutputtracescannot
+tipleprocess,voltage,andtemperatureconditions.Weconsider beparsedcorrectly,thecandidatereceivesarewardof−1,which
+onenominalcorner,ttat1.8Vand25◦C,and16extremecorners discouragesinvalidcircuits.
+formedbyallcombinationsofprocesscornersff,ss,sf,andfs,
+supplyvoltages1.62Vand1.98V,andtemperatures0◦Cand85◦C. 5 Results
+Intotal,eachcircuitisevaluatedon17corners,andtheresults Intheexperimentsbelow,IGELdenotestheconcreteinstantiation
+are averaged. This encourages the search to find solutions that ofourLLM-basedproposaloperatorwithinLLM-SPICEMixer.At
+arerobustacrossoperatingconditionsandreducestheriskthat eachIGELstep,wesample𝐾 = 3high-qualitycircuitsfromthe
+acircuitperformswellonlybecauseofartifactsoftheidealized currentelitesetusingrank-basedroulette-wheelsampling,pre-
+SPICEcompactmodels. processthemintoasimplifiedMOSrepresentation,andprovide
+Foreachsample,theidealoutputisaone-hotvoltagevector: themtotheLLMasinspirations.Themodelthenproposesonenew
+thecorrectclassshouldbecloseto1.8V,whilethetwoincorrect candidatenetlist,whichisconvertedbacktotheSkyWaterPDKrep-
+classesshouldbecloseto0V.Lety𝑖 ∈ R3 denotethesimulated resentation,evaluatedbySPICE,andinsertedintotheevolutionary
+outputvoltagesforsample𝑖,andlett𝑖 ∈ {0V,1.8V}3denotethe search.Unlessstatedotherwiseintheablationstudies,weusethe
+correspondingone-hottarget.Foronedatasplitandonecorner,we followingIGELconfiguration:reasoning-enabledpromptswithan
+definetherewardas𝑅 = 2 1(𝐴+𝑀),where𝐴istheclassification alternating“raw”/“diff”format(cf.,Sec.5.3),balanceddecoding(cf.,
+accuracy, Sec.5.4),andQwen3.527Bastheproposalmodel(cf.,Sec.5.5).Each
+1 ∑︁ 𝑁 (cid:20) (cid:21) synthesisrunisexecutedfor131,072proposalsteps,whereeach
+𝐴=
+𝑁
+1 argm
+𝑗
+ax𝑦
+𝑖,𝑗
+=argm
+𝑗
+ax𝑡
+𝑖,𝑗
+, (1) stepgeneratesandevaluatesonecandidatecircuit.Thefourpro-
+𝑖=1 posaloperatorsaresampledwithrelativeweights1:1:1:0.5for
+and𝑀isthetarget-voltagescore, crossover,mutation,pruning,andIGEL,respectively.Thus,IGELis
+invokedonlyhalfasoftenaseachconventionaloperator,reducing
+1 ∑︁ 𝑁 thecomputationalcostofLLMinference.
+𝑀 =1−
+3𝑁
+∥y𝑖−t𝑖∥
+1
+. (2)
+Forallexperiments,weusevLLM[43]toservetheLLMsonGPU
+𝑖=1
+servers.Modelswithupto12Bparameters(Gemma3270M,1B,4B,
+Here,𝑁isthenumberofsamplesinthesplit,includingtherepeated
+and12B,aswellasQwen3.59B)arerunonAda6000GPUs,whereas
+shuffledsequencesdescribedabove,and∥.∥1 denotesthe1-norm.
+largermodels(Gemma327BandQwen3.527B)arerunonH200
+Themaximumpossiblerewardistherefore𝑅=1,whileinpractice
+GPUs.Toreducestatisticalnoise,eachmethodorconfigurationis
+𝑅issmaller.Thefirstterm,𝐴in(1),rewardscorrectpredictions.
+evaluatedovernineindependentruns.
+Thesecondterm,𝑀 in(2),rewardslargevoltageseparationby
+WefirstcompareLLM-SPICEMixerwiththebaselinethatdoes
+encouragingthecorrectoutputtomovetowardthesupplyvoltage
+notuseIGEL,namelySPICEMixer,andshowthatIGELsubstan-
+andtheincorrectoutputstowardground.Thisisimportantbe-
+tiallyimprovesperformance.Wethencomparethebestsynthesized
+causetwocircuitscanachievethesameaccuracywhileexhibiting
+circuitswithstandardmachinelearningbaselines,specificallylogis-
+verydifferentoutputconfidence.Toobtainarobustclassifier,we
+ticregressionandasingle-hidden-layerMLP.Finally,weperform
+thereforeseekalargeoutputseparationscore𝑀.
+ablationstudiestoisolatetheeffectofthemaindesignchoicesin
+Furthermore,weapplytwoadditionalrewardpenaltiestoguide
+LLM-SPICEMixer,includingtheprompttemplate,decodingset-
+thesearchtowardcompactcircuitsthatarenotonlyfunctionalbut
+tings,andmodelfamilyandsize.
+alsophysicallyplausible:
+• Validitypenalty.Apenaltyof0.05isappliedforeachviolated
+structuralvaliditycheckandmaythereforebeincurredmultiple 5.1 ComparisonwithEvolutionaryBaselines
+timesbythesamenetlist.Thesechecksrequirethatallthree WefirstcompareLLM-SPICEMixeragainsttwoevolutionarybase-
+outputnetsarepresent,transistorbulkterminalsareconnected lines.ThefirstisGraCoES[27],whichusesagraphneuralnetwork
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+Table 1: Final best training reward for different methods.
+Valuesarecomputedovernineindependentruns.
+GraCoES[27] SPICEMixer[26] LLM-SPICEMixer
+Average±Std.Dev. 0.588±0.022 0.737±0.031 0.799±0.039
+Minimum 0.558 0.668 0.719
+Median 0.587 0.747 0.810
+Maximum 0.626 0.768 0.855
+Table2:Testrewardsobtainedbyselectingthecheckpoints
+withthehighestvalidationreward.Valuesarecomputedover
+nineindependentruns.
+Figure2:Trainingandvalidationrewardsofthebest-so-far
+circuitineachrun.Circuitsareselectedbytrainingreward GraCoES[27] SPICEMixer[26] LLM-SPICEMixer
+andthenevaluatedonvalidation.Eachrunuses131,072pro-
+Average±Std.Dev. 0.627±0.025 0.730±0.031 0.782±0.041
+posalsteps;thickerlinesindicatemediansovernineruns. Minimum 0.580 0.667 0.715
+Median 0.622 0.742 0.807
+(GNN)tosequentiallyconstructagraphrepresentationofthesyn-
+Maximum 0.670 0.773 0.824
+thesizedcircuit,whileanevolutionarystrategy(ES)[44]isused
+tooptimizetheGNNparameters.ThesecondbaselineisSPICE-
+Mixer[26],whichwasreviewedinSec.3.1. vdd
+Theevolutionoftherewardonthetrainingandvalidationsplits
+isshowninFig.2,andthefinaltrainingrewardsaresummarized input_2 X5 input_3 X4 X9 X6 X10
+inTab.1.GraCoESperformsworst:thesearchquicklystalls,and
+output_0 internal_0 output_1 internal_1 output_2
+weobservethatitproducescircuitswithhighlysimilartopolo-
+gies,leadingtogenerationcollapseandamedianrewardofonly X1 X0 X7 X3 X2 X8
+0.587.SPICEMixerperformssubstantiallybetter,achievingame-
+dianrewardof0.747.LLM-SPICEMixeryieldsthestrongestoverall
+gnd
+performance.Itimprovesthemedianrewardto0.810(+0.063over
+SPICEMixer) and also discovers the best overall circuit, with a Figure3:Schematicofthebestvalidationcircuitfoundby
+rewardof0.855(+0.087overthebestcircuitfoundbySPICEMixer).
+LLM-SPICEMixer.Thecircuitusesonlyinput_2andinput_3,
+Toassesswhetherthisimprovementisstatisticallysignificant, correspondingtopetallengthandpetalwidth,respectively.
+weperformaone-sidedunpairedpermutationtestontheresults The output nets output_0, output_1, and output_2 corre-
+of the nine independent runs. The test shows that the median spondtosetosa,versicolor,andvirginica.
+improvementof0.063isstatisticallysignificant,witha𝑝-valueof namelypetallengthandpetalwidth.Thisisconsistentwithprior
+0.0052.TheseresultsindicatethataddingtheLLM-basedproposal feature-contributionanalysesontheIrisdataset,whichidentify
+operatorsubstantiallyimprovesthesearchandleadstobetterfinal thesetwoattributesasthedominantcontributorstotheclassifica-
+solutions. tiondecision[45].Itisnotablethatthesynthesizedcircuitdiscovers
+Fig.2alsoshowstheevolutionoftherewardcurvesonthetrain- thisinputsubsetimplicitlyandachievesatrainaccuracyof93.4%,
+ingandvalidationsplits.Eachplotreportstherewardofthebest avalidationaccuracyof88.4%,andatestaccuracyof85.9%,as
+circuitfoundsofaraccordingtothetrainingsetandevaluatesthat discussedinmoredetailinthenextsection.Tobetterunderstand
+samecircuitonthevalidationset.WeobservethatLLM-SPICEMixer the circuit behavior, Fig. 8 in Appx. C shows the output wave-
+consistentlyoutperformsSPICEMixer,demonstratingthatIGEL formsforthettcorner,withthetransientsforthethreeshuffled
+benefitsthesynthesisprocess.Wealsoobserveatrain–validation versionsofthetestsplitoverlaid.Thecircuitbehavesrelatively
+gap:thefinalmedianrewardreaches0.81onthetrainingset,com- “statically,”whichisadvantageousbecauseitsresponsedoesnot
+paredtoapproximately0.77onthevalidationset.Nevertheless, dependstronglyonthecycleatwhichthesamplesarepresented.In
+theoverallrankingremainsunchanged,andLLM-SPICEMixeralso addition,theoutputsareclearlyseparated,indicatingalargeoutput
+producesthebestcircuitsonthevalidationsplit. separationandthusrobustnesstonoise.Forcompleteness,Fig.9
+Usingthevalidationreward,weselectthebestcircuitfromeach inAppx.Cshowsthecorrespondingwaveformsoverlaidacrossall
+runandevaluateitonthetestsplit.Tab.2summarizestheseresults. cornersandallshuffles.
+Again,LLM-SPICEMixerperformsbest,withamediantestreward Fig.7inAppx.Bpresentsthreeadditionalstrongcircuitsfound
+of0.807,whichis+0.065higherthanSPICEMixer. by LLM-SPICEMixer. Comparing them shows that our method
+Finally, Fig. 3 shows the schematic of the best circuit on the discoversdiversesolutionswithsubstantiallydifferenttopologies
+validation setfound by LLM-SPICEMixer. Thecomplete netlist, whilemaintaininggoodperformance.Sincethisisanon-standard
+includingtransistorsizes,isshowninFig.6inAppx.B.Because synthesistaskforwhichmemorizedcircuittemplatesareunlikely
+ofthesizepenaltyinourreward,theresultingcircuitiscompact toexist,thestrongperformanceofLLM-SPICEMixersuggeststhat
+whilestillperformingwellontheclassificationtask.Interestingly, theapproachcangeneralizetonoveltasks,whichisimportantfor
+thebestsolutioninFig.3usesonlytwoofthefouravailableinputs, practicalanalogdesign.
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+5.2 AccuracyandRobustness remaininasimilarrange.Overall,IGELdoesnotrequirehighly
+Toplacetheperformanceofthesynthesizedcircuitsintocontext, specializeddecodingsettings.Moderatestochasticityappearstobe
+wecomparethemwithtwostandardmachinelearningbaselines areasonabledefaultforthistask.
+implementedinscikit-learn[46]:
+• a regularized logistic regression classifier, implemented with 5.5 Ablation:ModelChoiceandSize
+LogisticRegression,and Finally,weexploredmodelfamilyandsizeusingGemma3[48]and
+• asingle-hidden-layerneuralnetworkwithfourhiddenunitsand Qwen3.5[49].TheresultsarereportedinTab.6inAppx.E.
+abatchsizeofeightimplementedwithMLPClassifier. Overall,performancedependsonbothmodelfamilyandsize.
+Thebestmodelsareselectedonthevalidationsetandthenevalu- WithinGemma3,largermodelsgenerallyperformbetter,although
+atedonceontheheld-outtestset. notstrictlymonotonicallyforeverystatistic.Acrossallmodels,
+Forevaluation,westudyrobustnesstoperturbationsoftheinput Qwen3.527Bperformsbest,reachingthehighestmedianandmaxi-
+voltages.Specifically,weaddGaussiannoiseN(0,𝜎2 I)toeachin- mumreward.ComparedwithGemma327B,itimprovesthemedian
+noise
+putsamplex𝑖 ∈R4with𝜎
+noise
+∈{0V,0.1V,0.2V,0.3V,0.4V,0.5V}. rewardby+0.05.Weattributethistooverallmodelquality,reflect-
+Foreachnoiselevel,wereportresultsaveragedover16independent ingtheadvantagesofanewermodelwithstrongerbenchmark
+noiserealizations.Thissetupmodelspracticalinputdistortions, performance.WethereforeuseQwen3.527BastheIGELmodelin
+suchassensornoise,whichcanleadtoslightlyperturbedvoltage themaincomparison.
+levels.Apracticallyusefulcircuitshouldthereforeberobustto Tobetterunderstandmodeldifferences,wealsoanalyzedre-
+suchvariations. sponselengthsinTab.8inAppx.F.Gemma3producesrelatively
+TheresultsareshownasboxplotsinFig.10inAppx.Dforboth shortoutputs,whereasQwengeneratessubstantiallylongerre-
+thenominalttcornerandthemulti-cornersetting.Inaddition, sponses,partlyduetoexplicitthinkingtokens.Inparticular,Qwen3.5
+Tab.3inAppx.Dreportsthecorrespondingtestaccuracies.Overall, 27Bgeneratesmuchlongerresponsesthantheothermodels.This
+thesynthesizedcircuitsshowadegradationtrendcomparableto mayindicatethatadditionaltest-timereasoningisuseful,although
+theMLbaselines.Inthenominalttsetting,thetwobestcircuitsare ourresultsshowonlycorrelation,notcausation.
+competitivewiththebaselinesandachievehighermedianaccuracy
+atseverallargernoiselevels.Wehypothesizethatthisisrelatedto 5.6 Ablation:OperatorMixture
+optimizingtherewardacrossmultiplecornersduringsynthesis.
+WefurtherablatewhetherIGELshouldreplacetheconventional
+SPICEMixeroperatorsorcomplementthem.Wecomparethede-
+5.3 Ablation:PromptingStrategy faultoperatormixtureagainstanIGEL-onlyvariantwithoutcrossover,
+WeexploredtheprompttemplatesintroducedinSec.3.2tounder- mutation,orpruning.TheIGEL-onlyvariantrunsfor18,816pro-
+standhowtheLLMqueryaffectssynthesis.Inadditiontofixed posalsteps,matchingtheLLM-callbudgetofonefullLLM-SPICE-
+templates,weevaluatedanalternatingschemethatswitchesbe- Mixerrun.Bothsettingsusethesamereasoning-enabledalternating
+tweenthe“raw”-styleand“diff”-styleprompts. “raw”/“diff”promptswith𝐾 =3inspirations.
+TheresultsoverninerunsusingGemma312Bareshownin TheresultsarereportedinTab.7inAppx.E.IGELaloneper-
+Tab.4inAppx.E.Overall,promptdesignmeasurablyaffectsthe formssubstantiallyworsethantheoperatormixture.Atthesame
+finalreward.Variantswithexplicitreasoningtendtoachievehigher proposalbudgetof18,816steps,themedianrewarddecreasesfrom
+medianrewardthanthosewithoutreasoning.Comparingthetwo 0.689to0.619.Thegapisevenlargerrelativetothelonger131,072-
+outputformats,the“diff”-stylepromptisslightlymorerobustthan stepoperator-mixturerunwiththesameLLM-callbudget,whose
+the“raw”-styleprompt,especiallywithoutreasoning.Thisisconsis- medianrewardis0.763.Notably,thebestIGEL-onlyrun(0.656)
+tentwithedit-basedoutputsencouraginglocalmodificationsofelite remainsbelowtheworstoperator-mixturerunatthesameproposal
+circuits,whichisadvantageousforgeneticalgorithms.Amongthe budget(0.665).TheseresultsshowthatIGELismosteffectiveas
+evaluatedsettings,thealternatingschemewithreasoningachieves acomplementaryproposaloperator:itinjectsusefulstructured
+thehighestmedianreward.TheseresultssuggestthatIGELissen- variations,whileconventionalgeneticoperatorsremainimportant
+sitivetohowthegenerationtaskisframed,andthatbetterprompt forlocalrefinement,recombination,andsearchdynamics.
+designmayfurtherimprovesearchperformance.
+6 ConclusionsandOutlook
+5.4 Ablation:DecodingSettings WeintroducedLLM-SPICEMixer,ahybridanalogcircuitsynthe-
+WealsoexploredseveralLLMdecodingsettingsinsteadoffixinga sismethodthataugmentsSPICEMixerwithIGEL,anLLM-based
+singlechoiceapriori.Inparticular,wevariedthesoftmaxtemper- proposaloperator.RatherthanaskingtheLLMtogeneratecircuits
+ature𝑇 andthetop-𝑝 probability𝑝 [47]tocoverarangefrom fromscratch,weuseittoproposenewcandidatenetlistsfromelite
+top
+nearlydeterministicdecodingtomorediversesampling.Theseset- solutionswithinageneticsearchloop.ThisenablestheLLMto
+tingscontrolthetrade-offbetweenoutputstabilityanddiversity contributestructuredvariations,whileSPICEsimulationremains
+andmaythereforeaffectproposalquality. thesourceoftruthforevaluatingcircuitquality.
+TheresultsoverninerunsusingGemma312BareshowninTab.5 Weevaluatedthemethodonanalogdiscriminant-functionsyn-
+inAppx.E.Weobservesomevariationacrosssettings,butlessthan thesisfortheIrisclassificationtask.TheresultsshowthatIGEL
+fortheprompttemplates.Thebalancedsettingwith𝑇 =0.7and improvessearchperformanceoverSPICEMixer,reducesprema-
+𝑝 top=0.9yieldsthehighestmedianreward,whiletheothersettings tureconvergence,andyieldscompacttransistor-levelcircuitswith
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+strongperformance.Ablationsshowthatpromptdesignandmodel [17] J.Hu,X.Zhong,andE.D.Goodman,“Open-endedrobustdesignofanalogfilters
+choiceareimportantinthissetting,whilethedecodingconfigura- usinggeneticprogramming,”inProceedingsofthe7thannualconferenceonGenetic
+tionhasacomparativelysmallereffect.
+andevolutionarycomputation,2005,pp.1619–1626.
+[18] Ž.Rojec,J.Olenšek,andI.Fajfar,“Analogcircuittopologyrepresentationfor
+Severaldirectionsremainforfuturework.First,thegapbetween automatedsynthesisandoptimization,”InformacijeMIDEM,vol.48,no.1,pp.
+trainingandvalidation/testrewardsuggeststhatimprovedreward 29–40,2018.
+[19] S.Fan,N.Cao,S.Zhang,J.Li,X.Guo,andX.Zhang,“Fromspecificationto
+designorexplicitregularizationcouldfurtherenhancegeneraliza-
+topology:Automaticpowerconverterdesignviareinforcementlearning,”in2021
+tion.Second,robustnesscouldbestrengthenedbyincorporating IEEE/ACMInternationalConferenceOnComputerAidedDesign(ICCAD). IEEE,
+noisyorperturbedinputsdirectlyduringsynthesisratherthanonly 2021,pp.1–9.
+[20] P.Vijayaraghavan,L.Shi,E.Degan,V.Mukherjee,andX.Zhang,“Autocircuit-rl:
+duringpost-trainingevaluation.Third,itwouldbeinterestingto Reinforcementlearning-drivenllmforautomatedcircuittopologygeneration,”in
+explorericherLLM-basedproposalstrategies,suchasverbalized InternationalConferenceonMachineLearning. PMLR,2025,pp.61498–61512.
+[21] J.Gao,Y.Zou,A.Pradhan,W.Huang,Y.Su,K.Yang,andX.Zhang,“Powergenie:
+sampling[39],self-reflectiverefinement[32,50],ormulti-stage
+Analytically-guidedevolutionarydiscoveryofsuperiorreconfigurablepower
+proposal-and-repairschemes[24,51]. converters,”arXivpreprintarXiv:2601.21984,2026.
+Overall,ourresultssuggestthatfornon-standardanalogsyn- [22] J.Gao,W.Cao,J.Yang,andX.Zhang,“Analoggenie:Agenerativeenginefor
+automaticdiscoveryofanalogcircuittopologies,”arXivpreprintarXiv:2503.00205,
+thesistasks,LLMsaremosteffectivenotasstandalonedesigners,
+2025.
+butasproposalgeneratorsembeddedwithinasimulation-driven [23] Y.Lai,S.Lee,G.Chen,S.Poddar,M.Hu,D.Z.Pan,andP.Luo,“Analogcoder:
+evolutionarysearchloop. Analogcircuitdesignviatraining-freecodegeneration,”inProceedingsofthe
+AAAIConferenceonArtificialIntelligence,vol.39,no.1,2025,pp.379–387.
+[24] Y.Lai,S.Poddar,S.Lee,G.Chen,M.Hu,B.Yu,P.Luo,andD.Z.Pan,“Analogcoder-
+pro:Unifyinganalogcircuitgenerationandoptimizationviamulti-modalllms,”
+References
+IEEETransactionsonComputer-AidedDesignofIntegratedCircuitsandSystems,
+[1] B.Razavi,DesignofAnalogCMOSIntegratedCircuits,2nded. McGraw-Hill 2026.
+Education,2017. [25] S.Kim,M.Kim,Y.Lee,andY.Kim,“Analogtobi:Device-levelanalogcircuit
+[2] W.Lyu,P.Xue,F.Yang,C.Yan,Z.Hong,X.Zeng,andD.Zhou,“Anefficient topologygenerationviabipartitegraphandgrammarguideddecoding,”arXiv
+bayesianoptimizationapproachforautomatedoptimizationofanalogcircuits,” preprintarXiv:2603.08720,2026.
+IEEETransactionsonCircuitsandSystemsI:RegularPapers,vol.65,no.6,pp. [26] S.Uhlich,A.Bonetti,A.Venkitaraman,C.-Y.Hsieh,Y.Gençer,M.E.Gürsoy,
+1954–1967,2017. R.Matsuo,andL.Servadei,“Spicemixer-netlist-levelcircuitevolution,”arXiv
+[3] T.Gu,J.Wang,Z.Bi,C.Yan,F.Yang,Y.Qin,T.Cui,andX.Zeng,“tss-bo:Scalable preprintarXiv:2506.01497,2025.
+bayesianoptimizationforanalogcircuitsizingviatruncatedsubspacesampling,” [27] S.Uhlich,A.Bonetti,A.Venkitaraman,A.Momeni,R.Matsuo,C.-Y.Hsieh,
+in2024Design,Automation&TestinEuropeConference&Exhibition(DATE). E.Ohbuchi,andL.Servadei,“Graco–agraphcomposerforintegratedcircuits,”
+IEEE,2024,pp.1–6. arXivpreprintarXiv:2411.13890,2024.
+[4] K.Settaluri,A.Haj-Ali,Q.Huang,K.Hakhamaneshi,andB.Nikolic,“Autockt: [28] Z.Bao,Z.Lin,J.Wang,J.Hu,Y.Gao,Y.Wu,X.Li,andX.Xu,“Analogagent:
+deepreinforcementlearningofanalogcircuitdesigns,”inProceedingsofthe23rd Self-improvinganalogcircuitdesignautomationwithllmagents,”arXivpreprint
+ConferenceonDesign,AutomationandTestinEurope,2020,pp.490–495. arXiv:2603.23910,2026.
+[5] H.Wang,K.Wang,J.Yang,L.Shen,N.Sun,H.-S.Lee,andS.Han,“Gcn-rl [29] B.Romera-Paredes,M.Barekatain,A.Novikov,M.Balog,M.P.Kumar,E.Dupont,
+circuitdesigner:Transferabletransistorsizingwithgraphneuralnetworksand F.J.R.Ruiz,J.S.Ellenberg,P.Wang,O.Fawzi,P.Kohli,andA.Fawzi,“Mathe-
+reinforcementlearning,”in202057thACM/IEEEDesignAutomationConference maticaldiscoveriesfromprogramsearchwithlargelanguagemodels,”Nature,
+(DAC). IEEE,2020,pp.1–6. vol.625,pp.468–475,2024.
+[6] A.F.Budak,P.Bhansali,B.Liu,N.Sun,D.Z.Pan,andC.V.Kashyap,“Dnn-opt: [30] F.Liu,X.Tong,M.Yuan,andQ.Zhang,“Algorithmevolutionusinglargelanguage
+Anrlinspiredoptimizationforanalogcircuitsizingusingdeepneuralnetworks,” model,”2023.
+inProceedingsofthe58thAnnualACM/IEEEDesignAutomationConference,2021, [31] F.Liu,X.Tong,M.Yuan,X.Lin,F.Luo,Z.Wang,Z.Lu,andQ.Zhang,“Evolution
+pp.1219–1224. ofheuristics:Towardsefficientautomaticalgorithmdesignusinglargelanguage
+[7] S.Kim,Z.Wang,S.Lee,Y.Oh,H.Zhu,D.Kim,andD.Z.Pan,“Ppaas:Pvtand model,”2024.
+paretoawareanalogsizingviagoal-conditionedreinforcementlearning,”in2025 [32] H.Ye,J.Wang,Z.Cao,F.Berto,C.Hua,H.Kim,J.Park,andG.Song,“Reevo:
+IEEE/ACMInternationalConferenceOnComputerAidedDesign(ICCAD). IEEE, Largelanguagemodelsashyper-heuristicswithreflectiveevolution,”2024.
+2025,pp.1–9. [33] N.vanSteinandT.Bäck,“Llamea:Alargelanguagemodelevolutionaryalgorithm
+[8] N.K.SomayajiandP.Li,“Llm-uso:Largelanguagemodel-baseduniversalsizing forautomaticallygeneratingmetaheuristics,”2024.
+optimizer,”IEEETransactionsonComputer-AidedDesignofIntegratedCircuitsand [34] A.Novikov,N.Vu,M.Eisenberger,E.Dupont,P.-S.Huang,A.Z.Wagner,S.Shi-
+Systems,2025. robokov,B.Kozlovskii,F.J.R.Ruiz,A.Mehrabian,M.P.Kumar,A.See,S.Chaud-
+[9] C.LiuandD.Chitnis,“Eesizer:Llm-basedaiagentforsizingofanalogandmixed huri,G.Holland,A.Davies,S.Nowozin,P.Kohli,andM.Balog,“Alphaevolve:A
+signalcircuit,”IEEETransactionsonCircuitsandSystemsI:RegularPapers,2025. codingagentforscientificandalgorithmicdiscovery,”2025.
+[10] M.Ahmadzadeh,K.Chen,andG.Gielen,“Anaflow:Agenticllm-basedworkflow [35] X.Zhang,X.Chen,F.Portet,andM.Peyrard,“Whatmakesanllmagoodopti-
+forreasoning-drivenexplainableandsample-efficientanalogcircuitsizing,”in mizer?atrajectoryanalysisofllm-guidedevolutionarysearch,”2026.
+2025IEEE/ACMInternationalConferenceOnComputerAidedDesign(ICCAD). [36] Z.Ren,H.Liu,S.Guo,Y.Guo,X.Li,andH.Jiang,“Spicefuzz:Llm-basedfuzzing
+IEEE,2025,pp.1–7. forspicecircuitsimulatortoolsbugdetection,”ACMTransactionsonDesign
+[11] J.Lu,L.Lei,F.Yang,L.Shang,andX.Zeng,“Topologyoptimizationofoperational AutomationofElectronicSystems,2026.
+amplifierincontinuousspaceviagraphembedding,”in2022Design,Automation [37] D.Wright,S.Masud,J.Moore,S.Yadav,M.Antoniak,P.E.Christensen,C.Y.
+&TestinEuropeConference&Exhibition(DATE). IEEE,2022,pp.142–147. Park,andI.Augenstein,“Epistemicdiversityandknowledgecollapseinlarge
+[12] Z.ZhaoandL.Zhang,“Analogintegratedcircuittopologysynthesiswithdeep languagemodels,”arXivpreprintarXiv:2510.04226,2025.
+reinforcementlearning,”IEEETransactionsonComputer-AidedDesignofIntegrated [38] L.Yun,C.An,Z.Wang,L.Peng,andJ.Shang,“Thepriceofformat:Diversity
+CircuitsandSystems,vol.41,no.12,pp.5138–5151,2022. collapseinllms,”arXivpreprintarXiv:2505.18949,2025.
+[13] Z.Chen,S.Meng,F.Yang,L.Shang,andX.Zeng,“Total:Topologyoptimization [39] J.Zhang,S.Yu,D.Chong,A.Sicilia,M.R.Tomz,C.D.Manning,andW.Shi,
+ofoperationalamplifierviareinforcementlearning,”in202324thInternational “Verbalizedsampling:Howtomitigatemodecollapseandunlockllmdiversity,”
+SymposiumonQualityElectronicDesign(ISQED). IEEE,2023,pp.1–8. arXivpreprintarXiv:2510.01171,2025.
+[14] S.Poddar,A.Budak,L.Zhao,C.-H.Hsu,S.Maji,K.Zhu,Y.Jia,andD.Z.Pan, [40] Google and SkyWater Technology Foundry, “Skywater 130nm PDK,” 2020.
+“Adata-drivenanalogcircuitsynthesizerwithautomatictopologyselectionand [Online].Available:https://github.com/google/skywater-pdk
+sizing,”in2024Design,Automation&TestinEuropeConference&Exhibition [41] R.A.Fisher,“Theuseofmultiplemeasurementsintaxonomicproblems,”Annals
+(DATE). IEEE,2024,pp.1–6. ofeugenics,vol.7,no.2,pp.179–188,1936.
+[15] J.Shen,F.Yang,L.Shang,Z.Bi,C.Yan,D.Zhou,andX.Zeng,“Into-oa:In- [42] NgspiceContributors,NgspiceUser’sManual,version46ed.,NgspiceProject,
+terpretabletopologyoptimizationforoperationalamplifiers,”in2025Design, 2026,accessed:2026-05-08.[Online].Available:https://ngspice.sourceforge.io/
+Automation&TestinEuropeConference(DATE). IEEE,2025,pp.1–7. docs/ngspice-manual.pdf
+[16] J.R.Koza,F.H.BennettIII,D.Andre,andM.A.Keane,“Automateddesignofboth [43] W.Kwon,Z.Li,S.Zhuang,Y.Sheng,L.Zheng,C.H.Yu,J.Gonzalez,H.Zhang,
+thetopologyandsizingofanalogelectricalcircuitsusinggeneticprogramming,” andI.Stoica,“Efficientmemorymanagementforlargelanguagemodelserving
+inArtificialintelligenceindesign’96. Springer,1996,pp.151–170.
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+withpagedattention,”inProceedingsofthe29thsymposiumonoperatingsystems [48] Gemma Team, “Gemma 3 technical report,” 2025. [Online]. Available:
+principles,2023,pp.611–626. https://arxiv.org/abs/2503.19786
+[44] T.Salimans,J.Ho,X.Chen,S.Sidor,andI.Sutskever,“Evolutionstrategiesasa [49] QwenTeam,“Qwen3.5:Towardsnativemultimodalagents,”Feb.2026.[Online].
+scalablealternativetoreinforcementlearning,”arXivpreprintarXiv:1703.03864, Available:https://qwen.ai/blog?id=qwen3.5
+2017. [50] A.Madaan,N.Tandon,P.Gupta,S.Hallinan,L.Gao,S.Wiegreffe,U.Alon,
+[45] A.Palczewska,J.Palczewski,R.MarcheseRobinson,andD.Neagu,“Interpreting N.Dziri,S.Prabhumoye,Y.Yangetal.,“Self-refine:Iterativerefinementwith
+randomforestclassificationmodelsusingafeaturecontributionmethod,”in self-feedback,”Advancesinneuralinformationprocessingsystems,vol.36,pp.
+Integrationofreusablesystems. Springer,2014,pp.193–218. 46534–46594,2023.
+[46] F.Pedregosa,G.Varoquaux,A.Gramfort,V.Michel,B.Thirion,O.Grisel,M.Blon- [51] H.Zhang,S.Sun,Y.Lin,R.Wang,andJ.Bian,“Analogxpert:Automatingana-
+del,P.Prettenhofer,R.Weiss,V.Dubourgetal.,“Scikit-learn:Machinelearning logtopologysynthesisbyincorporatingcircuitdesignexpertiseintolargelan-
+inpython,”JournalofMachineLearningResearch,vol.12,pp.2825–2830,2011. guagemodels,”in2025InternationalSymposiumofElectronicsDesignAutomation
+[47] A.Holtzman,J.Buys,L.Du,M.Forbes,andY.Choi,“Thecuriouscaseofneural (ISEDA). IEEE,2025,pp.772–777.
+textdegeneration,”in8thInternationalConferenceonLearningRepresentations,
+ICLR2020,AddisAbaba,Ethiopia,April26-30,2020. OpenReview.net,2020.
+[Online].Available:https://openreview.net/forum?id=rygGQyrFvH
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+A ExamplesofLLMPromptsandOutputs
+Fig.4andFig.5onthefollowingpagesshowexamplepromptsusedforIGELtogetherwiththecorrespondingLLMoutputs.Theseexamples
+illustratehowthedifferentpromptstylesareformulatedandwhatkindsofnetlistmodificationsthemodelproposes.
+B NetlistsoftheBestValidationCircuits
+Fig.6showsthetransistor-levelnetlistofthecircuitwiththehighestvalidationreward.Averagedoverall17process,voltage,andtemperature
+corners,thiscircuitachievestrain/validation/testrewardsof0.855/0.811/0.780.Theper-corneraccuracieslistedabovethenetlistprovide
+additionaldetailonitsrobustnessacrossoperatingconditions.Inaddition,Fig.7showsthreemorecircuitswithstrongvalidationperformance.
+ComparingthemfurtherillustratesthediversityofsolutionsdiscoveredbyLLM-SPICEMixer.
+Bestvalidationrewardcircuit
+| * Corner tt   | Vdd=1.80V         | Temp=25.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.93333 |
+| ------------- | ----------------- | ------------- | ----------------------- | ------------------ | ---------------- |
+| * Corner ff   | Vdd=1.62V         | Temp= 0.00°C: | TrainAcc: 0.92222,      | ValidAcc: 0.90000, | TestAcc: 0.77778 |
+| * Corner ff   | Vdd=1.62V         | Temp=85.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.90000 |
+| * Corner ff   | Vdd=1.98V         | Temp= 0.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.92222 |
+| * Corner ff   | Vdd=1.98V         | Temp=85.00°C: | TrainAcc: 0.92222,      | ValidAcc: 0.80000, | TestAcc: 0.85556 |
+| * Corner ss   | Vdd=1.62V         | Temp= 0.00°C: | TrainAcc: 0.92222,      | ValidAcc: 0.87778, | TestAcc: 0.76667 |
+| * Corner ss   | Vdd=1.62V         | Temp=85.00°C: | TrainAcc: 0.93704,      | ValidAcc: 0.91111, | TestAcc: 0.78889 |
+| * Corner ss   | Vdd=1.98V         | Temp= 0.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.92222 |
+| * Corner ss   | Vdd=1.98V         | Temp=85.00°C: | TrainAcc: 0.92222,      | ValidAcc: 0.80000, | TestAcc: 0.85556 |
+| * Corner sf   | Vdd=1.62V         | Temp= 0.00°C: | TrainAcc: 0.86667,      | ValidAcc: 0.84444, | TestAcc: 0.77778 |
+| * Corner sf   | Vdd=1.62V         | Temp=85.00°C: | TrainAcc: 0.86667,      | ValidAcc: 0.86667, | TestAcc: 0.77778 |
+| * Corner sf   | Vdd=1.98V         | Temp= 0.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.93333 |
+| * Corner sf   | Vdd=1.98V         | Temp=85.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.93333 |
+| * Corner fs   | Vdd=1.62V         | Temp= 0.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.86667 |
+| * Corner fs   | Vdd=1.62V         | Temp=85.00°C: | TrainAcc: 0.96667,      | ValidAcc: 0.93333, | TestAcc: 0.93333 |
+| * Corner fs   | Vdd=1.98V         | Temp= 0.00°C: | TrainAcc: 0.91852,      | ValidAcc: 0.80000, | TestAcc: 0.85556 |
+| * Corner fs   | Vdd=1.98V         | Temp=85.00°C: | TrainAcc: 0.87407,      | ValidAcc: 0.76667, | TestAcc: 0.80000 |
+| * Average     | over all corners: |               | TrainAcc: 0.93442,      | ValidAcc: 0.88431, | TestAcc: 0.85882 |
+| X0 internal_0 | input_2           | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=51 l=1           |                  |
+| X1 output_0   | input_2           | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=23 l=1           |                  |
+| X2 internal_1 | input_3           | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=10 l=1           |                  |
+| X3 output_1   | input_3           | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=26 l=1           |                  |
+| X4 internal_0 | input_3           | vdd vdd       | sky130_fd_pr__pfet_01v8 | w=35 l=1           |                  |
+| X5 output_0   | input_2           | vdd vdd       | sky130_fd_pr__pfet_01v8 | w=27 l=1           |                  |
+| X6 internal_1 | internal_0        | vdd vdd       | sky130_fd_pr__pfet_01v8 | w=20 l=1           |                  |
+| X7 output_1   | internal_0        | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=6 l=1            |                  |
+| X8 output_2   | internal_1        | gnd gnd       | sky130_fd_pr__nfet_01v8 | w=22 l=1           |                  |
+| X9 output_1   | internal_0        | vdd vdd       | sky130_fd_pr__pfet_01v8 | w=49 l=1.2         |                  |
+| X10 output_2  | internal_0        | vdd vdd       | sky130_fd_pr__pfet_01v8 | w=36 l=1.2         |                  |
+Figure6:NetlistofthecircuitwiththebestvalidationrewardfoundbyLLM-SPICEMixer.
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+Prompt(w/oreasoningorw/reasoning) LLMAnswer(w/reasoning)andNetlist(genericSPICEcomponents)
+YouareanexpertCMOSanalogICdesignerandSPICEnetlistgenerator.Yourjobistodesigncircuitsas Okay,let'sanalyzetheprovidedinspirationnetlistsanddevisea
+SPICEnetlists. strategyforapotentiallyimprovedclassifier.Thecommonelements
+Globalrules(applytoEVERYreply): acrossthethreearetheuseofinternalnodesandrepeatedtransistor
+*YoumayonlyinstantiatethefollowingMOSFETs: structuresforcertainoutputs,suggestinganattemptatredundancyor
+*M<index><drain><gate><source>NMOSw=<width>l=<length> amplification.However,theredundancyisn'tparticularlyefficient,
+*M<index><drain><gate><source>PMOSw=<width>l=<length> andthestructuresaresomewhatrepetitive.Therewardscoresare
+*YoumustoutputEXACTLYONEmarkdownfencedcodeblockoftheform: quitesimilar,indicatingthatsmallchangesmightbebeneficial.
+```spice Mystrategywillbetosimplifythecircuitwhileretainingthecore
+. ` . ` . ` conceptsofusinginternalnodesandmultipletransistorsforeach
+output.I'llfocusonreducingredundancyandintroducingadifferent
+*Outsidethatfencedcodeblock: combinationofNMOSandPMOStransistorstopotentiallyenhancethe
+*OutputNOTHING.Notextbeforeit,notextafterit. discriminantfunction.Specifically,I'lltrytoincorporateaPMOS
+* * Be N f o or e e xp t l h a a n t at f i e o n n c s e , d c c o o m d m e en b t l s o , ck m : arkdown. transistortocreateamorebalancedcircuit.I'llalsoreducethe
+*Outputyourthoughts:Analysetheinspirations,thencomeupwithastrategythatyoucanuse. numberoftransistorsslightlytoseeifitimprovesperformance.
+*Insidethe`spice`block: ```spice
+* * W E r a i c t h e t O r N a E ns t i r s a t n o s r is l t i o n r e i h n a s s ta T n H c R e EE pe c r on l n i e n c e t . ions:<drain><gate><source>. M0net_gndnet_input_3net_internal_0PMOSw=95.3l=36.1
+*DoNOTincludecommentsornaturallanguage. M1net_internal_0net_input_2net_internal_1NMOSw=25l=3
+M2net_internal_1net_input_1net_internal_2PMOSw=72.7l=5.35
+*Thetransistorwidthwandlengthlarepositive,real-valuedvaluesthatyoucanoptimize. M3net_internal_2net_input_3net_output_2NMOSw=34.7l=54.8
+M4net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+Reasonthroughthedesignsilently.DoNOTshowyourreasoningsteps;onlyoutputthefinalnetlistina M5net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+single`spice`block. M6net_internal_1net_internal_2net_output_2NMOSw=34.7l=68.1
+Pleasedesignacircuitforthetask:AnalogclassifierimplementingadiscriminantfunctionforIris M7net_output_1net_internal_2net_output_1NMOSw=9.7l=41.5
+with4inputnetsand3outputnets. ```
+Inputnets:
+-`net_input_0`
+-`net_input_1` ExtractedNetlist(Skywater-PDK):Reward=0.720
+-`net_input_2`
+-`net_input_3` X00net_input_3net_internal_0net_supply_0
++sky130_fd_pr__pfet_01v8w=95.3l=36.1
+Outputnets: X1net_internal_0net_input_2net_internal_10
+- - ` ` n n e e t t _ _ o o u u t t p p u u t t _ _ 0 1 ` ` +sky130_fd_pr__nfet_01v8w=25l=3
+-`net_output_2` X2net_internal_1net_input_1net_internal_2net_supply_0
++sky130_fd_pr__pfet_01v8w=72.7l=5.35
+Supplynets: X3net_internal_2net_input_3net_output_20
+-`net_vdd` +sky130_fd_pr__nfet_01v8w=34.7l=54.8
+-`net_gnd` X4net_internal_0net_internal_3net_output_00
+ThecircuitisrepresentedasanetlistandisevaluatedusingSPICEwitharewardin[-1,1],where +sky130_fd_pr__nfet_01v8w=16.7l=12.9
+higherisbetter. X5net_internal_0net_internal_3net_output_00
++sky130_fd_pr__nfet_01v8w=16.7l=12.9
+Takeinspirationfromthefollowingnetlistsandtrytoimprovetheirstructureandperformance.Combine X6net_internal_1net_internal_2net_output_20
+ormutateusefulpatternstodesignabettercircuit.Youcandothisbycopying,removing,ormodifying +sky130_fd_pr__nfet_01v8w=34.7l=68.1
+transistorlinesfromtheseinspirations. X7net_output_1net_internal_2net_output_10
++sky130_fd_pr__nfet_01v8w=9.7l=41.5
+Inspirationnetlistwithreward0.701:
+```spice
+M0net_internal_0net_input_2net_internal_1NMOSw=25l=3
+M1net_internal_2net_input_3net_output_2NMOSw=34.7l=54.8
+M2net_output_2net_input_3net_output_2NMOSw=21.1l=54.8
+M3net_output_2net_input_3net_output_2NMOSw=21.1l=54.8
+M4net_gndnet_internal_2net_internal_1NMOSw=34.7l=68.1
+M5net_gndnet_internal_2net_internal_1NMOSw=34.7l=68.1
+M6net_gndnet_internal_3net_output_0NMOSw=21.1l=12.9
+M7net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M8net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M9net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M10net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M11net_output_1net_internal_2net_output_1NMOSw=9.7l=41.5
+```
+Inspirationnetlistwithreward0.703:
+```spice
+M0net_internal_0net_input_2net_internal_1NMOSw=25l=3
+M1net_internal_2net_input_3net_output_2NMOSw=34.7l=54.8
+M2net_output_2net_input_3net_output_2NMOSw=21.1l=54.8
+M3net_gndnet_internal_2net_internal_1NMOSw=34.7l=68.1
+M4net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M5net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M6net_internal_1net_internal_2net_output_2NMOSw=34.7l=68.1
+M7net_output_1net_internal_2net_output_1NMOSw=9.7l=41.5
+```
+Inspirationnetlistwithreward0.706:
+```spice
+M0net_gndnet_input_3net_internal_0PMOSw=95.3l=36.1
+M1net_internal_0net_input_2net_internal_1NMOSw=25l=3
+M2net_internal_1net_input_1net_internal_2PMOSw=72.7l=5.35
+M3net_internal_2net_input_3net_output_2NMOSw=34.7l=54.8
+M4net_output_2net_input_3net_output_2NMOSw=21.1l=54.8
+M5net_gndnet_internal_2net_internal_1NMOSw=34.7l=68.1
+M6net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M7net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M8net_internal_0net_internal_3net_output_0NMOSw=16.7l=12.9
+M9net_internal_1net_internal_2net_output_2NMOSw=34.7l=68.1
+M10net_output_1net_internal_2net_output_1NMOSw=9.7l=41.5
+```
+NowproposeaNEWnetlistthatislikelytoachieveahigherreward,whilerespectingallglobalrules
+fromthesystemprompt.ThenewcircuitSHOULDNOTexceedthesizeoftheinspirationnetlistsandhavea
+MAXIMUMof13transistorsorLESS.Avoidcopyinganetlistandonlychangingtransistorwidthsand
+lengthsbutalsoconsidertopologicalchanges.A"topologychange"meansanystructuralmodificationto
+thecircuitgraph,includingatleastoneof:
+*Rewire:changeatleastoneof`drain`,`gate`,`source`ofanytransistortoadifferentnet(notjust
+`w/l`).
+*Adddevice:insertanewtransistor(newline)andconnectittoexistingnetsand/oranewinternal
+net.
+*Removedevice:deleteanexistingtransistor(removealine).
+*Split/Mergenets:introduceanewinternalnettobreakapreviouslysharednode,orconnecttwo
+previouslydistinctinternalnetsintoonebyrewiring.
+*Changedevicetype:replacean`NMOS`witha`PMOS`(orviceversa)andrewireifneeded.
+Remember:yourreplymustconsistONLYofasingle`spice`fencedcodeblockcontainingthenetlistand
+nothingelse.
+Remember:Firstreason,thenanswerwitha`spice`fencedcodeblockcontainingthenetlistandnothing
+else.
+Figure4:LLMpromptandanswerforthe“raw”-styletemplateversion.
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+Prompt(w/oreasoningorw/reasoning) LLMAnswer(w/reasoning)andNetlist(genericSPICEcomponents)
+YouareanexpertCMOSanalogICdesignerandSPICEnetlisteditor.Yourjobistoimprovenetlistsby Thebasenetlisthasarewardof0.767.Theinspirationnetlistshave
+proposingeditsinaunifieddiff-styleformat. rewardsof0.765and0.768.Thedifferencesbetweenthebaseandthe
+Globalrules(applytoEVERYreply): 0.768netlistaresubtle,primarilyinvolvingduplicationof
+*YoumayonlyintroduceorkeeptransistorinstancesusingthefollowingMOSFETs: transistorM8.Thebasenetlistisalreadyquiteclosetothebest
+*M<index><drain><gate><source>NMOSw=<width>l=<length> performingnetlist.
+*M<index><drain><gate><source>PMOSw=<width>l=<length>
+*YoumustoutputEXACTLYONE/amarkdownfencedcodeblockoftheform: ThestrategyistoduplicatetransistorM7,asitispresentinthe
+bestperformingnetlist.Thisintroducesredundancyandmightimprove
+```diff theclassifier'srobustnessandaccuracy.
+...
+```
+```diff
+Outsidethatfencedcodeblock: -M7net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+*OutputNOTHING.Notextbeforeit,notextafterit. +M7net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+*Noexplanations,comments,markdown. +M8net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+* * Be O f u o t r p e ut th y a o t ur fe t n h c o e u d gh c t o s d : e A b n l a o l c y k s : ethebasenetlistandtheinspirations,thencomeupwithastrategy ```
+thatyoucanuse.
+* * In E s a i c d h e l t i h n e e ` m d u i s f t f` st b a l r o t ck w : itheither"-"(toremoveatransistor)or"+"(toaddatransistor). ExtractedNetlist(Skywater-PDK):Reward=0.770
+*Afterthe"-"or"+"prefix,writeafulltransistorinstanceline.
+*DoNOTincludecommentsornaturallanguage. X0net_internal_0net_input_1net_output_0net_supply_0
+*Thetransistorwidthwandlengthlarepositive,real-valuedvaluesthatyoucanoptimize. + X1 sk n y e 1 t 3 _ 0 i _ n f t d e _ r p n r a _ l _ _ p 0 fe n t e _ t 0 _ 1 i v n 8 pu w t = _ 0 1 .6 n 9 e 1 t_ l o = u 2 t 2 p . u 2 t_0net_supply_0
+Reasonthroughthedesignsilently.DoNOTshowyourreasoningsteps;onlyoutputthediffinasingle +sky130_fd_pr__pfet_01v8w=0.766l=22.2
+`diff`fencedcodeblock. X2net_internal_0net_input_3net_output_20
++sky130_fd_pr__nfet_01v8w=2.58l=90.4
+Pleaseimproveacircuitforthetask:AnalogclassifierimplementingadiscriminantfunctionforIris X3net_internal_1net_input_2net_output_20
+with4inputnetsand3outputnets. +sky130_fd_pr__nfet_01v8w=0.766l=0.469
+X4net_internal_1net_internal_0net_output_10
+I - np ` u n t et n _ e i t n s p : ut_0` +sky130_fd_pr__nfet_01v8w=12.2l=67.6
+-`net_input_1` X5net_internal_1net_internal_2net_output_1net_supply_0
+-`net_input_2` +sky130_fd_pr__pfet_01v8w=6.3l=80.8
+-`net_input_3` X6net_internal_1net_internal_2net_output_20
+O - ut ` p n u e t t_ n o e u t t s p : ut_0` + X7 sk n y e 1 t 3 _ 0 o _ u f t d p _ u p t r _ _ 0 _n n f e e t t _ _ i 0 n 1 t v e 8 rn w a = l 6 _ . 2 3 n l e = t 9 _ 0 o . u 4 tput_20
+-`net_output_1` +sky130_fd_pr__nfet_01v8w=22.9l=90.4
+-`net_output_2` X8net_output_0net_internal_2net_output_20
++sky130_fd_pr__nfet_01v8w=22.9l=90.4
+Supplynets:
+-`net_vdd`
+-`net_gnd`
+ThecircuitisrepresentedasanetlistandisevaluatedusingSPICEwitharewardin[-1,1],where
+higherisbetter.
+YourjobistomodifyONLYagivenbasenetlistbyproposingadiffthatislikelytoimprovethereward,
+whilerespectingallglobalrulesfromthesystemprompt.
+Thediffmustonlychangetransistorinstancelines(M...).Youmayadd,remove,ormodifytransistorsby
+using"-"and"+"lines.
+Takeinspirationfromthefollowingnetlistsandtrytoimprovetheirstructureandperformance.Combine
+ormutateusefulpatternstodesignabettercircuit.Youcandothisbycopying,removing,ormodifying
+transistorlinesfromtheseinspirations.
+Inspirationnetlistwithreward0.765:
+```spice
+M0net_internal_0net_input_1net_output_0PMOSw=0.691l=22.2
+M1net_internal_0net_input_3net_output_2NMOSw=2.58l=90.4
+M2net_internal_1net_input_2net_output_2NMOSw=0.766l=0.469
+M3net_internal_1net_internal_0net_output_1NMOSw=12.2l=67.6
+M4net_internal_1net_internal_2net_output_1PMOSw=6.3l=80.8
+M5net_internal_1net_internal_2net_output_2NMOSw=6.3l=90.4
+M6net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+```
+Inspirationnetlistwithreward0.768:
+```spice
+M0net_internal_0net_input_1net_output_0PMOSw=0.591l=22.2
+M1net_internal_0net_input_1net_output_0PMOSw=0.766l=22.2
+M2net_internal_0net_input_3net_output_2NMOSw=2.58l=90.4
+M3net_internal_1net_input_2net_output_2NMOSw=0.766l=0.469
+M4net_internal_1net_internal_0net_output_1NMOSw=12.2l=67.6
+M5net_internal_1net_internal_2net_output_1PMOSw=6.3l=80.8
+M6net_internal_1net_internal_2net_output_2NMOSw=6.3l=74.8
+M7net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+M8net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+```
+Basenetlisttomodify(thisistheoneyoumustimproveusingadiff):
+Basenetlistwithreward0.767:
+```spice
+M0net_internal_0net_input_1net_output_0PMOSw=0.691l=22.2
+M1net_internal_0net_input_1net_output_0PMOSw=0.766l=22.2
+M2net_internal_0net_input_3net_output_2NMOSw=2.58l=90.4
+M3net_internal_1net_input_2net_output_2NMOSw=0.766l=0.469
+M4net_internal_1net_internal_0net_output_1NMOSw=12.2l=67.6
+M5net_internal_1net_internal_2net_output_1PMOSw=6.3l=80.8
+M6net_internal_1net_internal_2net_output_2NMOSw=6.3l=90.4
+M7net_output_0net_internal_2net_output_2NMOSw=22.9l=90.4
+```
+NowproposeaNEWsetofeditstothisbasenetlistthatislikelytoachieveahigherreward.Hereisan
+examplethatshowshowtomodifyatransistorline:
+```diff
+-M6net_internal_1net_internal_2net_output_2NMOSw=6.3l=90.4
++M6net_internal_1net_input_0net_output_2NMOSw=6.3l=90.4
+```
+ReturnONLYaunifieddiffthattransformsthebasenetlistintoyourimprovednetlist,followingthese
+rules:
+*Use"-"linestoindicatetransistorsthatshouldberemovedfromthebasenetlist.
+*Use"+"linestoindicatenewormodifiedtransistorstobepresentinthefinalnetlist.
+*DoNOTincludeanyunchangedlines.
+Remember:yourreplymustconsistONLYofasingle`diff`fencedcodeblockcontainingthediffand
+nothingelse.Avoidonlychangingtransistorwidthsandlengthsbutalsoconsidertopologicalchanges.A
+"topologychange"meansanystructuralmodificationtothecircuitgraph,includingatleastoneof:
+*Rewire:changeatleastoneof`drain`,`gate`,`source`ofanytransistortoadifferentnet(notjust
+`w/l`).
+*Adddevice:insertanewtransistor(newline)andconnectittoexistingnetsand/oranewinternal
+net.
+*Removedevice:deleteanexistingtransistor(removealine).
+*Split/Mergenets:introduceanewinternalnettobreakapreviouslysharednode,orconnecttwo
+previouslydistinctinternalnetsintoonebyrewiring.
+*Changedevicetype:replacean`NMOS`witha`PMOS`(orviceversa)andrewireifneeded.
+Remember:Firstreason,thenreplywitha`diff`fencedcodeblockcontainingthediffandnothingelse.
+Figure5:LLMpromptandanswerforthe“diff”-styletemplate
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+Secondbestvalidationrewardcircuitwithtrain/validation/testrewardof0.815/0.787/0.760
+| X0 internal_0 input_2   | gnd gnd sky130_fd_pr__nfet_01v8      | w=31 l=1     |
+| ----------------------- | ------------------------------------ | ------------ |
+| X1 output_0 input_2     | gnd gnd sky130_fd_pr__nfet_01v8      | w=13 l=1     |
+| X2 output_1 input_3     | gnd gnd sky130_fd_pr__nfet_01v8      | w=3.5 l=1    |
+| X3 internal_0 input_2   | vdd vdd sky130_fd_pr__pfet_01v8      | w=3.5 l=1    |
+| X4 internal_1 input_0   | vdd gnd sky130_fd_pr__nfet_01v8      | w=3.5 l=0.17 |
+| X5 output_0 input_2     | vdd vdd sky130_fd_pr__pfet_01v8      | w=3.5 l=1    |
+| X6 output_2 input_3     | vdd gnd sky130_fd_pr__nfet_01v8      | w=38.2 l=7   |
+| X7 output_1 internal_0  | gnd gnd sky130_fd_pr__nfet_01v8      | w=2 l=1      |
+| X8 output_2 internal_1  | gnd gnd sky130_fd_pr__nfet_01v8      | w=2 l=1      |
+| X9 output_0 internal_1  | output_2 vdd sky130_fd_pr__pfet_01v8 | w=70 l=17    |
+| X10 output_1 internal_0 | vdd vdd sky130_fd_pr__pfet_01v8      | w=5 l=1      |
+Thirdbestvalidationrewardcircuitwithtrain/validation/testrewardof0.795/0.784/0.753
+| X0 output_1 input_1    | gnd gnd sky130_fd_pr__nfet_01v8      | w=10 l=2     |
+| ---------------------- | ------------------------------------ | ------------ |
+| X1 output_2 input_1    | gnd gnd sky130_fd_pr__nfet_01v8      | w=20 l=2     |
+| X2 internal_0 input_2  | gnd gnd sky130_fd_pr__nfet_01v8      | w=25 l=0.211 |
+| X3 output_0 input_2    | gnd gnd sky130_fd_pr__nfet_01v8      | w=20 l=2     |
+| X4 output_1 input_3    | gnd gnd sky130_fd_pr__nfet_01v8      | w=10 l=2     |
+| X5 internal_0 input_2  | output_0 vdd sky130_fd_pr__pfet_01v8 | w=25 l=0.211 |
+| X6 output_0 input_3    | vdd vdd sky130_fd_pr__pfet_01v8      | w=22 l=2     |
+| X7 output_2 input_3    | vdd gnd sky130_fd_pr__nfet_01v8      | w=20 l=2     |
+| X8 output_1 internal_0 | vdd vdd sky130_fd_pr__pfet_01v8      | w=20 l=2     |
+Fourthbestvalidationrewardcircuitwithtrain/validation/testrewardof0.747/0.747/0.702
+| X0 output_1 input_1      | gnd gnd sky130_fd_pr__nfet_01v8      | w=10 l=1      |
+| ------------------------ | ------------------------------------ | ------------- |
+| X1 output_0 input_3      | gnd gnd sky130_fd_pr__nfet_01v8      | w=80 l=1      |
+| X2 output_1 input_3      | gnd gnd sky130_fd_pr__nfet_01v8      | w=2.17 l=0.42 |
+| X3 output_0 input_2      | vdd vdd sky130_fd_pr__pfet_01v8      | w=3 l=1       |
+| X4 output_1 input_1      | vdd vdd sky130_fd_pr__pfet_01v8      | w=3 l=1       |
+| X5 output_2 input_3      | output_2 gnd sky130_fd_pr__nfet_01v8 | w=1.5 l=1     |
+| X6 internal_0 internal_0 | output_2 gnd sky130_fd_pr__nfet_01v8 | w=1.3 l=9.35  |
+| X7 output_1 internal_0   | vdd vdd sky130_fd_pr__pfet_01v8      | w=10.9 l=46.5 |
+Figure7:Netlistsofadditionalcircuitswithstrongvalidationperformance.
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+C OutputWaveformsAcrossShufflesandCorners
+Fig.9showstheinputandoutputwaveformsforthetwocircuitswiththebestvalidationperformance.Thefigureincludesresultsforall
+consideredcornersandforallthreeshuffledversionsofthetestsplit.Thisprovidesadditionalinsightintohowthecircuitbehaviorvaries
+acrossoperatingconditions.
+(a)Inputwaveforms (a)Inputwaveforms
+(b)Outputwaveforms(bestvalidationcircuit) (b)Outputwaveforms(bestvalidationcircuit)
+(c)Outputwaveforms(second-bestvalidationcircuit) (c)Outputwaveforms(second-bestvalidationcircuit)
+Figure8:Voltagetransientsevaluatedonthetestsplit.The Figure9:Voltagetransientsevaluatedonthetestsplit.The
+plotsoverlaythewaveformsobtainedfromthethreeshuf- plotsoverlaythewaveformsobtainedforallcornersandall
+fledversionsofthetestsplit. threeshuffledversionsofthetestsplit.
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+D RobustnesstoInput-VoltagePerturbations
+Fig.10andTab.3providethedetailedrobustnessresultsfortheMLbaselinesandforthetwobestvalidationcircuitsfoundbyLLM-
+SPICEMixer.WeevaluatetheclassifiersbothwithoutinputnoiseandunderGaussianperturbationsoftheinputvoltages,with𝜎 noise ∈
+{0,0.1,0.2,0.3,0.4,0.5}.Foreachnoisysetting,resultsareaggregatedover16independentnoiserealizations.
+TheboxplotsinFig.10showthatthesynthesizedcircuitsarecompetitivewiththeMLbaselinesinthenoiselesssettingandexhibit
+asimilardegradationtrendastheinputperturbationincreases.Tab.3reportsthecorrespondingnumericaltestaccuracies,including
+mean,standarddeviation,andmedianvalues.ForLLM-SPICEMixer,wereportboththenominaltt-cornerperformanceandtheaverage
+performanceacrossallprocess,voltage,andtemperaturecorners.
+(a)Evaluationoverthettcorner
+(b)Evaluationoverallcorners
+Figure10:RobustnessofLLM-SPICEMixercomparedwithMLbaselinesunderinput-voltageperturbations.Thesynthesized
+circuitsarecompetitivewiththebaselinesinthenoiselesssettinganddegradesimilarlyasGaussiannoise𝜎 isaddedtothe
+noise
+inputs,indicatingthattheanalogsolutionsretainusefulclassificationmarginsunderimperfectsensorreadings.Dashedlines
+representchanceaccuracy.
+Table3:Test-setaccuracyacrossnoiselevels.ForLLM-SPICEMixer,bothtt-onlyandall-cornerresultsareshown.Eachcell
+reportsmean±standarddeviation/median,inpercent(%).
+Method Corners 𝜎 noise=0 𝜎 noise=0.1 𝜎 noise=0.2 𝜎 noise=0.3 𝜎 noise=0.4 𝜎 noise=0.5
+Logisticregression N/A 90.0±0.0/90.0 87.0±2.1/86.7 79.5±3.7/80.0 70.8±4.6/70.6 64.3±5.2/66.1 59.8±5.1/59.4
+Single-hidden-layernetwork N/A 90.0±0.0/90.0 89.6±1.9/90.0 79.7±3.2/80.0 69.8±3.5/70.6 63.7±4.2/63.9 57.8±4.0/58.3
+tt 93.3±0.0/93.3 89.2±1.9/89.4 84.1±3.7/83.9 76.0±12.0/78.9 65.6±15.7/71.1 55.0±15.9/63.3
+LLM-SPICEMixer(bestvalidation)
+all 85.9±0.0/85.9 84.2±1.3/84.2 81.0±2.6/81.1 74.8±3.9/74.4 63.4±8.5/63.4 52.1±9.6/53.9
+LLM-SPICEMixer(2ndbestvalidation)
+tt 93.3±0.0/93.3 90.0±2.5/90.0 83.5±4.1/85.0 78.2±4.5/77.8 72.9±4.3/73.3 60.3±13.9/64.4
+all 87.5±0.0/87.5 86.1±1.8/86.3 82.0±2.8/82.4 76.0±4.5/76.5 67.5±7.0/69.7 57.0±9.0/59.4
+
+SpicingupGeneticNetlistGenerationwithLLMs MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea
+E ResultsofAblationStudies
+Tabs.4–7providethedetailedresultsoftheablationstudiesforpromptingstrategy,decodingsettings,modelchoice,andtheroleofthe
+operatormixture.Foreachsetting,thetablesreportthefinalbesttrainingrewardoverninerunsintermsofaverage,standarddeviation,
+minimum,median,andmaximum.Ineachablation,wevariedonlyonefactorwhilekeepingallothersettingsidenticaltothedefaultIGEL
+configuration.ForTab.4,Tab.5,andTab.7,weusedGemma312BbecauseofGPUresourceconstraints.
+Tab.7comparesIGEL-onlysearchwiththefulloperatormixture.ToseparateproposalbudgetfromLLM-callbudget,wereportthefull
+operatormixturebothatthereducedproposalbudgetof18,816stepsandatthefullbudgetof131,072steps.TheIGEL-onlyrunuses18,816
+proposalsteps,correspondingapproximatelytothenumberofLLMcallsmadeinonefullLLM-SPICEMixerrun.
+Table4:Ablation:finalbestrewardfordifferentpromptingstrategiesonthetrainingsplit.Valuesarecomputedovernine
+independentruns.
+|     |     |     |     | withoutreasoning |     |     |     |     |     | withreasoning |     |     |
+| --- | --- | --- | --- | ---------------- | --- | --- | --- | --- | --- | ------------- | --- | --- |
+“raw”-style “diff”-style alternating “raw”-style “diff”-style alternating
+Average±Std.Dev. 0.731±0.031 0.736±0.020 0.733±0.036 0.731±0.038 0.745±0.045 0.745±0.042
+|     | Minimum |     | 0.697 |     | 0.704 | 0.681 |     | 0.672 |     | 0.658 |     | 0.677 |
+| --- | ------- | --- | ----- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- |
+|     | Median  |     | 0.713 |     | 0.745 | 0.729 |     | 0.750 |     | 0.754 |     | 0.763 |
+|     |         |     | 0.788 |     | 0.757 | 0.779 |     | 0.800 |     | 0.802 |     | 0.808 |
+Maximum
+Table 5: Ablation: final best reward for different decoding settings on the training split. Values are computed over nine
+independentruns.
+|     |     |     | Deterministic |     | Conservative   |     | Balanced       |     | Entropy         |     | Entropy++       |     |
+| --- | --- | --- | ------------- | --- | -------------- | --- | -------------- | --- | --------------- | --- | --------------- | --- |
+|     |     |     | 𝑇=0,𝑝top=1.0  |     | 𝑇=0.3,𝑝top=0.9 |     | 𝑇=0.7,𝑝top=0.9 |     | 𝑇=1.0,𝑝top=0.95 |     | 𝑇=1.3,𝑝top=0.98 |     |
+Average±Std.Dev. 0.740±0.028 0.734±0.037 0.745±0.042 0.726±0.040 0.744±0.040
+|     |     |     |     | 0.699 | 0.650 |     | 0.677 |     | 0.658 |     | 0.679 |     |
+| --- | --- | --- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- | --- |
+Minimum
+|     |     | Median  |     | 0.741 | 0.756 |     | 0.763 |     | 0.748 |     | 0.755 |     |
+| --- | --- | ------- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- | --- |
+|     |     | Maximum |     | 0.798 | 0.772 |     | 0.808 |     | 0.771 |     | 0.798 |     |
+Table6:Ablation:finalbestrewardfordifferentmodelsonthetrainingsplit.Valuesarecomputedovernineindependentruns.
+Gemma3270M Gemma31B Gemma34B Gemma312B Gemma327B Qwen3.59B Qwen3.527B
+Average±Std.Dev. 0.737±0.034 0.740±0.039 0.746±0.028 0.745±0.042 0.750±0.019 0.743±0.040 0.799±0.040
+|     |     | 0.686 |     | 0.671 | 0.701 |     | 0.677 |     | 0.709 |     | 0.671 | 0.719 |
+| --- | --- | ----- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- | ----- |
+Minimum
+|     |     | 0.737 |     | 0.749 | 0.744 |     | 0.763 |     | 0.760 |     | 0.750 | 0.810 |
+| --- | --- | ----- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- | ----- |
+Median
+| Maximum |     | 0.801 |     | 0.790 | 0.793 |     | 0.808 |     | 0.777 |     | 0.812 | 0.855 |
+| ------- | --- | ----- | --- | ----- | ----- | --- | ----- | --- | ----- | --- | ----- | ----- |
+Table7:Ablation:finalbestrewardforGemma312Bwhenusingthefulloperatormixture(=LLM-SPICEMixer)versususing
+onlyIGEL.Thefirsttwocolumnscomparebothsettingsatthesamenumberofproposalsteps.Thelastcolumnreportsthefull
+all-operatorrunforreference;theIGEL-onlysettingusesapproximatelythesamenumberofLLMcallsasthisfullrun.
+|     |                  |     |     | Alloperators                 |       |                          | OnlyIGEL    |     |                                | Alloperators |     |     |
+| --- | ---------------- | --- | --- | ---------------------------- | ----- | ------------------------ | ----------- | --- | ------------------------------ | ------------ | --- | --- |
+|     |                  |     |     | 18,816steps                  |       |                          | 18,816steps |     |                                | 131,072steps |     |     |
+|     |                  |     |     | (16,128SPICEMixer+2,688IGEL) |       | (0SPICEMixer+18,816IGEL) |             |     | (112,347SPICEMixer+18,725IGEL) |              |     |     |
+|     | Average±Std.Dev. |     |     | 0.705±0.031                  |       |                          | 0.607±0.035 |     |                                | 0.745±0.042  |     |     |
+|     |                  |     |     |                              | 0.665 |                          | 0.538       |     |                                | 0.677        |     |     |
+Minimum
+|     |     |     |     |     | 0.689 |     | 0.619 |     |     | 0.763 |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ----- | --- | --- | ----- | --- | --- |
+Median
+|     |     | Maximum |     |     | 0.744 |     | 0.656 |     |     | 0.808 |     |     |
+| --- | --- | ------- | --- | --- | ----- | --- | ----- | --- | --- | ----- | --- | --- |
+
+MLCAD’26,September07–09,2026,JejuIsland,RepublicofKorea Uhlich,Gençer,Bonetti,Venkitaraman,Hsieh,Ohbuchi,Servadei
+F LLMResponseLengthStatistics
+Tab.8summarizestheresponselengthsoftheevaluatedLLMsintermsofbothcharactersandwords.FortheQwen3.5models,wereport
+thinkingtokensandfinaloutputseparately.Theseresultsprovideadditionalcontextforthemodelcomparisondiscussedinthemainpaper.
+Table8:Response-lengthstatisticsacrossthefourmodels.FortheQwen3.5models,valuesarereportedas<think>+final
+output,becausethesemodelsproduceexplicitthinkingtokens.
+|     | Gemma312B | Gemma327B | Qwen3.59B | Qwen3.527B |
+| --- | --------- | --------- | --------- | ---------- |
+Numberofcharacters
+|                  |               |               | 5,401.5±4,217.8 | 21,825.9±8,690.7 |
+| ---------------- | ------------- | ------------- | --------------- | ---------------- |
+|                  | 1,576.7±389.2 | 1,215.9±336.0 |                 |                  |
+| Average±Std.Dev. |               |               | +1,029.4±625.6  | +1,322.9±725.3   |
+| Minimum          | 430           | 263           | 1,173+61        | 1,216+62         |
+| Median           | 1,532         | 1,176         | 3,961+894       | 23,871+1,336     |
+| Maximum          | 3,780         | 16,977        | 59,653+23,750   | 69,535+23,088    |
+Numberofwords
+|                  |            |            | 793.1±627.2 | 3,368.5±1,364.4 |
+| ---------------- | ---------- | ---------- | ----------- | --------------- |
+|                  | 226.2±54.1 | 177.1±46.8 |             |                 |
+| Average±Std.Dev. |            |            | +141.1±89.8 | +186.4±102.9    |
+| Minimum          | 65         | 42         | 137+10      | 170+10          |
+| Median           | 221        | 172        | 576+121     | 3,675+189       |
+|                  | 498        | 2,333      | 9,121+3,094 | 7,205+3,170     |
+Maximum
+---- END DOCUMENT ----

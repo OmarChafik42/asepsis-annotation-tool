@@ -1,0 +1,4556 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      39.0,
+      441.0,
+      86.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Construction and Design of MPAC Codes",
+    "page": 0,
+    "bbox": [
+      195.0,
+      168.0,
+      1026.0,
+      217.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      570.0,
+      415.0,
+      654.0,
+      439.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      185.0,
+      470.0,
+      1039.0,
+      964.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Index Terms",
+    "page": 0,
+    "bbox": [
+      552.0,
+      1005.0,
+      671.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      222.0,
+      1059.0,
+      1035.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      139.0,
+      1161.0,
+      1082.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      139.0,
+      1205.0,
+      1084.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      138.0,
+      1265.0,
+      1084.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      136.0,
+      1329.0,
+      1083.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      140.0,
+      110.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1070.0,
+      112.0,
+      1082.0,
+      129.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 1,
+    "bbox": [
+      512.0,
+      185.0,
+      712.0,
+      209.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      234.0,
+      1087.0,
+      597.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      608.0,
+      1087.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1274.0,
+      1087.0,
+      1470.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      139.0,
+      110.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      185.0,
+      1087.0,
+      380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      392.0,
+      1088.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      1141.0,
+      1087.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      140.0,
+      110.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      162.0,
+      184.0,
+      1084.0,
+      295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      162.0,
+      309.0,
+      1085.0,
+      505.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      159.0,
+      516.0,
+      1086.0,
+      754.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      767.0,
+      1086.0,
+      961.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      975.0,
+      1087.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      140.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      127.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. POLAR CODES AND PAC CODES",
+    "page": 4,
+    "bbox": [
+      422.0,
+      184.0,
+      800.0,
+      210.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      233.0,
+      1082.0,
+      303.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Approximated Union Bound (AUB)",
+    "page": 4,
+    "bbox": [
+      136.0,
+      354.0,
+      524.0,
+      382.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      402.0,
+      1085.0,
+      514.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      487.0,
+      525.0,
+      732.0,
+      570.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      592.0,
+      1084.0,
+      664.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      418.0,
+      683.0,
+      798.0,
+      762.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1050.0,
+      707.0,
+      1081.0,
+      733.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      787.0,
+      1083.0,
+      948.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      422.0,
+      974.0,
+      797.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1051.0,
+      984.0,
+      1080.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1048.0,
+      1083.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Polar Codes and SC Decoding",
+    "page": 4,
+    "bbox": [
+      139.0,
+      1170.0,
+      483.0,
+      1198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1219.0,
+      1087.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      183.0,
+      1087.0,
+      464.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      390.0,
+      496.0,
+      829.0,
+      529.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1050.0,
+      499.0,
+      1081.0,
+      525.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      564.0,
+      1083.0,
+      634.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      647.0,
+      1085.0,
+      886.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      443.0,
+      899.0,
+      777.0,
+      973.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1050.0,
+      925.0,
+      1080.0,
+      950.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      996.0,
+      747.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      1043.0,
+      1084.0,
+      1152.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      431.0,
+      1146.0,
+      787.0,
+      1246.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1050.0,
+      1183.0,
+      1080.0,
+      1210.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      1267.0,
+      1075.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. PAC Codes and Fano Decoding",
+    "page": 5,
+    "bbox": [
+      139.0,
+      1346.0,
+      495.0,
+      1374.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1382.0,
+      1083.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      140.0,
+      110.0,
+      639.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1069.0,
+      112.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      348.0,
+      186.0,
+      868.0,
+      260.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1. Block diagram of PAC codes.",
+    "page": 6,
+    "bbox": [
+      140.0,
+      283.0,
+      426.0,
+      308.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      141.0,
+      345.0,
+      1078.0,
+      627.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      705.0,
+      1082.0,
+      776.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      785.0,
+      1081.0,
+      943.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      529.0,
+      964.0,
+      692.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1051.0,
+      986.0,
+      1080.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1061.0,
+      1082.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      138.0,
+      1354.0,
+      1083.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      161.0,
+      1437.0,
+      1084.0,
+      1465.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      139.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      184.0,
+      247.0,
+      209.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      225.0,
+      1082.0,
+      294.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      286.0,
+      302.0,
+      935.0,
+      339.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1050.0,
+      308.0,
+      1080.0,
+      335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      371.0,
+      1084.0,
+      444.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      162.0,
+      455.0,
+      808.0,
+      485.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      368.0,
+      517.0,
+      852.0,
+      553.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1051.0,
+      524.0,
+      1080.0,
+      549.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      584.0,
+      1084.0,
+      701.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      160.0,
+      711.0,
+      718.0,
+      743.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      753.0,
+      1081.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      839.0,
+      1084.0,
+      992.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      335.0,
+      1013.0,
+      884.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1051.0,
+      1050.0,
+      1080.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1135.0,
+      1082.0,
+      1206.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      1215.0,
+      1083.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. MPAC CODES AND HFSC DECODING",
+    "page": 7,
+    "bbox": [
+      390.0,
+      1333.0,
+      833.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1383.0,
+      1084.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      139.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      183.0,
+      1082.0,
+      254.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Construction of MPAC Codes",
+    "page": 8,
+    "bbox": [
+      137.0,
+      304.0,
+      472.0,
+      331.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      215.0,
+      384.0,
+      1008.0,
+      588.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2. Block diagram of the (N, K)-(Nc, Kc) MPAC codes.",
+    "page": 8,
+    "bbox": [
+      138.0,
+      634.0,
+      607.0,
+      658.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      706.0,
+      1083.0,
+      864.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      510.0,
+      896.0,
+      712.0,
+      925.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1038.0,
+      898.0,
+      1080.0,
+      925.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      963.0,
+      1083.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      1087.0,
+      1083.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      1419.0,
+      1083.0,
+      1491.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1069.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      184.0,
+      1085.0,
+      295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      161.0,
+      307.0,
+      884.0,
+      337.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      485.0,
+      370.0,
+      735.0,
+      406.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1038.0,
+      374.0,
+      1081.0,
+      400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      438.0,
+      1083.0,
+      554.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      139.0,
+      564.0,
+      1083.0,
+      634.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      138.0,
+      647.0,
+      1083.0,
+      718.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      731.0,
+      1086.0,
+      927.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      313.0,
+      969.0,
+      913.0,
+      1284.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3. Construction of index sets.",
+    "page": 9,
+    "bbox": [
+      139.0,
+      1320.0,
+      405.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      1390.0,
+      1085.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      140.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      176.0,
+      1082.0,
+      298.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      396.0,
+      325.0,
+      824.0,
+      362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      398.0,
+      1017.0,
+      425.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      454.0,
+      462.0,
+      765.0,
+      494.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1038.0,
+      464.0,
+      1081.0,
+      490.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      530.0,
+      771.0,
+      558.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      401.0,
+      595.0,
+      817.0,
+      626.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1038.0,
+      596.0,
+      1081.0,
+      622.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      662.0,
+      1083.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      868.0,
+      1083.0,
+      940.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      952.0,
+      1086.0,
+      1191.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      138.0,
+      1206.0,
+      1084.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      161.0,
+      1294.0,
+      307.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      158.0,
+      1331.0,
+      547.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1381.0,
+      1082.0,
+      1451.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      160.0,
+      1467.0,
+      1082.0,
+      1502.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1061.0,
+      112.0,
+      1082.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      183.0,
+      1083.0,
+      254.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      266.0,
+      1083.0,
+      422.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      474.0,
+      455.0,
+      746.0,
+      488.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1038.0,
+      458.0,
+      1081.0,
+      483.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      521.0,
+      819.0,
+      551.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      564.0,
+      1084.0,
+      803.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      395.0,
+      837.0,
+      823.0,
+      868.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1038.0,
+      840.0,
+      1080.0,
+      865.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      135.0,
+      901.0,
+      1082.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. HFSC Decoding",
+    "page": 11,
+    "bbox": [
+      140.0,
+      1149.0,
+      343.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1198.0,
+      1084.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      140.0,
+      110.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      328.0,
+      185.0,
+      896.0,
+      408.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 4. Block diagram of the HFSC decoding.",
+    "page": 12,
+    "bbox": [
+      139.0,
+      447.0,
+      492.0,
+      470.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      539.0,
+      1083.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      158.0,
+      710.0,
+      1083.0,
+      989.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      162.0,
+      1001.0,
+      1083.0,
+      1113.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      138.0,
+      1129.0,
+      1083.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      138.0,
+      1255.0,
+      1084.0,
+      1325.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Simulation Results",
+    "page": 12,
+    "bbox": [
+      140.0,
+      1376.0,
+      363.0,
+      1403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      1425.0,
+      1084.0,
+      1494.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      140.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1062.0,
+      112.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      186.0,
+      1074.0,
+      785.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      860.0,
+      1084.0,
+      1347.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      1357.0,
+      1085.0,
+      1472.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      183.0,
+      1087.0,
+      379.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      261.0,
+      426.0,
+      621.0,
+      954.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      612.0,
+      430.0,
+      952.0,
+      873.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 5. Performance comparison of MPAC codes, PAC codes, polar codes and CRC-polar codes, where N = 128 and K = 64.",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1008.0,
+      1081.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      135.0,
+      1080.0,
+      1087.0,
+      1486.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      139.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      183.0,
+      1085.0,
+      297.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IV. MWD ANALYSIS",
+    "page": 15,
+    "bbox": [
+      497.0,
+      340.0,
+      726.0,
+      366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      135.0,
+      390.0,
+      1086.0,
+      711.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Formation of the MWCs for Polar Codes",
+    "page": 15,
+    "bbox": [
+      136.0,
+      760.0,
+      585.0,
+      788.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      809.0,
+      1083.0,
+      879.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      892.0,
+      1083.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      138.0,
+      1022.0,
+      1083.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      161.0,
+      1150.0,
+      792.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      160.0,
+      1193.0,
+      826.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1241.0,
+      1083.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1330.0,
+      1084.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      140.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      184.0,
+      1082.0,
+      296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      308.0,
+      1083.0,
+      379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      138.0,
+      397.0,
+      1082.0,
+      468.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      399.0,
+      485.0,
+      819.0,
+      563.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1038.0,
+      511.0,
+      1081.0,
+      537.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      138.0,
+      582.0,
+      674.0,
+      611.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      630.0,
+      1085.0,
+      785.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      160.0,
+      801.0,
+      956.0,
+      832.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      485.0,
+      863.0,
+      736.0,
+      921.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1038.0,
+      869.0,
+      1081.0,
+      895.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      941.0,
+      1084.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      461.0,
+      1018.0,
+      757.0,
+      1099.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1038.0,
+      1042.0,
+      1081.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      1126.0,
+      1084.0,
+      1365.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      1382.0,
+      1085.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      185.0,
+      364.0,
+      210.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      423.0,
+      219.0,
+      798.0,
+      281.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1038.0,
+      226.0,
+      1081.0,
+      251.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      303.0,
+      1084.0,
+      413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      433.0,
+      1084.0,
+      505.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      398.0,
+      537.0,
+      820.0,
+      571.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1038.0,
+      541.0,
+      1081.0,
+      567.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      607.0,
+      1083.0,
+      677.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      690.0,
+      1085.0,
+      844.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      135.0,
+      855.0,
+      1084.0,
+      969.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      161.0,
+      980.0,
+      745.0,
+      1009.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      351.0,
+      1030.0,
+      864.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1038.0,
+      1067.0,
+      1080.0,
+      1093.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      1152.0,
+      927.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      138.0,
+      1194.0,
+      1083.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      1282.0,
+      1084.0,
+      1355.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      454.0,
+      1382.0,
+      766.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1038.0,
+      1390.0,
+      1081.0,
+      1416.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      139.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      129.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Formation of the MWCs for MPAC Codes",
+    "page": 18,
+    "bbox": [
+      139.0,
+      184.0,
+      597.0,
+      211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      232.0,
+      1082.0,
+      386.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      397.0,
+      1084.0,
+      512.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Ascending mean LLRs",
+    "page": 18,
+    "bbox": [
+      501.0,
+      552.0,
+      687.0,
+      575.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      368.0,
+      585.0,
+      854.0,
+      630.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      490.0,
+      645.0,
+      710.0,
+      669.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 6. Index sets of N subchannels under MPAC coding.",
+    "page": 18,
+    "bbox": [
+      138.0,
+      703.0,
+      582.0,
+      728.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      136.0,
+      773.0,
+      1085.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      138.0,
+      1146.0,
+      1085.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      137.0,
+      1353.0,
+      1082.0,
+      1425.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      493.0,
+      1420.0,
+      717.0,
+      1508.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1038.0,
+      1450.0,
+      1081.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1062.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      184.0,
+      691.0,
+      211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      226.0,
+      1083.0,
+      334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      160.0,
+      349.0,
+      923.0,
+      378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      161.0,
+      392.0,
+      943.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      135.0,
+      433.0,
+      1084.0,
+      587.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      406.0,
+      620.0,
+      813.0,
+      653.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1038.0,
+      624.0,
+      1081.0,
+      650.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      688.0,
+      1083.0,
+      759.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      450.0,
+      793.0,
+      768.0,
+      828.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1038.0,
+      797.0,
+      1080.0,
+      824.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      864.0,
+      1088.0,
+      1058.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      375.0,
+      1083.0,
+      842.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1038.0,
+      1108.0,
+      1081.0,
+      1133.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      1188.0,
+      1085.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      138.0,
+      1319.0,
+      1085.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      139.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1061.0,
+      111.0,
+      1084.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      183.0,
+      617.0,
+      211.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      387.0,
+      244.0,
+      833.0,
+      305.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1038.0,
+      250.0,
+      1081.0,
+      276.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      326.0,
+      1083.0,
+      396.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      307.0,
+      431.0,
+      910.0,
+      464.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      173.0,
+      499.0,
+      595.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      542.0,
+      1083.0,
+      737.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      749.0,
+      1086.0,
+      821.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      844.0,
+      1087.0,
+      956.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      398.0,
+      991.0,
+      819.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1038.0,
+      995.0,
+      1081.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      1059.0,
+      599.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      416.0,
+      1108.0,
+      800.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1038.0,
+      1145.0,
+      1080.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      1255.0,
+      1086.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      1379.0,
+      1086.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      110.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      1061.0,
+      111.0,
+      1082.0,
+      128.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      347.0,
+      187.0,
+      877.0,
+      431.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 7. Venn diagram of the associated index sets for indices [i + 1, N – 1].",
+    "page": 21,
+    "bbox": [
+      138.0,
+      467.0,
+      715.0,
+      491.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Verification of the MWCs for MPAC Codes",
+    "page": 21,
+    "bbox": [
+      140.0,
+      560.0,
+      606.0,
+      587.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      609.0,
+      1082.0,
+      680.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      140.0,
+      691.0,
+      1083.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      160.0,
+      780.0,
+      905.0,
+      809.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      835.0,
+      1085.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      1052.0,
+      1084.0,
+      1251.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      311.0,
+      1284.0,
+      909.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      354.0,
+      1347.0,
+      864.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      379.0,
+      1415.0,
+      838.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      183.0,
+      1085.0,
+      378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      161.0,
+      390.0,
+      557.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      161.0,
+      431.0,
+      556.0,
+      462.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      160.0,
+      473.0,
+      551.0,
+      504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      516.0,
+      1087.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      896.0,
+      1085.0,
+      966.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      508.0,
+      997.0,
+      714.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1038.0,
+      1004.0,
+      1081.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1069.0,
+      1082.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1164.0,
+      1083.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      161.0,
+      1382.0,
+      909.0,
+      1414.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      140.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      162.0,
+      183.0,
+      936.0,
+      212.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      334.0,
+      247.0,
+      886.0,
+      279.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      313.0,
+      1083.0,
+      385.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      404.0,
+      1085.0,
+      640.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      658.0,
+      1086.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      161.0,
+      1121.0,
+      1084.0,
+      1359.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      162.0,
+      1370.0,
+      1084.0,
+      1483.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      140.0,
+      110.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      185.0,
+      185.0,
+      299.0,
+      210.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      183.0,
+      225.0,
+      1083.0,
+      293.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      162.0,
+      308.0,
+      1081.0,
+      377.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      394.0,
+      1087.0,
+      635.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      645.0,
+      1086.0,
+      925.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "V. AUB-OPTIMAL MPAC CODES",
+    "page": 24,
+    "bbox": [
+      436.0,
+      965.0,
+      787.0,
+      992.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      1015.0,
+      1086.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Design of AUB-Optimal MPAC Codes",
+    "page": 24,
+    "bbox": [
+      138.0,
+      1298.0,
+      555.0,
+      1326.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      138.0,
+      1347.0,
+      1086.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      140.0,
+      109.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      132.0,
+      180.0,
+      1075.0,
+      1529.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      1061.0,
+      111.0,
+      1084.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      183.0,
+      1084.0,
+      294.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      306.0,
+      1082.0,
+      378.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      485.0,
+      404.0,
+      735.0,
+      519.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      1038.0,
+      447.0,
+      1081.0,
+      474.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      543.0,
+      1087.0,
+      740.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      303.0,
+      764.0,
+      918.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 8. AUB performances of the MPAC codes and PAC codes versus parameters (Nc, Kc), where N = 128, K = 64 and Eb/N0 = 3.5 dB.",
+    "page": 26,
+    "bbox": [
+      138.0,
+      1263.0,
+      1084.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      1347.0,
+      1087.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      139.0,
+      110.0,
+      640.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      135.0,
+      184.0,
+      1088.0,
+      756.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Simulation Results",
+    "page": 27,
+    "bbox": [
+      140.0,
+      804.0,
+      363.0,
+      830.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      853.0,
+      1086.0,
+      1007.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE I",
+    "page": 27,
+    "bbox": [
+      572.0,
+      1050.0,
+      650.0,
+      1069.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "THE MWD OF AUB-OPTIMAL MPAC CODES, PAC CODES, ENSEMBLE AVERAGE AND CRC-POLAR CODES WITH DIFFERENT CODE PARAMETERS",
+    "page": 27,
+    "bbox": [
+      178.0,
+      1070.0,
+      1042.0,
+      1114.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      160.0,
+      1136.0,
+      1063.0,
+      1488.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      140.0,
+      110.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      185.0,
+      1087.0,
+      504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      518.0,
+      1084.0,
+      755.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      138.0,
+      767.0,
+      1084.0,
+      836.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      851.0,
+      1087.0,
+      1129.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      1142.0,
+      1087.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      140.0,
+      110.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      258.0,
+      211.0,
+      601.0,
+      713.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      609.0,
+      213.0,
+      954.0,
+      662.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 9. Performance comparison of the AUB-optimal MPAC codes and other relevant codes, where N = 128 and K = 64.",
+    "page": 29,
+    "bbox": [
+      139.0,
+      774.0,
+      1060.0,
+      797.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      866.0,
+      1084.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      137.0,
+      949.0,
+      1085.0,
+      1060.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      161.0,
+      1074.0,
+      881.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      137.0,
+      1116.0,
+      1084.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      1199.0,
+      1087.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      140.0,
+      110.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      1062.0,
+      111.0,
+      1084.0,
+      128.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      251.0,
+      200.0,
+      953.0,
+      721.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 10. Performance comparison of the AUB-optimal MPAC codes and other relevant codes, where N = 128 and K = 29.",
+    "page": 30,
+    "bbox": [
+      139.0,
+      766.0,
+      1070.0,
+      790.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      856.0,
+      1084.0,
+      1009.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VI. CONCLUSION",
+    "page": 30,
+    "bbox": [
+      515.0,
+      1049.0,
+      709.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      162.0,
+      1098.0,
+      849.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1142.0,
+      1086.0,
+      1420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      1432.0,
+      1085.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      139.0,
+      109.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      1061.0,
+      111.0,
+      1082.0,
+      128.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      183.0,
+      1086.0,
+      338.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ACKNOWLEDGEMENT",
+    "page": 31,
+    "bbox": [
+      496.0,
+      383.0,
+      728.0,
+      407.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      430.0,
+      1086.0,
+      542.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "REFERENCES",
+    "page": 31,
+    "bbox": [
+      540.0,
+      588.0,
+      683.0,
+      613.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      642.0,
+      1083.0,
+      694.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      704.0,
+      1082.0,
+      727.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      734.0,
+      1081.0,
+      785.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      150.0,
+      797.0,
+      1082.0,
+      849.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      150.0,
+      860.0,
+      1082.0,
+      914.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      150.0,
+      923.0,
+      1082.0,
+      977.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      150.0,
+      986.0,
+      1082.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      149.0,
+      1050.0,
+      1081.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      148.0,
+      1112.0,
+      1081.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1174.0,
+      1081.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1238.0,
+      1081.0,
+      1320.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      140.0,
+      1330.0,
+      927.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      142.0,
+      1363.0,
+      1082.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      141.0,
+      1425.0,
+      1082.0,
+      1477.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      110.0,
+      641.0,
+      130.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      139.0,
+      188.0,
+      1083.0,
+      242.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      249.0,
+      1082.0,
+      304.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      312.0,
+      1083.0,
+      367.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      376.0,
+      1083.0,
+      429.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      439.0,
+      1081.0,
+      492.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      501.0,
+      1083.0,
+      555.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      564.0,
+      1082.0,
+      615.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      627.0,
+      1082.0,
+      680.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      690.0,
+      1083.0,
+      743.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      752.0,
+      1082.0,
+      805.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      815.0,
+      1081.0,
+      870.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      878.0,
+      1082.0,
+      931.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      941.0,
+      1082.0,
+      994.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      1003.0,
+      1082.0,
+      1056.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1066.0,
+      1082.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      142.0,
+      1129.0,
+      1082.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1192.0,
+      1034.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1224.0,
+      1083.0,
+      1277.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1286.0,
+      1082.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1349.0,
+      1081.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      141.0,
+      1411.0,
+      1082.0,
+      1464.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      140.0,
+      1473.0,
+      991.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      140.0,
+      111.0,
+      640.0,
+      129.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      1061.0,
+      111.0,
+      1083.0,
+      128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      141.0,
+      189.0,
+      1082.0,
+      240.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      142.0,
+      250.0,
+      1082.0,
+      301.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      142.0,
+      313.0,
+      1082.0,
+      364.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      141.0,
+      376.0,
+      1043.0,
+      398.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      141.0,
+      408.0,
+      1081.0,
+      459.0
+    ]
+  }
+]

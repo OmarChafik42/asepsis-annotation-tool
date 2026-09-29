@@ -1,0 +1,2845 @@
+{
+  "id": "batch-1788450575-SinjgFbQTxnRLk4ZdZSm",
+  "object": "batch",
+  "endpoint": "/v1/chat/completions",
+  "model": "google/gemma-4-31b-it-20260402",
+  "completion_window": "24h",
+  "status": "completed",
+  "created_at": 1788450575,
+  "finalized_at": 1788457705,
+  "request_counts": {
+    "total": 60,
+    "completed": 60,
+    "failed": 0
+  },
+  "usage": {
+    "prompt_tokens": 1697199,
+    "completion_tokens": 24314,
+    "total_tokens": 1721513,
+    "cost": 0.68549219,
+    "is_byok": false
+  },
+  "error": null,
+  "results": [
+    {
+      "id": "arxiv_2607.20250v1.prompt.md",
+      "custom_id": "arxiv_2607.20250v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-e8d68ad0456c2f804796",
+          "created": 1788456195,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"A ProbLog program to infer individual genotypes from familial phenotypes in autosomal, X-linked, and Y-linked Mendelian disorders\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Phenotype and genotype inference\", \"level\": 2}, {\"title\": \"Hardy-Weinberg equilibrium\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Cystic Fibrosis\", \"level\": 2}, {\"title\": \"Huntington\\u2019s disease\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Acknowledgments\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 12105,
+            "completion_tokens": 182,
+            "total_tokens": 12287,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2607.21657v1.prompt.md",
+      "custom_id": "arxiv_2607.21657v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-46646e50260d7ce3904f",
+          "created": 1788456203,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Kermack and McKendrick\\u2019s renewal equation\", \"level\": 2}, {\"title\": \"Tail exponents and reproduction numbers\", \"level\": 2}, {\"title\": \"Constructing epidemic momentum from incidence\", \"level\": 2}, {\"title\": \"Inferring R0 and prior population immunity using epidemic momentum\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Estimates of prior immunity and R0 from stochastic simulations\", \"level\": 2}, {\"title\": \"Reappraisal of the 1918 influenza pandemic in Philadelphia\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Relation to previous approaches\", \"level\": 2}, {\"title\": \"Data requirements and statistical challenges\", \"level\": 2}, {\"title\": \"Model assumptions and extensions\", \"level\": 2}, {\"title\": \"Conclusions\", \"level\": 2}, {\"title\": \"Ethics\", \"level\": 1}, {\"title\": \"Data accessibility\", \"level\": 1}, {\"title\": \"Declaration of AI use\", \"level\": 1}, {\"title\": \"Author contributions\", \"level\": 1}, {\"title\": \"Competing interests\", \"level\": 1}, {\"title\": \"Funding\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"APPENDICES\", \"level\": 1}, {\"title\": \"Epidemic momentum from finite incidence history\", \"level\": 2}, {\"title\": \"Incidence always peaks before momentum\", \"level\": 2}, {\"title\": \"Lambert\\u2019s W-function\", \"level\": 2}, {\"title\": \"Previous estimates of prior immunity to 1918 influenza\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 23369,
+            "completion_tokens": 422,
+            "total_tokens": 23791,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2607.23728v1.prompt.md",
+      "custom_id": "arxiv_2607.23728v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-97cd7552f68f558ed7db",
+          "created": 1788456217,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"THE MODEL\", \"level\": 1}, {\"title\": \"PHASE DIAGRAM OF PARAMETERS: PULLED AND PUSHED REGIONS\", \"level\": 1}, {\"title\": \"THEORY OF FRONT PROPAGATION\", \"level\": 1}, {\"title\": \"Continuous transition between pulled and pushed fronts\", \"level\": 2}, {\"title\": \"Discontinuous transition between pulled and pushed fronts\", \"level\": 2}, {\"title\": \"BISTABILITY\", \"level\": 1}, {\"title\": \"SUMMARY AND DISCUSSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 12887,
+            "completion_tokens": 139,
+            "total_tokens": 13026,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2607.27137v1.prompt.md",
+      "custom_id": "arxiv_2607.27137v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-7af687c5ad41870dc1d9",
+          "created": 1788456223,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Learning the Chikungunya Virus Model\", \"level\": 2}, {\"title\": \"The chikungunya virus (CHIKV) model\", \"level\": 3}, {\"title\": \"Host population\", \"level\": 4}, {\"title\": \"Vector population\", \"level\": 4}, {\"title\": \"Governing equations\", \"level\": 4}, {\"title\": \"Sparse identification of nonlinear dynamics (SINDy)\", \"level\": 3}, {\"title\": \"Model discovery from clean data\", \"level\": 4}, {\"title\": \"Model discovery from noisy data\", \"level\": 4}, {\"title\": \"Ensemble Kalman Filter\", \"level\": 3}, {\"title\": \"Numerical Results\", \"level\": 1}, {\"title\": \"Identification of CHIKV Dynamics from Clean Observations\", \"level\": 2}, {\"title\": \"SINDy Reconstruction from Noisy Data\", \"level\": 2}, {\"title\": \"Noise model and threshold selection\", \"level\": 3}, {\"title\": \"Small noise regime (\\u03b5\\u226410%)\", \"level\": 3}, {\"title\": \"Moderate-to-large noise regime (\\u03b5\\u226520%)\", \"level\": 3}, {\"title\": \"State Estimation via Ensemble Kalman Filtering\", \"level\": 2}, {\"title\": \"Experimental setup\", \"level\": 3}, {\"title\": \"Sensitivity to observation frequency\", \"level\": 3}, {\"title\": \"Recovery of unobserved state variables\", \"level\": 3}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Availability of data and material\", \"level\": 1}, {\"title\": \"Supporting information\", \"level\": 1}, {\"title\": \"Authors\\u2019 contributions\", \"level\": 1}, {\"title\": \"Conflicts of Interest\", \"level\": 1}, {\"title\": \"Funding\", \"level\": 1}, {\"title\": \"Appendix A: CHIKV model\", \"level\": 1}, {\"title\": \"Appendix B: SINDy identification using partial and noisy data\", \"level\": 1}, {\"title\": \"Appendix C: Discovered SINDy equations\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 55085,
+            "completion_tokens": 495,
+            "total_tokens": 55580,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.00761v1.prompt.md",
+      "custom_id": "arxiv_2608.00761v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-db3d10e4343b4f8c77b7",
+          "created": 1788456254,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Data\", \"level\": 1}, {\"title\": \"Analysing Data Releases\", \"level\": 1}, {\"title\": \"AI as a financial Analyst\", \"level\": 2}, {\"title\": \"Variable Construction\", \"level\": 2}, {\"title\": \"Performance Evaluation\", \"level\": 1}, {\"title\": \"Cross-sectional Trading Strategy\", \"level\": 2}, {\"title\": \"Panel Regression\", \"level\": 2}, {\"title\": \"GPT-4o vs DeepSeek-V3\", \"level\": 2}, {\"title\": \"Alternative ways of constructing the AIFX index\", \"level\": 2}, {\"title\": \"Time-Series Strategies\", \"level\": 2}, {\"title\": \"Look-ahead Bias: Reasoning or Memorization?\", \"level\": 1}, {\"title\": \"Guess the Year\", \"level\": 2}, {\"title\": \"Cut-off Test: GPT-4o vs GPT-3.5\", \"level\": 2}, {\"title\": \"Correlations Between Macro Variables and Currency Returns\", \"level\": 2}, {\"title\": \"Pure Hindsight Portfolio\", \"level\": 2}, {\"title\": \"Mechanisms Underlying Predictability\", \"level\": 1}, {\"title\": \"Predictive Power of Different Categories of Fundamentals\", \"level\": 2}, {\"title\": \"Decomposing Predictability: Positive vs. Negative News\", \"level\": 2}, {\"title\": \"Cross-sectional Trading Strategies\", \"level\": 3}, {\"title\": \"Panel Regressions\", \"level\": 3}, {\"title\": \"Further Investigation of the Asymmetric Predictive Power\", \"level\": 3}, {\"title\": \"A Potential Mechanism\", \"level\": 2}, {\"title\": \"Conclusions\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Internet Appendix\", \"level\": 1}, {\"title\": \"A Definition of Currency Factors\", \"level\": 2}, {\"title\": \"B Time-Series Strategy; Additional Results\", \"level\": 2}, {\"title\": \"C Categorization Procedure\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 40600,
+            "completion_tokens": 471,
+            "total_tokens": 41071,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.07400v1.prompt.md",
+      "custom_id": "arxiv_2608.07400v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-325b1892bda078f185f8",
+          "created": 1788456276,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 2}, {\"title\": \"Financial QA and RAG Benchmarks\", \"level\": 3}, {\"title\": \"Retrieval, Reranking, and Hard Negatives\", \"level\": 3}, {\"title\": \"Attribution and Faithfulness\", \"level\": 3}, {\"title\": \"Dataset Construction\", \"level\": 1}, {\"title\": \"Sources and Design Principles\", \"level\": 2}, {\"title\": \"Question-Generation Criteria\", \"level\": 2}, {\"title\": \"Record Schema\", \"level\": 2}, {\"title\": \"Supporting Passages and Hard Negatives\", \"level\": 2}, {\"title\": \"Data Collection\", \"level\": 2}, {\"title\": \"Retrieval Corpus Definitions\", \"level\": 2}, {\"title\": \"Hard-Negative Construction Taxonomy\", \"level\": 2}, {\"title\": \"Official Label Set and Normalization\", \"level\": 2}, {\"title\": \"Dataset Analysis\", \"level\": 1}, {\"title\": \"Data Quality and Normalization\", \"level\": 2}, {\"title\": \"Methodology-to-Dataset Validation\", \"level\": 2}, {\"title\": \"Tasks\", \"level\": 1}, {\"title\": \"Experimental Protocol and Baselines\", \"level\": 1}, {\"title\": \"Baselines\", \"level\": 2}, {\"title\": \"Splits and Ablations\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Retrieval over the Global Pool\", \"level\": 2}, {\"title\": \"Reranking over the In-Record Candidate Set\", \"level\": 2}, {\"title\": \"Hard-Negative Discrimination\", \"level\": 2}, {\"title\": \"Stratified Performance and Ablations\", \"level\": 2}, {\"title\": \"Answer Generation and Error Analysis\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Limitations\", \"level\": 1}, {\"title\": \"Ethical Considerations\", \"level\": 1}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Question Generation and Annotation Criteria\", \"level\": 1}, {\"title\": \"Purpose\", \"level\": 2}, {\"title\": \"Core Definitions\", \"level\": 2}, {\"title\": \"Reasoning Types\", \"level\": 2}, {\"title\": \"Financial Topic Categories\", \"level\": 2}, {\"title\": \"Complexity-Level Definitions\", \"level\": 2}, {\"title\": \"Query Rewrite Rules\", \"level\": 2}, {\"title\": \"Passage Coverage Requirements\", \"level\": 2}, {\"title\": \"Implementation Guidelines\", \"level\": 2}, {\"title\": \"Related Resources\", \"level\": 2}, {\"title\": \"What the Methodology Does and Does Not Guarantee\", \"level\": 2}, {\"title\": \"Record Schema\", \"level\": 1}, {\"title\": \"Canonical Label Normalization Mapping\", \"level\": 1}, {\"title\": \"Example Record\", \"level\": 1}, {\"title\": \"Reasoning-Type Examples\", \"level\": 1}, {\"title\": \"Example Prompt Templates\", \"level\": 1}, {\"title\": \"LLM-Based QA Prompt\", \"level\": 2}, {\"title\": \"RAG-with-Citations Prompt\", \"level\": 2}, {\"title\": \"Hard-Negative Discrimination Prompt\", \"level\": 2}, {\"title\": \"Reproducibility Notes\", \"level\": 1}, {\"title\": \"Cross-Tabulation Tables\", \"level\": 1}, {\"title\": \"Dataset Card\", \"level\": 1}, {\"title\": \"Baselines Reproduction\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 34919,
+            "completion_tokens": 812,
+            "total_tokens": 35731,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.07790v1.prompt.md",
+      "custom_id": "arxiv_2608.07790v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-e84da8990cf4a9b097d5",
+          "created": 1788456300,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Abstract\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Permutation determines long-term dynamics\", \"level\": 1}, {\"title\": \"Typical versus extremal maximum attractor lengths\", \"level\": 2}, {\"title\": \"Scaling of mean attractor length\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Acknowledgments\", \"level\": 1}, {\"title\": \"Appendix\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 15247,
+            "completion_tokens": 127,
+            "total_tokens": 15374,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.08825v1.prompt.md",
+      "custom_id": "arxiv_2608.08825v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-5508fcc7822ac60d9db6",
+          "created": 1788456305,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"RELATED WORK\", \"level\": 1}, {\"title\": \"Foundation Models for Time Series\", \"level\": 2}, {\"title\": \"Efficient Model Adaptation\", \"level\": 2}, {\"title\": \"Hybrid Neural-Classical Methods\", \"level\": 2}, {\"title\": \"Attention Mechanisms and Bilinear Models\", \"level\": 2}, {\"title\": \"Financial Time Series Prediction\", \"level\": 2}, {\"title\": \"METHODOLOGY\", \"level\": 1}, {\"title\": \"Problem Setting\", \"level\": 2}, {\"title\": \"Hybrid Correction Framework\", \"level\": 2}, {\"title\": \"AttnCorrect: Attention-Based Correction\", \"level\": 2}, {\"title\": \"GatedLinear: Bilinear-Gated Correction\", \"level\": 2}, {\"title\": \"Training Details\", \"level\": 2}, {\"title\": \"Ablation Study Design\", \"level\": 2}, {\"title\": \"EXPERIMENTAL SETUP\", \"level\": 1}, {\"title\": \"Dataset\", \"level\": 2}, {\"title\": \"Data Leakage Prevention\", \"level\": 2}, {\"title\": \"Evaluation Metrics\", \"level\": 2}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"Aggregate Results\", \"level\": 2}, {\"title\": \"Per-Stock Performance Analysis\", \"level\": 2}, {\"title\": \"Ablation Analysis: Component Contributions\", \"level\": 2}, {\"title\": \"Parameter Efficiency Analysis\", \"level\": 2}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"On Correlation Metrics for Multi-Step Forecasting\", \"level\": 2}, {\"title\": \"Why Does Classical Residual Learning Complement Neural Correction?\", \"level\": 2}, {\"title\": \"Why Do Simpler Architectures Excel Without RF?\", \"level\": 2}, {\"title\": \"Practical Recommendations\", \"level\": 2}, {\"title\": \"Limitations and Future Work\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENT\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 19644,
+            "completion_tokens": 477,
+            "total_tokens": 20121,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.10584v2.prompt.md",
+      "custom_id": "arxiv_2608.10584v2.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-5daafe747169e0c95735",
+          "created": 1788456318,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"Scholar-Level Research Assessment\", \"level\": 2}, {\"title\": \"LLM-Based Research Evaluation\", \"level\": 2}, {\"title\": \"Evidence-Grounded Assessment\", \"level\": 2}, {\"title\": \"HexEval Framework\", \"level\": 1}, {\"title\": \"Framework Overview and Data Flow\", \"level\": 2}, {\"title\": \"Intrinsic Research Quality Assessment\", \"level\": 2}, {\"title\": \"Representative-Work Anonymization\", \"level\": 3}, {\"title\": \"External Scholarly Behavior Assessment\", \"level\": 2}, {\"title\": \"Evaluation Dataset Construction\", \"level\": 2}, {\"title\": \"Intrinsic Quality Dataset\", \"level\": 3}, {\"title\": \"External Scholarly Behavior Dataset\", \"level\": 3}, {\"title\": \"Experimental Setting\", \"level\": 2}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Intrinsic Research Quality Evaluation\", \"level\": 3}, {\"title\": \"External Scholarly Behavior Evaluation\", \"level\": 3}, {\"title\": \"Case Study\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 2}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 23090,
+            "completion_tokens": 293,
+            "total_tokens": 23383,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.10596v1.prompt.md",
+      "custom_id": "arxiv_2608.10596v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-ad19ac243fb7cc66408b",
+          "created": 1788456374,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Setup and notation\", \"level\": 2}, {\"title\": \"The example is not identified\", \"level\": 3}, {\"title\": \"The rank condition\", \"level\": 4}, {\"title\": \"A misprint in the counterfactual display\", \"level\": 5}, {\"title\": \"Discussion\", \"level\": 6}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 15297,
+            "completion_tokens": 91,
+            "total_tokens": 15388,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.10641v1.prompt.md",
+      "custom_id": "arxiv_2608.10641v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-46bc449fa1a635d12eea",
+          "created": 1788456388,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"PRELIMINARIES AND PROBLEM FORMULATION\", \"level\": 1}, {\"title\": \"Measure-valued plant model\", \"level\": 2}, {\"title\": \"Control problem\", \"level\": 2}, {\"title\": \"MAIN RESULTS: REACHABLE DECAY RATES AND MAXIMAL ACTUATOR AUTHORITY\", \"level\": 1}, {\"title\": \"THE PROPORTIONAL ACTUATOR: CERTIFIABLE RANGE, SENSITIVITY, AND COST\", \"level\": 1}, {\"title\": \"The certifiable gain interval\", \"level\": 2}, {\"title\": \"Sensitivity and reachable decay rates\", \"level\": 2}, {\"title\": \"Divergence of the certified guarantee\", \"level\": 2}, {\"title\": \"The projected gain law\", \"level\": 2}, {\"title\": \"CERTAINTY-EQUIVALENCE FEEDBACK\", \"level\": 1}, {\"title\": \"Tuning, and the role of the estimator\", \"level\": 2}, {\"title\": \"NUMERICAL ILLUSTRATION: FOOT-AND-MOUTH SURVEILLANCE\", \"level\": 1}, {\"title\": \"CONCLUSIONS AND PROSPECTS\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 25175,
+            "completion_tokens": 283,
+            "total_tokens": 25458,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.11918v1.prompt.md",
+      "custom_id": "arxiv_2608.11918v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-6a54fd5320a3e1d0d21d",
+          "created": 1788456419,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"A forest growth model based on metabolic scaling\", \"level\": 2}, {\"title\": \"Exact solution of the spatially-homogeneous bulk solution\", \"level\": 2}, {\"title\": \"Exact stationary solution reveals distinct dynamical regimes\", \"level\": 2}, {\"title\": \"Effect of space and border disturbance\", \"level\": 2}, {\"title\": \"Interplay of boundary effects and inter-species interactions\", \"level\": 2}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"MATERIALS AND METHODS\", \"level\": 1}, {\"title\": \"Growth rate\", \"level\": 2}, {\"title\": \"Light attenuation and shading\", \"level\": 2}, {\"title\": \"Canopy interaction\", \"level\": 2}, {\"title\": \"Resource competition\", \"level\": 2}, {\"title\": \"Stationary solution\", \"level\": 2}, {\"title\": \"Homogeneous solutions of the spatially explicit model\", \"level\": 2}, {\"title\": \"Spatial kernel used in simulations\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 21905,
+            "completion_tokens": 253,
+            "total_tokens": 22158,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.12143v3.prompt.md",
+      "custom_id": "arxiv_2608.12143v3.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-5138b5379cfb6f4a5859",
+          "created": 1788456446,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"A coalition model with two enrolment channels\", \"level\": 2}, {\"title\": \"The game and the two channels\", \"level\": 3}, {\"title\": \"The free-rider gap from primitives\", \"level\": 3}, {\"title\": \"Three architectures in one game\", \"level\": 3}, {\"title\": \"Bistability, lock-in, and hysteresis\", \"level\": 1}, {\"title\": \"Bistability and the critical mass\", \"level\": 2}, {\"title\": \"The non-linear breakdown and the lock-in ratio\", \"level\": 2}, {\"title\": \"Hysteresis and the bistable wedge\", \"level\": 2}, {\"title\": \"A map of architectures\", \"level\": 1}, {\"title\": \"Two robustness metrics\", \"level\": 2}, {\"title\": \"The robustness map and the three regimes\", \"level\": 2}, {\"title\": \"Entry versus interior architectures\", \"level\": 2}, {\"title\": \"Resilience to heterogeneity\", \"level\": 1}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Materials and Methods\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Supporting Information\", \"level\": 1}, {\"title\": \"SI Note 1: The stylized coalition model\", \"level\": 2}, {\"title\": \"SI Note 2: Tipping structure and critical mass\", \"level\": 2}, {\"title\": \"SI Note 3: Robustness layer, frontier, and perturbation analysis\", \"level\": 2}, {\"title\": \"SI Note 4: Architecture comparison\", \"level\": 2}, {\"title\": \"SI Note 5: Conditional placement of clean-up certificates\", \"level\": 2}, {\"title\": \"SI Note 6: The free-rider gap and the calibration of the channels\", \"level\": 2}, {\"title\": \"SI Note 7: Non-linear breakdown, field hysteresis, and the bistable wedge\", \"level\": 2}, {\"title\": \"SI Note 8: Random-field heterogeneity\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 27367,
+            "completion_tokens": 489,
+            "total_tokens": 27856,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.12408v2.prompt.md",
+      "custom_id": "arxiv_2608.12408v2.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-0dc20289b2101938f411",
+          "created": 1788456510,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"The V1 rule ranking is a function of evaluation resolution\", \"level\": 2}, {\"title\": \"It is not the untrained baseline\\u2019s normalization\", \"level\": 2}, {\"title\": \"Train/eval resolution matching does not account for it: ResNet-50 and Swin-Tiny\", \"level\": 2}, {\"title\": \"Low-level accounts: Gabor, pixel, and global colour\", \"level\": 2}, {\"title\": \"Content, not pooled positions\", \"level\": 2}, {\"title\": \"It generalizes over training time and rules across species\", \"level\": 2}, {\"title\": \"What survives: a genuine learning effect at LOC\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"A correction to our own earlier work\", \"level\": 2}, {\"title\": \"Relation to prior work\", \"level\": 2}, {\"title\": \"Limitations\", \"level\": 2}, {\"title\": \"Future work\", \"level\": 2}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"Code and Data Availability\", \"level\": 1}, {\"title\": \"Appendix A: Hyperparameter Details\", \"level\": 1}, {\"title\": \"Appendix B: Weight Displacement from Initialization\", \"level\": 1}, {\"title\": \"Appendix C: Best-Layer Selection\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 23601,
+            "completion_tokens": 373,
+            "total_tokens": 23974,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.14323v1.prompt.md",
+      "custom_id": "arxiv_2608.14323v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-a4ad3f25a6f17e89cce5",
+          "created": 1788456563,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"Method\", \"level\": 1}, {\"title\": \"Prediction Target and Characteristic Dependence\", \"level\": 2}, {\"title\": \"Clique-Induced Neural Architecture\", \"level\": 2}, {\"title\": \"HNN Variants and Structural Controls\", \"level\": 2}, {\"title\": \"Experimental Design\", \"level\": 1}, {\"title\": \"Data and Walk-Forward Protocol\", \"level\": 2}, {\"title\": \"Models and Selection\", \"level\": 2}, {\"title\": \"Evaluation and Inference\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Predictive Performance\", \"level\": 2}, {\"title\": \"Feature Alignment and Parameter Economy\", \"level\": 2}, {\"title\": \"Economic Ranking\", \"level\": 2}, {\"title\": \"Performance Across Time\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 14860,
+            "completion_tokens": 253,
+            "total_tokens": 15113,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.16366v1.prompt.md",
+      "custom_id": "arxiv_2608.16366v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-283ff62a0048d00bd34e",
+          "created": 1788456618,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"The tSymPerturb architecture\", \"level\": 1}, {\"title\": \"A temporal source-state intervention with virtual knockout as an endpoint\", \"level\": 1}, {\"title\": \"Seven components and longitudinal-specific constraints\", \"level\": 2}, {\"title\": \"Temporal knockdown and dosage perturbation\", \"level\": 3}, {\"title\": \"Directed communication blocking\", \"level\": 3}, {\"title\": \"Combination perturbation\", \"level\": 3}, {\"title\": \"Sequence optimisation\", \"level\": 3}, {\"title\": \"Seven utility outcomes, uncertainty and tVPPS\", \"level\": 1}, {\"title\": \"Internal computational verification and finite-sample recovery\", \"level\": 1}, {\"title\": \"Temporal validity, multi-wave propagation and benchmark contrasts\", \"level\": 1}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Reference two-wave transition model\", \"level\": 2}, {\"title\": \"Clinical anchors and scale transformation\", \"level\": 2}, {\"title\": \"General temporal location\\u2013scale state intervention\", \"level\": 2}, {\"title\": \"Temporal virtual knockout\", \"level\": 2}, {\"title\": \"Temporal virtual knockdown and dosage perturbation\", \"level\": 2}, {\"title\": \"Directed edge and source-node communication blocking\", \"level\": 2}, {\"title\": \"Combination perturbation and the additivity constraint\", \"level\": 2}, {\"title\": \"Multi-wave propagation and intervention sequence recursion\", \"level\": 2}, {\"title\": \"Longitudinal utility outcomes and tVPPS\", \"level\": 2}, {\"title\": \"Simulation generating mechanism\", \"level\": 2}, {\"title\": \"Analytical, Monte Carlo and algebraic verification\", \"level\": 2}, {\"title\": \"Finite-sample recovery, benchmark comparisons and uncertainty\", \"level\": 2}, {\"title\": \"Required validation extensions\", \"level\": 2}, {\"title\": \"Software and reproducibility\", \"level\": 2}, {\"title\": \"Data availability\", \"level\": 1}, {\"title\": \"Code availability\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"Author contributions\", \"level\": 1}, {\"title\": \"Competing interests\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 20321,
+            "completion_tokens": 532,
+            "total_tokens": 20853,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.16951v1.prompt.md",
+      "custom_id": "arxiv_2608.16951v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-5351ffb496be9959c76b",
+          "created": 1788456674,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Abstract\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"LLM-Guided Algorithm Discovery\", \"level\": 2}, {\"title\": \"Motif Discovery Algorithms\", \"level\": 2}, {\"title\": \"Protein Fitness Prediction\", \"level\": 2}, {\"title\": \"The Little Scientist Framework\", \"level\": 1}, {\"title\": \"Overview\", \"level\": 2}, {\"title\": \"The Scientist Agent\", \"level\": 2}, {\"title\": \"The Evaluation Environment and Structured Feedback\", \"level\": 2}, {\"title\": \"The Kuhn Agent\", \"level\": 2}, {\"title\": \"Process Engineering\", \"level\": 2}, {\"title\": \"Search Statistics and Compute Usage\", \"level\": 2}, {\"title\": \"Infrastructure Evolution\", \"level\": 2}, {\"title\": \"Reproducibility\", \"level\": 2}, {\"title\": \"Benchmark Methodology\", \"level\": 2}, {\"title\": \"Data\", \"level\": 3}, {\"title\": \"Negative Sets\", \"level\": 3}, {\"title\": \"Tools Compared\", \"level\": 3}, {\"title\": \"Evaluation\", \"level\": 3}, {\"title\": \"Statistical Tests\", \"level\": 3}, {\"title\": \"Hardware and Reproducibility\", \"level\": 3}, {\"title\": \"Case Study: De Novo Motif Discovery\", \"level\": 1}, {\"title\": \"Problem Domain\", \"level\": 2}, {\"title\": \"Search Configuration\", \"level\": 2}, {\"title\": \"Diagnostic Feedback\", \"level\": 2}, {\"title\": \"The Discovered Algorithm\", \"level\": 2}, {\"title\": \"Algorithm Details\", \"level\": 2}, {\"title\": \"Pipeline Overview\", \"level\": 3}, {\"title\": \"Adaptive Background\", \"level\": 3}, {\"title\": \"Multi-Width K-mer Enumeration\", \"level\": 3}, {\"title\": \"Dual Seed Selection\", \"level\": 3}, {\"title\": \"Soft EM Refinement\", \"level\": 3}, {\"title\": \"Information Content and Effective Width\", \"level\": 3}, {\"title\": \"Multi-Criteria Ranking\", \"level\": 3}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Shuffled Negatives Benchmark\", \"level\": 3}, {\"title\": \"Genomic Negatives Benchmark\", \"level\": 3}, {\"title\": \"Speed\", \"level\": 3}, {\"title\": \"Per-TF Analysis\", \"level\": 3}, {\"title\": \"Statistical Significance\", \"level\": 3}, {\"title\": \"Biological Validity\", \"level\": 3}, {\"title\": \"Memory Usage\", \"level\": 3}, {\"title\": \"Case Study: ProteinGym DMS Substitutions Zero-Shot\", \"level\": 1}, {\"title\": \"Problem Setup\", \"level\": 2}, {\"title\": \"Search Configuration\", \"level\": 2}, {\"title\": \"Diagnostic Feedback\", \"level\": 2}, {\"title\": \"Search Statistics\", \"level\": 2}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Discovered Strategy: Delta V\", \"level\": 2}, {\"title\": \"Quantile Calibration\", \"level\": 3}, {\"title\": \"Z-score Normalization\", \"level\": 3}, {\"title\": \"Confidence-Weighted Ensemble\", \"level\": 3}, {\"title\": \"Residual Propagation\", \"level\": 3}, {\"title\": \"Conservation-Modulated GEMME Weighting\", \"level\": 3}, {\"title\": \"Structure-Based Penalties\", \"level\": 3}, {\"title\": \"Dynamic Range Expansion\", \"level\": 3}, {\"title\": \"Interpretation\", \"level\": 2}, {\"title\": \"Ablations\", \"level\": 1}, {\"title\": \"Development Timeline\", \"level\": 2}, {\"title\": \"Effect of Structured Feedback vs. Scalar Score\", \"level\": 2}, {\"title\": \"Search Efficiency: Improvement Rate\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"What the Search Discovered\", \"level\": 2}, {\"title\": \"Implications for Agentic Science\", \"level\": 2}, {\"title\": \"Collaborative Human-Agent Research\", \"level\": 2}, {\"title\": \"Limitations and Future Directions\", \"level\": 2}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Supplementary Material\", \"level\": 1}, {\"title\": \"Section A: Per-TF Results\", \"level\": 2}, {\"title\": \"Section B: TOMTOM Match Analysis\", \"level\": 2}, {\"title\": \"Section C: Compilation Fairness\", \"level\": 2}, {\"title\": \"Section D: Reproducibility\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 32629,
+            "completion_tokens": 1062,
+            "total_tokens": 33691,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.17196v1.prompt.md",
+      "custom_id": "arxiv_2608.17196v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-d4d59912385cfb77cf52",
+          "created": 1788456830,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"ORDINAL PATTERNS, SPATIAL PERMUTATION ENTROPY, AND SPATIOTEMPORAL DYNAMICS\", \"level\": 1}, {\"title\": \"TRANSITION TO SYNCHRONIZATION IN OSCILLATOR NETWORKS\", \"level\": 2}, {\"title\": \"CHARACTERIZING DIFFERENT DYNAMICAL STATES\", \"level\": 2}, {\"title\": \"DIFFERENT PATHS TO SYNCHRONIZATION VARIOUS NETWORKS\", \"level\": 1}, {\"title\": \"CHARACTERIZING BRAIN RESTING STATES IN EEG SIGNALS\", \"level\": 1}, {\"title\": \"DISCUSSION AND CONCLUSION\", \"level\": 1}, {\"title\": \"METHODS\", \"level\": 1}, {\"title\": \"Oscillator networks and simulations\", \"level\": 2}, {\"title\": \"Order parameter \\u2013 measuring synchronization level\", \"level\": 2}, {\"title\": \"EEG dataset and analyses\", \"level\": 2}, {\"title\": \"CODE AND DATA AVAILABILITY\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 14418,
+            "completion_tokens": 249,
+            "total_tokens": 14667,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.17312v1.prompt.md",
+      "custom_id": "arxiv_2608.17312v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-d0bf35cdde3d878efba6",
+          "created": 1788456904,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Empirical analysis\", \"level\": 2}, {\"title\": \"Signaling model analysis\", \"level\": 2}, {\"title\": \"Model setup\", \"level\": 3}, {\"title\": \"Trust through self-claim and reputation\", \"level\": 3}, {\"title\": \"Trust through institutional certification\", \"level\": 3}, {\"title\": \"Regime structure and empirical correspondence\", \"level\": 3}, {\"title\": \"Reputation dynamics\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Substitution and complementarity of trust mechanisms\", \"level\": 2}, {\"title\": \"The scalability of trust\", \"level\": 2}, {\"title\": \"Limitations and future directions\", \"level\": 2}, {\"title\": \"Materials and Methods\", \"level\": 1}, {\"title\": \"Data and variables\", \"level\": 2}, {\"title\": \"Hierarchical Bayesian model\", \"level\": 2}, {\"title\": \"Signaling game\", \"level\": 2}, {\"title\": \"Supplementary Materials\", \"level\": 1}, {\"title\": \"Supplementary Text\", \"level\": 1}, {\"title\": \"Empirical Methods\", \"level\": 2}, {\"title\": \"Data Pipeline\", \"level\": 3}, {\"title\": \"Variable Construction\", \"level\": 3}, {\"title\": \"Full HBM Specification\", \"level\": 3}, {\"title\": \"MCMC Sampling\", \"level\": 3}, {\"title\": \"Theoretical Model\", \"level\": 2}, {\"title\": \"Model Assumptions\", \"level\": 3}, {\"title\": \"Self-Separating Equilibrium\", \"level\": 3}, {\"title\": \"TP-Separating Equilibrium and Equilibrium Refinement\", \"level\": 3}, {\"title\": \"Reputation Dynamics\", \"level\": 3}, {\"title\": \"Numerical Illustration\", \"level\": 3}, {\"title\": \"Supplementary Results\", \"level\": 1}, {\"title\": \"Descriptive Price Analysis\", \"level\": 2}, {\"title\": \"Seller Volume\", \"level\": 2}, {\"title\": \"Revenue and Margin Analysis\", \"level\": 2}, {\"title\": \"Continuous Regime Boundary in Reputation\u2013Value Space\", \"level\": 2}, {\"title\": \"MCMC Convergence Diagnostics\", \"level\": 2}, {\"title\": \"HBM Model Fit\", \"level\": 2}, {\"title\": \"Full Coefficient Estimates\", \"level\": 2}, {\"title\": \"Signal Composition Across Price and Reputation Dimensions\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 46177,
+            "completion_tokens": 571,
+            "total_tokens": 46748,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.17511v1.prompt.md",
+      "custom_id": "arxiv_2608.17511v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-1a230c1607f86048af0a",
+          "created": 1788456996,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"SIS MODEL\", \"level\": 1}, {\"title\": \"PATH PROBABILITIES AND NOTATIONS\", \"level\": 1}, {\"title\": \"SWENDSEN-WANG-LIKE CLUSTER UPDATES\", \"level\": 1}, {\"title\": \"Structure of cluster updates and notations\", \"level\": 2}, {\"title\": \"Joint weights and sum rules\", \"level\": 2}, {\"title\": \"Graph construction\", \"level\": 2}, {\"title\": \"Cluster identification and state update\", \"level\": 2}, {\"title\": \"GRAPH VERTEX SETS FOR SIS MODELS\", \"level\": 1}, {\"title\": \"Single-node vertex set S1\", \"level\": 2}, {\"title\": \"Edge vertex set E1\", \"level\": 2}, {\"title\": \"Drawbacks of edge vertex set E1\", \"level\": 2}, {\"title\": \"Edge vertex set E2\\u2013unlocking the epidemic trunk\", \"level\": 2}, {\"title\": \"Edge vertex set E3\\u2013unlocking full asymmetry\", \"level\": 2}, {\"title\": \"TRAJECTORY CONSTRAINTS & INITIALIZATION FOR SIS MODELS\", \"level\": 1}, {\"title\": \"Conditional locks\", \"level\": 2}, {\"title\": \"Cluster-level rejection sampling\", \"level\": 2}, {\"title\": \"Initialization\", \"level\": 2}, {\"title\": \"COMPUTATION COSTS\", \"level\": 1}, {\"title\": \"PARALLELIZATION STRATEGIES\", \"level\": 1}, {\"title\": \"VALIDATION AGAINST EXACT SOLUTIONS\", \"level\": 1}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}, {\"title\": \"Appendix A: Proof of the joint-weight marginalization condition\", \"level\": 1}, {\"title\": \"Appendix B: Complete edge vertex set for SIS models\", \"level\": 1}, {\"title\": \"Appendix C: Dynamic programming for the SIS-model boundary conditions\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 42189,
+            "completion_tokens": 461,
+            "total_tokens": 42650,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.17643v1.prompt.md",
+      "custom_id": "arxiv_2608.17643v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-50f0855ccfe2865a3073",
+          "created": 1788456195,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Empirical mode decomposition and interpretable machine learning for preterm birth classification from electrohysterography\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Challenges in practical PTB risk assessment\", \"level\": 2}, {\"title\": \"Physiological basis of uterine electrical activity\", \"level\": 2}, {\"title\": \"EHG signal characteristics and bursts\", \"level\": 2}, {\"title\": \"Computational approaches and methodological pitfalls\", \"level\": 2}, {\"title\": \"Study contributions\", \"level\": 2}, {\"title\": \"Materials and methods\", \"level\": 1}, {\"title\": \"Dataset\", \"level\": 2}, {\"title\": \"Preprocessing and segmentation\", \"level\": 2}, {\"title\": \"Signal preparation\", \"level\": 3}, {\"title\": \"Segmentation strategies\", \"level\": 3}, {\"title\": \"Recording-level data separation\", \"level\": 3}, {\"title\": \"Empirical mode decomposition\", \"level\": 2}, {\"title\": \"Selection of the intrinsic mode function\", \"level\": 2}, {\"title\": \"Feature extraction\", \"level\": 2}, {\"title\": \"Burst and peak features\", \"level\": 3}, {\"title\": \"Temporal energy features\", \"level\": 3}, {\"title\": \"Entropy features\", \"level\": 3}, {\"title\": \"Feature extraction parameter settings\", \"level\": 3}, {\"title\": \"Classification models\", \"level\": 2}, {\"title\": \"Evaluation metrics\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Comparison of intrinsic mode functions\", \"level\": 2}, {\"title\": \"Annotated-interval classification results\", \"level\": 2}, {\"title\": \"Fixed 3-minute classification results\", \"level\": 2}, {\"title\": \"Comparison with filtered time-domain features\", \"level\": 2}, {\"title\": \"Overall comparison\", \"level\": 2}, {\"title\": \"Feature behavior at the recording level\", \"level\": 2}, {\"title\": \"Feature importance analysis\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Main findings\", \"level\": 2}, {\"title\": \"Interpretation of IMF1-derived feature patterns\", \"level\": 2}, {\"title\": \"Contribution of EMD and selection of IMF1\", \"level\": 2}, {\"title\": \"Effect of segmentation strategy\", \"level\": 2}, {\"title\": \"Methodological implications for future PTB risk assessment\", \"level\": 2}, {\"title\": \"Model behavior\", \"level\": 2}, {\"title\": \"Methodological strengths\", \"level\": 2}, {\"title\": \"Limitations\", \"level\": 2}, {\"title\": \"Future validation\", \"level\": 2}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Data availability\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 35346,
+            "completion_tokens": 650,
+            "total_tokens": 35996,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.18238v1.prompt.md",
+      "custom_id": "arxiv_2608.18238v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-838986b739ee6ba4b482",
+          "created": 1788456215,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"Motivation:\", \"level\": 2}, {\"title\": \"Contributions:\", \"level\": 2}, {\"title\": \"RELATED WORKS\", \"level\": 1}, {\"title\": \"DATASET\", \"level\": 1}, {\"title\": \"Dataset Collection Process:\", \"level\": 2}, {\"title\": \"Dataset Characteristics and Structure:\", \"level\": 2}, {\"title\": \"Data Pre-processing\", \"level\": 2}, {\"title\": \"METHODOLOGY\", \"level\": 1}, {\"title\": \"Overview\", \"level\": 2}, {\"title\": \"End-to-end Pipeline\", \"level\": 2}, {\"title\": \"Codon Segmentation\", \"level\": 2}, {\"title\": \"LAPCG: Linear-time Adjacency PMI Codon Graph\", \"level\": 2}, {\"title\": \"MSCG: Multi-Scale Codon Co-occurrence Graph\", \"level\": 2}, {\"title\": \"Feature Extraction and Evaluation\", \"level\": 2}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"Model Benchmarking\", \"level\": 2}, {\"title\": \"Computational Efficiency of Graph Construction\", \"level\": 2}, {\"title\": \"Comparison with Gene Detection and Variant Classification Methods\", \"level\": 2}, {\"title\": \"Feature Importance and Statistical Significance\", \"level\": 2}, {\"title\": \"Variant Structural Profiles\", \"level\": 2}, {\"title\": \"Cross-Variant Comparative Trend\", \"level\": 2}, {\"title\": \"Interpretation\", \"level\": 2}, {\"title\": \"Structural Profiles of Individual Variants\", \"level\": 3}, {\"title\": \"Structural Similarities and Dissimilarities Across Variants\", \"level\": 3}, {\"title\": \"CONCLUSION\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 15699,
+            "completion_tokens": 407,
+            "total_tokens": 16106,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.18569v1.prompt.md",
+      "custom_id": "arxiv_2608.18569v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-8971b3d936d63d4f6781",
+          "created": 1788456225,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"BACKGROUND\", \"level\": 1}, {\"title\": \"Place Cells\", \"level\": 2}, {\"title\": \"Head Direction Cells\", \"level\": 2}, {\"title\": \"Boundary Vector Cells\", \"level\": 2}, {\"title\": \"Grid Cells\", \"level\": 2}, {\"title\": \"Spatial Aliasing\", \"level\": 2}, {\"title\": \"MODEL ARCHITECTURE\", \"level\": 1}, {\"title\": \"Notation & Overview\", \"level\": 2}, {\"title\": \"Head Direction Cell Layer\", \"level\": 2}, {\"title\": \"Boundary Vector Cell Layer\", \"level\": 2}, {\"title\": \"Grid Cell Layer\", \"level\": 2}, {\"title\": \"Place Cell Layer\", \"level\": 2}, {\"title\": \"EXPERIMENTAL SETUP\", \"level\": 1}, {\"title\": \"Data Collection\", \"level\": 2}, {\"title\": \"Model Parameters\", \"level\": 2}, {\"title\": \"Metrics for Spatial Aliasing\", \"level\": 2}, {\"title\": \"RESULTS & DISCUSSION\", \"level\": 1}, {\"title\": \"CONCLUSION & FUTURE WORK\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 12979,
+            "completion_tokens": 290,
+            "total_tokens": 13269,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.18792v1.prompt.md",
+      "custom_id": "arxiv_2608.18792v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-d44e30645619157f9bd4",
+          "created": 1788456245,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Uniformity of land use in world cities\", \"level\": 1}, {\"title\": \"Wealth, patterns\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Data\", \"level\": 2}, {\"title\": \"Statistical and spatial analysis\", \"level\": 2}, {\"title\": \"Supplementary information\", \"level\": 1}, {\"title\": \"Comparison of urban extents for cities of different sizes\", \"level\": 2}, {\"title\": \"Signal over noise ratio\", \"level\": 2}, {\"title\": \"Impact of considering water bodies\", \"level\": 2}, {\"title\": \"Characteristic decrease distance and models\", \"level\": 2}, {\"title\": \"Distribution of the 1860 studied cities, and of peculiar characteristics: water bodies and polycentric regions\", \"level\": 2}, {\"title\": \"Urban Built Land Index UBLI\", \"level\": 2}, {\"title\": \"Relating national observations of the Urban Built Land Index to other variables\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 25203,
+            "completion_tokens": 232,
+            "total_tokens": 25435,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.19077v1.prompt.md",
+      "custom_id": "arxiv_2608.19077v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-58fbefb7c7e82a9f6287",
+          "created": 1788456265,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Conceptual and experimental framework\", \"level\": 2}, {\"title\": \"Antibiotics suppress upstream migration in susceptible but not resistant cells\", \"level\": 2}, {\"title\": \"Cell elongation impairs all stages of upstream invasion\", \"level\": 2}, {\"title\": \"Rheotaxis-driven separation of bacterial populations by cell length\", \"level\": 2}, {\"title\": \"Rheotaxis-based enrichment of ampicillin-resistant cells\", \"level\": 2}, {\"title\": \"Conclusions\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Bacterial strains and culturing conditions\", \"level\": 2}, {\"title\": \"Induction of cell elongation via controlled sulA expression\", \"level\": 2}, {\"title\": \"Antibiotic treatments\", \"level\": 2}, {\"title\": \"Microfluidic devices\", \"level\": 2}, {\"title\": \"Imaging and single-cell tracking\", \"level\": 2}, {\"title\": \"Rheotaxis simulations\", \"level\": 2}, {\"title\": \"Supplementary information\", \"level\": 1}, {\"title\": \"Author contributions\", \"level\": 1}, {\"title\": \"Conflicts of interest\", \"level\": 1}, {\"title\": \"Data availability\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"Notes and references\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 22194,
+            "completion_tokens": 334,
+            "total_tokens": 22528,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.19930v1.prompt.md",
+      "custom_id": "arxiv_2608.19930v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-98b1f24092f1ffec6024",
+          "created": 1788456281,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"SoilWaterNow: Soil water nowcasting for mapping plant available water (PAW) across paddocks for improved decision-making\", \"level\": 1}, {\"title\": \"Background and rationale\", \"level\": 1}, {\"title\": \"The Sydney soil water-energy balance (SWEB) model\", \"level\": 1}, {\"title\": \"Surface energy balance (SEB) component: estimation of crop water use\", \"level\": 2}, {\"title\": \"Soil water balance (SWB) component: root-zone water dynamics\", \"level\": 2}, {\"title\": \"Integration of energy and water processes\", \"level\": 2}, {\"title\": \"Calibration and operation of SWEB\", \"level\": 2}, {\"title\": \"Calibration settings\", \"level\": 3}, {\"title\": \"Operational settings through National Computational Infrastructure (NCI)\", \"level\": 3}, {\"title\": \"Validation of SWEB outputs\", \"level\": 1}, {\"title\": \"Implications for potential yield estimation\", \"level\": 1}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Contact details\", \"level\": 1}, {\"title\": \"Date published\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 7433,
+            "completion_tokens": 289,
+            "total_tokens": 7722,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.19944v2.prompt.md",
+      "custom_id": "arxiv_2608.19944v2.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-ee1598025718b84f3400",
+          "created": 1788456324,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"A Privacy Budgeting Framework for Online Experimentation\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Privacy protection and experimentation via MABs\", \"level\": 1}, {\"title\": \"Experimentation via MABs\", \"level\": 2}, {\"title\": \"The privacy protection literature\", \"level\": 2}, {\"title\": \"Tracking access as a precondition for privacy risk\", \"level\": 3}, {\"title\": \"Privacy risk channel 1: Exposure to experimental output\", \"level\": 3}, {\"title\": \"Privacy risk channel 2: Post-exposure behavior\", \"level\": 3}, {\"title\": \"Quantifying the privacy risk of experimental output\", \"level\": 1}, {\"title\": \"Experimentation via MABs\", \"level\": 2}, {\"title\": \"The \\u03b5-greedy policy\", \"level\": 3}, {\"title\": \"The expected regret of the \\u03b5-greedy policy\", \"level\": 3}, {\"title\": \"Linking the \\u03b5-greedy policy to differential privacy\", \"level\": 2}, {\"title\": \"The privacy mechanism: differential privacy\", \"level\": 3}, {\"title\": \"A visitor-level privacy risk \\u03be\", \"level\": 3}, {\"title\": \"An experiment-level privacy budget \\u03b3\", \"level\": 3}, {\"title\": \"Privacy budget spending strategies and the trade-off between privacy and performance\", \"level\": 2}, {\"title\": \"Constant privacy risk strategy\", \"level\": 3}, {\"title\": \"Dynamic privacy risk strategy\", \"level\": 3}, {\"title\": \"Two applications of the privacy risk strategies\", \"level\": 1}, {\"title\": \"Website design\", \"level\": 2}, {\"title\": \"Recommendation system\", \"level\": 2}, {\"title\": \"Privacy risk elasticities of expected regret\", \"level\": 1}, {\"title\": \"The privacy elasticity of regret for the constant strategy\", \"level\": 2}, {\"title\": \"The privacy elasticity of regret for the dynamic strategy\", \"level\": 2}, {\"title\": \"Firm-level privacy budget allocation\", \"level\": 1}, {\"title\": \"The optimization problem\", \"level\": 2}, {\"title\": \"The exogenous environment\", \"level\": 3}, {\"title\": \"The objective and feasible solution space\", \"level\": 3}, {\"title\": \"The solution space: Return on the privacy budget\", \"level\": 3}, {\"title\": \"Benchmark policies\", \"level\": 2}, {\"title\": \"The upper bound on performance: the \\u03b3* benchmark\", \"level\": 3}, {\"title\": \"Managerial heuristic: equal-split benchmark\", \"level\": 3}, {\"title\": \"The lower bound on performance: \\u0393=0, equivalent to random baseline\", \"level\": 3}, {\"title\": \"Application of the firm-wide privacy budget\", \"level\": 2}, {\"title\": \"Setup\", \"level\": 3}, {\"title\": \"Results\", \"level\": 3}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Limitations and future research\", \"level\": 2}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Web Appendix A: A model of privacy risk in experimentation\", \"level\": 1}, {\"title\": \"Privacy risk from experimental output\", \"level\": 2}, {\"title\": \"Privacy risk from behavior after experimental output\", \"level\": 2}, {\"title\": \"The full posterior update\", \"level\": 2}, {\"title\": \"Web Appendix B: Differential privacy in the context of bandits\", \"level\": 1}, {\"title\": \"Web Appendix C: Parallel composition\", \"level\": 1}, {\"title\": \"Web Appendix D: Regret analysis\", \"level\": 1}, {\"title\": \"The regret bound of the \\u03b5-greedy policy\", \"level\": 2}, {\"title\": \"The regret bound under differential privacy\", \"level\": 2}, {\"title\": \"The regret bound without asymptotic approximation\", \"level\": 2}, {\"title\": \"Web Appendix E: Regret of the dynamic strategy\", \"level\": 1}, {\"title\": \"The local exhaustion threshold\", \"level\": 2}, {\"title\": \"Pre-cap regret\", \"level\": 2}, {\"title\": \"Post-cap regret\", \"level\": 2}, {\"title\": \"Web Appendix F: Regret of the constant strategy\", \"level\": 1}, {\"title\": \"Web Appendix G: Regret of the dynamic strategy\", \"level\": 1}, {\"title\": \"Pre-cap regret\", \"level\": 2}, {\"title\": \"Post-cap regret\", \"level\": 2}, {\"title\": \"Web Appendix H: Regret of the constant strategy\", \"level\": 1}, {\"title\": \"Web Appendix I: Privacy risk budget elasticities\", \"level\": 1}, {\"title\": \"Constant privacy risk strategy\", \"level\": 2}, {\"title\": \"Elasticity of the dynamic privacy risk strategy\", \"level\": 2}, {\"title\": \"Web Appendix J: Heterogeneity in privacy risk among arms\", \"level\": 1}, {\"title\": \"Regret bound under weighted exploration\", \"level\": 2}, {\"title\": \"Constant and dynamic arm-level privacy schedules\", \"level\": 3}, {\"title\": \"Symmetric benchmark with the same global privacy guarantee\", \"level\": 3}, {\"title\": \"Why arm-level heterogeneity increases the regret bound\", \"level\": 3}, {\"title\": \"Quantifying the regret cost of heterogeneity\", \"level\": 3}, {\"title\": \"Numerical example\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 72698,
+            "completion_tokens": 1254,
+            "total_tokens": 73952,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.20112v1.prompt.md",
+      "custom_id": "arxiv_2608.20112v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-5772dc4290f20f9d434f",
+          "created": 1788456588,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Flow Matching-Based PET Image Reconstruction\", \"level\": 1}, {\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"BACKGROUND\", \"level\": 1}, {\"title\": \"PET image reconstruction\", \"level\": 2}, {\"title\": \"Flow matching\", \"level\": 2}, {\"title\": \"METHODOLOGY\", \"level\": 1}, {\"title\": \"FlowDPS for PET reconstruction\", \"level\": 2}, {\"title\": \"Model-based PET reconstruction using flow matching\", \"level\": 2}, {\"title\": \"Theoretical background\", \"level\": 3}, {\"title\": \"Update rules\", \"level\": 3}, {\"title\": \"EXPERIMENTAL SETUP\", \"level\": 1}, {\"title\": \"Brain PET data\", \"level\": 2}, {\"title\": \"Evaluation\", \"level\": 2}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"CONCLUSION\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 20053,
+            "completion_tokens": 234,
+            "total_tokens": 20287,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.20223v1.prompt.md",
+      "custom_id": "arxiv_2608.20223v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-9e184ae59a027401adb2",
+          "created": 1788456709,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Self-Normalizing Denominators in Rational Causal Estimation\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Motivation and scope\", \"level\": 2}, {\"title\": \"Contributions\", \"level\": 2}, {\"title\": \"Related work\", \"level\": 2}, {\"title\": \"Preliminaries\", \"level\": 1}, {\"title\": \"Basic notation\", \"level\": 2}, {\"title\": \"Problem set-up\", \"level\": 2}, {\"title\": \"Exact self-normalization\", \"level\": 2}, {\"title\": \"Flag powers and an exact pivot\", \"level\": 1}, {\"title\": \"Nested covariance minors\", \"level\": 2}, {\"title\": \"Recursive variance interpretation\", \"level\": 2}, {\"title\": \"Converse results and diagnosis\", \"level\": 1}, {\"title\": \"Dimension two\", \"level\": 2}, {\"title\": \"Dimension three\", \"level\": 2}, {\"title\": \"Higher-dimensional scope\", \"level\": 2}, {\"title\": \"A factor-and-rank diagnostic\", \"level\": 2}, {\"title\": \"Weak-denominator inference\", \"level\": 1}, {\"title\": \"Local ratio experiment\", \"level\": 2}, {\"title\": \"Robust inversion and the boundary of the classification\", \"level\": 2}, {\"title\": \"Causal applications\", \"level\": 1}, {\"title\": \"Diagnostics for common formulas\", \"level\": 2}, {\"title\": \"Front-door adjustment and boundary-robust inference\", \"level\": 2}, {\"title\": \"Numerical experiments\", \"level\": 1}, {\"title\": \"Design\", \"level\": 2}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Real data experiments\", \"level\": 1}, {\"title\": \"Data and diagnostic design\", \"level\": 2}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Supplementary Material for \\u201cSelf-normalizing denominators in rational causal estimation\\u201d\", \"level\": 1}, {\"title\": \"Notation\", \"level\": 1}, {\"title\": \"Linear-algebraic, algebraic and geometric conventions\", \"level\": 2}, {\"title\": \"Probability and asymptotic conventions\", \"level\": 2}, {\"title\": \"Paper-specific symbols\", \"level\": 2}, {\"title\": \"Proofs of Section 2: Preliminaries\", \"level\": 1}, {\"title\": \"Proofs of Section 3: Flag powers\", \"level\": 1}, {\"title\": \"Proofs of Section 4: Converse results and diagnosis\", \"level\": 1}, {\"title\": \"Overview and algebraic preliminaries\", \"level\": 2}, {\"title\": \"Complete converse in dimension two\", \"level\": 2}, {\"title\": \"Adjugate duality and three-variable face types\", \"level\": 2}, {\"title\": \"Boundary strata under the adjugate\", \"level\": 2}, {\"title\": \"Rank-one dichotomy\", \"level\": 2}, {\"title\": \"Relative spectral constancy in dimension three\", \"level\": 2}, {\"title\": \"Pure plane-minor and mixed branches\", \"level\": 2}, {\"title\": \"Constant kernel and the mixed flag form\", \"level\": 2}, {\"title\": \"Boundary rigidity for the mixed branch\", \"level\": 2}, {\"title\": \"A conditional converse in arbitrary dimension\", \"level\": 2}, {\"title\": \"Proof of the low-degree-factor diagnostic\", \"level\": 2}, {\"title\": \"Proofs of Section 5: Weak-denominator inference\", \"level\": 1}, {\"title\": \"Proofs of Section 6: Causal applications\", \"level\": 1}, {\"title\": \"Structural pullbacks used in Table 1\", \"level\": 2}, {\"title\": \"Marginal and partial minors\", \"level\": 2}, {\"title\": \"Front-door boundary robustness\", \"level\": 2}, {\"title\": \"Algebraic obstructions in the mixed branch\", \"level\": 1}, {\"title\": \"Kernel map and the Hessian obstruction\", \"level\": 2}, {\"title\": \"Representation-theoretic lifting obstruction\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 76883,
+            "completion_tokens": 933,
+            "total_tokens": 77816,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.20231v1.prompt.md",
+      "custom_id": "arxiv_2608.20231v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-34a3a051f5935d73c877",
+          "created": 1788456915,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Relation to the literature\", \"level\": 2}, {\"title\": \"The reproduction constraint for producing an economic agent\", \"level\": 1}, {\"title\": \"Two technologies\", \"level\": 2}, {\"title\": \"Why this is the deep parameter\", \"level\": 2}, {\"title\": \"A model of the autonomous economy\", \"level\": 1}, {\"title\": \"Environment\", \"level\": 2}, {\"title\": \"Machine consumption and inter-corporate demand\", \"level\": 2}, {\"title\": \"National accounting with machine final demand\", \"level\": 2}, {\"title\": \"Growth without households\", \"level\": 2}, {\"title\": \"Physical ceilings\", \"level\": 2}, {\"title\": \"Decoupling: output, ownership, and welfare\", \"level\": 1}, {\"title\": \"The ownership share\", \"level\": 2}, {\"title\": \"The dynamics of \\u03b5 : does the human share survive?\", \"level\": 2}, {\"title\": \"Three terminal regimes\", \"level\": 2}, {\"title\": \"Objections and failure modes\", \"level\": 1}, {\"title\": \"Policy: choosing a column\", \"level\": 1}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"The von Neumann closure\", \"level\": 1}, {\"title\": \"Proof of Theorem 1\", \"level\": 1}, {\"title\": \"Calibration of Figure 2\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 22056,
+            "completion_tokens": 349,
+            "total_tokens": 22405,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.20765v1.prompt.md",
+      "custom_id": "arxiv_2608.20765v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-fcde540aa8028b65c925",
+          "created": 1788456957,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"AUTHOR CONTRIBUTIONS\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}, {\"title\": \"Appendix A: Methods\", \"level\": 1}, {\"title\": \"Governing equations\", \"level\": 2}, {\"title\": \"Cylindrical approximation\", \"level\": 2}, {\"title\": \"Full-geometry direct numerical simulations\", \"level\": 2}, {\"title\": \"Appendix B: Optimal adsorption of an odor patch inside a cylinder\", \"level\": 1}, {\"title\": \"Appendix C: Cilia-driven flow and adsorption\", \"level\": 1}, {\"title\": \"Supporting Information: Amphibian water to land transition reveals physical limits of olfaction\", \"level\": 1}, {\"title\": \"S I. ASYMPTOTICS OF ADSORPTION INSIDE A CYLINDER AND SATURATED ADSORPTION RATES OF ODORANT MOLECULES\", \"level\": 2}, {\"title\": \"S II. SHORT TIME LIMIT OF ADSORPTION INSIDE A CYLINDER FOR AN EPHEMERAL ODOR SOURCE\", \"level\": 2}, {\"title\": \"S III. SENSING TIMESCALE\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 30937,
+            "completion_tokens": 298,
+            "total_tokens": 31235,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.20830v1.prompt.md",
+      "custom_id": "arxiv_2608.20830v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-1e6edd2345e17418aa6e",
+          "created": 1788457013,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"Tourist Behavior and Next POI Prediction\", \"level\": 2}, {\"title\": \"LLMs for Behavior Prediction and Simulation\", \"level\": 2}, {\"title\": \"Methodology\", \"level\": 1}, {\"title\": \"Problem Formulation\", \"level\": 2}, {\"title\": \"Data Collection and Preprocessing\", \"level\": 2}, {\"title\": \"Model Architecture and Text Representation\", \"level\": 2}, {\"title\": \"Experiments\", \"level\": 1}, {\"title\": \"Experimental Setup\", \"level\": 2}, {\"title\": \"Training Procedure\", \"level\": 2}, {\"title\": \"Prediction Performance\", \"level\": 2}, {\"title\": \"Sequence Generation Quality\", \"level\": 2}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Acknowledgments\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 11134,
+            "completion_tokens": 224,
+            "total_tokens": 11358,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21073v1.prompt.md",
+      "custom_id": "arxiv_2608.21073v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-7a07951fb138f7070bf3",
+          "created": 1788457049,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"ABSTRACT\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Methods\", \"level\": 1}, {\"title\": \"Data\", \"level\": 2}, {\"title\": \"Notations\", \"level\": 2}, {\"title\": \"GRU-D-Staticframework\", \"level\": 2}, {\"title\": \"Transferpredictionbyintegratingexternalscientificknowledge\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"Author Contributions Statement\", \"level\": 1}, {\"title\": \"Funding Information\", \"level\": 1}, {\"title\": \"Data Availability\", \"level\": 1}, {\"title\": \"Human Subjects Research\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 12905,
+            "completion_tokens": 206,
+            "total_tokens": 13111,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21122v1.prompt.md",
+      "custom_id": "arxiv_2608.21122v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-c37ce21b5dbd9844cbf2",
+          "created": 1788457055,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"LABS: Extending the scope of binary segmentation via a look-ahead device\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Motivation and problem statement\", \"level\": 1}, {\"title\": \"Look-Ahead Binary Segmentation (LABS)\", \"level\": 1}, {\"title\": \"The algorithm\", \"level\": 2}, {\"title\": \"Grid-based extension\", \"level\": 2}, {\"title\": \"Consistency of LABS\", \"level\": 1}, {\"title\": \"Signal strength on a window\", \"level\": 2}, {\"title\": \"The population recursion\", \"level\": 2}, {\"title\": \"Assumptions and the consistency theorem\", \"level\": 2}, {\"title\": \"Numerical illustrations\", \"level\": 1}, {\"title\": \"Simulation design\", \"level\": 2}, {\"title\": \"Methods and model selection\", \"level\": 2}, {\"title\": \"Results\", \"level\": 2}, {\"title\": \"Data application \\u2013 global temperature anomalies\", \"level\": 1}, {\"title\": \"Supplement to \\u201cLABS: Extending the scope of binary segmentation via a look-ahead device\\u201d\", \"level\": 1}, {\"title\": \"The LABS-Grid algorithm\", \"level\": 1}, {\"title\": \"Auxiliary properties of the contrast\", \"level\": 1}, {\"title\": \"Which kinks the window sees\", \"level\": 2}, {\"title\": \"Signal strength\", \"level\": 2}, {\"title\": \"Noise bounds\", \"level\": 2}, {\"title\": \"Separation\", \"level\": 2}, {\"title\": \"Exact Gram identities\", \"level\": 2}, {\"title\": \"Proof of the separation lemma\", \"level\": 2}, {\"title\": \"Proof of the discretization estimate\", \"level\": 2}, {\"title\": \"Proof of Theorem 4.1\", \"level\": 1}, {\"title\": \"Population objects, and proof of Proposition 4.1\", \"level\": 2}, {\"title\": \"Signal-dependent constants for the recursion proof\", \"level\": 2}, {\"title\": \"The sample recursion on tracking windows\", \"level\": 2}, {\"title\": \"No detection\", \"level\": 2}, {\"title\": \"Detection and localization\", \"level\": 2}, {\"title\": \"Transfer to the sample window\", \"level\": 2}, {\"title\": \"Consistency of LABS-Grid\", \"level\": 1}, {\"title\": \"The grid statistic and the population grid recursion\", \"level\": 2}, {\"title\": \"Assumptions\", \"level\": 2}, {\"title\": \"No detection, grid\", \"level\": 2}, {\"title\": \"Detection and localization, grid\", \"level\": 2}, {\"title\": \"Grid re-test on a one-kink window\", \"level\": 2}, {\"title\": \"Recursion on tracking windows, grid\", \"level\": 2}, {\"title\": \"Consistency under strengthened SIC selection\", \"level\": 1}, {\"title\": \"The procedure\", \"level\": 2}, {\"title\": \"Conditions\", \"level\": 2}, {\"title\": \"Two lemmas\", \"level\": 2}, {\"title\": \"The theorem\", \"level\": 2}, {\"title\": \"Remarks\", \"level\": 2}, {\"title\": \"A solution path indexed by the number of change-points\", \"level\": 2}, {\"title\": \"Connections with other look-ahead methods\", \"level\": 1}, {\"title\": \"Constraint satisfaction and SAT solvers\", \"level\": 2}, {\"title\": \"Decision tree induction\", \"level\": 2}, {\"title\": \"Numerical linear algebra\", \"level\": 2}, {\"title\": \"Bayesian sequential analysis\", \"level\": 2}, {\"title\": \"Further research directions\", \"level\": 2}, {\"title\": \"Summary\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 93374,
+            "completion_tokens": 859,
+            "total_tokens": 94233,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21130v1.prompt.md",
+      "custom_id": "arxiv_2608.21130v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-b2a1f759e7758cd52666",
+          "created": 1788457228,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"RELATED WORK\", \"level\": 1}, {\"title\": \"DATA-GENERATING PROCESS\", \"level\": 1}, {\"title\": \"Overview and notation\", \"level\": 2}, {\"title\": \"Baseline sales\", \"level\": 2}, {\"title\": \"Promotional calendar and price response\", \"level\": 2}, {\"title\": \"Marketing spend: four coordination mechanisms\", \"level\": 2}, {\"title\": \"Media effects\", \"level\": 2}, {\"title\": \"Measurement layer\", \"level\": 2}, {\"title\": \"Output data\", \"level\": 2}, {\"title\": \"THE REFERENCE INSTANCE\", \"level\": 1}, {\"title\": \"GEO-EXPERIMENT EXTENSION\", \"level\": 1}, {\"title\": \"INTENDED USE AND LIMITATIONS\", \"level\": 1}, {\"title\": \"AVAILABILITY\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 7277,
+            "completion_tokens": 220,
+            "total_tokens": 7497,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21221v1.prompt.md",
+      "custom_id": "arxiv_2608.21221v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-7ca560ddfdd71f9f5af2",
+          "created": 1788457234,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"The Observed Puzzle: Same Promise, Different Institutional Weight\", \"level\": 1}, {\"title\": \"Why the Standard Framings Fail\", \"level\": 1}, {\"title\": \"Scope\", \"level\": 1}, {\"title\": \"The Parent Mechanism\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"The Framework: Five Conditions\", \"level\": 1}, {\"title\": \"Condition 1: Boundary Closure\", \"level\": 2}, {\"title\": \"Condition 2: Executable Conformance\", \"level\": 2}, {\"title\": \"Condition 3: Custody Independence\", \"level\": 2}, {\"title\": \"Condition 4: State and Operations Reversibility\", \"level\": 2}, {\"title\": \"Condition 5: Extension Quarantine\", \"level\": 2}, {\"title\": \"The Decision Structure\", \"level\": 1}, {\"title\": \"Case Matrix\", \"level\": 1}, {\"title\": \"Case 1: OCI - Escrowed Compatibility\", \"level\": 2}, {\"title\": \"Case 2: Kubernetes - Governed Core, Exposed Perimeter\", \"level\": 2}, {\"title\": \"Case 3: OpenTelemetry - Narrow Escape Hatch\", \"level\": 2}, {\"title\": \"Case 4: S3 Compatibility - Borrowed Compatibility\", \"level\": 2}, {\"title\": \"Case 5: PostgreSQL Compatibility - Onboarding Compatibility\", \"level\": 2}, {\"title\": \"A Worked Assessment: S3-Compatible Storage for a Regulated Backup Workload\", \"level\": 2}, {\"title\": \"Similar Outcomes, Different Mechanisms\", \"level\": 1}, {\"title\": \"Strategic Implications\", \"level\": 1}, {\"title\": \"What the Framework Predicts\", \"level\": 1}, {\"title\": \"Where the Framework Ends\", \"level\": 1}, {\"title\": \"The Next Test: AI Compatibility Claims\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 17200,
+            "completion_tokens": 442,
+            "total_tokens": 17642,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21496v1.prompt.md",
+      "custom_id": "arxiv_2608.21496v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-3626607974ba194c89d1",
+          "created": 1788457246,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"The geometry of AI validation: Exact certification limits for iid best-of-N search\", \"level\": 1}, {\"title\": \"Validation is a target-relative inverse problem\", \"level\": 1}, {\"title\": \"Making the geometry exact: the finite best-of-N frontier\", \"level\": 1}, {\"title\": \"Robustness: the degree-squared law survives shape constraints\", \"level\": 1}, {\"title\": \"Retrospective illustrations of the same geometry\", \"level\": 1}, {\"title\": \"From geometry to an audit decision output type, verifier construction, truth mechanism, and search range while retaining this iid score-and-select estimand\", \"level\": 1}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Code and data availability\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Supporting Information\", \"level\": 1}, {\"title\": \"S1. Exact inverse geometry of validation\", \"level\": 2}, {\"title\": \"S1.1. Setup and notation\", \"level\": 3}, {\"title\": \"S1.2. Proof of the span identity\", \"level\": 3}, {\"title\": \"S1.3. Interpretation and variants\", \"level\": 3}, {\"title\": \"S2. Post-evaluation target selection and simultaneous protection\", \"level\": 2}, {\"title\": \"S2.1. Exact equivalence for a finite family\", \"level\": 3}, {\"title\": \"S2.2. Gaussian selected-target example\", \"level\": 3}, {\"title\": \"S3. Noisy validation capacity and intervention design\", \"level\": 2}, {\"title\": \"S3.1. A simultaneous bias\\u2013noise certificate\", \"level\": 3}, {\"title\": \"S3.2. Adding realizable interventions\", \"level\": 3}, {\"title\": \"S3.3. A distribution-free finite-task planner\", \"level\": 3}, {\"title\": \"S4. Exact best-of-N frontier\", \"level\": 2}, {\"title\": \"S4.1. Rank normalization and winner kernels\", \"level\": 3}, {\"title\": \"S4.2. A Chebyshev-sign annihilator\", \"level\": 3}, {\"title\": \"S4.3. C0: classical L1 approximation input\", \"level\": 3}, {\"title\": \"S4.4. V1\\u2013V2: bounded-reliability certification consequence\", \"level\": 3}, {\"title\": \"S4.5. Why Chebyshev improves the orthogonal-polynomial witness\", \"level\": 3}, {\"title\": \"S4.6. Optimality among low-width reliability-mean audits\", \"level\": 3}, {\"title\": \"S5. Jacobi-theta phase transition and audit law\", \"level\": 2}, {\"title\": \"S6. Shape-constrained validation frontier\", \"level\": 2}, {\"title\": \"S6.1. Evidence-specific programs and the worst-evidence frontier\", \"level\": 3}, {\"title\": \"S6.2. Exact worst-evidence frontier under monotonicity\", \"level\": 3}, {\"title\": \"S6.3. Exact capped-tail dual under monotonicity and Lipschitz regularity\", \"level\": 3}, {\"title\": \"S6.4. Explicit smooth indistinguishable worlds\", \"level\": 3}, {\"title\": \"S6.5. Positive-polynomial recovery and the upper bound\", \"level\": 3}, {\"title\": \"S6.6. Numerical evaluation and Lipschitz sensitivity\", \"level\": 3}, {\"title\": \"S7. Extensions and scope\", \"level\": 2}, {\"title\": \"S7.1. Bounded and categorical outcomes\", \"level\": 3}, {\"title\": \"S7.2. Known-kernel selection laws beyond iid search\", \"level\": 3}, {\"title\": \"S7.3. Structural assumptions can narrow the frontier\", \"level\": 3}, {\"title\": \"S7.4. Unknown kernels and distribution shift\", \"level\": 3}, {\"title\": \"S8. Mathematical-reasoning search experiment\", \"level\": 2}, {\"title\": \"S8.1. Dataset and pinning\", \"level\": 3}, {\"title\": \"S8.2. Consensus score and disjoint deployment population\", \"level\": 3}, {\"title\": \"S8.3. Uncertainty and robustness\", \"level\": 3}, {\"title\": \"S9. Finite and asymptotic efficiency of validation interventions\", \"level\": 2}, {\"title\": \"S9.1. Winner-distribution importance sampling\", \"level\": 3}, {\"title\": \"S9.2. Top-tail design\", \"level\": 3}, {\"title\": \"S9.3. Retrospective masked-label acquisition replay\", \"level\": 3}, {\"title\": \"S9.4. Frozen-rule held-out audit test\", \"level\": 3}, {\"title\": \"S9.5. Asymptotic GSM8K calculation\", \"level\": 3}, {\"title\": \"S9.6. Prospective intervention specification\", \"level\": 3}, {\"title\": \"S10. Code-generation replication and reproducibility\", \"level\": 2}, {\"title\": \"S10.1. CodeRM/HumanEval+ data and estimand\", \"level\": 3}, {\"title\": \"S10.2. Retrospective compatibility from an audited prefix\", \"level\": 3}, {\"title\": \"S10.3. Independent theorem checks\", \"level\": 3}, {\"title\": \"S10.4. Reproduction workflow\", \"level\": 3}, {\"title\": \"S11. Relation to adjacent literatures and contribution boundary\", \"level\": 2}, {\"title\": \"S11.1. Theorem-by-theorem provenance\", \"level\": 3}, {\"title\": \"S11.2. Exact claim\", \"level\": 3}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 68910,
+            "completion_tokens": 1309,
+            "total_tokens": 70219,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21537v1.prompt.md",
+      "custom_id": "arxiv_2608.21537v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-316736cd02c15a858ab9",
+          "created": 1788457474,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"BACKGROUND AND RELATED WORK\", \"level\": 1}, {\"title\": \"Group fairness metrics\", \"level\": 2}, {\"title\": \"Individual and counterfactual fairness\", \"level\": 2}, {\"title\": \"Explainability\", \"level\": 2}, {\"title\": \"Fairness toolkits and hiring specific work\", \"level\": 2}, {\"title\": \"PROBLEM FORMULATION\", \"level\": 1}, {\"title\": \"METHOD\", \"level\": 1}, {\"title\": \"The counterfactual shift\", \"level\": 2}, {\"title\": \"Why not a ratio\", \"level\": 2}, {\"title\": \"Explanations\", \"level\": 2}, {\"title\": \"Choice of the privileged baseline\", \"level\": 2}, {\"title\": \"Faithfulness and the connection to group metrics\", \"level\": 2}, {\"title\": \"Properties\", \"level\": 2}, {\"title\": \"EXPERIMENTAL SETUP\", \"level\": 1}, {\"title\": \"Datasets\", \"level\": 2}, {\"title\": \"The audited system\", \"level\": 2}, {\"title\": \"Preprocessing\", \"level\": 2}, {\"title\": \"Metrics and baselines\", \"level\": 2}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"Faithfulness\", \"level\": 2}, {\"title\": \"Detection of biased decisions\", \"level\": 2}, {\"title\": \"Targeted review efficiency\", \"level\": 2}, {\"title\": \"Mitigation ceiling and proxy leakage\", \"level\": 2}, {\"title\": \"A worked audit\", \"level\": 2}, {\"title\": \"DISCUSSION\", \"level\": 1}, {\"title\": \"Deployment\", \"level\": 2}, {\"title\": \"Contestability\", \"level\": 2}, {\"title\": \"A lesson for fairness attribution\", \"level\": 2}, {\"title\": \"Recommendations for auditors\", \"level\": 2}, {\"title\": \"Generality beyond hiring\", \"level\": 2}, {\"title\": \"LIMITATIONS AND THREATS TO VALIDITY\", \"level\": 1}, {\"title\": \"Threats to validity\", \"level\": 2}, {\"title\": \"Reproducibility\", \"level\": 2}, {\"title\": \"ETHICAL AND LEGAL CONSIDERATIONS\", \"level\": 1}, {\"title\": \"CONCLUSION AND FUTURE WORK\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 20282,
+            "completion_tokens": 526,
+            "total_tokens": 20808,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21731v1.prompt.md",
+      "custom_id": "arxiv_2608.21731v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-cc1dc7a3e01936c39780",
+          "created": 1788457492,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Understanding Switched CXL MEM Pooling\", \"level\": 2}, {\"title\": \"Switched CXL Memory Pooling\", \"level\": 3}, {\"title\": \"CXL Switching Architecture\", \"level\": 3}, {\"title\": \"Characterizing Switched CXL Memory Pooling\", \"level\": 3}, {\"title\": \"Problem and Challenges\", \"level\": 3}, {\"title\": \"MemChannel: a Designated Memory Lane\", \"level\": 1}, {\"title\": \"Overview\", \"level\": 2}, {\"title\": \"The mchannel Semantics\", \"level\": 2}, {\"title\": \"The mchannel Interface\", \"level\": 2}, {\"title\": \"System Model\", \"level\": 2}, {\"title\": \"An CSFQ-Inspired Transport\", \"level\": 1}, {\"title\": \"Why Core-Stateless Fair Queueing\", \"level\": 2}, {\"title\": \"Applying Fluid Model to CXL Switching\", \"level\": 2}, {\"title\": \"The Transport Algorithm\", \"level\": 2}, {\"title\": \"Algorithm Extensions\", \"level\": 2}, {\"title\": \"Bound Analysis\", \"level\": 2}, {\"title\": \"Evaluation\", \"level\": 1}, {\"title\": \"Experimental Methodology\", \"level\": 2}, {\"title\": \"Application Performance over MemChannel\", \"level\": 2}, {\"title\": \"Intra-Host Performance Isolation\", \"level\": 2}, {\"title\": \"Inter-Host Performance Isolation\", \"level\": 2}, {\"title\": \"Fairness\", \"level\": 2}, {\"title\": \"System Overheads\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 2}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"Conclusion\", \"level\": 1}, {\"title\": \"Appendix\", \"level\": 1}, {\"title\": \"MemChannel Adaptiveness\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 42387,
+            "completion_tokens": 432,
+            "total_tokens": 42819,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21757v1.prompt.md",
+      "custom_id": "arxiv_2608.21757v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-a946aa045a63daec08df",
+          "created": 1788457515,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"POLAR CODES AND PAC CODES\", \"level\": 1}, {\"title\": \"Approximated Union Bound (AUB)\", \"level\": 2}, {\"title\": \"Polar Codes and SC Decoding\", \"level\": 2}, {\"title\": \"PAC Codes and Fano Decoding\", \"level\": 2}, {\"title\": \"MPAC CODES AND HFSC DECODING\", \"level\": 1}, {\"title\": \"Construction of MPAC Codes\", \"level\": 2}, {\"title\": \"HFSC Decoding\", \"level\": 2}, {\"title\": \"Simulation Results\", \"level\": 2}, {\"title\": \"MWD ANALYSIS\", \"level\": 1}, {\"title\": \"Formation of the MWCs for Polar Codes\", \"level\": 2}, {\"title\": \"Formation of the MWCs for MPAC Codes\", \"level\": 2}, {\"title\": \"Verification of the MWCs for MPAC Codes\", \"level\": 2}, {\"title\": \"AUB-OPTIMAL MPAC CODES\", \"level\": 1}, {\"title\": \"Design of AUB-Optimal MPAC Codes\", \"level\": 2}, {\"title\": \"Simulation Results\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 43697,
+            "completion_tokens": 289,
+            "total_tokens": 43986,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21757v2.prompt.md",
+      "custom_id": "arxiv_2608.21757v2.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-9b774af3cbb2b4f28d0e",
+          "created": 1788456195,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"POLAR CODES AND PAC CODES\", \"level\": 1}, {\"title\": \"Approximated Union Bound (AUB)\", \"level\": 2}, {\"title\": \"Polar Codes and SC Decoding\", \"level\": 2}, {\"title\": \"PAC Codes and Fano Decoding\", \"level\": 2}, {\"title\": \"MPAC CODES AND HFSC DECODING\", \"level\": 1}, {\"title\": \"Construction of MPAC Codes\", \"level\": 2}, {\"title\": \"HFSC Decoding\", \"level\": 2}, {\"title\": \"Simulation Results\", \"level\": 2}, {\"title\": \"MWD ANALYSIS\", \"level\": 1}, {\"title\": \"Formation of the MWCs for Polar Codes\", \"level\": 2}, {\"title\": \"Formation of the MWCs for MPAC Codes\", \"level\": 2}, {\"title\": \"Verification of the MWCs for MPAC Codes\", \"level\": 2}, {\"title\": \"AUB-OPTIMAL MPAC CODES\", \"level\": 1}, {\"title\": \"Design of AUB-Optimal MPAC Codes\", \"level\": 2}, {\"title\": \"Simulation Results\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 43224,
+            "completion_tokens": 289,
+            "total_tokens": 43513,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21791v1.prompt.md",
+      "custom_id": "arxiv_2608.21791v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-9cd86e75e2cf1e1367f5",
+          "created": 1788456213,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"System and model\", \"level\": 1}, {\"title\": \"Critical topological photonic state\", \"level\": 2}, {\"title\": \"Topologically enforced multicriticality in photonics\", \"level\": 1}, {\"title\": \"Extension to 2D synthetic frequency space\", \"level\": 1}, {\"title\": \"Discussion and Concluding remarks\", \"level\": 1}, {\"title\": \"Differences between topological photonics and critical topological photonics\", \"level\": 1}, {\"title\": \"Experimental implementation\", \"level\": 1}, {\"title\": \"Physical origin of critical topological photonics: kinetic inversion\", \"level\": 1}, {\"title\": \"Entanglement-spectrum diagnosis of critical topology\", \"level\": 1}, {\"title\": \"Numerical construction of the entanglement spectrum\", \"level\": 2}, {\"title\": \"Quantum-classical correspondence of the entanglement spectrum\", \"level\": 2}, {\"title\": \"Experimental reconstruction of the entanglement spectrum\", \"level\": 2}, {\"title\": \"Two-dimensional synthetic-frequency extension\", \"level\": 1}, {\"title\": \"Feasible implementation route\", \"level\": 2}, {\"title\": \"Phase diagram of the two-dimensional extended QWZ model\", \"level\": 2}, {\"title\": \"Robustness of critical topological photonic states in 1D and 2D synthetic lattices\", \"level\": 1}, {\"title\": \"Robustness against symmetry-preserving perturbations in 1D synthetic lattices\", \"level\": 2}, {\"title\": \"Robustness against structure-preserving perturbations in 2D synthetic lattices\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 26627,
+            "completion_tokens": 358,
+            "total_tokens": 26985,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21843v1.prompt.md",
+      "custom_id": "arxiv_2608.21843v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-cb64a7f989a2c0f745d6",
+          "created": 1788456227,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"ABSTRACT\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Total aid cuts for recipients\", \"level\": 2}, {\"title\": \"Compensating aid cuts via debt relief\", \"level\": 2}, {\"title\": \"Compensating aid cuts via remittances\", \"level\": 2}, {\"title\": \"Vulnerability Typologies\", \"level\": 2}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Methods and Materials\", \"level\": 1}, {\"title\": \"Data availability\", \"level\": 1}, {\"title\": \"Author contributions\", \"level\": 1}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"Competing interests\", \"level\": 1}, {\"title\": \"Ethical statement\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 33679,
+            "completion_tokens": 211,
+            "total_tokens": 33890,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21852v1.prompt.md",
+      "custom_id": "arxiv_2608.21852v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-343e72d820217e828929",
+          "created": 1788456238,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"PRELIMINARIES\", \"level\": 1}, {\"title\": \"Classical LRCs\", \"level\": 2}, {\"title\": \"Quantum LRCs from CSS\", \"level\": 2}, {\"title\": \"Constacyclic codes\", \"level\": 2}, {\"title\": \"THESCOPEOFTHECONSTACYCLICROUTEANDTWOSTRUCTURALLEMMAS\", \"level\": 1}, {\"title\": \"ANINFINITEFAMILYFROMDUADICANDQUADRATICRESIDUECODES\", \"level\": 1}, {\"title\": \"COMPUTATIONALCLASSIFICATIONOVERSMALLFIELDS\", \"level\": 1}, {\"title\": \"CONCLUDINGREMARKS\", \"level\": 1}, {\"title\": \"THEMAGMAPROGRAMS\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 13499,
+            "completion_tokens": 185,
+            "total_tokens": 13684,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.21866v1.prompt.md",
+      "custom_id": "arxiv_2608.21866v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-0088de9cba7e611e4953",
+          "created": 1788456245,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"SYSTEM MODEL AND PULL-SCHEDULING PROBLEM\", \"level\": 1}, {\"title\": \"Receiver-Side DT with Online Correction\", \"level\": 2}, {\"title\": \"Reliability-Aware Pull-Scheduling Objective\", \"level\": 2}, {\"title\": \"RELIABILITY-AWARE PREDICTIVE PULL SCHEDULING\", \"level\": 1}, {\"title\": \"Prediction Under Skip and Pull Actions\", \"level\": 2}, {\"title\": \"Shared Linear Prediction Heads\", \"level\": 2}, {\"title\": \"Reliability-Aware Value of Update\", \"level\": 2}, {\"title\": \"Top-K-Positive Rule and Selection-Loss Bound\", \"level\": 2}, {\"title\": \"Runtime Policy\", \"level\": 2}, {\"title\": \"NUMERICAL EVALUATION\", \"level\": 1}, {\"title\": \"EDI as a DT-Reliability Signal under Concept Drift\", \"level\": 2}, {\"title\": \"Reliability-Aware Pull Scheduling\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 12040,
+            "completion_tokens": 253,
+            "total_tokens": 12293,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.22673v1.prompt.md",
+      "custom_id": "arxiv_2608.22673v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-bce75ac08f73ef9ab51a",
+          "created": 1788456265,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"DIFFERENTIAL SPEED DRIVES DEMIXING\", \"level\": 1}, {\"title\": \"PARTICLE BASED SIMULATIONS\", \"level\": 1}, {\"title\": \"DESIGNING A SELF-SORTING DEVICE\", \"level\": 1}, {\"title\": \"EXPERIMENTAL SELF-SORTING DEVICE\", \"level\": 1}, {\"title\": \"CONCLUSIONS\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 15679,
+            "completion_tokens": 112,
+            "total_tokens": 15791,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.22711v1.prompt.md",
+      "custom_id": "arxiv_2608.22711v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-95f33cee644889816d03",
+          "created": 1788456270,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"Notation\", \"level\": 2}, {\"title\": \"PRELIMINARIES\", \"level\": 1}, {\"title\": \"PROBLEM FORMULATION\", \"level\": 1}, {\"title\": \"MAIN RESULTS\", \"level\": 1}, {\"title\": \"Finite Horizon\", \"level\": 2}, {\"title\": \"Infinite Horizon\", \"level\": 2}, {\"title\": \"SIMULATION EXAMPLE: LARGE-SCALE GLOBAL POLLUTION GAME\", \"level\": 1}, {\"title\": \"CONCLUSIONS\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 14161,
+            "completion_tokens": 142,
+            "total_tokens": 14303,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.22918v1.prompt.md",
+      "custom_id": "arxiv_2608.22918v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-38c49f0027a1691c8cbf",
+          "created": 1788456276,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Rethinking the Foundations of Two-Sided AI Models for 6G\", \"level\": 1}, {\"title\": \"I. INTRODUCTION\", \"level\": 1}, {\"title\": \"II. FROM FOUNDATIONAL ASSUMPTIONS TO PRACTICAL LIMITATIONS\", \"level\": 1}, {\"title\": \"III. INTEGRATION INTO THE NR PROTOCOL STACK FOR LEGACY COEXISTENCE\", \"level\": 1}, {\"title\": \"IV. ADAPTIVE MODEL SELECTION FOR CHANNEL ADAPTATION\", \"level\": 1}, {\"title\": \"V. GRADIENT-FREE FINE-TUNING MULTI-VENDOR FOR INTEROPERABILITY\", \"level\": 1}, {\"title\": \"VI. OPEN CHALLENGES AND FUTURE DIRECTIONS\", \"level\": 1}, {\"title\": \"VII. CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 11317,
+            "completion_tokens": 185,
+            "total_tokens": 11502,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23202v1.prompt.md",
+      "custom_id": "arxiv_2608.23202v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-8ff67a842f26401d2992",
+          "created": 1788456282,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"The setup and the goal\", \"level\": 2}, {\"title\": \"Main results\", \"level\": 2}, {\"title\": \"Heuristic ideas and outline of the proof\", \"level\": 2}, {\"title\": \"Organization of the paper\", \"level\": 2}, {\"title\": \"Notations\", \"level\": 2}, {\"title\": \"Acknowledgments\", \"level\": 2}, {\"title\": \"Preliminaries\", \"level\": 1}, {\"title\": \"State space and the Laplace functional\", \"level\": 2}, {\"title\": \"Some classical results in probability theory\", \"level\": 2}, {\"title\": \"BBM and F-KPP equation\", \"level\": 2}, {\"title\": \"Some estimates on solution to F-KPP equation\", \"level\": 2}, {\"title\": \"Extremal point processes of BBM\", \"level\": 2}, {\"title\": \"An excerpt from results in [CGS24]\", \"level\": 2}, {\"title\": \"Some Derived properties of \\u03b8 \\u2208Dom (\\u03a0)\", \"level\": 1}, {\"title\": \"Integrability and tightness estimates for \\u03b8 \\u2208Dom (\\u03a0), with \\u03bb\\u2265 2\", \"level\": 2}, {\"title\": \"Lacunary property of \\u03b8 \\u2208Dom (\\u03a0)\", \"level\": 2}, {\"title\": \"Proof of Theorem 1.2 and Theorem 1.5 for \\u03bb> 2\", \"level\": 1}, {\"title\": \"Proof of convergence I1,I2 \\u2192 0\", \"level\": 2}, {\"title\": \"Proof of convergence I3 \\u2192 P 0\", \"level\": 2}, {\"title\": \"A reformulation of the tightness property of \\u03b8 \\u2208Dom (\\u03a0) for \\u03bb> 2\", \"level\": 2}, {\"title\": \"Proof of convergence I4,I5 \\u2192 P 0\", \"level\": 2}, {\"title\": \"Convergence of I6\", \"level\": 2}, {\"title\": \"Proof of Theorem 1.2 and Theorem 1.5 for \\u03bb= 2\", \"level\": 1}, {\"title\": \"The proof of J1 \\u2192 P 0\", \"level\": 2}, {\"title\": \"The proof of J2 \\u2192 P 0\", \"level\": 2}, {\"title\": \"A reformulation of the tightness property of \\u03b8 \\u2208Dom (\\u03a0) for \\u03bb= 2\", \"level\": 2}, {\"title\": \"The proof of J3 \\u2192 P 0\", \"level\": 2}, {\"title\": \"The convergence of J4\", \"level\": 2}, {\"title\": \"Proof of Theorem 1.2 and Theorem 1.5 for \\u03bb= 2\", \"level\": 2}, {\"title\": \"Some Additional Remarks\", \"level\": 1}, {\"title\": \"A remark on the finite intensity assumption in [Theorem 2.1-[Kab12]]\", \"level\": 2}, {\"title\": \"A discussion on Tauberian theorems\", \"level\": 2}, {\"title\": \"A counterexample to exponential type Tauberian equivalence\", \"level\": 3}, {\"title\": \"Appendix\", \"level\": 1}, {\"title\": \"Identification of the fixed point (for \\u03bb> 2)\", \"level\": 2}, {\"title\": \"Intensity measure of E\\u201d\\u201d\\u03bb for \\u03bb> 2\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 59924,
+            "completion_tokens": 890,
+            "total_tokens": 60814,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23267v1.prompt.md",
+      "custom_id": "arxiv_2608.23267v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-42cb45aaa50ec12abbea",
+          "created": 1788456342,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Triangle Badness Functions\", \"level\": 1}, {\"title\": \"Badness Based on the Angle Between the Angle Bisector and the Median\", \"level\": 2}, {\"title\": \"Combined Isosceles and Acute Violation Function\", \"level\": 2}, {\"title\": \"Delta-Regularized Isosceles Badness Function\", \"level\": 2}, {\"title\": \"Rank Correlation Methods\", \"level\": 1}, {\"title\": \"Badness Sequences\", \"level\": 2}, {\"title\": \"Pearson Correlation\", \"level\": 2}, {\"title\": \"Spearman Rank Correlation\", \"level\": 2}, {\"title\": \"Kendall Tau-b Correlation\", \"level\": 2}, {\"title\": \"Tukey Biweight Correlation\", \"level\": 2}, {\"title\": \"Interpretation of Correlation Values\", \"level\": 2}, {\"title\": \"Experimental Design\", \"level\": 1}, {\"title\": \"Datasets\", \"level\": 2}, {\"title\": \"Distance Matrices Computed by a Needleman\u2013Wunsch-Like Algorithm\", \"level\": 3}, {\"title\": \"Jaro\u2013Winkler and Needleman\u2013Wunsch-Like Distance Matrices\", \"level\": 3}, {\"title\": \"Randomly Generated Triangles\", \"level\": 3}, {\"title\": \"Euclidean Distance Matrices from Random Planar Points\", \"level\": 3}, {\"title\": \"Triangles for parallax method based on Gaia data\", \"level\": 3}, {\"title\": \"Triangles in crystal structures based on Materials Project data\", \"level\": 3}, {\"title\": \"Correlation Results\", \"level\": 1}, {\"title\": \"Needleman\u2013Wunsch-Like Distance Matrices\", \"level\": 2}, {\"title\": \"Fixed Biological Distance Matrices\", \"level\": 2}, {\"title\": \"Randomly Generated Triangles\", \"level\": 2}, {\"title\": \"Euclidean Distance Matrices from Random Planar Points\", \"level\": 2}, {\"title\": \"Triangles for parallax method based on Gaia data\", \"level\": 2}, {\"title\": \"Triangles in crystal structures based on Materials Project data\", \"level\": 2}, {\"title\": \"Conclusion\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 19465,
+            "completion_tokens": 491,
+            "total_tokens": 19956,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23303v1.prompt.md",
+      "custom_id": "arxiv_2608.23303v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-09838304b67e4adb340f",
+          "created": 1788456361,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"BREAKDOWNOFCONVENTIONALEDGEWORTH EXPANSION\", \"level\": 1}, {\"title\": \"EXACTSTRUCTURALABSORPTIONVIAq-DEFORMED FRAMEWORK\", \"level\": 1}, {\"title\": \"ASYMPTOTICMATCHINGATHIGHERORDERS\", \"level\": 1}, {\"title\": \"INFORMATION-THEORETICCONSEQUENCESOF TRUNCATION\", \"level\": 1}, {\"title\": \"APPLICATIONTOFINITE-BLOCKLENGTHCODING RATE\", \"level\": 1}, {\"title\": \"NUMERICALCASESTUDY:GLOBALCONSISTENCY\", \"level\": 1}, {\"title\": \"DISCUSSION:OPERATIONALTIGHTNESSAND CONSERVATIVESYSTEMGUARANTEE\", \"level\": 1}, {\"title\": \"Unsafe Underestimation\", \"level\": 2}, {\"title\": \"Operational Tightness in Practice\", \"level\": 2}, {\"title\": \"Algorithmic Stability for 6G Implementations\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 11013,
+            "completion_tokens": 244,
+            "total_tokens": 11257,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23317v1.prompt.md",
+      "custom_id": "arxiv_2608.23317v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-19127ab597a294fd4d87",
+          "created": 1788456375,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Spicing up Genetic Netlist Generation with LLMs\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Related Work\", \"level\": 1}, {\"title\": \"LLM-SPICEMixer\", \"level\": 1}, {\"title\": \"Recap of SPICEMixer\", \"level\": 2}, {\"title\": \"Inspiration-Guided Evolution with LLMs\", \"level\": 2}, {\"title\": \"Analog Discriminant-Function Synthesis\", \"level\": 1}, {\"title\": \"Task Setup\", \"level\": 2}, {\"title\": \"Reward and Multi-Corner Evaluation\", \"level\": 2}, {\"title\": \"Results\", \"level\": 1}, {\"title\": \"Comparison with Evolutionary Baselines\", \"level\": 2}, {\"title\": \"Accuracy and Robustness\", \"level\": 2}, {\"title\": \"Ablation: Prompting Strategy\", \"level\": 2}, {\"title\": \"Ablation: Decoding Settings\", \"level\": 2}, {\"title\": \"Ablation: Model Choice and Size\", \"level\": 2}, {\"title\": \"Ablation: Operator Mixture\", \"level\": 2}, {\"title\": \"Conclusions and Outlook\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}, {\"title\": \"Examples of LLM Prompts and Outputs\", \"level\": 1}, {\"title\": \"Netlists of the Best Validation Circuits\", \"level\": 1}, {\"title\": \"Output Waveforms Across Shuffles and Corners\", \"level\": 1}, {\"title\": \"Robustness to Input-Voltage Perturbations\", \"level\": 1}, {\"title\": \"Results of Ablation Studies\", \"level\": 1}, {\"title\": \"LLM Response Length Statistics\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 27036,
+            "completion_tokens": 400,
+            "total_tokens": 27436,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23366v1.prompt.md",
+      "custom_id": "arxiv_2608.23366v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-8a33f819512a5a0cfa17",
+          "created": 1788456446,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"TRANSFORM-BASED MULTILINEAR ALGEBRA VIA TENSOR DECOMPOSITION\", \"level\": 1}, {\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Preliminaries\", \"level\": 1}, {\"title\": \"T-product\", \"level\": 2}, {\"title\": \"Higher-order tensor-tensor product\", \"level\": 2}, {\"title\": \"Tensordecomposition\", \"level\": 2}, {\"title\": \"TTD- and HTD-based T-product algebra\", \"level\": 1}, {\"title\": \"Block diagonalization\", \"level\": 2}, {\"title\": \"T-product\", \"level\": 2}, {\"title\": \"T-SVD\", \"level\": 2}, {\"title\": \"Generalization to higher-order tensors\", \"level\": 1}, {\"title\": \"Numerical Examples\", \"level\": 1}, {\"title\": \"Third-order T-product\", \"level\": 2}, {\"title\": \"Fourth-order SVD\", \"level\": 2}, {\"title\": \"T-eigensystem realization algorithm\", \"level\": 2}, {\"title\": \"Conclusion\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 26443,
+            "completion_tokens": 263,
+            "total_tokens": 26706,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23374v1.prompt.md",
+      "custom_id": "arxiv_2608.23374v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-b382955ad9280ba2ce8c",
+          "created": 1788456508,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Developing a Sustainability Strategy\", \"level\": 1}, {\"title\": \"Strategy\", \"level\": 1}, {\"title\": \"Sustainability Support\", \"level\": 2}, {\"title\": \"Emissions Monitoring Across SCD Services\", \"level\": 2}, {\"title\": \"Sustainability Certification\", \"level\": 2}, {\"title\": \"User Engagement and Training\", \"level\": 2}, {\"title\": \"Best Practice and Knowledge Sharing\", \"level\": 2}, {\"title\": \"Discussion and Conclusion\", \"level\": 1}, {\"title\": \"Outcomes and lessons learned\", \"level\": 2}, {\"title\": \"Transferability\", \"level\": 2}, {\"title\": \"Acknowledgments\", \"level\": 1}, {\"title\": \"References\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 6175,
+            "completion_tokens": 184,
+            "total_tokens": 6359,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23498v1.prompt.md",
+      "custom_id": "arxiv_2608.23498v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-466a94f71ccde0a0257a",
+          "created": 1788456529,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"METHODOLOGY\", \"level\": 1}, {\"title\": \"Initial Conditions and Environmental Setup\", \"level\": 2}, {\"title\": \"Star Formation and Feedback Physics\", \"level\": 2}, {\"title\": \"RESULTS AND DISCUSSIONS\", \"level\": 1}, {\"title\": \"Environment-dependent Evolution\", \"level\": 2}, {\"title\": \"Road to Normalcy at f Edd \\u2248 10\\u207b4\", \"level\": 2}, {\"title\": \"Star Formation and Metal Enrichment Histories\", \"level\": 2}, {\"title\": \"Observational Signatures\", \"level\": 2}, {\"title\": \"LIMITATIONS AND CAVEATS\", \"level\": 1}, {\"title\": \"SUMMARY\", \"level\": 1}, {\"title\": \"ACKNOWLEDGMENTS\", \"level\": 1}, {\"title\": \"AUTHOR CONTRIBUTIONS\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 43748,
+            "completion_tokens": 225,
+            "total_tokens": 43973,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23538v1.prompt.md",
+      "custom_id": "arxiv_2608.23538v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-cd24a3f673c667adc783",
+          "created": 1788456570,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Introduction\", \"level\": 1}, {\"title\": \"Local distillation\", \"level\": 1}, {\"title\": \"Model fitting and prediction\", \"level\": 2}, {\"title\": \"The teacher as a Bayesian prior\", \"level\": 3}, {\"title\": \"A worked example of local distillation\", \"level\": 2}, {\"title\": \"Computability, generalizations and further localization\", \"level\": 2}, {\"title\": \"Related work\", \"level\": 1}, {\"title\": \"Interpretability through stability\", \"level\": 1}, {\"title\": \"Randomized local distillation\", \"level\": 2}, {\"title\": \"Interpreting a single local model\", \"level\": 2}, {\"title\": \"Interpreting the local models in aggregate\", \"level\": 2}, {\"title\": \"Theoretical analysis of stability\", \"level\": 1}, {\"title\": \"Notation and preliminaries\", \"level\": 2}, {\"title\": \"Stability of randomized local distillation\", \"level\": 2}, {\"title\": \"A high-dimensional example: predicting gene expression\", \"level\": 1}, {\"title\": \"Benchmark comparisons\", \"level\": 1}, {\"title\": \"Discussion\", \"level\": 1}, {\"title\": \"Details of theoretical results\", \"level\": 1}, {\"title\": \"Proof of main results\", \"level\": 2}, {\"title\": \"Theoretical analysis of stability under randomized lasso\", \"level\": 2}, {\"title\": \"Leave-j-out score and lasso geometry\", \"level\": 3}, {\"title\": \"Stability bound for feature\\u2013selection probabilities\", \"level\": 3}, {\"title\": \"Auxiliary results\", \"level\": 2}, {\"title\": \"Performance on UCI ML and OpenML datasets\", \"level\": 1}, {\"title\": \"Ablation study\", \"level\": 1}, {\"title\": \"Performance with simulated data\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 45395,
+            "completion_tokens": 421,
+            "total_tokens": 45816,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23547v1.prompt.md",
+      "custom_id": "arxiv_2608.23547v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-aa974eb03e36ec9c134c",
+          "created": 1788456640,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"RELATED WORK\", \"level\": 1}, {\"title\": \"ICS Anomaly Detection\", \"level\": 2}, {\"title\": \"Adversarial Machine Learning in Industrial Control Systems\", \"level\": 2}, {\"title\": \"Training-Time Poisoning and Contamination of Anomaly Detectors\", \"level\": 2}, {\"title\": \"Research Gap\", \"level\": 2}, {\"title\": \"THREAT MODEL AND CONTAMINATION METHODOLOGY\", \"level\": 1}, {\"title\": \"System and Adversary Model\", \"level\": 2}, {\"title\": \"Contamination Strategies\", \"level\": 2}, {\"title\": \"DATASET AND EXPERIMENTAL PROTOCOL\", \"level\": 1}, {\"title\": \"Dataset and Preprocessing\", \"level\": 2}, {\"title\": \"Detectors, Thresholding, and Reproducibility\", \"level\": 2}, {\"title\": \"Implementation, Tuning, and Compute Policy\", \"level\": 2}, {\"title\": \"RESULTS\", \"level\": 1}, {\"title\": \"Clean Performance and Contamination Robustness\", \"level\": 2}, {\"title\": \"Attack-Type Comparison\", \"level\": 2}, {\"title\": \"Safety, Cost, and Practical Trade-offs\", \"level\": 2}, {\"title\": \"Overall Trade-offs Across Performance, Robustness, and Cost\", \"level\": 2}, {\"title\": \"Limitations\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 18942,
+            "completion_tokens": 334,
+            "total_tokens": 19276,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.23950v1.prompt.md",
+      "custom_id": "arxiv_2608.23950v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-ed810226d57dbcbdf81a",
+          "created": 1788456687,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Receive Diversity for Differential Binary Noise Modulation\", \"level\": 1}, {\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"SIMO-DBN SYSTEM MODEL\", \"level\": 1}, {\"title\": \"GENERALIZED WEIGHTED DECISION STATISTIC\", \"level\": 1}, {\"title\": \"PERFORMANCE ANALYSIS\", \"level\": 1}, {\"title\": \"Average BEP\", \"level\": 2}, {\"title\": \"Diversity Order\", \"level\": 2}, {\"title\": \"Combining Weight Design\", \"level\": 2}, {\"title\": \"NUMERICAL RESULTS AND DISCUSSION\", \"level\": 1}, {\"title\": \"CONCLUSION\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 14593,
+            "completion_tokens": 167,
+            "total_tokens": 14760,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.25805v1.prompt.md",
+      "custom_id": "arxiv_2608.25805v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-c3a673f17d454f86bb19",
+          "created": 1788456726,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"Contributions\", \"level\": 2}, {\"title\": \"Relation to Existing Theory\", \"level\": 2}, {\"title\": \"Organization\", \"level\": 2}, {\"title\": \"SIGNAL MODEL AND HIGH-SNR CODEBOOK DESIGN PROBLEM\", \"level\": 1}, {\"title\": \"Signal Model and Exact Error Probability\", \"level\": 2}, {\"title\": \"Pairwise Geometry and the Packing Benchmark\", \"level\": 2}, {\"title\": \"Fixed-Codebook High-SNR Asymptotics\", \"level\": 2}, {\"title\": \"Exact High-SNR Codebook Design Problem\", \"level\": 2}, {\"title\": \"How K* < Kfix Can Occur\", \"level\": 2}, {\"title\": \"SOFT-PACKING CHARACTERIZATION OF THE OPTIMAL LEADING COEFFICIENT\", \"level\": 1}, {\"title\": \"Gaussian Soft-Packing Energy\", \"level\": 2}, {\"title\": \"Uniform Approximation of the Exact ML Error\", \"level\": 2}, {\"title\": \"Existence and Characterization of the Optimal Leading Coefficient\", \"level\": 2}, {\"title\": \"Comparison With the Best Packing-Optimal Benchmark\", \"level\": 2}, {\"title\": \"LOCALIZATION AND SNR-DEPENDENT CLOSEST-PAIR CONTRIBUTIONS\", \"level\": 1}, {\"title\": \"Localization at the Packing-Tail Scale\", \"level\": 2}, {\"title\": \"Reduction to Closest Pairs of a Limiting Packing\", \"level\": 2}, {\"title\": \"Global Variational Characterization by Scaled Closest-Pair Offsets\", \"level\": 2}, {\"title\": \"LEADING-COEFFICIENT EXTRACTION BY MATCHING BOUNDS\", \"level\": 1}, {\"title\": \"APPLICATION TO THE SIMPLEX CODES: EXACT OPTIMAL LEADING COEFFICIENTS\", \"level\": 1}, {\"title\": \"APPLICATION TO THE ORTHOPLEX-BOUND RANGE\", \"level\": 1}, {\"title\": \"Packing Scale and Best Fixed-Codebook Leading Coefficient\", \"level\": 2}, {\"title\": \"An SNR-Dependent Construction for 2 \\u2264 k < n\", \"level\": 2}, {\"title\": \"Exact Optimal Leading Coefficients at the Orthoplex-Bound Endpoints\", \"level\": 2}, {\"title\": \"Optimal Versus Best Fixed-Codebook Leading Coefficients\", \"level\": 2}, {\"title\": \"CONCLUSION\", \"level\": 1}, {\"title\": \"APPENDIX A UNIFORM TRANSFER, OPTIMAL LEADING-COEFFICIENT CHARACTERIZATION, AND GAUSSIAN SOFT-PACKING ENERGY ATTAINMENT PROOFS\", \"level\": 1}, {\"title\": \"Uniform Transfer on Bounded-Energy Sublevels\", \"level\": 2}, {\"title\": \"Packing-Scale Error Implies Bounded Gaussian Soft-Packing Energy\", \"level\": 2}, {\"title\": \"Equivalence of the Optimized Values\", \"level\": 2}, {\"title\": \"Existence and Characterization of the Optimal Leading Coefficient\", \"level\": 2}, {\"title\": \"Attainment by Gaussian Soft-Packing Energy Near-Minimization\", \"level\": 2}, {\"title\": \"APPENDIX B PACKING-TAIL LOCALIZATION CLOSEST-PAIR CONTRIBUTION CHARACTERIZATION AND\", \"level\": 1}, {\"title\": \"Global Variational Characterization by Scaled Closest-Pair Offsets\", \"level\": 2}, {\"title\": \"APPENDIX C PROOFS FOR THE SIMPLEX AND ORTHOPLEX-BOUND APPLICATIONS\", \"level\": 1}, {\"title\": \"Simplex Gaussian Soft-Packing Energy Minimum\", \"level\": 2}, {\"title\": \"Best Fixed-Codebook Leading Coefficient in the Orthoplex-Bound Range\", \"level\": 2}, {\"title\": \"Multiscale Construction in the Nonterminal Orthoplex-Bound Range\", \"level\": 2}, {\"title\": \"Terminal Orthoplex Endpoint\", \"level\": 2}, {\"title\": \"Signed-Balance Converse at the Left Endpoint\", \"level\": 2}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 55130,
+            "completion_tokens": 871,
+            "total_tokens": 56001,
+            "prompt_tokens_details": {
+              "cached_tokens": 96,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "arxiv_2608.26012v1.prompt.md",
+      "custom_id": "arxiv_2608.26012v1.prompt.md",
+      "response": {
+        "status_code": 200,
+        "request_id": null,
+        "body": {
+          "model": "google/gemma-4-31b-it",
+          "id": "gen-batch-1788450575-01184aaa3add9b5d29c1",
+          "created": 1788456878,
+          "system_fingerprint": null,
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"headings\": [{\"title\": \"Exact Common Information and Exact Channel Synthesis for Correlated Gaussian Sources\", \"level\": 1}, {\"title\": \"INTRODUCTION\", \"level\": 1}, {\"title\": \"Common information\", \"level\": 2}, {\"title\": \"Distributed channel synthesis\", \"level\": 2}, {\"title\": \"The Gaussian setting\", \"level\": 2}, {\"title\": \"Main results\", \"level\": 2}, {\"title\": \"PROOF OF THEOREM 1\", \"level\": 1}, {\"title\": \"A Multi-letter Bound\", \"level\": 2}, {\"title\": \"Evaluation of the Maximal Gaussian Cross-Entropy\", \"level\": 2}, {\"title\": \"Fathi\\u2019s Gaussian Transport Inequality\", \"level\": 2}, {\"title\": \"Entropy Bound from the Conditional Covariance\", \"level\": 2}, {\"title\": \"Optimization over the Transport Parameter\", \"level\": 2}, {\"title\": \"PROOF OF THEOREM 3\", \"level\": 1}, {\"title\": \"A Multi-letter Bound\", \"level\": 2}, {\"title\": \"Evaluation of the Multi-letter Bound\", \"level\": 2}, {\"title\": \"Acknowledgements\", \"level\": 1}, {\"title\": \"REFERENCES\", \"level\": 1}]}",
+                "refusal": null
+              },
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "logprobs": null
+            }
+          ],
+          "service_tier": null,
+          "usage": {
+            "prompt_tokens": 19577,
+            "completion_tokens": 277,
+            "total_tokens": 19854,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "provider": "Together"
+        }
+      },
+      "error": null
+    }
+  ]
+}

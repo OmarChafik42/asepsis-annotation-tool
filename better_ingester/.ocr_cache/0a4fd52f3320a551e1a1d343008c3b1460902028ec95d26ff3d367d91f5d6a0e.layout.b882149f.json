@@ -1,0 +1,5216 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      455.0,
+      86.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "The Little Scientist: LLM Agent-Driven Discovery via the Scientific Method",
+    "page": 0,
+    "bbox": [
+      190.0,
+      221.0,
+      1000.0,
+      300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      353.0,
+      335.0,
+      835.0,
+      446.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      528.0,
+      467.0,
+      664.0,
+      494.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      549.0,
+      540.0,
+      643.0,
+      562.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      191.0,
+      685.0,
+      1000.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      191.0,
+      1117.0,
+      1106.0,
+      1188.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      139.0,
+      1227.0,
+      370.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      134.0,
+      1279.0,
+      1053.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      134.0,
+      1442.0,
+      1053.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      588.0,
+      1585.0,
+      602.0,
+      1604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      145.0,
+      1053.0,
+      279.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      281.0,
+      1053.0,
+      549.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      552.0,
+      1052.0,
+      604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      170.0,
+      629.0,
+      1054.0,
+      820.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      168.0,
+      837.0,
+      1053.0,
+      1028.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      1052.0,
+      1051.0,
+      1103.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1106.0,
+      1053.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1214.0,
+      1053.0,
+      1350.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Related Work",
+    "page": 1,
+    "bbox": [
+      137.0,
+      1386.0,
+      391.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1 LLM-Guided Algorithm Discovery",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1438.0,
+      612.0,
+      1466.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      1481.0,
+      1052.0,
+      1535.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      587.0,
+      1585.0,
+      603.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      497.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      498.0,
+      1053.0,
+      958.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      960.0,
+      1053.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      135.0,
+      1177.0,
+      1053.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      1422.0,
+      1054.0,
+      1530.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      587.0,
+      1585.0,
+      603.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      145.0,
+      1054.0,
+      472.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2 Motif Discovery Algorithms",
+    "page": 3,
+    "bbox": [
+      136.0,
+      500.0,
+      536.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      542.0,
+      1053.0,
+      840.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      842.0,
+      1053.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3 Protein Fitness Prediction",
+    "page": 3,
+    "bbox": [
+      137.0,
+      1142.0,
+      518.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      1184.0,
+      1051.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      1292.0,
+      1052.0,
+      1508.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      168.0,
+      1509.0,
+      1053.0,
+      1535.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      588.0,
+      1586.0,
+      603.0,
+      1604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      469.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      471.0,
+      1054.0,
+      606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 The Little Scientist Framework",
+    "page": 4,
+    "bbox": [
+      137.0,
+      641.0,
+      635.0,
+      671.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      169.0,
+      735.0,
+      1023.0,
+      1098.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Overview of The Little Scientist framework. The Scientist agent works inside an evaluation environment that benchmarks its code and returns structured diagnostics. When the Scientist plateaus, the Kuhn agent injects a paradigm-shifting conjecture paired with a cross- disciplinary inspiration, forcing exploration of a different region of the LLM's latent space.",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1189.0,
+      1053.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Overview",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1328.0,
+      317.0,
+      1354.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      1371.0,
+      1054.0,
+      1507.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      168.0,
+      1523.0,
+      1050.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      588.0,
+      1585.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      169.0,
+      145.0,
+      1052.0,
+      200.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      170.0,
+      217.0,
+      1051.0,
+      270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      170.0,
+      289.0,
+      1051.0,
+      342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      170.0,
+      361.0,
+      665.0,
+      388.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      169.0,
+      406.0,
+      702.0,
+      432.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      170.0,
+      451.0,
+      576.0,
+      477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      502.0,
+      1053.0,
+      636.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      639.0,
+      1052.0,
+      744.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      746.0,
+      1052.0,
+      827.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 The Scientist Agent",
+    "page": 5,
+    "bbox": [
+      137.0,
+      857.0,
+      441.0,
+      885.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      900.0,
+      1051.0,
+      953.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      133.0,
+      955.0,
+      1053.0,
+      1116.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      134.0,
+      1118.0,
+      1053.0,
+      1332.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      135.0,
+      1334.0,
+      1054.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      588.0,
+      1585.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 The Evaluation Environment and Structured Feedback",
+    "page": 6,
+    "bbox": [
+      136.0,
+      143.0,
+      853.0,
+      170.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      186.0,
+      1052.0,
+      238.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      241.0,
+      1053.0,
+      294.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      325.0,
+      1053.0,
+      433.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      464.0,
+      1053.0,
+      598.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      600.0,
+      1053.0,
+      735.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      764.0,
+      1052.0,
+      953.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      956.0,
+      1053.0,
+      1063.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.4 The Kuhn Agent",
+    "page": 6,
+    "bbox": [
+      137.0,
+      1094.0,
+      407.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1136.0,
+      1054.0,
+      1298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1299.0,
+      1052.0,
+      1460.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      171.0,
+      1462.0,
+      269.0,
+      1485.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      1489.0,
+      1053.0,
+      1540.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      588.0,
+      1585.0,
+      603.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      145.0,
+      1052.0,
+      197.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      200.0,
+      1054.0,
+      307.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      338.0,
+      1054.0,
+      638.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.5 Process Engineering",
+    "page": 7,
+    "bbox": [
+      137.0,
+      665.0,
+      446.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      707.0,
+      1053.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      793.0,
+      1054.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      1038.0,
+      1054.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      1257.0,
+      1054.0,
+      1421.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.6 Search Statistics and Compute Usage",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1449.0,
+      649.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1493.0,
+      1052.0,
+      1547.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      587.0,
+      1586.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      145.0,
+      1053.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      257.0,
+      1053.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      135.0,
+      447.0,
+      1052.0,
+      610.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      638.0,
+      1052.0,
+      695.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      163.0,
+      717.0,
+      1052.0,
+      772.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      163.0,
+      789.0,
+      1053.0,
+      927.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      162.0,
+      943.0,
+      1053.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      162.0,
+      1042.0,
+      1053.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      164.0,
+      1142.0,
+      1053.0,
+      1278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      1302.0,
+      1053.0,
+      1436.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      1467.0,
+      1054.0,
+      1548.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      587.0,
+      1585.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      144.0,
+      1052.0,
+      200.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Measured compute usage for the motif discovery case study. All figures from OpenClaw cron_run_logs.",
+    "page": 9,
+    "bbox": [
+      136.0,
+      274.0,
+      1053.0,
+      329.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      240.0,
+      349.0,
+      951.0,
+      503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      534.0,
+      1053.0,
+      645.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      134.0,
+      669.0,
+      1053.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      135.0,
+      1053.0,
+      1053.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      1191.0,
+      1052.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      170.0,
+      1318.0,
+      1054.0,
+      1400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      168.0,
+      1415.0,
+      1054.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      169.0,
+      144.0,
+      1053.0,
+      307.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      331.0,
+      1052.0,
+      413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      442.0,
+      1054.0,
+      579.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.7 Infrastructure Evolution",
+    "page": 10,
+    "bbox": [
+      137.0,
+      609.0,
+      494.0,
+      636.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      651.0,
+      1053.0,
+      759.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      164.0,
+      783.0,
+      1053.0,
+      893.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      162.0,
+      910.0,
+      1052.0,
+      990.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      164.0,
+      1008.0,
+      1053.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      162.0,
+      1244.0,
+      866.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      163.0,
+      1289.0,
+      1051.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1367.0,
+      1052.0,
+      1421.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.8 Reproducibility",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1451.0,
+      389.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1494.0,
+      1053.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      583.0,
+      1585.0,
+      607.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      145.0,
+      1053.0,
+      280.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      143.0,
+      306.0,
+      594.0,
+      632.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      596.0,
+      309.0,
+      1046.0,
+      631.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Score progression for both case studies. (A) Motif discovery: the infrastructure overhaul gap (gray band) and Kuhn paradigm shift (annotation) separate the stalled Phase 1 from the full-framework Phase 2. Dashed lines show STREME and MEME baseline accuracy. (B) Protein fitness prediction: the discontinuous jump on Aug 4 occurred when the human investigator provided pre-computed model predictions as input data, enabling the Scientist to adopt an ensemble approach. Dashed lines show the top ProteinGym leaderboard entries.",
+    "page": 11,
+    "bbox": [
+      136.0,
+      656.0,
+      1054.0,
+      822.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9 Benchmark Methodology",
+    "page": 11,
+    "bbox": [
+      137.0,
+      857.0,
+      503.0,
+      886.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.1 Data",
+    "page": 11,
+    "bbox": [
+      137.0,
+      900.0,
+      277.0,
+      926.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      941.0,
+      1053.0,
+      1051.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.2 Negative Sets",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1081.0,
+      373.0,
+      1107.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1123.0,
+      421.0,
+      1148.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      163.0,
+      1172.0,
+      1053.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      163.0,
+      1299.0,
+      1053.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      582.0,
+      1584.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.3 Tools Compared",
+    "page": 12,
+    "bbox": [
+      137.0,
+      145.0,
+      402.0,
+      170.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Tools compared in this study.",
+    "page": 12,
+    "bbox": [
+      406.0,
+      209.0,
+      782.0,
+      234.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      282.0,
+      253.0,
+      908.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      431.0,
+      1052.0,
+      512.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.4 Evaluation",
+    "page": 12,
+    "bbox": [
+      137.0,
+      543.0,
+      339.0,
+      568.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      584.0,
+      1053.0,
+      692.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.5 Statistical Tests",
+    "page": 12,
+    "bbox": [
+      137.0,
+      723.0,
+      396.0,
+      748.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      168.0,
+      764.0,
+      947.0,
+      790.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      168.0,
+      809.0,
+      809.0,
+      835.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      169.0,
+      854.0,
+      655.0,
+      880.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      168.0,
+      899.0,
+      657.0,
+      924.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.9.6 Hardware and Reproducibility",
+    "page": 12,
+    "bbox": [
+      137.0,
+      957.0,
+      557.0,
+      983.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      134.0,
+      998.0,
+      1054.0,
+      1189.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Case Study: De Novo Motif Discovery",
+    "page": 12,
+    "bbox": [
+      136.0,
+      1224.0,
+      736.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Problem Domain",
+    "page": 12,
+    "bbox": [
+      136.0,
+      1278.0,
+      408.0,
+      1305.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      1320.0,
+      1052.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      1428.0,
+      1053.0,
+      1537.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      145.0,
+      1051.0,
+      199.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Search Configuration",
+    "page": 13,
+    "bbox": [
+      137.0,
+      228.0,
+      454.0,
+      256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      270.0,
+      833.0,
+      297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      168.0,
+      321.0,
+      925.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      170.0,
+      366.0,
+      843.0,
+      393.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      169.0,
+      411.0,
+      933.0,
+      439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      170.0,
+      458.0,
+      1051.0,
+      512.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      170.0,
+      530.0,
+      1052.0,
+      584.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      609.0,
+      1054.0,
+      717.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3 Diagnostic Feedback",
+    "page": 13,
+    "bbox": [
+      138.0,
+      746.0,
+      446.0,
+      773.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      789.0,
+      1054.0,
+      841.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      843.0,
+      1081.0,
+      924.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      163.0,
+      948.0,
+      1053.0,
+      1000.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      163.0,
+      1019.0,
+      849.0,
+      1047.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      163.0,
+      1065.0,
+      1050.0,
+      1119.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      162.0,
+      1137.0,
+      1052.0,
+      1219.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      164.0,
+      1237.0,
+      1052.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      1315.0,
+      1052.0,
+      1421.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      1424.0,
+      1054.0,
+      1532.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      146.0,
+      1053.0,
+      278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      135.0,
+      281.0,
+      1054.0,
+      443.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.4 The Discovered Algorithm",
+    "page": 14,
+    "bbox": [
+      137.0,
+      473.0,
+      518.0,
+      499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      515.0,
+      1052.0,
+      568.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      163.0,
+      593.0,
+      1051.0,
+      648.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      163.0,
+      666.0,
+      1052.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      162.0,
+      738.0,
+      1052.0,
+      792.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      162.0,
+      810.0,
+      1052.0,
+      863.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      888.0,
+      1052.0,
+      970.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5 Algorithm Details",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1000.0,
+      419.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      1042.0,
+      1038.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.1 Pipeline Overview",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1099.0,
+      423.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      1142.0,
+      1052.0,
+      1250.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.2 Adaptive Background",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1280.0,
+      461.0,
+      1306.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      1321.0,
+      1053.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.3 Multi-Width K-mer Enumeration",
+    "page": 15,
+    "bbox": [
+      137.0,
+      145.0,
+      593.0,
+      170.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      185.0,
+      1099.0,
+      294.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.4 Dual Seed Selection",
+    "page": 15,
+    "bbox": [
+      136.0,
+      325.0,
+      440.0,
+      350.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      367.0,
+      833.0,
+      392.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      424.0,
+      1052.0,
+      478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      508.0,
+      1055.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      590.0,
+      1065.0,
+      643.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.5 Soft EM Refinement",
+    "page": 15,
+    "bbox": [
+      136.0,
+      674.0,
+      448.0,
+      699.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      716.0,
+      1053.0,
+      795.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      135.0,
+      827.0,
+      1053.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      939.0,
+      1052.0,
+      992.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      995.0,
+      1052.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.6 Information Content and Effective Width",
+    "page": 15,
+    "bbox": [
+      136.0,
+      1078.0,
+      679.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      1119.0,
+      1052.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      450.0,
+      1192.0,
+      736.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      135.0,
+      1266.0,
+      1052.0,
+      1347.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5.7 Multi-Criteria Ranking",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1376.0,
+      479.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      1418.0,
+      1052.0,
+      1471.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      406.0,
+      1499.0,
+      782.0,
+      1525.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      583.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      400.0,
+      142.0,
+      788.0,
+      173.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      412.0,
+      184.0,
+      777.0,
+      212.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      171.0,
+      224.0,
+      518.0,
+      250.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      252.0,
+      1052.0,
+      357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      360.0,
+      1052.0,
+      414.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6 Results",
+    "page": 16,
+    "bbox": [
+      136.0,
+      444.0,
+      294.0,
+      471.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.1 Shuffled Negatives Benchmark (132 TFs)",
+    "page": 16,
+    "bbox": [
+      135.0,
+      486.0,
+      673.0,
+      513.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      528.0,
+      1052.0,
+      581.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: Benchmark results on 132 ENCODE K562 ChIP-seq datasets (shuffled negatives).",
+    "page": 16,
+    "bbox": [
+      153.0,
+      599.0,
+      1034.0,
+      626.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      276.0,
+      645.0,
+      914.0,
+      765.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      797.0,
+      1052.0,
+      880.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      283.0,
+      913.0,
+      905.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: AUROC distribution across 132 ENCODE K562 ChIP-seq datasets (shuffled nega- tives). DALE consistently outperforms STREME. Dashed line indicates random performance.",
+    "page": 16,
+    "bbox": [
+      135.0,
+      1449.0,
+      1049.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      328.0,
+      146.0,
+      860.0,
+      677.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: Per-TF comparison: DALE vs. STREME (132 TFs, shuffled negatives). Points above the diagonal indicate TFs where DALE outperforms STREME.",
+    "page": 17,
+    "bbox": [
+      135.0,
+      704.0,
+      1053.0,
+      762.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.2 Genomic Negatives Benchmark",
+    "page": 17,
+    "bbox": [
+      136.0,
+      798.0,
+      569.0,
+      826.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      135.0,
+      840.0,
+      1051.0,
+      897.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      923.0,
+      1053.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      1063.0,
+      1053.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4: Genomic negatives benchmark (53 TFs, Markov-1 scoring).",
+    "page": 17,
+    "bbox": [
+      262.0,
+      1140.0,
+      923.0,
+      1167.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      385.0,
+      1187.0,
+      806.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      137.0,
+      1360.0,
+      1054.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      301.0,
+      146.0,
+      884.0,
+      555.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5: Genomic negatives benchmark (53 TFs, Markov-1 scoring). DALE outperforms all three comparison tools.",
+    "page": 18,
+    "bbox": [
+      135.0,
+      579.0,
+      1053.0,
+      634.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      328.0,
+      685.0,
+      859.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6: Per-TF comparison: DALE vs. STREME (53 TFs, genomic negatives). Points above the diagonal indicate TFs where DALE outperforms STREME.",
+    "page": 18,
+    "bbox": [
+      135.0,
+      1247.0,
+      1053.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.3 Speed",
+    "page": 18,
+    "bbox": [
+      137.0,
+      1341.0,
+      289.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      136.0,
+      1382.0,
+      701.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      583.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      303.0,
+      145.0,
+      882.0,
+      556.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7: Runtime per TF across tools (132-TF shuffled benchmark). DALE processes all 132 TFs in under 45 seconds.",
+    "page": 19,
+    "bbox": [
+      135.0,
+      579.0,
+      1053.0,
+      633.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      134.0,
+      666.0,
+      1053.0,
+      776.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.4 Per-TF Analysis",
+    "page": 19,
+    "bbox": [
+      136.0,
+      805.0,
+      403.0,
+      831.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      846.0,
+      1051.0,
+      983.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.5 Statistical Significance",
+    "page": 19,
+    "bbox": [
+      136.0,
+      1012.0,
+      469.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      1054.0,
+      759.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 5: Statistical significance of DALE vs. STREME.",
+    "page": 19,
+    "bbox": [
+      324.0,
+      1102.0,
+      863.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      296.0,
+      1148.0,
+      892.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.6 Biological Validity",
+    "page": 19,
+    "bbox": [
+      136.0,
+      1379.0,
+      423.0,
+      1407.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      1421.0,
+      1053.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 6: TOMTOM JASPAR match summary (n = 119 TFs with motifs tested).",
+    "page": 20,
+    "bbox": [
+      201.0,
+      141.0,
+      986.0,
+      168.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      296.0,
+      186.0,
+      892.0,
+      403.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      434.0,
+      1053.0,
+      571.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.6.7 Memory Usage",
+    "page": 20,
+    "bbox": [
+      136.0,
+      599.0,
+      390.0,
+      626.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      640.0,
+      1053.0,
+      723.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Case Study: ProteinGym DMS Substitutions Zero-Shot",
+    "page": 20,
+    "bbox": [
+      137.0,
+      758.0,
+      983.0,
+      790.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      146.0,
+      856.0,
+      1040.0,
+      1325.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8: ProteinGym score progression over the 8-day search. The discontinuous jump on Aug 4 occurred when the human investigator provided pre-computed predictions from five state-of- the-art models as input data, enabling the Scientist to adopt an ensemble approach. Dashed lines show the top 3 ProteinGym leaderboard entries.",
+    "page": 20,
+    "bbox": [
+      134.0,
+      1355.0,
+      1053.0,
+      1467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      1495.0,
+      1055.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      581.0,
+      1585.0,
+      607.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      144.0,
+      385.0,
+      173.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1 Problem Setup",
+    "page": 21,
+    "bbox": [
+      137.0,
+      200.0,
+      383.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      243.0,
+      1053.0,
+      459.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      461.0,
+      1053.0,
+      594.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2 Search Configuration",
+    "page": 21,
+    "bbox": [
+      137.0,
+      624.0,
+      454.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      667.0,
+      1053.0,
+      909.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      136.0,
+      912.0,
+      1052.0,
+      992.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.3 Diagnostic Feedback",
+    "page": 21,
+    "bbox": [
+      138.0,
+      1021.0,
+      447.0,
+      1048.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      1065.0,
+      1052.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      163.0,
+      1189.0,
+      1049.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      163.0,
+      1260.0,
+      1052.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      162.0,
+      1329.0,
+      1052.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      163.0,
+      1399.0,
+      1053.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      163.0,
+      1496.0,
+      1051.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      162.0,
+      145.0,
+      1052.0,
+      200.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      163.0,
+      216.0,
+      1052.0,
+      270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      163.0,
+      288.0,
+      1052.0,
+      342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      163.0,
+      359.0,
+      1052.0,
+      440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      464.0,
+      1054.0,
+      625.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      626.0,
+      1054.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      791.0,
+      1051.0,
+      844.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      134.0,
+      847.0,
+      1053.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      135.0,
+      1036.0,
+      1053.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1198.0,
+      1053.0,
+      1468.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1470.0,
+      1054.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      145.0,
+      1054.0,
+      336.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.4 Search Statistics",
+    "page": 23,
+    "bbox": [
+      137.0,
+      364.0,
+      401.0,
+      391.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 7: Measured compute usage for the ProteinGym case study. All figures from OpenClaw cron_run_logs.",
+    "page": 23,
+    "bbox": [
+      136.0,
+      425.0,
+      1052.0,
+      479.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      354.0,
+      497.0,
+      836.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      686.0,
+      1054.0,
+      795.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.5 Results",
+    "page": 23,
+    "bbox": [
+      137.0,
+      822.0,
+      294.0,
+      851.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      135.0,
+      867.0,
+      1064.0,
+      1057.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 8: ProteinGym DMS Substitutions Zero-Shot leaderboard (top entries). All competitor scores from the official ProteinGym evaluation pipeline (v1.3, August 2026). Delta V ranks #1 on all five official metrics. \"Avg. Spearman\" is the official category-mean aggregation. Delta V's flat mean across all 217 assays is 0.569. *VenusRAR reports matching Spearman on the same benchmark; AUC/MCC/NDCG/Top-k were not reported.",
+    "page": 23,
+    "bbox": [
+      134.0,
+      1078.0,
+      1054.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      1233.0,
+      1190.0,
+      1520.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      213.0,
+      151.0,
+      972.0,
+      622.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 9: ProteinGym DMS Substitutions Zero-Shot leaderboard (top entries). Delta V exceeds all 96 scored models on the leaderboard, ranking #1 on all five official metrics.",
+    "page": 24,
+    "bbox": [
+      136.0,
+      652.0,
+      1053.0,
+      707.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      739.0,
+      1053.0,
+      848.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 9: Per-category Spearman scores: Delta V vs. VenusRAR-Rank vs. best competitor. Scores from official ProteinGym pipeline. VenusRAR-Rank scores from Tan et al. [2026], Table 2. Delta V wins 2 of 5 categories head-to-head; VenusRAR-Rank wins 3. The approaches capture different signal — Delta V is strongest on Expression (+0.057), VenusRAR-Rank on Stability(+0.016).",
+    "page": 24,
+    "bbox": [
+      136.0,
+      869.0,
+      1053.0,
+      1006.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      144.0,
+      1025.0,
+      1046.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      1258.0,
+      1053.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      392.0,
+      1053.0,
+      665.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      435.0,
+      143.0,
+      755.0,
+      162.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      149.0,
+      178.0,
+      587.0,
+      439.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      588.0,
+      181.0,
+      1048.0,
+      428.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      142.0,
+      451.0,
+      589.0,
+      702.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      588.0,
+      448.0,
+      1048.0,
+      692.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      144.0,
+      714.0,
+      588.0,
+      950.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10: Search efficiency comparison between Scientist and Kuhn agents on the Prote- inGym zero-shot task. Top row: cumulative improvements over time and magnitude of each improvement. Middle row: rolling acceptance rate and best score trajectory. Bottom row: per- achievement cost and summary statistics.",
+    "page": 26,
+    "bbox": [
+      136.0,
+      971.0,
+      1053.0,
+      1078.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      135.0,
+      1118.0,
+      1053.0,
+      1363.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6 Discovered Strategy: Delta V",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1391.0,
+      556.0,
+      1418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      1435.0,
+      1053.0,
+      1516.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.1 Quantile Calibration",
+    "page": 27,
+    "bbox": [
+      137.0,
+      145.0,
+      448.0,
+      170.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      135.0,
+      186.0,
+      1054.0,
+      346.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      348.0,
+      1052.0,
+      403.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.2 Z-score Normalization",
+    "page": 27,
+    "bbox": [
+      138.0,
+      433.0,
+      466.0,
+      458.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      474.0,
+      1053.0,
+      556.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.3 Confidence-Weighted Ensemble",
+    "page": 27,
+    "bbox": [
+      137.0,
+      586.0,
+      567.0,
+      612.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      627.0,
+      1054.0,
+      736.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      168.0,
+      760.0,
+      718.0,
+      786.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      170.0,
+      805.0,
+      378.0,
+      830.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      168.0,
+      850.0,
+      826.0,
+      876.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      170.0,
+      895.0,
+      371.0,
+      919.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      169.0,
+      940.0,
+      783.0,
+      967.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      171.0,
+      992.0,
+      610.0,
+      1016.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      464.0,
+      1043.0,
+      723.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      1021.0,
+      1046.0,
+      1049.0,
+      1071.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      1084.0,
+      1052.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      1167.0,
+      1052.0,
+      1220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      169.0,
+      1244.0,
+      1051.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      170.0,
+      1317.0,
+      1071.0,
+      1368.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.4 Residual Propagation",
+    "page": 28,
+    "bbox": [
+      137.0,
+      145.0,
+      459.0,
+      171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      186.0,
+      1051.0,
+      377.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      169.0,
+      377.0,
+      370.0,
+      401.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      163.0,
+      416.0,
+      754.0,
+      441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      162.0,
+      460.0,
+      815.0,
+      487.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      162.0,
+      503.0,
+      1052.0,
+      555.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      162.0,
+      574.0,
+      917.0,
+      600.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.5 Conservation-Modulated GEMME Weighting",
+    "page": 28,
+    "bbox": [
+      137.0,
+      631.0,
+      724.0,
+      657.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      671.0,
+      1052.0,
+      726.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      409.0,
+      749.0,
+      778.0,
+      782.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      1021.0,
+      753.0,
+      1049.0,
+      779.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      789.0,
+      1052.0,
+      899.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.6 Structure-Based Penalties",
+    "page": 28,
+    "bbox": [
+      137.0,
+      929.0,
+      509.0,
+      954.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      970.0,
+      1052.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      169.0,
+      1070.0,
+      427.0,
+      1097.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      169.0,
+      1113.0,
+      594.0,
+      1140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      170.0,
+      1157.0,
+      598.0,
+      1183.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      169.0,
+      1200.0,
+      628.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      169.0,
+      1244.0,
+      547.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      1290.0,
+      1052.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6.7 Dynamic Range Expansion",
+    "page": 28,
+    "bbox": [
+      137.0,
+      1374.0,
+      519.0,
+      1400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      135.0,
+      1415.0,
+      1052.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      146.0,
+      1054.0,
+      362.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.7 Interpretation",
+    "page": 29,
+    "bbox": [
+      137.0,
+      392.0,
+      373.0,
+      418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      134.0,
+      434.0,
+      1053.0,
+      569.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      571.0,
+      1053.0,
+      975.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      977.0,
+      1052.0,
+      1110.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      1112.0,
+      1054.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Ablations",
+    "page": 29,
+    "bbox": [
+      137.0,
+      1366.0,
+      329.0,
+      1395.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      1419.0,
+      1053.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.1 Development Timeline",
+    "page": 30,
+    "bbox": [
+      136.0,
+      143.0,
+      473.0,
+      171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      135.0,
+      185.0,
+      1052.0,
+      240.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 10: Development timeline: effect of progressive infrastructure additions on search out- comes. Each row adds one component to the previous configuration. Smoke-test AUROC is the 5-TF proxy metric used during search; full-benchmark AUROC is the 132-TF final metric. Rows are sequential additions, not independent variables — see §7.2 for limitations.",
+    "page": 30,
+    "bbox": [
+      137.0,
+      262.0,
+      1052.0,
+      371.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      138.0,
+      390.0,
+      1089.0,
+      580.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      134.0,
+      621.0,
+      1054.0,
+      894.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2 Effect of Structured Feedback vs. Scalar Score",
+    "page": 30,
+    "bbox": [
+      136.0,
+      921.0,
+      754.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      135.0,
+      964.0,
+      1053.0,
+      1074.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      169.0,
+      1097.0,
+      1051.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      169.0,
+      1169.0,
+      1053.0,
+      1249.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1274.0,
+      1053.0,
+      1355.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.3 Search Efficiency: Improvement Rate",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1385.0,
+      647.0,
+      1413.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1427.0,
+      1053.0,
+      1483.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      168.0,
+      1505.0,
+      1017.0,
+      1533.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      581.0,
+      1584.0,
+      607.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      134.0,
+      196.0,
+      1053.0,
+      357.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7 Discussion",
+    "page": 31,
+    "bbox": [
+      137.0,
+      396.0,
+      341.0,
+      424.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.1 What the Search Discovered",
+    "page": 31,
+    "bbox": [
+      137.0,
+      447.0,
+      541.0,
+      474.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      491.0,
+      1053.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      653.0,
+      1052.0,
+      789.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.2 Implications for Agentic Science",
+    "page": 31,
+    "bbox": [
+      137.0,
+      819.0,
+      587.0,
+      846.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      861.0,
+      1052.0,
+      941.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      134.0,
+      944.0,
+      1053.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      1215.0,
+      1052.0,
+      1429.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      1430.0,
+      1052.0,
+      1512.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      147.0,
+      1053.0,
+      198.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      199.0,
+      1054.0,
+      633.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      634.0,
+      1053.0,
+      793.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      134.0,
+      796.0,
+      1053.0,
+      985.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.3 Collaborative Human-Agent Research",
+    "page": 32,
+    "bbox": [
+      138.0,
+      1015.0,
+      654.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      1058.0,
+      1053.0,
+      1274.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      1275.0,
+      1052.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      134.0,
+      1384.0,
+      1053.0,
+      1544.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      135.0,
+      145.0,
+      1053.0,
+      252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      135.0,
+      253.0,
+      1054.0,
+      444.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.4 Limitations and Future Directions",
+    "page": 33,
+    "bbox": [
+      137.0,
+      472.0,
+      609.0,
+      499.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      163.0,
+      515.0,
+      1052.0,
+      598.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      164.0,
+      615.0,
+      1053.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      162.0,
+      930.0,
+      1051.0,
+      987.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      162.0,
+      1003.0,
+      1052.0,
+      1058.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      163.0,
+      1075.0,
+      1054.0,
+      1211.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      163.0,
+      1227.0,
+      1054.0,
+      1528.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      164.0,
+      145.0,
+      1054.0,
+      281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      163.0,
+      297.0,
+      1054.0,
+      461.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data availability.",
+    "page": 34,
+    "bbox": [
+      137.0,
+      504.0,
+      329.0,
+      528.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      531.0,
+      1053.0,
+      721.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      135.0,
+      720.0,
+      1053.0,
+      938.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Code availability.",
+    "page": 34,
+    "bbox": [
+      138.0,
+      959.0,
+      333.0,
+      983.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      985.0,
+      1051.0,
+      1067.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      1069.0,
+      1052.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      135.0,
+      1150.0,
+      1057.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      135.0,
+      1360.0,
+      1053.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      581.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      145.0,
+      629.0,
+      172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 35,
+    "bbox": [
+      138.0,
+      209.0,
+      297.0,
+      238.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      262.0,
+      1051.0,
+      314.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      139.0,
+      333.0,
+      1052.0,
+      385.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      405.0,
+      1052.0,
+      485.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      139.0,
+      503.0,
+      1053.0,
+      556.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      139.0,
+      575.0,
+      1050.0,
+      628.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      139.0,
+      647.0,
+      1051.0,
+      726.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      746.0,
+      1052.0,
+      851.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      870.0,
+      993.0,
+      897.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      915.0,
+      1051.0,
+      1022.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1040.0,
+      1051.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1113.0,
+      1050.0,
+      1191.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1211.0,
+      1051.0,
+      1264.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1282.0,
+      1029.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      141.0,
+      1327.0,
+      1050.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1398.0,
+      1052.0,
+      1477.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      138.0,
+      1496.0,
+      1052.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      582.0,
+      1585.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      145.0,
+      1051.0,
+      226.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      244.0,
+      1051.0,
+      297.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      316.0,
+      1050.0,
+      396.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      415.0,
+      1051.0,
+      468.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      486.0,
+      1052.0,
+      594.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      613.0,
+      1052.0,
+      695.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      713.0,
+      1051.0,
+      767.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      785.0,
+      1052.0,
+      864.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      884.0,
+      1051.0,
+      938.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      957.0,
+      1051.0,
+      1065.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      1083.0,
+      1050.0,
+      1137.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      139.0,
+      1155.0,
+      1051.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      139.0,
+      1227.0,
+      1050.0,
+      1307.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      139.0,
+      1326.0,
+      1051.0,
+      1407.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      1426.0,
+      1054.0,
+      1477.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary Material",
+    "page": 37,
+    "bbox": [
+      136.0,
+      140.0,
+      490.0,
+      172.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Section A: Per-TF Results",
+    "page": 37,
+    "bbox": [
+      136.0,
+      191.0,
+      460.0,
+      220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      135.0,
+      235.0,
+      1189.0,
+      289.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Section B: TOMTOM Match Analysis",
+    "page": 37,
+    "bbox": [
+      136.0,
+      319.0,
+      597.0,
+      347.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      361.0,
+      783.0,
+      389.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 11: TOMTOM JASPAR match rates (n = 53 TFs).",
+    "page": 37,
+    "bbox": [
+      311.0,
+      411.0,
+      875.0,
+      438.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      293.0,
+      456.0,
+      896.0,
+      626.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Section C: Compilation Fairness",
+    "page": 37,
+    "bbox": [
+      137.0,
+      665.0,
+      524.0,
+      693.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      708.0,
+      1052.0,
+      762.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Section D: Reproducibility",
+    "page": 37,
+    "bbox": [
+      136.0,
+      792.0,
+      459.0,
+      820.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      835.0,
+      1054.0,
+      971.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      581.0,
+      1584.0,
+      609.0,
+      1607.0
+    ]
+  }
+]

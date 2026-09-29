@@ -1,0 +1,2356 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      36.0,
+      541.0,
+      82.0,
+      1294.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Permutation theory governs long-term dynamics of critical Boolean networks",
+    "page": 0,
+    "bbox": [
+      147.0,
+      141.0,
+      1075.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      154.0,
+      209.0,
+      1066.0,
+      263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      138.0,
+      280.0,
+      1081.0,
+      393.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      140.0,
+      481.0,
+      242.0,
+      505.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      137.0,
+      521.0,
+      1082.0,
+      930.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      139.0,
+      974.0,
+      284.0,
+      999.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      136.0,
+      1018.0,
+      1085.0,
+      1345.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      162.0,
+      1388.0,
+      359.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      167.0,
+      1410.0,
+      633.0,
+      1432.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      147.0,
+      1084.0,
+      416.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      420.0,
+      1083.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      662.0,
+      1084.0,
+      877.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      880.0,
+      1084.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Permutation determines long-term dynamics",
+    "page": 1,
+    "bbox": [
+      140.0,
+      1215.0,
+      636.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      1260.0,
+      1084.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      204.0,
+      150.0,
+      655.0,
+      328.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: (a) Two disjoint K = 1 Boolean network components, each consisting of a loop of relevant nodes (numbered 1-4 and 5-7) with trees of non-relevant nodes branching out. (b) The corresponding permutation σ on the relevant nodes, consisting of loops (1 2 3 4) and (5 6 7): the top row lists each node and the arrow indicates its image under σ.",
+    "page": 2,
+    "bbox": [
+      135.0,
+      372.0,
+      1083.0,
+      462.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      496.0,
+      1082.0,
+      630.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      139.0,
+      631.0,
+      1082.0,
+      766.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      767.0,
+      1083.0,
+      874.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      565.0,
+      870.0,
+      656.0,
+      921.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1052.0,
+      885.0,
+      1079.0,
+      910.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      930.0,
+      1019.0,
+      957.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      544.0,
+      976.0,
+      679.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1052.0,
+      977.0,
+      1079.0,
+      1003.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      1026.0,
+      757.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      549.0,
+      1068.0,
+      673.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1052.0,
+      1083.0,
+      1079.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      1136.0,
+      1083.0,
+      1192.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      504.0,
+      1208.0,
+      719.0,
+      1268.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1052.0,
+      1225.0,
+      1079.0,
+      1252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      1286.0,
+      1083.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      1340.0,
+      1085.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      603.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      147.0,
+      1086.0,
+      227.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Typical versus extremal maximum attractor lengths",
+    "page": 3,
+    "bbox": [
+      139.0,
+      263.0,
+      716.0,
+      289.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      306.0,
+      1085.0,
+      415.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      412.0,
+      428.0,
+      811.0,
+      486.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1051.0,
+      445.0,
+      1080.0,
+      471.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      503.0,
+      1083.0,
+      584.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      415.0,
+      597.0,
+      809.0,
+      656.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1052.0,
+      614.0,
+      1080.0,
+      640.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      671.0,
+      1082.0,
+      752.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      475.0,
+      748.0,
+      746.0,
+      792.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1051.0,
+      752.0,
+      1080.0,
+      779.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      136.0,
+      804.0,
+      1084.0,
+      913.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Scaling of mean attractor length.",
+    "page": 3,
+    "bbox": [
+      137.0,
+      947.0,
+      506.0,
+      973.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      139.0,
+      991.0,
+      476.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      443.0,
+      1035.0,
+      778.0,
+      1091.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1052.0,
+      1051.0,
+      1079.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      1108.0,
+      845.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      484.0,
+      1150.0,
+      736.0,
+      1182.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1052.0,
+      1154.0,
+      1079.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      1199.0,
+      1082.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      488.0,
+      1298.0,
+      733.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1041.0,
+      1313.0,
+      1079.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      140.0,
+      1371.0,
+      167.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      383.0,
+      1386.0,
+      835.0,
+      1454.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1040.0,
+      1404.0,
+      1079.0,
+      1430.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      146.0,
+      838.0,
+      174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      490.0,
+      192.0,
+      728.0,
+      236.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1040.0,
+      201.0,
+      1080.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      254.0,
+      1083.0,
+      337.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion.",
+    "page": 4,
+    "bbox": [
+      138.0,
+      372.0,
+      267.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      417.0,
+      1084.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      769.0,
+      1083.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      1121.0,
+      1084.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgments",
+    "page": 4,
+    "bbox": [
+      139.0,
+      1293.0,
+      343.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      1338.0,
+      818.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      603.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Appendix",
+    "page": 5,
+    "bbox": [
+      140.0,
+      147.0,
+      255.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      191.0,
+      1083.0,
+      273.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      317.0,
+      1081.0,
+      368.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      542.0,
+      366.0,
+      680.0,
+      421.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1041.0,
+      380.0,
+      1079.0,
+      406.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      435.0,
+      1084.0,
+      653.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      671.0,
+      1083.0,
+      862.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      861.0,
+      1081.0,
+      968.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      442.0,
+      964.0,
+      777.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1040.0,
+      970.0,
+      1079.0,
+      996.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1030.0,
+      1083.0,
+      1084.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      400.0,
+      1104.0,
+      818.0,
+      1223.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1041.0,
+      1151.0,
+      1079.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1246.0,
+      1083.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      439.0,
+      1317.0,
+      779.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1040.0,
+      1325.0,
+      1079.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      146.0,
+      1084.0,
+      201.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      433.0,
+      200.0,
+      784.0,
+      297.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      236.0,
+      1080.0,
+      262.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      308.0,
+      1082.0,
+      363.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      417.0,
+      378.0,
+      802.0,
+      434.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      385.0,
+      1080.0,
+      412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      451.0,
+      1083.0,
+      505.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      422.0,
+      519.0,
+      795.0,
+      597.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      529.0,
+      1080.0,
+      556.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      138.0,
+      614.0,
+      708.0,
+      641.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      661.0,
+      1084.0,
+      851.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      497.0,
+      867.0,
+      723.0,
+      940.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      889.0,
+      1079.0,
+      917.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      138.0,
+      960.0,
+      448.0,
+      988.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      475.0,
+      1002.0,
+      746.0,
+      1072.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      1023.0,
+      1080.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      138.0,
+      1087.0,
+      1083.0,
+      1195.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      137.0,
+      1197.0,
+      1084.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      526.0,
+      1399.0,
+      696.0,
+      1455.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1040.0,
+      1416.0,
+      1080.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      605.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      145.0,
+      1084.0,
+      201.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      372.0,
+      217.0,
+      849.0,
+      245.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1040.0,
+      218.0,
+      1079.0,
+      244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      259.0,
+      722.0,
+      289.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      384.0,
+      305.0,
+      840.0,
+      457.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      406.0,
+      1080.0,
+      432.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      473.0,
+      1083.0,
+      526.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      529.0,
+      1083.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      694.0,
+      1083.0,
+      747.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      139.0,
+      764.0,
+      1080.0,
+      847.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      469.0,
+      861.0,
+      753.0,
+      927.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      879.0,
+      1079.0,
+      905.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      138.0,
+      943.0,
+      973.0,
+      970.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      416.0,
+      984.0,
+      807.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      1001.0,
+      1079.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      139.0,
+      1063.0,
+      392.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      502.0,
+      1080.0,
+      718.0,
+      1138.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      1096.0,
+      1079.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      140.0,
+      1147.0,
+      1051.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      437.0,
+      1189.0,
+      717.0,
+      1257.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      1208.0,
+      1079.0,
+      1233.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      462.0,
+      1264.0,
+      785.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1041.0,
+      1274.0,
+      1079.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      1340.0,
+      1082.0,
+      1421.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      146.0,
+      1083.0,
+      202.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      212.0,
+      1083.0,
+      266.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      447.0,
+      263.0,
+      773.0,
+      339.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1040.0,
+      269.0,
+      1080.0,
+      295.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      349.0,
+      1083.0,
+      402.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      526.0,
+      401.0,
+      693.0,
+      458.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1040.0,
+      407.0,
+      1080.0,
+      434.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      468.0,
+      1050.0,
+      495.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      421.0,
+      504.0,
+      800.0,
+      582.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1040.0,
+      513.0,
+      1079.0,
+      539.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      597.0,
+      1083.0,
+      671.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      438.0,
+      680.0,
+      780.0,
+      759.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1040.0,
+      688.0,
+      1080.0,
+      714.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      139.0,
+      772.0,
+      432.0,
+      798.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      816.0,
+      1077.0,
+      843.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      380.0,
+      855.0,
+      841.0,
+      916.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1041.0,
+      871.0,
+      1079.0,
+      897.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      137.0,
+      929.0,
+      1083.0,
+      982.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      404.0,
+      995.0,
+      813.0,
+      1063.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1041.0,
+      1013.0,
+      1079.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      139.0,
+      1076.0,
+      519.0,
+      1103.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      473.0,
+      1114.0,
+      747.0,
+      1184.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1041.0,
+      1133.0,
+      1080.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      138.0,
+      1196.0,
+      1083.0,
+      1250.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      350.0,
+      1262.0,
+      866.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1040.0,
+      1412.0,
+      1080.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      603.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      139.0,
+      147.0,
+      1020.0,
+      173.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      503.0,
+      190.0,
+      718.0,
+      222.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1040.0,
+      196.0,
+      1080.0,
+      221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      242.0,
+      1083.0,
+      299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      137.0,
+      317.0,
+      1080.0,
+      344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      139.0,
+      363.0,
+      383.0,
+      387.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      510.0,
+      382.0,
+      711.0,
+      440.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1040.0,
+      399.0,
+      1079.0,
+      425.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      140.0,
+      450.0,
+      202.0,
+      472.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      456.0,
+      467.0,
+      764.0,
+      519.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1040.0,
+      482.0,
+      1079.0,
+      509.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      140.0,
+      529.0,
+      223.0,
+      553.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      522.0,
+      550.0,
+      698.0,
+      581.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1041.0,
+      555.0,
+      1079.0,
+      581.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      140.0,
+      600.0,
+      1080.0,
+      655.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      509.0,
+      675.0,
+      711.0,
+      706.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1040.0,
+      679.0,
+      1079.0,
+      705.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      140.0,
+      728.0,
+      1081.0,
+      780.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      522.0,
+      778.0,
+      698.0,
+      808.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1040.0,
+      782.0,
+      1079.0,
+      807.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 9,
+    "bbox": [
+      139.0,
+      885.0,
+      265.0,
+      910.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      149.0,
+      930.0,
+      1081.0,
+      982.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      153.0,
+      1001.0,
+      1080.0,
+      1055.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      153.0,
+      1073.0,
+      1081.0,
+      1127.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      152.0,
+      1146.0,
+      1080.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      152.0,
+      1219.0,
+      1081.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      153.0,
+      1290.0,
+      1081.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      152.0,
+      1362.0,
+      1079.0,
+      1414.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      152.0,
+      146.0,
+      1082.0,
+      200.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      150.0,
+      218.0,
+      1082.0,
+      272.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      142.0,
+      290.0,
+      1082.0,
+      344.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      142.0,
+      361.0,
+      1081.0,
+      416.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      434.0,
+      1082.0,
+      516.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      533.0,
+      1081.0,
+      615.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      142.0,
+      633.0,
+      1081.0,
+      715.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      732.0,
+      1081.0,
+      787.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      804.0,
+      1083.0,
+      885.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      903.0,
+      1082.0,
+      985.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      1004.0,
+      1081.0,
+      1082.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      1102.0,
+      1081.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      142.0,
+      1174.0,
+      1081.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      1246.0,
+      1080.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      1318.0,
+      1081.0,
+      1371.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      141.0,
+      1390.0,
+      1083.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      600.0,
+      1483.0,
+      624.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      142.0,
+      146.0,
+      1082.0,
+      200.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      142.0,
+      218.0,
+      1081.0,
+      270.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      142.0,
+      290.0,
+      1081.0,
+      426.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      141.0,
+      445.0,
+      1081.0,
+      495.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      600.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  }
+]

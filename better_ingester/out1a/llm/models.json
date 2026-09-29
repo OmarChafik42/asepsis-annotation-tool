@@ -1,0 +1,4 @@
+{
+  "base_big": "deepseek/deepseek-v4-pro-0813 (OpenRouter, temperature 0, max_tokens 2048, JSON mode)",
+  "base_small": "google/gemma-4-31b-it (OpenRouter, temperature 0, max_tokens 2048, JSON mode)"
+}

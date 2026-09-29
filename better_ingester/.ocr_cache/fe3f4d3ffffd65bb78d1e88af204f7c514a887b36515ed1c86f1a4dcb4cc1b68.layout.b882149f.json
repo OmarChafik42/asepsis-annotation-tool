@@ -1,0 +1,4897 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      39.0,
+      421.0,
+      86.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Empirical mode decomposition and interpretable machine learning for preterm birth classification from electrohysterography",
+    "page": 0,
+    "bbox": [
+      391.0,
+      189.0,
+      1155.0,
+      278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      389.0,
+      299.0,
+      1120.0,
+      349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      390.0,
+      371.0,
+      1154.0,
+      417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      390.0,
+      419.0,
+      937.0,
+      442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      390.0,
+      443.0,
+      1107.0,
+      489.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      391.0,
+      491.0,
+      1142.0,
+      537.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      391.0,
+      539.0,
+      1130.0,
+      587.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      390.0,
+      610.0,
+      830.0,
+      634.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      389.0,
+      636.0,
+      597.0,
+      660.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      392.0,
+      693.0,
+      522.0,
+      724.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      388.0,
+      742.0,
+      1159.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      1110.0,
+      1472.0,
+      1154.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 1,
+    "bbox": [
+      391.0,
+      119.0,
+      577.0,
+      148.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      389.0,
+      168.0,
+      1156.0,
+      503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      388.0,
+      503.0,
+      1155.0,
+      695.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      387.0,
+      695.0,
+      1155.0,
+      863.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Challenges in practical PTB risk assessment",
+    "page": 1,
+    "bbox": [
+      390.0,
+      891.0,
+      921.0,
+      918.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      389.0,
+      930.0,
+      1153.0,
+      1218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      389.0,
+      1219.0,
+      1148.0,
+      1377.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1108.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      390.0,
+      124.0,
+      1154.0,
+      198.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Physiological basis of uterine electrical activity",
+    "page": 2,
+    "bbox": [
+      390.0,
+      226.0,
+      953.0,
+      253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      388.0,
+      266.0,
+      1155.0,
+      457.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      388.0,
+      457.0,
+      1155.0,
+      600.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      387.0,
+      600.0,
+      1155.0,
+      770.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "EHG signal characteristics and bursts",
+    "page": 2,
+    "bbox": [
+      391.0,
+      796.0,
+      846.0,
+      824.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      389.0,
+      835.0,
+      1153.0,
+      1076.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      388.0,
+      1076.0,
+      1155.0,
+      1339.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      390.0,
+      1339.0,
+      1155.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1109.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      388.0,
+      125.0,
+      1156.0,
+      244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      388.0,
+      245.0,
+      1154.0,
+      462.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Computational approaches and methodological pitfalls",
+    "page": 3,
+    "bbox": [
+      390.0,
+      489.0,
+      1041.0,
+      517.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      389.0,
+      528.0,
+      1155.0,
+      862.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      388.0,
+      863.0,
+      1156.0,
+      1054.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      388.0,
+      1055.0,
+      1150.0,
+      1317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      388.0,
+      1318.0,
+      1153.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      1109.0,
+      1473.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      388.0,
+      125.0,
+      1155.0,
+      271.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Study contributions",
+    "page": 4,
+    "bbox": [
+      391.0,
+      297.0,
+      633.0,
+      323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      389.0,
+      336.0,
+      1153.0,
+      362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      417.0,
+      378.0,
+      1156.0,
+      501.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      415.0,
+      513.0,
+      1140.0,
+      635.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      416.0,
+      648.0,
+      1156.0,
+      818.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      415.0,
+      829.0,
+      1153.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      389.0,
+      1088.0,
+      1155.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Materials and methods",
+    "page": 4,
+    "bbox": [
+      392.0,
+      1244.0,
+      726.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      388.0,
+      1293.0,
+      1144.0,
+      1391.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1109.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      407.0,
+      129.0,
+      1136.0,
+      496.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 1. Overview of the proposed EHG-based recording-level",
+    "page": 5,
+    "bbox": [
+      392.0,
+      512.0,
+      1005.0,
+      537.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "term-versus-preterm classification framework. Dataset-provided filtered EHG recordings were segmented using annotated-interval and non-overlapping fixed 3-minute strategies. Each segment was decomposed using empirical mode decomposition (EMD), and the first four intrinsic mode functions (IMF1-IMF4) were evaluated under the same feature extraction and classification framework. IMF1 was selected based on the resulting recording-level performance and used for the subsequent analyses. Burst and peak, temporal-energy, and entropy features were extracted from the selected representation and used to train machine-learning classifiers. Segment-level classification scores were aggregated using maximum-score aggregation to obtain one recording-level score for classification.",
+    "page": 5,
+    "bbox": [
+      389.0,
+      526.0,
+      1155.0,
+      776.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Dataset",
+    "page": 5,
+    "bbox": [
+      391.0,
+      816.0,
+      490.0,
+      840.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      388.0,
+      853.0,
+      1155.0,
+      951.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      388.0,
+      951.0,
+      1156.0,
+      1190.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      390.0,
+      1190.0,
+      1141.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      388.0,
+      1310.0,
+      1153.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1109.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      389.0,
+      124.0,
+      1136.0,
+      221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      388.0,
+      220.0,
+      1154.0,
+      364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      388.0,
+      364.0,
+      1154.0,
+      485.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Preprocessing and segmentation",
+    "page": 6,
+    "bbox": [
+      391.0,
+      513.0,
+      778.0,
+      540.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      389.0,
+      552.0,
+      1138.0,
+      602.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Signal preparation",
+    "page": 6,
+    "bbox": [
+      391.0,
+      627.0,
+      585.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      388.0,
+      664.0,
+      1153.0,
+      808.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      388.0,
+      808.0,
+      1155.0,
+      929.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Segmentation strategies",
+    "page": 6,
+    "bbox": [
+      391.0,
+      955.0,
+      639.0,
+      980.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      389.0,
+      992.0,
+      1088.0,
+      1042.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      388.0,
+      1067.0,
+      1156.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      389.0,
+      1287.0,
+      1157.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1110.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      389.0,
+      124.0,
+      1134.0,
+      244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      389.0,
+      245.0,
+      1155.0,
+      390.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      399.0,
+      416.0,
+      1146.0,
+      774.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 2. Comparison of annotated-interval and fixed 3-minute segmentation on a representative recording. (A) Filtered EHG signal from one differential channel, with dataset-provided contraction intervals and dummy (non-contraction) intervals shown as separately shaded regions and fixed 3-minute window boundaries shown as dashed vertical lines. (B) An IMF1 representation of the same recording shown only to illustrate how the segmentation schemes relate to oscillatory EHG activity. The annotated-interval strategy uses both contraction and dummy intervals, whereas the fixed-window strategy uses consecutive non-overlapping complete 3-minute windows irrespective of the annotations. For the analytical pipeline, segmentation was performed before EMD and each resulting segment was decomposed independently.",
+    "page": 7,
+    "bbox": [
+      387.0,
+      786.0,
+      1154.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Recording-level data separation",
+    "page": 7,
+    "bbox": [
+      391.0,
+      1081.0,
+      716.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      388.0,
+      1118.0,
+      1154.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      388.0,
+      1286.0,
+      1155.0,
+      1384.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1109.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      388.0,
+      124.0,
+      1155.0,
+      173.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Empirical mode decomposition",
+    "page": 8,
+    "bbox": [
+      391.0,
+      202.0,
+      764.0,
+      229.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      389.0,
+      242.0,
+      1155.0,
+      384.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      389.0,
+      384.0,
+      1155.0,
+      531.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      670.0,
+      545.0,
+      874.0,
+      611.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1125.0,
+      566.0,
+      1152.0,
+      591.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      389.0,
+      621.0,
+      1146.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      389.0,
+      693.0,
+      1154.0,
+      812.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      390.0,
+      812.0,
+      1128.0,
+      884.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      388.0,
+      884.0,
+      1148.0,
+      1005.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Selection of the intrinsic mode function",
+    "page": 8,
+    "bbox": [
+      390.0,
+      1033.0,
+      865.0,
+      1059.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      388.0,
+      1072.0,
+      1150.0,
+      1192.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      388.0,
+      1192.0,
+      1154.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      388.0,
+      1335.0,
+      1155.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1108.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      402.0,
+      237.0,
+      1138.0,
+      1119.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 3. Representative empirical mode decomposition of a filtered EHG segment. The dataset-provided filtered EHG segment was decomposed into IMF1-IMF4 and a residual component. For each component, the time-domain waveform, PSD, and autocorrelation function are shown. The example illustrates the progression from faster local oscillations in the lower-order IMFs to slower variation in the higher-order IMFs and residual.",
+    "page": 9,
+    "bbox": [
+      389.0,
+      1125.0,
+      1156.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1154.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      388.0,
+      125.0,
+      1156.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      389.0,
+      197.0,
+      1156.0,
+      317.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      460.0,
+      339.0,
+      1094.0,
+      710.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 4. Average IMF1 PSD by class. Welch PSDs were estimated from IMF1 components extracted from fixed 3-minute filtered EHG segments using a Hann window of length 1024 samples with 50% overlap. For each recording, PSDs were averaged across segments and across the three EHG channels, and the resulting recording-level PSDs were averaged within each class. Term recordings are shown in blue and preterm recordings in red. The y-axis is log scaled and the frequency range is shown from 0 to 5 Hz. The curves show class-dependent spectral differences, with preterm recordings showing higher IMF1 power mainly in the lower frequency portion of the displayed range.",
+    "page": 10,
+    "bbox": [
+      388.0,
+      722.0,
+      1155.0,
+      939.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Feature extraction",
+    "page": 10,
+    "bbox": [
+      392.0,
+      999.0,
+      616.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      388.0,
+      1038.0,
+      1155.0,
+      1204.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      388.0,
+      1205.0,
+      1134.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      388.0,
+      125.0,
+      1131.0,
+      271.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Burst and peak features",
+    "page": 11,
+    "bbox": [
+      391.0,
+      296.0,
+      643.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      388.0,
+      332.0,
+      1133.0,
+      381.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      713.0,
+      403.0,
+      831.0,
+      430.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1125.0,
+      404.0,
+      1152.0,
+      428.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      389.0,
+      440.0,
+      1147.0,
+      489.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      608.0,
+      511.0,
+      935.0,
+      539.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1125.0,
+      512.0,
+      1152.0,
+      537.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      388.0,
+      548.0,
+      1133.0,
+      669.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      395.0,
+      690.0,
+      1149.0,
+      859.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 5. Representative peak and burst-like event detection on the selected IMF1 component. Detected peak-like events were identified from the IMF1 magnitude x[n]| and are marked at their corresponding locations on the IMF1 waveform. Dashed horizontal lines indicate the magnitude-based detection threshold, shown at ±Tpeak for visualization, and shaded regions indicate burst-like groups formed by temporally adjacent detected peaks.",
+    "page": 11,
+    "bbox": [
+      389.0,
+      867.0,
+      1153.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      390.0,
+      1039.0,
+      1156.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      695.0,
+      1102.0,
+      849.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1125.0,
+      1115.0,
+      1152.0,
+      1140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      418.0,
+      1157.0,
+      1119.0,
+      1205.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      642.0,
+      1224.0,
+      902.0,
+      1288.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1126.0,
+      1242.0,
+      1152.0,
+      1267.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      419.0,
+      1296.0,
+      985.0,
+      1321.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      659.0,
+      1334.0,
+      886.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1125.0,
+      1344.0,
+      1152.0,
+      1369.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      1100.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      388.0,
+      125.0,
+      1139.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      388.0,
+      172.0,
+      1127.0,
+      220.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      702.0,
+      244.0,
+      844.0,
+      269.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1125.0,
+      244.0,
+      1152.0,
+      269.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      419.0,
+      281.0,
+      721.0,
+      304.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      649.0,
+      320.0,
+      896.0,
+      387.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1126.0,
+      342.0,
+      1152.0,
+      367.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      419.0,
+      396.0,
+      727.0,
+      420.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      685.0,
+      435.0,
+      860.0,
+      482.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1126.0,
+      443.0,
+      1152.0,
+      468.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      389.0,
+      490.0,
+      1113.0,
+      536.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      389.0,
+      537.0,
+      1146.0,
+      610.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      626.0,
+      912.0,
+      692.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1116.0,
+      646.0,
+      1152.0,
+      672.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      418.0,
+      700.0,
+      1137.0,
+      725.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      694.0,
+      739.0,
+      852.0,
+      788.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1116.0,
+      754.0,
+      1152.0,
+      778.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      391.0,
+      794.0,
+      1149.0,
+      842.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      391.0,
+      843.0,
+      1149.0,
+      891.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      618.0,
+      909.0,
+      927.0,
+      973.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1116.0,
+      928.0,
+      1152.0,
+      953.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      389.0,
+      982.0,
+      1154.0,
+      1078.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      388.0,
+      1078.0,
+      1156.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Temporal energy features",
+    "page": 13,
+    "bbox": [
+      391.0,
+      125.0,
+      657.0,
+      149.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      388.0,
+      161.0,
+      1132.0,
+      306.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      389.0,
+      305.0,
+      1137.0,
+      352.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      578.0,
+      373.0,
+      963.0,
+      445.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      398.0,
+      1152.0,
+      423.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      389.0,
+      454.0,
+      1154.0,
+      501.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      607.0,
+      519.0,
+      936.0,
+      584.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      540.0,
+      1152.0,
+      565.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      417.0,
+      594.0,
+      1057.0,
+      618.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      418.0,
+      618.0,
+      1113.0,
+      643.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      619.0,
+      663.0,
+      926.0,
+      692.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      665.0,
+      1152.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      417.0,
+      700.0,
+      1109.0,
+      725.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      641.0,
+      742.0,
+      902.0,
+      806.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      762.0,
+      1152.0,
+      787.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      387.0,
+      814.0,
+      1088.0,
+      913.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Entropy features",
+    "page": 13,
+    "bbox": [
+      391.0,
+      937.0,
+      568.0,
+      961.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      388.0,
+      975.0,
+      1154.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      391.0,
+      1116.0,
+      1138.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      596.0,
+      1188.0,
+      946.0,
+      1215.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      1190.0,
+      1151.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      390.0,
+      1225.0,
+      1138.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      670.0,
+      1290.0,
+      875.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1115.0,
+      1310.0,
+      1152.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      419.0,
+      1365.0,
+      587.0,
+      1387.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      696.0,
+      140.0,
+      850.0,
+      191.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1115.0,
+      153.0,
+      1152.0,
+      178.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      198.0,
+      1150.0,
+      245.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      246.0,
+      1112.0,
+      294.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      644.0,
+      310.0,
+      900.0,
+      362.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1115.0,
+      323.0,
+      1152.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      367.0,
+      1155.0,
+      510.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      418.0,
+      511.0,
+      1017.0,
+      535.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      677.0,
+      554.0,
+      869.0,
+      617.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1116.0,
+      573.0,
+      1152.0,
+      598.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      391.0,
+      624.0,
+      1126.0,
+      671.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      673.0,
+      1154.0,
+      769.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Feature extraction parameter settings",
+    "page": 14,
+    "bbox": [
+      392.0,
+      797.0,
+      845.0,
+      823.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      834.0,
+      1155.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      389.0,
+      1027.0,
+      1145.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1. Feature extraction parameter settings. THK is the multiplier used in the robust peak-detection threshold; MD is the minimum distance between detected peaks; BT is the maximum inter-peak interval used to group adjacent peaks into the same burst-like event; and R is the multiplier applied to the within-segment population standard deviation to define the sample-entropy tolerance r = Rσ.",
+    "page": 14,
+    "bbox": [
+      388.0,
+      1165.0,
+      1156.0,
+      1284.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      494.0,
+      1285.0,
+      1057.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1100.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Classification models",
+    "page": 15,
+    "bbox": [
+      391.0,
+      121.0,
+      647.0,
+      148.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      388.0,
+      161.0,
+      1157.0,
+      307.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2. Classification model settings used in all experiments. Parameters not explicitly listed retained the defaults of the corresponding software implementation; the complete version-pinned computational environment is provided with the public code repository.",
+    "page": 15,
+    "bbox": [
+      388.0,
+      321.0,
+      1155.0,
+      417.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      405.0,
+      416.0,
+      1135.0,
+      807.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      388.0,
+      835.0,
+      1155.0,
+      979.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      389.0,
+      979.0,
+      1155.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      388.0,
+      1122.0,
+      1153.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Evaluation metrics",
+    "page": 15,
+    "bbox": [
+      392.0,
+      1271.0,
+      620.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      388.0,
+      1310.0,
+      1156.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      389.0,
+      124.0,
+      1154.0,
+      220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      389.0,
+      221.0,
+      1156.0,
+      340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      390.0,
+      342.0,
+      1156.0,
+      410.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      697.0,
+      439.0,
+      848.0,
+      468.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1115.0,
+      435.0,
+      1152.0,
+      459.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      389.0,
+      479.0,
+      1107.0,
+      549.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      389.0,
+      550.0,
+      1155.0,
+      718.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      391.0,
+      718.0,
+      1156.0,
+      790.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      390.0,
+      790.0,
+      1156.0,
+      886.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      610.0,
+      901.0,
+      936.0,
+      949.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1116.0,
+      914.0,
+      1152.0,
+      938.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      419.0,
+      957.0,
+      741.0,
+      980.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      556.0,
+      996.0,
+      988.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1116.0,
+      1010.0,
+      1152.0,
+      1033.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      419.0,
+      1053.0,
+      600.0,
+      1076.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      655.0,
+      1093.0,
+      889.0,
+      1142.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1116.0,
+      1106.0,
+      1151.0,
+      1130.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      419.0,
+      1150.0,
+      749.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      538.0,
+      1189.0,
+      1008.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1116.0,
+      1203.0,
+      1151.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      419.0,
+      1250.0,
+      539.0,
+      1274.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      508.0,
+      1291.0,
+      1035.0,
+      1346.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1115.0,
+      1304.0,
+      1151.0,
+      1328.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      67.0,
+      1472.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      390.0,
+      124.0,
+      1154.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      389.0,
+      197.0,
+      1149.0,
+      340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      389.0,
+      341.0,
+      1155.0,
+      509.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Results",
+    "page": 17,
+    "bbox": [
+      392.0,
+      543.0,
+      504.0,
+      572.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      389.0,
+      593.0,
+      1155.0,
+      736.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      388.0,
+      737.0,
+      1155.0,
+      906.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Comparison of intrinsic mode functions",
+    "page": 17,
+    "bbox": [
+      391.0,
+      933.0,
+      865.0,
+      960.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      389.0,
+      972.0,
+      1155.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      388.0,
+      1164.0,
+      1139.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      1100.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3. Recording-level comparison of the first four IMFs using fixed 3-minute segmentation. For each IMF, the classifier with the highest mean balanced accuracy was retained. Values are means across 30 complete repetition-level out-of-fold evaluations. Preterm delivery was treated as the positive class.",
+    "page": 18,
+    "bbox": [
+      388.0,
+      121.0,
+      1155.0,
+      217.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      398.0,
+      218.0,
+      1154.0,
+      330.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      387.0,
+      372.0,
+      1157.0,
+      517.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Annotated-interval classification results",
+    "page": 18,
+    "bbox": [
+      391.0,
+      545.0,
+      866.0,
+      571.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      388.0,
+      584.0,
+      1157.0,
+      730.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 4. Recording-level classification performance for annotated-interval segmentation using IMF1 features. Values are means across 30 complete repetition-level out-of-fold evaluations. Preterm delivery was treated as the positive class.",
+    "page": 18,
+    "bbox": [
+      388.0,
+      744.0,
+      1136.0,
+      839.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      401.0,
+      842.0,
+      1153.0,
+      1099.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Fixed 3-minute classification results",
+    "page": 18,
+    "bbox": [
+      391.0,
+      1158.0,
+      823.0,
+      1185.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      388.0,
+      1197.0,
+      1142.0,
+      1344.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 5. Recording-level performance for fixed 3-minute segmentation using EHG-only IMF1 features. Values are means across 30 complete repetition-level out-of-fold evaluations. Preterm delivery was treated as the positive class.",
+    "page": 19,
+    "bbox": [
+      389.0,
+      121.0,
+      1155.0,
+      193.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      400.0,
+      194.0,
+      1153.0,
+      451.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      402.0,
+      490.0,
+      777.0,
+      790.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      779.0,
+      492.0,
+      1148.0,
+      788.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 6. Recording-level ROC and precision-recall curves for fixed 3-minute IMF1 features. (A) Receiver operating characteristic curves. (B) Precision-recall curves. Curves were generated by pooling the repeated out-of-fold recording-level classification scores obtained across the 30 cross-validation repetitions. Within each repetition, each of the 26 recordings contributed exactly one out-of-fold score after maximum-score aggregation of its segment-level outputs. The pooled curves therefore contain repeated out-of-fold predictions of the same 26 recordings across different data partitions and should not be interpreted as representing 780 independent observations. The ROC-AUC and AP values associated with these pooled curves are descriptive quantities and are distinct from the mean repetition-level ROC-AUC and AP values reported in Table 5.",
+    "page": 19,
+    "bbox": [
+      387.0,
+      797.0,
+      1155.0,
+      1062.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Comparison with filtered time-domain features",
+    "page": 19,
+    "bbox": [
+      390.0,
+      1117.0,
+      954.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      388.0,
+      1155.0,
+      1157.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      388.0,
+      1276.0,
+      1157.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      388.0,
+      124.0,
+      1154.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      389.0,
+      173.0,
+      1156.0,
+      270.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 6. Recording-level classification performance for fixed 3-minute segmentation using matched filtered time-domain EHG features. Values are means across 30 complete repetition-level out-of-fold evaluations. Preterm delivery was treated as the positive class.",
+    "page": 20,
+    "bbox": [
+      388.0,
+      288.0,
+      1154.0,
+      383.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      400.0,
+      384.0,
+      1153.0,
+      642.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Overall comparison",
+    "page": 20,
+    "bbox": [
+      391.0,
+      697.0,
+      627.0,
+      725.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      388.0,
+      737.0,
+      1157.0,
+      858.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      388.0,
+      858.0,
+      1156.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 7. Exploratory best-observed recording-level performance across segmentation strategies and signal representations. For each configuration, the classifier with the highest mean balanced accuracy was retained. Values are means across 30 complete repetition-level out-of-fold evaluations. Model, representation, and segmentation comparisons were performed within the same dataset and should therefore be interpreted as exploratory. Preterm delivery was treated as the positive class.",
+    "page": 20,
+    "bbox": [
+      388.0,
+      1046.0,
+      1155.0,
+      1188.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      395.0,
+      1189.0,
+      1154.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      390.0,
+      1301.0,
+      1155.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      388.0,
+      125.0,
+      1136.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      388.0,
+      173.0,
+      1153.0,
+      363.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      388.0,
+      364.0,
+      1155.0,
+      437.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      399.0,
+      458.0,
+      753.0,
+      808.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      795.0,
+      458.0,
+      1146.0,
+      807.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 7. Majority-vote consensus recording-level confusion matrices for selected RF configurations. Rows correspond to true class labels and columns correspond to predicted labels. Each displayed prediction represents the majority-vote consensus across the 30 out-of-fold binary predictions available for that recording. Within each outer fold, segment-level classification scores were combined using maximum-score aggregation, and the MCC-optimized threshold selected from the corresponding fitted training-record scores was applied unchanged to the validation recording scores. Values in parentheses show the row-normalized fractions. These matrices provide descriptive consensus summaries across repeated cross-validation partitions and do not represent the repetition-level confusion matrices used to calculate the mean performance metrics in Table 7.",
+    "page": 21,
+    "bbox": [
+      388.0,
+      818.0,
+      1155.0,
+      1084.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Feature behavior at the recording level",
+    "page": 21,
+    "bbox": [
+      391.0,
+      1134.0,
+      860.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      389.0,
+      1173.0,
+      1155.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      389.0,
+      1341.0,
+      1146.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      389.0,
+      125.0,
+      1154.0,
+      292.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      389.0,
+      293.0,
+      1156.0,
+      459.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      388.0,
+      460.0,
+      1156.0,
+      698.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      390.0,
+      698.0,
+      1155.0,
+      747.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      674.0,
+      765.0,
+      870.0,
+      814.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1115.0,
+      774.0,
+      1152.0,
+      798.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      390.0,
+      822.0,
+      1155.0,
+      869.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      538.0,
+      889.0,
+      1006.0,
+      949.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1115.0,
+      909.0,
+      1152.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      387.0,
+      958.0,
+      1155.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Feature importance analysis",
+    "page": 22,
+    "bbox": [
+      391.0,
+      1060.0,
+      730.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      388.0,
+      1099.0,
+      1156.0,
+      1219.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      388.0,
+      1219.0,
+      1156.0,
+      1365.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      412.0,
+      311.0,
+      586.0,
+      459.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      592.0,
+      313.0,
+      775.0,
+      457.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      788.0,
+      312.0,
+      964.0,
+      462.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      983.0,
+      312.0,
+      1150.0,
+      458.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      411.0,
+      460.0,
+      586.0,
+      608.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      596.0,
+      461.0,
+      774.0,
+      608.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      784.0,
+      464.0,
+      964.0,
+      610.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      975.0,
+      461.0,
+      1149.0,
+      606.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      398.0,
+      609.0,
+      587.0,
+      754.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      588.0,
+      626.0,
+      775.0,
+      755.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      789.0,
+      611.0,
+      963.0,
+      755.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      977.0,
+      610.0,
+      1149.0,
+      755.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      405.0,
+      758.0,
+      587.0,
+      903.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      599.0,
+      758.0,
+      773.0,
+      903.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 8. Recording-level distributions of the 14 IMF1 feature types for term and preterm recordings in the fixed 3-minute analysis. Each feature was extracted independently from the three EHG channels, averaged across channels for visualization, and subsequently averaged across fixed 3-minute segments within each recording. The classifiers used the full 42-dimensional channel-specific feature vector, whereas this figure provides a compact feature-type-level summary for signal-level interpretation. Violin shapes show the distribution within each class, horizontal black lines indicate the median, and individual recording values are overlaid as points. Cohen's d denotes the standardized difference between preterm and term recording-level feature means, with positive values indicating higher values in preterm recordings. The effect sizes are descriptive and were not accompanied by feature-level hypothesis tests or multiplicity correction.",
+    "page": 23,
+    "bbox": [
+      388.0,
+      906.0,
+      1154.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      388.0,
+      125.0,
+      1155.0,
+      270.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      633.0,
+      292.0,
+      911.0,
+      320.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      1115.0,
+      292.0,
+      1152.0,
+      317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      390.0,
+      329.0,
+      1156.0,
+      424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      390.0,
+      425.0,
+      1155.0,
+      615.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      389.0,
+      615.0,
+      1156.0,
+      858.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Discussion",
+    "page": 24,
+    "bbox": [
+      392.0,
+      890.0,
+      546.0,
+      920.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Main findings",
+    "page": 24,
+    "bbox": [
+      391.0,
+      941.0,
+      561.0,
+      968.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      388.0,
+      980.0,
+      1156.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      388.0,
+      1148.0,
+      1156.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      1099.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      472.0,
+      120.0,
+      1071.0,
+      450.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig 9. Grouped permutation feature importance for the annotated-interval and fixed 3-minute IMF1 RF models. Importance is shown as the mean decrease in recording-level average precision (AP) after jointly permuting all features within each feature family across validation segment rows. Within each of the 30 cross-validation repetitions, baseline and permuted recording-level scores from the five outer validation folds were pooled to form complete 26-record out-of-fold sets before AP was calculated. One permutation was performed per feature family per outer fold in each repetition. Larger positive decreases indicate greater model dependence on the corresponding feature family, whereas values near zero indicate little change in recording-level AP after permutation.",
+    "page": 25,
+    "bbox": [
+      390.0,
+      459.0,
+      1157.0,
+      702.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Interpretation of IMF1-derived feature patterns",
+    "page": 25,
+    "bbox": [
+      390.0,
+      740.0,
+      965.0,
+      767.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      388.0,
+      779.0,
+      1154.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      389.0,
+      1066.0,
+      1147.0,
+      1185.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      387.0,
+      1186.0,
+      1155.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Contribution of EMD and selection of IMF1",
+    "page": 26,
+    "bbox": [
+      390.0,
+      122.0,
+      922.0,
+      148.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      161.0,
+      1156.0,
+      376.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      377.0,
+      1154.0,
+      520.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      521.0,
+      1155.0,
+      759.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      760.0,
+      1156.0,
+      974.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      975.0,
+      1157.0,
+      1097.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Effect of segmentation strategy",
+    "page": 26,
+    "bbox": [
+      392.0,
+      1123.0,
+      767.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      1162.0,
+      1154.0,
+      1282.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      388.0,
+      1283.0,
+      1158.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      67.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1155.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      125.0,
+      1147.0,
+      220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      221.0,
+      1155.0,
+      414.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methodological implications for future PTB risk assessment",
+    "page": 27,
+    "bbox": [
+      390.0,
+      441.0,
+      1106.0,
+      468.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      480.0,
+      1156.0,
+      698.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Model behavior",
+    "page": 27,
+    "bbox": [
+      392.0,
+      725.0,
+      585.0,
+      750.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      764.0,
+      1156.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      907.0,
+      1156.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methodological strengths",
+    "page": 27,
+    "bbox": [
+      391.0,
+      1248.0,
+      698.0,
+      1275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      388.0,
+      1286.0,
+      1155.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      389.0,
+      125.0,
+      1156.0,
+      318.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Limitations",
+    "page": 28,
+    "bbox": [
+      392.0,
+      345.0,
+      534.0,
+      370.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      389.0,
+      385.0,
+      1152.0,
+      576.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      389.0,
+      577.0,
+      1157.0,
+      698.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Future validation",
+    "page": 28,
+    "bbox": [
+      392.0,
+      725.0,
+      601.0,
+      750.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      389.0,
+      765.0,
+      1155.0,
+      957.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Conclusion",
+    "page": 28,
+    "bbox": [
+      392.0,
+      992.0,
+      554.0,
+      1021.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      388.0,
+      1041.0,
+      1156.0,
+      1232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      389.0,
+      1232.0,
+      1156.0,
+      1378.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      389.0,
+      125.0,
+      1072.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      388.0,
+      197.0,
+      1155.0,
+      367.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data availability",
+    "page": 29,
+    "bbox": [
+      391.0,
+      399.0,
+      631.0,
+      430.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      389.0,
+      449.0,
+      1155.0,
+      572.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 29,
+    "bbox": [
+      392.0,
+      605.0,
+      551.0,
+      635.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      423.0,
+      654.0,
+      1156.0,
+      749.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      766.0,
+      1153.0,
+      838.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      853.0,
+      1150.0,
+      901.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      917.0,
+      1132.0,
+      966.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      982.0,
+      1137.0,
+      1053.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      1069.0,
+      1153.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      423.0,
+      1133.0,
+      1104.0,
+      1204.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      1221.0,
+      1154.0,
+      1292.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      422.0,
+      1309.0,
+      1154.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      68.0,
+      1472.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      1099.0,
+      1473.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      125.0,
+      1131.0,
+      196.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      211.0,
+      1151.0,
+      307.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      324.0,
+      1137.0,
+      396.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      411.0,
+      1125.0,
+      484.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      499.0,
+      1150.0,
+      570.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      587.0,
+      1155.0,
+      659.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      674.0,
+      1155.0,
+      748.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      763.0,
+      1156.0,
+      859.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      874.0,
+      1120.0,
+      945.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      961.0,
+      1145.0,
+      1034.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      411.0,
+      1050.0,
+      1093.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      1137.0,
+      1135.0,
+      1209.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      412.0,
+      1224.0,
+      1150.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      123.0,
+      1153.0,
+      220.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      235.0,
+      1155.0,
+      309.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      324.0,
+      1155.0,
+      396.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      411.0,
+      411.0,
+      1155.0,
+      484.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      499.0,
+      1155.0,
+      595.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      611.0,
+      1128.0,
+      682.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      698.0,
+      1151.0,
+      794.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      810.0,
+      1153.0,
+      905.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      921.0,
+      1140.0,
+      1018.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      411.0,
+      1033.0,
+      1150.0,
+      1152.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      412.0,
+      1168.0,
+      1097.0,
+      1240.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      411.0,
+      1256.0,
+      1154.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      125.0,
+      1094.0,
+      173.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      188.0,
+      1153.0,
+      283.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      300.0,
+      1154.0,
+      372.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      387.0,
+      1154.0,
+      459.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      475.0,
+      1155.0,
+      547.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      413.0,
+      563.0,
+      1142.0,
+      635.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      650.0,
+      1154.0,
+      722.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      413.0,
+      738.0,
+      1154.0,
+      833.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      850.0,
+      1153.0,
+      922.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      412.0,
+      937.0,
+      1130.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      414.0,
+      1025.0,
+      1111.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      411.0,
+      1137.0,
+      1154.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      68.0,
+      1471.0,
+      216.0,
+      1497.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      1098.0,
+      1472.0,
+      1154.0,
+      1496.0
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "session_id": "e466cb2f-0f33-4ebf-bb1c-aae711806370",
+  "document_id": "doc-c355c97911bb7b02",
+  "pages": 72,
+  "initial_regions": 2995,
+  "final_regions": 2970,
+  "final_correction_burden": {
+    "added_regions": 2,
+    "deleted_regions": 27,
+    "existing_regions_materially_changed": 68,
+    "corrected_initial_regions": 95,
+    "corrected_region_rate": 0.03171953255425709,
+    "geometry_changed": 11,
+    "reclassified": 45,
+    "text_changed": 0,
+    "heading_level_changed": 58,
+    "reading_order_changed": 1,
+    "ignored_status_changed": 0,
+    "uncertainty_or_note_changed": 0
+  },
+  "interaction_effort": {
+    "all_logged_interactions": 434,
+    "committed_edit_events": 169,
+    "undo_count": 2,
+    "redo_count": 0,
+    "actions_by_type": {
+      "CHANGE_HEADING_LEVEL": 64,
+      "CHANGE_READING_ORDER": 1,
+      "CREATE_REGION": 2,
+      "DELETE_REGION": 28,
+      "FINALISE_SESSION": 1,
+      "MOVE_REGION": 24,
+      "OPEN_SESSION": 1,
+      "RECLASSIFY_REGION": 48,
+      "RESIZE_REGION": 2,
+      "SELECT_REGION": 170,
+      "UNDO": 2,
+      "VIEW_PAGE": 91
+    }
+  },
+  "timing": {
+    "active_seconds": 1390,
+    "active_minutes_per_page": 0.3217592592592593
+  },
+  "integrity": {
+    "replay_matches_final_state": true
+  }
+}

@@ -1,0 +1,893 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      435.0,
+      85.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Fine-tuning LLMs for Tourist Trajectory Prediction using Field Experiment Data *",
+    "page": 0,
+    "bbox": [
+      104.0,
+      193.0,
+      1119.0,
+      226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      393.0,
+      252.0,
+      835.0,
+      281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      379.0,
+      288.0,
+      842.0,
+      360.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      305.0,
+      434.0,
+      387.0,
+      456.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      123.0,
+      474.0,
+      569.0,
+      854.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Introduction",
+    "page": 0,
+    "bbox": [
+      278.0,
+      894.0,
+      414.0,
+      917.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      928.0,
+      589.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      1215.0,
+      590.0,
+      1351.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      434.0,
+      1120.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      633.0,
+      593.0,
+      1120.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      880.0,
+      1121.0,
+      1167.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      632.0,
+      1168.0,
+      1122.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "footnote",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      103.0,
+      1368.0,
+      589.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      111.0,
+      589.0,
+      222.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      223.0,
+      590.0,
+      532.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Related Work",
+    "page": 1,
+    "bbox": [
+      271.0,
+      555.0,
+      421.0,
+      580.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      625.0,
+      589.0,
+      735.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Tourist Behavior and Next POI Prediction",
+    "page": 1,
+    "bbox": [
+      103.0,
+      590.0,
+      505.0,
+      615.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      737.0,
+      588.0,
+      890.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      891.0,
+      589.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "LLMs for Behavior Prediction and Simulation",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1046.0,
+      541.0,
+      1070.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      1079.0,
+      590.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      110.0,
+      1118.0,
+      155.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      155.0,
+      1120.0,
+      353.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Methodology",
+    "page": 1,
+    "bbox": [
+      806.0,
+      372.0,
+      947.0,
+      398.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Problem Formulation",
+    "page": 1,
+    "bbox": [
+      634.0,
+      402.0,
+      846.0,
+      427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      431.0,
+      1118.0,
+      499.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      688.0,
+      504.0,
+      1062.0,
+      531.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      537.0,
+      1117.0,
+      582.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      689.0,
+      590.0,
+      1063.0,
+      653.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      661.0,
+      1120.0,
+      728.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Data Collection and Preprocessing",
+    "page": 1,
+    "bbox": [
+      633.0,
+      744.0,
+      964.0,
+      768.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      770.0,
+      1120.0,
+      970.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      631.0,
+      969.0,
+      1121.0,
+      1191.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Model Architecture and Text Representation",
+    "page": 1,
+    "bbox": [
+      633.0,
+      1206.0,
+      1059.0,
+      1229.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      631.0,
+      1233.0,
+      1121.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      212.0,
+      104.0,
+      479.0,
+      458.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: Distribution of POIs at Wakayama Castle Park",
+    "page": 2,
+    "bbox": [
+      118.0,
+      476.0,
+      572.0,
+      501.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      104.0,
+      521.0,
+      593.0,
+      739.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Text representation of a trajectory. Angle- bracketed tags are added to the vocabulary as special tokens; # lines are annotations.",
+    "page": 2,
+    "bbox": [
+      104.0,
+      757.0,
+      588.0,
+      825.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Training Procedure",
+    "page": 2,
+    "bbox": [
+      104.0,
+      870.0,
+      293.0,
+      893.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      900.0,
+      590.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Experiments",
+    "page": 2,
+    "bbox": [
+      278.0,
+      1276.0,
+      414.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Experimental Setup",
+    "page": 2,
+    "bbox": [
+      104.0,
+      1310.0,
+      298.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      102.0,
+      1342.0,
+      589.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      111.0,
+      1119.0,
+      153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      155.0,
+      1120.0,
+      373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      374.0,
+      1120.0,
+      463.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Prediction Performance",
+    "page": 2,
+    "bbox": [
+      634.0,
+      479.0,
+      865.0,
+      502.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      507.0,
+      1119.0,
+      618.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      618.0,
+      1118.0,
+      706.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      705.0,
+      1120.0,
+      925.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      632.0,
+      925.0,
+      1120.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Sequence Generation Quality",
+    "page": 2,
+    "bbox": [
+      634.0,
+      1096.0,
+      916.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      1124.0,
+      1120.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      631.0,
+      1299.0,
+      1121.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      132.0,
+      111.0,
+      559.0,
+      343.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: Next POI prediction accuracy comparison across methods.",
+    "page": 3,
+    "bbox": [
+      103.0,
+      365.0,
+      588.0,
+      408.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      133.0,
+      437.0,
+      559.0,
+      696.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      103.0,
+      810.0,
+      587.0,
+      856.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Conclusion",
+    "page": 3,
+    "bbox": [
+      286.0,
+      875.0,
+      407.0,
+      899.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: POI-Sequence-level evaluation metrics for Fine- tuned Llama-3.1.",
+    "page": 3,
+    "bbox": [
+      103.0,
+      723.0,
+      588.0,
+      768.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      905.0,
+      589.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1125.0,
+      589.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      102.0,
+      1343.0,
+      590.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      632.0,
+      111.0,
+      1121.0,
+      309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgments",
+    "page": 3,
+    "bbox": [
+      781.0,
+      333.0,
+      975.0,
+      357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      633.0,
+      364.0,
+      1118.0,
+      409.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 3,
+    "bbox": [
+      819.0,
+      432.0,
+      937.0,
+      456.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      635.0,
+      466.0,
+      1119.0,
+      684.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      633.0,
+      690.0,
+      1119.0,
+      823.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      636.0,
+      829.0,
+      1118.0,
+      916.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      636.0,
+      923.0,
+      1118.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      636.0,
+      1017.0,
+      1118.0,
+      1104.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      635.0,
+      1112.0,
+      1119.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      635.0,
+      1250.0,
+      1119.0,
+      1359.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      634.0,
+      1365.0,
+      1119.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      105.0,
+      112.0,
+      588.0,
+      219.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      106.0,
+      225.0,
+      586.0,
+      292.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      105.0,
+      296.0,
+      588.0,
+      362.0
+    ]
+  }
+]

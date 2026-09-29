@@ -1,0 +1,2147 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      433.0,
+      83.0,
+      1145.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Counterfactual, Per-Decision Bias Auditing for Automated Hiring: Localizing and Explaining Disparate Impact in Applicant Tracking Systems",
+    "page": 0,
+    "bbox": [
+      134.0,
+      100.0,
+      1092.0,
+      267.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      557.0,
+      297.0,
+      666.0,
+      322.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      510.0,
+      324.0,
+      715.0,
+      349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      436.0,
+      347.0,
+      787.0,
+      373.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      414.0,
+      605.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      1031.0,
+      603.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 0,
+    "bbox": [
+      267.0,
+      1120.0,
+      430.0,
+      1140.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      91.0,
+      1153.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      411.0,
+      1129.0,
+      506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      507.0,
+      1131.0,
+      745.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      746.0,
+      1131.0,
+      1176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      1176.0,
+      1131.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      100.0,
+      604.0,
+      458.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      113.0,
+      459.0,
+      428.0,
+      483.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      112.0,
+      489.0,
+      603.0,
+      584.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      113.0,
+      704.0,
+      603.0,
+      823.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      113.0,
+      585.0,
+      603.0,
+      704.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      112.0,
+      824.0,
+      604.0,
+      943.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      949.0,
+      603.0,
+      1045.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. BACKGROUND AND RELATED WORK",
+    "page": 1,
+    "bbox": [
+      172.0,
+      1063.0,
+      523.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Group fairness metrics",
+    "page": 1,
+    "bbox": [
+      92.0,
+      1097.0,
+      316.0,
+      1121.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      1128.0,
+      604.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      100.0,
+      1131.0,
+      269.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      698.0,
+      281.0,
+      917.0,
+      334.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      297.0,
+      1127.0,
+      319.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      680.0,
+      335.0,
+      1069.0,
+      363.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1101.0,
+      339.0,
+      1126.0,
+      360.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      678.0,
+      366.0,
+      932.0,
+      393.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1102.0,
+      369.0,
+      1126.0,
+      391.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      410.0,
+      1129.0,
+      533.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Individual and counterfactual fairness",
+    "page": 1,
+    "bbox": [
+      620.0,
+      556.0,
+      967.0,
+      579.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      589.0,
+      1130.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Explainability",
+    "page": 1,
+    "bbox": [
+      621.0,
+      1118.0,
+      768.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      1152.0,
+      1130.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE I",
+    "page": 2,
+    "bbox": [
+      313.0,
+      103.0,
+      383.0,
+      121.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "CAPABILITIES OF BIAS AUDITING APPROACHES. A PER-DECISION AUDIT UNDER CURRENT REGULATION NEEDS ALL SIX.",
+    "page": 2,
+    "bbox": [
+      99.0,
+      121.0,
+      596.0,
+      160.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      112.0,
+      173.0,
+      584.0,
+      339.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Fairness toolkits and hiring specific work",
+    "page": 2,
+    "bbox": [
+      93.0,
+      388.0,
+      472.0,
+      412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      421.0,
+      603.0,
+      854.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. PROBLEM FORMULATION",
+    "page": 2,
+    "bbox": [
+      217.0,
+      875.0,
+      480.0,
+      898.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      90.0,
+      912.0,
+      605.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      90.0,
+      1152.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IV. METHOD",
+    "page": 2,
+    "bbox": [
+      813.0,
+      100.0,
+      936.0,
+      123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. The counterfactual shift",
+    "page": 2,
+    "bbox": [
+      617.0,
+      130.0,
+      851.0,
+      154.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      638.0,
+      160.0,
+      1062.0,
+      185.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      760.0,
+      197.0,
+      988.0,
+      223.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1101.0,
+      198.0,
+      1128.0,
+      221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      615.0,
+      233.0,
+      1131.0,
+      401.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      670.0,
+      411.0,
+      1074.0,
+      440.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1101.0,
+      415.0,
+      1127.0,
+      437.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      450.0,
+      1129.0,
+      524.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Why not a ratio",
+    "page": 2,
+    "bbox": [
+      619.0,
+      535.0,
+      787.0,
+      558.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      616.0,
+      565.0,
+      1130.0,
+      901.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Explanations",
+    "page": 2,
+    "bbox": [
+      620.0,
+      913.0,
+      762.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      943.0,
+      1131.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Choice of the privileged baseline",
+    "page": 2,
+    "bbox": [
+      619.0,
+      1170.0,
+      928.0,
+      1194.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      616.0,
+      1200.0,
+      1131.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      90.0,
+      100.0,
+      604.0,
+      245.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. Faithfulness and the connection to group metrics",
+    "page": 3,
+    "bbox": [
+      93.0,
+      256.0,
+      531.0,
+      279.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      90.0,
+      286.0,
+      602.0,
+      429.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      230.0,
+      435.0,
+      464.0,
+      486.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      576.0,
+      442.0,
+      601.0,
+      462.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      92.0,
+      495.0,
+      603.0,
+      542.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      112.0,
+      548.0,
+      555.0,
+      598.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      576.0,
+      556.0,
+      600.0,
+      577.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      91.0,
+      610.0,
+      604.0,
+      898.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F. Properties",
+    "page": 3,
+    "bbox": [
+      94.0,
+      908.0,
+      210.0,
+      930.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      91.0,
+      937.0,
+      604.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      90.0,
+      1295.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      620.0,
+      89.0,
+      1129.0,
+      712.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "V. EXPERIMENTAL SETUP",
+    "page": 3,
+    "bbox": [
+      759.0,
+      760.0,
+      990.0,
+      782.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      793.0,
+      1129.0,
+      864.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Datasets",
+    "page": 3,
+    "bbox": [
+      618.0,
+      882.0,
+      725.0,
+      904.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      616.0,
+      912.0,
+      1131.0,
+      1224.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      1224.0,
+      1131.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      94.0,
+      99.0,
+      1128.0,
+      316.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1. The AIBF per-decision audit. The candidate is scored, the protected proxies are neutralized to a common privileged baseline, and the candidate is re-scored. The counterfactual shift ∆ yields a per-decision bias magnitude, a flag for decisions whose outcome the protected attributes changed, and a faithful explanation naming the responsible protected factors.",
+    "page": 4,
+    "bbox": [
+      92.0,
+      337.0,
+      1130.0,
+      394.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE II",
+    "page": 4,
+    "bbox": [
+      311.0,
+      438.0,
+      385.0,
+      454.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "COMPOSITION OF THE TWO DATASETS. BASE RATE IS THE RATE OF THE FAVORABLE OUTCOME FOR EACH GROUP BEFORE ANY MODEL IS APPLIED.",
+    "page": 4,
+    "bbox": [
+      92.0,
+      457.0,
+      602.0,
+      493.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      145.0,
+      508.0,
+      551.0,
+      656.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      697.0,
+      604.0,
+      767.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. The audited system",
+    "page": 4,
+    "bbox": [
+      94.0,
+      779.0,
+      286.0,
+      801.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      809.0,
+      604.0,
+      977.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Preprocessing",
+    "page": 4,
+    "bbox": [
+      94.0,
+      988.0,
+      244.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      1017.0,
+      604.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE III",
+    "page": 4,
+    "bbox": [
+      834.0,
+      438.0,
+      915.0,
+      454.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      91.0,
+      1391.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Metrics and baselines",
+    "page": 4,
+    "bbox": [
+      93.0,
+      1362.0,
+      311.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "AUDITED SYSTEMS ON THE TWO REAL DATASETS. DI IS THE DISPARATE IMPACT RATIO, WHERE VALUES BELOW 0.8O FAIL THE FOUR-FIFTHS RULE.",
+    "page": 4,
+    "bbox": [
+      616.0,
+      456.0,
+      1127.0,
+      493.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      634.0,
+      510.0,
+      1112.0,
+      585.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      616.0,
+      631.0,
+      1131.0,
+      871.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VI. RESULTS",
+    "page": 4,
+    "bbox": [
+      815.0,
+      886.0,
+      937.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      617.0,
+      917.0,
+      1130.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Faithfulness",
+    "page": 4,
+    "bbox": [
+      619.0,
+      1098.0,
+      753.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      617.0,
+      1128.0,
+      1131.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE IV",
+    "page": 5,
+    "bbox": [
+      307.0,
+      103.0,
+      388.0,
+      121.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "FAITHFULNESS. MEAN COUNTERFACTUAL SHIFT ∆ (SCORE POINTS) BY GROUP, AGAINST THE GROUP STATISTICAL PARITY DIFFERENCE (SPD).",
+    "page": 5,
+    "bbox": [
+      100.0,
+      121.0,
+      594.0,
+      160.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      143.0,
+      178.0,
+      555.0,
+      273.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      103.0,
+      306.0,
+      598.0,
+      536.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2. Faithfulness. The mean counterfactual shift is positive for the priv- ileged group and negative for the disadvantaged group across both datasets, and its magnitude tracks the measured statistical parity difference.",
+    "page": 5,
+    "bbox": [
+      92.0,
+      559.0,
+      603.0,
+      617.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Detection of biased decisions",
+    "page": 5,
+    "bbox": [
+      93.0,
+      662.0,
+      370.0,
+      684.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      697.0,
+      605.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE V",
+    "page": 5,
+    "bbox": [
+      836.0,
+      103.0,
+      911.0,
+      121.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "SUMMARY ACROSS BOTH DATASETS. DETECTION AUC IS FOR IDENTIFYING COUNTERFACTUAL FLIPS; THE COMPAS AUC IS HIGH BECAUSE COMPAS HAS A SINGLE PROTECTED ATTRIBUTE.",
+    "page": 5,
+    "bbox": [
+      638.0,
+      121.0,
+      1112.0,
+      177.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      670.0,
+      191.0,
+      1079.0,
+      338.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE VI",
+    "page": 5,
+    "bbox": [
+      834.0,
+      371.0,
+      915.0,
+      388.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "DETECTION OF COUNTERFACTUALLY BIASED DECISIONS ON ADULT.",
+    "page": 5,
+    "bbox": [
+      637.0,
+      389.0,
+      1109.0,
+      409.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      680.0,
+      424.0,
+      1070.0,
+      517.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      562.0,
+      1130.0,
+      659.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Targeted review efficiency",
+    "page": 5,
+    "bbox": [
+      619.0,
+      672.0,
+      866.0,
+      696.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      615.0,
+      701.0,
+      1132.0,
+      1254.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Mitigation ceiling and proxy leakage",
+    "page": 5,
+    "bbox": [
+      619.0,
+      1265.0,
+      961.0,
+      1289.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      1295.0,
+      1131.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      103.0,
+      105.0,
+      589.0,
+      384.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3. Detection of counterfactually biased decisions on Adult. AIBF reaches an area under the curve of 0.963 against 0.672 for the group membership baseline.",
+    "page": 6,
+    "bbox": [
+      92.0,
+      410.0,
+      603.0,
+      467.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      99.0,
+      490.0,
+      594.0,
+      765.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 4. Recall of harmed decisions versus review budget on Adult. AIBF directed review recovers most harmed candidates at a small budget.",
+    "page": 6,
+    "bbox": [
+      92.0,
+      790.0,
+      603.0,
+      831.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      91.0,
+      869.0,
+      604.0,
+      1206.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. A worked audit",
+    "page": 6,
+    "bbox": [
+      94.0,
+      1218.0,
+      256.0,
+      1241.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      91.0,
+      1248.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE VII",
+    "page": 6,
+    "bbox": [
+      832.0,
+      103.0,
+      917.0,
+      121.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "REVIEW BUDGET (PERCENT OF DECISIONS) NEEDED TO REACH A GIVEN RECALL OF HARMED DECISIONS ON ADULT.",
+    "page": 6,
+    "bbox": [
+      625.0,
+      121.0,
+      1122.0,
+      159.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      726.0,
+      175.0,
+      1023.0,
+      268.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      299.0,
+      1115.0,
+      533.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 5. Distribution of the AIBF bias magnitude ∆ on Adult, in score points. Flagged decisions concentrate at high magnitude, while the mass of unflagged decisions sits near zero, so a magnitude threshold cleanly separates them.",
+    "page": 6,
+    "bbox": [
+      617.0,
+      555.0,
+      1129.0,
+      613.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      653.0,
+      1130.0,
+      846.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VII. DISCUSSION",
+    "page": 6,
+    "bbox": [
+      794.0,
+      859.0,
+      955.0,
+      880.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      890.0,
+      1131.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      1320.0,
+      1131.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE VIII",
+    "page": 7,
+    "bbox": [
+      303.0,
+      103.0,
+      395.0,
+      121.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "AIBF AUDIT OF A REAL HARMED CANDIDATE (ADULT TEST SET). THE PROTECTED PROXIES SUBTRACT ENOUGH TO FLIP AN OTHERWISE FAVORABLE DECISION.",
+    "page": 7,
+    "bbox": [
+      106.0,
+      121.0,
+      591.0,
+      178.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      109.0,
+      193.0,
+      588.0,
+      368.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      413.0,
+      604.0,
+      486.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Deployment",
+    "page": 7,
+    "bbox": [
+      92.0,
+      502.0,
+      226.0,
+      524.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      90.0,
+      532.0,
+      605.0,
+      822.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Contestability",
+    "page": 7,
+    "bbox": [
+      94.0,
+      836.0,
+      241.0,
+      859.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      90.0,
+      866.0,
+      605.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. A lesson for fairness attribution",
+    "page": 7,
+    "bbox": [
+      93.0,
+      1170.0,
+      391.0,
+      1193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      1200.0,
+      605.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      617.0,
+      100.0,
+      1131.0,
+      221.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Recommendations for auditors",
+    "page": 7,
+    "bbox": [
+      619.0,
+      243.0,
+      907.0,
+      266.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      617.0,
+      277.0,
+      1130.0,
+      349.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      639.0,
+      355.0,
+      1130.0,
+      473.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      640.0,
+      475.0,
+      1130.0,
+      592.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      639.0,
+      594.0,
+      1130.0,
+      712.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      639.0,
+      714.0,
+      1130.0,
+      831.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      639.0,
+      833.0,
+      1131.0,
+      952.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. Generality beyond hiring",
+    "page": 7,
+    "bbox": [
+      620.0,
+      975.0,
+      859.0,
+      998.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      616.0,
+      1008.0,
+      1131.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "header",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      139.0,
+      101.0,
+      557.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      92.0,
+      151.0,
+      603.0,
+      199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      112.0,
+      208.0,
+      604.0,
+      400.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      113.0,
+      401.0,
+      603.0,
+      519.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      113.0,
+      520.0,
+      603.0,
+      638.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      113.0,
+      641.0,
+      603.0,
+      782.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      113.0,
+      783.0,
+      605.0,
+      880.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Threats to validity",
+    "page": 8,
+    "bbox": [
+      93.0,
+      920.0,
+      277.0,
+      943.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      92.0,
+      962.0,
+      604.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Reproducibility",
+    "page": 8,
+    "bbox": [
+      620.0,
+      101.0,
+      778.0,
+      125.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      133.0,
+      1130.0,
+      325.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IX. ETHICAL AND LEGAL CONSIDERATIONS",
+    "page": 8,
+    "bbox": [
+      680.0,
+      345.0,
+      1068.0,
+      367.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      379.0,
+      1130.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      763.0,
+      1131.0,
+      1123.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "X. CONCLUSION AND FUTURE WORK",
+    "page": 8,
+    "bbox": [
+      708.0,
+      1142.0,
+      1040.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      617.0,
+      1176.0,
+      1130.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      91.0,
+      100.0,
+      605.0,
+      413.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "REFERENCES",
+    "page": 9,
+    "bbox": [
+      289.0,
+      434.0,
+      408.0,
+      456.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      474.0,
+      601.0,
+      514.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      515.0,
+      602.0,
+      554.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      103.0,
+      556.0,
+      602.0,
+      634.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      635.0,
+      601.0,
+      714.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      716.0,
+      601.0,
+      794.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      796.0,
+      601.0,
+      855.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      857.0,
+      602.0,
+      955.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      958.0,
+      601.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      100.0,
+      1038.0,
+      602.0,
+      1116.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      1118.0,
+      602.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1198.0,
+      602.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      97.0,
+      1298.0,
+      602.0,
+      1376.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      96.0,
+      1378.0,
+      604.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      656.0,
+      103.0,
+      1127.0,
+      142.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      144.0,
+      1128.0,
+      241.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      243.0,
+      1128.0,
+      321.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      322.0,
+      1128.0,
+      401.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      402.0,
+      1128.0,
+      499.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      501.0,
+      1128.0,
+      600.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      602.0,
+      1128.0,
+      680.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      622.0,
+      682.0,
+      1128.0,
+      778.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      780.0,
+      1128.0,
+      879.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      881.0,
+      1128.0,
+      998.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      1000.0,
+      1128.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      1120.0,
+      1128.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      1199.0,
+      1128.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      623.0,
+      1259.0,
+      1129.0,
+      1318.0
+    ]
+  }
+]

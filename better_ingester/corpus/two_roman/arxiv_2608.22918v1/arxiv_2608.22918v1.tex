@@ -1,0 +1,612 @@
+
+%\newcommand{\CLASSINPUTbaselinestretch}{1.6}
+%\documentclass[12pt,draftclsnofoot,onecolumn]{IEEEtran}
+
+\documentclass[10pt,twocolumn]{IEEEtran}
+%\documentclass[10pt,conference]{IEEEtran}
+%\documentclass[journal,comsoc]{IEEEtran}
+
+
+
+\usepackage{amsmath,graphics,amssymb,epsfig,subfigure,color,cite}
+
+%\theoremstyle{plain}
+% \newtheoremstyle{mystyle}%                % Name
+%   {0mm}%                                     % Space above
+%   {0mm}%                                     % Space below
+%   {}%                                     % Body font
+%   {4mm}%                                     % Indent amount
+%   {\bfseries}%                            % Theorem head font
+%   {:}%                                    % Punctuation after theorem head
+%   { }%                                    % Space after theorem head, ' ', or \newline
+%   {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}%                                     % Theorem head spec (can be left empty, meaning `normal')
+% \theoremstyle{mystyle}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{arydshln}
+\usepackage{xcolor}
+\usepackage{enumerate}
+% \usepackage{algorithmic}
+% \usepackage{algorithm}
+%\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{makecell}
+%\usepackage[ruled,vlined]{algorithm2e}
+%\usepackage[cmintegrals]{newtxmath}
+\usepackage[right=0.625in, left=0.625in, top=0.7in, bottom=1.1in]{geometry}
+
+\usepackage{lipsum}
+\usepackage{capt-of}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage{algorithmic}
+\usepackage{algcompatible}
+\algblockdefx{WHILE}{ENDWHILE}[1]%
+  {\textbf{while }#1 \textbf{}}%
+  {\textbf{end}}
+\algblockdefx{FORP}{ENDFORP}[1]%
+  {\textbf{for }#1 \textbf{do in parallel}}%
+  {\textbf{end}}
+\algblockdefx{FOR}{ENDFOR}[1]%
+  {\textbf{for }#1 \textbf{do}}%
+  {\textbf{end}}
+% \algblockdefx{IF}{ENDIF}[1]%
+%   {\textbf{if }#1 \textbf{then}}%
+%   {\textbf{end}}
+\algblockdefx{IF}{ENDIF}[1]%
+  {\textbf{if }#1 \textbf{}}%
+  {\textbf{end}} %{}\algnotext{ENDIF}
+\algblockdefx{ELSIF}{ENDIF}[1]%
+  {\textbf{else if }#1 }%
+  {\textbf{end}}%\algnotext{ENDIF}
+\algnewcommand\algorithmicprocedure{\textbf{function}}
+\algnewcommand\FUNC{\item[\algorithmicprocedure]}%
+\algnewcommand\algorithmicendprocedure{\textbf{end function}}
+\algnewcommand\ENDFUNC{\item[\algorithmicendprocedure]}%
+ \usepackage{setspace}
+\let\Algorithm\algorithm
+\renewcommand\algorithm[1][]{\Algorithm[#1]\setstretch{1.4}}
+
+%\usepackage[caption=false]{subfig}
+%\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\usepackage{epstopdf}
+%\usepackage{authblk}
+%\usepackage{graphics,amssymb,color,amsthm}
+\usepackage{bbm}
+\usepackage{bigints}
+\usepackage{adjustbox}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{rem}{Remark}
+\usepackage{hhline}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\floatname{algorithm}{Algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage{enumitem}
+%\setlength\arraycolsep{2pt}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\makeatletter
+\newcommand{\vast}{\bBigg@{4.5}}
+\newcommand{\Vast}{\bBigg@{7.5}}
+\makeatother
+
+\usepackage{tabularray}
+\usepackage{xcolor}
+
+\definecolor{rowA}{RGB}{255,255,255}
+\definecolor{rowB}{RGB}{255,255,255}
+\definecolor{rowC}{RGB}{255,255,255}
+\definecolor{headercolor}{RGB}{245,245,245}
+\newcommand\tred[1]{\color{red}#1}
+\newcommand\tblue[1]{\color{red}#1}
+
+% ComMag guideline: https://www.comsoc.org/publications/magazines/ieee-communications-magazine/policies-guidelines
+
+% limited to 7 pages, 15 references, # of figure+table is 6
+
+
+\begin{document}
+\title{\fontsize{21}{28}\selectfont Rethinking the Foundations of Two-Sided AI Models for 6G
+}
+%Rethinking the Foundational Assumptions of Two-Sided AI Models for 6G
+
+\author{Yongjeong Oh, Zihan Chen, Timothy J. O’Shea, Junyong Shin, Jinho Choi, Yo-Seb Jeon, and Jihong Park
+        \thanks{Y. Oh, Z. Chen, and J. Park are with Singapore University of Technology and Design, Singapore 487372 (email: \{yongjeong\_oh, zihan\_chen, jihong\_park\}@sutd.edu.sg).} 
+        \thanks{T. J. O’Shea is with DeepSig Inc., Arlington, VA 22203, USA (email: tim@deepsig.ai)} 
+        \thanks{J. Shin and Y.-S. Jeon are with POSTECH, Pohang, Gyeongbuk 37673, Republic of Korea (email: \{sjyong, yoseb.jeon\}@postech.ac.kr).} 
+        \thanks{J. Choi is with the University of Adelaide, SA 5005, Australia (email: jinho.choi@adelaide.edu.au).} 
+        \thanks{(Corresponding authors: J. Park, Y.-S. Jeon).}
+        \vspace{1mm}}
+	\vspace{-2mm} 
+
+
+\maketitle
+
+\begin{abstract} % up to 200 words
+For next-generation air interfaces, two-sided artificial intelligence (AI) models have received growing attention, with AI models deployed at both the transmitter and receiver for efficient channel feedback and data communication. However, their practical deployment is complicated by assumptions commonly made in existing studies, including isolation from legacy users, training under predefined channel conditions, and gradient-based fine-tuning requiring substantial cross-vendor communication. This article revisits these assumptions and presents practical alternatives. First, for legacy coexistence, we integrate two-sided model processing into the 5G New Radio (NR) protocol stack and validate its operation alongside conventional NR on a real-world testbed. 
+Second, instead of training under a massive number of predefined channel conditions, we construct a compact model table by jointly optimizing two-sided models with trainable surrogate channels, and select the best model according to the current channel condition to enable channel adaptation with high task performance and low training/storage overhead. 
+%Second, instead of relying on predefined channel conditions during training, we jointly optimize two-sided models with trainable surrogate channels (SCs). We then construct a table with the resulting model-SC pairs and select the best pair according to the current channel condition to enable channel adaptation with high task performance and low training/storage overhead. 
+Finally, unlike existing fine-tuning that exchanges large gradient vectors containing potentially private model information, we present gradient-free zeroth-order fine-tuning that requires only scalar feedback, facilitating multi-vendor interoperability. Together, these approaches advance the practical deployment of two-sided AI models while highlighting key open challenges.
+%For next-generation air interfaces, two-sided artificial intelligence (AI) models have received growing attention, with AI models deployed at both the transmitter and receiver for efficient channel feedback and data communication. However, their practical deployment is complicated by assumptions commonly made in existing studies, including isolation from legacy users, training under predefined channel conditions, and gradient-based fine-tuning requiring substantial cross-vendor communication. This article revisits these assumptions and presents practical alternatives. For legacy coexistence, we integrate two-sided model processing into the 5G New Radio (NR) protocol stack and validate its operation alongside conventional NR on a real-world testbed. Next, instead of training under a massive number of predefined channel conditions, we construct a model table by jointly optimizing two-sided models with trainable surrogate channels and select the best model according to the current channel condition for low-complexity channel adaptation. Lastly, unlike existing fine-tuning that exchanges large gradient vectors containing potentially private model information, we present gradient-free zeroth-order fine-tuning that requires only scalar feedback, facilitating multi-vendor interoperability. Together, these approaches advance the practical deployment of two-sided AI models while highlighting key open challenges.
+\end{abstract}
+
+ %The evolution toward next-generation wireless networks has intensified the need for more intelligent and adaptive air interfaces, bringing the integration of artificial intelligence (AI) into the transmitter and receiver
+% The evolution toward next-generation wireless networks has intensified the need for more intelligent and adaptive air interfaces. Artificial intelligence (AI) has emerged as a promising tool for this transition, and its integration into the transmitter and receiver has become a central topic in both academia and industry \cite{11320975,3gpp_tr38843_rel19}. Over the past decade, academia has extensively explored this integration, giving rise to various research areas, including neural transceivers, deep joint source--channel coding, and task-oriented communication \cite{X}. Despite their different objectives and system models, these research areas share a common principle: the transmitter- and receiver-side AI models are jointly trained, and the resulting tight coupling improves communication efficiency, robustness to channel impairments, and downstream task performance over conventional communication systems. and the resulting tight coupling between the models improves communication efficiency, robustness to channel impairments, and downstream task performance compared with conventional communication systems.
+
+%jointly trained or operated transmitter- and receiver-side
+\section{Introduction}\label{Sec:Intro}
+
+As wireless networks advance toward more intelligent and adaptive air interfaces, artificial intelligence (AI) is being integrated ever more deeply into both the transmitter and the receiver \cite{11320975}. This trend has spurred several research directions, including neural transceivers, deep joint source-channel coding, and task-oriented semantic communication \cite{11316151,DeepJSCC_Q}. %10183789
+Although these directions differ in their objectives and system settings, many rely on a common architecture in which transmitter-side and receiver-side AI models are designed to operate jointly. The 3rd Generation Partnership Project (3GPP) refers to such paired models as \textit{two-sided AI models}, particularly when the models are deployed across the user equipment (UE) and the next-generation Node B (gNB) \cite{3gpp_tr38843_rel19}. 
+
+While early academic research on two-sided models primarily focused on demonstrating performance gains under controlled training and evaluation settings, recent industry and standardization efforts have begun exploring their use for practical use cases such as channel state information (CSI) feedback \cite{3gpp_tr38843_rel19,9970357}. In translating these academic advances into real-world deployments, such efforts have naturally adopted the methodological foundations established in the literature. These foundations typically assume that a two-sided model operates in isolation from legacy UEs, that training is performed under predefined channel conditions, and that the transmitter and receiver models are fine-tuned through backpropagation. 
+%as a standalone communication system, that the transmitter and receiver models are jointly trained through backpropagation, and that training is performed under predefined channel conditions.
+%These foundations typically assume that a two-sided model operates as a standalone communication system, jointly updated transmitter and receiver models through end-to-end backpropagation, and training under pre-defined channel conditions. 
+Although these standard assumptions simplify model development and help isolate algorithmic gains, they merely reflect specific design choices rather than intrinsic or necessary properties of two-sided models.
+
+% and private training data
+When carried into real-world deployments, these inherited foundations give rise to significant practical challenges. Isolation from legacy UEs does not account for coexistence with conventional radio access technologies (RATs). Training under prescribed channel conditions creates a trade-off between specialization and generalization in channel adaptation, as maintaining channel-specific models increases training and storage costs, whereas a single model trained across diverse conditions compromises site-specific performance. Gradient-based fine-tuning becomes difficult when the UE-side and gNB-side models are developed by different vendors, as exchanging model parameters or gradients risks exposing proprietary model information while adding communication and memory overhead. 
+
+These observations motivate a fundamental rethinking of the foundations of two-sided AI models. From this perspective, this article revisits the prevailing assumptions and discusses practical alternatives for coexistence, channel adaptation, and model updates. Specifically, we examine (i) how two-sided models can coexist with legacy 5G New Radio (NR) systems, (ii) how they can adapt to diverse channel conditions without relying on channel-specific training, and (iii) how transmitter-side and receiver-side models can be updated across vendors without gradient backpropagation. Finally, we discuss open research challenges and future directions toward practical two-sided AI models for next-generation wireless networks. 
+
+
+% This term can be regarded as a deployment-oriented concept that encompasses various paired-AI-model approaches developed in the academic research areas. 
+
+% Guided by the concept of two-sided models, industry and standardization bodies have presented concrete applications, such as channel state information (CSI) feedback, while addressing practical deployment-oriented challenges, including data sharing, model transfer, and inter-vendor collaboration. 
+
+%Overall, the development of two-sided models has drawn on technical advances and research achievements established in academia, while also incorporating practical advances achieved through industry and standardization efforts. 
+
+%This term is not intended to replace the concepts established in academia; rather, it can be regarded as a deployment-oriented concept that encompasses the various paired-AI-model approaches developed across the research areas. For example, task-oriented communication and two-sided models overlap in scope but are not equivalent, as the former can be realized using a one-sided model. 
+
+
+
+%The term can be understood not as a replacement for established academic research areas, but as a deployment-oriented concept encompassing several approaches developed in these areas that rely on paired AI models. 
+
+%because several foundational assumptions underlying their training and operation conflict with practical air-interface constraints. 
+%that call for rethinking the foundational assumptions underlying their training and operation. 
+
+% and consolidated them into the concept of two-sided AI models
+% Industry and standardization bodies drew on various paired-AI-model approaches developed in academia and, in doing so, also inherited the foundational assumptions underlying their training and operation. For example, a two-sided model is often evaluated in isolation, as if it constituted a standalone air interface. However, as shown by the transition from 4G to 5G, a new air interface rarely replaces the existing one immediately. Instead, it must coexist with legacy systems to ensure backward compatibility. A similar gap between assumption and practice arises in model training. Two-sided models are typically assumed to be trained end-to-end through conventional joint-training methods. In practice, however, the two models can be developed by different vendors that are unwilling to disclose their proprietary models or gradients. Moreover, backpropagation requires the UE-side vendor to retain intermediate activations until the corresponding gradients are returned, resulting in prolonged use of substantial memory resources. Existing training methods further assume that models are optimized for predefined channel conditions. However, because wireless channels are highly dynamic, models developed under this assumption often face a trade-off between specialization and generalization. Channel-specific models can increase training and storage requirements, whereas broadly robust models may compromise downstream task performance. 
+%This leaves open how two-sided models can rapidly adapt to changing channels without repeated retraining, excessive model storage, or loss of task performance.
+
+
+%Existing training methods further assume that models are optimized for predefined channel conditions. Given the diversity of wireless channels, channel-specific models can incur substantial training and storage overhead, while broadly robust models may degrade downstream task performance.
+
+% However, since wireless channels are highly diverse, covering them can incur substantial training and storage overhead while potentially degrading downstream task performance. 
+
+% vary in signal-to-noise ratio, fading statistics, and available bandwidth, and covering such diversity requires either many channel-specific models or a single heavily robust one, incurring substantial training or storage overhead while degrading downstream task performance.
+
+% Channel variation 
+
+
+%Moreover, the UE-side vendor must retain intermediate activations until the gradients are returned, resulting in prolonged use of substantial memory resources. 
+
+
+
+% Despite these advances across academia and industry/standardization, the practical deployment of two-sided models still faces three core concerns, as illustrated in Fig.~\ref{fig:overview}. Resolving these concerns calls for rethinking the foundational assumptions underlying the training and operation of two-sided models. 
+% Foremost among these concerns is coexistence: two-sided models are unlikely to operate as a standalone air interface; rather, they run alongside legacy fifth-generation (5G) New Radio (NR) for backward compatibility. Contrary to this expected deployment setting, most existing studies have evaluated two-sided models in isolation from the conventional NR. 
+% Another concern arises from inter-vendor collaboration: existing training methods typically rely on end-to-end backpropagation, which requires vendors to share their models or exchange intermediate gradients. 
+% Such requirements are often impractical because vendors are unwilling to expose their proprietary model architectures, parameters, or gradients to one another. Moreover, the UE-side vendor must retain intermediate activations until the gradients are returned, resulting in prolonged use of substantial memory resources. 
+% A further concern relates to channel adaptation: even after a model has been successfully integrated and trained, it should rapidly adapt to dynamic wireless channels. However, since channel conditions are highly diverse, existing training methods that optimize models for specific conditions can incur substantial training or storage overhead while potentially degrading downstream performance. 
+
+%Addressing this coexistence concern requires compatibility across the entire protocol stack, from the physical layer up to the higher layers. However, owing to the substantial implementation complexity of full-stack integration, empirical evidence under practical settings has been lacking. 
+%Another practical issue arises from inter-vendor collaboration: current training procedures for two-sided models typically rely on end-to-end backpropagation, assuming that vendors can readily access models developed by others or exchange intermediate gradients while keeping the models undisclosed. In practice, however, vendors are often unwilling to expose their proprietary model architectures, parameters, or gradients to one another. Moreover, for backpropagation, the UE-side vendor must retain intermediate activations while awaiting intermediate gradients from the other vendor, resulting in prolonged occupation of substantial memory resources. 
+
+\begin{figure*}[t]
+    \centering
+    {\epsfig{file=Figures/Fig1.eps, width=18cm}}\vspace{-2mm}
+    %\includegraphics[width=18cm]{Figures/Fig1.jpg}\vspace{-2mm}
+    \caption{Overview of the foundational assumptions, deployment challenges, and corresponding practical alternatives for legacy coexistence, channel adaptation, and multi-vendor interoperability.}\label{fig:overview}\vspace{-3mm}
+\end{figure*}
+
+%However, the foundational assumptions, standalone operation, backpropagation-based model updates, and training under given channel condition, make such constraints difficult to address. 
+
+%Taken together, these gaps suggest that what limits the practical deployment of two-sided models is not the absence of technical advances, but the foundational assumptions under which they are trained and operated. 
+
+% Taken together, these gaps suggest that the principal obstacle to practical deployment of two-sided models lies not in the absence of technical advances, but in the foundational assumptions under which models are trained and operated. This article therefore revisits those assumptions and offers a new lens on how two-sided models can be integrated, updated, and adapted for practical wireless systems. Specifically, beyond treating a two-sided model as a replacement for the existing air interface, we examine whether it can coexist with conventional 5G New Radio (NR). We then explore a training method that does not rely on backpropagation between different vendors. We also reconsider the practice of fixing the channel conditions during training, and present an alternative training method that achieves both low training/storage overhead and high task performance.
+% %, making it well suited to channel adaptation. 
+% Finally, we map out the remaining open issues and outline promising research directions toward the practical deployment of two-sided models. 
+
+% channel adaptation table-based fixed channel trainable channel
+% providing low training and storage overhead while improving task performance.
+
+% Finally, we map out the remaining open issues and future research directions for next-generation wireless networks. 
+
+
+%We further consider how the paired models can be updated when the two endpoints are developed independently. 
+
+% Rather than 
+
+
+
+% Therefore, we revisit these assumptions and offers a new lens on how two-sided models can be integrated, updated, and adapted for practical wireless systems. 
+
+% As discussed above, the current foundational assumptions make such constraints difficult to address. Therefore, we revisit these assumptions and offers a new lens on how two-sided models can be integrated, updated, and adapted for practical wireless systems. 
+
+
+% In this article, we revisit the foundational assumptions underlying two-sided models and offer a new lens on how they can be integrated, updated, and adapted for practical wireless systems. 
+
+
+% From the coexistence perspective, rather than replacing the existing air interface, we integrate a two-sided model into a 5G NR testbed built on radio-frequency (RF) hardware and a full protocol stack, demonstrating its coexistence with NR. From the inter-vendor collaboration perspective, we replace end-to-end backpropagation-based training with a forward-only fine-tuning framework that facilitates model updates without exchanging models or gradients while avoiding the retention of intermediate activations. From the channel adaptation perspective, instead of training models for given channel conditions, we explore an adaptive model selection (AMS) framework based on jointly trained model–surrogate-channel (SC) pairs, providing low training and storage overhead while improving task performance. Finally, we map out the remaining open issues and future research directions for next-generation wireless networks. 
+
+
+
+
+%Foundational Assumptions and Their Limitations
+%Foundational Assumptions in Two-Sided Models
+\section{From Foundational Assumptions to Practical Limitations}\label{Sec:Question}
+
+In this section, we examine the common foundational assumptions underlying two-sided models and their limitations in practical deployments, with respect to legacy coexistence, channel adaptation, and multi-vendor interoperability.
+
+% how the inherited foundational assumptions can limit practical deployment. Since their limitations become apparent when viewed from the coexistence, inter-vendor collaboration, and channel adaptation perspectives, we examine each perspective in turn. 
+
+%Their limitations become apparent when two-sided models must coexist with an existing air interface, be developed and updated by different vendors, and adapt to dynamic channels. We examine each of these challenges in turn
+
+% Their limitations become apparent when two-sided models must coexist with an existing air interface, be developed and updated by different vendors, and adapt to dynamic channels. 
+
+% In this section, we take a closer look at the foundational assumptions of two-sided models in light of the practical conditions under which they are deployed, that is, within an existing air interface, across different vendors, and over dynamic channels.  These conditions give rise to the coexistence, inter-vendor collaboration, and channel adaptation perspectives.
+
+%The transition from 4G to 5G shows that a new air interface is rarely introduced through immediate replacement; instead, it must coexist with legacy systems to ensure backward compatibility with existing infrastructure. Two-sided models are expected to follow the same path, operating alongside conventional 5G NR. However, most existing studies have designed two-sided models in isolation, under the implicit foundational assumption that they operate as a standalone air interface. 
+\vspace{1mm}
+{\bf Legacy Coexistence:} 
+Two-sided models are often studied under the assumption that all participating UEs support the same AI-native air interface. 
+This assumption conflicts with the emerging 6G deployment direction, in which AI-native 6G operation must coexist with legacy 5G NR, for example through Multi-RAT Spectrum Sharing (MRSS) \cite{ngmn2026architecture}. Moving beyond this assumption therefore requires validating two-sided models in a practical coexistence scenario, where two-sided and conventional NR UEs operate simultaneously. Such validation should demonstrate full-stack compatibility, from physical-layer (PHY) processing to higher-layer procedures, while preserving the performance advantages of two-sided models under coexistence.
+
+% Despite 6G being expected to be introduced gradually while continuing to support existing services \cite{ngmn2026architecture}, two-sided models are often assumed to operate as standalone systems. Practical deployment, however, requires coexistence with legacy radio access technologies, including through Multi-RAT Spectrum Sharing (MRSS). Bridging this gap requires the two-sided model to be integrated into a practical transceiver and operate consistently across the full protocol stack, from physical-layer processing to higher-layer procedures. 
+
+% In particular, the gNB must identify and serve UEs capable of supporting the two-sided model without disturbing conventional NR operation for legacy UEs.
+
+% accommodate both legacy and two-sided-model-capable UEs. This calls for the gNB to identify whether each UE is two-sided-model-capable and then serve capable UEs using the two-sided model without disrupting conventional NR processing for legacy UEs. 
+
+
+
+
+
+% Existing studies on two-sided models have largely evaluated them in isolation from the current air interface. It thus remains unclear whether two-sided models can operate alongside conventional 5G NR. 
+% Addressing this concern requires compatibility across the full protocol stack, including physical-layer procedures such as channel estimation, higher-layer procedures such as session establishment, and IP-level applications. In addition, as AI-capable and conventional 5G UEs may share the same spectrum, coexistence relies on multi-radio access technology spectrum sharing (MRSS), in which the gNB should serve both types of UEs in a capability-aware manner. Accounting for all of these aspects requires embedding a two-sided model into a real hardware transceiver and validating its operation across the full protocol stack. Such a demonstration is technically demanding and has rarely been reported; however, it is a critical step for establishing practical deployment. 
+
+% , which has rarely been demonstrated; however, it is a critical step for addressing the coexistence concern. 
+
+%Implementing all of these aspects on real hardware, rather than in idealized simulations, is challenging and has rarely been demonstrated; however, it is a critical step for addressing the coexistence concern. 
+
+% However, owing to the substantial implementation complexity of full-stack integration, empirical evidence under practical settings has been lacking. 
+
+
+% \textcolor{red}{Example; 4G to 5G} Two-sided models are expected to operate together with legacy 5G NR operations for compatibility with existing infrastructure. Demonstrating this coexistence feasibility, however, is not straightforward. A two-sided model needs to be embedded into a real hardware 5G transceiver and behave correctly across the entire protocol stack, from the physical layer up to the higher-layer operations, such as channel estimation, session establishment, and Internet protocol (IP)-level applications. Furthermore, as AI-capable and conventional 5G UEs may share the same spectrum, coexistence relies on multi-radio access technology spectrum sharing (MRSS), in which the gNB should serve both types of UEs in a capability-aware manner. Implementing all of these aspects on real hardware, rather than in idealized simulations, is challenging and has rarely been demonstrated; however, it is a critical step for practical deployment of two-sided models. 
+%This motivates the first feasibility question. 
+
+\begin{figure*}[t]
+    \centering
+    {\epsfig{file=Figures/Fig2.eps, width=17.5cm}}\vspace{-2mm}
+    %\includegraphics[width=17.5cm]{Figures/Fig2.jpg}\vspace{-2mm}
+    \caption{Integration of the two-sided model into the NR protocol stack, demonstrated through a real-world testbed, along with its performance evaluation for uplink data communication.}\label{fig:arc}\vspace{-3mm}
+\end{figure*}
+
+
+
+
+%to support diverse channels
+\vspace{1mm}
+{\bf Channel Adaptation:} 
+For two-sided models, adapting to varying channel conditions is a key aspect of AI model life cycle management (LCM) \cite{3gpp_tr38843_rel19}. Existing methods typically realize such adaptation by incorporating channel conditions into model training \cite{DeepJSCC_Q,10015684}. 
+One representative approach is \emph{one-model-fits-one}, where a separate model is trained for each channel condition. Multiple models are prepared in advance, and adaptation is performed by selecting the model best matched to the current channel condition \cite{DeepJSCC_Q}. This approach provides strong channel-specific performance but requires extensive training and model storage to cover diverse channel conditions, limiting its practicality for resource-constrained devices. Another approach is \emph{one-model-fits-all}, where a single model is jointly trained across multiple channel conditions, such as different signal-to-noise ratios (SNRs) \cite{10015684}. Although this approach reduces storage overhead by using a single generalized model, it requires more extensive training and typically sacrifices performance compared with channel-specific models. Both approaches therefore entail substantial deployment tradeoffs, and neither offers a practical solution for channel adaptation.
+%In particular, both approaches does not guarantee the performa for unseen channel conditions during training. 
+
+
+%Training under predefined channel conditions is a common assumption, and creates a trade-off between specialization and generalization. A specialized design prepares multiple channel-specific models in advance, and selects the model that best matches the current channel. A generalized design uses a single model across diverse channel conditions. The former achieves site-specific performance but incurs substantial training and storage overhead, whereas the latter reduces this overhead at the cost of performance. A practical compromise between specialization and generalization is to train a small set of models, each covering a subset of channel conditions. However, some performance degradation is inevitable because each model still needs to generalize across multiple channel conditions. Overcoming this trade-off calls for rethinking how two-sided models can be trained without being tied to predefined channel conditions and adapted to diverse channels. 
+
+
+% These limitations call for a more balanced solution that trains a small set of models, each made robust over a subset of channel conditions. Nevertheless, since each model still has to handle a range of conditions, some performance degradation is inevitable. Overall, all these approaches train two-sided models under given channel conditions, and this common practice is precisely what needs to be rethought. 
+
+
+
+
+% The specialized design achieves site-specific performance but incurs substantial training and storage overhead, whereas the generalized design reduces this overhead at the cost of performance. 
+
+% Training under predefined channel conditions is a common assumption underlying two-sided models. However, this training creates 
+
+% a trade-off between specialization and generalization 
+
+% wireless channels are highly dynamic, 
+
+% . Maintaining multiple channel-specific models, each trained for a particular channel condition, requires substantial training and storage overhead. In contrast, using a single generalized model trained various channel conditions 
+
+
+% Wireless channels are highly dynamic, varying across signal-to-noise ratio (SNR), fading statistics, and available bandwidth. To accommodate such dynamics, a straightforward approach is to fine-tune the two-sided model whenever the channel changes. However, since data transmission is suspended during fine-tuning, the effective throughput inevitably decreases, and if the channel coherence time is shorter than the fine-tuning time, it becomes inapplicable. To rapidly adapt to diverse channels, one can consider preparing multiple channel-specific models in advance, each trained for a particular channel condition \cite{NECST,DeepJSCC_Q}. However, since real-world channels are highly diverse, covering all of them requires a large number of models, incurring prohibitive storage overhead. Another approach is robust training, which trains a single model to operate across many channel conditions \cite{DeepJSCC_Analog_1_1}. However, covering such a wide range of channels requires excessive training and often degrades downstream task performance. These limitations call for a more balanced solution that trains a small set of models, each made robust over a subset of channel conditions. Nevertheless, since each model still has to handle a range of conditions, some performance degradation is inevitable. Overall, all these approaches train two-sided models under given channel conditions, and this common practice is precisely what needs to be rethought. 
+%Compensating for such degradation while keeping fast adaptation motivates the following feasibility question. 
+
+% \vspace{1mm}
+% \textit{Question 3: Can two-sided models rapidly adapt to diverse wireless channels without sacrificing task performance or incurring large training and storage overhead?}
+% \vspace{1mm}
+
+
+
+
+
+
+
+
+% \vspace{1mm}
+% \textit{Question 1: Can two-sided models be integrated into practical 5G/6G transceivers while maintaining compatibility with existing 5G NR systems?}
+% \vspace{1mm}
+
+\vspace{1mm}
+{\bf Multi-Vendor Interoperability:} In practical deployments, the transmitter- and receiver-side models are not necessarily deployed by the same vendor, requiring joint training or fine-tuning across vendors. Existing two-sided models typically rely on gradient-based joint training, which 3GPP classifies into Type~1 and Type~2 \cite{3gpp_tr38843_rel19}\footnotemark. In Type~1, both models are trained at either the UE or the gNB, requiring one model to be transferred. In Type~2, each model remains at its respective side, while intermediate model features and gradients are exchanged. Unfortunately, both approaches become impractical when vendors are unwilling to disclose proprietary model information. Type~1 exposes the model architecture and parameters, whereas Type~2 allows exchanged features and gradients to be exploited for model output inference and adversarial attacks \cite{li2024emgan,papernot2016limitations}. Moreover, exchanging models, features, or gradients incurs substantial communication overhead, while Type 2 also requires transmitter-side intermediate activations to be retained until the corresponding gradients are received, imposing a significant memory burden on resource-constrained devices. 
+
+\footnotetext{3GPP also defines Type 3, which alternates local training between the gNB and the UE instead of joint training, but incurs substantial performance degradation \cite{3gpp_tr38843_rel19}.}
+
+
+% These limitations call for rethinking end-to-end backpropagation and developing a training method that avoids exchanging models or gradients between vendors.
+
+
+% The transmitter and receiver models are typically assumed to be jointly trained through end-to-end backpropagation. 
+
+%These limitations call for rethinking the foundational assumption of updating models through backpropagation, while motivating a training method that neither exchanges models nor gradients nor  stores intermediate activations while preserving coordinated updates. 
+
+%As an alternative to joint training, Type 3 trains the transmitter and receiver models sequentially without exchanging models or gradients. However, 3GPP evaluations show that Type 3 can incur performance degradation compared with 1-on-1 joint training. 
+
+
+
+%Most existing joint-training methods for two-sided models rely on end-to-end backpropagation. One representative method is Type 1 training defined by 3GPP, in which both models are jointly trained on either the UE side or the gNB side \cite{3gpp_tr38843_rel19}. Such centralized training, however, becomes impractical when vendors are unwilling to share their proprietary models. To avoid sharing proprietary models, 3GPP considers Type 2 training, where intermediate features and gradients are exchanged while keeping the models at each side. However, this exchange must be repeated over many iterations, resulting in substantial communication overhead. To reduce this overhead, fine-tuning can be considered, where the two vendors first train their models offline, either jointly or independently, and then exchange only a small number of features and gradients if needed, for example, due to a shift in the data distribution. 
+% Even in this case, unfortunately, model updates still rely on two-way propagation: intermediate features are first sent during forward propagation, and the corresponding gradients are then sent back during backward propagation. This two-way dependence raises two issues. First, the exchanged gradients can leak sensitive model information that adversaries may exploit to extract the proprietary model information \cite{li2024emgan}. Second, the UE-side vendor must store intermediate activations aside until the gradients are returned, leading to prolonged and substantial memory usage. 
+% To partially address these issues, Type 3 training can be considered, which avoids gradient exchange by training the UE- and gNB-side models separately or sequentially. However, it additionally introduces its own limitations\footnote{3GPP evaluations show that Type 3 training can incur performance degradation compared with 1-on-1 joint training, with the extent of degradation depending on backbone configuration, training order (gNB-first or UE-first), and the amount of shared data \cite{3gpp_tr38843_rel19}.} and lacks a clear method for flexibly updating the deployed models.
+% These limitations call for rethinking the foundational assumption of updating models through backpropagation, motivating a training method that neither exchanges gradients nor stores intermediate activations while preserving coordinated updates. 
+%These issues call for rethinking the foundational assumption of updating both models through backpropagation, motivating a training method that neither exchanges gradients nor stores intermediate activations. 
+
+
+% Additionally, to partially address these issues, 3GPP considers Type 3 training, which is a structural redesign to avoid gradient exchange by training the UE- and gNB-side models separately or sequentially. However, it introduces its own limitations and leaves how to flexibly update the deployed models unresolved.
+
+% Additionally, to partially address these issues, 3GPP considers Type 3 training, in which the UE- and gNB-side models are trained separately or sequentially. This can be seen as a structural redesign to eliminate gradient exchange. However, this redesign also introduces many challenges, including performance loss, requires aligning backbones and quantization parameters across vendors and still leaves how to flexibility for updating the deployed models unresolved.
+% However, this very redesign introduces new problems: it incurs performance loss, requires aligning backbones and quantization parameters across vendors, and still leaves post-deployment flexibility and generalization unresolved \cite{3gpp_tr38843_rel19}.
+
+
+
+%Additionally, to partially address these issues, 3GPP considers Type 3 training, in which the UE- and gNB-side models are trained separately or sequentially without exchanging gradients. However, 
+
+%Most existing training methods rely on end-to-end backpropagation. In particular, to avoid exchanging proprietary model architectures and parameters between vendors, 3GPP considers Type 2 training \cite{3gpp_tr38843_rel19}, where intermediate features and gradients are exchanged between the UE- and gNB-side models. However, this exchange must be repeated over many iterations, resulting in substantial communication overhead. To reduce this overhead, fine-tuning can be considered, where the two vendors first train their models offline, either jointly or independently, and then exchange only a small number of features and gradients if needed, for example, due to a shift in the data distribution. Even in this case, unfortunately, model updates still rely on a two-way propagation: intermediate features are first sent during forward propagation, and the corresponding gradients are then sent back during backward propagation. This two-way dependence raises two issues. First, the exchanged gradients can leak sensitive model information that adversaries can exploit to extract the proprietary model \cite{li2024emgan}. Second, the UE-side vendor must store intermediate activations aside until the gradients are returned, leading to prolonged and substantial memory usage. These issues call for rethinking the foundational assumption that both models must be updated through backpropagation, motivating a training method that updates both models without exchanging gradients or storing intermediate activations. 
+
+
+% The transmitter-side and receiver-side models can be developed by different vendors. In this case, inter-vendor collaboration becomes challenging, because vendors may be unwilling to share proprietary model architectures, parameters, or gradients. A straightforward method, known as Type 2 training in 3GPP \cite{3gpp_tr38843_rel19}, avoids model sharing by exchanging intermediate features and gradients. However, this should be repeated over many iterations, resulting in substantial communication overhead. To reduce this overhead, a fine-tuning method can be considered, where the two vendors first train their models offline, either jointly or independently, and then exchange only a small number of features and gradients if needed, for example, due to a shift in the data distribution. Even in this case, unfortunately, model updates still rely on a two-way propagation: intermediate features are first sent during forward propagation, and the corresponding gradients are then sent back during backward propagation. Such gradient exchange can leak sensitive model information that adversaries can exploit to extract the proprietary model \cite{li2024emgan}.
+%These limitations raise the following feasibility question.
+
+% \vspace{1mm}
+% \textit{Question 2: Can two-sided models from different vendors be trained without exposing proprietary model architectures, parameters, or gradients?}
+% \vspace{1mm}
+
+
+
+
+
+
+\vspace{1mm}
+Motivated by the deployment challenges associated with these foundational assumptions of two-sided models, as summarized in Fig.~\ref{fig:overview}, we propose practical alternatives in the following sections.
+% summarizes the aforementioned foundational assumptions of two-sided models and the resulting deployment challenges, and the corresponding practical alternatives considered in this paper. The following sections present these alternatives in detail. 
+
+% The remainder of this paper presents these approaches in detail. 
+
+% , along with the transformative approaches developed by rethinking the foundational assumptions of two-sided models. 
+
+%\newpage
+
+\section{Integration into the NR Protocol Stack for Legacy Coexistence}
+Following the emerging 6G deployment direction \cite{ngmn2026architecture}, we need to consider how two-sided models can be introduced while preserving conventional NR operation. To this end, we propose a capability-dependent PHY integration architecture that introduces two-sided model processing as an alternative to selected conventional NR PHY-functions, preserving its performance advantage while retaining the conventional NR processing path without modification.
+
+To implement and validate this architecture, we integrate two-sided model processing into a real-world transceiver using a full-stack testbed based on DeepSig OmniPHY Axon, as illustrated in Fig.~\ref{fig:arc}. The testbed comprises an open central unit/distributed unit (OCUDU)-based gNB \cite{ocudu2025} running on an NVIDIA DGX Spark and a software-defined UE. The radio-frequency front-end uses a USRP B210 operating in NR band n78 with a 20 MHz bandwidth, 30 kHz subcarrier spacing, and split 8. The same OCUDU-based gNB also supports a WNC open radio unit over an O-RAN 7.2 fronthaul interface with bandwidths of up to 100 MHz. 
+
+%The coexistence concern is most clearly addressed when a two-sided model is integrated into a full NR stack. To this end, we build a real-world testbed on DeepSig OmniPHY Axon. The testbed comprises an open central unit/distributed unit (OCUDU)-based gNB running on an NVIDIA DGX Spark and a software-defined UE (SoftUE). The RF front-end is implemented using a USRP B210 with NR band n78, 20 MHz bandwidth, 30 kHz subcarrier spacing, and split 8. The same OCUDU integration also supports a WNC open radio unit over an open radio access network (RAN) 7.2 fronthaul interface at up to 100 MHz.
+
+
+
+The implemented gNB supports two reception modes and selects the appropriate processing path according to the UE's two-sided model capability. In the conventional mode, legacy UEs are served using the existing NR processing chain. In the two-sided model mode, the UE-side model maps coded bits directly to complex-valued symbols without dedicated pilots, replacing conventional quadrature amplitude modulation (QAM) mapping and pilot insertion while retaining NR resource-element (RE) mapping. At the gNB, the corresponding receiver model jointly performs channel estimation and demapping, directly producing soft-bit log-likelihood ratios (LLRs). These LLRs are passed to the existing NR channel decoder, thereby enabling two-sided models for data communication with minimal PHY modifications while maintaining the remaining NR processing stack, including channel decoding.
+
+Importantly, the integration extends beyond PHY processing. The testbed supports UE registration, protocol data unit session establishment, and real-time Internet Protocol traffic, including ping, secure shell, and throughput measurements, with round-trip times of $10$--$20$ ms. These experiments demonstrate full-stack operation of the two-sided model within an operational NR system while preserving conventional NR processing for legacy UEs.
+
+
+
+%In the testbed, each UE indicates whether it is two-sided-model-capable or a legacy NR UE. The implemented gNB then operates in the two-sided-model mode for the former and the conventional quadrature amplitude modulation (QAM) mode for the latter, allowing both UE types to be supported by the same gNB. In the two-sided-model mode, the UE-side model maps coded bits to resource-element (RE) values. The gNB-side model performs channel estimation and demapping without dedicated pilots and outputs soft-bit log-likelihood ratios (LLRs) for the existing NR channel decoder. This design replaces only selected physical-layer functions while maintaining compatibility with the remaining NR processing. The testbed also supports registration, protocol data unit session establishment, and real-time Internet Protocol (IP) traffic, including ping, secure shell, and throughput measurements, with round-trip times of 10--20 ms. This result demonstrates that two-sided models can operate consistently across the full protocol stack. 
+
+
+%Together, these results demonstrate that two-sided models can be integrated into 5G NR without disrupting legacy UE support or higher-layer operation. 
+
+% In the two-sided-model mode, the UE-side model maps coded bits to resource-element (RE) values, and the gNB-side model performs channel estimation and demapping without dedicated pilots and produces soft-bit log-likelihood ratios (LLRs) for the existing NR channel decoder. 
+
+% estimates the channel and demaps received REs into soft-bit log-likelihood ratios (LLRs) without dedicated pilots. The resulting LLRs are passed to the existing NR channel decoder. 
+
+%serves the UE accordingly, using a two-sided-model mode for the former and a conventional quadrature amplitude modulation (QAM) mode for the latter. 
+%Importantly, this gNB supports both modes over a shared resource grid, so that AI-capable and legacy UEs coexist within a single system. 
+% Within this dual-mode operation, the two-sided-model mode works as follows: the UE-side model maps coded bits to resource-element (RE) values, and the gNB-side model estimates the channel and demaps received REs into soft-bit log-likelihood ratios (LLRs) for the existing NR channel decoder without dedicated pilots. The testbed also supports registration, attach, protocol data unit sessions, and real-time Internet protocol (IP) traffic (e.g., ping, secure shell, throughput) with 10--20 ms round-trip times. This result shows that two-sided models can be negotiated and operated inside 5G NR. 
+
+
+
+
+Fig.~\ref{fig:arc} illustrates the overall testbed architecture together with numerical results for uplink data transmission. In this experiment, we consider a 3GPP TR 38.901 rural macro channel with a $1\times 4$ antenna configuration \cite{3gpp38901}. The conventional NR baseline uses pilot-aided linear minimum mean squared error (LMMSE)-Wiener channel estimation and an LMMSE equalizer. The numerical results in Fig.~\ref{fig:arc} compare the uplink throughput of conventional NR and the two-sided model under different SNRs. Both throughput curves are obtained from a single gNB, demonstrating coexistence between the two-sided model and conventional NR operation for legacy UEs. Under this coexistence, the two-sided model achieves more than $4$ times higher throughput than conventional NR under low-SNR conditions.
+
+
+%Both throughput curves are obtained from a single gNB, demonstrating that legacy NR UEs and two-sided model UEs can be served without a separate protocol stack. Additionally, the results show that the two-sided model achieves higher throughput than the considered NR baseline. 
+
+%The numerical results show that the implemented gNB supports both legacy NR and two-sided-model-capable UEs through two reception modes, while the two-sided-model mode achieves higher throughput than the considered NR baseline across the evaluated SNR range. 
+
+%The numerical results show that the two-sided model achieves higher throughput than the considered NR baseline across the evaluated SNR range. The throughput ratio between the two-sided model and NR reaches about $4.4\times$ in the low-SNR region and converges to about $1.16\times$ in the high-SNR region. 
+
+
+
+
+\begin{figure*}[t]
+    \centering
+    {\epsfig{file=Figures/Fig3.eps, width=14cm}}\vspace{-2mm}
+    %\includegraphics[width=14cm]{Figures/Fig3.jpg}\vspace{-2mm}
+    \caption{The AMS framework for channel adaptation, along with the MSC table construction based on joint optimization of the two-sided model and the SC.}\label{fig:FCQ}%\vspace{-3mm}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    {\epsfig{file=Figures/Fig4.eps, width=17cm}}\vspace{-2mm}
+    %\includegraphics[width=17cm]{Figures/Fig4.jpg}\vspace{-2mm}
+    \caption{Comparison of PSNR, training time, and model storage between the AMS framework and other two-sided model schemes for an image reconstruction task.}\label{fig:Simul_1}\vspace{-3mm}
+\end{figure*}
+
+
+\section{Adaptive Model Selection for Channel Adaptation}
+
+
+\begin{figure*}[t]
+    \centering
+    {\epsfig{file=Figures/Fig5.eps, width=18cm}}\vspace{-2mm}
+    %\includegraphics[width=18cm]{Figures/Fig5.jpg}\vspace{-2mm}
+    \caption{The gradient-free zeroth-order fine-tuning framework for multi-vendor interoperability and its performance evaluation for CSI feedback.}\label{fig:zoo}\vspace{-3mm}
+\end{figure*}
+
+
+
+
+Channel adaptation is essential for reliable and efficient communication under varying channel conditions. While conventional systems can readily adapt through table-based mechanisms, such as modulation and coding scheme (MCS) tables in adaptive modulation and coding (AMC) and precoding codebooks in beamforming, two-sided models are difficult to adapt rapidly without substantial storage, fine-tuning overhead, or performance loss. To retain the short adaptation delay and low computational overhead of table-based operation, we introduce an adaptive model selection (AMS) framework. AMS selects the model best matched to the current channel condition from an offline-constructed table containing a small number of models together with their associated transmission parameters. Unlike existing one-model-fits-one approaches that pre-train a separate model for each predefined channel condition \cite{DeepJSCC_Q,10015684}, AMS replaces predefined channels with surrogate channels (SCs). These SCs are jointly trained with the two-sided models, followed by instantly mapping into the actual channel condition during operation. The number of SCs is much smaller than the number of possible channel conditions, enabling scalable adaptation across diverse channel conditions, as investigated in \cite{oh2026sfc,oh2025blindtraining}.
+
+Specifically, for two-sided models with analog channel inputs, the SC is modeled as parallel additive white Gaussian noise channels with trainable noise variances \cite{oh2026sfc}. For digital transmission, it is modeled as parallel binary symmetric channels with trainable bit-flip probabilities \cite{oh2025blindtraining}. The trainable SC parameters and the two-sided model are jointly optimized to minimize a weighted sum of the task loss and an SC regularization term. Without 
+regularization, the SC converges to a trivial error-free channel because lower distortion improves task performance. The regularization prevents this by penalizing small SC parameters and encouraging non-zero channel distortion. Each jointly optimized model-SC pair forms an entry in the model-and-SC (MSC) table. Varying the regularization level yields entries with different average channel distortion levels.
+
+During online operation, each trained SC is reproduced over the actual wireless channel by adjusting the transmission parameters. For analog transmission, the trained noise variance is converted to a target SNR, which is matched through transmit power control \cite{oh2026sfc}. For digital transmission, the trained bit-flip probability is treated as a target bit error rate and matched through transmit power and/or modulation control \cite{oh2025blindtraining}. Under the current channel condition, AMS determines the transmission parameters required for each MSC entry and identifies those satisfying the available resource constraints, such as total transmit power. Among the feasible entries, it selects the one achieving the highest task performance.
+
+
+Fig.~\ref{fig:Simul_1} presents numerical results for an image reconstruction task on the CIFAR-$10$ dataset. The channel follows Rayleigh fading over 64 subcarriers with $16$-QAM. Training time is measured on an Intel Core i$7$-$12700$ CPU, an NVIDIA RTX $3090$ GPU, and $32$ GB RAM. Three baseline schemes are used for comparison. The one-model-fits-one baseline trains a separate channel-specific model for each SNR, whereas the one-model-fits-all baseline trains a single robust model over the $0$--$30$ dB SNR range. Na\"ive AMS uses three models trained over the $0$--$10$, $10$--$20$, and $20$--$30$ dB SNR ranges. Task performance is measured by the peak SNR (PSNR) of the reconstructed image at the receiver.
+
+
+
+
+The results show that AMS achieves the highest PSNR across the entire $0$--$30$ dB SNR range. The one-model-fits-one baseline achieves the second-highest PSNR, but incurs significant training and storage overhead, with severe performance degradation outside the SNRs used for training. Although the one-model-fits-all baseline has the lowest overhead, it also yields the lowest PSNR over most of the SNR range. Na\"ive AMS has overhead comparable to AMS, but its PSNR is $6$--$8$ dB lower over the $0$--$20$ dB range, underscoring the importance of MSC construction and transmission parameter selection.
+
+% The single robust model achieves the lowest overhead but suffers noticeable performance degradation at high SNRs. 
+
+% The simulation results show that the AMS framework achieves the highest PSNR across a range of SNRs while requiring over 4 times lower training and storage overhead than channel-specific models. The single robust model achieves the lowest overhead but suffers noticeable performance degradation at high SNRs. The channel-specific models achieve the second-highest PSNR but incur the highest training and storage overhead and perform well only at their trained SNRs. Naive AMS reduces the overhead by using fewer models but still suffers performance degradation compared with channel-specific models. 
+
+% The channel-specific models, corresponding to the one-model-fits-one approach, are trained separately for each SNR. Naive AMS uses three models trained over the 0--10, 10--20, and 20--30 dB SNR ranges, while the single robust model, corresponding to the one-model-fits-all approach, is trained over the entire 0--30 dB range. As shown in the left part of Fig.~\ref{fig:Simul_1}, AMS achieves the highest PSNR over a range of SNRs, demonstrating that jointly optimizing the SCs with the models enables high task performance. Naive AMS suffers PSNR losses of about 1.3 dB at 7.5 dB and 0.8 dB at 17.5 dB compared with the channel-specific models. The center part quantifies the PSNR gap of each scheme relative to AMS, where the channel-specific scheme performs well only its trained SNR and degrades sharply elsewhere. The right part shows the training and storage overhead required to achieve these PSNR results. The channel-specific models provide strong performance at the cost of substantial training and storage overhead, whereas the single robust model reduces this overhead but sacrifices performance. AMS overcomes this trade-off without training models for predefined channel conditions, instead introducing SCs into the training process. 
+
+
+% The single robust model incurs the lowest overhead; however, its task performance is limited, as shown in the left and center parts. Combining all three parts, the baseline schemes exhibit a clear trade-off between training and storage overhead and task performance, whereas AMS substantially mitigates this trade-off by constructing the MSC table with SCs. 
+
+
+% The left part of Fig.~\ref{fig:Simul_1} shows the peak signal-to-noise ratio (PSNR) performance over SNR, where AMS consistently achieves the highest PSNR across all levels, demonstrating that jointly optimizing the SCs with the models enables high task performance. 
+
+
+% The center part further quantifies the PSNR gap of each scheme relative to AMS. The channel-specific scheme performs well only near its trained SNR and degrades sharply elsewhere. 
+
+% %trains a separate model for each SNR. The naive AMS scheme trains three models over the 0–10, 10–20, and 20–30 dB SNR ranges, while the single robust scheme trains one model over the entire 0–30 dB range. 
+% The left part of Fig.~\ref{fig:Simul_1} shows the the peak signal-to-noise ratio (PSNR) performance over SNR, where AMS consistently achieves the highest PSNR across all levels. Compared with the channel-specific scheme, the naive AMS shows a PSNR degradation of about 1.3 dB at an SNR of 7.5 dB and 0.8 dB at an SNR of 17.5 dB. The center part further quantifies the PSNR gap of each scheme relative to AMS. The channel-specific scheme performs well only near its trained SNR and degrades sharply elsewhere. The right part shows the training and storage overhead required to achieve these PSNR results. The single robust model incurs the lowest overhead; however, its task performance is limited, as shown in the left and center parts. Combining all three parts, the baseline schemes exhibit a clear trade-off between training and storage overhead and task performance, whereas AMS substantially mitigates this trade-off by constructing the MSC table with SCs. 
+
+
+
+
+
+
+\section{Gradient-Free Fine-Tuning for Multi-Vendor Interoperability}
+Multi-vendor interoperability of two-sided models requires joint fine-tuning of the transmitter- and receiver-side models held by different vendors. The current 3GPP Type~1 and Type~2 fine-tuning approaches \cite{3gpp_tr38843_rel19} require the exchange of model parameters and gradients, respectively, to perform backpropagation, which may raise privacy concerns and incur additional memory and communication overhead. To overcome this limitation, we present a gradient-free fine-tuning framework that requires only scalar feedback while reusing the existing communication path for forward propagation. The framework is grounded in the zeroth-order optimization method \cite{chen2025zeroth}, a gradient-free approach that estimates a descent direction using only forward evaluations of the loss. 
+
+To illustrate, suppose a scenario in which Vendor ${\sf A}$ and Vendor ${\sf B}$ hold the transmitter-side and receiver-side models, respectively. Vendor ${\sf A}$ perturbs its model parameters and performs two forward propagations with the original and perturbed parameters, transmitting both outputs to Vendor ${\sf B}$. Using these outputs and ground-truth labels from a shared fine-tuning dataset, Vendor ${\sf B}$ evaluates the loss with its original and perturbed model parameters. The resulting loss difference, together with the corresponding parameter perturbation, provides a zeroth-order estimate of the gradient direction. Vendor ${\sf B}$ uses this estimate to update its model and returns the scalar loss difference to Vendor ${\sf A}$, which similarly estimates the gradient direction and updates its model. The procedure naturally extends to multiple random perturbations, whose gradient estimates are averaged to obtain a more reliable batch gradient. The corresponding perturbed outputs can be transmitted together in a single batch, allowing multiple perturbations without additional communication rounds.
+
+Unlike Type 1 fine-tuning, which requires model parameter exchange, and Type 2 fine-tuning, which requires both forward and backward propagations between Vendors ${\sf A}$ and ${\sf B}$, the proposed method relies only on forward propagations, with scalar loss differences fed back to Vendor ${\sf A}$. This limited feedback reduces the risk of exposing proprietary information about the Vendor ${\sf B}$-side model, as gradient feedback may enable Vendor ${\sf B}$-side model output inference and adversarial attacks by Vendor ${\sf A}$ \cite{papernot2016limitations}. Furthermore, the proposed method substantially reduces Vendor ${\sf B}$-side communication overhead, as the scalar feedback is small and its size is independent of the Vendor ${\sf A}$-side model output dimension. Finally, eliminating gradient calculation removes the need to retain intermediate activations generated during forward propagation until the subsequent backward propagation, thereby reducing the memory burden on resource-limited devices.
+
+Fig.~\ref{fig:zoo} illustrates the overall pipeline of the gradient-free zeroth-order fine-tuning framework and presents numerical results. In the simulation, we consider a two-sided model for CSI feedback in an urban macro cell scenario, where the CSI is represented as a $32 \times 32$ angular-delay matrix. The carrier frequency is set to $3.5$~GHz, and a uniform linear array with half-wavelength antenna spacing is used. %The two-sided model follows the Transformer-based architecture in \cite{9705497}. 
+The two-sided model is first pre-trained in this scenario and then fine-tuned for a different cell geometry. The loss function is the normalized mean squared error (NMSE). Using this setup, we evaluate the CSI reconstruction performance, memory usage, communication overhead, and information leakage associated with gradient exchange in conventional Type 2 fine-tuning. 
+
+As illustrated in the upper-right part of Fig.~\ref{fig:zoo}, the exchanged gradient can be expressed as the product of the Jacobian matrix, the reconstruction error, and a scaling constant by applying the chain rule, where the Jacobian is defined as the derivative of the Vendor ${\sf B}$-side model output with respect to the Vendor ${\sf A}$-side output. Access to this Jacobian reveals how the Vendor ${\sf A}$-side output influences the Vendor ${\sf B}$-side model output, potentially allowing an adversary to craft perturbations that manipulate the latter \cite{papernot2016limitations}. In Type 2 fine-tuning, an honest-but-curious Vendor ${\sf A}$ can estimate this Jacobian from the exchanged gradients. 
+Specifically, Vendor ${\sf A}$ deliberately transmits the same model output for different CSI samples and subtracts the corresponding returned gradients, yielding the product of the transposed Jacobian and the difference between the CSI samples. By repeating this process with sufficiently diverse CSI samples and jointly solving the resulting linear equations, Vendor ${\sf A}$ can recover the full Jacobian matrix. The recovered Jacobian can further be used to estimate the Vendor ${\sf B}$-side model output from the observed gradients. 
+%Specifically, Vendor ${\sf A}$ deliberately transmits the same model output for different CSI samples and subtracts the corresponding returned gradients. Since the Jacobian and the Vendor ${\sf B}$-side model output remain unchanged for the same transmitted Vendor ${\sf A}$-side output, the gradient difference provides a linear equation involving the Jacobian and the difference between the CSI samples. By repeating this process with diverse CSI samples and jointly solving the resulting linear equations, Vendor ${\sf A}$ can recover the full Jacobian matrix. The recovered Jacobian can further be used to estimate the Vendor ${\sf B}$-side model output from the observed gradients. 
+
+
+
+%
+
+At a compression ratio of $1/4$, simulation results show that Vendor ${\sf A}$ can accurately estimate both the Jacobian matrix and the Vendor ${\sf B}$-side model output from the gradients exchanged during Type 2 fine-tuning, achieving NMSE values of $-58.24$ dB and $-14.56$ dB, respectively. In contrast, the proposed gradient-free fine-tuning framework eliminates gradient feedback, thereby preventing such information leakage. The bottom part of Fig.~\ref{fig:zoo} further shows that gradient-free fine-tuning achieves CSI reconstruction NMSE comparable to that of conventional Type 2 fine-tuning, while reducing Vendor ${\sf A}$-side memory usage by $3.65$ times and Vendor ${\sf B}$-side communication overhead by more than $15,000$ times. These gains are consistently achieved across different compression ratios.
+
+% Fig.~\ref{fig:zoo} illustrates the overall pipeline of the one-way fine-tuning framework and presents numerical results. In the simulation, we consider CSI feedback in an urban macro cell scenario, where the CSI is represented as a $32 \times 32$ angular-delay matrix. The carrier frequency is set to 3.5~GHz, and a uniform linear array with half-wavelength antenna spacing is used. The two-sided model follows the Transformer-based architecture in \cite{9705497}. The model is first pre-trained in this scenario and then fine-tuned for a different cell geometry. Using this setup, we evaluate not only the fine-tuning performance and communication overhead but also the privacy risk associated with gradient exchange in conventional two-way fine-tuning. The exchanged gradient can be expressed as the product of the transposed decoder Jacobian matrix and a scaled reconstruction error vector. The Jacobian matrix is determined by proprietary decoder parameters and characterizes how changes in the encoder output affect the decoder output. An adversary with access to this Jacobian can identify the components of the encoder output that strongly influence the decoder output and craft adversarial perturbations accordingly \cite{papernot2016limitations}. Unfortunately, in two-way fine-tuning, an honest-but-curious Vendor ${\sf A}$ can estimate the Jacobian matrix. First, Vendor ${\sf A}$ deliberately transmits the same encoder output for different CSI samples. Vendor ${\sf A}$ then subtracts the returned gradients to obtain the product of the transposed Jacobian and the difference between the CSI samples. By repeating this process with sufficiently diverse CSI differences and jointly solving the resulting linear equations, Vendor ${\sf A}$ can recover the full Jacobian matrix. In addition, using the estimated Jacobian matrix, Vendor ${\sf A}$ can estimate the decoder output by solving a linear equation. The estimation accuracy generally improves with the rank of the Jacobian matrix. Fig.~\ref{fig:zoo} shows that the Jacobian matrix and the decoder output can be accurately estimated in two-way fine-tuning, where the compression ratio is set to 1/4. Fig.~\ref{fig:zoo} also shows that the one-way fine-tuning framework achieves normalized mean squared error (NMSE) performance comparable to that of the conventional two-way fine-tuning method. At the same time, it reduces Vendor ${\sf A}$-side memory usage by a factor of 3.6 to 4 and Vendor ${\sf B}$-side communication overhead by orders of magnitude.  
+
+
+
+
+
+
+
+\section{Open Challenges and Future Directions}
+The preceding sections have revisited the foundational assumptions of two-sided models and introduced practical alternatives for legacy coexistence, channel adaptation, and multi-vendor interoperability. These advances motivate new research directions while highlighting further challenges that must be addressed for the  practical deployment of two-sided models, as discussed next.
+
+\vspace{1mm}
+{\bf AMC-AMS Unification:} Conventional AMC uses channel quality indicator (CQI) feedback to select a modulation level and code rate from the MCS table. AMS can similarly use CQI feedback to select a model-SC pair from the MSC table. This suggests a unified adaptation framework that jointly coordinates AMC and AMS for a given CQI feedback. Validating such joint AMC-AMS operation while guaranteeing legacy coexistence remains an important challenge.
+
+
+% \vspace{1mm}
+% {\bf Scalable Unequal Error Protection:} In two-sided models, transmitted features contribute unequally to task performance, motivating unequal error protection (UEP) for task-critical features. AMS can realize such UEP through feature-wise power and/or modulation control. Extending this capability to more complex PHY operations, such as channel coding and beamforming, can lead to large-scale optimization problems. Developing scalable UEP mechanisms across a broad range of PHY operations is therefore an important future research direction.
+
+
+\vspace{1mm}
+{\bf Extension to Task-Oriented Communication:} 
+Extending two-sided models from CSI feedback and conventional data communication to task-oriented communication is promising but non-trivial. In task-oriented communication, model input and output data reside at the application layer, while channel information remains in the radio access network (RAN), requiring costly cross-layer exchange. Joint model-SC training avoids this during training, but online operation still requires visibility into application-layer task-performance degradation and its causes. This calls for standardized cross-layer interfaces or co-located PHY and application-layer processing in AI-RAN \cite{airan2026architecture}.
+
+
+\vspace{1mm}
+{\bf Multi-Vendor LCM:} In multi-vendor scenarios, the MSC table can be split into transmitter- and receiver-side tables, allowing each vendor to maintain its own model while sharing only the SCs. This raises multi-vendor LCM issues, including who determines the number of table entries and how they are updated over time. Similar questions arise for fine-tuning, such as when it should be triggered and which vendor should initiate it. Standardized or vendor-agreed rules are therefore required.
+
+
+% establishing the {CQI-MCS-AMC} chain. Similarly, by quantizing the channel SNR into CQI, AMS can use CQI feedback to select a model-SC pair from the MSC table, forming the {CQI-MSC-AMS} chain. Both chains start from CQI feedback and branch depending on which table is used. Therefore, AMC and AMS can be unified under a common CQI feedback, for which a branching process is required to select between the MCS and MSC tables. The required process should account for whether the transmitter and receiver support the two-sided model and the expected performance gain of AMS over AMC for a given CQI. This process is also similar to the proposed coexistence architecture in that both select between conventional and two-sided-model operations. Therefore, integrating the branching process with the coexistence architecture and evaluating their joint operation in practical transceivers also remain open challenges.
+
+% Current communication infrastructure lacks a standardized interface through which the RAN can access the application-layer data. The AMS framework partially alleviates this issue. For offline table construction, the framework uses SCs without requiring CSI from the RAN. In the online communication stage, the RAN leverages only the MSC table without accessing application-layer data. Nevertheless, since the RAN cannot observe downstream task performance, it cannot detect performance degradation caused by changes in the task objective or source distribution. This would require an application-layer feedback mechanism for reporting task-level performance and guiding MSC table updates. 
+
+% \vspace{1mm}
+% {\bf Security and Privacy:} Two-sided models raise new security and privacy concerns, including the leakage of proprietary model information and encoder outputs, as well as susceptibility to adversarial attacks. The one-way fine-tuning framework mitigates model-information leakage by avoiding the exchange of model architectures, parameters, and gradients between the transmitter and receiver. In parallel, existing security studies have explored how encoder outputs can be protected against information leakage and adversarial attacks \cite{10292907}. Combining both approaches is a promising direction toward securing two-sided models. However, it remains unclear how protecting the encoder output affects loss-based gradient estimation in one-way fine-tuning, and additional techniques may be required to reconcile the two approaches.
+
+
+%This governance issue also extends to fine-tuning, where practical deployment requires rules for when fine-tuning should be triggered and which vendor should initiate it. Standardized or vendor-agreed lifecycle management rules are therefore needed to ensure consistent operation between the two sides. 
+
+
+%In one-way fine-tuning, a similar ambiguity arises in deciding when fine-tuning should be triggered and which vendor should initiate it. Standardized or vendor-agreed lifecycle management rules are therefore needed to ensure consistent operation between the two sides. 
+
+%The operational ownership of the MSC table becomes an important open issue in inter-vendor collaboration. Even though each model stays private to its vendor, the SCs must still be shared to determine model selection and the corresponding transmit powers. This raises the question of who governs the shared table, including who determines the number of entries and who is responsible for updating and managing them over time. In one-way fine-tuning, a similar ambiguity arises in deciding when fine-tuning should be triggered and which vendor should initiate it. Standardized or vendor-agreed lifecycle management rules are therefore needed. %, and their design remains an open issue. 
+%\cite{SL}
+% \vspace{1mm}
+% {\bf Asymmetric Resource Constraints:} The UE and the gNB operate under different resource constraints. The UE is limited in computation, memory, and power, while the gNB has far greater capacity. However, most studies on two-sided models adopt symmetric architectures, which either overburden the UE or underutilize the gNB. 
+
+
+% Split learning or split inference can address this asymmetry by placing shallow layers at the resource-limited side and deeper layers at the resource-rich side. Nevertheless, splitting a model requires the transmitter and receiver to agree
+
+%Nevertheless, how such split architectures behave under wireless perturbations remains unclear. More importantly, splitting a model across the air interface requires the transmitter and receiver to agree on a shared cut-layer interface. This is difficult to reconcile with multi-vendor deployment, as it reintroduces the cross-vendor coordination and model-exposure issues that one-way fine-tuning is designed to avoid. Therefore, enabling asymmetric computation while preserving model privacy for each vendor remains an open issue. 
+
+
+
+
+
+\section{Conclusion}
+This article has examined key deployment challenges of two-sided AI models, in terms of legacy coexistence, channel adaptation, and multi-vendor interoperability. To address these challenges, we presented three practical alternatives: NR protocol-stack integration, MSC-table-based AMS, and gradient-free zeroth-order fine-tuning. We also discussed open challenges, such as the unification of AMS and AMC, extensions to task-oriented communication, and multi-vendor LCM. Addressing these challenges through coordinated advances in research, prototyping, and standardization will be critical to moving two-sided models beyond isolated demonstrations towards interoperable and deployable components of next-generation air interfaces.
+
+
+%Overall, these discussions call for the continued evolution of two-sided models toward practical deployment in next-generation air interfaces through collaborative efforts across academia, industry, and standardization. 
+
+
+%Addressing these challenges calls for multifaceted endeavors, spanning standardization, protocol design, and cross-layer coordination, to fully realize the practical deployment of two-sided models.  
+
+%This article has revisited the foundational assumptions underlying two-sided models with respect to legacy coexistence, multi-vendor interoperability, and channel adaptation. After showing that a two-sided model can coexist with existing infrastructure, we examined a one-way fine-tuning framework and showed that multi-vendor model updates are possible without exposing model information or retaining intermediate activations. Then, we explored the AMS framework based on an MSC table and showed that it enables fast channel adaptation with improved task performance and low storage overhead. Several challenges nonetheless remain, including the unification of AMS with AMC, observability, operational governance, and asymmetric resource constraints. Addressing these challenges calls for multifaceted endeavors, spanning standardization, protocol design, and cross-layer coordination, to fully realize the practical deployment of two-sided models.  
+
+%will require closer collaboration between the AI and wireless communication communities
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{Reference}
+
+\end{document}
+

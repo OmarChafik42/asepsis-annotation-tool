@@ -1,0 +1,644 @@
+\documentclass[%
+ %preprint,
+ twocolumn,
+ amsmath,amssymb,
+ aps,prfluids,
+ superscriptaddress,
+]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{xr}
+
+\makeatletter
+\renewcommand\jobname{main} 
+\makeatother
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\Sc}{\mathrm{Sc}}
+\newcommand{\Rey}{\mathrm{Re}}
+\newcommand{\Pe}{\mathrm{Pe}}
+\newcommand{\diff}{\mathrm{d}}
+
+
+\begin{document}
+
+\title{Amphibian water to land transition reveals physical limits of olfaction}
+
+\author{Martin James}
+\email{martin.james@edu.unige.it}
+\affiliation{Machine Learning Genoa Center (MaLGa) \& Department of Civil, Chemical and Environmental Engineering, University of Genoa, 16145 Genoa, Italy}
+\author{Loranzie S. Rogers}
+\affiliation{Department of Molecular and Cellular Biology, Harvard University, Cambridge, MA 02138, USA}
+\author{Moreira Salsman}
+\affiliation{Department of Molecular and Cellular Biology, Harvard University, Cambridge, MA 02138, USA}
+\author{Francesco Viola}
+\affiliation{Gran Sasso Science Institute (GSSI), L'Aquila 67100, Italy}
+\affiliation{INFN--Laboratori Nazionali del Gran Sasso, Assergi, Italy}
+\author{Nicholas W. Bellono}
+\affiliation{Department of Molecular and Cellular Biology, Harvard University, Cambridge, MA 02138, USA}
+\author{Agnese Seminara}
+\email{agnese.seminara@unige.it}
+\affiliation{Machine Learning Genoa Center (MaLGa) \& Department of Civil, Chemical and Environmental Engineering, University of Genoa, 16145 Genoa, Italy}
+
+\date{August 21, 2026}
+
+\begin{abstract}
+The evolutionary transition from water to land required animals to sense and respond to drastically different environments. Chemicals diffuse four orders of magnitude more slowly in water than in air, requiring significant remodeling of the olfactory system. Amphibians provide a powerful model to analyze these adaptations because they transition from an aquatic to terrestrial state during a single lifetime following metamorphosis. Here we exploit laboratory-induced metamorphosis of adult \textit{Ambystoma mexicanum} to ask how fundamental chemical properties impact aquatic versus terrestrial olfaction. By combining asymptotic theory with numerical simulations using reconstructed olfactory chamber morphologies, we find that the odor adsorption takes tens of seconds in water compared to milliseconds in air. Adsorption of an ephemeral odor whiff is maximized at an inhalation speed of $\sim$\SI{20}{\centi\meter\per\second} in air vs near zero in water, matching our measurements of negligible aquatic inhalation. Nevertheless, aquatic axolotls quickly respond to introduced odorant molecules. While morphological differences in the olfactory chamber of aquatic versus terrestrial axolotls are nearly irrelevant, aquatic olfactory cilia may pump water to significantly speed up the rate of odor adsorption. Together with adaptive behavioral responses that reduce proximity to the target, the wait time can reduce to less than one second. Thus, while aquatic olfaction is slower than terrestrial olfaction, aquatic animals exhibit anatomical and behavioral adaptations that support chemical detection as a proximal sense. 
+\end{abstract}
+
+\maketitle
+
+%\newpage
+\section{Introduction}
+\label{sec:intro}
+
+Olfaction plays a critical role in how animals extract information from complex environments. It allows animals to find food, identify mates, avoid predators and orient within odor landscapes~\cite{webster2009hydrodynamics,reddy2022olfactory,moore2004odor,riffell2008physical,craven2010fluid}. 
+The sense of smell relies on odorant molecules binding to receptors expressed by sensory neurons within the olfactory chamber and triggering a cascade of molecular processes that eventually facilitate sensation~\cite{firestein2001olfactory}. Before this biochemical recognition can occur, the molecule must travel within the fluid-filled olfactory chamber and reach the sensory epithelium. Physics thus shapes this first step: odor molecules must reach the receptor-bearing surface before they are carried out of the chamber.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_cylinder.pdf}
+\caption{Odorant molecules are adsorbed much more efficiently in air (low Schmidt number (Sc)) than in water (high Sc). (a) Aquatic and (b) terrestrial axolotls together with their olfactory chamber morphologies reconstructed from computed tomography scans. (c) Binary mask of the aquatic olfactory chamber used to define the approximate cylindrical geometry and a schematic of the cylindrical model with a constant odor source fixing the concentration to $c_0$ at the entrance. The wall is perfectly absorbing and the axial velocity follows a Poiseuille profile $u(r)$. (d) Steady-state adsorption efficiency $\phi/\phi_0$ as a function of $\Sc$, obtained by solving Eq.~\eqref{eq:cylinder_nondim} for three different Reynolds numbers (Re). Note that since P\'eclet (Pe) is the relevant nondimensional number here, the solutions for all Re are related by rescaling Sc. (e) Odor fields in the cylinder at $\Sc=1$ and $200$ for $\Rey=2.1$. At low $\Sc$, odor is depleted near the inlet and nearly all incoming molecules are adsorbed. At high $\Sc$, the concentration remains high in the flow core and adsorption decreases.}
+\label{fig:cylinder}
+\end{figure*}
+
+This physical process is much slower in water than in air. Small odorant molecules diffuse readily across air-filled chambers to reach the epithelium located at its boundary. The nondimensional parameter representing how quickly the chemical molecules diffuse compared to fluid molecules is called the Schmidt number, $\Sc=\nu/D$. $\Sc$ represents the ratio of momentum diffusivity ($\nu$) to molecular diffusivity ($D$): in air small molecules have diffusivities of order $D\sim$\SI{e-1}{\square\centi\meter\per\second}~\cite{tang2015compilation}, matching the kinematic viscosity of air, thus $\Sc$ is of order unity. In contrast, diffusion in water is dramatically slower: molecular diffusivities are closer to \SI{e-5}{\square\centi\meter\per\second}~\cite{delgado2007molecular}, while the kinematic viscosity is of order \SI{e-2}{\square\centi\meter\per\second}. The corresponding Schmidt number is of order $10^3$. Such slow diffusivity means that waterborne odors will travel much faster along the chamber than across it, and depending on how quick the flow is in the chamber, they could easily exit before reaching the boundary. 
+
+How many molecules reach the epithelium before exiting the chamber, and how quickly do they get there? Answering this requires knowing the chamber geometry and the flow within it. Qualitatively, in the absence of chaotic effects or turbulence, the flow within the olfactory chamber runs largely parallel to the walls and transports odor molecules along the chamber, without delivering odor to the epithelium. To reach the epithelium, odor must diffuse laterally across the chamber before it exits, a process that takes a time of order $R^2/D$ for a chamber of width $R$. Diffusivity thus controls both \emph{how many} odorant molecules the organism can sense and \emph{how fast} sensation can begin.
+
+Aquatic vertebrates routinely detect dissolved cues, yet diffusion alone is too slow to carry molecules across a millimeter-scale chamber within a typical passage time~\cite{cox2008hydrodynamic}. In large organisms that drive flows at high Reynolds numbers ($\Rey$), turbulent mixing inside the olfactory chamber could provide an answer. Organisms that cannot generate turbulence, however, must rely on some additional mechanism to enhance adsorption if olfaction is to remain effective in water~\cite{koehl2001lobster}.
+What are the mechanisms that enable aquatic olfaction in small organisms, given that diffusion in water is so slow? 
+
+The axolotl \textit{Ambystoma mexicanum} (Fig.~\ref{fig:cylinder}a,b) is an ideal system to ask how small organisms efficiently detect odor in water. Under induced metamorphosis, its olfactory chamber transforms from one adapted for an aquatic environment to one adapted for a terrestrial environment, making it possible to compare water-like and air-like transport within related anatomical designs (Fig.~\ref{fig:cylinder}a,b)~\cite{stuelpnagel2005olfactory,rozanski2020macro}. 
+Did axolotls before metamorphosis evolve mechanisms to speed up odorant adsorption?  
+
+To answer this question, we analyze the fluid dynamics of odorant adsorption in axolotl olfactory chambers. 
+We first develop a cylindrical model showing that adsorption in water is far less efficient than in air. For instance, detecting 10\% of the odor in a pulse would take over \SI{20}{\second} in  water, whereas the same process is about 
+$10^4$ times faster in air. This dramatic loss of efficiency in water is robust and independent of whether the odor is emitted steadily right outside the olfactory chamber or whether it is emitted from a distal target and reaches the olfactory chamber in ephemeral whiffs. We show that an optimal inhalation speed exists for odor whiffs in both air and water. The optimal speed in air is in the range of \SI{20}{\centi\meter\per\second} whereas in water it is close to zero. Consistently, we find no respiration in aquatic animals. We also show that odor adsorption is fast relative to the inhalation timescales. Importantly, despite all of these inefficiencies, we find that aquatic axolotls do respond to odorant molecules pipetted in water. 
+
+How, then, can aquatic olfaction function at all? Active fluid pumping may provide one answer. Motivated by the motile cilia lining the olfactory chambers of fishes and amphibians~\cite{reiten2017motile,ringers2019role}, we show that the radial fluid transport driven by metachronal ciliary waves enhances adsorption, reducing the odor detection time sensibly. Using realistic morphologies from computed tomography scans of axolotls before and after metamorphosis, we show that the two chambers concentrate adsorption in distinct regions of the epithelium.  
+However, odor adsorption in the aquatic chamber remains fundamentally inefficient.
+Finally, we note that aquatic axolotls may use olfaction as a proximal sense, so that the abundance of odorant molecules would partly mitigate the inefficiency of adsorption in water. However, we show that even in this case, sensation may remain rather slow, as detection time falls only logarithmically with concentration. For example, a $10^4$ fold increase in odorant availability speeds detection by about four times. 
+
+Our results show that specific adaptations are needed to speed up odor adsorption in water and suggest that these fundamental inefficiencies may shape chemically-driven behavior in aquatic organisms. 
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/fig_pulse.pdf}
+\caption{ For intermittent odor sources, the adsorption in water can reach over 80\% of the total odor, but requires a long waiting time. (a) Fraction of odor molecules adsorbed from an instantaneous odor pulse at the inlet for different $\Rey$ as a function of time. (b) Time to reach $N/N_0 = 0.1$ of the total odor as a function of flow velocities in air and water. Even at the optimal flow velocity, the time to reach $N/N_0 = 0.1$ exceeds 20\,s in water. (c) Asymptotic adsorption efficiency $N_\infty/N_0$ as a function of flow velocities, with the lower axis giving flow velocity in air ($\Sc=1$) and the upper axis flow velocity in water ($\Sc=1000$). Note that in the nondimensionalized form, there exists an optimal $\Rey$ that maximizes adsorption (see also Fig.~\ref{fig:si:pulse} in the Supporting Information).}
+\label{fig:pulse}
+\end{figure*}
+
+\section{Results}
+\label{sec:results}
+
+We begin with a minimal model that captures odor transport inside the aquatic olfactory chamber as flow through a cylinder. It keeps the two ingredients that directly control wall capture: advection along the chamber and diffusion toward the odor adsorbing epithelium. The reconstructed aquatic chamber outline is first reduced to a channel of comparable length and width (Fig.~\ref{fig:cylinder}c). The resulting model is not intended to reproduce the detailed geometry, but to provide a reference curve against which the full simulations can be compared. Details of the cylindrical approximation are provided in Appendix~\ref{app:methods}. The nondimensionalized equation shows that the normalized odor field is a function of the P\'eclet number $\mathrm{Pe}=\Rey\Sc$ (Eq.~\eqref{eq:cylinder_nondim}). Because $\Rey$ and $\Sc$ are set by different physical factors, the animal's inhalation flow and the medium, respectively, we report them separately even though the model depends only on their product.
+
+We first fix the inlet odor concentration to a constant value, mimicking a nearby large, static odor source. With this boundary condition, the adsorption efficiency (Eq.~\eqref{eq:adsorption_efficiency}) decreases monotonically with $\Sc$ at all $\Rey$ (Fig.~\ref{fig:cylinder}d). At $\Sc=1$, the concentration is depleted over a short entrance region and almost all incoming odorant is adsorbed (Fig.~\ref{fig:cylinder}e top). At larger $\Sc$, radial diffusion becomes too slow to carry the odorant from the center of the channel to the wall within the residence time. The concentration boundary layer becomes thinner, a larger fraction of the odor field remains in the core of the flow and the outlet flux increases (Fig.~\ref{fig:cylinder}e bottom). These results clarify why aquatic odor transport is difficult. Unless the chamber increases residence time or enhances cross-stream transport, most of the incoming odorant remains in the flowing core and leaves without reaching the wall. 
+
+The adsorption efficiency also decreases with $\Rey$, as expected, since efficiency only depends on $\Rey$ and $\Sc$ through $\mathrm{Pe}$ (Figs.~\ref{fig:cylinder}d and \ref{fig:si:adsorption}a). However, a higher flow rate can deliver a larger flux into the chamber, which can compensate for the decreased efficiency. In fact, the total amount of odor adsorbed grows with flow speed (Fig.~\ref{fig:si:adsorption}b). Thus, faster inhalation lowers efficiency but increases the total amount of odor adsorbed. The high Pe limit makes this explicit, with the adsorbed flux scaling with $\Rey^{\frac{1}{3}}$ (Eq.~\eqref{eq:si:adsorption_limit}). However, this does not solve the problem of slow adsorption in water (Fig.~\ref{fig:si:adsorption}).
+
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/fig_cilia.pdf}
+\caption{Metachronal beating of cilia %can 
+increases the rate of odor adsorption and maximum odor flux -- results shown for the chamber in water ($\Sc = 1000$, $\Rey = 0$). (a) Streamlines and magnitude of the velocity field due to the metachronal beating of cilia at the top wall. (b) Adsorption efficiency $N/N_0$ as a function of time for cilia beating with different wavelengths $\lambda$. The dashed curve shows adsorption efficiency without cilia. (c) Time to reach $N/N_0 = 0.1$ for cilia beating at different $\lambda$. The dashed line shows the corresponding value when no cilia are present. (d) Instantaneous odor flux into the epithelium as a function of time for different $\lambda$, with (e) the maximum flux and (f) the time to reach it shown as functions of $\lambda$. Dashed lines show the corresponding values without cilia.}
+\label{fig:cilia}
+\end{figure*}
+
+So far we have assumed a constant odor value at the entrance of the olfactory chamber. Often odor released from distal olfactory targets travels across randomly fluctuating flows and reaches the nose in random ephemeral whiffs. To mimic this condition, we consider an instantaneous minute odor whiff located at the center of the inlet. For $\Rey=0$, the process is purely diffusive and half of the odor diffuses into the cylinder while the rest diffuses outside. Because the flow vanishes, for long cylinders with length $L\gg R$, upon waiting long enough all of those molecules reach the epithelium giving us a baseline of 50\% long-time adsorption efficiency (Fig.~\ref{fig:pulse}a). As the flow rate increases, the odor gets transported into the cylinder, thus reducing the diffusive loss outside the cylinder. Furthermore, the increased diffusion to the wall reduces the adsorption time (Fig.~\ref{fig:pulse}b). While in air, adsorption happens on the timescale of milliseconds, in water the process remains too slow even for an odor pulse (Fig.~\ref{fig:pulse}b).
+
+Interestingly, there exists an optimal flow rate, or $\Rey$ in the nondimensional form, that maximizes adsorption (Figs.~\ref{fig:pulse}c and \ref{fig:si:pulse}). Since $\mathrm{Pe}=\Rey\Sc$, the optimal $\Rey=\Rey_\mathrm{opt}$ will change such that $\Rey\Sc$ remains a constant. The value of this optimal $\Rey$ can be motivated from the following calculation. For an odor pulse advected through the cylinder, wall adsorption is controlled by radial diffusion towards the adsorbing boundary. The relevant exposure time is the residence time of the patch, after which advection carries it out of the domain. Thus, maximum adsorption is expected when the advective residence time and the radial diffusion time are comparable,
+\begin{equation}
+\frac{L}{U}\approx \frac{R^2}{D}.
+\end{equation}
+This yields the scaling
+\begin{equation}
+\Rey_{\mathrm{opt}}\approx \frac{1}{\Sc}\frac{L}{R}.
+\end{equation}
+In Appendix~\ref{app:instantaneous}, we refine this argument using the mean absorption location and obtain the corrected estimate
+\begin{equation}
+\Rey_{\mathrm{opt}}\approx \frac{8}{3}\frac{L}{R}\frac{1}{Sc}.
+\end{equation}
+
+Over the long timescales relevant to water, the instantaneous flux into the epithelium may be a better proxy for detection than the cumulative adsorbed amount, since sensory neurons adapt and respond to the rate at which odorant arrives rather than to an indefinitely accumulated dose. We therefore evaluate the flux $\diff N/\diff t$ (Fig.~\ref{fig:si:pulse_flux}). Its behavior mirrors that of the cumulative adsorption. The peak flux is maximized at an intermediate $\Rey$, while the time to reach it decreases with $\Rey$ before saturating (Fig.~\ref{fig:si:pulse_flux}b,c).
+
+Before incorporating the full morphology of the axolotl olfactory chamber, we ask whether an active mechanism can overcome the slow adsorption in water. The olfactory chambers of several fishes and amphibians are lined with motile cilia~\cite{reiten2017motile,ringers2023novel,ringers2019role,cox2013ciliary}, and in zebrafish larvae these cilia have been shown to draw odorant toward the sensory epithelium~\cite{reiten2017motile,ringers2023novel}. To test whether such cilia can solve the slow adsorption in water, we line the inner wall of the cylinder with cilia whose tips trace a circle of radius $\varepsilon R$, with $\varepsilon = 0.01$, beating metachronally with wavelength $\lambda$ and frequency $f$. We fix $f=25$\,Hz, consistent with observations in the olfactory pit of zebrafish larvae~\cite{reiten2017motile} and vary the wavelength $\lambda$ in the range $0.1 \leq \frac{\lambda}{R} \leq 5$. Details of the model are given in Appendix~\ref{app:cilia}.
+
+The ciliary motion produces a maximum radial velocity $2\pi\varepsilon R  f$ at the wall, and the resulting flow has a penetration depth $\delta$ set by the beat wavelength, $\delta = \lambda/2\pi$ (Eq.~\eqref{eq:cilia_final}). As expected, this motion drives flow toward the epithelium (Fig.~\ref{fig:cilia}a). To quantify its effect, we evaluate the adsorption efficiency in a chamber with cilia-generated flow (Fig.~\ref{fig:cilia}b). Ciliary beating substantially increases odor adsorption, and the efficiency grows with $\lambda$. The cilia also speed up capture, reducing the adsorption time by about a factor that depends on the wavelength $\lambda$
+(Fig.~\ref{fig:cilia}c). Ciliary pumping can also substantially increase the instantaneous odor flux into the epithelium (Fig.~\ref{fig:cilia}d,e), while reducing the time needed to reach this maximum (Fig.~\ref{fig:cilia}f).
+
+Our model assumes axisymmetric flow, which by construction gives zero radial velocity on the axis, so an odor pulse on the axis must still cross a diffusive layer to reach the ciliary flow. Non-axisymmetric beating would break this constraint, generating richer flow patterns that could enhance adsorption further. Together, these results show that active ciliary pumping can lift adsorption above the passive limit set by the medium, providing a mechanism by which aquatic olfaction may become viable albeit still slow relative to olfaction in air. 
+
+Let us now evaluate to what extent incorporating the actual geometry of the axolotl olfactory chamber affects the results. To this end, we solve Eqs.~\eqref{eq:ns}-\eqref{eq:advection_diffusion} within two distinct domains, corresponding to the morphologies of reconstructed aquatic and terrestrial chambers. Within the aquatic morphology at the largest Schmidt number accessible through direct numerical simulations ($\Sc=100$), odor concentration remains high throughout most of the chamber, indicating that a substantial fraction of the odor %field 
+travels %passes 
+in water along the chamber without reaching the wall (Fig.~\ref{fig:cfd}a). Note that due to computational constraints we limit our full simulation to Sc=100 although in water, typical Sc values for volatile compounds exceed 1000. In contrast to the aquatic problem, the terrestrial chamber in air strongly depletes the odor field along the passage (Fig.~\ref{fig:cfd}b).  But do these differences depend on the two distinct morphologies, or rather on the fluid environment (i.e.~air \emph{vs} water)? 
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_cfd.pdf}
+\caption{Direct numerical simulations in reconstructed axolotl chambers match the cylindrical model and reveal the spatial structure of wall adsorption (a) Odor concentration within the aquatic morphology %chamber 
+at $\Sc=100$ with a steady odor source, fixing $\Rey=2.1$. The concentration (color coded) remains high over most of the chamber, showing that much of the odor field travels through the chamber without reaching the epithelium. White arrows show the velocity field. (b) Odor concentration within the terrestrial morphology %chamber 
+at $\Sc=1$. The odor field quickly reaches the epithelium where it is adsorbed, causing a strong depletion within the bulk of the chamber. (c) Odor molecules per unit surface reaching the surface in a unit time, $J=|D\nabla c\cdot\hat{\mathbf{n}}|$, in the aquatic chamber and (d) in the terrestrial chamber, projected onto the visualization plane. The boundary color shows $J$ normalized with the maximum flux. The inner color shows the odor field. Consistent with (a) and (b), most of the adsorption occurs immediately near the entrance in air, whereas it occurs throughout the chamber in water. (e) Adsorption efficiency as a function of $\Sc$ for the aquatic chamber. 
+The cylindrical theory from Fig.~\ref{fig:cylinder} is shown for reference, together with direct numerical simulations for continuous and sinusoidal inhalation. 
+}
+\label{fig:cfd}
+\end{figure*}
+
+In fact, the exact morphology of the chamber does not affect how much or how fast odor is adsorbed.
+Indeed, the full simulations with constant odor inflow, with the detailed morphologies of the chambers follow closely the cylindrical prediction, across the range of Schmidt numbers that can be resolved directly (Fig.~\ref{fig:cfd}e). Both continuous and sinusoidal inhalation yield nearly complete adsorption at $\Sc\lesssim 10$. As $\Sc$ increases, adsorption drops rapidly. Furthermore, continuous and sinusoidal inhalation show quantitative agreement, suggesting that flow variation due to sinusoidal inhalation does not increase adsorption. The agreement between the full simulations and the cylindrical theory confirms that the leading-order behavior is controlled by the competition between axial advection and transverse diffusion. 
+
+The full simulations also reveal where odor molecules would hit the olfactory epithelium lining the chamber wall. The in-plane projection of the boundary flux, shows a non-uniform distribution (Fig.~\ref{fig:cfd}c,d). Aquatic olfaction displays an overall poorer adsorption, distributed across the whole chamber; in contrast, terrestrial olfaction concentrates a large flux predominantly near  the entrance of the chamber. The uneven regions where odorant molecules hit the epithelium suggest that ultimately sensation may increase if olfactory sensory neurons localize strategically closer to the opening for terrestrial animals and throughout the chamber in aquatic animals.
+
+Odors differ widely in their saturated concentrations, set by their solubility in water and their volatility in air. Can the inefficiency of the passive chamber be overcome by large odor concentrations alone, without active pumping? To address this, we first compute the saturated concentration of a panel of molecules associated with aquatic and aerial sensing (Table~\ref{tab:molecules}). The total adsorption rate (moles per unit time) for a constant source is obtained by multiplying the adsorption efficiency $\phi/\phi_0$ by the incoming odor flux $\phi_0 = c_0 U \pi R^2/2$, evaluated at the saturated concentration $c_0$ of each molecule (see Sec.~\ref{sec:si:molecules} in the Supporting Information). The resulting adsorption rates at saturation are shown as $\phi_{\rm air}$ against $\phi_{\rm water}$ (Fig.~\ref{fig:molecules}a), spanning several orders of magnitude. Clearly, in realistic scenarios odor is much more diluted than its maximum concentration at saturation, thus these values should be considered upper bounds on the number of molecules that a passive chamber can deliver to the epithelium in each medium. In particular, they are more relevant for chemosensation from a very close distance.
+Under these saturated conditions and despite the large inefficiency of olfaction in water, the sheer number of molecules hitting the epithelium is extremely large, both in air and in water. But do large concentrations also speed up odor adsorption?
+
+To ask whether higher availability can compensate for slow adsorption in passive chambers in water, we define a detection threshold $N_t$, the cumulative number of molecules that need to reach the epithelium to trigger a neural response, 
+and let $N_0$ be the amount of odor molecules delivered near the inlet. At times much shorter than the diffusion time, the amount adsorbed has the closed form (see Sec.~\ref{sec:si:short_time_limit})
+\begin{equation}
+    N \approx 2N_0\, e^{-t_D/(4t)}, \qquad t_D = \frac{R^2}{D},
+    \label{eq:adsorption_short_time}
+\end{equation}
+where $t_D$ is the diffusion time. Setting $N(t^*) = N_t$ gives the detection time
+\begin{equation}
+    \frac{t^*}{t_D} = \frac{1}{4\log 2\alpha}, \qquad \alpha \equiv \frac{N_0}{N_t}.
+    \label{eq:detection_time}
+\end{equation}
+Equation~\eqref{eq:detection_time} holds while $t^* \ll t_D$, which requires $\alpha \gtrsim 10$. This is a reasonable assumption for proximal sensing since for the odorants considered here, saturated concentrations exceed reported detection thresholds by factors $\alpha \sim 10^{9}$ to $10^{13}$ (Sec.~\ref{sec:si:timescale_adsorption_limits}).
+
+Availability therefore enters only through $\log\alpha$, and the resulting gains are relatively minimal (Fig.~\ref{fig:molecules}b). Across a range spanning four orders of magnitude in $\alpha$, the detection time falls by only a factor of four. Note, however, that these gains become sizable when considering odors at saturation, potentially relevant when olfaction is used as a proximal sense. 
+A related calculation using a threshold on the instantaneous adsorbed flux rather than the accumulated amount also yields the same conclusion (Sec.~\ref{sec:si:timescale_adsorption_limits} in the Supporting Information). Thus, only extremely large concentrations can speed up adsorption sensibly.
+
+To ask whether these expectations are reflected in axolotl behavior, we analyze the respiratory and olfactory behavior of axolotls in the aquatic and terrestrial phases. Consistent with our finding that inhalation flow does not improve olfaction in the aquatic phase (Fig.~\ref{fig:pulse}c), the aquatic inhalation flow is negligible (Fig.~\ref{fig:experimental}a left), whereas in the terrestrial phase the animals draw substantial flows, $\sim$\SI{1}{\centi\meter\per\second} in the center of the chamber (Fig.~\ref{fig:experimental}a right). Since the inlet cross-section is roughly an order of magnitude smaller than that of the chamber, mass conservation implies correspondingly higher speeds at the inlet, which is the relevant location for adsorption of an odor pulse, placing them in the range where adsorption is appreciably enhanced (Fig.~\ref{fig:pulse}c). Given the inefficiencies of olfaction in water, we wondered whether axolotls before transition do respond to odor at all. To test this, we measured the response of axolotls to an odor stimulus introduced directly near the nasal inlet. We measured a visible response consisting in a sudden turn of the head, a head snap. The number of head snaps increases markedly when  odor stimuli derived from prey are present relative to housing water (Fig.~\ref{fig:experimental}b), confirming that axolotls detect and respond to odor.  Together, the negligible aquatic inhalation and the clear behavioral response suggest that axolotls may speed up odor detection by active mechanisms like motile cilia, and potentially respond to extremely high concentrations. 
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\columnwidth]{figures/fig_molecules.pdf}
+\caption{When the olfactory target is close and odor is near saturation, a large number of odor molecules are adsorbed, despite inefficiencies in the process. However, higher concentrations do not help with detection speedup.
+(a) Comparison of the adsorption rate in air, $\phi_{\rm air}$, with the adsorption rate in water, $\phi_{\rm water}$, obtained by combining the saturated molecular concentration with the hydrodynamic adsorption efficiency. The dashed line denotes equal adsorption rates in the two media. Red triangles indicate molecules expected to be sensed in air, whereas blue circles indicate molecules expected to be sensed in water. (b) Normalized odor detection time $t^*/t_D$ as a function of increase in concentration near the inlet. An increase in the concentration by a factor of $10^4$ only speeds up detection by about four times.}
+\label{fig:molecules}
+\end{figure}
+
+\section{Discussion}
+\label{sec:discussion}
+
+The cylindrical theory and the full simulations lead to the same conclusion. Odor adsorption in an olfactory chamber, in the absence of active mechanisms or turbulent mixing, is controlled primarily by diffusion; $\Rey$ sets the ceiling on how much odor can be adsorbed from an ephemeral whiff. For a given $\Rey$, at small $\Sc$, diffusion across streamlines is fast enough that the wall can adsorb nearly all incoming odorant. At high $\Sc$, diffusion is too slow to supply the wall during the advective residence time, so odor remains in the core of the flow and exits the chamber. The actual aquatic and terrestrial geometries modify the details, but they do not change the dominant scaling.
+
+This conclusion helps clarify why aquatic olfaction is a difficult physical problem. Even if aquatic animals draw more odor-containing water through the chamber, the increasing flow rate also reduces residence time and lowers capture efficiency. The animal can instead reduce flow rate, but this also lowers the incoming odor flux. 
+For an instantaneous odor pulse, we have shown that there is an optimal flow rate that maximizes adsorption efficiency and at this optimal flow rate, most of the odor whiff eventually reaches the epithelium. However, even at this optimal flow rate, the time required to achieve that maximum efficiency is tens of seconds in water, compared to ms in air. No passive adjustment of the flow, in the absence of turbulent mixing, escapes this trade-off: efficient aquatic sensing at small $\Rey$ requires an active mechanism that raises adsorption without paying the residence-time cost.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_experimental.pdf}
+\caption{Axolotls in the aquatic phase show very weak inhalation but respond to odor with head movements. (a) Inhalation flow for three aquatic (left) and three terrestrial (right) axolotls. Aquatic flow is near zero, whereas terrestrial animals display strong inhalation. (b) Number of head snaps in the presence and absence of odor. Points are individual trials. The square and bars show the mean and the orange line the median. Head snapping increases markedly when odor is present.}
+\label{fig:experimental}
+\end{figure*}
+
+This trade-off is what makes active pumping powerful as a general mechanism to speed up odor adsorption in aquatic organisms. Metachronal waves generated by beating cilia drive fluid radially, toward the absorbing wall, rather than only along the chamber axis. They therefore enhance the cross-stream transport that limits adsorption at high Sc. Our model shows that cilia of size $\sim1\%$ of the radius, beating in metachronal waves, substantially increase adsorption efficiency and odor flux towards the epithelium. The speed-up resulting from metachronal waves depends heavily on the wavelength of the wave. Long wavelengths require cilia over many millimeters to be synchronized. In axolotls, the olfactory epithelium contains motile ciliated cells~\cite{eisthen1994anatomy}, and in zebrafish, ciliated cells have been shown to generate a flow that improves olfactory sensitivity~\cite{reiten2017motile}. However, whether the axolotl olfactory cilia synchronize in metachronal waves is not known. More work is needed to quantify this key parameter and fully establish the speed-up of olfactory adsorption resulting from cilia beating in aquatic organisms.
+
+Using a concentration threshold of $c_{thr}=10^{-14}\,M$~\cite{scott2019spermine}, saturated concentrations of $c_0\sim 10^{-5}\, M$ to $10^{-1}\, M$ as well as metachronal waves with $\lambda/R$ ranging from $0$ (no cilia) to 2, we obtain that the timescale for odor adsorption ranges from $0.6$ s to $2.7$ s (also see Sec.~\ref{sec:si:timescale_adsorption_limits} in the Supporting Information). This estimate shows that in the presence of cilia, aquatic olfaction can function at least as a proximal sense, but -- interestingly -- it sets a constraint on olfactory responses to be relatively slow. In fact, olfactory sampling in aquatic animals is comparatively slow~\cite{spors2012illuminating}, consistent with the fundamental physical constraints on how fast sensation can be in water.
+
+A separate, spatial feature of our simulations is that odor delivery to the epithelium is heterogeneous, and the high-flux regions differ between the aquatic and terrestrial chambers. This aspect is particularly important considering that we have not modeled the fascinating process of odor binding, which will further decrease the efficiency of olfaction. The dwelling time of odorant molecules near receptors is on the order of ms, requiring many odorant molecules to trigger a response~\cite{bhandawat2005elementary}. This suggests that to maximize efficiency of odorant binding, receptors may be concentrated in regions where odor molecules more probably hit the epithelium. To what extent this adaptation is present in axolotls and aquatic organisms is not known.
+
+If aquatic olfaction was used as a proximal sense, more akin to taste, then the targets would be much closer and therefore more concentrated. Sensing these targets is easier because of the sheer number of molecules entering the chamber. The process remains as wasteful and inefficient independently of how concentrated the target is, but reaching a fixed threshold of molecules hitting the epithelium is faster for concentrated targets. This speedup resulting merely from proximity is extremely small, requiring orders of magnitude of concentration increase for appreciable effects to occur.
+
+Several additional mechanisms could increase aquatic adsorption beyond the flow values reported here. Longer residence times could be obtained by temporary retention of water inside the chamber or recirculating flow, as has been observed for some aquatic organisms~\cite{cox2008hydrodynamic}. Also, studies have shown that near-wall transport in marine organisms could be enhanced by active deformation of the chamber wall or jaw protrusion~\cite{cox2008hydrodynamic,nevitt1991fish}. Another mechanism to ventilate the olfactory chamber and to introduce fluctuations is through the motion of the organism~\cite{garwood2019olfactory}. These mechanisms are not alternatives to the hydrodynamic constraint identified here. Rather, they are possible biological responses to it.
+
+The present model has several limitations. The wall is treated as perfectly absorbing, so the computed efficiencies are upper bounds on passive capture, and the simulations use an idealized flow structure. Despite these simplifications, the central result is robust: the water-air contrast in Schmidt number imposes a severe transport penalty on aquatic odor adsorption, one that passive geometry alone cannot remove but that active mechanisms such as ciliary pumping can partially relieve. Our behavioral experiments and inhalation measurements support this picture. Axolotls respond to proximal odor cues yet draw almost no inhalation flow in water, consistent with our finding that passive flow cannot rescue aquatic capture and pointing instead to an active mechanism, plausibly the motile cilia lining the olfactory chamber. This limitation of aquatic olfaction is not specific to the axolotl. Because it follows from the low diffusivity of odorants in water, any small aquatic sniffer that cannot generate turbulence faces the same penalty. Active pumping is one way out, but how far morphological specialization and behavior can further offset the inefficiency of aquatic olfaction remains to be established.
+
+\section*{Author Contributions}
+MJ, LSR, NWB and AS contributed to the design of the research. MJ developed the theory, conducted the simulations and analyzed the resulting data. LSR and MS conducted the experiments and analyzed the corresponding data. FV wrote the DNS code, which MJ adapted for the present study. All authors contributed to the interpretation of the results. MJ and AS wrote the manuscript with input from coauthors.
+
+\begin{acknowledgments}
+This research was supported by grants to AS from the European Research Council under the European Union’s Horizon 2020 research and innovation programme (grant agreement number 101002724 RIDING) and the National Institutes of Health under award number R01DC018789. The European Commission and the other organizations are not responsible for any use that may be made of the information it contains.
+\end{acknowledgments}
+
+% Before appendix
+\makeatletter
+\let\saved@hangfrom@section\@hangfrom@section
+\let\saved@sectioncntformat\@sectioncntformat
+\makeatother
+
+\newcounter{savesection}
+\setcounter{savesection}{\value{section}}
+
+\appendix
+
+\section{Methods}
+\label{app:methods}
+
+\noindent \textbf{Governing equations}
+
+We consider odor transport in an incompressible velocity field $\bs{u}(\bs{x},t)$. The fluid motion is described by
+\begin{align}
+\frac{\partial \bs{u}}{\partial t}+\left(\bs{u}\cdot\nabla\right)\bs{u} &=-\frac{1}{\rho}\nabla p+\nu\nabla^2\bs{u},\label{eq:ns}\\
+\nabla\cdot\bs{u} &=0, \nonumber
+\end{align}
+where $p$ is pressure, $\rho$ is density and $\nu$ is kinematic viscosity. The odor concentration $c(\mathbf{x},t)$ obeys
+\begin{equation}
+\frac{\partial c}{\partial t}+\bs{u}\cdot\nabla c=D\nabla^2 c,
+\label{eq:advection_diffusion}
+\end{equation}
+where $D$ is the molecular diffusivity. The Schmidt number is $\Sc=\nu/D$. We consider two different initial conditions for the odor. In the first, the inlet concentration is fixed at $c_0$. In the second, we use an instantaneous odor pulse at the inlet. The chamber wall is treated as a perfectly absorbing surface, $c=0$. The adsorption rate can be computed from the diffusive flux into the wall,
+\begin{align}
+\phi(t)=\int_{\Gamma_w}D\,\left|\nabla c\cdot\hat{\mathbf{n}}\right|\,\diff S, 
+\label{eq:wallflux}
+\end{align}
+where $\Gamma_w$ is the absorbing wall and $\hat{\mathbf{n}}$ is the wall normal. 
+When the inlet concentration is fixed at $c_0$, we normalize this rate using the net incoming odor flux
+\begin{equation}
+\phi_0=\int_{\Gamma_{\rm in}}c_0\,\mathbf{u}\cdot\hat{\mathbf{n}}_{\rm in}\,\diff S,
+\label{eq:incoming_flux}
+\end{equation}
+so that $\phi/\phi_0$ is the fraction of incoming odorant molecules adsorbed during one passage through the chamber. Integrating $\phi$ over time gives the total odor 
+\begin{equation}
+N(T)=\int_0^T\phi\,\diff t
+\label{eq:odor_total}
+\end{equation}
+adsorbed until time $T$. When the inlet concentration is fixed at $c_0$, $N$ is normalized using 
+\begin{equation}
+N_0=\int_0^T\phi_0\,\diff t.
+\label{eq:odor_total_initial}
+\end{equation}
+For the instantaneous odor pulse, $N$ is normalized using the total amount of initial odor 
+\begin{equation}
+N_0=\int_V \left.c\right|_{t=0}\,\diff V,
+\end{equation}
+where $V$ is the domain volume.
+
+In the steady state, when the inlet concentration is fixed at $c_0$, the odor flux can be computed from the difference between the incoming and outgoing fluxes,
+\begin{align}
+\phi= \int_{\Gamma_{\rm in}}c_0\,\mathbf{u}\cdot\hat{\mathbf{n}}_{\rm in}\,\diff S - \int_{\Gamma_{\rm out}}c\,\mathbf{u}\cdot\hat{\mathbf{n}}_{\rm out}\,\diff S.
+\label{eq:wallflux_steady}
+\end{align}
+
+\vspace{0.2in}
+\noindent \textbf{Cylindrical approximation}
+
+In the first part, we approximate the chamber as a cylinder of radius $R$ and length $L$ with an absorbing wall. The axial coordinate is $z$, the radial coordinate is $r$ and the axial velocity is assumed to follow a Poiseuille profile,
+\begin{equation}
+u_z(r)=U\left(1-\frac{r^2}{R^2}\right).
+\label{eq:poiseuille}
+\end{equation}
+Thus the concentration satisfies~\cite{barrera2016graetz,leal2007advanced}
+\begin{equation}
+\frac{\partial c}{\partial t}+U\left(1-\frac{r^2}{R^2}\right)\frac{\partial c}{\partial z}=D\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial c}{\partial r}\right)+\frac{\partial^2 c}{\partial z^2}\right].
+\label{eq:cylinder_dimensional}
+\end{equation}
+With $\theta=c/c_0$, $Y=r/R$, $T= tD/R^2$, $Z=z/R$ and Reynolds number $\Rey=UR/\nu$, Eq.~\eqref{eq:cylinder_dimensional} becomes,
+\begin{equation}
+    \frac{\partial \theta}{\partial T}
++
+\Rey \Sc(1-Y^2)\frac{\partial \theta} {\partial Z}
+=
+\frac{1}{Y}\frac{\partial}{\partial Y}\left(Y\frac{\partial \theta}{\partial Y}\right)
++
+\frac{\partial^2 \theta}{\partial Z^2}.
+\label{eq:cylinder_nondim}
+\end{equation}
+The relevant nondimensional parameter in this system is thus Pe = $\Rey\Sc$. However, in our analysis, we treat $\Rey$ and $\Sc$ separately to provide useful comparisons to biological systems. To obtain results presented in Fig.~\ref{fig:cylinder}, we solve Eq.~\eqref{eq:cylinder_nondim} with $\theta(Y,0)=1$, $\theta(1,Z)=0$ and $\partial_Y\theta(0,Z)=0$. Note that in the advective regime, when axial diffusion can be neglected, this is the classic Graetz problem~\cite{brown1960heat,shah2014laminar}. The results for an instantaneous odor pulse are evaluated by placing a Gaussian odor pulse of $\sigma = 0.1R$ at the center of a cylinder of length $2L$. Adsorption is evaluated in the downstream half of the cylinder. For numerically solving the cylindrical problem (Eq.~\eqref{eq:cylinder_nondim}), we use a finite volume method. Unless otherwise specified, we choose $R = 0.53$\,mm and $L/R=8.67$ to be consistent with the aquatic axolotl geometry. The radius is obtained by averaging the equivalent radius of the chamber cross-section at five axial positions, and the length is the centerline distance from the inlet to the outlet.
+
+
+The wall flux in the cylinder is evaluated, following Eq.~\eqref{eq:wallflux}, as
+\begin{equation}
+\phi = -\int_0^L 2\pi R D\left. \frac{\partial c}{\partial r}\right|_{r=R} \diff z.
+\label{eq:efficiency_cyl}
+\end{equation}
+When the inlet concentration is $c_0$, the adsorption efficiency $\phi/\phi_0$ becomes (Eq.~\eqref{eq:incoming_flux})
+\begin{align}
+\frac{\phi}{\phi_0} &=&& -\frac{\int_0^L 2\pi R D\left. \frac{\partial c}{\partial r}\right|_{r=R} \diff z}{c_0\int_0^R2\pi r u_z(r)\diff r}\nonumber\\
+&=&& -\frac{4}{\Rey\Sc}\int_0^\frac{L}{R}\left.\frac{\partial\theta}{\partial Y}\right|_{Y=1}\diff Z.
+\label{eq:adsorption_efficiency}
+\end{align}
+
+\vspace{0.2in}
+\noindent \textbf{Full-geometry direct numerical simulations}
+
+For the full numerical simulations, we use 3D reconstructions of the aquatic and terrestrial geometries. The Navier-Stokes equations are solved by three-dimensional direct numerical simulation using a semi-implicit second-order finite-difference scheme~\cite{viola2020fluid}. The chamber walls are imposed as no-slip, absorbing boundaries through an immersed boundary method~\cite{viola_2025}. Continuous inhalation is imposed by a steady inlet jet. For sinusoidal inhalation, the inlet speed is varied periodically with a period of $10\,\mathrm{s}$. The outlet is treated as an open boundary embedded in a larger computational domain. The odor concentration is fixed at the inlet, with an outflow condition at the outlet. The mean velocities normal to the midplane cross section are  1.7 mm/s and 7.2 mm/s for the aquatic and terrestrial chambers, respectively. We choose a nonzero inhalation speed in water, despite experiments showing negligible inhalation (Fig.~\ref{fig:experimental}a left), to get an upper bound on odor adsorption in water. For continuous inhalation, adsorption is evaluated using Eq.~\eqref{eq:wallflux_steady} after the solution reached a statistically stationary state. For sinusoidal inhalation, adsorption is evaluated using the average of Eq.~\eqref{eq:wallflux_steady} over one period after discarding the first ten cycles. 
+
+
+3D reconstructions of axolotl olfactory cavities were generated using animals that were deeply anesthetized with 1\% w/v MS-222 (Syncaine; Syndel) and euthanized by decapitation. Heads were fixed overnight in 4\% paraformaldehyde in phosphate buffered saline (PBS) and then transferred to 1\% phosphotungstic acid in 70\% ethanol and incubated for 14 days at 4$^\circ$C in complete darkness. Following incubation, samples were rinsed with PBS and secured with cheesecloth in a 50 mL conical tube with a small amount of PBS at the bottom to prevent samples from drying out. Samples were individually scanned on a SkyScan 1273 micro-computed tomography system (Bruker; voltage = 52 kV; current = 120 $\mu$A; pixel size = 9.00 $\mu$m), with a rotation step of 0.11$^\circ$. Reconstruction was performed using NRecon (v. 2.1.0.1) before individual scan files were combined into single image stacks using ImageJ. Olfactory cavities were reconstructed in 3D Slicer~\cite{fedorov20123d} using threshold-based selection, manually refined with the scissor and eraser tools to remove extraneous features.
+
+Measurements were collected using an airflow sensor (Honeywell, AWM3100V) attached to Silastic tubing (length: 5\,cm). The signal was digitized using a Digidata 1550B digitizer (Molecular Devices) using ClampEx software (Molecular Devices). Using a custom-written MATLAB (The MathWorks, Inc.) script, sensor voltage values were then converted to airflow using the manufacturer's calibration table. To represent bidirectional inhalation and exhalation, we mirrored the calibration curve, yielding flow as a function of time in standard cubic centimeters per minute (sccm). Using the Silastic tube's inner diameter (3\,mm), we then converted flow to average velocity in cm/s by dividing the flow by the tubing’s cross-sectional area. To directly compare aquatic and terrestrial animal inhalations, we calculated peak-to-peak flow and estimated breathing rate from the inhalation-dominant FFT peak, while treating very low-amplitude aquatic traces as no inhalation. 
+
+To assess behavioral responses to prey-derived molecules, black worms (10 grams; Eastern Aquatics, Inc.) were blended until homogeneous to produce a crude prey extract. Aquatic animals were then placed in a 1 L tank filled with 750\,mL of Holtfreter’s solution and allowed to adapt to the new aquaria for 10 min. Following adaptation, animals were presented with either 3 mL of crude prey extract or Holtfreter’s solution and behavior was filmed overhead using a GoPro camera (GoPro, Inc.) Later, trials were analyzed using BORIS software~\cite{friard2016boris} to quantify the number of head snaps following molecule delivery over a 3 min period.
+
+
+\section{Optimal adsorption of an odor patch inside a cylinder}
+\label{app:instantaneous}
+
+We are interested in evaluating the optimal flow rate to maximize the adsorption of an odor patch located at the center of the inlet. Eq.~\eqref{eq:cylinder_nondim} is our starting point. Our initial condition is a point source at the center of the inlet, given by
+\begin{equation}
+    \theta(Y,Z,T=0) = \frac{\delta(Y)\delta(Z)}{2\pi Y}
+\end{equation}
+such that the total odor integrates to unity. Let us find $\mathrm{Pe}=\Rey\Sc$ that maximizes odor adsorption onto the cylinder wall. For this, we can optimize the wall hit position $Z_w$ of an odor particle that starts at the inlet at time $T=0$ so that the mean wall hit position lies at the midpoint of the cylinder (i.e., $\mathbb E\left[Z_W\right] = \frac{L}{2R}$).
+To calculate this, let $T_w$ be the first time when an odor molecule hits the wall.
+\begin{equation}
+    Z_w = \Rey\Sc\int_0^{T_w}(1-Y_t^2)dt + B_{T_w},
+\end{equation}
+where $B_{T_w}$ is the axial stochastic motion, whose expectation is zero.
+
+To evaluate the expectation of the above function, we note that $\mathbb E\left[T_w\right]=\frac{1}{4}$ and $\mathbb E\left[\int_0^{T_w}(1-Y_t^2)dt\right]=\frac{1}{16}$~\cite{koralov2007theory}, resulting in the mean adsorption location of
+\begin{equation}
+    \mathbb E\left[Z_w\right] = \frac{3}{16}\Rey\Sc.
+\end{equation}
+Since we want this to be near the middle of the cylinder, we get
+
+\begin{equation}
+    \Rey\Sc=\frac{8}{3}\frac{L}{R}.
+\end{equation}
+
+\section{Cilia-driven flow and adsorption}
+\label{app:cilia}
+
+Inspired by previous works on hydrodynamics of ciliated surfaces~\cite{brennen1974oscillating,blake1971spherical}, we derive the equations for the flow and adsorption inside a ciliated chamber as follows. Let us again approximate the olfactory chamber as a cylinder of radius $R$ and length $L$. Assume that the inner surface of the cylinder is lined with cilia whose tips trace circular orbits of radius $\varepsilon R$, beating metachronally with wavenumber $k$ and angular frequency $\omega_f$. When $\varepsilon\ll 1$, we can approximate the wall boundary condition as the cilia tip velocity $u_r|_{r=R}=\varepsilon R\,\omega_f\cos(kz-\omega_f t)$ and $u_z|_{r=R}=\varepsilon R\,\omega_f\sin(kz-\omega_f t)$. 
+
+The unsteady Stokes equation for the fluid flow inside the cylinder can be written as~\cite{happel2012low}
+\begin{equation}
+    \partial_t\!\left(E^2\psi\right)=\nu\,E^4\psi,
+    \label{eq:stream_function}
+\end{equation}
+where $\psi$ is the stream function such that $u_z = \frac{1}{r}\partial_r\psi$ and $u_r = -\frac{1}{r}\partial_z\psi$, and $E^2\equiv\partial_r^2-\frac1r\partial_r+\partial_z^2$. We seek solutions with the same space and time dependence as the wall forcing
+\begin{equation}
+\psi(r,z,t)=\Re\left[\tilde\psi(r)\,\mathrm{e}^{\,i(kz-\omega_f t)}\right].
+\label{eq:psi_solution}
+\end{equation}
+Substituting this into Eq.~\eqref{eq:stream_function} and defining
+$\mathsf{L}\equiv\frac{\mathrm{d}^2}{\mathrm{d} r^2}-\frac1r\frac{\mathrm{d}}{\mathrm{d} r}-k^2$, we get
+\begin{equation}
+    \mathsf{L}\left(\mathsf{L}+\frac{i\omega_f}{\nu}\right)\tilde\psi = 0.
+    \label{eq:stream_function_final}
+\end{equation}
+
+Since both operators above commute, the general solution is the sum of the solutions of $\mathsf{L}\tilde\psi_1 = 0$ and $\left(\mathsf{L}+\frac{i\omega_f}{\nu}\right)\tilde\psi_2 = 0$, such that $\tilde\psi = \tilde\psi_1+\tilde\psi_2$. The full solution then has the form
+\begin{equation}
+    \tilde\psi = A\, r\,I_1(kr)+C\,r\,I_1(\kappa r),
+    \label{eq:cilia_final}
+\end{equation}
+where $I_1$ is the modified Bessel function of the first kind and $\kappa = \sqrt{k^2-\frac{i\omega_f}{\nu}}$. The coefficients $A$ and $C$ are obtained from the slip velocity at the boundary. Note that the $K_1$ solutions are discarded to keep the flow regular at the axis. To obtain the results presented in the main text, we solve Eq.~\eqref{eq:advection_diffusion} for the odor field, using the cilia-driven velocity field generated using Eq.~\eqref{eq:cilia_final} as the advecting flow.  
+
+\bibliography{references}
+
+\clearpage
+\pagebreak
+
+\widetext
+\begin{center}
+\textbf{\large Supporting Information: Amphibian water to land transition reveals physical limits of olfaction}
+\end{center}
+%%%%%%%%%% Merge with supplemental materials %%%%%%%%%%
+%%%%%%%%%% Prefix a "S" to all equations, figures, tables and reset the counter %%%%%%%%%%
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+%\setcounter{page}{1}
+\setcounter{section}{0}
+\makeatletter
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+% Return to normal sections
+\makeatletter
+\let\@hangfrom@section\saved@hangfrom@section
+\let\@sectioncntformat\saved@sectioncntformat
+\makeatother
+
+\renewcommand{\thesection}{S~\Roman{section}}
+\setcounter{section}{0}
+%%%%%%%%%% Prefix a "S" to all equations, figures, tables and reset the counter %%%%%%%%%%
+
+\section{Asymptotics of adsorption inside a cylinder and saturated adsorption rates of odorant molecules}
+\label{sec:si:molecules}
+
+We again use the cylindrical approximation (Eq.~\eqref{eq:cylinder_nondim}). In the advective regime, we can neglect the axial diffusion term and the equation becomes 
+\begin{equation}
+    \frac{\partial \theta}{\partial T}
++
+\Rey\Sc(1-Y^2)\frac{\partial \theta} {\partial Z}
+=
+\frac{1}{Y}\frac{\partial}{\partial Y}\left(Y\frac{\partial \theta}{\partial Y}\right).
+\label{eq:si:graetz}
+\end{equation}
+Eq.~\eqref{eq:si:graetz} is the classical Graetz model for an absorbing tube~\cite{brown1960heat,shah2014laminar}. For our estimations, we use the long and short tube limits, calculations of which are reproduced below for completeness.
+
+The general solution to Eq.~\eqref{eq:si:graetz} can be written in the form of the following expansion~\cite{brown1960heat,shah2014laminar},
+\begin{equation}
+\theta(Y,Z)=\sum_{n=1}^{\infty}A_n e^{-\lambda_n^2 \frac{Z}{\Rey\Sc}}\phi_n(Y),
+\label{eq:si:graetz_series}
+\end{equation}
+where $\phi_n(Y)$ are radial eigenfunctions and $\lambda_n$ are the corresponding eigenvalues. In the long-tube limit, $L\gg R\Rey\Sc$, the first mode dominates and the outlet concentration decays exponentially. The adsorption efficiency can then be approximated as
+\begin{equation}
+\frac{\phi(L)}{\phi_0}=1-0.819\exp\left(-7.3\frac{L}{R\Rey\Sc}\right),
+\label{eq:si:flux_longtube}
+\end{equation}
+where $\phi(L)$ is the total adsorbed flux until distance $L$. This limit is appropriate when diffusion has enough time to deplete the odorant over the chamber length.
+
+In the entrance-region limit, $L\ll R\Rey\Sc$, adsorption is controlled by a thin concentration boundary layer at the wall, as has been shown for the thermal boundary layer in the Graetz problem~\cite{newman1969extension}. The boundary-layer thickness, nondimensionalized by $R$, scales as
+\begin{equation}
+\delta(Z)=\left(\frac{9Z}{2\Rey\Sc}\right)^{1/3}.
+\label{eq:si:leveque_delta}
+\end{equation}
+The corresponding concentration profile is
+\begin{equation}
+\frac{c}{c_0}=\frac{1}{\Gamma(4/3)}\int_0^{\eta}e^{-\gamma^3}\,\diff\gamma,
+\qquad \eta=\frac{x}{R\delta(Z)},
+\label{eq:si:leveque_profile}
+\end{equation}
+where $x=R-r$ denotes the distance from the wall. Integrating the wall flux gives
+\begin{equation}
+\phi(L)\approx2\pi D c_0\left(R\Rey\Sc\right)^{1/3}L^{2/3}. \nonumber
+\end{equation}
+Then the adsorption efficiency becomes
+\begin{equation}
+\frac{\phi(L)}{\phi_0} = 4\left[ \frac{L}{R\Rey\Sc} \right]^\frac{2}{3}.
+\label{eq:si:flux_shorttube}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\linewidth]{figures/si/si_fig_pe_limits.pdf}
+\caption{Comparison of adsorption efficiency for the long tube (low Pe, Eq.~\eqref{eq:si:flux_longtube}) and short tube (high Pe, Eq.~\eqref{eq:si:flux_shorttube}) approximations with numerical results obtained by solving Eq.~\eqref{eq:si:graetz}, for the aquatic chamber geometry ($L/R=8.67$).}
+\label{fig:si:pe_limits}
+\end{figure}
+
+A comparison of the adsorption efficiency under the long and short tube approximations with the numerical solution of Eq.~\eqref{eq:si:graetz} is shown in Fig.~\ref{fig:si:pe_limits}. 
+
+Note that the amount of odor flowing into the chamber increases linearly with the flow rate $u$: $\phi_0 = c_0 \pi R^2 u$.
+Because the adsorption efficiency $\phi(L)/\phi_0$ decreases as $u^{-2/3}$ (from
+Eq.~\eqref{eq:si:flux_shorttube}), the  absolute adsorption $\phi(L)$ increases with flow rate (Fig.~\ref{fig:si:adsorption})
+\begin{equation}
+    \phi(L) = 2\pi \nu c_0 \left[R\Rey\right]^\frac{1}{3}\left[\frac{L}{Sc}\right]^\frac{2}{3}.
+    \label{eq:si:adsorption_limit}
+\end{equation}
+
+
+Table~\ref{tab:molecules} lists the odorants used to compute the saturated adsorption rates in Fig.~\ref{fig:molecules}. Figure~\ref{fig:molecules} features the absolute adsorption, $\phi(L)$, assuming $c_0$ is the %combines 
+saturated water and air concentrations. % with the hydrodynamic adsorption efficiency. 
+Saturated water concentrations are taken from reported water solubilities and saturated air concentrations are computed from reported vapor pressures using the ideal gas law. Values are obtained from PubChem~\cite{kim2025pubchem} or The Good Scents Company~\cite{goodscents}. To evaluate the absolute adsorption $\phi(L)$, we make use of the approximations given by Eqs.~\eqref{eq:si:flux_longtube} and \eqref{eq:si:flux_shorttube} in air and water, respectively, given their excellent agreement with the numerical results (Fig.~\ref{fig:si:pe_limits}). The approximations require $L$, Re and Sc for each molecule. Consistent with our experimental results, we choose $L = 4.6$\,mm. Reynolds number $\Rey = \frac{UR}{\nu}$ where $U$ is the maximum fluid velocity inside the olfactory chamber. We choose $U$ to be 3.4\,mm/s and 14.4\,mm/s in water and air, respectively, similar to our simulations using the full geometry. We deliberately choose a non zero value for aquatic inhalation although the measured value is negligible (Fig.~\ref{fig:experimental}a left). This helps us estimate whether, even with a generous choice for the inhalation speed, aquatic olfaction delivers sufficient odorants to the epithelium. Informed by the experimental results, we choose $R = 0.53$\,mm. We choose Sc to be 1 in air and 1000 in water.
+
+\section{Short time limit of adsorption inside a cylinder for an ephemeral odor source}
+\label{sec:si:short_time_limit}
+
+Consider an instantaneous point odor source placed at the center of a long cylinder with radius $R$, represented by a Dirac delta function. The source contains $N_0$ moles of odor that are released at time $t=0$. Since we are interested in the diffusive transfer towards the wall, we consider no flow inside the cylinder. The diffusivity is $D$ and the walls of the cylinder are perfectly adsorbing. We are interested in the short-time limit of the cumulative
+adsorbed odor $N(t)$ at time $t\ll \frac{R^2}{D}$. 
+
+Since axial and radial diffusion are independent and axial diffusion does not affect the probability of reaching the cylindrical wall, this problem simplifies to adsorption inside a 2D disk. In the absence of the wall, the diffusion equation has a solution for the two dimensional concentration of odor, $c_{\mathrm{free}} $,  of the form:
+\begin{equation}
+    c_{\mathrm{free}} = \frac{N_0}{4\pi Dt}e^{\left( -\frac{r^2}{4Dt} \right)}
+\end{equation}
+inside the disk, where $r$ is the radial coordinate. 
+
+The fraction of odor lying outside $R$ is then given by
+\begin{equation}
+    \frac{1}{N_0}\int_R^\infty 2\pi r c_{\mathrm{free}} \diff r = e^{\left( -\frac{R^2}{4Dt} \right)}.
+    \label{eq:si:prob_free}
+\end{equation}
+Eq.~\eqref{eq:si:prob_free} is also the probability $P_\mathrm{free}$ that a freely diffusing particle lies outside the disk at time $t$. However, since we have a perfectly adsorbing wall, we are interested in the probability of first hitting the wall by time $t$, $P_\mathrm{hit}$.  
+For a planar wall, an odor particle that has first reached the wall before time $t$ has an equal probability of wandering on either side of the wall, and being found 
+inside or outside the wall at time $t$, and thus $P_\mathrm{hit} = 2P_\mathrm{free}$. Although the wall is curved, at short times diffusion probes only a thin layer near the wall, over which its curvature is negligible and the wall can be treated as locally planar. Thus we assume this relation to hold.
+The short time, cumulative adsorbed odor $N$ is then given by
+\begin{equation}
+    N (t) \approx 2N_0 e^{\left( -\frac{R^2}{4Dt} \right)}.
+    \label{eq:si:adsorption_short_time}
+\end{equation}
+as presented in the main text (Eq.~\eqref{eq:adsorption_short_time}). Figure~\ref{fig:si:adsorption_short_time} compares this limit with the data presented in Fig.~\ref{fig:pulse}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/si/si_fig_adsorption_short_time.pdf}
+\caption{Comparison of the short-time limit of adsorption inside a cylinder with the numerical results for adsorption of a pulse source in water with $\Rey = 0.1$.}
+\label{fig:si:adsorption_short_time}
+\end{figure}
+
+\section{Sensing timescale}
+\label{sec:si:timescale_adsorption_limits}
+Here we evaluate how the timescale of detection of an instantaneous release of odor changes as a function of both the odor concentration at the inlet and the wavelength of the metachronal ciliary waves. In contrast to Sec.~\ref{sec:si:short_time_limit} and the corresponding discussion in the main text, where detection is set by the cumulative amount of odor adsorbed, we here adopt a threshold on the instantaneous adsorbed flux. Which of the two is the relevant criterion depends on how olfactory receptors integrate their input: a flux threshold is arguably the more natural choice if detection is triggered by the instantaneous rate at which odorant reaches the epithelium rather than by an accumulated dose, although establishing this for the axolotl remains an open question. 
+Starting from Eq.~\eqref{eq:si:adsorption_short_time}, the short-time limit for the adsorbed odor flux for an ephemeral source, $\phi(t)=dN/dt$, (not to be confused with the steady-state rate of adsorption $\phi$ for a permanent odor source) is
+\begin{equation}
+    \phi(t)\approx \frac{N_0t_D}{2t^2} e^{\left( -\frac{t_D}{4t} \right)} , \qquad t_D = \frac{R^2}{D}.
+    \label{eq:si:adsorption_flux_short_time}
+\end{equation}
+The flux is not monotonic in time. We therefore define the detection time $t^*$ as the first time at which $\phi$ reaches a threshold $\phi_t$, that is, the crossing on the rising branch. Equation~\eqref{eq:si:adsorption_flux_short_time} cannot be inverted in elementary form, so we obtain $t^*$ numerically. We are interested in how $t^*$ changes when the odor concentration outside the inlet is increased by a factor $\alpha$, which scales $N_0$ and hence $\phi$ by the same factor.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/si/si_fig_flux_limit.pdf}
+\caption{Speedup in odor detection from a pulse source, $t^*/t_\alpha^*$, when the inlet concentration is increased by a factor $\alpha$, with detection defined by a threshold on the instantaneous adsorbed flux. The orange curve is the numerical solution with Re = 0.1. The threshold when $\alpha = 1$ is the maximum flux in the numerical solution.}
+\label{fig:si:flux_limit}
+\end{figure}
+
+
+To estimate how much detection speeds up at higher concentration, we take a detection threshold of $10^{-14}$~M, motivated by behavioral measurements in aquatic systems~\cite{scott2019spermine}. At this lowest concentration, we can assume that the detection happens when the total odor flux into the wall $\phi(t)$ is maximized.
+Since the adsorbed flux is proportional to $N_0$, which is itself proportional to the concentration near the inlet, this fixes $\phi_t$. Within our panel of representative odors, saturated concentrations of water-sensed odorants range from $10^{-5}$~M to $10^{-1}$~M (Table~\ref{tab:molecules}), so the concentration exceeds the detection threshold by a factor $\alpha$ between $10^{9}$ and $10^{13}$. Over this range, Fig.~\ref{fig:si:flux_limit} gives a speedup between $10$ and $15$. Metachronal pumping contributes a further factor of about $3$ at $\lambda/R = 2$, consistent with the main-text results (Fig.~\ref{fig:cilia}), so the combined speedup spans roughly $10$ without cilia to $45$ with them. Taking the passive baseline as the time to maximum adsorbed flux in water, $\sim 27$~s (Fig.~\ref{fig:si:flux_max_time}), high concentration and ciliary pumping together bring proximal detection down to between $0.6$~s and $2.7$~s.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/si/si_fig_adsorption_short_time_flux.pdf}
+\caption{Total odor flux into the wall of a cylinder in water for an instantaneous odor pulse located at the inlet.}
+\label{fig:si:flux_max_time}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/si/si_fig_adsorption.pdf}
+\caption{Adsorption of odor inside a cylinder when the odor concentration at the inlet is fixed to a constant. (a) Adsorption efficiency of total odor, $N/N_0$, as a function of time for flows at different Re (solid lines) at Sc = $1000$. (b) Total adsorbed odor $N$, normalized with $N_{c_0} = C_0V$ where $V$ is the volume of the cylinder, as a function of time. Note that here $\nu$ and $R$ are kept fixed and $U$ is varied to achieve different $\Rey$.}
+\label{fig:si:adsorption}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/si/si_fig_pulse.pdf}
+\caption{Adsorption of an odor pulse located at the inlet of a cylinder. (a) Asymptotic adsorption efficiency $N_\infty/N_0$ as a function of Re with the lower axis giving Re in air ($\Sc=1$) and the upper axis Re in water ($\Sc=1000$). In water, $N_\infty/N_0$ achieves a maximum at very low Re. (b) Time to reach $N/N_0 = 0.1$ of the total odor as a function of Re. Even for the optimal Re, the time to reach $N/N_0 = 0.1$ takes over 20\,s in water.}
+\label{fig:si:pulse}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/si/si_fig_pulse_flux.pdf}
+\caption{Total odor flux into the walls of a cylinder for an instantaneous odor pulse, as a function of $\Rey$. (a) Odor flux as a function of time for different values of $\Rey$. (b) Maximum odor flux as a function of $\Rey$. The maximum increases with $\Rey$, eventually reaching a peak at an intermediate $\Rey$. (c) Time to reach a threshol flux as a function of $\Rey$.}
+\label{fig:si:pulse_flux}
+\end{figure}
+
+\begin{table*}[t]
+\caption{Panel of odor molecules used to estimate saturated water and air adsorption rates.}
+\label{tab:molecules}
+\begin{ruledtabular}
+\scriptsize
+\begin{tabular}{l c c c}
+Name & Saturated aqueous concentration (mol/L) & Saturated gas-phase concentration (mol/L) & Air or water sensed \\
+\hline
+Ethyl tiglate        & $4.71\times 10^{-2}$  & $2.30\times 10^{-4}$ & Air   \\
+Allyl tiglate        & $4.09\times 10^{-3}$  & $6.83\times 10^{-5}$ & Air   \\
+Hexyl tiglate        & $8.25\times 10^{-5}$  & $8.07\times 10^{-6}$ & Air   \\
+Methyl tiglate       & $3.34\times 10^{-2}$  & $7.20\times 10^{-4}$ & Air   \\
+Isopropyl tiglate    & $3.50\times 10^{-3}$  & $1.01\times 10^{-4}$ & Air   \\
+Citronellyl tiglate  & $1.62\times 10^{-6}$  & $1.97\times 10^{-7}$ & Air   \\
+Benzyl tiglate       & $3.25\times 10^{-4}$  & $4.30\times 10^{-7}$ & Air   \\
+Phenylethyl tiglate  & $3.23\times 10^{-4}$  & $4.19\times 10^{-8}$ & Air   \\
+2-Ethylhexanal       & $3.12\times 10^{-3}$  & $9.68\times 10^{-5}$ & Air \\
+Benzyl acetate       & $2.06\times 10^{-2}$  & $9.14\times 10^{-6}$ & Air   \\
+Salicylic acid       & $1.63\times 10^{-2}$  & $4.41\times 10^{-9}$ & Air   \\
+Phenylacetic acid    & $1.27\times 10^{-1}$  & $2.04\times 10^{-7}$ & Air \\
+4-Allyl anisole      & $1.20\times 10^{-3}$  & $2.69\times 10^{-6}$ & Air \\
+Ethyl valerate       & $1.70\times 10^{-2}$  & $2.55\times 10^{-4}$ & Air   \\
+Citronellal          & $2.52\times 10^{-4}$  & $1.51\times 10^{-5}$ & Air   \\
+(+)-Carvone          & $8.65\times 10^{-3}$  & $8.60\times 10^{-6}$ & Air   \\
+($-$)-Carvone        & $8.65\times 10^{-3}$  & $8.60\times 10^{-6}$ & Air   \\
+2-Methoxypyrazine    & $3.38\times 10^{-2}$  & $2.28\times 10^{-4}$ & Air   \\
+Isoeugenol           & $4.93\times 10^{-3}$  & $1.08\times 10^{-6}$ & Air \\
+Methyl valerate      & $4.36\times 10^{-2}$  & $9.84\times 10^{-4}$ & Air   \\
+Acetophenone         & $5.10\times 10^{-2}$  & $2.10\times 10^{-5}$ & Air   \\
+Phenyl acetate       & $3.41\times 10^{-2}$  & $2.14\times 10^{-5}$ & Air   \\
+Methyl benzene       & $5.71\times 10^{-3}$  & $1.53\times 10^{-3}$ & Air   \\
+Methyl salicylate    & $4.60\times 10^{-3}$  & $1.61\times 10^{-6}$ & Air   \\
+Nonyl acetate        & $5.83\times 10^{-5}$  & $1.06\times 10^{-5}$ & Water \\
+Octanoic acid        & $6.91\times 10^{-3}$  & $2.00\times 10^{-7}$ & Water \\
+Pentanol             & $2.50\times 10^{-1}$  & $1.18\times 10^{-4}$ & Water   \\
+Heptyl acetate       & $6.44\times 10^{-4}$  & $2.69\times 10^{-5}$ & Water \\
+Hexyl acetate        & $4.47\times 10^{-3}$  & $7.10\times 10^{-5}$ & Water \\
+Undecanoic acid      & $2.80\times 10^{-4}$ & $8\times 10^{-9}$  & Water \\
+Nonanol              & $1.23\times 10^{-3}$  & $1.08\times 10^{-6}$ & Water   \\
+Hexanol              & $5.77\times 10^{-2}$  & $4.95\times 10^{-5}$ & Water \\
+Decanoic acid        & $3.59\times 10^{-4}$  & $1.97\times 10^{-8}$ & Water \\
+Decanol              & $2.34\times 10^{-4}$  & $4.58\times 10^{-7}$ & Water   \\
+Octyl acetate        & $1.94\times 10^{-4}$  & $2.15\times 10^{-5}$ & Water \\
+Heptanoic acid       & $1.86\times 10^{-2}$  & $5.38\times 10^{-7}$ & Water \\
+Decyl acetate        & $1.76\times 10^{-5}$  & $1.87\times 10^{-7}$ & Water \\
+Heptanol             & $1.44\times 10^{-2}$  & $1.13\times 10^{-5}$ & Water \\
+Butanol              & $8.53\times 10^{-1}$  & $3.76\times 10^{-4}$ & Water \\
+Nonanoic acid        & $1.79\times 10^{-3}$  & $8.87\times 10^{-8}$ & Water \\
+Hexanoic acid        & $8.87\times 10^{-2}$  & $2.15\times 10^{-6}$ & Water \\
+%Butyric acid         & $6.81\times 10^{-1}$  & $8.87\times 10^{-5}$ & Water \\
+Ethyl propionate     & $1.88\times 10^{-1}$  & $1.93\times 10^{-3}$ & Water \\
+Propyl acetate       & $1.85\times 10^{-1}$  & $1.93\times 10^{-3}$ & Water \\
+Isobutyl propionate  & $8.22\times 10^{-3}$  & $3.92\times 10^{-4}$ & Water \\
+Allyl butyrate       & $9.62\times 10^{-3}$  & $2.39\times 10^{-4}$ & Water \\
+Methyl propionate    & $7.08\times 10^{-1}$  & $4.52\times 10^{-3}$ & Water \\
+Pentyl acetate       & $1.33\times 10^{-2}$  & $1.88\times 10^{-4}$ & Water \\
+Valeric acid         & $2.35\times 10^{-1}$  & $1.02\times 10^{-5}$ & Water \\
+Octanal              & $4.37\times 10^{-3}$  & $6.35\times 10^{-5}$ & Water   \\
+2-Hexanone           & $1.72\times 10^{-1}$  & $6.24\times 10^{-4}$ & Water \\
+Methyl butyrate      & $1.47\times 10^{-1}$  & $1.74\times 10^{-3}$ & Water \\
+2-Heptanone          & $3.75\times 10^{-2}$  & $2.07\times 10^{-4}$ & Water \\
+Butyl acetate        & $7.17\times 10^{-2}$  & $6.18\times 10^{-4}$ & Water \\
+Valeraldehyde        & $1.36\times 10^{-1}$  & $1.40\times 10^{-3}$ & Water \\
+Isoamyl acetate      & $1.54\times 10^{-2}$  & $2.70\times 10^{-4}$ & Water \\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+\end{document}

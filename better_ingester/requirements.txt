@@ -1,0 +1,26 @@
+# Runtime dependencies.
+#
+# The evaluation replays from the committed caches: .ocr_cache/ holds the
+# layout blocks for every corpus document, so paddlex/paddleocr are needed
+# only to ingest a NEW pdf, not to reproduce the reported numbers.
+
+# core pipeline + harness
+pypdfium2                 # PDF render + text layer
+markitdown[pdf]           # the BASE conditions' flat-markdown converter
+scipy                     # Kendall's tau, Wilcoxon (both have pure-python fallbacks)
+numpy
+pytest
+
+# layout detection — only needed to ingest a document not already in .ocr_cache
+# paddlepaddle
+# paddlex
+# paddleocr
+
+# the deferred PageIndex seam — mirrors
+# vendor/pageindex/requirements.txt. Not needed for anything scored.
+# openai
+# litellm==1.84.0
+# PyPDF2==3.0.1
+# pymupdf==1.26.4
+# python-dotenv
+# pyyaml

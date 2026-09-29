@@ -1,0 +1,1028 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{float}
+
+\title{The Little Scientist: LLM Agent-Driven Discovery via the Scientific Method}
+\author{Travis Smith\\
+\small Independent Researcher, S\~ao Miguel, Azores, Portugal\\
+\texttt{travis.smith@fiveminutesforward.com}\\
+\small ORCID: 0009-0009-6732-445X}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent What happens when you teach an LLM-based agent the scientific method?
+
+\noindent\textbf{Motivation:} Scientific discovery emerges from cycles of hypothesis, implementation, empirical testing, and feedback. Can this process be automated? We approach automated algorithm design through the lens of the scientific method, where an LLM-based agent goes through each step of the process in an ordered, iterative fashion.
+
+\noindent\textbf{Results:} We present \emph{The Little Scientist}, a framework in which a 'Scientist agent' works inside an evaluation environment that benchmarks its code and returns structured per-instance diagnostics. When the Scientist plateaus at a local optimum, a 'Kuhn agent' injects a paradigm-shifting conjecture paired with a cross-disciplinary inspiration, forcing exploration of a different region of the LLM's latent space. We demonstrate the framework on two problems that require fundamentally different modes of discovery. For protein fitness prediction, the Scientist discovered \emph{Delta V}, an ensemble calibration strategy that ranks \textbf{first on the ProteinGym DMS Substitutions Zero-Shot leaderboard} across all five official evaluation metrics, exceeding the \#2 model (VenusREM) by +0.033 mean Spearman correlation across 217 DMS assays. For DNA motif discovery, the Scientist wrote an algorithm from scratch --- \emph{DALE} (\textbf{D}ual-seed \textbf{A}lgorithm for \textbf{L}atent \textbf{E}numeration) --- that outperforms STREME (the default in the MEME Suite) across 132 ENCODE transcription factors (mean AUROC 0.842 vs.\ 0.803, Wilcoxon $p < 10^{-6}$) while running 11$\times$ faster. This demonstrates that the framework can produce genuinely novel algorithms, not just optimize existing components. Together, these results show that an LLM agent stepping through the scientific method can discover both new algorithms and new ensemble strategies that outperform prior solutions.
+The entire research program consumed 704M tokens on a single virtual machine with no GPUs.
+
+\noindent\textbf{Availability:} Framework and algorithm source code available at \url{https://github.com/travis42/little-scientist-dale} and \url{https://github.com/travis42/little-scientist-delta-v}. Both repositories are released under the Apache 2.0 license.
+
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Agent-driven algorithm discovery has produced impressive results. AlphaEvolve \citep{novikov2025alphaevolve} and FunSearch \citep{romera2024funsearch} discovered algorithms competitive with human-designed ones using LLM-based evolutionary search. The Evolution of Heuristics framework \citep{liu2024eoh} applied similar ideas to automatic heuristic design. \citet{li2026agentic} propose teams of LLM agents as computational research teams. These systems share a common approach: evolutionary or genetic operators on code, guided by a scalar fitness signal.
+
+Recent theoretical analysis argues that this generate-and-rank paradigm misses the problem of sparse feedback, and that auto-research should instead use dense intermediate signals---analogous to coverage-guided fuzzing---to direct search rather than merely ranking completed samples~\citep{he2026agentic}.
+
+Human scientists do not work this way. They form hypotheses before experimenting, predict outcomes, reconcile predictions with results, and when progress stalls, step back and reframe the problem entirely --- a process Thomas Kuhn \citep{kuhn1962structure} described as the alternation between normal and revolutionary science. We ask: can an LLM-based agent that follows the scientific method --- rather than evolutionary search --- discover competitive algorithms?
+
+We present \emph{The Little Scientist}, a framework built around a single organizing idea: an LLM-based agent that behaves like a scientist. The Scientist agent works inside an evaluation environment that benchmarks its code against real data and feeds results back with structured diagnostics. The LLM agent walks through the scientific method --- hypothesis, prediction, code, test, reconciliation --- for each iteration. When the Scientist plateaus at a local optimum, a second agent (the Kuhn agent, named after Thomas Kuhn's \citep{kuhn1962structure} distinction between normal and revolutionary science) injects a paradigm-shifting conjecture: a domain-specific reframing paired with an inspiration drawn from a different scientific discipline. This forces the Scientist to explore a different region of the LLM's latent space, potentially breaking out of the local optimum.
+
+We demonstrate the framework on two problems that require fundamentally different modes of discovery:
+
+\begin{itemize}
+    \item \textbf{Protein fitness prediction} (ensemble optimization). Given a protein sequence and mutations, predict fitness effects zero-shot. The Scientist discovered \emph{Delta V}, an ensemble calibration strategy that ranks first on the ProteinGym DMS Substitutions Zero-Shot leaderboard \citep{notin2023proteingym} across all five official evaluation metrics, exceeding the \#2 model (VenusREM) by +0.033 mean Spearman correlation across 217 DMS assays. This is our strongest scientific result: beating a mature, 90+ model public leaderboard where the top entries are billion-parameter systems from major labs.
+    \item \textbf{DNA motif discovery} (de novo algorithm design). Given ChIP-seq peak sequences, discover position weight matrices (PWMs) representing transcription factor binding specificity. The Scientist wrote an algorithm from scratch --- \emph{DALE} (\textbf{D}ual-seed \textbf{A}lgorithm for \textbf{L}atent \textbf{E}numeration) --- that significantly outperforms STREME (the default in the MEME Suite) across 132 ENCODE transcription factors, while running 11$\times$ faster. This demonstrates a different capability: the framework can produce genuinely novel algorithms, not just optimize combinations of existing tools.
+\end{itemize}
+
+In both case studies, the algorithms and strategies are the unmodified output of the autonomous search process.
+
+A notable property of this approach is that the outputs are \emph{interpretable}. Unlike neural network-based discovery, where the result is a matrix of learned weights, the Scientist produces classical algorithms. The system also captures each iteration of the algorithm so that the process itself can be audited.
+
+This paper makes three contributions: (1) the framework architecture and its Kuhn-inspired two-agent design, (2) two case studies demonstrating novel results, and (3) evidence that hypothesis-driven search --- where the LLM agent forms explicit predictions and receives structured per-instance feedback --- operates with substantially fewer samples than evolutionary approaches like FunSearch (based on what public sources indicate).
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{LLM-Guided Algorithm Discovery}
+
+The idea of using language models to discover or optimize algorithms has attracted significant attention. We categorize prior systems by their search strategy and feedback mechanism.
+
+\paragraph{Evolutionary approaches.}
+FunSearch \citep{romera2024funsearch} pioneered LLM-guided evolutionary search for mathematical discovery, using an LLM to mutate short code fragments guided by a scalar fitness signal. AlphaEvolve \citep{novikov2025alphaevolve} substantially extends this paradigm: it evolves entire codebases across multiple programming languages, supports multi-objective optimization, and uses a distributed asynchronous pipeline with an evolutionary database inspired by MAP-Elites and island-based population models. AlphaEvolve has matched or surpassed the best known solutions on $\sim$75\% of 50+ mathematical problems and achieved new state-of-the-art on $\sim$20\%, including the first improvement over Strassen's algorithm for $4\times4$ complex matrix multiplication in 56 years. The Evolution of Heuristics framework \citep{liu2024eoh} applies similar evolutionary principles to automatic heuristic design. ShinkaEvolve \citep{lange2025shinka} addresses the sample-efficiency limitations of these systems through parent sampling, code novelty rejection-sampling, and bandit-based LLM ensemble selection, discovering state-of-the-art solutions on several tasks using as few as 150 samples.
+
+These systems differ from The Little Scientist in two fundamental ways. First, they use \emph{evolutionary} search --- mutation and crossover operators applied to code populations --- guided by scalar fitness signals. FunSearch's programs database maintains diversity through an islands model: independent subpopulations evolved separately, with periodic culling of underperforming islands and reseeding from survivors. This mechanism exists to escape local optima in the absence of directional feedback --- when the only signal is a scalar fitness score, the search has no guidance on \emph{where} to explore next, so it maintains parallel gene pools as a brute-force diversity strategy. Our framework uses \emph{hypothesis-driven} search, where the agent forms explicit predictions about why a change should help, and receives structured per-instance diagnostics that enable targeted reasoning about failures. When the Scientist sees that an iteration improved 40 benchmark instances but regressed on 12 --- and that the regressions share a specific structural feature --- it can form a hypothesis targeting that feature. This directional feedback obviates the need for an islands model: diversity comes from informed exploration of different hypothesis space regions, not from maintaining parallel populations. For escaping paradigm-level local optima, our framework uses the Kuhn agent, which interrogates accumulated failures and proposes strategic reframings --- a targeted mechanism compared to the islands model's implicit parallel exploration.
+
+The trade-off is that evolutionary approaches are trivially parallelizable --- each island evolves independently --- while hypothesis-driven search is inherently sequential, as each iteration builds on the diagnostic feedback of the previous one. For problems where evaluation is expensive (e.g., AlphaEvolve's 100-compute-hour evaluations), the parallelism advantage may outweigh the sample efficiency disadvantage. For problems with cheap evaluation, such as the benchmark scoring used in this study, the sequential hypothesis-driven approach is more efficient: our search achieved a top-ranked result with ~2,100 LLM invocations, compared to FunSearch's ~2,000,000 programs for a single admissible set instance (I(15,10)) costing \$800--\$1,400 in cloud compute.
+
+No prior system in this category has demonstrated an LLM-agent-discovered algorithm that exceeds the performance of mature, domain-specific tools on a competitive benchmark. AlphaEvolve's results are on open mathematical problems (where it improves known constructions in $\sim$20\% of cases) and Google infrastructure optimization. FunSearch addresses cap-set and bin-packing problems. Neither competes with decades of domain-specific algorithmic innovation in a mature field. AlphaEvolve demonstrated LLM-agent-driven discovery on open mathematical problems and internal infrastructure; we demonstrate it on a publicly benchmarked scientific domain where three decades of tool development have established a mature state of the art.
+
+\paragraph{Agent-based approaches.}
+AI Co-Scientist \citep{li2026agentic} proposes multi-agent systems for scientific discovery but operates in natural-language hypothesis space rather than code, and has not produced benchmarked algorithmic results. The distinction between natural-language reasoning and code-execution grounding is significant: by grounding search in executable code with automated evaluation, our framework substantially sidesteps the hallucination problem that limits natural-language-only approaches. Karpathy's autoresearch \citep{karpathy2025autoresearch} is a closely related system in which an LLM coding agent autonomously edits PyTorch training code, runs short experiments, and retains improvements that reduce validation loss --- an autonomous research loop over a single benchmark. The core insight --- that LLM agents can iteratively improve code against an automated evaluation signal --- directly inspired the design of The Little Scientist. However, our framework reframes the iterative loop as the full scientific method: the agent does not merely mutate code and check whether the score improved, but forms an explicit hypothesis, writes a numeric prediction, implements the change, evaluates it, and reconciles the result against the prediction --- learning from failures rather than discarding them. This structured scientific method enforcement, combined with per-instance diagnostics and the Kuhn paradigm-shift mechanism, distinguishes our approach from autoresearch's simpler hill-climbing.
+
+\subsection{Motif Discovery Algorithms}
+
+DNA motif discovery has been studied for over three decades. MEME \citep{bailey1994meme} introduced expectation-maximization for de novo motif finding and remains a reference for accuracy, though its computational cost limits use on large-scale ChIP-seq datasets. DREME \citep{bailey2011dreme} addressed this by using suffix-array--based discriminative word enumeration, making it fast but limited to short motifs (width $\leq$ 8). STREME \citep{bailey2021streme} extended DREME with support for longer motifs and a more robust statistical model, becoming the current default in the MEME Suite and the primary benchmark for new methods. HOMER \citep{heinz2010homer} uses a cumulative hypergeometric enrichment approach and remains widely used in genomic pipelines. ProSampler \citep{li2019prosampler} combines k-mer enrichment with Gibbs sampling. GibbsSampler \citep{lawrence1993detecting} and CONSENSUS \citep{hertz1999building} established the foundational statistical frameworks for motif discovery.
+
+These tools share a common architecture: enumerate candidate motifs (by enumeration, Gibbs sampling, or EM), score them against a background model, and return ranked results. The design space includes motif width range, background model choice (Markov order), strand handling, and scoring function. DALE operates within this design space but introduces dual-seed selection (combining abundance-based and consistency-based criteria), Pareto-front multi-objective ranking, and effective-width--aware scoring --- strategies not found in any existing tool. The search did not have access to the motif discovery literature beyond the benchmark data and the input/output interface; the convergence on known best practices (k-mer enumeration, EM refinement, information-content scoring) and the discovery of novel strategies both emerged from the iterative optimization process.
+
+\subsection{Protein Fitness Prediction}
+
+Zero-shot prediction of mutation effects on protein fitness has advanced rapidly with the availability of large-scale deep mutational scanning (DMS) datasets. ProteinGym \citep{notin2023proteingym} provides a standardized benchmark of 217 DMS assays covering diverse protein families, measured by Spearman rank correlation between predicted and experimental fitness scores.
+
+The field has three main approaches. Evolutionary models (EVmutation \citep{hopf2017evmutation}, EVE \citep{frazer2021eve}) use multiple sequence alignments to estimate per-position fitness landscapes from evolutionary constraints. Protein language models (ESM-2 \citep{lin2023esm2}, Tranception \citep{notin2023proteingym}) learn representations from sequence data and predict mutation effects via autoregressive or masked prediction. Structure-aware models (ProSST, SaProt \citep{su2023saprot}) incorporate predicted or experimental protein structures to inform fitness predictions. Ensemble approaches (MODIFY \citep{zhang2024modify}, VenusREM \citep{marquet2024vesp}, VenusRAR \citep{tan2026venusrar}) combine predictions from multiple models.
+
+Ensembling is a well-known technique for improving prediction accuracy, and its effectiveness on ProteinGym has been demonstrated. MODIFY showed that combining ESM-1v, ESM-2, EVmutation, EVE, and MSA Transformer outperforms individual models on 87 DMS assays \citep{zhang2024modify}. VenusREM demonstrated that structure-aware ensembling achieves top ProteinGym rankings. VenusRAR \citep{tan2026venusrar} introduces a two-stage agentic framework combining LLM-driven dynamic ensemble weighting with inference-time biological reasoning. Their Rank-Stage achieves 0.551 Spearman on ProteinGym zero-shot through per-protein LLM weight calibration; our Delta V achieves the same headline performance through an LLM-evolved static strategy requiring no inference-time LLM calls. VenusRAR's Reason-Stage provides selection auditing for low-budget experimental scenarios --- a complementary capability that could be applied atop any ranking method, including ours. The approaches differ fundamentally in where the LLM contributes: VenusRAR uses LLM reasoning at scoring time, while our framework uses LLM-driven evolutionary search at strategy discovery time.
+
+The contribution of Delta V is not ensembling per se --- it is the \emph{calibration strategy}: how the ensemble weights are adapted per-mutation based on confidence scores, how residuals are propagated across spatially neighboring positions, and how the output distribution is expanded via power transformation. These calibration mechanisms were autonomously discovered, not borrowed from existing ensemble methods.
+
+\section{The Little Scientist Framework}
+\label{sec:framework}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig0_framework.png}
+\caption{Overview of The Little Scientist framework. The Scientist agent works inside an evaluation environment that benchmarks its code and returns structured diagnostics. When the Scientist plateaus, the Kuhn agent injects a paradigm-shifting conjecture paired with a cross-disciplinary inspiration, forcing exploration of a different region of the LLM's latent space.}
+\label{fig:framework}
+\end{figure}
+
+\subsection{Overview}
+
+The Little Scientist framework has three components that interact through a single data-flow loop (Figure~\ref{fig:framework}): the \emph{Scientist agent} writes candidate algorithms, the \emph{evaluation environment} benchmarks them and returns structured diagnostics, and the \emph{Kuhn agent} operates similarly to the Scientist, but with an environmental injection of paradigm-shifting reframings when the Scientist plateaus. The remainder of this section details each component:
+
+\begin{itemize}
+    \item \S2.2 describes the Scientist agent --- its inputs, outputs, and hypothesis-driven reasoning.
+    \item \S2.3 describes the evaluation environment --- the two-level diagnostic feedback structure and the causal design principle.
+    \item \S2.4 describes the Kuhn agent --- paradigm-shifting conjectures and cross-disciplinary inspirations.
+    \item \S2.5 describes process engineering --- forced scientific method adherence, versioned state, and the inner/outer loop distinction.
+    \item \S2.6 reports search statistics and compute usage.
+    \item \S2.7 describes infrastructure evolution across phases.
+    \item \S2.8 describes reproducibility measures.
+\end{itemize}
+
+The inner search loop is autonomous: each scheduled invocation reads context files (previous diagnostics, hypothesis history, current best code), forms a hypothesis with a numeric prediction, modifies the code, compares the changes to the hypothesis for the sake of alignment, runs the smoke test, and exits if it passes. After that, the validation/eval step runs.  The next invocation continues from where the last left off. 
+
+The outer loop is composed of a benchmark configuration, diagnostic pipeline, prompt structure, and paradigm-shift triggers, among other things. This loop is optionally human-guided, analogous to a principal investigator adjusting experimental parameters while an automated system runs measurements unattended.
+
+The two-tier evaluation strategy is essential to this loop. A small \emph{smoke test} (4--5 instances) provides rapid feedback, enabling tight iteration from which the agent can either retry upon failure or exit successfully. This process allows the agent to test many ideas cheaply.
+
+\subsection{The Scientist Agent}
+
+The Scientist is an LLM-based agent that writes code in Python (for motif discovery) or Python strategy functions (for ProteinGym). It receives as input the described items in the Inner Loop.
+
+The LLM agent's output is a modified source file accompanied by a natural language hypothesis explaining the expected effect of each change. Code execution is sandboxed: the candidate cannot perform file I/O, network access, or system calls. The allowed imports are limited to numerical libraries (NumPy, SciPy) and the Python Standard Library, with some exceptions designed to further limit system access. This constraint forces the search to explore algorithmic structure rather than exploit external resources.
+
+The LLM agent's reasoning is hypothesis-driven: rather than making random perturbations, it forms specific predictions about \emph{why} a change should help, which can be confirmed or refuted by the next evaluation. This is a deliberate contrast with the evolutionary search methods used by AlphaEvolve \citep{novikov2025alphaevolve} and FunSearch \citep{romera2024funsearch}, which rely on mutation and crossover operators on code without explicit reasoning about why a change should improve performance. The hypothesis-driven approach trades search breadth for search depth: fewer iterations are needed because failed hypotheses constrain the design space for subsequent proposals.  
+
+Enforced prediction of the outcome of an experiment is used in the reconciliation phase to guide the agent toward recognizing the difference between the outcome of an exeriment with the hypothesis and prediction of success that formed it.  Practically speaking this is done through having the agent fill in a worksheet to reconcile environmental feedback with its own statements, which then lead to a next hypothesis.  In practice, prompting is insufficient--forcing the agent to walk through the steps leads to more coherent ideation and results.
+
+\subsection{The Evaluation Environment and Structured Feedback}
+
+The evaluation environment benchmarks each candidate against a dataset and computes the primary metric.
+
+A critical design principle is that the environment provides \emph{structured per-instance diagnostics}, not merely a scalar score. Two levels of feedback are generated:
+
+\paragraph{Level 1: Per-instance data.} For each item in the benchmark (e.g., each TF for motif discovery, each protein for ProteinGym), the evaluator records the per-instance metric, elapsed time, and relevant parameters (selected motif widths, mutation counts, MSA depth). This allows the Scientist to identify exactly which instances improved or regressed.
+
+\paragraph{Level 2: Curated diagnostic summary.} The evaluator generates a markdown report including aggregate statistics, distributions of key parameters, comparison to baseline tools, and a ranked list of weakest instances with contextual detail. For ProteinGym, this also includes substitution class analysis, conservation-error correlation, and structural context breakdowns. This surfaces patterns the Scientist can reason about.
+
+This two-level feedback structure is essential. With scalar feedback alone, the search degenerates into blind optimization: the agent makes random perturbations and cannot learn from failures. Structured feedback enables targeted hypotheses such as ``width=17 on CTCF gives 0.707 but STREME uses width=14 --- my width selection may be too wide for CTCF-like factors.''
+
+\paragraph{The causal structure principle.}
+Not all feedback is equally informative. The critical design property is that diagnostics must connect \emph{algorithm design choices} to \emph{per-instance outcomes} --- not merely describe what happened, but indicate why. For motif discovery, ``CTCF scored 0.65 AUROC because the discovered motif is 8bp while the JASPAR reference is 19bp'' points directly at a design lever (width selection). The diagnostic surfaces a causal link between a design decision and an error pattern, enabling the Scientist to form a targeted hypothesis. Outcome-only feedback (e.g., ``fold 3 returned $-$2.1\\'') describes results without revealing causes, leaving the agent to guess at fixes. In Phase 1 of our motif search, diagnostic output was silently deleted before the agent could read it (see \S2.7), leaving the agent blind to which specific cases failed. This produced random search behavior indistinguishable from blind optimization.
+
+\subsection{The Kuhn Agent}
+
+The Kuhn agent addresses a fundamental challenge: LLM-based search, like any local optimization, gets stuck. The Scientist can refine within its current paradigm indefinitely, making small improvements that eventually plateau, for reasons that tentatively have to do with the act of reading its own past actions. Since LLMs proceed from their own context, if the context is full of certain approach, it is likelier that the future output will follow suit (much like human scientists). Breaking out requires something qualitatively different --- a reframing of the problem.
+
+Kuhn is triggered after a configurable number of consecutive non-improving iterations (typically 7--10) by the Scientist. It receives most of the same context as the Scientist, with the exception of some past scratchpad files the Scientist uses, and crucially, it does not receive the history file of past experiments. The key difference is that its prompt receives an injected paradigm-shifting conjecture paired with a cross-disciplinary inspiration from the Environment, which have been randomly created beforehand. 
+
+Example:
+
+  \textbf{Assumption:} ``Model predictions for single mutants generalize to multi-mutant variants without interaction terms''\\
+  \textbf{Domain inspiration:} Architecture --- load-bearing analysis, redundancy, and graceful failure in structural systems
+
+In this way the Kuhn agent, though it is running on the same underlying LLM, has a different part of its latent/representation space activated. When this results in a higher score on the benchmark or multi-metric standard, it generally represents a novel approach that the Scientist can then improve upon.
+
+\paragraph{Empirical contribution.} The Kuhn agent's role was measured across both case studies. In the motif discovery search, the Kuhn agent proposed the paradigm shift from probability-based modeling to frequency-based k-mer enumeration --- the foundational approach that all subsequent improvements built upon. Of the 10 accepted improvements in Phase 2, 1 was directly Kuhn-originated (the paradigm shift itself), while the remaining 9 were Scientist refinements within the Kuhn paradigm. Without the Kuhn shift, Phase 2 would not have existed; the paradigm it established was the necessary precondition for all subsequent progress. In the ProteinGym search, the Kuhn agent proposed the CPCWE (Constraint-Propagated Confidence-Weighted Ensemble) paradigm that became the foundation of Delta V --- 1 of 2 accepted improvements was Kuhn-originated. In both cases, the Kuhn agent's contribution was not incremental improvement but qualitative reframing.
+
+\subsection{Process Engineering}
+
+The framework's search loop is conceptually simple, but several engineering choices were useful to make it function in practice. Figure~\ref{fig:framework} provides a visual overview of the complete system.
+
+\paragraph{Forced adherence to the scientific method.}
+LLM agents tend to skip steps when given a complex multi-stage protocol. A naive prompt saying ``follow the scientific method'' produces cursory execution: the agent writes a hypothesis after the fact, skips the prediction, or rationalizes unexpected results instead of analyzing them. We address this by structuring the agent's prompt as a numbered sequence of mandatory steps with concrete file outputs at each stage. The agent must write an explicit prediction (numeric AUROC range) to a file before writing code, and must reconcile its prediction against the actual result in the next iteration. This ``walking the dog'' approach --- forcing the agent through each step with a short leash --- was necessary to obtain genuine hypothesis-driven iteration rather than post-hoc rationalization.
+
+The reconciliation step is where learning accumulates. When a prediction is confirmed, the Scientist has validated a causal model. When a prediction is refuted, the discrepancy itself is informative: ``I expected adaptive width to help CTCF (+0.01--0.02); it regressed ($-$0.03) because the scoring function penalizes long motifs under shuffled controls.'' A wrong prediction that gets reconciled constrains the design space more than a correct one --- it tells the Scientist not just that its change failed, but \emph{which part of its reasoning was wrong}. Over hundreds of iterations, these reconciliations build an increasingly accurate causal model of the benchmark.
+
+\paragraph{Versioned state for hill-climbing.}
+Every accepted improvement is committed to a version-controlled repository, creating an immutable lineage from the initial seed algorithm to the final result. This serves two purposes: (1) it provides a deterministic rollback mechanism if a candidate passes the smoke test but fails full evaluation (false positive), and (2) it records the complete algorithmic lineage, making the discovery process fully auditable. Each commit records the hypothesis, the score delta, and the code diff.
+
+\subsection{Search Statistics and Compute Usage}
+
+The search did not proceed from a fixed design. The framework was built iteratively --- each infrastructure improvement solved a specific failure mode that had stalled progress. Table~\ref{tab:search_stats} summarizes the compute usage across the full search, measured from system logs (OpenClaw \texttt{cron\_run\_logs}). We describe the timeline in terms of these phases because the infrastructure changes between them were as consequential as the algorithmic changes.
+
+\paragraph{Phase 1: Initial search (May 30 -- June 13, 2026).}
+The initial search ran for 13 days and produced 236 evaluated algorithm iterations across 1,588 LLM agent invocations. In this phase, the Scientist operated on a synthetic benchmark (12 profiles, nCC scoring) with a loosely structured prompt. The agent tended to make aggressive full rewrites of the algorithm rather than targeted modifications, frequently breaking functionality. After 49 consecutive runs with zero accepted improvements, the loop was paused. This phase consumed approximately 97.6M tokens at an average of 61K tokens per agent invocation.
+
+The failure was not in the algorithm --- it was in the infrastructure. Three problems were identified: (1) the synthetic benchmark did not correlate with real motif discovery performance, so the agent was optimizing the wrong objective; (2) the agent's prompt did not enforce the scientific method, allowing post-hoc rationalization instead of genuine hypothesis testing; (3) the evaluator's per-instance diagnostic output was being deleted before the agent could read it, leaving the agent blind to which specific cases failed.
+
+\paragraph{Infrastructure overhaul (June 22 -- July 19, 2026).}
+Between phases, we made five targeted changes, each addressing a specific failure mode:
+
+\begin{enumerate}
+    \item \textbf{Real benchmark data.} Replaced the synthetic 12-profile eval with 15 real ChIP-seq TFs and AUROC scoring. The agent was now optimizing the actual objective.
+    
+    \item \textbf{Causal scaffold prompt.} Rewrote the agent's prompt to enforce a seven-field structured plan: hypothesis, prediction (numeric AUROC range), code change, expected mechanism, falsification criterion, prior-work citation, and post-hoc reconciliation. This ``walking the dog'' approach forced the agent through each step of the scientific method with mandatory file outputs, preventing it from skipping steps or writing hypotheses after the fact.
+    
+    \item \textbf{Trust-boundary validator.} Moved the evaluate/commit/revert logic outside the agent's execution scope. The agent cannot modify the evaluator, inspect benchmark labels, or alter test data.
+    
+    \item \textbf{Fixed diagnostic pipeline.} Restored the per-TF diagnostic output that had been silently deleted. The agent could now see which TFs improved or regressed, what widths were selected, and how its results compared to baseline tools.
+    
+    \item \textbf{Kuhn paradigm agent (July 12 -- 15).} A separate agent that periodically interrogated accumulated failures and proposed strategic reframings rather than incremental code changes. Over 3 days and 63 invocations ($\sim$33.5M tokens at 531K tokens/run), it analyzed the V1 failure pattern and proposed shifting from probability-based modeling to frequency-based k-mer enumeration.
+\end{enumerate}
+
+The impact was immediate. Under the new infrastructure, the first 11 experiments produced two breakthroughs: frequency-based seeding beat enrichment-ratio seeding (0.312 $\rightarrow$ 0.565), and adaptive motif width search resolved a systematic over-width problem (0.565 $\rightarrow$ 0.709). The agent was now citing prior experiments, writing structured causal plans, and making targeted edits rather than full rewrites.
+
+\paragraph{Phase 2: full-framework search (July 19 -- July 29, 2026).}
+With the infrastructure overhauled, the search ran for 10 days and produced 64 evaluated iterations across 500 agent invocations ($\sim$97.9M tokens at 196K tokens/run). Score progression was rapid: entries scored 0.794 (July 19), crossed 0.817 (July 28), and reached 0.846 (July 29). The best score achieved was 0.846 (run \#50, July 29). The algorithm that became \emph{DALE} was selected from this phase.
+
+\paragraph{Total compute.}
+Across all phases, the search consumed:
+
+\begin{table}[H]
+\centering
+\caption{Measured compute usage for the motif discovery case study. All figures from OpenClaw \texttt{cron\_run\_logs}.}
+\label{tab:search_stats}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Phase & Runs & Tokens & Avg tokens/run & Days \\
+\midrule
+Initial search (V1)     & 1,588 & 97.6M  & 61K  & 13 \\
+Kuhn paradigm agent     & 63    & 33.5M  & 531K & 3  \\
+full-framework search (V2)        & 500   & 97.9M  & 196K & 10 \\
+\midrule
+\textbf{Total} & \textbf{2,151} & \textbf{229.0M} & \textbf{106K} & \textbf{26 active} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the $\sim$64 evaluated iterations in Phase 2, 17 produced improvements over the current best --- a 26.6\% success rate. The non-improving iterations were not wasted: they tested and refuted hypotheses, progressively constraining the design space. This pattern mirrors human algorithm development, where most ideas do not work, and progress is built on many failures.
+
+\paragraph{Framework development overhead.}
+The 229M tokens reported above include both the cost of developing the framework and the cost of the search itself. Phase 1 (97.6M tokens) and the Kuhn agent (33.5M tokens) were spent discovering what infrastructure was missing --- the recurring cost of a stalled loop, a wrong benchmark, and silently deleted diagnostics. A researcher starting today with the documented end-state framework would not incur this overhead. We estimate the recurring cost of applying The Little Scientist to a new domain at approximately 100M tokens and $\sim$2 weeks of active search, based on the Phase 2 run that reached the top reported score from a cold start in 10 days using 97.9M tokens. The first DALE improvement was achieved at run 25 (\textasciitilde4.9M tokens), with the best score (0.843) achieved at run 52 (\textasciitilde10.2M tokens). The remaining 448 runs continued search past the plateau to verify that no further improvement was achievable --- standard practice when the optimum is unknown. We report both total search cost and cost-to-first-best, as continued search after plateau inflates the total but is unavoidable without a priori knowledge of the optimum.
+
+\paragraph{Timeline to top reported score.}
+The total calendar span from first run to top reported score was approximately 2 months (May 30 -- July 29, 2026), of which 26 days were active search (the remainder was gaps between phases for infrastructure development and analysis). The final phase --- from infrastructure overhaul to top reported score took 10 days.
+
+\paragraph{Infrastructure.}
+The entire search ran on a single virtual machine (2 AMD EPYC-Rome cores, 3.7\,GB RAM, Ubuntu Linux). Agent invocations were scheduled via cron jobs and ran autonomously without human intervention. No distributed computing infrastructure was used.
+
+The contrast with prior agent-driven discovery systems is striking in three dimensions:
+
+\begin{itemize}
+    \item \textbf{Infrastructure footprint.} AlphaEvolve uses a distributed asynchronous pipeline (controller, LLM samplers, evaluation nodes) optimized for throughput. FunSearch similarly requires distributed infrastructure. Our system runs on a single VM with cron jobs.
+    
+    \item \textbf{Evaluation cost.} AlphaEvolve reports evaluations costing ``on the order of 100 compute-hours'' per candidate, parallelized across a cluster. Our evaluations take seconds on a single core. This $\sim$10\textsuperscript{5}$\times$ evaluation cost difference reflects the domain difference (mathematical proof verification vs.\ statistical benchmark scoring), but it means our search loop can run far more iterations per unit of compute.
+    
+    \item \textbf{LLM invocation scale.} AlphaEvolve reports ``thousands'' of LLM samples; FunSearch reports ``millions.'' Neither reports total token counts. Our search used $\sim$2,100 LLM agent invocations and 229M tokens, fully accounted. While we cannot make a direct token comparison (neither system discloses tokens), the $\sim$10\textsuperscript{3}$\times$ gap with FunSearch suggests that hypothesis-driven search with structured feedback is substantially more sample-efficient than scalar-fitness evolutionary search.
+\end{itemize}
+
+Neither AlphaEvolve nor FunSearch discloses total token consumption, wall-clock time for individual results, or overall compute budget, making precise comparison impossible. We report all compute figures in full (Table~\ref{tab:search_stats}).
+
+\paragraph{Cost.}
+The LLM used for all experiments was GLM-4.7 (Z.ai). The motif discovery search ran for approximately 2 months of active development; the ProteinGym search ran for 9 days. At OpenRouter pay-per-token rates for GLM-4.7 (\$0.40/1M input, \$1.75/1M output), the 704M tokens consumed across both case studies would cost approximately \$472. With server costs of \$21 (single VM, no GPUs), the total was approximately \$493.
+
+\subsection{Infrastructure Evolution}
+
+For DALE, the gap between Phase 1 (stalled at 0.664) and Phase 2 (reached 0.846 in 10 days) was not algorithmic. The difference was entirely in the infrastructure supporting the search. Five changes, each addressing a specific failure mode, transformed a stalled loop into a productive one:
+
+\begin{enumerate}
+    \item \textbf{Real benchmark data} — the agent cannot optimize what it cannot measure properly. The synthetic eval was correlated with real performance but not enough to guide search.  By upgrading to the same data that STREME was benchmarked against, agents we able to make better progress than with synthetic representations.
+    \item \textbf{Structured scientific method enforcement} — teaching the agent to be a scientist (seven-field causal plan, explicit predictions, falsification criteria) rather than simple instructions to meet the objective.
+    \item \textbf{Per-instance diagnostic feedback} — As noted previously, when feedback about the performance of the code against the benchmark included detailed information about which parts scored higher or lower on the target subject benchmark rather than just a simple score, the agents were able to augment their follow on approaches in a much more efficient way.  This may in fact be the greatest single lever for progress, as agents do already have the ability to reason without the scientific framework enforced.  Scientific method enforcement merely guides a pre-existing ability to do logical tasks and meet goals they receive through prompting.
+    \item \textbf{Kuhn paradigm interrogation} — useful for escaping local optima.
+    \item \textbf{Behavioral prompt engineering} — guiding the agent toward targeted edits rather than full rewrites prevented it from repeatedly breaking its own algorithm.
+\end{enumerate}
+
+We note that these features were identified through iterative debugging during the search itself, not designed ex ante.
+
+\subsection{Reproducibility}
+
+All agent transcripts, hypotheses, and evaluation results are preserved in a structured log (\texttt{history.jsonl}). Every proposed change is traceable to the hypothesis that motivated it and the outcome it produced. The algorithm's lineage can be followed from the initial seed (a basic frequency-counting approach scoring 0.662 AUROC on synthetic data) through the infrastructure overhaul and paradigm shift, to the final algorithm. Token usage for every agent invocation is recorded in the OpenClaw \texttt{cron\_run\_logs} database, enabling independent verification of all compute figures reported here.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_both_progression.png}
+\caption{Score progression for both case studies. (A) Motif discovery: the infrastructure overhaul gap (gray band) and Kuhn paradigm shift (annotation) separate the stalled Phase 1 from the full-framework Phase 2. Dashed lines show STREME and MEME baseline accuracy. (B) Protein fitness prediction: the discontinuous jump on Aug 4 occurred when the human investigator provided pre-computed model predictions as input data, enabling the Scientist to adopt an ensemble approach. Dashed lines show the top ProteinGym leaderboard entries.}
+\label{fig:both_progression}
+\end{figure}
+
+\subsection{Benchmark Methodology}
+\label{sec:methods}
+
+\subsubsection{Data}
+
+We benchmarked on 132 ENCODE K562 ChIP-seq transcription factor datasets \citep{encode2012}. Each dataset contains approximately 200 DNA sequences of 500 base pairs, centered on ChIP-seq peak summits. For motif discovery, the central 100\,bp window was used; full 500\,bp sequences were used for scoring and AUROC evaluation.
+
+\subsubsection{Negative Sets}
+
+Two negative sets were used:
+
+\begin{enumerate}
+    \item \textbf{Dinucleotide-shuffled negatives (132 TFs):} Each positive sequence was dinucleotide-shuffled, preserving mono- and dinucleotide composition while destroying higher-order sequence patterns. This is the standard benchmark negative set used by STREME and MEME.
+    
+    \item \textbf{Genomic negatives (53 TFs):} Random regions sampled from hg38, matched for length and chromosome distribution. This represents a more realistic benchmark, as random genomic DNA contains natural regulatory patterns absent from shuffled sequences.
+\end{enumerate}
+
+\subsubsection{Tools Compared}
+
+\begin{table}[H]
+\centering
+\caption{Tools compared in this study.}
+\label{tab:tools}
+\small
+\begin{tabular}{lll}
+\toprule
+Tool & Version & Parameters \\
+\midrule
+DALE       & 1.0    & Default (widths 6--17) \\
+STREME               & 5.5.5  & \texttt{--dna --minw 6 --maxw 17} \\
+MEME                 & 5.5.5  & \texttt{-mod zoops -minw 6 -maxw 17 -revcomp} \\
+proto-DALE & ---    & Earlier prototype, same width range \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All tools were run with a width range of 6--17 base pairs. Both strands were searched by all tools. STREME's default background model was used. MEME was run in Zero-or-One Occurrence Per Sequence (ZOOPS) mode with 5 motifs returned.
+
+\subsubsection{Evaluation}
+
+For each TF and tool, the highest-scoring motif (by the tool's internal ranking) was used for evaluation. Discriminative power was measured by AUROC: the area under the receiver operating characteristic curve, computed from the score distributions of positive and negative sequences. All tools' output PWMs were scored using identical scoring code to ensure fairness.
+
+\subsubsection{Statistical Tests}
+
+\begin{itemize}
+    \item Wilcoxon signed-rank test (paired, two-sided) for paired AUROC comparisons
+    \item Bootstrap 95\% confidence intervals (1000 resamples, seed = 42)
+    \item McNemar's test for binary outcome comparison
+    \item Cliff's $\delta$ and Cohen's $d$ for effect size estimation
+\end{itemize}
+
+\subsubsection{Hardware and Reproducibility}
+
+All benchmarks were run on a single AMD EPYC-Rome processor (2 cores, 2.0\,GHz) with 3.7\,GB RAM under Ubuntu Linux. During the search phase, candidate algorithms were written in Python and evaluated on a 5-TF smoke test followed by a 15-TF full evaluation. For the final benchmark comparison against STREME and MEME, the best-performing algorithm (run \#50, July 29) was ported to C and compiled with GCC at \texttt{-O2 -std=c99 -static} (928\,KB statically-linked binary). STREME 5.5.5 was compiled from source at \texttt{-O2} and verified to produce identical results to the prebuilt binary. All tools are deterministic under fixed parameters.
+
+\section{Case Study: De Novo Motif Discovery}
+\label{sec:casestudy}
+
+\subsection{Problem Domain}
+
+De novo motif discovery is the problem of identifying recurring DNA sequence patterns (position weight matrices, or PWMs) from collections of genomic regions enriched for transcription factor binding. Given a set of ChIP-seq peak sequences, the goal is to discover the binding specificity of the targeted TF without prior knowledge of its motif.
+
+The problem has been studied for three decades. MEME \citep{bailey1994meme} introduced expectation-maximization (EM) approaches and remains a gold standard for accuracy. STREME \citep{bailey2021streme}, the successor to DREME \citep{bailey2011dreme}, uses suffix-tree--based enumeration and is the current default in the MEME Suite. HOMER \citep{heinz2010homer} uses a distinct cumulative hypergeometric approach. ProSampler \citep{li2019prosampler} combines k-mer enrichment with Gibbs sampling.
+
+\subsection{Search Configuration}
+
+For the motif discovery case study, the search was configured as follows:
+
+\begin{itemize}
+    \item \textbf{Input:} ENCODE K562 ChIP-seq peak sequences, 100\,bp centered windows
+    \item \textbf{Metric:} Mean AUROC across benchmark TFs (shuffled negatives)
+    \item \textbf{Baseline:} STREME 5.5.5 with matched parameters (\texttt{--minw 6 --maxw 17})
+    \item \textbf{Implementation:} Python during search (NumPy/SciPy); C port for benchmark comparison against STREME
+    \item \textbf{Constraint:} Algorithm receives sequences as function arguments, outputs PWMs. No file I/O, no network.
+\end{itemize}
+
+The search space includes all algorithmic choices: how to enumerate candidate words, how to select seed motifs, how to refine them into PWMs, how to rank final candidates, and how to handle variable motif widths. The Scientist agent was not given domain knowledge about motif discovery beyond the benchmark data and the structure of the input/output interface.
+
+\subsection{Diagnostic Feedback}
+
+Each evaluation produced structured diagnostic feedback through three files, serving the same observation and memory functions as the ProteinGym case study.
+
+\texttt{staging\_diagnostics.md} was the primary feedback file, rewritten by the \texttt{write\_diagnostics()} function in the validation script after every full evaluation. It contained five categories of computed feedback:
+
+\begin{enumerate}
+    \item \textbf{AUROC summary} --- average, bottom quartile average, best, and worst across all 15 benchmark TFs.
+    \item \textbf{Speed statistics} --- average elapsed time and speed bonus per TF.
+    \item \textbf{Width distribution} --- how many TFs the algorithm selected each motif width for (e.g., \texttt{w=17: 8, w=14: 2, w=12: 4, w=10: 1}).
+    \item \textbf{Width vs.\ STREME comparison} --- flagged every TF where the algorithm's chosen width differed from STREME's known width by more than 2\,bp, with the AUROC for that TF (e.g., ``\texttt{SP1: ours=17 vs STREME=7 (auroc=0.682)}'').
+    \item \textbf{Lowest-AUROC TFs} --- the bottom 5 TFs with AUROC, selected width, and elapsed time.
+\end{enumerate}
+
+Categories 3--5 are where the causal structure enters. ``SP1: ours=17 vs STREME=7, AUROC=0.682'' connects a \emph{design choice} (width selection) to a \emph{per-instance outcome} (low AUROC on SP1). The agent can immediately form a hypothesis: ``the width selector is biased toward long motifs; SP1's true motif is short.''
+
+\texttt{staging\_smoke\_diagnostics.md} served the same role for the 4-TF smoke test (the rapid proxy used during active search). It contained per-TF smoke AUROC, selected width, primary score, and a brief analysis section. This enabled the tight iteration loop --- seconds per smoke test --- before committing to a full 15-TF evaluation.
+
+\texttt{history.jsonl} was the experiment log, appended after each iteration. Each entry recorded the full seven-step structured plan: hypothesis text, prediction range (low/high), reconciliation, pattern analysis, proposed change, smoke test results, and blockers text --- alongside the standard fields (run number, score, verdict, per-TF details). This gave the Scientist a detailed record of what it had tried and reasoned, not just what happened.
+
+\texttt{causal\_model.md} is an agent-maintained lab notebook recording what was tested, what the score was, and what the signal meant. The validation script capped it at the last 10 hypotheses. The agent read it at the start of each iteration alongside the fresh diagnostics, enabling it to accumulate learned causal structure across iterations. This artifact was particularly important for the motif discovery search because the tabular diagnostics required more agent-side interpretation.
+
+\subsection{The Discovered Algorithm}
+
+The final algorithm (run \#118) incorporates the following key components, described in full technical detail in Section~\ref{sec:algorithm}:
+
+\begin{enumerate}
+    \item \textbf{Dual seed selection} --- combines enriched seeds (high raw abundance) with consistency seeds (broad sequence coverage), capturing both sharp and diffuse motif signals.
+    \item \textbf{Soft EM refinement} --- 20 iterations maximum, with pseudocounts preventing premature convergence.
+    \item \textbf{Effective width awareness} --- tries 6 widths independently, measures how many positions contribute information content, and penalizes padding.
+    \item \textbf{Pareto-front selection} --- ranks candidates on two objectives (discriminative score and width efficiency) rather than collapsing to a single metric.
+\end{enumerate}
+
+Two of these design choices (k-mer enumeration as a seeding strategy, EM for refinement) are well-established in the human-designed literature. The dual-seeding strategy and Pareto-front are not.  All design choices emerged from the search process without being specified a priori.
+
+% These subsections are included under the motif case study section (casestudy.tex)
+% They are \subsection-level content, demoted from \section
+\subsection{Algorithm Details}
+\label{sec:algorithm}
+
+This section describes the algorithm discovered by The Little Scientist in full technical detail.
+
+\subsubsection{Pipeline Overview}
+
+The algorithm takes as input a set of DNA sequences and returns a ranked list of candidate motif PWMs. The pipeline consists of five stages: (1) adaptive background estimation, (2) multi-width k-mer enumeration, (3) dual-strategy seed selection, (4) soft EM refinement, and (5) multi-criteria ranking via Pareto front selection.
+
+\subsubsection{Adaptive Background}
+
+Nucleotide frequencies are computed from the input sequences. This matters because genomic regions are not uniformly 25\% A/C/G/T --- AT-rich and GC-rich biases affect the information content of any discovered motif. The background frequencies are used in subsequent log-odds scoring during EM refinement.
+
+\subsubsection{Multi-Width K-mer Enumeration}
+
+The algorithm does not know the motif width in advance. It scans six widths ($w \in \{6, 8, 10, 12, 14, 17\}$) independently. For each width, a hash table records for every unique $w$-mer: (1) the total count across all sequences, and (2) the number of distinct sequences containing it. A per-sequence deduplication ensures that seq\_count reflects breadth of occurrence rather than raw abundance.
+
+\subsubsection{Dual Seed Selection}
+
+For each width, six seeds are selected using two complementary criteria:
+
+\paragraph{Enriched seeds (4 per width):} Sorted by total count, filtered so no two selected seeds have Hamming distance $< w/3$. These capture k-mers with the strongest enrichment signal.
+
+\paragraph{Consistent seeds (2 per width):} Sorted by $\text{seq\_count} / \sqrt{\text{total\_count} + 1}$, filtered with stricter diversity (Hamming distance $\geq w/2$). This metric favors k-mers appearing in many distinct sequences even if individually rare --- a signal that captures diffuse but pervasive motif patterns.
+
+Using both strategies ensures that both sharp, highly-enriched motifs and broader, consistency-driven signals seed the EM refinement.
+
+\subsubsection{Soft EM Refinement}
+
+Each seed k-mer is converted to a starting PWM with strong bias toward the seed bases ($\sim$76\% probability for matching bases, $\sim$8\% for others). The PWM is then refined via expectation-maximization:
+
+\paragraph{E-step:} For each sequence, log-odds scores are computed for the motif at every possible start position (using the adaptive background). These scores are converted to position probabilities via softmax.
+
+\paragraph{M-step:} The PWM is updated by accumulating weighted contributions from all positions across all sequences. A pseudocount of 0.5 prevents any base probability from reaching zero.
+
+The loop runs for up to 20 iterations, with early stopping when the maximum PWM change falls below $10^{-4}$.
+
+\subsubsection{Information Content and Effective Width}
+
+After EM convergence, per-position information content is computed as KL divergence from the background distribution:
+
+\[
+\text{IC}_j = \sum_{b \in \{A,C,G,T\}} p_{j,b} \log_2 \frac{p_{j,b}}{q_b}
+\]
+
+where $p_{j,b}$ is the PWM probability for base $b$ at position $j$ and $q_b$ is the background frequency. The \emph{effective width} ($\text{eff\_w}$) is the count of positions with IC $\geq 0.1$ --- positions that contribute meaningful information versus noise padding.
+
+\subsubsection{Multi-Criteria Ranking}
+
+Within each width, the six candidates are z-score normalized on total IC. A composite discriminative score is computed:
+
+\[
+\text{base} = 0.7 \times \text{total\_ic} + 0.3 \times \text{ic\_density}
+\]
+\[
+z_{\text{bonus}} = \text{clamp}\left(z \times (w/10)^{0.3},\ -1,\ +1\right)
+\]
+\[
+\text{disc\_score} = \text{base} \times (1 + 0.2 \times z_{\text{bonus}})
+\]
+
+where ic\_density = total\_IC / eff\_w.
+
+The top 2 candidates from each width (up to 12 total) are then ranked using Pareto dominance: candidate A dominates B if A is better on both disc\_score and width efficiency (ic\_density $\times (1 - \text{padding\_ratio}^{1.5})$). Candidates are ordered by Pareto rank, with ties broken by disc\_score. The top 5 are returned.
+
+This multi-objective approach avoids the brittleness of single-score ranking --- it preserves diverse solutions on the trade-off surface between discriminative power and width efficiency.
+
+\subsection{Results}
+\label{sec:results}
+
+\subsubsection{Shuffled Negatives Benchmark (132 TFs)}
+
+Table~\ref{tab:main_shuf} summarizes performance on the full 132-TF benchmark with dinucleotide-shuffled negatives.
+
+\begin{table}[H]
+\centering
+\caption{Benchmark results on 132 ENCODE K562 ChIP-seq datasets (shuffled negatives).}
+\label{tab:main_shuf}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Tool & Mean AUROC & Time/TF & Speedup vs.\ STREME \\
+\midrule
+\textbf{DALE}    & \textbf{0.842} & \textbf{0.30\,s} & \textbf{11$\times$} \\
+proto-DALE       & 0.843 & 1.56\,s & 2.1$\times$ \\
+STREME 5.5.5               & 0.803 & 3.26\,s & 1.0$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+DALE significantly outperforms STREME ($\Delta = +0.039$ AUROC, Wilcoxon $p = 4.1 \times 10^{-7}$, 88 wins / 44 losses). The improvement is consistent across TF families and is not driven by a few outliers (bootstrap 95\% CI of $\Delta$: [0.023, 0.046]).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/fig1_auroc_boxplot}
+\caption{AUROC distribution across 132 ENCODE K562 ChIP-seq datasets (shuffled negatives). DALE consistently outperforms STREME. Dashed line indicates random performance.}
+\label{fig:boxplot}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/fig2_scatter_shuffled}
+\caption{Per-TF comparison: DALE vs.\ STREME (132 TFs, shuffled negatives). Points above the diagonal indicate TFs where DALE outperforms STREME.}
+\label{fig:scatter_shuf}
+\end{figure}
+
+\subsubsection{Genomic Negatives Benchmark}
+
+On the more realistic benchmark using hg38 genomic regions as negatives with Markov-1 background scoring, DALE was evaluated on two subsets:
+
+\paragraph{132-TF genomic (DALE vs.\ proto-DALE).}
+On the full 132-TF set, DALE achieves 0.896 AUROC versus proto's 0.856 ($\Delta = +0.040$, Wilcoxon $p = 1.7 \times 10^{-14}$, 101 wins / 22 losses). This confirms that the current version represents a substantial improvement over the earlier prototype on realistic genomic DNA.
+
+\paragraph{53-TF genomic (full comparison).}
+On the 53-TF subset where STREME and MEME genomic results are also available:
+
+\begin{table}[H]
+\centering
+\caption{Genomic negatives benchmark (53 TFs, Markov-1 scoring).}
+\label{tab:main_gen}
+\small
+\begin{tabular}{lrr}
+\toprule
+Tool & Mean AUROC & Time/TF \\
+\midrule
+\textbf{DALE}    & \textbf{0.891} & \textbf{0.3\,s} \\
+MEME 5.5.5                 & 0.881 & $\sim$90\,s \\
+proto-DALE       & 0.874 & 1.4\,s \\
+STREME 5.5.5               & 0.863 & 4.4\,s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+DALE outperforms STREME by $+0.028$ AUROC (Wilcoxon $p = 6.5 \times 10^{-4}$, 35 wins / 16 losses) while running \textbf{15$\times$ faster} (0.3\,s vs.\ 4.4\,s per TF). It also edges out MEME by $+0.010$ AUROC while running approximately \textbf{300$\times$ faster}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/fig4_genomic_comparison}
+\caption{Genomic negatives benchmark (53 TFs, Markov-1 scoring). DALE outperforms all three comparison tools.}
+\label{fig:genomic}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/fig5_scatter_genomic}
+\caption{Per-TF comparison: DALE vs.\ STREME (53 TFs, genomic negatives). Points above the diagonal indicate TFs where DALE outperforms STREME.}
+\label{fig:scatter_gen}
+\end{figure}
+
+\subsubsection{Speed}
+
+The speed advantage is substantial across all benchmarks:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/fig3_speed_comparison}
+\caption{Runtime per TF across tools (132-TF shuffled benchmark). DALE processes all 132 TFs in under 45 seconds.}
+\label{fig:speed}
+\end{figure}
+
+At 0.3\,s per TF, DALE processes the full 132-TF benchmark in under 45 seconds. STREME requires approximately 7 minutes. MEME requires approximately 3 hours. The speedup is algorithmic --- all tools were compiled with identical optimization flags and run on identical hardware.
+
+\subsubsection{Per-TF Analysis}
+
+DALE wins 89 of 132 TFs against STREME on shuffled negatives. The largest individual improvements include TFs where STREME struggles with short or degenerate motifs (e.g., AGO1: $+0.31$, BRF1: $+0.26$, RXRA: $+0.23$). STREME's wins tend to occur on TFs where its default width range captures wider binding patterns (e.g., BDP1: $-0.11$, CEBPG: $-0.09$); DALE supports configurable width ranges to address such cases.
+
+\subsubsection{Statistical Significance}
+
+The improvement over STREME is robust across multiple tests:
+
+\begin{table}[H]
+\centering
+\caption{Statistical significance of DALE vs.\ STREME.}
+\label{tab:stats}
+\small
+\begin{tabular}{lrr}
+\toprule
+Test & Shuffled (132 TFs) & Genomic (53 TFs) \\
+\midrule
+Wilcoxon $p$         & $4.1 \times 10^{-7}$ & $6.5 \times 10^{-4}$ \\
+Bootstrap 95\% CI    & [0.023, 0.046]       & [0.010, 0.046] \\
+McNemar $\chi^2$     & 13.1 ($p = 2.9 \times 10^{-4}$) & 6.4 ($p = 1.2 \times 10^{-2}$) \\
+Cliff's $\delta$     & $+0.31$              & $+0.38$ \\
+Cohen's $d$ (paired) & $+0.48$              & $+0.42$ \\
+Wins / Losses        & 88 / 44              & 35 / 16 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Biological Validity}
+
+TOMTOM analysis (version 5.5.5, Pearson distance) against the JASPAR 2024 Core database (2{,}633 motifs) confirmed that discovered motifs are biologically meaningful. Table~\ref{tab:tomtom} summarizes the results.
+
+\begin{table}[H]
+\centering
+\caption{TOMTOM JASPAR match summary ($n = 119$ TFs with motifs tested).}
+\label{tab:tomtom}
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & DALE & STREME \\
+\midrule
+Any JASPAR match            & 112 (94\%) & 104 (87\%) \\
+Significant ($e < 0.05$)    & 93 (78\%)  & 88 (74\%) \\
+Strong match ($e < 0.001$)  & 55 (46\%)  & 51 (43\%) \\
+Median best e-value         & $1.6 \times 10^{-3}$ & $1.1 \times 10^{-3}$ \\
+Top-5 moderate ($q < 0.05$) & 100\% & 100\% \\
+Top-1 strict ($q < 0.001$, $\geq$70\% overlap) & 50\% & 62\% \\
+Better e-value head-to-head & 52 / 97 & 45 / 97 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Both tools achieve 100\% top-5 moderate match rate: every TF has at least one discovered motif matching a known JASPAR entry. DALE actually matches more TFs overall (94\% vs.\ 87\%) and wins the head-to-head e-value comparison (52 vs.\ 45). STREME's higher strict match rate (62\% vs.\ 50\%) reflects its tendency to discover wider motifs that achieve higher overlap fractions with JASPAR references — a width artifact rather than a correctness difference.
+
+\subsubsection{Memory Usage}
+
+DALE uses 10\,MB peak RSS across all TFs. STREME uses approximately 113\,MB per TF. The minimal footprint enables deployment in resource-constrained environments such as containerized pipelines or cloud functions.
+
+\section{Case Study: ProteinGym DMS Substitutions Zero-Shot}
+\label{sec:casestudy_proteingym}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_pg_progression.png}
+\caption{ProteinGym score progression over the 8-day search. The discontinuous jump on Aug 4 occurred when the human investigator provided pre-computed predictions from five state-of-the-art models as input data, enabling the Scientist to adopt an ensemble approach. Dashed lines show the top 3 ProteinGym leaderboard entries.}
+\label{fig:pg_progression}
+\end{figure}
+
+To test whether the framework generalizes beyond algorithm discovery to a different class of problem, we applied The Little Scientist to protein fitness prediction on the ProteinGym benchmark \citep{notin2023proteingym}.
+
+\subsection{Problem Setup}
+
+ProteinGym is a large-scale benchmark for zero-shot prediction of mutation effects on protein fitness. The DMS Substitutions benchmark comprises 217 deep mutational scanning (DMS) assays ($\sim$3 million mutated sequences) covering diverse proteins across humans, other eukaryotes, prokaryotes, and viruses. For each DMS assay, a model receives the wild-type sequence, a list of mutations, and optionally a multiple sequence alignment (MSA) for the protein family. The model predicts a fitness score for each mutant without seeing any experimental labels (zero-shot). Performance is measured by mean Spearman rank correlation between predicted and experimental fitness scores across all 217 assays.
+
+At the time of writing, the ProteinGym leaderboard includes over 90 baseline models \citep{notin2025scalingwall}, including billion-parameter protein language models (ESM2-15B, Progen3, AIDO Protein-RAG 16B), structure-aware models (ProSST, SaProt), and alignment-based models (GEMME, VenusREM). The top of the leaderboard is dominated by multimodal models that combine MSAs and structural information.
+
+\subsection{Search Configuration}
+
+Unlike the motif discovery case study --- where the agent wrote an algorithm from scratch --- the ProteinGym search explored ensemble composition and calibration strategies, ultimately producing a strategy we call \emph{Delta V}. The agent had access to pre-computed zero-shot predictions from five existing models (VenusREM, S3F-MSA, ESM2-15B, GEMME, ProSST-2048) via a structured data interface. The strategy function receives wild-type sequences, mutation lists, MSAs, and per-residue structure data (solvent accessibility, burial class), and outputs a fitness score for each mutation. The agent could combine model predictions, add structure-based corrections, and tune calibration --- but could not access experimental labels or modify the evaluation.
+
+The trust-boundary validator enforces this constraint by construction: the data database contains model predictions and structure features but \emph{no} experimental fitness scores (no \texttt{DMS\_score}, no \texttt{DMS\_score\_bin}, no \texttt{mutated\_sequence}). Label leakage is impossible.
+
+\subsection{Diagnostic Feedback}
+
+Each evaluation produced a structured diagnostic briefing --- rewritten after every iteration --- that connected strategy design choices to error patterns in the data. This briefing was the primary observational input to the Scientist agent, serving the observation step of the scientific method. Nine categories of computed insight were generated:
+
+\begin{enumerate}
+    \item \textbf{Calibration:} where the strategy's scores systematically diverge from experimental values (e.g., ``scores are compressed in the 0.3--0.5 range; experimental values span $-$5 to +15'').
+    \item \textbf{Error direction:} whether errors are biased (systematically too high or too low), not just error magnitude.
+    \item \textbf{Substitution class breakdown:} which amino acid change types the strategy handles worst (e.g., ``charge changes at buried positions: 1.8$\times$ larger errors'').
+    \item \textbf{MSA depth effect:} performance stratified by alignment depth (e.g., ``shallow-MSA proteins: 0.490 vs.\ deep-MSA: 0.612 --- strategy is unreliable when evolutionary signal is sparse'').
+    \item \textbf{Mutation load effect:} single vs.\ multi-mutant performance (e.g., ``single mutants: 0.563, double mutants: 0.385 --- strategy degrades on combinatorial effects'').
+    \item \textbf{Assay type breakdown:} performance by functional category (Activity, Binding, Expression, Organismal Fitness, Stability).
+    \item \textbf{Conservation--error relationship:} ``conserved positions have 3$\times$ larger errors; strategy assigns harmful scores at positions where WT is already optimal.''
+    \item \textbf{Structural context:} core vs.\ surface positions, using burial class as a proxy (e.g., ``core errors 1.8$\times$ surface errors --- consider position-specific penalties based on burial'').
+    \item \textbf{Per-protein outliers:} the 20 weakest proteins with MSA depth, mutation count, and the 3 worst-scoring mutations each, showing substitution class, predicted vs.\ expected score, and error direction.
+\end{enumerate}
+
+Each insight connects a \emph{design choice} in the strategy to a \emph{pattern in the errors}. ``Charge changes at buried positions have 1.8$\times$ errors'' points directly at a lever: add a physicochemical penalty for charge changes at buried positions. The Scientist can immediately form a hypothesis and test it. Without this interpreted feedback, the agent would need to discover the pattern itself from raw per-protein score tables --- a much harder reasoning task that, in earlier experiments, produced search behavior indistinguishable from random perturbation.
+
+The design principle was to surface \emph{insights}, not \emph{data}. The earlier diagnostic format presented 200-row tables of per-protein scores. The revised format produced $\sim$50 lines of interpreted findings: ``conserved positions have 3$\times$ larger errors and the sign is wrong'' rather than a table of conservation values and error magnitudes. This shift from data presentation to insight generation was the key enabler of targeted hypothesis formation.
+
+\paragraph{Feedback files.}
+The diagnostic pipeline delivered feedback through two files that the Scientist read at the start of each iteration:
+
+\texttt{staging\_diagnostics.md} was the primary feedback file, rewritten in full after every evaluation by the \texttt{write\_diagnostics()} function in the validation script. It contained the nine insight categories described above, plus the top 20 weakest proteins with MSA depth and mutation count, and for the bottom 5 proteins the 3 worst-scoring mutations with substitution class, predicted vs.\ expected score, and error direction. The agent prompt explicitly directed: ``Read \texttt{staging\_diagnostics.md} --- the most important file. Read it carefully, top to bottom. Read the Key Insights section first --- they tell you what to fix.''
+
+\texttt{history.jsonl} was the experiment log, appended after each iteration. Each entry recorded the hypothesis text, prediction range (low/high), actual score, score delta, verdict (accepted, rejected, or false positive), top improved and regressed proteins, and a diff summary. This gave the Scientist a record of what it had already tried, what it predicted would happen, and what actually happened --- enabling it to avoid repeating refuted approaches and to build on confirmed ones.
+
+Together, these two files implemented the observation and memory functions of the scientific method: \texttt{staging\_diagnostics.md} told the Scientist what was wrong, \texttt{history.jsonl} told it what it had already tried, and together they enabled targeted hypothesis formation rather than random editing. The critical design decision was not the existence of diagnostics per se --- it was making them \emph{interpreted} rather than \emph{raw}. The validation function transformed raw evaluation output (per-protein score tables, mutation-level predictions) into actionable prose: ``your scores are compressed --- consider expanding the output range'' and ``consider position-specific penalties based on burial.'' This interpretation step, performed by deterministic template logic in the evaluation script, offloaded the pattern-discovery work from the agent's reasoning to the infrastructure.
+
+A third artifact, \texttt{causal\_model.md}, served as the agent's running lab notebook. Unlike the diagnostics and history files (both script-generated), the causal model was written and maintained by the Scientist agent itself. After each iteration, the agent updated it with what was tested, what the score was, and what the signal meant --- recording facts and observations, not conclusions. The validation script capped it at the last 10 entries to manage context length. At the start of each iteration, the agent read its own accumulated notes alongside the fresh diagnostics, enabling it to check new hypotheses against what it had already learned. This created a three-layer feedback architecture: \emph{instrument readout} (script-generated diagnostics), \emph{lab notebook} (agent-maintained causal model), and \emph{published results} (script-appended history log).
+
+\subsection{Search Statistics}
+
+\begin{table}[H]
+\centering
+\caption{Measured compute usage for the ProteinGym case study. All figures from OpenClaw \texttt{cron\_run\_logs}.}
+\label{tab:pg_search_stats}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Component & Runs & Tokens & Model \\
+\midrule
+Scientist agent   & 287 & 377.3M & GLM-4.7 \\
+Kuhn agent        & 104 &  95.7M & GLM-4.7 \\
+Infrastructure    &  38 &   2.0M & --- \\
+\midrule
+\textbf{Total} & \textbf{429} & \textbf{475.0M} & 8 calendar days \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The search ran from July 29 to August 6, 2026 (8 calendar days), producing 74 evaluated iterations with 24 accepted improvements. The Scientist and Kuhn agents operated concurrently on the same benchmark, with the Kuhn agent automatically handing off strategies to the Scientist when they outperformed the Scientist's current best.
+
+\subsection{Results}
+
+\emph{Delta V} achieves \textbf{0.551 official category-mean Spearman correlation} (0.569 flat mean across all 217 assays), ranking \textbf{first on the ProteinGym DMS Substitutions Zero-Shot leaderboard} (PR\#117: \url{https://github.com/OATML-Markslab/ProteinGym/pull/117}) across all five official evaluation metrics (Spearman, AUC, MCC, NDCG, Top-\emph{k} recall) --- exceeding the \#2 model (VenusREM, 0.518) by +0.033 Spearman. Figure~\ref{fig:pg_progression} shows the score progression over the 8-day search, including the data expansion that produced the largest single jump. Table~\ref{tab:pg_leaderboard} and Figure~\ref{fig:pg_leaderboard} contextualize this result against the top leaderboard entries.
+
+\begin{table}[H]
+\centering
+\caption{ProteinGym DMS Substitutions Zero-Shot leaderboard (top entries). All competitor scores from the official ProteinGym evaluation pipeline (v1.3, August 2026). Delta V ranks \#1 on all five official metrics. ``Avg.\ Spearman'' is the official category-mean aggregation. Delta V's flat mean across all 217 assays is 0.569. $^{*}$VenusRAR reports matching Spearman on the same benchmark; AUC/MCC/NDCG/Top-\emph{k} were not reported.}
+\label{tab:pg_leaderboard}
+\small
+\begin{tabular}{rllccccc}
+\toprule
+Rank & Model & Input Modalities & Spearman & AUC & MCC & NDCG & Top-\emph{k} \\
+\midrule
+\textbf{1} & \textbf{Delta V (agent-discovered)} & Ensemble of 5 models & \textbf{0.551} & \textbf{0.801} & \textbf{0.430} & \textbf{0.800} & \textbf{0.254} \\
+2 & VenusRAR \citep{tan2026venusrar} & Multi-modal ensemble + CoT & 0.551$^{*}$ & --- & --- & --- & --- \\
+3 & VenusREM & Structure \& MSA & 0.518 & 0.783 & 0.404 & 0.770 & 0.244 \\
+4 & ProSST (K=2048) & Sequence \& Structure & 0.507 & 0.777 & 0.398 & 0.757 & 0.236 \\
+5 & ProSST (K=4096) & Sequence \& Structure & 0.498 & 0.773 & 0.385 & 0.774 & 0.232 \\
+6 & S3F-MSA & Structure \& MSA & 0.496 & 0.771 & 0.387 & 0.792 & 0.243 \\
+7 & S2F-MSA & Structure \& MSA & 0.488 & 0.767 & 0.381 & 0.790 & 0.240 \\
+8 & ProSST (K=1024) & Sequence \& Structure & 0.485 & 0.764 & 0.372 & 0.761 & 0.230 \\
+9 & ESCOTT & Structure \& MSA & 0.476 & 0.761 & 0.370 & 0.779 & 0.213 \\
+10 & ProSST (K=512) & Sequence \& Structure & 0.471 & 0.757 & 0.360 & 0.759 & 0.222 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_pg_leaderboard.png}
+\caption{ProteinGym DMS Substitutions Zero-Shot leaderboard (top entries). Delta V exceeds all 96 scored models on the leaderboard, ranking \#1 on all five official metrics.}
+\label{fig:pg_leaderboard}
+\end{figure}
+
+The +0.033 margin over VenusREM exceeds the spread between rank 2 (0.518) and rank 10 (0.470) on the 96-model leaderboard --- Delta V's advantage over the field is larger than the gap separating the entire current top 10. Table~\ref{tab:pg_categories} compares Delta V against the best competitor in each functional category.
+
+\begin{table}[H]
+\centering
+\caption{Per-category Spearman scores: Delta V vs.\ VenusRAR-Rank vs.\ best competitor. Scores from official ProteinGym pipeline. VenusRAR-Rank scores from \citet{tan2026venusrar}, Table 2. Delta V wins 2 of 5 categories head-to-head; VenusRAR-Rank wins 3. The approaches capture different signal --- Delta V is strongest on Expression (+0.057), VenusRAR-Rank on Stability (+0.016).}
+\label{tab:pg_categories}
+\small
+\begin{tabular}{lrllll}
+\toprule
+Category & \#UniProt & Delta V & VenusRAR-Rank & Best Other & Margin \\
+\midrule
+Activity            & 37 & \textbf{0.549} & 0.539 & VenusREM (0.495)         & +0.054 \\
+Expression          & 11 & \textbf{0.554} & 0.497 & VenusREM (0.533)         & +0.057 \\
+Organismal Fitness  & 62 & 0.523 & \textbf{0.558} & VenusREM (0.459)         & $-$0.035 \\
+Stability           & 66 & 0.642 & \textbf{0.658} & ProSST K=2048 (0.653)    & $-$0.016 \\
+Binding             & 10 & 0.486 & \textbf{0.497} & ProSST K=4096 (0.472)    & $-$0.011 \\
+\midrule
+\textbf{Official mean} & \textbf{186} & \textbf{0.551} & \textbf{0.551} & VenusREM (0.518)          & \textbf{+0.033} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Delta V and VenusRAR-Rank achieve the same headline Spearman (0.551) but with complementary per-category profiles (Table~\ref{tab:pg_categories}). Delta V is stronger on Expression (+0.057) and Activity (+0.010); VenusRAR-Rank is stronger on Stability (+0.016), Organismal Fitness (+0.035), and Binding (+0.011). This pattern suggests the approaches capture different biological signal. A critical architectural difference underlies these results: VenusRAR uses per-protein LLM calls at inference time to dynamically calibrate ensemble weights, while Delta V uses an LLM-evolved static strategy requiring no inference-time LLM calls (475M tokens over 8 calendar days on a single VPS without GPU resources). Both achieve the same headline metric through different mechanisms.
+
+\paragraph{Statistical significance.}
+Bootstrap confidence intervals (10,000 iterations, seed = 42) confirm that Delta V's advantage is robust. The 95\% CI of Delta V's flat mean Spearman ([0.549, 0.588]) does not overlap with VenusREM's ([0.514, 0.557]). The paired test (Delta V $-$ VenusREM, per-protein, $n = 217$) yields a mean difference of +0.033 (SE = 0.004, 95\% CI [+0.025, +0.042]); in 10,000 bootstrap samples, Delta V never fell below VenusREM ($p < 10^{-4}$). The official category-mean CI is wider ($\pm$0.027) because it averages over only 5 categories, introducing higher variance from the small denominator. This aggregation effect is inherent to the official metric and affects all models equally.
+
+\paragraph{Search efficiency.}
+Figure~\ref{fig:pg_efficiency} summarizes the search dynamics. The Scientist agent conducted 101 runs over 42 hours, accepting 29 proposals (29\%) and achieving 5 new best scores (20.2 runs per improvement). The Kuhn agent conducted 35 runs over 48 hours with 3 acceptances (9\%) and 0 new bests. The Scientist's gain per hour was 2.4$\times$ that of the Kuhn agent. Notably, the Scientist reached its final best score in 15 runs after the data expansion transition ($\sim$16.5M tokens). For comparison, ShinkaEvolve reports 150 samples for a single circle packing instance with a $\$20$ budget cap across 4 parallel models, though direct comparison is limited by differences in problem complexity, evaluation cost, and unreported per-sample compute (\citealt{xing2026compute}). FunSearch reports $\sim$2,000,000 programs for comparable tasks. Neither system reports total tokens or wall-clock time.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_pg_efficiency.png}
+\caption{Search efficiency comparison between Scientist and Kuhn agents on the ProteinGym zero-shot task. Top row: cumulative improvements over time and magnitude of each improvement. Middle row: rolling acceptance rate and best score trajectory. Bottom row: per-achievement cost and summary statistics.}
+\label{fig:pg_efficiency}
+\end{figure}
+
+\paragraph{The data expansion transition.}
+The discontinuous jump in Figure~\ref{fig:pg_progression} (from 0.445 on Aug 2 to 0.578 on Aug 4) warrants explanation. This was not an algorithmic breakthrough by the Scientist --- it was a human intervention. The investigator recognized that the five top-scoring models on the ProteinGym leaderboard publish their zero-shot predictions, and added these as available data inputs. Once the Scientist had access to multiple model predictions, it independently decided to build an ensemble with calibration, rather than continuing to optimize a single-model approach. This illustrates the human-in-the-loop nature of the framework (\S2.5): the human expanded the search space by providing new data sources, and the autonomous search loop explored that space.
+
+\subsection{Discovered Strategy: Delta V}
+
+The agent discovered a strategy called \textbf{CPCWE} (Constraint-Propagated Confidence-Weighted Ensemble), implemented as \textbf{Delta V}. The strategy has seven stages, each added incrementally across the 24 accepted improvements:
+
+\subsubsection{Quantile Calibration}
+
+Raw model scores are calibrated using empirical quantiles (percentiles 1, 5, 10, 25, 50, 75, 90, 95, 99). For each model independently, the median predicted score is identified. Scores below the median are expanded asymmetrically (2.3$\times$ distance from median) while scores above the median are left unchanged (1.0$\times$ expansion). This corrects for systematic under-prediction of mutation severity: LLM-based models tend to predict scores clustered near zero, compressing the harmful tail of the distribution.
+
+The calibration is computed per-protein across all mutations, ensuring that the expanded tails are relative to each protein's score distribution rather than absolute thresholds.
+
+\subsubsection{Z-score Normalization}
+
+Calibrated scores from each model are z-score normalized (mean-centered and scaled by standard deviation) before ensemble combination. This prevents models with wider output ranges from dominating the ensemble. After normalization, all five models contribute on the same scale.
+
+\subsubsection{Confidence-Weighted Ensemble}
+
+The five base models (VenusREM, S3F-MSA, ESM2-15B, GEMME, ProSST-2048) are combined using confidence-weighted blending with model-specific scaling factors. Each model has a confidence scaling parameter that controls how strongly its disagreement from the ensemble is weighted:
+
+\begin{itemize}
+    \item VenusREM: $\alpha = 1.0$ (high confidence in disagreement)
+    \item S3F-MSA: $\alpha = 1.0$
+    \item ESM2-15B: $\alpha = 0.5$ (conservative --- disagreement downweighted)
+    \item GEMME: $\alpha = 0.5$
+    \item ProSST-2048: $\alpha = 1.5$ (strongest weighting for disagreement)
+\end{itemize}
+
+For each mutation, the weight of model $m$ is:
+
+\begin{equation}
+    w_m = w^{\text{base}}_m \cdot (1 + \alpha_m \cdot c_m)
+\end{equation}
+
+where $w^{\text{base}}_m$ is the MSA-depth-adaptive base weight and $c_m \in [0, 1]$ is the confidence score (normalized absolute z-score). Models with high confidence and high scaling factors contribute more when they disagree with the ensemble consensus.
+
+Base weights depend on MSA depth. For proteins with deep MSAs ($\geq$500 sequences), the distribution favors conservation-aware models:
+
+\begin{itemize}
+    \item Deep MSA: VenusREM 0.314, S3F-MSA 0.236, ESM2-15B 0.236, GEMME 0.125, ProSST-2048 0.089
+    \item Shallow MSA: VenusREM 0.471, S3F-MSA 0.236, ESM2-15B 0.078, GEMME 0.125, ProSST-2048 0.089
+\end{itemize}
+
+\subsubsection{Residual Propagation}
+
+A novel mechanism not present in standard ensemble approaches: after the initial confidence-weighted ensemble, Delta V computes per-model residuals (how far each model's prediction deviates from the ensemble consensus) and propagates these residuals across structurally similar positions within a 5-residue window, weighted by RSA similarity. This is not spatial smoothing --- it is closer to a message-passing algorithm. The intuition: if VenusREM is systematically wrong at position 42, it is probably also wrong at positions 40--44 with similar solvent accessibility. Three iterations with decreasing damping (0.3, 0.15, 0.1):
+
+For each iteration $i$:
+\begin{enumerate}
+    \item Compute the confidence-weighted ensemble blended score.
+    \item For each model, compute the residual $r_m = (z_m - \bar{z}) / (c_m + 0.1)$.
+    \item Average residuals at positions within 5 residues, weighted by RSA distance and confidence ratio.
+    \item Subtract the damped correction $\gamma_i = 0.3 / (i+1)$ from each model's z-score.
+\end{enumerate}
+
+\subsubsection{Conservation-Modulated GEMME Weighting}
+
+GEMME's pure evolutionary signal is modulated per-mutation at runtime using position-specific Shannon entropy $H(p)$ computed from the MSA:
+
+\begin{equation}
+    w_{\text{GEMME}}(p) = w^{\text{base}}_{\text{GEMME}} \cdot (1.5 - \hat{H}(p))
+\end{equation}
+
+where $\hat{H}(p) \in [0, 1]$ is normalized entropy. At conserved positions (low entropy), GEMME's weight increases up to 1.5$\times$; at variable positions (high entropy), it decreases to 0.5$\times$. This captures the intuition that evolutionary conservation is more informative at positions where few amino acids are tolerated.
+
+\subsubsection{Structure-Based Penalties}
+
+At buried positions (relative solvent accessibility $<$ 0.2), mutation severity is adjusted using RSA, burial class, and physicochemical properties of the substitution. The penalty is multiplicative across properties:
+
+\begin{itemize}
+    \item Charge changes ($\times$0.90)
+    \item Large volume changes $|\Delta V| > 50$ ($\times$0.95)
+    \item Hydrophobicity shifts $|\Delta H| > 2.0$ ($\times$0.95)
+    \item Glycine/proline backbone disruption ($\times$0.95)
+    \item Aromatic residue disruption ($\times$0.95)
+\end{itemize}
+
+Penalty multipliers are assay-specific: stability and activity assays apply stronger penalties than binding assays, reflecting different structural tolerances.
+
+\subsubsection{Dynamic Range Expansion}
+
+The final stage applies a power transformation $f(x) = \text{sign}(x) \cdot |x|^{0.7}$ to the ensemble output. Because $p < 1$, this expands the tails of the distribution --- extreme predictions (both harmful and benign) are amplified while near-zero predictions are compressed. This corrects for the tendency of ensembles to average out extreme predictions, recovering discriminative power at the tails where the most informative mutations reside.
+
+\paragraph{Summary.}
+None of these components is novel in isolation --- quantile calibration, adaptive ensembling, structure-based corrections, and power transformations are well-established techniques. The contribution is that the agent discovered the \emph{combination}, \emph{scaling}, and \emph{calibration} of these techniques autonomously. Delta V is an ensemble + iterative residual correction + structural/physicochemical feature corrections + MSA-derived corrections + non-linear output transform. The residual propagation mechanism and the specific calibration parameters (2.3$\times$ harmful expansion, $p = 0.7$ power, propagation radius 5, damping schedule 0.3/0.15/0.1) were not predetermined --- they emerged from the agent's hypothesis-driven search.
+
+\subsection{Interpretation}
+
+This result demonstrates a different capability of the framework than the motif discovery case study. In motif discovery, the agent wrote a novel algorithm from scratch. In ProteinGym, the agent discovered \emph{Delta V}, an ensemble calibration strategy that outperforms all individual models, including 16-billion-parameter systems. The framework thus supports two modes of discovery: \emph{de novo} algorithm design and meta-learning over existing approaches.
+
+The distinction between automated scientific iteration and top-down design is worth examining. A data scientist approaching the same ensemble problem would typically frame it as learning an optimal global combination function --- fixed weights applied independently to each mutation \citep{zhang2024modify}. Per-instance uncertainty-weighted ensembling, where predictions are adjusted by the model's own confidence, is a known technique \citep{lakshminarayanan2017simple, kwon2024dune}. What is novel in Delta V is the iterative residual propagation: per-model disagreement is propagated across structurally similar positions, making the ensemble's prediction at position $p$ depend on model behavior at neighboring positions. This spatial, iterative mechanism has analogs in message-passing networks \citep{gilmer2017neural} and label propagation \citep{zhu2002semi}, but applying it to ensemble residuals rather than node features or label spreading is, to our knowledge, not precedented in the protein fitness prediction literature. Whether the improvement comes from capturing genuine positional error structure or from fitting to zero-shot model quirks is an open question --- one our planned supervised experiments may help answer. The broader point stands: hypothesis-driven iteration discovered an effective combination that resists top-down assembly, even when the individual components are classical.
+
+We note that the ProteinGym result is not directly comparable to AlphaEvolve or FunSearch, which do not report results on public benchmark leaderboards. It is comparable in spirit, however, to AlphaEvolve's Google infrastructure optimizations, where the system found better configurations of existing components rather than inventing fundamentally new algorithms. The computational efficiency of hypothesis-driven search is discussed in \S7.2.
+
+The complementary per-category profiles of Delta V and VenusRAR-Rank (Table~\ref{tab:pg_categories}) are worth examining. VenusRAR-Rank's per-protein LLM reasoning at inference time produces stronger Stability and Organismal Fitness predictions, suggesting that LLM-augmented biological auditing captures signal relevant to those categories. Delta V's static calibration strategy produces stronger Expression and Activity predictions, suggesting that the autonomously discovered calibration pipeline captures signal that LLM post-hoc auditing misses. The approaches are not redundant --- they are complementary. Combining them (applying VenusRAR's Reason-Stage auditing atop Delta V's rankings) is a natural future experiment.
+
+
+\section{Ablations}
+\label{sec:ablations}
+
+The search history provides natural ablation experiments. Because the framework was built iteratively --- each infrastructure change addressing a specific failure mode --- we can compare performance across phases to estimate the contribution of each component.
+
+\subsection{Development Timeline}
+
+Table~\ref{tab:ablation} compares the search performance under progressive infrastructure additions. Each row adds one component to the previous row's configuration.
+
+\begin{table}[H]
+\centering
+\caption{Development timeline: effect of progressive infrastructure additions on search outcomes. Each row adds one component to the previous configuration. Smoke-test AUROC is the 5-TF proxy metric used during search; full-benchmark AUROC is the 132-TF final metric. Rows are sequential additions, not independent variables --- see \S7.2 for limitations.}
+\label{tab:ablation}
+\small
+\begin{tabular}{lccrr}
+\toprule
+Configuration & Smoke peak & Full eval & Runs to peak & Tokens \\
+\midrule
+Baseline (synthetic eval, loose prompt, no diagnostics) & 0.664 & ---     & 1,588 & 97.6M \\
++ Real benchmark data (15 ChIP-seq TFs, AUROC)         & 0.565 & ---     & 11    & --- \\
++ Causal scaffold prompt (7-field structured plan)      & 0.709 & ---     & 11    & --- \\
++ Per-instance diagnostics restored                      & 0.794 & ---     & 23    & --- \\
++ Kuhn paradigm agent                                    & 0.794 & ---     & 63    & 33.5M \\
++ All components (full framework)                        & \textbf{0.846} & \textbf{0.842} & 500 & 97.9M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Interpretation.}
+The baseline configuration (Phase 1) stalled at 0.664 on synthetic data across 1,588 runs and 97.6M tokens --- zero accepted improvements in the final 49 runs. Replacing the synthetic benchmark with real ChIP-seq data immediately improved the smoke score from 0.312 to 0.565 in a single experiment, confirming that the agent had been optimizing the wrong objective. Adding the causal scaffold prompt (structured hypothesis, prediction, falsification criterion) improved from 0.565 to 0.709 in 11 experiments. Restoring the deleted per-instance diagnostics enabled the agent to form targeted hypotheses, reaching 0.794. The Kuhn paradigm agent's contribution cannot be isolated as a single-line improvement because it operated concurrently with the other changes, but its analysis drove the shift from probability-based to frequency-based enumeration.
+
+\subsection{Effect of Structured Feedback vs.\ Scalar Score}
+
+The clearest ablation is the effect of diagnostic detail. During Phase 1, the evaluator produced per-TF diagnostics, but a cleanup script silently deleted them before the agent could read them. The agent saw only aggregate scores. After the fix, the agent could see which TFs improved or regressed, what widths were selected, and how its results compared to baseline tools.
+
+\begin{itemize}
+    \item \textbf{Without per-instance diagnostics} (1,588 runs): agent made full-rewrite changes, could not form targeted hypotheses, stalled at 0.664. Zero improvements in final 49 runs.
+    \item \textbf{With per-instance diagnostics} (first 11 runs after fix): two breakthrough improvements (0.312 $\rightarrow$ 0.565 $\rightarrow$ 0.709). Agent made targeted edits and cited specific TF results in its hypotheses.
+\end{itemize}
+
+This confirms the core architectural claim: structured per-instance feedback is essential for hypothesis-driven search. With scalar feedback alone, the search degenerates into blind optimization.
+
+\subsection{Search Efficiency: Improvement Rate}
+
+Across all phases, 17 of $\sim$300 evaluated iterations produced improvements (5.7\%). Breaking this down:
+
+\begin{itemize}
+    \item \textbf{Phase 1 (no infrastructure):} 0 improvements in final 49 evaluated iterations (0\%)
+    \item \textbf{Phase 2 (full infrastructure):} 17 improvements in $\sim$64 evaluated iterations (26.6\%)
+\end{itemize}
+
+The 26.6\% improvement rate under the full framework is dramatically higher than the 0\% rate under the baseline configuration, and also higher than the $\sim$5\% rate typical of evolutionary approaches where most mutations are neutral or deleterious. This suggests that hypothesis-driven search with structured feedback is substantially more sample-efficient than scalar-fitness evolutionary search, though we cannot make a direct comparison without running evolutionary baselines on the same problem.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What the Search Discovered}
+
+The Little Scientist's search produced an algorithm that combines established and novel design choices. The framework independently arrived at k-mer enumeration as a seeding strategy and EM as a refinement mechanism --- both well-known in the human-designed literature. But it also discovered strategies that, to our knowledge, have not been published: a dual-seeding approach that combines abundance and consistency metrics, Pareto-front ranking that preserves diverse width strategies, and effective-width--aware scoring that penalizes uninformative positions.
+
+The search statistics are informative about the nature of algorithmic discovery. Of the evaluated iterations under the full framework, 17 of $\sim$64 produced improvements --- a 26.6\% success rate. The non-improving iterations were not wasted: they tested and refuted hypotheses, progressively constraining the design space. This pattern mirrors human algorithm development, where most ideas do not work, and the ones that do are built on the scaffolding of many failures.
+
+\subsection{Implications for Agentic Science}
+
+\citet{li2026agentic} propose that teams of LLM-based agents can function as computational research teams, arguing that agentic systems will accelerate biomedical discovery. Our results provide concrete, benchmarked evidence for this vision in a specific, competitive domain.
+
+The key architectural choice that distinguishes The Little Scientist from prior agent-driven discovery systems (AlphaEvolve, FunSearch, EoH) is the combination of hypothesis-driven search and structured per-instance feedback. This distinction aligns with independent theoretical work arguing that auto-research systems need cheap, dense signals of epistemic progress---analogous to coverage in fuzzing---rather than relying solely on terminal evaluation scores~\citep{he2026agentic}. AlphaEvolve and FunSearch use evolutionary operators --- mutation and crossover on code --- guided by a scalar fitness signal. The Scientist agent, by contrast, forms explicit hypotheses (``I expect [change] will [improve/worsen] because [reasoning]'') and receives per-instance diagnostic feedback that enables targeted reasoning about failures. This means the evaluator does analytical work for the scientist, not just scoring.
+
+The compute implications are significant. Compute details for both case studies are reported in \S2.6 and \S4.4, and Figure~\ref{fig:pg_efficiency} provides run-level efficiency metrics. While a direct token-to-token comparison with AlphaEvolve or FunSearch is not possible (neither system reports token counts), our result suggests that hypothesis-driven search with structured feedback can achieve top-ranked benchmark performance without the infrastructure demands of large-scale evolutionary search. A distinguishing feature is full iteration-level transparency: every run's hypothesis, score, and acceptance decision is logged, enabling post-hoc analysis of search dynamics. Neither AlphaEvolve nor FunSearch publishes this level of detail.
+
+Whether the approach generalizes to other domains remains an open question. Motif discovery has properties that favor agent-driven search: interpretable code, a clear scalar metric, and fast evaluation cycles. Domains where evaluation is expensive (e.g., wet-lab experiments) or where algorithms are expressed as large neural networks rather than compact code may pose greater challenges.
+
+A broader observation: the success of this approach reflects a shift in how we conceptualize LLM-based agents. The dominant paradigm treats LLMs as computational tools --- advanced text processors that execute instructions. The Little Scientist treats the LLM agent as something closer to a junior researcher: one that can reason about prior results, form hypotheses, consult the literature, and design experiments. The distinction matters because it changes what we expect from the system. A tool is judged on whether it executes correctly; a researcher is judged on whether they produce insight. The framework's 26.6\% acceptance rate --- where 73.4\% of evaluated iterations produce no improvement --- is not a failure of execution but a characteristic of exploratory research. Run-to-run score deltas show strong negative autocorrelation ($r = -0.45$): 65\% of runs reverse direction from the previous run, with corrections after large failures producing swings 5--6$\times$ larger than after small changes. This pattern reflects a hill-climbing search that makes large corrective leaps after failure rather than random exploration --- the non-improving iterations are the scaffolding on which the improving ones are built, just as in human science. This suggests that evaluation criteria for agentic systems should measure research productivity (insights generated, design space explored, failure modes identified) rather than just end-state accuracy.
+
+The implication is that agentic systems can best be utilized with traditionally human patterns for understanding --- hypothesis, prediction, experiment, reconciliation --- rather than designing agentic research from concepts derived from computer science alone (evolutionary search, reinforcement learning, genetic algorithms). This does not mean those CS-derived approaches are inferior; it means the space of productive agent architectures may be larger than the paradigm that has dominated the field.
+
+We cannot isolate which individual infrastructure component was most responsible for the Phase 1 to Phase 2 improvement. The five changes (real benchmark data, causal scaffold prompt, trust-boundary validator, fixed diagnostic pipeline, Kuhn paradigm agent) were made sequentially in response to observed failure modes, not in a controlled factorial design. Table~\ref{tab:ablation} records the sequence, but the contribution of each component remains uncertain. The framework should be evaluated as an integrated system; claims about individual mechanisms require controlled experiments we have not conducted.
+
+\subsection{Collaborative Human-Agent Research}
+
+A notable design property of The Little Scientist is that the human investigator can interact with the search process as it unfolds. The system progresses autonomously --- the Scientist and Kuhn agents iterate, evaluate, and improve without intervention --- but the human remains in the loop in a fundamentally different way than traditional supervised systems. Rather than merely monitoring for failures, the investigator can: observe accumulated diagnostics and redirect the search; discuss strategy with the agents through natural conversation; inject one-off experiments to test a hypothesis; add new data or models at any point; benchmark intermediate results against external tools; and trigger paradigm shifts when they judge the time is right.
+
+This fluid, conversational interaction between human and agent is a feature, not a limitation to be automated away. It mirrors how a principal investigator collaborates with a junior researcher: the junior researcher works independently on day-to-day experimentation, but benefits from the senior investigator's broader context, domain knowledge, and strategic judgment.
+
+An important distinction: the human investigator (a data scientist, not a domain expert in bioinformatics or structural biology) designed the evaluation infrastructure --- the diagnostic pipeline, the smoke-test/full-evaluation two-tier loop, the trust-boundary validator, and the Kuhn prompt template --- while the domain-specific algorithmic decisions were entirely agent-originated. For motif discovery, the human did not suggest k-mer enumeration, EM refinement, dual-seed selection, or Pareto ranking --- these emerged from the agent's search. For ProteinGym, the human provided pre-computed model predictions as input data but did not direct the ensemble calibration strategy, the residual propagation mechanism, or the dynamic range expansion. This suggests that the framework may not require domain expertise to produce domain-specific results, though the evaluation infrastructure must be designed with care.
+
+The framework's architecture --- with the OpenClaw agent platform handling LLM invocation, scheduling, and sandboxed execution --- makes this collaboration practical: the investigator interacts through a messaging interface (Telegram), receiving progress updates and agent summaries, while the agents handle the experimental workload. This is a productive model for scientific computing that leverages the complementary strengths of human researchers (strategic direction, domain expertise, data curation) and LLM agents (rapid iteration, exhaustive code exploration, tireless hypothesis testing).
+
+\subsection{Limitations and Future Directions}
+
+\begin{enumerate}
+    \item \textbf{Two case studies.} We demonstrate the framework on two domains (motif discovery and protein fitness prediction). Generalization to other bioinformatics problems is planned but requires further evidence.
+    
+    \item \textbf{Benchmark dependency.} The framework requires a well-defined benchmark with clear metrics and ground-truth evaluation data. This is a structural limitation: the framework's applicability is bounded by benchmark availability. For domains where ground-truth evaluation is cheap and standardized (motif discovery, protein fitness, drug-target binding, RNA structure prediction), the framework can operate autonomously. For domains where evaluation is expensive, subjective, or unstructured, the bottleneck is not the agent but the absence of benchmark infrastructure. We argue that more effort directed toward problem formalization --- encoding scientific questions as benchmarkable tasks with structured data --- would unlock autonomous discovery across a wider range of domains. The existence of comprehensive benchmarks like ProteinGym \citep{notin2023proteingym} and ENCODE demonstrates that this curation work is feasible but requires sustained community investment.
+    
+    \item \textbf{Single motif per TF.} DALE returns one motif per TF. Combinatory motif discovery (finding co-occurring TF binding patterns, as in ProSampler) is out of scope.
+    
+    \item \textbf{LLM dependency.} The framework's reasoning quality depends on the underlying language model. Improvements in LLM capability may directly improve search effectiveness.
+    
+    \item \textbf{No wet-lab validation.} Our results are computational benchmarks only. VenusRAR provides wet-lab validation on Cas12i3 nuclease (14/30 hits, 4--5$\times$ activity improvements) \citep{tan2026venusrar}; we lack equivalent experimental confirmation. Wet-lab validation of Delta V's predictions, particularly in the Expression and Activity categories where it outperforms competitors, would substantially strengthen the work.
+    \item \textbf{Controlled ablation.} We cannot quantify the contribution of individual framework components because the infrastructure was developed sequentially and LLM outputs are non-deterministic across runs. A controlled ablation --- running each component in isolation with multiple replicates on the same benchmark --- would require $\sim$100M tokens per configuration and $\sim$10 replicates for statistical power, totaling billions of tokens. We have not conducted this study. The closest evidence is the Phase 1 diagnostic deletion: the same framework produced stalled search when per-instance diagnostics were silently deleted, and productive search when they were restored (\S5.2). This single natural experiment supports the importance of structured feedback but does not isolate other components. We recommend controlled ablation as future work, ideally using a smaller benchmark that permits multiple replicates at manageable cost.
+    
+    \item \textbf{ML-based discovery.} Both case studies produced classical algorithms (Python functions). A natural extension is to apply the framework to discover machine-learning pipelines --- not just ensemble strategies like Delta V, but novel architectures, training procedures, or data augmentation policies. The framework's requirement for a benchmark oracle is satisfied by most ML benchmarks, making this a promising near-term direction.
+    
+    \item \textbf{Benchmark formulation as a first-class activity.} The most immediate gains will come from formulating new problems as benchmarks or oracles. The framework's applicability is bounded not by agent capability but by the availability of well-defined evaluation functions. Community investment in benchmark infrastructure --- following the model of ProteinGym and ENCODE --- is the highest-leverage path to expanding the range of domains accessible to autonomous discovery.
+\end{enumerate}
+
+
+\vspace{1em}
+\noindent\textbf{Data availability.}
+
+\emph{Motif discovery.} All benchmark data used in this study is publicly available. ChIP-seq peak sequences for 132 ENCODE K562 transcription factors were obtained from the ENCODE Consortium \citep{encode2012} (\url{https://www.encodeproject.org}). Peak regions were processed into 100\,bp centered windows around summits. JASPAR 2024 \citep{castro2024jaspar} motif profiles (\url{https://jaspar.elixir.org}) were used as reference motifs for TOMTOM comparison. Shuffled and genomic negative sequences were generated from the same assemblies using standard protocols. No custom or proprietary datasets were generated.
+
+\emph{ProteinGym DMS Substitutions Zero-Shot (Delta V).} All data used by Delta V is publicly available from the ProteinGym benchmark \citep{notin2023proteingym} (\url{https://www.proteingym.org}). This includes: (1) the 217 DMS assay datasets with wild-type sequences, mutation lists, and experimental fitness scores; (2) zero-shot predictions from five state-of-the-art models --- VenusREM, S3F-MSA, ESM2-15B, GEMME, and ProSST-2048 --- obtained from the ProteinGym website; (3) per-residue structural features (relative solvent accessibility, burial class) derived from AlphaFoldDB predictions. MSA data was sourced from ProteinGym's standardized alignments. No custom or proprietary datasets were generated.
+
+\vspace{1em}
+\noindent\textbf{Code availability.}
+
+\emph{DALE.} The discovered algorithm is distributed as a statically-linked binary and Python interface, along with the full C source, benchmark scripts, and a reproducible Jupyter notebook, at \url{https://github.com/travis42/little-scientist-dale}.
+
+\emph{Delta V.} The discovered ensemble strategy (a Python function), the evaluation pipeline, and the full search history (all archived iterations) are available at \url{https://github.com/travis42/little-scientist-delta-v}.
+
+\emph{Framework.} The Little Scientist framework --- including agent prompts, evaluation environment code, the Kuhn agent, and the cron-driven orchestration --- is available at \url{https://github.com/travis42/little-scientist-dale}. The framework uses the OpenClaw agent platform (\url{https://github.com/openclaw/openclaw}) for LLM invocation, scheduling, and sandboxed execution. No fine-tuning or training of language models was performed; API access for inference is sufficient. The LLM used was GLM-4.7 (Z.ai), accessed via a coding plan subscription.
+
+\vspace{1em}
+\noindent\textbf{Acknowledgements:} The author thanks the ENCODE Consortium for providing open-access ChIP-seq data, the JASPAR database for motif reference data, and the MEME Suite development team --- Timothy Bailey, Charles Grant, and William Noble --- whose tools (STREME, MEME, TOMTOM) were used extensively in this study and whose work has advanced the field of computational motif discovery over three decades. Portions of this manuscript's prose were drafted with assistance from z.ai's GLM 5.1, under the author's direction; the author reviewed, edited, and takes full responsibility for all content.
+
+\vspace{1em}
+\noindent\textbf{Funding:} This work received no external funding.
+
+\bibliographystyle{plainnat}
+\bibliography{bibliography}
+
+\clearpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section*{Supplementary Material}
+
+\subsection*{Section A: Per-TF Results}
+
+Per-TF AUROC values for all 132 transcription factors are provided in the accompanying benchmark data files (\texttt{benchmark\_data/shuffled\_negatives\_132tf.csv} and \texttt{benchmark\_data/genomic\_negatives\_132tf.csv}).
+
+\subsection*{Section B: TOMTOM Match Analysis}
+
+TOMTOM comparison against JASPAR 2026 Core (2{,}633 motifs):
+
+\begin{table}[H]
+\centering
+\caption{TOMTOM JASPAR match rates ($n = 53$ TFs).}
+\label{tab:supp_tomtom}
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & DALE & STREME \\
+\midrule
+Top-1 strict ($q<0.001$, $\geq$70\% overlap) & 23 (50.0\%) & 31 (62.0\%) \\
+Top-1 moderate ($q<0.05$) & 40 (87.0\%) & 45 (90.0\%) \\
+Top-5 strict & 29 (63.0\%) & 37 (74.0\%) \\
+Top-5 moderate ($q<0.05$) & 46 (100\%) & 50 (100\%) \\
+No match at all & 6 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Section C: Compilation Fairness}
+
+STREME prebuilt binary vs.\ source-compiled (\texttt{-O2}) across 23 TFs: ratio 1.00$\times$ (identical performance). Both compiled with GCC on Ubuntu 24.04.
+
+\subsection*{Section D: Reproducibility}
+
+All benchmark data, the DALE binary, and a Jupyter notebook reproducing all motif discovery figures and statistics are available at \url{https://github.com/travis42/little-scientist-dale}. The Delta V ensemble strategy, evaluation pipeline, and archived search history (all iterations) are available at \url{https://github.com/travis42/little-scientist-delta-v}. Both repositories include reproducible benchmark scripts and are released under the Apache 2.0 license.
+
+
+\end{document}

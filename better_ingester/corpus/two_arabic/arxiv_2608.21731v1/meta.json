@@ -1,0 +1,10 @@
+{
+  "cell": "two_arabic",
+  "columns": "two",
+  "numbering": "arabic",
+  "documentclass": "article",
+  "category": "cs.NI",
+  "published": "2026-08-22",
+  "title": "Building A CSFQ-Inspired Transport for Switched CXL Memory Pooling",
+  "arxiv_id": "2608.21731v1"
+}

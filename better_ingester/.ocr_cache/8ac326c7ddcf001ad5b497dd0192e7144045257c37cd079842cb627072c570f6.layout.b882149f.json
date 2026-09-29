@@ -1,0 +1,2851 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      36.0,
+      569.0,
+      81.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Hybrid Neural-Classical Correction for Frozen Time Series Foundation Models: A Comprehensive Ablation Study on High-Frequency Stock Prediction",
+    "page": 0,
+    "bbox": [
+      91.0,
+      101.0,
+      1129.0,
+      263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      212.0,
+      296.0,
+      387.0,
+      322.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      204.0,
+      325.0,
+      389.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      175.0,
+      348.0,
+      425.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      216.0,
+      374.0,
+      377.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      164.0,
+      399.0,
+      436.0,
+      422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      517.0,
+      295.0,
+      727.0,
+      321.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      816.0,
+      296.0,
+      1051.0,
+      322.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      838.0,
+      325.0,
+      1024.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      810.0,
+      348.0,
+      1059.0,
+      372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      850.0,
+      374.0,
+      1012.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      807.0,
+      398.0,
+      1061.0,
+      423.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      526.0,
+      605.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      93.0,
+      1086.0,
+      603.0,
+      1148.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I. INTRODUCTION",
+    "page": 0,
+    "bbox": [
+      268.0,
+      1170.0,
+      430.0,
+      1190.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      92.0,
+      1200.0,
+      603.0,
+      1342.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      92.0,
+      1344.0,
+      605.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      618.0,
+      505.0,
+      1129.0,
+      577.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      578.0,
+      1130.0,
+      721.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      618.0,
+      889.0,
+      1129.0,
+      934.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      721.0,
+      1130.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      639.0,
+      937.0,
+      1129.0,
+      1007.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      638.0,
+      1009.0,
+      1129.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      617.0,
+      1081.0,
+      1130.0,
+      1153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      634.0,
+      1164.0,
+      1112.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      639.0,
+      1246.0,
+      962.0,
+      1269.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      640.0,
+      1272.0,
+      1128.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      639.0,
+      1344.0,
+      1129.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      639.0,
+      1393.0,
+      1129.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "footer",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      177.0,
+      1528.0,
+      1044.0,
+      1556.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      112.0,
+      100.0,
+      602.0,
+      171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      113.0,
+      172.0,
+      603.0,
+      218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      111.0,
+      220.0,
+      603.0,
+      267.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      272.0,
+      603.0,
+      393.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "II. RELATED WORK",
+    "page": 1,
+    "bbox": [
+      258.0,
+      411.0,
+      438.0,
+      432.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Foundation Models for Time Series",
+    "page": 1,
+    "bbox": [
+      92.0,
+      445.0,
+      418.0,
+      467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      476.0,
+      603.0,
+      619.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      620.0,
+      603.0,
+      787.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      789.0,
+      604.0,
+      884.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Efficient Model Adaptation",
+    "page": 1,
+    "bbox": [
+      93.0,
+      903.0,
+      347.0,
+      926.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      934.0,
+      605.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      1103.0,
+      603.0,
+      1246.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Hybrid Neural-Classical Methods",
+    "page": 1,
+    "bbox": [
+      93.0,
+      1264.0,
+      405.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      91.0,
+      1295.0,
+      604.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      100.0,
+      1129.0,
+      147.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      148.0,
+      1129.0,
+      268.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Attention Mechanisms and Bilinear Models",
+    "page": 1,
+    "bbox": [
+      619.0,
+      283.0,
+      1012.0,
+      306.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      313.0,
+      1130.0,
+      480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      481.0,
+      1130.0,
+      600.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. Financial Time Series Prediction",
+    "page": 1,
+    "bbox": [
+      619.0,
+      615.0,
+      924.0,
+      637.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      643.0,
+      1130.0,
+      814.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "III. METHODOLOGY",
+    "page": 1,
+    "bbox": [
+      782.0,
+      827.0,
+      966.0,
+      848.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Problem Setting",
+    "page": 1,
+    "bbox": [
+      618.0,
+      858.0,
+      784.0,
+      880.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      887.0,
+      1129.0,
+      936.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      637.0,
+      941.0,
+      978.0,
+      964.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      639.0,
+      966.0,
+      962.0,
+      989.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      638.0,
+      989.0,
+      942.0,
+      1012.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      639.0,
+      1013.0,
+      903.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      616.0,
+      1039.0,
+      1129.0,
+      1113.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      617.0,
+      1145.0,
+      1146.0,
+      1207.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      1100.0,
+      1202.0,
+      1125.0,
+      1220.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      1223.0,
+      1127.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Hybrid Correction Framework",
+    "page": 1,
+    "bbox": [
+      619.0,
+      1285.0,
+      904.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      618.0,
+      1316.0,
+      1128.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      639.0,
+      1365.0,
+      1001.0,
+      1387.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      639.0,
+      1392.0,
+      1129.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      110.0,
+      96.0,
+      592.0,
+      442.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 1: Hybrid Neural-Classical Correction Framework. Both architectures share this pipeline: frozen TimesFM pro- vides base predictions, a trainable neural corrector generates ∆yneural, and Random Forest learns residual patterns. Our ablation reveals the classical component (RF, highlighted) provides nearly equally or exceeding to the neural component.",
+    "page": 2,
+    "bbox": [
+      91.0,
+      455.0,
+      603.0,
+      602.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      113.0,
+      643.0,
+      603.0,
+      715.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      112.0,
+      715.0,
+      603.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      112.0,
+      763.0,
+      600.0,
+      810.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. AttnCorrect: Attention-Based Correction",
+    "page": 2,
+    "bbox": [
+      93.0,
+      824.0,
+      461.0,
+      847.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      92.0,
+      853.0,
+      603.0,
+      900.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      104.0,
+      960.0,
+      589.0,
+      988.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      902.0,
+      603.0,
+      949.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      576.0,
+      989.0,
+      601.0,
+      1009.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      1008.0,
+      603.0,
+      1059.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      1059.0,
+      603.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      195.0,
+      1115.0,
+      499.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      576.0,
+      1120.0,
+      600.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      228.0,
+      1153.0,
+      467.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      576.0,
+      1158.0,
+      600.0,
+      1179.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      112.0,
+      1194.0,
+      540.0,
+      1218.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      186.0,
+      1229.0,
+      511.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      576.0,
+      1231.0,
+      601.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      91.0,
+      1264.0,
+      454.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      93.0,
+      1293.0,
+      602.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      201.0,
+      1377.0,
+      492.0,
+      1405.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      575.0,
+      1380.0,
+      600.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      92.0,
+      1414.0,
+      454.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. GatedLinear: Bilinear-Gated Correction",
+    "page": 2,
+    "bbox": [
+      619.0,
+      101.0,
+      987.0,
+      124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      130.0,
+      1128.0,
+      176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      177.0,
+      1130.0,
+      249.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      765.0,
+      255.0,
+      982.0,
+      281.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1100.0,
+      259.0,
+      1127.0,
+      282.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      292.0,
+      1129.0,
+      389.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      389.0,
+      1130.0,
+      459.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      616.0,
+      460.0,
+      1130.0,
+      555.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      749.0,
+      563.0,
+      997.0,
+      592.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1102.0,
+      567.0,
+      1127.0,
+      588.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      777.0,
+      598.0,
+      971.0,
+      624.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1101.0,
+      601.0,
+      1126.0,
+      623.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      795.0,
+      635.0,
+      955.0,
+      660.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      1092.0,
+      636.0,
+      1127.0,
+      657.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      669.0,
+      1128.0,
+      717.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. Training Details",
+    "page": 2,
+    "bbox": [
+      619.0,
+      726.0,
+      789.0,
+      750.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      755.0,
+      1129.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      638.0,
+      853.0,
+      1128.0,
+      899.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      639.0,
+      901.0,
+      832.0,
+      924.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      639.0,
+      926.0,
+      1127.0,
+      972.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      640.0,
+      974.0,
+      940.0,
+      996.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      639.0,
+      997.0,
+      1054.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      638.0,
+      1022.0,
+      1127.0,
+      1067.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F. Ablation Study Design",
+    "page": 2,
+    "bbox": [
+      620.0,
+      1079.0,
+      837.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      619.0,
+      1108.0,
+      1130.0,
+      1178.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "IV. EXPERIMENTAL SETUP",
+    "page": 2,
+    "bbox": [
+      754.0,
+      1190.0,
+      994.0,
+      1212.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Dataset",
+    "page": 2,
+    "bbox": [
+      620.0,
+      1220.0,
+      720.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      617.0,
+      1249.0,
+      1129.0,
+      1344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      618.0,
+      1344.0,
+      1130.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      113.0,
+      110.0,
+      1073.0,
+      434.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 2: AttnCorrect Architecture. Premarket sequences (300 × 7) pass through embedding layers, then L=2 transformer blocks with 4-head self-attention (highlighted box). Pooled features fuse with encoded TimesFM predictions and multiscale features. Output weights initialized to zero [23] for stable training.",
+    "page": 3,
+    "bbox": [
+      93.0,
+      458.0,
+      1130.0,
+      530.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE I: Ablation Study Design: 12 Model Variants",
+    "page": 3,
+    "bbox": [
+      125.0,
+      567.0,
+      573.0,
+      589.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      601.0,
+      595.0,
+      871.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE II: Dataset Statistics: 10 Technology Stocks",
+    "page": 3,
+    "bbox": [
+      132.0,
+      895.0,
+      567.0,
+      919.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      100.0,
+      931.0,
+      594.0,
+      1167.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Data Leakage Prevention",
+    "page": 3,
+    "bbox": [
+      94.0,
+      1216.0,
+      337.0,
+      1239.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      113.0,
+      1248.0,
+      572.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      92.0,
+      1272.0,
+      603.0,
+      1366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      91.0,
+      1368.0,
+      603.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      618.0,
+      573.0,
+      1130.0,
+      644.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      617.0,
+      646.0,
+      1130.0,
+      742.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Evaluation Metrics",
+    "page": 3,
+    "bbox": [
+      620.0,
+      755.0,
+      812.0,
+      777.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      618.0,
+      786.0,
+      1130.0,
+      855.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      637.0,
+      861.0,
+      1115.0,
+      885.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      640.0,
+      886.0,
+      995.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      640.0,
+      909.0,
+      1130.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      639.0,
+      1080.0,
+      1130.0,
+      1221.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      639.0,
+      1223.0,
+      1130.0,
+      1293.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "V. RESULTS",
+    "page": 3,
+    "bbox": [
+      819.0,
+      1308.0,
+      931.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. Aggregate Results",
+    "page": 3,
+    "bbox": [
+      619.0,
+      1338.0,
+      802.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      618.0,
+      1368.0,
+      1129.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      639.0,
+      1417.0,
+      809.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      114.0,
+      109.0,
+      1105.0,
+      675.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Fig. 3: GatedLinear Architecture. The premarket tensor is compressed via low-rank bilinear projection Z = V XU (only 2,428 parameters). A gating mechanism g ∈ [0, 1]60 modulates the correction magnitude per time step. Despite 9× fewer parameters than AttnCorrect, this architecture achieves the best overall performance when combined with Random Forest.",
+    "page": 4,
+    "bbox": [
+      92.0,
+      704.0,
+      1130.0,
+      779.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE III: Aggregate Results Across 10 Stocks (Sorted by RMSE). Three correlation metrics: mean per-day (σday), cross- day (ρcross), and pooled (ρpool).",
+    "page": 4,
+    "bbox": [
+      93.0,
+      813.0,
+      605.0,
+      888.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      900.0,
+      593.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      113.0,
+      1176.0,
+      604.0,
+      1271.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      112.0,
+      1272.0,
+      603.0,
+      1366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      112.0,
+      1368.0,
+      605.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      663.0,
+      821.0,
+      1130.0,
+      870.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B. Per-Stock Performance Analysis",
+    "page": 4,
+    "bbox": [
+      620.0,
+      891.0,
+      915.0,
+      914.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      617.0,
+      924.0,
+      1130.0,
+      995.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Per-Stock Insights:",
+    "page": 4,
+    "bbox": [
+      640.0,
+      998.0,
+      813.0,
+      1019.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      639.0,
+      1027.0,
+      1128.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      639.0,
+      1075.0,
+      1129.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      639.0,
+      1123.0,
+      1129.0,
+      1168.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      638.0,
+      1170.0,
+      1130.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Ablation Analysis: Component Contributions",
+    "page": 4,
+    "bbox": [
+      619.0,
+      1311.0,
+      1023.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      617.0,
+      1343.0,
+      1131.0,
+      1441.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE IV: Per-Stock Performance: TimesFM vs. Hybrid Corrections. Mean per-day correlation (ρday) and pooled correlation (ρpool) shown separately.",
+    "page": 5,
+    "bbox": [
+      92.0,
+      92.0,
+      1129.0,
+      144.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      100.0,
+      153.0,
+      1119.0,
+      509.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE V: Detailed Ablation Analysis: With vs. Without Each Component. We report mean per-day (σday) and cross-day (cross) correlation contributions.",
+    "page": 5,
+    "bbox": [
+      92.0,
+      548.0,
+      603.0,
+      621.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      99.0,
+      635.0,
+      595.0,
+      733.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      111.0,
+      733.0,
+      590.0,
+      753.0
+    ]
+  },
+  {
+    "label": "vision_footnote",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      93.0,
+      754.0,
+      602.0,
+      789.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      112.0,
+      839.0,
+      602.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      112.0,
+      910.0,
+      603.0,
+      982.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      990.0,
+      603.0,
+      1132.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      92.0,
+      1135.0,
+      603.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      1233.0,
+      602.0,
+      1281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      112.0,
+      1289.0,
+      602.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      112.0,
+      1336.0,
+      600.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      91.0,
+      1367.0,
+      604.0,
+      1440.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "TABLE VI: Parameter Count Breakdown",
+    "page": 5,
+    "bbox": [
+      701.0,
+      548.0,
+      1047.0,
+      571.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      652.0,
+      584.0,
+      1094.0,
+      770.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      821.0,
+      1128.0,
+      868.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      617.0,
+      871.0,
+      1130.0,
+      966.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      639.0,
+      974.0,
+      1060.0,
+      999.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      638.0,
+      998.0,
+      1129.0,
+      1024.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      1029.0,
+      1130.0,
+      1174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      1176.0,
+      1130.0,
+      1247.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      640.0,
+      1255.0,
+      1102.0,
+      1281.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      638.0,
+      1281.0,
+      1129.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Parameter Efficiency Analysis",
+    "page": 5,
+    "bbox": [
+      620.0,
+      1356.0,
+      901.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      618.0,
+      1391.0,
+      1129.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      92.0,
+      100.0,
+      604.0,
+      174.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VI. DISCUSSION",
+    "page": 6,
+    "bbox": [
+      273.0,
+      184.0,
+      426.0,
+      207.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A. On Correlation Metrics for Multi-Step Forecasting",
+    "page": 6,
+    "bbox": [
+      92.0,
+      215.0,
+      544.0,
+      238.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      92.0,
+      245.0,
+      604.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      93.0,
+      592.0,
+      602.0,
+      639.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      93.0,
+      646.0,
+      602.0,
+      694.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      114.0,
+      697.0,
+      603.0,
+      792.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      794.0,
+      603.0,
+      864.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      865.0,
+      602.0,
+      911.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      111.0,
+      914.0,
+      603.0,
+      985.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C. Why Do Simpler Architectures Excel Without RF?",
+    "page": 6,
+    "bbox": [
+      94.0,
+      997.0,
+      540.0,
+      1021.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      1027.0,
+      602.0,
+      1052.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      113.0,
+      1056.0,
+      601.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      113.0,
+      1103.0,
+      603.0,
+      1150.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      112.0,
+      1151.0,
+      603.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      92.0,
+      1202.0,
+      604.0,
+      1297.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D. Practical Recommendations",
+    "page": 6,
+    "bbox": [
+      94.0,
+      1311.0,
+      359.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      113.0,
+      1341.0,
+      433.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      113.0,
+      1367.0,
+      603.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      101.0,
+      1129.0,
+      171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      173.0,
+      1129.0,
+      242.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      244.0,
+      1129.0,
+      313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      315.0,
+      1129.0,
+      362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      364.0,
+      992.0,
+      388.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E. Limitations and Future Work",
+    "page": 6,
+    "bbox": [
+      620.0,
+      404.0,
+      892.0,
+      428.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Limitations:",
+    "page": 6,
+    "bbox": [
+      640.0,
+      436.0,
+      753.0,
+      458.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      465.0,
+      1099.0,
+      489.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      490.0,
+      1098.0,
+      513.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      515.0,
+      1077.0,
+      537.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      538.0,
+      1128.0,
+      583.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      584.0,
+      1130.0,
+      656.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      641.0,
+      656.0,
+      1131.0,
+      751.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      640.0,
+      753.0,
+      1129.0,
+      824.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Future directions:",
+    "page": 6,
+    "bbox": [
+      640.0,
+      830.0,
+      805.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      637.0,
+      857.0,
+      1091.0,
+      881.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      883.0,
+      1128.0,
+      927.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      930.0,
+      1129.0,
+      954.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      955.0,
+      1128.0,
+      1001.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "VII. CONCLUSION",
+    "page": 6,
+    "bbox": [
+      791.0,
+      1018.0,
+      959.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      617.0,
+      1051.0,
+      1130.0,
+      1172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      640.0,
+      1176.0,
+      1129.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      1272.0,
+      1128.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      639.0,
+      1320.0,
+      1129.0,
+      1367.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      638.0,
+      1368.0,
+      1130.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      91.0,
+      100.0,
+      604.0,
+      221.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "ACKNOWLEDGMENT",
+    "page": 7,
+    "bbox": [
+      258.0,
+      235.0,
+      440.0,
+      256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      92.0,
+      263.0,
+      604.0,
+      406.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      93.0,
+      408.0,
+      602.0,
+      453.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "REFERENCES",
+    "page": 7,
+    "bbox": [
+      289.0,
+      470.0,
+      408.0,
+      490.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      103.0,
+      501.0,
+      603.0,
+      537.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      538.0,
+      603.0,
+      572.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      574.0,
+      602.0,
+      608.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      610.0,
+      600.0,
+      645.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      647.0,
+      600.0,
+      681.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      682.0,
+      601.0,
+      717.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      719.0,
+      602.0,
+      769.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      104.0,
+      770.0,
+      602.0,
+      823.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      101.0,
+      825.0,
+      601.0,
+      860.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      98.0,
+      861.0,
+      602.0,
+      895.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      896.0,
+      602.0,
+      932.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      933.0,
+      598.0,
+      968.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      969.0,
+      601.0,
+      1003.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      98.0,
+      1004.0,
+      601.0,
+      1038.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      1039.0,
+      602.0,
+      1076.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      96.0,
+      1076.0,
+      602.0,
+      1128.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      1130.0,
+      601.0,
+      1164.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      98.0,
+      1166.0,
+      600.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      96.0,
+      1204.0,
+      599.0,
+      1237.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      1238.0,
+      598.0,
+      1273.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      98.0,
+      1274.0,
+      602.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      96.0,
+      1326.0,
+      600.0,
+      1345.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      96.0,
+      1347.0,
+      601.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      97.0,
+      1381.0,
+      602.0,
+      1416.0
+    ]
+  }
+]

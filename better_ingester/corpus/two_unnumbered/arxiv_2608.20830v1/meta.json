@@ -1,0 +1,10 @@
+{
+  "cell": "single_unnumbered",
+  "columns": "single",
+  "numbering": "unnumbered",
+  "documentclass": "article",
+  "category": "cs.CY",
+  "published": "2026-08-21",
+  "title": "Fine-tuning LLMs for Tourist Trajectory Prediction using Field Experiment Data",
+  "arxiv_id": "2608.20830v1"
+}

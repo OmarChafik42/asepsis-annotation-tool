@@ -1,0 +1,9693 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      41.0,
+      465.0,
+      85.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Self-Normalizing Denominators in Rational Causal Estimation",
+    "page": 0,
+    "bbox": [
+      333.0,
+      226.0,
+      855.0,
+      319.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      492.0,
+      356.0,
+      695.0,
+      388.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      173.0,
+      412.0,
+      1018.0,
+      467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      148.0,
+      468.0,
+      1036.0,
+      550.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      546.0,
+      608.0,
+      646.0,
+      632.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      193.0,
+      657.0,
+      994.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      138.0,
+      1121.0,
+      1054.0,
+      1178.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      139.0,
+      1224.0,
+      415.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1.1 Motivation and scope",
+    "page": 0,
+    "bbox": [
+      139.0,
+      1287.0,
+      523.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      136.0,
+      1335.0,
+      1054.0,
+      1536.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      588.0,
+      1585.0,
+      602.0,
+      1604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      134.0,
+      146.0,
+      1054.0,
+      347.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      362.0,
+      1053.0,
+      537.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      418.0,
+      538.0,
+      767.0,
+      569.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      134.0,
+      582.0,
+      1054.0,
+      787.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      427.0,
+      812.0,
+      762.0,
+      842.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      865.0,
+      1054.0,
+      1010.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      1023.0,
+      1054.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      135.0,
+      1268.0,
+      1054.0,
+      1473.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      587.0,
+      1583.0,
+      604.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1.2 Contributions",
+    "page": 2,
+    "bbox": [
+      138.0,
+      142.0,
+      415.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      190.0,
+      1054.0,
+      363.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      377.0,
+      1054.0,
+      610.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      623.0,
+      1054.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      135.0,
+      869.0,
+      1053.0,
+      1015.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1.3 Related work",
+    "page": 2,
+    "bbox": [
+      138.0,
+      1051.0,
+      408.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      134.0,
+      1098.0,
+      1054.0,
+      1474.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      1487.0,
+      1054.0,
+      1546.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      587.0,
+      1583.0,
+      604.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      146.0,
+      1054.0,
+      407.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      134.0,
+      419.0,
+      1054.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      134.0,
+      666.0,
+      1053.0,
+      927.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      134.0,
+      940.0,
+      1054.0,
+      1230.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Preliminaries",
+    "page": 3,
+    "bbox": [
+      136.0,
+      1272.0,
+      428.0,
+      1308.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1 Basic notation",
+    "page": 3,
+    "bbox": [
+      137.0,
+      1337.0,
+      422.0,
+      1366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      135.0,
+      1383.0,
+      1054.0,
+      1530.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      587.0,
+      1583.0,
+      604.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      134.0,
+      145.0,
+      1051.0,
+      260.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      274.0,
+      1053.0,
+      421.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      434.0,
+      787.0,
+      462.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      321.0,
+      486.0,
+      863.0,
+      515.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      537.0,
+      1053.0,
+      683.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      697.0,
+      1052.0,
+      756.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      368.0,
+      777.0,
+      819.0,
+      842.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      860.0,
+      1052.0,
+      978.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2 Problem set-up",
+    "page": 4,
+    "bbox": [
+      136.0,
+      1014.0,
+      436.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1061.0,
+      1053.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      448.0,
+      1212.0,
+      739.0,
+      1272.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      1018.0,
+      1224.0,
+      1049.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      138.0,
+      1282.0,
+      1051.0,
+      1377.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      134.0,
+      1391.0,
+      1053.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      135.0,
+      1491.0,
+      1055.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      587.0,
+      1583.0,
+      604.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      144.0,
+      1024.0,
+      175.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      433.0,
+      186.0,
+      753.0,
+      217.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      229.0,
+      1054.0,
+      319.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      133.0,
+      334.0,
+      1054.0,
+      538.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3 Exact self-normalization",
+    "page": 5,
+    "bbox": [
+      136.0,
+      572.0,
+      561.0,
+      602.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      620.0,
+      1053.0,
+      679.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      346.0,
+      691.0,
+      840.0,
+      722.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1018.0,
+      691.0,
+      1049.0,
+      719.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      734.0,
+      1053.0,
+      797.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      330.0,
+      805.0,
+      856.0,
+      839.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1018.0,
+      810.0,
+      1049.0,
+      837.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      134.0,
+      851.0,
+      1054.0,
+      1002.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      136.0,
+      1015.0,
+      1052.0,
+      1075.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      375.0,
+      1084.0,
+      809.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      1018.0,
+      1088.0,
+      1049.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      138.0,
+      1129.0,
+      976.0,
+      1158.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      133.0,
+      1172.0,
+      1054.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      587.0,
+      1583.0,
+      604.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      133.0,
+      145.0,
+      1054.0,
+      408.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 Flag powers and an exact pivot",
+    "page": 6,
+    "bbox": [
+      136.0,
+      448.0,
+      735.0,
+      485.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Nested covariance minors",
+    "page": 6,
+    "bbox": [
+      136.0,
+      512.0,
+      581.0,
+      543.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      559.0,
+      1053.0,
+      733.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      134.0,
+      745.0,
+      1053.0,
+      833.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      362.0,
+      853.0,
+      825.0,
+      924.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1019.0,
+      873.0,
+      1049.0,
+      902.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      135.0,
+      942.0,
+      1052.0,
+      1029.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      135.0,
+      1044.0,
+      1053.0,
+      1099.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      157.0,
+      1115.0,
+      1065.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      151.0,
+      1187.0,
+      598.0,
+      1218.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      145.0,
+      1233.0,
+      658.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      538.0,
+      1281.0,
+      709.0,
+      1358.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1018.0,
+      1306.0,
+      1049.0,
+      1335.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      196.0,
+      1377.0,
+      695.0,
+      1405.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      146.0,
+      1418.0,
+      1050.0,
+      1479.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      136.0,
+      1492.0,
+      1053.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      588.0,
+      1583.0,
+      603.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      145.0,
+      1053.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      331.0,
+      1053.0,
+      448.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 Recursive variance interpretation",
+    "page": 7,
+    "bbox": [
+      136.0,
+      484.0,
+      690.0,
+      515.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      531.0,
+      1053.0,
+      619.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      483.0,
+      633.0,
+      703.0,
+      696.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1018.0,
+      647.0,
+      1049.0,
+      678.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      135.0,
+      707.0,
+      1053.0,
+      940.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      134.0,
+      955.0,
+      1054.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 Converse results and diagnosis",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1381.0,
+      722.0,
+      1418.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Dimension two",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1446.0,
+      430.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      136.0,
+      1492.0,
+      1052.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      587.0,
+      1583.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      144.0,
+      1051.0,
+      203.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      456.0,
+      212.0,
+      733.0,
+      245.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1018.0,
+      215.0,
+      1049.0,
+      243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      258.0,
+      1052.0,
+      316.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      133.0,
+      330.0,
+      1052.0,
+      387.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      133.0,
+      401.0,
+      1053.0,
+      548.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      135.0,
+      561.0,
+      1053.0,
+      823.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Dimension three",
+    "page": 8,
+    "bbox": [
+      136.0,
+      856.0,
+      452.0,
+      886.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      135.0,
+      903.0,
+      1053.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      1120.0,
+      1052.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      134.0,
+      1221.0,
+      1052.0,
+      1338.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      244.0,
+      1347.0,
+      947.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1019.0,
+      1350.0,
+      1048.0,
+      1378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      1407.0,
+      1053.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      587.0,
+      1583.0,
+      603.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      144.0,
+      1053.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      156.0,
+      245.0,
+      1054.0,
+      302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      149.0,
+      316.0,
+      1052.0,
+      376.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      143.0,
+      389.0,
+      816.0,
+      420.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      421.0,
+      442.0,
+      824.0,
+      473.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      1006.0,
+      443.0,
+      1049.0,
+      472.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      192.0,
+      496.0,
+      1048.0,
+      555.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      134.0,
+      568.0,
+      1052.0,
+      686.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      133.0,
+      698.0,
+      1053.0,
+      815.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      374.0,
+      834.0,
+      819.0,
+      868.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      133.0,
+      889.0,
+      1054.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      134.0,
+      1078.0,
+      1054.0,
+      1311.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3 Higher-dimensional scope",
+    "page": 9,
+    "bbox": [
+      136.0,
+      1347.0,
+      581.0,
+      1379.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      136.0,
+      1394.0,
+      1054.0,
+      1541.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      145.0,
+      1054.0,
+      261.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      276.0,
+      1054.0,
+      536.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.4 A factor-and-rank diagnostic",
+    "page": 10,
+    "bbox": [
+      136.0,
+      571.0,
+      625.0,
+      603.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      619.0,
+      1053.0,
+      764.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      778.0,
+      1054.0,
+      864.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      879.0,
+      953.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      922.0,
+      1055.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      413.0,
+      1054.0,
+      774.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      1006.0,
+      1056.0,
+      1049.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      135.0,
+      1118.0,
+      1051.0,
+      1176.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      1191.0,
+      1053.0,
+      1278.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      137.0,
+      1292.0,
+      1054.0,
+      1381.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      330.0,
+      1394.0,
+      859.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      134.0,
+      1445.0,
+      1053.0,
+      1501.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      409.0,
+      1518.0,
+      777.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      582.0,
+      1584.0,
+      608.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      144.0,
+      1053.0,
+      203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      134.0,
+      217.0,
+      1054.0,
+      361.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      135.0,
+      376.0,
+      706.0,
+      405.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      418.0,
+      1052.0,
+      505.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      304.0,
+      517.0,
+      883.0,
+      552.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      564.0,
+      1053.0,
+      681.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      218.0,
+      694.0,
+      971.0,
+      728.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      740.0,
+      1054.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      135.0,
+      842.0,
+      894.0,
+      871.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      133.0,
+      885.0,
+      1053.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Weak-denominator inference",
+    "page": 11,
+    "bbox": [
+      136.0,
+      1130.0,
+      689.0,
+      1165.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1 Local ratio experiment",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1194.0,
+      540.0,
+      1226.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      134.0,
+      1241.0,
+      1053.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      366.0,
+      1374.0,
+      820.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      133.0,
+      1448.0,
+      982.0,
+      1480.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      298.0,
+      1493.0,
+      887.0,
+      1558.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      145.0,
+      1052.0,
+      204.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      215.0,
+      1052.0,
+      272.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      383.0,
+      273.0,
+      804.0,
+      305.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      138.0,
+      317.0,
+      213.0,
+      344.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      233.0,
+      365.0,
+      954.0,
+      397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      419.0,
+      490.0,
+      447.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      136.0,
+      463.0,
+      1050.0,
+      521.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      245.0,
+      540.0,
+      940.0,
+      604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      133.0,
+      619.0,
+      1054.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      866.0,
+      1053.0,
+      952.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      256.0,
+      972.0,
+      929.0,
+      1041.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1006.0,
+      992.0,
+      1049.0,
+      1021.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      135.0,
+      1058.0,
+      626.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      137.0,
+      1101.0,
+      1055.0,
+      1159.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      389.0,
+      1180.0,
+      797.0,
+      1243.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1006.0,
+      1197.0,
+      1049.0,
+      1227.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      138.0,
+      1260.0,
+      429.0,
+      1290.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      379.0,
+      1308.0,
+      807.0,
+      1375.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      1007.0,
+      1328.0,
+      1049.0,
+      1358.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      134.0,
+      1406.0,
+      1054.0,
+      1552.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      145.0,
+      1054.0,
+      319.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2 Robust inversion and the boundary of the classification",
+    "page": 13,
+    "bbox": [
+      136.0,
+      355.0,
+      1001.0,
+      387.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      403.0,
+      1053.0,
+      461.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      172.0,
+      480.0,
+      972.0,
+      532.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      1006.0,
+      491.0,
+      1049.0,
+      522.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      553.0,
+      206.0,
+      578.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      331.0,
+      579.0,
+      855.0,
+      611.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      622.0,
+      521.0,
+      653.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      135.0,
+      666.0,
+      1053.0,
+      783.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      797.0,
+      1053.0,
+      1030.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      1042.0,
+      1053.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      134.0,
+      1200.0,
+      1054.0,
+      1433.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Causal applications",
+    "page": 14,
+    "bbox": [
+      136.0,
+      138.0,
+      531.0,
+      173.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.1 Diagnostics for common formulas",
+    "page": 14,
+    "bbox": [
+      136.0,
+      201.0,
+      690.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      132.0,
+      248.0,
+      1052.0,
+      455.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      135.0,
+      467.0,
+      1052.0,
+      581.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      428.0,
+      580.0,
+      759.0,
+      615.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1007.0,
+      583.0,
+      1048.0,
+      612.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      623.0,
+      1051.0,
+      683.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      408.0,
+      704.0,
+      780.0,
+      767.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      134.0,
+      786.0,
+      1053.0,
+      904.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      134.0,
+      917.0,
+      1054.0,
+      1120.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6.2 Front-door adjustment and boundary-robust inference",
+    "page": 14,
+    "bbox": [
+      136.0,
+      1156.0,
+      986.0,
+      1188.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      136.0,
+      1203.0,
+      1053.0,
+      1319.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      402.0,
+      1343.0,
+      789.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      1006.0,
+      1343.0,
+      1048.0,
+      1372.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      133.0,
+      1395.0,
+      1053.0,
+      1543.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: Denominator structure of four linear causal strategies. Each structural pullback eval- uates the denominator in a linear reduced form for that row, detailed in Supplementary Sec- tion F.1, and symbols are defined separately within each row. In the two instrument rows, π is the coefficient of the instrument Z in the equation for the treatment X, νz and νw are the variances of Z and of the conditioning covariate W, and vz is the residual variance of Z given W. In the front-door row, νx is the treatment variance and vM is the mediator residual variance. In the proximal row, a and c are the coefficients of the latent variable U in the equations for the proxies Z and W, νu is the variance of U, and vA is the treatment residual variance. A flag power is a denominator of the form (5). Marginal slope and partial slope denote a marginal covariance and a nonprincipal two-by-two minor, and together they constitute the slope type.",
+    "page": 15,
+    "bbox": [
+      135.0,
+      141.0,
+      1054.0,
+      414.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      230.0,
+      429.0,
+      960.0,
+      557.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      135.0,
+      594.0,
+      1048.0,
+      652.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      136.0,
+      666.0,
+      545.0,
+      694.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      399.0,
+      712.0,
+      788.0,
+      774.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      134.0,
+      793.0,
+      1053.0,
+      881.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      893.0,
+      1055.0,
+      1011.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      228.0,
+      1029.0,
+      960.0,
+      1067.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1007.0,
+      1033.0,
+      1049.0,
+      1062.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1086.0,
+      1053.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      135.0,
+      1158.0,
+      1052.0,
+      1216.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      134.0,
+      1231.0,
+      1053.0,
+      1375.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      431.0,
+      1396.0,
+      755.0,
+      1452.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      1006.0,
+      1409.0,
+      1049.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      1472.0,
+      927.0,
+      1505.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      145.0,
+      1053.0,
+      203.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      493.0,
+      199.0,
+      695.0,
+      257.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      264.0,
+      1052.0,
+      323.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      134.0,
+      336.0,
+      1051.0,
+      394.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      134.0,
+      408.0,
+      1053.0,
+      612.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      134.0,
+      625.0,
+      1054.0,
+      800.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7 Numerical experiments",
+    "page": 16,
+    "bbox": [
+      137.0,
+      842.0,
+      597.0,
+      878.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.1 Design",
+    "page": 16,
+    "bbox": [
+      137.0,
+      906.0,
+      314.0,
+      938.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      133.0,
+      955.0,
+      1054.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      135.0,
+      1316.0,
+      1054.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      582.0,
+      1583.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      145.0,
+      1053.0,
+      407.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      419.0,
+      1053.0,
+      652.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7.2 Results",
+    "page": 17,
+    "bbox": [
+      138.0,
+      688.0,
+      323.0,
+      717.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      134.0,
+      735.0,
+      1054.0,
+      997.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      134.0,
+      1012.0,
+      1055.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      136.0,
+      1314.0,
+      1054.0,
+      1487.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 2: Gaussian simulation results based on 100000 replications per cell. Med., median across replications; s.e., Gaussian delta standard error; robust s.d., interquartile range of ↑ divided by 1.349; cov., empirical coverage, the two entries giving the nominal 95% Wald interval and the inversion (15). Dashes indicate diagnostics defined only for the proximal design. Bias entries of 0.00 are zero to the precision shown. The largest Monte Carlo standard error for a coverage entry is 0.0008.",
+    "page": 18,
+    "bbox": [
+      136.0,
+      141.0,
+      1054.0,
+      304.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      152.0,
+      321.0,
+      1063.0,
+      619.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "8 Real data experiments",
+    "page": 18,
+    "bbox": [
+      136.0,
+      652.0,
+      587.0,
+      688.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "8.1 Data and diagnostic design",
+    "page": 18,
+    "bbox": [
+      136.0,
+      715.0,
+      602.0,
+      747.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      134.0,
+      762.0,
+      1054.0,
+      1026.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      134.0,
+      1039.0,
+      1058.0,
+      1529.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 3: Denominator audit for the SUPPORT data. CI, percentile bootstrap confidence interval based on 2000 replications. All statistics are scaled by the residual degrees of freedom ν = 5716. The naive and partial statistics are the indices νô2/(1– ρ2) defined in the text, not finite-sample F tests, and the naive statistic depends only on the treatment proxy. The sandwich statistic uses the empirical covariance matrix of the six second-moment scores.",
+    "page": 19,
+    "bbox": [
+      136.0,
+      142.0,
+      1053.0,
+      277.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      190.0,
+      294.0,
+      996.0,
+      419.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      503.0,
+      1052.0,
+      591.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "8.2 Results",
+    "page": 19,
+    "bbox": [
+      136.0,
+      628.0,
+      323.0,
+      659.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      133.0,
+      676.0,
+      1054.0,
+      1052.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      134.0,
+      1066.0,
+      1053.0,
+      1270.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      135.0,
+      1282.0,
+      1053.0,
+      1426.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "9 Discussion",
+    "page": 20,
+    "bbox": [
+      137.0,
+      138.0,
+      380.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      197.0,
+      1054.0,
+      459.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      472.0,
+      1054.0,
+      648.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      660.0,
+      1053.0,
+      835.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      847.0,
+      1054.0,
+      1081.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Declaration of the use of generative AI and AI-assisted technologies",
+    "page": 20,
+    "bbox": [
+      136.0,
+      1122.0,
+      1052.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      134.0,
+      1225.0,
+      1054.0,
+      1344.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgement",
+    "page": 20,
+    "bbox": [
+      137.0,
+      1386.0,
+      450.0,
+      1424.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      1444.0,
+      925.0,
+      1475.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      581.0,
+      1582.0,
+      608.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supplementary material",
+    "page": 21,
+    "bbox": [
+      136.0,
+      138.0,
+      552.0,
+      175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      197.0,
+      1054.0,
+      314.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 21,
+    "bbox": [
+      137.0,
+      357.0,
+      328.0,
+      391.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      408.0,
+      1050.0,
+      492.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      508.0,
+      1051.0,
+      565.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      581.0,
+      1051.0,
+      637.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      652.0,
+      1053.0,
+      739.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      754.0,
+      905.0,
+      782.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      797.0,
+      1051.0,
+      854.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      870.0,
+      1051.0,
+      926.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      942.0,
+      1052.0,
+      1085.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      1102.0,
+      1051.0,
+      1184.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      1202.0,
+      1051.0,
+      1231.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1246.0,
+      1051.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1318.0,
+      1051.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1390.0,
+      1053.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      138.0,
+      1462.0,
+      1051.0,
+      1518.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      145.0,
+      1051.0,
+      231.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      246.0,
+      1054.0,
+      332.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      347.0,
+      1053.0,
+      405.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      418.0,
+      1051.0,
+      476.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      491.0,
+      1052.0,
+      607.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      621.0,
+      1052.0,
+      678.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      694.0,
+      1052.0,
+      752.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      767.0,
+      1051.0,
+      851.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      868.0,
+      1052.0,
+      924.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      939.0,
+      1051.0,
+      996.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      1012.0,
+      1051.0,
+      1069.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      1084.0,
+      1051.0,
+      1142.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      1156.0,
+      1053.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      1257.0,
+      1051.0,
+      1314.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      139.0,
+      1329.0,
+      1051.0,
+      1386.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      1401.0,
+      1015.0,
+      1431.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1444.0,
+      1009.0,
+      1474.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      138.0,
+      1488.0,
+      1053.0,
+      1543.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      139.0,
+      146.0,
+      1053.0,
+      258.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      139.0,
+      275.0,
+      1054.0,
+      332.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      347.0,
+      1051.0,
+      404.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      492.0,
+      1050.0,
+      548.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      138.0,
+      419.0,
+      1050.0,
+      476.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      139.0,
+      564.0,
+      1051.0,
+      622.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      139.0,
+      637.0,
+      1051.0,
+      723.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      140.0,
+      737.0,
+      1053.0,
+      823.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Supplementary Material for",
+    "page": 24,
+    "bbox": [
+      353.0,
+      136.0,
+      835.0,
+      175.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "“Self-normalizing denominators in rational causal estimation\"",
+    "page": 24,
+    "bbox": [
+      172.0,
+      194.0,
+      1018.0,
+      264.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Notation",
+    "page": 24,
+    "bbox": [
+      137.0,
+      307.0,
+      365.0,
+      343.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.1 Linear-algebraic, algebraic and geometric conventions",
+    "page": 24,
+    "bbox": [
+      137.0,
+      372.0,
+      983.0,
+      404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      134.0,
+      419.0,
+      1052.0,
+      624.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      135.0,
+      635.0,
+      1053.0,
+      810.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      299.0,
+      832.0,
+      886.0,
+      895.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      916.0,
+      1051.0,
+      976.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      134.0,
+      989.0,
+      1052.0,
+      1193.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      136.0,
+      1207.0,
+      1054.0,
+      1352.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      180.0,
+      1373.0,
+      1007.0,
+      1404.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      135.0,
+      1426.0,
+      1053.0,
+      1544.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      134.0,
+      144.0,
+      1054.0,
+      527.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      541.0,
+      1053.0,
+      599.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      437.0,
+      620.0,
+      748.0,
+      687.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      707.0,
+      1053.0,
+      852.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      866.0,
+      1053.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      1169.0,
+      1051.0,
+      1226.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      341.0,
+      1248.0,
+      848.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      1333.0,
+      744.0,
+      1364.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.2 Probability and asymptotic conventions",
+    "page": 25,
+    "bbox": [
+      138.0,
+      1400.0,
+      788.0,
+      1431.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      1448.0,
+      1053.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      134.0,
+      146.0,
+      1052.0,
+      201.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      192.0,
+      219.0,
+      993.0,
+      286.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      135.0,
+      307.0,
+      1052.0,
+      395.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      408.0,
+      1051.0,
+      528.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      414.0,
+      528.0,
+      772.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      598.0,
+      891.0,
+      625.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      275.0,
+      647.0,
+      911.0,
+      683.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      134.0,
+      703.0,
+      1052.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      136.0,
+      839.0,
+      1053.0,
+      903.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      365.0,
+      921.0,
+      820.0,
+      985.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1007.0,
+      821.0,
+      1039.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      298.0,
+      1059.0,
+      886.0,
+      1125.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      134.0,
+      1164.0,
+      1053.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.3 Paper-specific symbols",
+    "page": 26,
+    "bbox": [
+      137.0,
+      1347.0,
+      547.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      134.0,
+      1397.0,
+      1053.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      581.0,
+      1582.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table A.1: Paper-specific notation used in the Supplementary Material.",
+    "page": 27,
+    "bbox": [
+      246.0,
+      141.0,
+      940.0,
+      169.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      247.0,
+      180.0,
+      929.0,
+      502.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "B Proofs of Section 2: Preliminaries",
+    "page": 27,
+    "bbox": [
+      136.0,
+      532.0,
+      786.0,
+      568.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      134.0,
+      592.0,
+      1054.0,
+      796.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      134.0,
+      808.0,
+      1052.0,
+      867.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      880.0,
+      1053.0,
+      941.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      377.0,
+      937.0,
+      807.0,
+      969.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      137.0,
+      980.0,
+      1052.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      1052.0,
+      1052.0,
+      1141.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      134.0,
+      1166.0,
+      1053.0,
+      1253.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      323.0,
+      1274.0,
+      864.0,
+      1307.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      134.0,
+      1330.0,
+      1053.0,
+      1386.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      447.0,
+      1386.0,
+      741.0,
+      1417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      1427.0,
+      1054.0,
+      1515.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      289.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      298.0,
+      307.0,
+      887.0,
+      343.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      134.0,
+      363.0,
+      1053.0,
+      508.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      402.0,
+      526.0,
+      783.0,
+      559.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      994.0,
+      529.0,
+      1049.0,
+      558.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      134.0,
+      580.0,
+      1050.0,
+      640.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      135.0,
+      652.0,
+      1054.0,
+      709.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      339.0,
+      731.0,
+      810.0,
+      763.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      996.0,
+      731.0,
+      1049.0,
+      759.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      346.0,
+      764.0,
+      846.0,
+      798.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      996.0,
+      766.0,
+      1048.0,
+      794.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      815.0,
+      1057.0,
+      878.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      436.0,
+      898.0,
+      753.0,
+      970.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      995.0,
+      919.0,
+      1049.0,
+      947.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      989.0,
+      1004.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      134.0,
+      1032.0,
+      1053.0,
+      1263.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      1288.0,
+      1053.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      398.0,
+      1400.0,
+      788.0,
+      1461.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      1470.0,
+      511.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      298.0,
+      1518.0,
+      887.0,
+      1552.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      581.0,
+      1583.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      144.0,
+      1051.0,
+      203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      216.0,
+      1053.0,
+      369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      392.0,
+      1052.0,
+      510.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      395.0,
+      530.0,
+      791.0,
+      596.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      618.0,
+      1052.0,
+      794.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      807.0,
+      1052.0,
+      896.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      137.0,
+      908.0,
+      1055.0,
+      1054.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      1067.0,
+      1052.0,
+      1126.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      135.0,
+      1153.0,
+      1053.0,
+      1326.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      137.0,
+      1351.0,
+      1100.0,
+      1410.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      137.0,
+      1424.0,
+      1054.0,
+      1539.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      145.0,
+      1064.0,
+      261.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      428.0,
+      282.0,
+      757.0,
+      314.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      335.0,
+      1028.0,
+      369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      379.0,
+      1052.0,
+      468.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      350.0,
+      488.0,
+      838.0,
+      523.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      544.0,
+      1053.0,
+      659.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      135.0,
+      686.0,
+      1052.0,
+      744.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      758.0,
+      1053.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      890.0,
+      1053.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1060.0,
+      1052.0,
+      1206.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "C Proofs of Section 3: Flag powers",
+    "page": 30,
+    "bbox": [
+      137.0,
+      1250.0,
+      765.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1309.0,
+      1054.0,
+      1426.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1450.0,
+      1054.0,
+      1509.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      581.0,
+      1583.0,
+      608.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      144.0,
+      1052.0,
+      200.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      423.0,
+      193.0,
+      763.0,
+      262.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      267.0,
+      1052.0,
+      328.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      337.0,
+      1050.0,
+      428.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      440.0,
+      1052.0,
+      563.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      575.0,
+      1051.0,
+      696.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      134.0,
+      721.0,
+      1053.0,
+      778.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      793.0,
+      1052.0,
+      854.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      135.0,
+      877.0,
+      1076.0,
+      937.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      287.0,
+      945.0,
+      900.0,
+      981.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      991.0,
+      1053.0,
+      1078.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      133.0,
+      1092.0,
+      1053.0,
+      1296.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D Proofs of Section 4: Converse results and diagno- sis",
+    "page": 31,
+    "bbox": [
+      136.0,
+      1337.0,
+      1050.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.1 Overview and algebraic preliminaries",
+    "page": 31,
+    "bbox": [
+      134.0,
+      1444.0,
+      753.0,
+      1477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      133.0,
+      1492.0,
+      1052.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      145.0,
+      1053.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      247.0,
+      958.0,
+      275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      289.0,
+      1053.0,
+      405.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      418.0,
+      1052.0,
+      477.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      502.0,
+      1054.0,
+      590.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      509.0,
+      607.0,
+      679.0,
+      671.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      689.0,
+      823.0,
+      719.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      425.0,
+      737.0,
+      762.0,
+      769.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      135.0,
+      789.0,
+      1054.0,
+      995.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      134.0,
+      1019.0,
+      1053.0,
+      1105.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      1119.0,
+      1054.0,
+      1207.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      134.0,
+      1233.0,
+      1054.0,
+      1348.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      470.0,
+      1348.0,
+      719.0,
+      1375.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      1390.0,
+      918.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      426.0,
+      1440.0,
+      763.0,
+      1473.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      1492.0,
+      1053.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      144.0,
+      1053.0,
+      231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      134.0,
+      258.0,
+      1053.0,
+      344.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      359.0,
+      1055.0,
+      418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      442.0,
+      1129.0,
+      529.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      441.0,
+      526.0,
+      745.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      600.0,
+      1053.0,
+      660.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      135.0,
+      685.0,
+      1053.0,
+      772.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      137.0,
+      786.0,
+      1053.0,
+      845.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      466.0,
+      869.0,
+      719.0,
+      897.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      136.0,
+      923.0,
+      1052.0,
+      983.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      221.0,
+      1002.0,
+      965.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      135.0,
+      1057.0,
+      1053.0,
+      1146.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.2 Complete converse in dimension two",
+    "page": 33,
+    "bbox": [
+      136.0,
+      1183.0,
+      744.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      134.0,
+      1230.0,
+      1053.0,
+      1345.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      137.0,
+      1370.0,
+      1053.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      398.0,
+      1455.0,
+      788.0,
+      1489.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      146.0,
+      474.0,
+      174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      347.0,
+      192.0,
+      838.0,
+      246.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      137.0,
+      263.0,
+      1052.0,
+      320.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      134.0,
+      337.0,
+      1053.0,
+      597.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      610.0,
+      1054.0,
+      756.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      443.0,
+      774.0,
+      745.0,
+      806.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      828.0,
+      1053.0,
+      887.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      134.0,
+      912.0,
+      1053.0,
+      997.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.3 Adjugate duality and three-variable face types",
+    "page": 34,
+    "bbox": [
+      136.0,
+      1036.0,
+      884.0,
+      1068.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      134.0,
+      1083.0,
+      1053.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      1184.0,
+      1054.0,
+      1268.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      485.0,
+      1269.0,
+      702.0,
+      1299.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      139.0,
+      1309.0,
+      498.0,
+      1341.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      137.0,
+      1367.0,
+      833.0,
+      1397.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      380.0,
+      1416.0,
+      806.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      136.0,
+      1469.0,
+      513.0,
+      1499.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      429.0,
+      1518.0,
+      758.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 34,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      144.0,
+      1052.0,
+      204.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      424.0,
+      223.0,
+      762.0,
+      256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      279.0,
+      1052.0,
+      338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      363.0,
+      1054.0,
+      421.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      436.0,
+      1054.0,
+      551.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      137.0,
+      577.0,
+      1053.0,
+      722.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      442.0,
+      720.0,
+      744.0,
+      751.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      764.0,
+      1053.0,
+      881.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      134.0,
+      906.0,
+      1052.0,
+      963.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      977.0,
+      1053.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      412.0,
+      1057.0,
+      775.0,
+      1090.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1114.0,
+      1053.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1199.0,
+      1052.0,
+      1286.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1299.0,
+      1054.0,
+      1388.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      136.0,
+      1414.0,
+      1051.0,
+      1470.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      427.0,
+      1469.0,
+      761.0,
+      1502.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 35,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      136.0,
+      144.0,
+      1049.0,
+      231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      134.0,
+      258.0,
+      1052.0,
+      316.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      330.0,
+      1055.0,
+      418.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      135.0,
+      443.0,
+      1052.0,
+      617.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      495.0,
+      614.0,
+      691.0,
+      646.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      136.0,
+      659.0,
+      479.0,
+      687.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      134.0,
+      701.0,
+      1054.0,
+      847.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      136.0,
+      860.0,
+      1051.0,
+      919.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      388.0,
+      939.0,
+      804.0,
+      972.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      993.0,
+      942.0,
+      1049.0,
+      971.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      995.0,
+      341.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      138.0,
+      1038.0,
+      413.0,
+      1065.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      358.0,
+      1081.0,
+      829.0,
+      1147.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      1168.0,
+      1049.0,
+      1228.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      486.0,
+      1224.0,
+      701.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      136.0,
+      1269.0,
+      1052.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      137.0,
+      1383.0,
+      1095.0,
+      1439.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 36,
+    "bbox": [
+      581.0,
+      1582.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.4 Relative spectral constancy in dimension three",
+    "page": 37,
+    "bbox": [
+      136.0,
+      142.0,
+      891.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      134.0,
+      189.0,
+      1053.0,
+      305.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      318.0,
+      1053.0,
+      404.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      402.0,
+      405.0,
+      783.0,
+      436.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      138.0,
+      450.0,
+      286.0,
+      476.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      420.0,
+      475.0,
+      765.0,
+      504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      137.0,
+      516.0,
+      619.0,
+      547.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      573.0,
+      1052.0,
+      631.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      466.0,
+      649.0,
+      720.0,
+      686.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      137.0,
+      707.0,
+      818.0,
+      737.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      425.0,
+      758.0,
+      761.0,
+      827.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      138.0,
+      847.0,
+      1052.0,
+      905.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      135.0,
+      920.0,
+      1053.0,
+      1095.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      1106.0,
+      1053.0,
+      1170.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      260.0,
+      1189.0,
+      927.0,
+      1284.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      135.0,
+      1302.0,
+      1052.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      449.0,
+      1409.0,
+      740.0,
+      1467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      136.0,
+      1483.0,
+      250.0,
+      1511.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      496.0,
+      1507.0,
+      692.0,
+      1541.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      993.0,
+      1512.0,
+      1049.0,
+      1541.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 37,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      145.0,
+      823.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      187.0,
+      923.0,
+      217.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      276.0,
+      235.0,
+      911.0,
+      317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      342.0,
+      1052.0,
+      401.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      464.0,
+      395.0,
+      722.0,
+      452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      137.0,
+      465.0,
+      1052.0,
+      525.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      538.0,
+      1054.0,
+      741.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      508.0,
+      735.0,
+      682.0,
+      801.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      135.0,
+      810.0,
+      1053.0,
+      870.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      135.0,
+      897.0,
+      1053.0,
+      953.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      134.0,
+      968.0,
+      1054.0,
+      1027.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      400.0,
+      1026.0,
+      784.0,
+      1057.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      1080.0,
+      1054.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      135.0,
+      1223.0,
+      1055.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.5 Pure plane-minor and mixed branches",
+    "page": 38,
+    "bbox": [
+      136.0,
+      1347.0,
+      769.0,
+      1378.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      134.0,
+      1394.0,
+      1051.0,
+      1453.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      136.0,
+      1478.0,
+      1050.0,
+      1536.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 38,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      135.0,
+      144.0,
+      1052.0,
+      232.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      427.0,
+      254.0,
+      759.0,
+      283.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      137.0,
+      305.0,
+      1053.0,
+      453.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      137.0,
+      476.0,
+      1052.0,
+      534.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      138.0,
+      549.0,
+      1052.0,
+      607.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      137.0,
+      633.0,
+      1053.0,
+      866.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      136.0,
+      890.0,
+      1052.0,
+      949.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      136.0,
+      963.0,
+      1053.0,
+      1107.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      136.0,
+      1134.0,
+      1053.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      136.0,
+      1320.0,
+      1053.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      137.0,
+      1462.0,
+      1053.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 39,
+    "bbox": [
+      582.0,
+      1584.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      135.0,
+      145.0,
+      1053.0,
+      319.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      505.0,
+      339.0,
+      682.0,
+      371.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      137.0,
+      408.0,
+      1047.0,
+      468.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      138.0,
+      481.0,
+      1053.0,
+      569.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      137.0,
+      594.0,
+      1053.0,
+      681.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      136.0,
+      706.0,
+      1053.0,
+      910.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      134.0,
+      937.0,
+      1052.0,
+      995.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      136.0,
+      1008.0,
+      1054.0,
+      1067.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      157.0,
+      1080.0,
+      949.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      151.0,
+      1124.0,
+      697.0,
+      1153.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      144.0,
+      1166.0,
+      1052.0,
+      1225.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      454.0,
+      1245.0,
+      793.0,
+      1279.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      139.0,
+      1315.0,
+      684.0,
+      1345.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      136.0,
+      1373.0,
+      1053.0,
+      1488.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 40,
+    "bbox": [
+      581.0,
+      1583.0,
+      608.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      146.0,
+      1052.0,
+      202.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      281.0,
+      214.0,
+      907.0,
+      269.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      135.0,
+      279.0,
+      1051.0,
+      337.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      416.0,
+      352.0,
+      770.0,
+      384.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      137.0,
+      398.0,
+      1051.0,
+      488.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      134.0,
+      500.0,
+      1053.0,
+      589.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      612.0,
+      1053.0,
+      699.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      713.0,
+      1053.0,
+      772.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      380.0,
+      787.0,
+      805.0,
+      819.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      994.0,
+      789.0,
+      1049.0,
+      818.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      137.0,
+      843.0,
+      1065.0,
+      903.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      360.0,
+      916.0,
+      825.0,
+      948.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      964.0,
+      1052.0,
+      993.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      135.0,
+      1019.0,
+      1052.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.6 Boundary rigidity for the mixed branch",
+    "page": 41,
+    "bbox": [
+      136.0,
+      1113.0,
+      789.0,
+      1144.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      134.0,
+      1162.0,
+      1053.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      136.0,
+      1262.0,
+      1055.0,
+      1346.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      473.0,
+      1347.0,
+      716.0,
+      1380.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      135.0,
+      1401.0,
+      581.0,
+      1430.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      323.0,
+      1447.0,
+      861.0,
+      1478.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      133.0,
+      1492.0,
+      1053.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 41,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      137.0,
+      144.0,
+      1036.0,
+      174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      380.0,
+      194.0,
+      805.0,
+      228.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      134.0,
+      263.0,
+      1053.0,
+      322.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      335.0,
+      1053.0,
+      394.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      468.0,
+      415.0,
+      718.0,
+      446.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      993.0,
+      415.0,
+      1049.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      138.0,
+      467.0,
+      720.0,
+      497.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      517.0,
+      519.0,
+      669.0,
+      548.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      993.0,
+      519.0,
+      1049.0,
+      548.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      573.0,
+      1052.0,
+      634.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      488.0,
+      649.0,
+      696.0,
+      707.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      724.0,
+      1052.0,
+      785.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      796.0,
+      1053.0,
+      885.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      510.0,
+      903.0,
+      678.0,
+      958.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      976.0,
+      1049.0,
+      1032.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      447.0,
+      1026.0,
+      741.0,
+      1082.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      1089.0,
+      1053.0,
+      1149.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      136.0,
+      1175.0,
+      1060.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      137.0,
+      1275.0,
+      1053.0,
+      1365.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      138.0,
+      1389.0,
+      624.0,
+      1418.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      460.0,
+      1438.0,
+      728.0,
+      1471.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      134.0,
+      1491.0,
+      1051.0,
+      1551.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 42,
+    "bbox": [
+      582.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      145.0,
+      1051.0,
+      201.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      442.0,
+      202.0,
+      745.0,
+      231.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      993.0,
+      202.0,
+      1049.0,
+      231.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      135.0,
+      243.0,
+      1051.0,
+      301.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      468.0,
+      302.0,
+      718.0,
+      331.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      993.0,
+      302.0,
+      1049.0,
+      331.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      138.0,
+      358.0,
+      589.0,
+      386.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      349.0,
+      406.0,
+      834.0,
+      497.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      135.0,
+      522.0,
+      1052.0,
+      579.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      422.0,
+      577.0,
+      765.0,
+      609.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      621.0,
+      614.0,
+      650.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      391.0,
+      671.0,
+      798.0,
+      704.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      726.0,
+      1052.0,
+      784.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      422.0,
+      784.0,
+      765.0,
+      849.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      858.0,
+      1053.0,
+      948.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      134.0,
+      973.0,
+      1052.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      134.0,
+      1045.0,
+      1050.0,
+      1162.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      137.0,
+      1187.0,
+      1053.0,
+      1302.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      136.0,
+      1328.0,
+      1053.0,
+      1417.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      137.0,
+      1429.0,
+      1055.0,
+      1547.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 43,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      290.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      135.0,
+      316.0,
+      1054.0,
+      403.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.7 A conditional converse in arbitrary dimension",
+    "page": 44,
+    "bbox": [
+      136.0,
+      440.0,
+      877.0,
+      471.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      134.0,
+      487.0,
+      1054.0,
+      604.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      616.0,
+      1054.0,
+      733.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      267.0,
+      756.0,
+      921.0,
+      822.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      138.0,
+      843.0,
+      755.0,
+      873.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      136.0,
+      897.0,
+      1054.0,
+      1044.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      446.0,
+      1062.0,
+      740.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      135.0,
+      1119.0,
+      1053.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      1220.0,
+      758.0,
+      1248.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      484.0,
+      1271.0,
+      704.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      137.0,
+      1327.0,
+      213.0,
+      1354.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      372.0,
+      1351.0,
+      814.0,
+      1420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      136.0,
+      1430.0,
+      683.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      483.0,
+      1478.0,
+      704.0,
+      1548.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 44,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      148.0,
+      397.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      135.0,
+      188.0,
+      1052.0,
+      304.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      487.0,
+      300.0,
+      702.0,
+      364.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      373.0,
+      1052.0,
+      460.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      474.0,
+      1054.0,
+      590.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      616.0,
+      1051.0,
+      675.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "D.8 Proof of the low-degree-factor diagnostic",
+    "page": 45,
+    "bbox": [
+      136.0,
+      711.0,
+      804.0,
+      742.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      759.0,
+      1053.0,
+      874.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      136.0,
+      888.0,
+      1053.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      134.0,
+      1031.0,
+      1054.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      134.0,
+      1259.0,
+      1053.0,
+      1317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      1331.0,
+      1055.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      137.0,
+      1445.0,
+      1053.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 45,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      135.0,
+      146.0,
+      1052.0,
+      204.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      136.0,
+      230.0,
+      1052.0,
+      287.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      137.0,
+      301.0,
+      1055.0,
+      419.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      135.0,
+      442.0,
+      1067.0,
+      762.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      134.0,
+      776.0,
+      1053.0,
+      1093.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      136.0,
+      1108.0,
+      1052.0,
+      1311.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      136.0,
+      1325.0,
+      1054.0,
+      1528.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 46,
+    "bbox": [
+      581.0,
+      1583.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      145.0,
+      1052.0,
+      203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      135.0,
+      230.0,
+      1053.0,
+      317.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      341.0,
+      1052.0,
+      400.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      483.0,
+      415.0,
+      705.0,
+      482.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      503.0,
+      1052.0,
+      678.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      691.0,
+      1052.0,
+      777.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      389.0,
+      772.0,
+      799.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      135.0,
+      838.0,
+      1053.0,
+      984.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      419.0,
+      1004.0,
+      769.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      135.0,
+      1059.0,
+      1053.0,
+      1178.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      1200.0,
+      1053.0,
+      1260.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      135.0,
+      1284.0,
+      1054.0,
+      1432.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      136.0,
+      1455.0,
+      1053.0,
+      1516.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 47,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1605.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "E Proofs of Section 5: Weak-denominator inference",
+    "page": 48,
+    "bbox": [
+      137.0,
+      138.0,
+      1044.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      135.0,
+      197.0,
+      1053.0,
+      313.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      134.0,
+      326.0,
+      1053.0,
+      385.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      139.0,
+      411.0,
+      560.0,
+      440.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      239.0,
+      463.0,
+      947.0,
+      525.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      136.0,
+      545.0,
+      1052.0,
+      630.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      491.0,
+      630.0,
+      695.0,
+      673.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      136.0,
+      683.0,
+      1052.0,
+      743.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      481.0,
+      764.0,
+      706.0,
+      797.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      135.0,
+      832.0,
+      1052.0,
+      925.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      135.0,
+      945.0,
+      1048.0,
+      980.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      134.0,
+      1001.0,
+      1051.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      135.0,
+      1132.0,
+      1052.0,
+      1191.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      437.0,
+      1213.0,
+      749.0,
+      1244.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      137.0,
+      1268.0,
+      1050.0,
+      1327.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      421.0,
+      1348.0,
+      769.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      135.0,
+      1436.0,
+      1054.0,
+      1496.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 48,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      135.0,
+      145.0,
+      1053.0,
+      232.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      134.0,
+      246.0,
+      1052.0,
+      334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      358.0,
+      1052.0,
+      501.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      519.0,
+      589.0,
+      547.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      375.0,
+      557.0,
+      813.0,
+      592.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      135.0,
+      605.0,
+      711.0,
+      635.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      366.0,
+      643.0,
+      824.0,
+      680.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      135.0,
+      692.0,
+      1052.0,
+      841.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      853.0,
+      1054.0,
+      972.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      138.0,
+      986.0,
+      220.0,
+      1014.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      455.0,
+      1011.0,
+      735.0,
+      1046.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      135.0,
+      1053.0,
+      1054.0,
+      1229.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      134.0,
+      1254.0,
+      1085.0,
+      1314.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      1327.0,
+      1056.0,
+      1385.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      465.0,
+      1382.0,
+      723.0,
+      1416.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      136.0,
+      1421.0,
+      1054.0,
+      1482.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      328.0,
+      1492.0,
+      859.0,
+      1555.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 49,
+    "bbox": [
+      581.0,
+      1583.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      145.0,
+      1054.0,
+      231.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      477.0,
+      231.0,
+      710.0,
+      291.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      134.0,
+      297.0,
+      1054.0,
+      443.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F Proofs of Section 6: Causal applications",
+    "page": 50,
+    "bbox": [
+      136.0,
+      485.0,
+      886.0,
+      522.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.1 Structural pullbacks used in Table 1",
+    "page": 50,
+    "bbox": [
+      135.0,
+      549.0,
+      736.0,
+      582.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      134.0,
+      597.0,
+      1053.0,
+      713.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      137.0,
+      727.0,
+      532.0,
+      754.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      344.0,
+      773.0,
+      842.0,
+      802.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      820.0,
+      322.0,
+      847.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      864.0,
+      546.0,
+      890.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      225.0,
+      909.0,
+      962.0,
+      938.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      954.0,
+      1051.0,
+      1015.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      311.0,
+      1030.0,
+      876.0,
+      1062.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      1091.0,
+      417.0,
+      1118.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      246.0,
+      1136.0,
+      942.0,
+      1166.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      1182.0,
+      205.0,
+      1210.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      422.0,
+      1209.0,
+      765.0,
+      1242.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      134.0,
+      1250.0,
+      595.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      135.0,
+      1295.0,
+      404.0,
+      1322.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      183.0,
+      1339.0,
+      1004.0,
+      1369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      135.0,
+      1386.0,
+      683.0,
+      1414.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      266.0,
+      1433.0,
+      921.0,
+      1461.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      136.0,
+      1492.0,
+      1053.0,
+      1549.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 50,
+    "bbox": [
+      581.0,
+      1583.0,
+      608.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.2 Marginal and partial minors",
+    "page": 51,
+    "bbox": [
+      136.0,
+      141.0,
+      623.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      133.0,
+      190.0,
+      1052.0,
+      365.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      134.0,
+      376.0,
+      1053.0,
+      434.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      448.0,
+      1014.0,
+      478.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      410.0,
+      500.0,
+      777.0,
+      561.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      138.0,
+      582.0,
+      396.0,
+      609.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      427.0,
+      630.0,
+      760.0,
+      665.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      686.0,
+      1051.0,
+      749.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      133.0,
+      761.0,
+      1054.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      903.0,
+      1054.0,
+      1023.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      136.0,
+      1037.0,
+      1052.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      222.0,
+      1200.0,
+      965.0,
+      1234.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      1257.0,
+      689.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      137.0,
+      1298.0,
+      1053.0,
+      1356.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      451.0,
+      1353.0,
+      735.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      136.0,
+      1429.0,
+      168.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      506.0,
+      1443.0,
+      683.0,
+      1506.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      140.0,
+      1515.0,
+      1038.0,
+      1547.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 51,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "F.3 Front-door boundary robustness",
+    "page": 52,
+    "bbox": [
+      136.0,
+      142.0,
+      680.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      134.0,
+      189.0,
+      1054.0,
+      391.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      136.0,
+      417.0,
+      1052.0,
+      477.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      520.0,
+      495.0,
+      667.0,
+      558.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      135.0,
+      576.0,
+      1052.0,
+      634.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      433.0,
+      653.0,
+      755.0,
+      707.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      136.0,
+      729.0,
+      183.0,
+      754.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      303.0,
+      747.0,
+      884.0,
+      813.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      136.0,
+      822.0,
+      691.0,
+      851.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      391.0,
+      869.0,
+      794.0,
+      934.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      996.0,
+      887.0,
+      1049.0,
+      916.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      135.0,
+      966.0,
+      1052.0,
+      1054.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      334.0,
+      1077.0,
+      855.0,
+      1107.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      136.0,
+      1131.0,
+      1052.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      445.0,
+      1205.0,
+      741.0,
+      1267.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      135.0,
+      1285.0,
+      1053.0,
+      1400.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      283.0,
+      1419.0,
+      905.0,
+      1476.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      997.0,
+      1430.0,
+      1049.0,
+      1458.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      135.0,
+      1493.0,
+      1052.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 52,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      146.0,
+      490.0,
+      173.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      426.0,
+      185.0,
+      759.0,
+      317.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      996.0,
+      236.0,
+      1049.0,
+      265.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      329.0,
+      793.0,
+      357.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      371.0,
+      1051.0,
+      459.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      517.0,
+      458.0,
+      671.0,
+      489.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      499.0,
+      1050.0,
+      557.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      217.0,
+      566.0,
+      970.0,
+      632.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      646.0,
+      1051.0,
+      732.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      747.0,
+      1053.0,
+      835.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      370.0,
+      846.0,
+      819.0,
+      908.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      918.0,
+      1053.0,
+      1004.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      354.0,
+      1002.0,
+      831.0,
+      1036.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      1042.0,
+      1048.0,
+      1073.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      135.0,
+      1086.0,
+      1049.0,
+      1171.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      354.0,
+      1170.0,
+      831.0,
+      1201.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      135.0,
+      1210.0,
+      1053.0,
+      1328.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      136.0,
+      1339.0,
+      1047.0,
+      1402.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      368.0,
+      1415.0,
+      821.0,
+      1481.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      137.0,
+      1492.0,
+      1052.0,
+      1550.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 53,
+    "bbox": [
+      581.0,
+      1583.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table G.1: Complete denominator summaries for the Gaussian simulations. The population quantity is nD(Σ)2/s2(Σ). Dashes denote diagnostics not used for the self-normalizing front- door denominator.",
+    "page": 54,
+    "bbox": [
+      135.0,
+      141.0,
+      1053.0,
+      222.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      209.0,
+      240.0,
+      983.0,
+      480.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      134.0,
+      522.0,
+      1053.0,
+      609.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G Detailed numerical experiments",
+    "page": 54,
+    "bbox": [
+      136.0,
+      651.0,
+      754.0,
+      688.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G.1 Data-generating mechanisms and target parameters",
+    "page": 54,
+    "bbox": [
+      137.0,
+      716.0,
+      960.0,
+      749.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      133.0,
+      762.0,
+      1053.0,
+      968.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "G.2 Computation and precision",
+    "page": 54,
+    "bbox": [
+      136.0,
+      1003.0,
+      612.0,
+      1035.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      133.0,
+      1050.0,
+      1053.0,
+      1284.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      134.0,
+      1296.0,
+      1054.0,
+      1469.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 54,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table G.2: Dispersion, standard errors and bias in the Gaussian simulations. Robust s.d., interquartile range divided by 1.349.",
+    "page": 55,
+    "bbox": [
+      135.0,
+      141.0,
+      1052.0,
+      196.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      318.0,
+      212.0,
+      871.0,
+      451.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table G.3: Coverage and Monte Carlo standard errors in the Gaussian simulations. Cov., empirical 95% coverage; MCSE, Monte Carlo standard error; inversion, coverage of (15) at the true target.",
+    "page": 55,
+    "bbox": [
+      136.0,
+      472.0,
+      1053.0,
+      554.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      235.0,
+      570.0,
+      952.0,
+      809.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "H Detailed real data experiments",
+    "page": 55,
+    "bbox": [
+      135.0,
+      841.0,
+      738.0,
+      879.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "H.1 Variables and preprocessing",
+    "page": 55,
+    "bbox": [
+      136.0,
+      906.0,
+      623.0,
+      939.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      133.0,
+      953.0,
+      1054.0,
+      1360.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "H.2 Diagnostic formulas and bootstrap",
+    "page": 55,
+    "bbox": [
+      136.0,
+      1395.0,
+      718.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      133.0,
+      1443.0,
+      1053.0,
+      1500.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      317.0,
+      1522.0,
+      872.0,
+      1552.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 55,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table H.1: Detailed point diagnostics for the SUPPORT analysis. Partial corr., sample partial correlation between the treatment and outcome proxies given residualized treatment.",
+    "page": 56,
+    "bbox": [
+      135.0,
+      140.0,
+      1052.0,
+      195.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      215.0,
+      213.0,
+      978.0,
+      337.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table H.2: Percentile bootstrap intervals for the SUPPORT analysis. Intervals use 2000 row- bootstrap replications. They reflect sampling variation under the prespecified preprocessing and proxy allocation, but not uncertainty about proxy validity.",
+    "page": 56,
+    "bbox": [
+      136.0,
+      359.0,
+      1053.0,
+      442.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      227.0,
+      458.0,
+      959.0,
+      584.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      136.0,
+      624.0,
+      1052.0,
+      800.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      135.0,
+      812.0,
+      1053.0,
+      929.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      133.0,
+      942.0,
+      1054.0,
+      1117.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I Algebraic obstructions in the mixed branch",
+    "page": 56,
+    "bbox": [
+      132.0,
+      1159.0,
+      936.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I.1 Kernel map and the Hessian obstruction",
+    "page": 56,
+    "bbox": [
+      136.0,
+      1223.0,
+      790.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      135.0,
+      1271.0,
+      1053.0,
+      1358.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      365.0,
+      1378.0,
+      823.0,
+      1412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      135.0,
+      1433.0,
+      1053.0,
+      1521.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 56,
+    "bbox": [
+      581.0,
+      1582.0,
+      609.0,
+      1606.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      135.0,
+      145.0,
+      1054.0,
+      261.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      421.0,
+      281.0,
+      769.0,
+      315.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      135.0,
+      337.0,
+      654.0,
+      365.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      472.0,
+      385.0,
+      716.0,
+      422.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      134.0,
+      443.0,
+      1054.0,
+      560.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "I.2 Representation-theoretic lifting obstruction",
+    "page": 57,
+    "bbox": [
+      133.0,
+      596.0,
+      831.0,
+      628.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      136.0,
+      644.0,
+      1040.0,
+      673.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      482.0,
+      695.0,
+      706.0,
+      727.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      136.0,
+      749.0,
+      703.0,
+      779.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      420.0,
+      799.0,
+      767.0,
+      869.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      1003.0,
+      819.0,
+      1049.0,
+      849.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      134.0,
+      890.0,
+      1053.0,
+      948.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      136.0,
+      962.0,
+      736.0,
+      991.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      463.0,
+      1011.0,
+      723.0,
+      1045.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      134.0,
+      1068.0,
+      1054.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      134.0,
+      1227.0,
+      1054.0,
+      1343.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 57,
+    "bbox": [
+      581.0,
+      1582.0,
+      610.0,
+      1606.0
+    ]
+  }
+]

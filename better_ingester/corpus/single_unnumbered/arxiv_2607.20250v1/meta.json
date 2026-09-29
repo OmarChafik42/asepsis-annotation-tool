@@ -1,0 +1,10 @@
+{
+  "cell": "single_unnumbered",
+  "columns": "single",
+  "numbering": "unnumbered",
+  "documentclass": "eptcs",
+  "category": "q-bio.PE",
+  "published": "2026-07-22",
+  "title": "A ProbLog program to infer individual genotypes from familial phenotypes in auto",
+  "arxiv_id": "2607.20250v1"
+}

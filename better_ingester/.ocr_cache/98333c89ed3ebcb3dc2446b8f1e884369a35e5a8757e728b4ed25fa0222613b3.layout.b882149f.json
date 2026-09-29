@@ -1,0 +1,2785 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      40.0,
+      366.0,
+      86.0,
+      1213.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Robustness over efficiency in climate coalitions: a bistable model and a map of architectures",
+    "page": 0,
+    "bbox": [
+      186.0,
+      224.0,
+      1035.0,
+      304.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      538.0,
+      335.0,
+      684.0,
+      366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      305.0,
+      386.0,
+      917.0,
+      414.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      156.0,
+      459.0,
+      1065.0,
+      514.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      565.0,
+      570.0,
+      659.0,
+      592.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      192.0,
+      605.0,
+      1029.0,
+      1086.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      192.0,
+      1097.0,
+      1029.0,
+      1337.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      193.0,
+      1347.0,
+      1027.0,
+      1396.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      604.0,
+      1484.0,
+      619.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1. Introduction",
+    "page": 1,
+    "bbox": [
+      141.0,
+      146.0,
+      333.0,
+      172.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      138.0,
+      197.0,
+      1084.0,
+      412.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      414.0,
+      1084.0,
+      792.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      136.0,
+      793.0,
+      1084.0,
+      1280.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      137.0,
+      1281.0,
+      1085.0,
+      1442.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      148.0,
+      1084.0,
+      308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      312.0,
+      1083.0,
+      581.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2. A coalition model with two enrolment channels",
+    "page": 2,
+    "bbox": [
+      137.0,
+      613.0,
+      742.0,
+      640.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1. The game and the two channels",
+    "page": 2,
+    "bbox": [
+      139.0,
+      665.0,
+      551.0,
+      690.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      706.0,
+      1084.0,
+      869.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      465.0,
+      863.0,
+      755.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      917.0,
+      1083.0,
+      1050.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      138.0,
+      1052.0,
+      1083.0,
+      1106.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      490.0,
+      1128.0,
+      730.0,
+      1156.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      137.0,
+      1177.0,
+      1084.0,
+      1314.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      467.0,
+      1335.0,
+      754.0,
+      1362.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      136.0,
+      1383.0,
+      1083.0,
+      1438.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      149.0,
+      1084.0,
+      771.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      137.0,
+      772.0,
+      1083.0,
+      1313.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      536.0,
+      1334.0,
+      685.0,
+      1361.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      172.0,
+      1383.0,
+      1083.0,
+      1409.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      138.0,
+      148.0,
+      370.0,
+      174.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      296.0,
+      195.0,
+      925.0,
+      223.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      246.0,
+      1084.0,
+      651.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2. The free-rider gap from primitives",
+    "page": 4,
+    "bbox": [
+      138.0,
+      682.0,
+      581.0,
+      708.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      137.0,
+      724.0,
+      1083.0,
+      776.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      436.0,
+      799.0,
+      785.0,
+      827.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      136.0,
+      847.0,
+      1087.0,
+      1419.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      603.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      148.0,
+      1084.0,
+      202.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      323.0,
+      217.0,
+      898.0,
+      274.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      291.0,
+      1083.0,
+      452.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      458.0,
+      1085.0,
+      1212.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3. Three architectures in one game",
+    "page": 5,
+    "bbox": [
+      139.0,
+      1243.0,
+      558.0,
+      1268.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      137.0,
+      1284.0,
+      1085.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      226.0,
+      418.0,
+      993.0,
+      939.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: The free-rider gap at small coalition sizes, where the dynamics are decided. Exact gap (solid), its re-parametrization A φ(k) in measurable quantities (dashed; A = 197.3, α = 0.835, k0 = 2.65), and the channel term P(k) of the carbon currency (dotted). Where the channel term lies above the gap the coalition grows, where it lies below it shrinks; the two crossings are the remnant club (k ≈ 2.3) and the critical mass (k ≈ 5.2). Inset: the same two gap curves over the full range agree to a root-mean-square deviation of 2.1 payoff units, with the residual confined to k ≤ 6; the channel terms of all three architectures are compared in Fig. 2.",
+    "page": 6,
+    "bbox": [
+      135.0,
+      981.0,
+      1083.0,
+      1173.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      604.0,
+      1483.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      148.0,
+      1085.0,
+      445.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      447.0,
+      1084.0,
+      687.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      137.0,
+      690.0,
+      1084.0,
+      988.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: The three architectures compared under the decomposed drain, with the fiscal channel mirroring the competitive rent (t = 1). Paired entries give the value at µT = Gap(n) before and at µT = Gap(n)/2 after the slash; ignition quantities are evaluated over the integer coalition sizes of the game (Section 4.1). The kcrit range in parentheses covers 27 parameter variations (γ× {0.8, 1.0, 1.2}, µT ∈ {Gap(n)/2, Gap(n), 2 Gap(n)}, θ × {0.5, 0.75, 1.0}); \"none\" means that no nucleus of any size tips. Welfare is realized from the common nucleus of eight, relative to the uniform-price optimum (SI Appendix, Note 4). The nucleus ranges are disjoint; the ranking is a structural property of the channel configuration. The border adjustment is the calibration-sensitive entry: its collapse threshold at the central calibration is barely positive, and at µT = Gap(n)/2 its grand coalition is not internally stable. Parameters: γ, maximum membership premium; c, coverage of the border instrument; θ, accession-contingent compensation degree; µT, terms-of-trade amplitude.",
+    "page": 7,
+    "bbox": [
+      137.0,
+      1007.0,
+      1084.0,
+      1304.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      140.0,
+      1324.0,
+      1082.0,
+      1415.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      604.0,
+      1484.0,
+      620.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3. Bistability, lock-in, and hysteresis",
+    "page": 8,
+    "bbox": [
+      139.0,
+      146.0,
+      582.0,
+      173.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1. Bistability and the critical mass",
+    "page": 8,
+    "bbox": [
+      138.0,
+      198.0,
+      553.0,
+      223.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      239.0,
+      1085.0,
+      702.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2. The non-linear breakdown and the lock-in ratio",
+    "page": 8,
+    "bbox": [
+      139.0,
+      730.0,
+      725.0,
+      755.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      771.0,
+      1081.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      506.0,
+      1037.0,
+      717.0,
+      1065.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      136.0,
+      1087.0,
+      1083.0,
+      1383.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      603.0,
+      1483.0,
+      620.0,
+      1502.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      230.0,
+      435.0,
+      995.0,
+      933.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Internal stability margin Mint(k; x = 0) for the three entry architectures under the common Gap. The carbon currency (solid) has two stable zeros, the remnant club and the grand coalition, separated by a barrier: it is bistable. The border adjustment (dashed) is also bistable, but its margin at full membership is smaller: the grand coalition holds with less reserve against erosion, which is why the collapse threshold discussed in Section 3.2 is lower for this architecture. The export rebate (dotted) has no stable grand coalition, its margin remaining negative throughout the upper range.",
+    "page": 9,
+    "bbox": [
+      136.0,
+      971.0,
+      1083.0,
+      1163.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      600.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3. Hysteresis and the bistable wedge",
+    "page": 10,
+    "bbox": [
+      139.0,
+      147.0,
+      575.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      189.0,
+      1081.0,
+      566.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      140.0,
+      568.0,
+      1084.0,
+      701.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4. A map of architectures",
+    "page": 10,
+    "bbox": [
+      139.0,
+      736.0,
+      455.0,
+      762.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1. Two robustness metrics",
+    "page": 10,
+    "bbox": [
+      139.0,
+      789.0,
+      460.0,
+      813.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      829.0,
+      1083.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      471.0,
+      1285.0,
+      750.0,
+      1312.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      136.0,
+      1332.0,
+      1083.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      600.0,
+      1484.0,
+      624.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      136.0,
+      148.0,
+      1085.0,
+      392.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2. The robustness map and the three regimes",
+    "page": 11,
+    "bbox": [
+      139.0,
+      422.0,
+      673.0,
+      446.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      462.0,
+      1085.0,
+      1031.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3. Entry versus interior architectures",
+    "page": 11,
+    "bbox": [
+      139.0,
+      1063.0,
+      581.0,
+      1087.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      137.0,
+      1104.0,
+      1084.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      138.0,
+      1375.0,
+      1085.0,
+      1427.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      230.0,
+      398.0,
+      986.0,
+      966.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: The two-dimensional robustness map. Horizontal axis: ignition cost Hign/γ (log scale). Vertical axis: collapse threshold xcollapse. Each entry architecture is a labelled point; the three regime regions are shaded self-igniting (green), founding-dependent (amber), and permanent- support-dependent (red). Dashed lines at Hign/γ = 1 and xcollapse = 0 mark the boundaries. Filled circles: central calibration µT = Gap(n); filled squares: µT = Gap(n)/2. The border ad- justment's central point sits on the zero line by measurement, not by construction: its collapse threshold is +0.02, the marginal placement discussed in Section 4.2.",
+    "page": 12,
+    "bbox": [
+      136.0,
+      1007.0,
+      1084.0,
+      1199.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      600.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      246.0,
+      184.0,
+      978.0,
+      518.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: Architecture classes. Entry architectures (left, µ > 0) admit bistability, with ignition and hold robustness defined on the map. Interior architectures (right, µ ≈ 0) exert no indepen- dent enrolment pressure and act as an efficiency layer within an established coalition. The policy sequence ignites with an entry architecture and then deploys an interior architecture.",
+    "page": 13,
+    "bbox": [
+      137.0,
+      581.0,
+      1084.0,
+      692.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      137.0,
+      734.0,
+      1083.0,
+      816.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5. Resilience to heterogeneity",
+    "page": 13,
+    "bbox": [
+      139.0,
+      848.0,
+      502.0,
+      875.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      136.0,
+      898.0,
+      1086.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      175.0,
+      150.0,
+      467.0,
+      408.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      480.0,
+      152.0,
+      758.0,
+      407.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      772.0,
+      152.0,
+      1049.0,
+      409.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 5: Heterogeneity and field hysteresis for the carbon currency. (a) The bistable wedge in the (institutional stress x, seeding field h) plane, bounded by the collapse and ignition fields; the wedge is truncated near xcollapse ≈ 0.49. The grey arrows trace the nucleus strategy of Section 3.3: the seeding field overshoots the ignition line and is then withdrawn to h = 0, where the coalition remains on the upper branch. (b) Self-consistent coalition fraction as a function of the seeding field for increasing disorder σ at x = 0.20; the ignition jump survives at small and moderate disorder and rounds off as σ grows. (c) The maximum single-step jump against σ; it vanishes at σc ≈ 65 (σc/γ≈3.2).",
+    "page": 14,
+    "bbox": [
+      136.0,
+      437.0,
+      1083.0,
+      656.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6. Discussion",
+    "page": 14,
+    "bbox": [
+      139.0,
+      697.0,
+      307.0,
+      722.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      747.0,
+      1084.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      137.0,
+      1182.0,
+      1084.0,
+      1425.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      148.0,
+      1082.0,
+      199.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      202.0,
+      1084.0,
+      715.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      137.0,
+      715.0,
+      1084.0,
+      1258.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Materials and Methods",
+    "page": 15,
+    "bbox": [
+      139.0,
+      1290.0,
+      423.0,
+      1316.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      141.0,
+      1340.0,
+      1082.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      147.0,
+      1082.0,
+      252.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      256.0,
+      1082.0,
+      442.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      140.0,
+      446.0,
+      1082.0,
+      550.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      136.0,
+      555.0,
+      1082.0,
+      742.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      743.0,
+      1083.0,
+      851.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgements",
+    "page": 16,
+    "bbox": [
+      141.0,
+      885.0,
+      370.0,
+      910.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      137.0,
+      934.0,
+      1084.0,
+      1259.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 16,
+    "bbox": [
+      140.0,
+      1292.0,
+      274.0,
+      1318.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      153.0,
+      1341.0,
+      1079.0,
+      1390.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      600.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      152.0,
+      146.0,
+      1082.0,
+      200.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      152.0,
+      218.0,
+      1082.0,
+      271.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      152.0,
+      290.0,
+      934.0,
+      318.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      153.0,
+      336.0,
+      1082.0,
+      389.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      153.0,
+      407.0,
+      960.0,
+      435.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      153.0,
+      453.0,
+      1082.0,
+      506.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      153.0,
+      524.0,
+      1082.0,
+      605.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      150.0,
+      624.0,
+      1081.0,
+      677.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      143.0,
+      696.0,
+      1081.0,
+      750.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      141.0,
+      768.0,
+      1080.0,
+      822.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      141.0,
+      840.0,
+      1080.0,
+      894.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      912.0,
+      1080.0,
+      967.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      984.0,
+      1082.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      141.0,
+      1057.0,
+      1081.0,
+      1111.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      1129.0,
+      1081.0,
+      1183.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      1201.0,
+      1082.0,
+      1255.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      1273.0,
+      1022.0,
+      1300.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      142.0,
+      1319.0,
+      1082.0,
+      1370.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      141.0,
+      1390.0,
+      1082.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      599.0,
+      1483.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      142.0,
+      146.0,
+      1082.0,
+      225.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      142.0,
+      246.0,
+      1083.0,
+      297.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      142.0,
+      318.0,
+      1082.0,
+      396.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 18,
+    "bbox": [
+      600.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Supporting Information",
+    "page": 19,
+    "bbox": [
+      139.0,
+      146.0,
+      427.0,
+      174.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      139.0,
+      196.0,
+      1086.0,
+      275.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      139.0,
+      278.0,
+      1084.0,
+      412.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 1: The stylized coalition model",
+    "page": 19,
+    "bbox": [
+      138.0,
+      443.0,
+      582.0,
+      467.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      139.0,
+      483.0,
+      1083.0,
+      618.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      619.0,
+      1084.0,
+      810.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      256.0,
+      829.0,
+      965.0,
+      873.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      137.0,
+      895.0,
+      1084.0,
+      1112.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      136.0,
+      1113.0,
+      1084.0,
+      1411.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 19,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      137.0,
+      146.0,
+      1083.0,
+      498.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      500.0,
+      1083.0,
+      849.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 2: Tipping structure and critical mass",
+    "page": 20,
+    "bbox": [
+      138.0,
+      882.0,
+      660.0,
+      907.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      138.0,
+      923.0,
+      1083.0,
+      1111.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      371.0,
+      1128.0,
+      849.0,
+      1186.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      136.0,
+      1204.0,
+      1086.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 20,
+    "bbox": [
+      598.0,
+      1483.0,
+      624.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      139.0,
+      147.0,
+      1082.0,
+      201.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      175.0,
+      230.0,
+      1047.0,
+      540.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S1: Tipping dynamics of the carbon currency coalition. Retention margin (blue) and ac- cession incentive (orange) as functions of coalition size, at baseline (left) and under an effective disturbance of 0.25 (right). Green shading marks stable coalition sizes; arrows indicate the direc- tion of the myopic dynamics. Erosion of the two channels shifts the critical mass from 6 to 10, moving the EU-China nucleus of eight into the collapse basin.",
+    "page": 21,
+    "bbox": [
+      136.0,
+      571.0,
+      1083.0,
+      707.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      732.0,
+      1084.0,
+      813.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      352.0,
+      832.0,
+      865.0,
+      874.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      891.0,
+      1084.0,
+      1000.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 3: Robustness layer, frontier, and perturbation analysis",
+    "page": 21,
+    "bbox": [
+      139.0,
+      1030.0,
+      852.0,
+      1056.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      135.0,
+      1072.0,
+      1084.0,
+      1260.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      406.0,
+      1279.0,
+      814.0,
+      1324.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      137.0,
+      1340.0,
+      1085.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 21,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      146.0,
+      1083.0,
+      473.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      254.0,
+      503.0,
+      967.0,
+      959.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S2: Efficiency-robustness frontier of robust tipping from the nucleus. Instrument efficiency Einst(η) and stabilization effort τ*(η) for the carbon currency architecture at the central calibration, with free robustness η0 = 0.21 and breakdown radius η = 1.03. The frontier formula is identical in form to the linear benchmark; only the scalar x is computed from the tipping geometry.",
+    "page": 22,
+    "bbox": [
+      138.0,
+      999.0,
+      1083.0,
+      1108.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      136.0,
+      1137.0,
+      1083.0,
+      1216.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      448.0,
+      1234.0,
+      774.0,
+      1292.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      137.0,
+      1310.0,
+      1084.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 22,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      148.0,
+      1085.0,
+      525.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      347.0,
+      543.0,
+      874.0,
+      573.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      591.0,
+      1084.0,
+      997.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 4: Architecture comparison",
+    "page": 23,
+    "bbox": [
+      139.0,
+      1028.0,
+      544.0,
+      1054.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      137.0,
+      1070.0,
+      1084.0,
+      1256.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      136.0,
+      1259.0,
+      1084.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 23,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      251.0,
+      193.0,
+      973.0,
+      665.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S3: Erosion raises the critical mass. Integer and continuous tipping thresholds as functions of the effective disturbance, with the closed-form linearization. The carrying capacity of the nucleus, x(8) = 0.21, is the disturbance at which the threshold exceeds the nucleus.",
+    "page": 24,
+    "bbox": [
+      136.0,
+      702.0,
+      1083.0,
+      784.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table S1: Architecture parametrizations under the decomposed drain. Common parameters: n = 20, β = 40, t = 1, ψ = 600, µT = Gap(n) (central calibration; Gap(n)/2 as reported variant); reference nucleus k0 = 8.",
+    "page": 24,
+    "bbox": [
+      135.0,
+      880.0,
+      1083.0,
+      961.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      137.0,
+      977.0,
+      1087.0,
+      1401.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 24,
+    "bbox": [
+      598.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      147.0,
+      1084.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      175.0,
+      334.0,
+      682.0,
+      642.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      687.0,
+      337.0,
+      1050.0,
+      628.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S4: Architecture comparison. (a) Robust carrying capacity x(k0) of a nucleus of size k0 for the three architectures. (b) Realized welfare relative to the uniform-price optimum, starting from the nucleus k0 = 8.",
+    "page": 25,
+    "bbox": [
+      137.0,
+      675.0,
+      1082.0,
+      757.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      138.0,
+      783.0,
+      1082.0,
+      915.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      136.0,
+      918.0,
+      1084.0,
+      1080.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 5: Conditional placement of clean-up certificates",
+    "page": 25,
+    "bbox": [
+      137.0,
+      1109.0,
+      774.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      137.0,
+      1150.0,
+      1084.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 25,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table S2: Status of the model assumptions. Classes: normalization; plausible reduced form; derived (from a stated mechanism, up to free constants); empirically grounded (estimable from data).",
+    "page": 26,
+    "bbox": [
+      138.0,
+      316.0,
+      1084.0,
+      372.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      183.0,
+      390.0,
+      1036.0,
+      1264.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 26,
+    "bbox": [
+      598.0,
+      1482.0,
+      625.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      148.0,
+      1084.0,
+      445.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      253.0,
+      477.0,
+      973.0,
+      951.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S5: Conditional placement of clean-up certificates. Dominance threshold ηdom as a function of the assumed stabilization effectiveness ρcuc, under assumptions otherwise favourable to clean-up certificates (identical coalition geometry, efficiency advantage between 5 and 13 per cent). Above each curve the currency architecture dominates; the threshold is the feasibility boundary x/(1 — ρCuC) and is independent of the assumed efficiency advantage. Solid: central calibration; dashed: µT = Gap(n)/2.",
+    "page": 27,
+    "bbox": [
+      136.0,
+      992.0,
+      1083.0,
+      1155.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 6: The free-rider gap and the calibration of the channels",
+    "page": 27,
+    "bbox": [
+      139.0,
+      1213.0,
+      864.0,
+      1238.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      136.0,
+      1254.0,
+      1087.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 27,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      147.0,
+      1083.0,
+      363.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      365.0,
+      1084.0,
+      473.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      301.0,
+      489.0,
+      920.0,
+      544.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      561.0,
+      1083.0,
+      695.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      698.0,
+      1084.0,
+      778.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      470.0,
+      798.0,
+      751.0,
+      828.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      850.0,
+      1081.0,
+      901.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      136.0,
+      905.0,
+      1084.0,
+      1175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      137.0,
+      1175.0,
+      1083.0,
+      1389.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      138.0,
+      1391.0,
+      1084.0,
+      1446.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 28,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table S3: Key metrics of the currency at the central calibration, computed from the exact game gap and from the measurable re-parametrization A φ(k) (A = 197.3, α = 0.835, k0 = 2.65) substituted for the exact curve in the temptation and the fiscal channel alike. The slope dkc/dx is evaluated at each form's own barrier; its conditioning is discussed in Note 7.",
+    "page": 29,
+    "bbox": [
+      136.0,
+      144.0,
+      1083.0,
+      252.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      330.0,
+      270.0,
+      890.0,
+      511.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      553.0,
+      1082.0,
+      796.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      799.0,
+      1084.0,
+      1175.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      136.0,
+      1180.0,
+      1084.0,
+      1422.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 29,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      147.0,
+      1084.0,
+      364.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 7: Non-linear breakdown, field hysteresis, and the bistable wedge",
+    "page": 30,
+    "bbox": [
+      137.0,
+      394.0,
+      960.0,
+      420.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      435.0,
+      1083.0,
+      599.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      429.0,
+      620.0,
+      790.0,
+      647.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      668.0,
+      1084.0,
+      830.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      834.0,
+      1083.0,
+      1045.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      138.0,
+      1048.0,
+      1083.0,
+      1101.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      408.0,
+      1124.0,
+      814.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      137.0,
+      1173.0,
+      1083.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      136.0,
+      1336.0,
+      1083.0,
+      1444.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 30,
+    "bbox": [
+      598.0,
+      1483.0,
+      624.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      136.0,
+      147.0,
+      1083.0,
+      254.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      137.0,
+      256.0,
+      1085.0,
+      608.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      186.0,
+      646.0,
+      1036.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S6: Front-loading of an undecomposed one-channel drain, m(k) = µ(k/n)p at the reference amplitude µ = 500, parametrized by the front-loaded share s = 2 – p. The ignition reserve x of the nucleus of eight rises steeply with s while the collapse threshold xcollapse is nearly constant; the lock-in ratio falls from R ≈ 12 at the quadratic baseline to R ≈ 1 at p = 1.",
+    "page": 31,
+    "bbox": [
+      137.0,
+      1226.0,
+      1082.0,
+      1334.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 31,
+    "bbox": [
+      598.0,
+      1482.0,
+      626.0,
+      1503.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "SI Note 8: Random-field heterogeneity",
+    "page": 32,
+    "bbox": [
+      139.0,
+      147.0,
+      576.0,
+      173.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      189.0,
+      1084.0,
+      324.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      293.0,
+      346.0,
+      930.0,
+      373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      395.0,
+      1083.0,
+      475.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      490.0,
+      497.0,
+      730.0,
+      525.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      547.0,
+      1083.0,
+      625.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      136.0,
+      629.0,
+      1083.0,
+      926.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      928.0,
+      1084.0,
+      1088.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      137.0,
+      1091.0,
+      1084.0,
+      1306.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 32,
+    "bbox": [
+      598.0,
+      1483.0,
+      626.0,
+      1504.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      227.0,
+      485.0,
+      997.0,
+      915.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure S7: Entropy-constrained worst case on the coalition chain (central calibration; prototype of the Hansen-Sargent extension of Note 3). Mean worst-case tilt Eq* [ω](k) of the erosion distribution for three values of the multiplier θís. The adversary ignores the remnant club, concentrates on the growth corridor beginning at the nucleus, with tilts of up to three to five times the nominal standard deviation σn = 0.10 (dotted line), and releases the coalition beyond an entropy-endogenous lock-in point that moves outward as θís falls.",
+    "page": 33,
+    "bbox": [
+      136.0,
+      953.0,
+      1084.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "number",
+    "text": "",
+    "page": 33,
+    "bbox": [
+      598.0,
+      1483.0,
+      625.0,
+      1504.0
+    ]
+  }
+]

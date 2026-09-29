@@ -1,0 +1,3676 @@
+[
+  {
+    "label": "aside_text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      41.0,
+      439.0,
+      84.0,
+      1138.0
+    ]
+  },
+  {
+    "label": "doc_title",
+    "text": "Building A CSFQ-Inspired Transport for Switched CXL Memory Pooling",
+    "page": 0,
+    "bbox": [
+      155.0,
+      250.0,
+      1068.0,
+      286.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      396.0,
+      335.0,
+      823.0,
+      366.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      406.0,
+      383.0,
+      817.0,
+      413.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Abstract",
+    "page": 0,
+    "bbox": [
+      299.0,
+      504.0,
+      397.0,
+      529.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      102.0,
+      539.0,
+      593.0,
+      730.0
+    ]
+  },
+  {
+    "label": "abstract",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      100.0,
+      732.0,
+      594.0,
+      1160.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "1 Introduction",
+    "page": 0,
+    "bbox": [
+      105.0,
+      1173.0,
+      277.0,
+      1196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      101.0,
+      1208.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      629.0,
+      506.0,
+      968.0,
+      530.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      627.0,
+      533.0,
+      1122.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 0,
+    "bbox": [
+      627.0,
+      1184.0,
+      1123.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      101.0,
+      147.0,
+      596.0,
+      338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      341.0,
+      596.0,
+      653.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      656.0,
+      596.0,
+      1301.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      102.0,
+      1303.0,
+      597.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      639.0,
+      148.0,
+      1116.0,
+      363.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b). Evaluated hardware testbed",
+    "page": 1,
+    "bbox": [
+      649.0,
+      364.0,
+      847.0,
+      382.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c). CXL switch architecture",
+    "page": 1,
+    "bbox": [
+      913.0,
+      364.0,
+      1087.0,
+      382.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 1: The architecture and hardware testbed of a switched CXL memory pool. (c) shows the architecture of a CXL switch. VL=Virtual Lane. vPPB=Virtual PCI-to-PCI Bridge.",
+    "page": 1,
+    "bbox": [
+      629.0,
+      403.0,
+      1121.0,
+      469.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      630.0,
+      481.0,
+      1123.0,
+      554.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2 Understanding Switched CXL MEM Pooling",
+    "page": 1,
+    "bbox": [
+      630.0,
+      574.0,
+      1120.0,
+      601.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.1 Switched CXL Memory Pooling",
+    "page": 1,
+    "bbox": [
+      631.0,
+      620.0,
+      957.0,
+      644.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      659.0,
+      1122.0,
+      923.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      933.0,
+      1121.0,
+      1077.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      632.0,
+      1082.0,
+      1122.0,
+      1298.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 1,
+    "bbox": [
+      629.0,
+      1303.0,
+      1121.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      103.0,
+      146.0,
+      595.0,
+      268.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      274.0,
+      594.0,
+      561.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      101.0,
+      562.0,
+      594.0,
+      1067.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.2 CXL Switching Architecture",
+    "page": 2,
+    "bbox": [
+      103.0,
+      1077.0,
+      401.0,
+      1100.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      100.0,
+      1112.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      633.0,
+      141.0,
+      1117.0,
+      276.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 2: Different access contention points along the CXL data path under switched CXL memory pooling.",
+    "page": 2,
+    "bbox": [
+      629.0,
+      294.0,
+      1119.0,
+      338.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      629.0,
+      345.0,
+      1123.0,
+      631.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.3 Characterizing Switched CXL Memory Pooling",
+    "page": 2,
+    "bbox": [
+      630.0,
+      644.0,
+      1090.0,
+      668.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      628.0,
+      678.0,
+      1123.0,
+      1373.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 2,
+    "bbox": [
+      630.0,
+      1375.0,
+      1121.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      124.0,
+      144.0,
+      445.0,
+      286.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Uncore contention.",
+    "page": 3,
+    "bbox": [
+      206.0,
+      296.0,
+      363.0,
+      315.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      459.0,
+      144.0,
+      773.0,
+      282.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Host adapter contention (latency).",
+    "page": 3,
+    "bbox": [
+      481.0,
+      296.0,
+      742.0,
+      315.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      792.0,
+      143.0,
+      1100.0,
+      281.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Host adapter contention (bandwidth).",
+    "page": 3,
+    "bbox": [
+      797.0,
+      296.0,
+      1081.0,
+      315.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 3: (a) runs background threads on one socket, issues sequential accesses, and maxes out its memory bandwidth. We report random access latency. The \"Local-Affect-Local\" and \"CXL-Affect-Local\" cases are added for comparisons. (b)/(c) present the host",
+    "page": 3,
+    "bbox": [
+      106.0,
+      316.0,
+      1118.0,
+      380.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      130.0,
+      387.0,
+      448.0,
+      524.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Host-rDIMM interference.",
+    "page": 3,
+    "bbox": [
+      178.0,
+      538.0,
+      391.0,
+      557.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      458.0,
+      386.0,
+      775.0,
+      525.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) rDIMM-rDIMM interference.",
+    "page": 3,
+    "bbox": [
+      493.0,
+      538.0,
+      729.0,
+      557.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      780.0,
+      389.0,
+      1097.0,
+      528.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Bandwidth partition.",
+    "page": 3,
+    "bbox": [
+      853.0,
+      540.0,
+      1024.0,
+      557.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 4: In (a), X-Y describes the case that a latency stream X is co-located with throughput streams (Y), where we report the average latency of X. (b) presents the latency results of four data movements. We add the local-rDIMM scenario for comparison. rnd=Random. seq=Sequential. In (c), we run two throughput streams each over four cores, issuing 64B/4KB read/write requests.",
+    "page": 3,
+    "bbox": [
+      103.0,
+      558.0,
+      1120.0,
+      624.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      629.0,
+      597.0,
+      1037.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      101.0,
+      1040.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      627.0,
+      630.0,
+      1123.0,
+      942.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      628.0,
+      943.0,
+      1123.0,
+      1326.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 3,
+    "bbox": [
+      627.0,
+      1327.0,
+      1123.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "table",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      105.0,
+      141.0,
+      588.0,
+      245.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Table 1: CXL memory performance under a fixed stride size X. The distance between two consecutive requests is X × 64 bytes.",
+    "page": 4,
+    "bbox": [
+      103.0,
+      252.0,
+      592.0,
+      293.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      299.0,
+      594.0,
+      585.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      586.0,
+      595.0,
+      851.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      101.0,
+      852.0,
+      594.0,
+      1306.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "2.4 Problem and Challenges",
+    "page": 4,
+    "bbox": [
+      103.0,
+      1317.0,
+      364.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      102.0,
+      1350.0,
+      596.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      644.0,
+      142.0,
+      878.0,
+      280.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Latency.",
+    "page": 4,
+    "bbox": [
+      716.0,
+      290.0,
+      801.0,
+      308.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      887.0,
+      143.0,
+      1117.0,
+      281.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Bandwidth.",
+    "page": 4,
+    "bbox": [
+      951.0,
+      290.0,
+      1059.0,
+      308.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      629.0,
+      312.0,
+      1122.0,
+      578.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      591.0,
+      1123.0,
+      878.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      632.0,
+      884.0,
+      1122.0,
+      1076.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      631.0,
+      1081.0,
+      1123.0,
+      1323.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3 MemChannel: a Designated Memory Lane",
+    "page": 4,
+    "bbox": [
+      630.0,
+      1351.0,
+      1111.0,
+      1377.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 4,
+    "bbox": [
+      629.0,
+      1399.0,
+      1121.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      146.0,
+      594.0,
+      243.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      105.0,
+      249.0,
+      592.0,
+      345.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      350.0,
+      592.0,
+      447.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.1 Overview",
+    "page": 5,
+    "bbox": [
+      104.0,
+      463.0,
+      238.0,
+      486.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      503.0,
+      594.0,
+      742.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      746.0,
+      594.0,
+      1083.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.2 The mchanne1 Semantics",
+    "page": 5,
+    "bbox": [
+      104.0,
+      1099.0,
+      382.0,
+      1122.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      102.0,
+      1138.0,
+      594.0,
+      1187.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      1197.0,
+      594.0,
+      1291.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      1297.0,
+      593.0,
+      1369.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      104.0,
+      1375.0,
+      593.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "image",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      652.0,
+      141.0,
+      1117.0,
+      375.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 6: The system model of MemChannel.",
+    "page": 5,
+    "bbox": [
+      699.0,
+      387.0,
+      1051.0,
+      407.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      414.0,
+      1122.0,
+      509.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.3 The mchannel Interface",
+    "page": 5,
+    "bbox": [
+      631.0,
+      527.0,
+      900.0,
+      550.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      560.0,
+      1121.0,
+      682.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      689.0,
+      1122.0,
+      856.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      633.0,
+      862.0,
+      1123.0,
+      1124.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      632.0,
+      1131.0,
+      1121.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 5,
+    "bbox": [
+      629.0,
+      1209.0,
+      1123.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      122.0,
+      147.0,
+      586.0,
+      196.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      202.0,
+      594.0,
+      489.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "3.4 System Model",
+    "page": 6,
+    "bbox": [
+      104.0,
+      500.0,
+      278.0,
+      524.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      536.0,
+      595.0,
+      920.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4 An CSFQ-Inspired Transport",
+    "page": 6,
+    "bbox": [
+      103.0,
+      933.0,
+      451.0,
+      959.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      102.0,
+      970.0,
+      591.0,
+      1017.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.1 Why Core-Stateless Fair Queueing",
+    "page": 6,
+    "bbox": [
+      103.0,
+      1030.0,
+      452.0,
+      1053.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      101.0,
+      1064.0,
+      594.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      629.0,
+      146.0,
+      1123.0,
+      651.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.2 Applying Fluid Model to CXL Switching",
+    "page": 6,
+    "bbox": [
+      631.0,
+      662.0,
+      1031.0,
+      685.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      629.0,
+      697.0,
+      1120.0,
+      1008.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      628.0,
+      1010.0,
+      1120.0,
+      1177.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      745.0,
+      1188.0,
+      1004.0,
+      1235.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1093.0,
+      1193.0,
+      1118.0,
+      1214.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      629.0,
+      1249.0,
+      1119.0,
+      1393.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      776.0,
+      1404.0,
+      972.0,
+      1450.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 6,
+    "bbox": [
+      1093.0,
+      1409.0,
+      1118.0,
+      1430.0
+    ]
+  },
+  {
+    "label": "algorithm",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      105.0,
+      144.0,
+      596.0,
+      781.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      102.0,
+      790.0,
+      595.0,
+      1079.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.3 The Transport Algorithm",
+    "page": 7,
+    "bbox": [
+      103.0,
+      1091.0,
+      374.0,
+      1115.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      99.0,
+      1129.0,
+      594.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      629.0,
+      146.0,
+      1121.0,
+      219.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      728.0,
+      228.0,
+      1022.0,
+      258.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1093.0,
+      233.0,
+      1118.0,
+      255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      630.0,
+      268.0,
+      1123.0,
+      869.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      628.0,
+      872.0,
+      1123.0,
+      1136.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      731.0,
+      1146.0,
+      1018.0,
+      1197.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      1093.0,
+      1160.0,
+      1118.0,
+      1181.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 7,
+    "bbox": [
+      628.0,
+      1207.0,
+      1123.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      99.0,
+      147.0,
+      591.0,
+      194.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      100.0,
+      197.0,
+      594.0,
+      482.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      485.0,
+      593.0,
+      820.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      257.0,
+      832.0,
+      434.0,
+      881.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      565.0,
+      846.0,
+      590.0,
+      867.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      893.0,
+      595.0,
+      1205.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      101.0,
+      1206.0,
+      594.0,
+      1397.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      102.0,
+      1399.0,
+      596.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      628.0,
+      146.0,
+      1122.0,
+      219.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      758.0,
+      231.0,
+      992.0,
+      257.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1092.0,
+      233.0,
+      1119.0,
+      255.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      629.0,
+      268.0,
+      1121.0,
+      414.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      632.0,
+      420.0,
+      1120.0,
+      539.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      631.0,
+      544.0,
+      1121.0,
+      642.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.4 Algorithm Extensions",
+    "page": 8,
+    "bbox": [
+      631.0,
+      652.0,
+      872.0,
+      675.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      630.0,
+      685.0,
+      1122.0,
+      782.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      775.0,
+      792.0,
+      972.0,
+      841.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      1092.0,
+      807.0,
+      1119.0,
+      829.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      629.0,
+      852.0,
+      1123.0,
+      1236.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "4.5 Bound Analysis",
+    "page": 8,
+    "bbox": [
+      631.0,
+      1245.0,
+      819.0,
+      1269.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 8,
+    "bbox": [
+      629.0,
+      1279.0,
+      1122.0,
+      1449.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      156.0,
+      593.0,
+      318.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      172.0,
+      326.0,
+      522.0,
+      351.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      565.0,
+      327.0,
+      590.0,
+      348.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      102.0,
+      360.0,
+      486.0,
+      383.0
+    ]
+  },
+  {
+    "label": "display_formula",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      155.0,
+      389.0,
+      535.0,
+      504.0
+    ]
+  },
+  {
+    "label": "formula_number",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      565.0,
+      435.0,
+      590.0,
+      457.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      510.0,
+      592.0,
+      583.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5 Evaluation",
+    "page": 9,
+    "bbox": [
+      103.0,
+      592.0,
+      260.0,
+      618.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.1 Experimental Methodology",
+    "page": 9,
+    "bbox": [
+      103.0,
+      631.0,
+      389.0,
+      654.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      664.0,
+      595.0,
+      1094.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      1095.0,
+      594.0,
+      1262.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.2 Application Performance over MemChannel",
+    "page": 9,
+    "bbox": [
+      102.0,
+      1271.0,
+      534.0,
+      1294.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      101.0,
+      1303.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      647.0,
+      142.0,
+      872.0,
+      276.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) MICA latency.",
+    "page": 9,
+    "bbox": [
+      695.0,
+      289.0,
+      822.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      887.0,
+      145.0,
+      1118.0,
+      280.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) MICA throughput.",
+    "page": 9,
+    "bbox": [
+      926.0,
+      290.0,
+      1085.0,
+      310.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      639.0,
+      315.0,
+      873.0,
+      449.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Silo latency.",
+    "page": 9,
+    "bbox": [
+      704.0,
+      463.0,
+      814.0,
+      482.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      888.0,
+      317.0,
+      1118.0,
+      453.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(d) Silo throughput.",
+    "page": 9,
+    "bbox": [
+      935.0,
+      463.0,
+      1076.0,
+      482.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 7: Throughput and latency of MICA and Silo over one ×8 adapter to the memory pool, comparing between w/ and w/o MemChannel scenarios. We use 32 threads in this experiment.",
+    "page": 9,
+    "bbox": [
+      630.0,
+      488.0,
+      1119.0,
+      553.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      645.0,
+      557.0,
+      873.0,
+      690.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) MICA latency.",
+    "page": 9,
+    "bbox": [
+      695.0,
+      702.0,
+      823.0,
+      722.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      886.0,
+      556.0,
+      1118.0,
+      693.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) MICA throughput.",
+    "page": 9,
+    "bbox": [
+      926.0,
+      703.0,
+      1085.0,
+      723.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      640.0,
+      728.0,
+      872.0,
+      862.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Silo latency.",
+    "page": 9,
+    "bbox": [
+      704.0,
+      875.0,
+      814.0,
+      894.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      888.0,
+      731.0,
+      1118.0,
+      866.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(d) Silo throughput.",
+    "page": 9,
+    "bbox": [
+      935.0,
+      875.0,
+      1076.0,
+      894.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 8: Throughput and latency of MICA and Silo over two ×8 adapters to the memory pool, comparing between w/ and w/o MemChannel scenarios. We use 64 threads in this experiment",
+    "page": 9,
+    "bbox": [
+      630.0,
+      901.0,
+      1120.0,
+      966.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      628.0,
+      972.0,
+      1123.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.3 Intra-Host Performance Isolation",
+    "page": 9,
+    "bbox": [
+      631.0,
+      1318.0,
+      970.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 9,
+    "bbox": [
+      629.0,
+      1350.0,
+      1124.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      125.0,
+      144.0,
+      354.0,
+      277.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Bwares Slowdown.",
+    "page": 10,
+    "bbox": [
+      154.0,
+      290.0,
+      309.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      369.0,
+      142.0,
+      602.0,
+      275.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Roms Slowdown.",
+    "page": 10,
+    "bbox": [
+      406.0,
+      290.0,
+      550.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      121.0,
+      315.0,
+      354.0,
+      449.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      368.0,
+      315.0,
+      601.0,
+      448.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Bwares Bandwidth.",
+    "page": 10,
+    "bbox": [
+      151.0,
+      462.0,
+      311.0,
+      482.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(d) Roms Bandwidth.",
+    "page": 10,
+    "bbox": [
+      403.0,
+      462.0,
+      554.0,
+      482.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      115.0,
+      486.0,
+      355.0,
+      622.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(e) Bwares Latency.",
+    "page": 10,
+    "bbox": [
+      161.0,
+      635.0,
+      301.0,
+      654.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      362.0,
+      487.0,
+      601.0,
+      621.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(f) Roms Latency.",
+    "page": 10,
+    "bbox": [
+      414.0,
+      635.0,
+      542.0,
+      654.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      661.0,
+      595.0,
+      1070.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.4 Inter-Host Performance Isolation",
+    "page": 10,
+    "bbox": [
+      103.0,
+      1079.0,
+      440.0,
+      1102.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      101.0,
+      1112.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      654.0,
+      143.0,
+      881.0,
+      276.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) BC Slowdown.",
+    "page": 10,
+    "bbox": [
+      695.0,
+      290.0,
+      822.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      897.0,
+      143.0,
+      1128.0,
+      276.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      647.0,
+      315.0,
+      883.0,
+      449.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) BC Bandwidth.",
+    "page": 10,
+    "bbox": [
+      939.0,
+      290.0,
+      1072.0,
+      309.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) PR Slowdown.",
+    "page": 10,
+    "bbox": [
+      695.0,
+      462.0,
+      822.0,
+      482.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      897.0,
+      315.0,
+      1127.0,
+      448.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(d) PR Bandwidth.",
+    "page": 10,
+    "bbox": [
+      939.0,
+      462.0,
+      1073.0,
+      482.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 10: Application slowdown and CXL bandwidth when varying contending traffic under in-fabric congestion.",
+    "page": 10,
+    "bbox": [
+      630.0,
+      489.0,
+      1119.0,
+      532.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      629.0,
+      538.0,
+      1121.0,
+      610.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.5 Fairness",
+    "page": 10,
+    "bbox": [
+      632.0,
+      622.0,
+      756.0,
+      644.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      629.0,
+      657.0,
+      1122.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      629.0,
+      1041.0,
+      1123.0,
+      1353.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.6 System Overheads",
+    "page": 10,
+    "bbox": [
+      631.0,
+      1364.0,
+      843.0,
+      1387.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 10,
+    "bbox": [
+      629.0,
+      1398.0,
+      1122.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      124.0,
+      146.0,
+      437.0,
+      281.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) Bwaves+SILO.",
+    "page": 11,
+    "bbox": [
+      219.0,
+      291.0,
+      348.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      452.0,
+      148.0,
+      764.0,
+      281.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Bwaves+MICA.",
+    "page": 11,
+    "bbox": [
+      543.0,
+      291.0,
+      679.0,
+      309.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      780.0,
+      145.0,
+      1092.0,
+      281.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) MICA+Silo.",
+    "page": 11,
+    "bbox": [
+      884.0,
+      291.0,
+      994.0,
+      309.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 11: Compare the CXL memory bandwidth when running two applications with and without MemChannel support on a host. We gradually increase the thread number for both applications to create contention the memory fabric.",
+    "page": 11,
+    "bbox": [
+      103.0,
+      316.0,
+      1120.0,
+      360.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      132.0,
+      370.0,
+      447.0,
+      492.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(a) No Contention.",
+    "page": 11,
+    "bbox": [
+      218.0,
+      503.0,
+      349.0,
+      523.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      459.0,
+      371.0,
+      774.0,
+      492.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(b) Moderate Contention.",
+    "page": 11,
+    "bbox": [
+      522.0,
+      504.0,
+      701.0,
+      523.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      786.0,
+      369.0,
+      1100.0,
+      490.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "(c) Heavy Contention.",
+    "page": 11,
+    "bbox": [
+      861.0,
+      504.0,
+      1016.0,
+      523.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 12: Latency and throughput for MICA running in MemChannel and TPP under five YCSB workloads. Y-1 axis is latency, and Y-2 axis is throughput. WS application is used to generate background traffic.",
+    "page": 11,
+    "bbox": [
+      102.0,
+      528.0,
+      1121.0,
+      573.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      102.0,
+      580.0,
+      595.0,
+      773.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "5.7 Discussion",
+    "page": 11,
+    "bbox": [
+      104.0,
+      782.0,
+      246.0,
+      805.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      101.0,
+      818.0,
+      595.0,
+      1180.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "6 Related Work",
+    "page": 11,
+    "bbox": [
+      104.0,
+      1192.0,
+      290.0,
+      1217.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      102.0,
+      1229.0,
+      593.0,
+      1374.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      102.0,
+      1374.0,
+      595.0,
+      1448.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      628.0,
+      579.0,
+      1121.0,
+      723.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      629.0,
+      724.0,
+      1123.0,
+      988.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "7 Conclusion",
+    "page": 11,
+    "bbox": [
+      632.0,
+      1000.0,
+      789.0,
+      1025.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      629.0,
+      1038.0,
+      1122.0,
+      1303.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "Acknowledgement",
+    "page": 11,
+    "bbox": [
+      631.0,
+      1315.0,
+      829.0,
+      1340.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 11,
+    "bbox": [
+      629.0,
+      1350.0,
+      1123.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "References",
+    "page": 12,
+    "bbox": [
+      104.0,
+      143.0,
+      224.0,
+      170.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      115.0,
+      179.0,
+      592.0,
+      250.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      269.0,
+      589.0,
+      315.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      333.0,
+      589.0,
+      382.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      398.0,
+      580.0,
+      469.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      487.0,
+      588.0,
+      580.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      599.0,
+      589.0,
+      648.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      664.0,
+      592.0,
+      737.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      116.0,
+      753.0,
+      590.0,
+      824.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      115.0,
+      843.0,
+      588.0,
+      889.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      907.0,
+      592.0,
+      955.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      972.0,
+      590.0,
+      1066.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      1085.0,
+      590.0,
+      1203.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      106.0,
+      1222.0,
+      589.0,
+      1269.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      107.0,
+      1286.0,
+      590.0,
+      1333.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      107.0,
+      1351.0,
+      591.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      633.0,
+      146.0,
+      1101.0,
+      242.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      259.0,
+      1116.0,
+      306.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      635.0,
+      324.0,
+      1116.0,
+      370.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      388.0,
+      1117.0,
+      435.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      453.0,
+      1117.0,
+      499.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      635.0,
+      516.0,
+      1121.0,
+      634.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      652.0,
+      1121.0,
+      772.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      633.0,
+      790.0,
+      1121.0,
+      883.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      633.0,
+      901.0,
+      1121.0,
+      1021.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      633.0,
+      1038.0,
+      1120.0,
+      1131.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      1150.0,
+      1120.0,
+      1245.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      634.0,
+      1263.0,
+      1118.0,
+      1309.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 12,
+    "bbox": [
+      635.0,
+      1327.0,
+      1121.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      147.0,
+      592.0,
+      289.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      303.0,
+      593.0,
+      422.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      435.0,
+      592.0,
+      553.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      568.0,
+      592.0,
+      709.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      724.0,
+      591.0,
+      843.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      858.0,
+      590.0,
+      976.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      990.0,
+      593.0,
+      1134.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      1146.0,
+      592.0,
+      1266.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      106.0,
+      1280.0,
+      594.0,
+      1443.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      146.0,
+      1122.0,
+      264.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      634.0,
+      289.0,
+      1121.0,
+      480.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      634.0,
+      501.0,
+      1120.0,
+      597.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      618.0,
+      1120.0,
+      715.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      736.0,
+      1121.0,
+      878.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      903.0,
+      1117.0,
+      950.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      972.0,
+      1122.0,
+      1091.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      633.0,
+      1113.0,
+      1119.0,
+      1208.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 13,
+    "bbox": [
+      634.0,
+      1231.0,
+      1122.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      146.0,
+      591.0,
+      264.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      105.0,
+      283.0,
+      592.0,
+      426.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      443.0,
+      592.0,
+      562.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      579.0,
+      591.0,
+      748.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      764.0,
+      591.0,
+      932.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      949.0,
+      590.0,
+      1044.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      1061.0,
+      590.0,
+      1157.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      106.0,
+      1174.0,
+      592.0,
+      1222.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      107.0,
+      1239.0,
+      592.0,
+      1310.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      107.0,
+      1327.0,
+      593.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      634.0,
+      147.0,
+      1121.0,
+      313.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      634.0,
+      336.0,
+      1121.0,
+      503.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      633.0,
+      524.0,
+      1121.0,
+      644.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      633.0,
+      665.0,
+      1120.0,
+      784.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      634.0,
+      807.0,
+      1121.0,
+      1020.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      633.0,
+      1045.0,
+      1121.0,
+      1188.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      634.0,
+      1209.0,
+      1121.0,
+      1329.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 14,
+    "bbox": [
+      634.0,
+      1351.0,
+      1120.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      147.0,
+      592.0,
+      313.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      107.0,
+      329.0,
+      593.0,
+      569.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      584.0,
+      592.0,
+      729.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      745.0,
+      592.0,
+      841.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      857.0,
+      593.0,
+      999.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      1016.0,
+      592.0,
+      1135.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      1152.0,
+      592.0,
+      1246.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      1263.0,
+      592.0,
+      1382.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      106.0,
+      1398.0,
+      593.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      674.0,
+      148.0,
+      1121.0,
+      243.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      634.0,
+      258.0,
+      1120.0,
+      423.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      634.0,
+      441.0,
+      1121.0,
+      585.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      634.0,
+      601.0,
+      1121.0,
+      791.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      632.0,
+      809.0,
+      1119.0,
+      928.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      633.0,
+      944.0,
+      1121.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      633.0,
+      1056.0,
+      1122.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      634.0,
+      1168.0,
+      1122.0,
+      1285.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 15,
+    "bbox": [
+      633.0,
+      1303.0,
+      1123.0,
+      1445.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      106.0,
+      146.0,
+      593.0,
+      288.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      305.0,
+      593.0,
+      426.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      441.0,
+      592.0,
+      561.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      578.0,
+      593.0,
+      721.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      106.0,
+      736.0,
+      594.0,
+      881.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      106.0,
+      897.0,
+      592.0,
+      1040.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      1056.0,
+      592.0,
+      1151.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      1168.0,
+      593.0,
+      1287.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      107.0,
+      1303.0,
+      593.0,
+      1447.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      674.0,
+      147.0,
+      1118.0,
+      194.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      634.0,
+      211.0,
+      1120.0,
+      376.0
+    ]
+  },
+  {
+    "label": "reference_content",
+    "text": "",
+    "page": 16,
+    "bbox": [
+      634.0,
+      394.0,
+      1120.0,
+      559.0
+    ]
+  },
+  {
+    "label": "chart",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      108.0,
+      146.0,
+      585.0,
+      368.0
+    ]
+  },
+  {
+    "label": "figure_title",
+    "text": "Figure 13: Channel bandwidth when adding four channels com- pared between with and without MemChannel cases.",
+    "page": 17,
+    "bbox": [
+      103.0,
+      379.0,
+      593.0,
+      424.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A Appendix",
+    "page": 17,
+    "bbox": [
+      104.0,
+      429.0,
+      252.0,
+      454.0
+    ]
+  },
+  {
+    "label": "paragraph_title",
+    "text": "A.1 MemChannel Adaptiveness",
+    "page": 17,
+    "bbox": [
+      104.0,
+      466.0,
+      395.0,
+      489.0
+    ]
+  },
+  {
+    "label": "text",
+    "text": "",
+    "page": 17,
+    "bbox": [
+      103.0,
+      499.0,
+      594.0,
+      765.0
+    ]
+  }
+]

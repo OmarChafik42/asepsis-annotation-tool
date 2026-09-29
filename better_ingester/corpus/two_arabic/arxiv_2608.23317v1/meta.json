@@ -1,0 +1,10 @@
+{
+  "cell": "two_arabic",
+  "columns": "two",
+  "numbering": "arabic",
+  "documentclass": "acmart_modified",
+  "category": "cs.LG",
+  "published": "2026-08-24",
+  "title": "Spicing up Genetic Netlist Generation with LLMs",
+  "arxiv_id": "2608.23317v1"
+}
